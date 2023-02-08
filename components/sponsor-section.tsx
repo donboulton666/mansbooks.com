@@ -43,7 +43,7 @@ export default function SponsorSection({ sponsor }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Back to expo
+          Back to Videos
         </a>
       </Link>
       <div className={styles.layout}>
@@ -77,9 +77,24 @@ export default function SponsorSection({ sponsor }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               type="button"
-              className={styles.button}
+              className={cn(styles.button, styles['button-resource'])}
             >
               {sponsor.callToAction}
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                  shapeRendering="geometricPrecision"
+                >
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
             </a>
             <a
               href={sponsor.discord}
