@@ -1,7 +1,7 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "short_name": "Virtual Event Starter Kit",
-  "description": "Virtual Event Starter Kit -> https://demo.vercel.events",
+  "name": "Angelina Jordan Conference Videos",
+  "short_name": "Angelina Jordan Conference Videos",
+  "description": "Angelina Jordan Conference Videos -> https://mansbooks.com/events",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",

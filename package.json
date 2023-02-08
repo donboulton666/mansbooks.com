@@ -1,8 +1,8 @@
 {
-  "name": "virtual-event-starter-kit",
+  "name": "mansbooks",
   "description": "Angelina Jordan Videos.",
   "private": true,
-  "repository": "vercel/virtual-event-starter-kit",
+  "repository": "donaldboulton/mansbooks.com",
   "author": "Angelina Jordan.",
   "homepage": "https://mansbooks.com",
   "license": "Apache-2.0",
