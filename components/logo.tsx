@@ -22,7 +22,7 @@ export default function Logo({ textSecondaryColor = 'var(--accents-5)' }) {
   return (
     <div className={styles.logo}>
       <div className={styles.icon}>
-        <IconBringStage className="var(--accents-1) black" />
+        <IconBringStage />
       </div>
       <div className={styles.text}>
         <div>{SITE_NAME_MULTILINE[0]}</div>
