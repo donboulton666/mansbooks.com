@@ -31,14 +31,14 @@ type Props = {
 
 export default function Jobs({ jobs }: Props) {
   const meta = {
-    title: 'Career Fair - Angelina Jordan',
+    title: 'Social - Angelina Jordan',
     description: META_DESCRIPTION
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Career Fair" description={meta.description} />
+        <Header hero="Social" description={meta.description} />
         <JobsGrid jobs={jobs} />
       </Layout>
     </Page>
