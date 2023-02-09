@@ -21,7 +21,6 @@ export default function Stars() {
     };
 
     return (
-        {/* @ts-ignore */}
         <Particles id="tsparticles" options={options} init={particlesInit} loaded={particlesLoaded} />
     );
 };
