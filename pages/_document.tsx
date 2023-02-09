@@ -15,6 +15,7 @@
  */
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default class CustomDocument extends Document {
   render() {
@@ -24,6 +25,14 @@ export default class CustomDocument extends Document {
         <body className="loading">
           <Main />
           <NextScript />
+          <Script
+            src="cookiehub.js"
+            strategy="afterInteractive"
+          />
+          <Script
+            src="gtm.js"
+            strategy="afterInteractive"
+          />
           <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXRSPG6"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </noscript>
