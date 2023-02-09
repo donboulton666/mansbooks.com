@@ -87,11 +87,13 @@ export default function Layout({
         )}
         <ViewSource />
         <div className={styles.page}>
-          <main className={styles.main} style={layoutStyles}>
-            <SkipNavContent />
-            <div className={cn(styles.full, className)}>{children}</div>
-          </main>
-          {!activeRoute.startsWith('/stage') && <Footer />}
+          <div className='blog-beams'>
+            <main className={styles.main} style={layoutStyles}>
+              <SkipNavContent />
+              <div className={cn(styles.full, className)}>{children}</div>
+            </main>
+            {!activeRoute.startsWith('/stage') && <Footer />}
+          </div>
         </div>
       </div>
     </>
