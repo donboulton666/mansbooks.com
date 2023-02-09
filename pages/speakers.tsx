@@ -31,13 +31,13 @@ type Props = {
 
 export default function Speakers({ speakers }: Props) {
   const meta = {
-    title: 'Speakers - Angelina Jordan',
+    title: 'Vlogs - Angelina Jordan',
     description: META_DESCRIPTION
   };
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Speakers" description={meta.description} />
+        <Header hero="Vlogs" description={meta.description} />
         <SpeakersGrid speakers={speakers} />
       </Layout>
     </Page>

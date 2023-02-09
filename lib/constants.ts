@@ -54,7 +54,7 @@ export const NAVIGATION = [
     route: '/schedule'
   },
   {
-    name: 'Songs',
+    name: 'Vlogs',
     route: '/speakers'
   },
   {
