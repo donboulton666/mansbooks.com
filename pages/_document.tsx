@@ -24,6 +24,9 @@ export default class CustomDocument extends Document {
         <body className="loading">
           <Main />
           <NextScript />
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXRSPG6"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+          </noscript>
         </body>
       </Html>
     );

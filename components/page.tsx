@@ -16,6 +16,7 @@
 
 import cn from 'classnames';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useRouter } from 'next/router';
 
 import { SITE_NAME, SITE_URL, TWITTER_USER_NAME } from '@lib/constants';
@@ -69,6 +70,25 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
           />
         )}
       </Head>
+      <Script id="show-banner" strategy="afterInteractive">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {'ad_storage': 'denied', 'analytics_storage': 'denied', 'wait_for_update': 500});
+        var cpm = {};
+        (function(h,u,b){
+          var d=h.getElementsByTagName("script")[0],e=h.createElement("script");
+          e.async=true;e.src='https://cookiehub.net/c2/6b9c3004.js';
+          e.onload=function(){u.cookiehub.load(b);};
+          d.parentNode.insertBefore(e,d);
+        })(document,window,cpm);
+      </Script>
+      <Script id="gtm" strategy="afterInteractive">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PXRSPG6');
+      </Script>
       {children}
     </div>
   );
