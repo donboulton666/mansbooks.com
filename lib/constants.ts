@@ -17,10 +17,10 @@
 export const SITE_URL = 'https://mansbooks.com';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = '@donboulton';
-export const BRAND_NAME = 'Conferencing,';
-export const SITE_NAME_MULTILINE = ['Angies', ' Video Conf'];
-export const SITE_NAME = 'Angies Video Conf';
-export const META_DESCRIPTION = 'Angelina Jordans Video and Conference Site.';
+export const BRAND_NAME = 'Webinar,';
+export const SITE_NAME_MULTILINE = ['Angies', ' Video Webinar'];
+export const SITE_NAME = 'Angies Video Webinar';
+export const META_DESCRIPTION = 'Angelina Jordans Video and Webinar Site.';
 export const SITE_DESCRIPTION = 'An interactive online experience by the community, free for everyone.';
 export const DATE = '10 January 2023';
 export const SHORT_DATE = 'Jan 10 - 12:00am PST';
