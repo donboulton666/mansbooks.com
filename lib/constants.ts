@@ -17,7 +17,7 @@
 export const SITE_URL = 'https://mansbooks.com';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = '@donboulton';
-export const BRAND_NAME = 'Conference';
+export const BRAND_NAME = 'Conferencing,';
 export const SITE_NAME_MULTILINE = ['Angies', ' Video Conf'];
 export const SITE_NAME = 'Angies Video Conf';
 export const META_DESCRIPTION = 'Angelina Jordans Video and Conference Site.';
