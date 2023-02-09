@@ -14,14 +14,11 @@
  * limitations under the License.
  */
 
-const withPWA = require("next-pwa");
+const withPWA = require('next-pwa')({
+  dest: 'public'
+})
 
 module.exports = withPWA({
-  pwa: {
-    dest: "public",
-    register: true,
-    skipWaiting: true,
-  },
   images: {
     domains: [
       'www.datocms-assets.com',
