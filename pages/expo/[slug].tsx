@@ -30,7 +30,7 @@ type Props = {
 
 export default function SponsorPage({ sponsor }: Props) {
   const meta = {
-    title: 'Expo - Angelina Jordan Videos',
+    title: 'Video - Angelina Jordan Videos',
     description: META_DESCRIPTION
   };
 

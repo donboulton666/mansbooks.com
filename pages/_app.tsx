@@ -22,12 +22,26 @@ import type { AppProps } from 'next/app';
 import NProgress from '@components/nprogress';
 import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { HMSRoomProvider } from '@100mslive/react-sdk';
+import { gtmVirtualPageView } from '../lib/gtm';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     document.body.classList?.remove('loading');
   }, []);
+  const router = useRouter()
+
+  useEffect(() => {
+    const mainDataLayer = {
+      pageTypeName: pageProps.page || null,
+      url: router.pathname,
+    };
+
+    gtmVirtualPageView(mainDataLayer);
+
+  }, [pageProps])
+
   return (
     <SSRProvider>
       <OverlayProvider>
