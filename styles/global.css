@@ -356,7 +356,7 @@ input {
 }
 
 .blog-beams {
-  background-image: url(../../public/beams/7-dark@tinypng.png);
+  background-image: url(../public/beams/7-dark@tinypng.png);
   background-size: 86.125rem;
   background-repeat: no-repeat;
   background: cover;
