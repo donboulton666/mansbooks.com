@@ -16,14 +16,12 @@
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
-import Stars from '../components/stars';
 
 export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head />
-        <Stars />
         <body className="loading">
           <Main />
           <NextScript />

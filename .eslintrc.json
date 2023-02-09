@@ -25,6 +25,8 @@
     "@typescript-eslint/no-floating-promises": 0,
     "@typescript-eslint/no-unsafe-assignment": 0,
     "@typescript-eslint/restrict-template-expressions": 0,
-    "@typescript-eslint/no-empty-function": 0
+    "@typescript-eslint/no-empty-function": 0,
+    "no-return-await": "off",
+    "@typescript-eslint/return-await": "warn"
   }
 }

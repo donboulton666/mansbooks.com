@@ -20,11 +20,12 @@ import { SkipNavContent } from '@reach/skip-nav';
 import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_DESCRIPTION } from '@lib/constants';
+import Stars from '../components/stars';
 
 export default function Conf() {
   const { query } = useRouter();
   const meta = {
-    title: 'Angelina Jordan Conference Videos',
+    title: 'Angelina Jordan Webinar, Videos',
     description: META_DESCRIPTION
   };
   const ticketNumber = query.ticketNumber?.toString();
@@ -38,6 +39,7 @@ export default function Conf() {
   return (
     <Page meta={meta} fullViewport>
       <SkipNavContent />
+      <Stars />
       <ConfContent
         defaultUserData={defaultUserData}
         defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
