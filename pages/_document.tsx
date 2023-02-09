@@ -33,9 +33,10 @@ export default class CustomDocument extends Document {
             src="gtm.js"
             strategy="afterInteractive"
           />
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXRSPG6"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-          </noscript>
+          <Script
+            src="noscript.js"
+            strategy="afterInteractive"
+          />
         </body>
       </Html>
     );
