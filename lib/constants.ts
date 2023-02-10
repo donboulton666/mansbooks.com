@@ -38,15 +38,15 @@ export const REPO = 'https://github.com/donaldboulton/mansbooks.com';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Chat Stage',
+    name: 'Live Stage',
     route: '/stage/a'
   },
   {
-    name: 'Covers Stage',
+    name: 'Vercel Stage',
     route: '/stage/c'
   },
   {
-    name: 'Originals Stage',
+    name: '100ms Stage',
     route: '/stage/m'
   },
   {
