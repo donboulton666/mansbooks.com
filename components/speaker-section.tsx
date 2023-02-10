@@ -18,8 +18,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
-import { Speaker } from '@lib/types';
+import { Speaker, Sponser } from '@lib/types';
 import styles from './speaker-section.module.css';
+import styleUtils from './utils.module.css';
+
 
 const TwitterIcon = () => (
   <svg width={24} viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -52,10 +54,20 @@ export default function SpeakerSection({ speaker }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Back to speakers
+          Back to Vlogs
         </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
+        <iframe
+          className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
+          allow="picture-in-picture"
+          allowFullScreen
+          frameBorder="0"
+          height="100%"
+          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
+          title={speaker.name}
+          width="100%"
+        />
         <div style={{ minWidth: '300px' }}>
           <Image
             alt={speaker.name}
