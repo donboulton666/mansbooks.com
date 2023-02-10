@@ -18,7 +18,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
-import { Speaker } from '@lib/types';
+import { Speaker, Sponsor } from '@lib/types';
 import styles from './speaker-section.module.css';
 import styleUtils from './utils.module.css';
 
@@ -34,9 +34,10 @@ const TwitterIcon = () => (
 
 type Props = {
   speaker: Speaker;
+  sponsor: Sponsor;
 };
 
-export default function SpeakerSection({ speaker }: Props) {
+export default function SpeakerSection({ speaker, sponsor }: Props) {
   return (
     <>
       <Link href="/speakers">
@@ -64,7 +65,7 @@ export default function SpeakerSection({ speaker }: Props) {
           allowFullScreen
           frameBorder="0"
           height="100%"
-          src={`https://youtube.com/embed/${speaker.youtubeSlug}`}
+          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
           title={speaker.name}
           width="100%"
         />

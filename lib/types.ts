@@ -30,7 +30,6 @@ export type Speaker = {
   talk: Talk;
   image: Image;
   imageSquare: Image;
-  youtubeSlug: string;
 };
 
 export type Stage = {
