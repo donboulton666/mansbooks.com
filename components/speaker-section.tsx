@@ -18,7 +18,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
-import { Speaker, Sponsor } from '@lib/types';
+import { Speaker } from '@lib/types';
+import { Sponsor } from '@lib/types';
 import styles from './speaker-section.module.css';
 import styleUtils from './utils.module.css';
 
@@ -34,6 +35,9 @@ const TwitterIcon = () => (
 
 type Props = {
   speaker: Speaker;
+};
+
+type Props = {
   sponsor: Sponsor;
 };
 
