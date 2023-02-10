@@ -31,7 +31,7 @@ type Props = {
 
 export default function StagePage({ stage, allStages }: Props) {
   const meta = {
-    title: 'Angelina Jordan Videos',
+    title: 'Stage - Angelina Jordan',
     description: META_DESCRIPTION
   };
   return (
