@@ -49,7 +49,7 @@ export default class CustomDocument extends Document {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://mansbooks.com" />
           <meta name="twitter:title" content="Mansbooks" />
-          <meta name="twitter:description" content="Best Mansbooks in the world" />
+          <meta name="twitter:description" content="Angelina Jordan at mansbooks.com" />
           <meta name="twitter:image" content="https://mansbooks.com/icons/android-chrome-192x192.png" />
           <meta name="twitter:creator" content="@donboulton" />
           <meta property="og:type" content="website" />
