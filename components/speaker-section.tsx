@@ -34,10 +34,9 @@ const TwitterIcon = () => (
 
 type Props = {
   speaker: Speaker;
-  sponsor: Sponsor;
 };
 
-export default function SpeakerSection({ speaker, sponsor }: Props) {
+export default function SpeakerSection({ speaker }: Props) {
   return (
     <>
       <Link href="/speakers">
@@ -65,7 +64,7 @@ export default function SpeakerSection({ speaker, sponsor }: Props) {
           allowFullScreen
           frameBorder="0"
           height="100%"
-          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
+          src={`https://youtube.com/embed/${speaker.youtubeSlug}`}
           title={speaker.name}
           width="100%"
         />
