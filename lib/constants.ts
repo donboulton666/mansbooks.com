@@ -54,10 +54,6 @@ export const NAVIGATION = [
     route: '/schedule'
   },
   {
-    name: 'Vlogs',
-    route: '/speakers'
-  },
-  {
     name: 'Videos',
     route: '/expo'
   },
