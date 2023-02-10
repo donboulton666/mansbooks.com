@@ -45,7 +45,7 @@ export default class CustomDocument extends Document {
           <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
-
+          <meta name="google-site-verification" content="DERBmWes64nsERJF7euwN3Y7sarDxsPOx3eDQUB21uM" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://mansbooks.com" />
           <meta name="twitter:title" content="Mansbooks" />

@@ -19,9 +19,7 @@ import Image from 'next/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
 import { Speaker } from '@lib/types';
-import { Sponsor } from '@lib/types';
 import styles from './speaker-section.module.css';
-import styleUtils from './utils.module.css';
 
 
 const TwitterIcon = () => (
@@ -37,11 +35,7 @@ type Props = {
   speaker: Speaker;
 };
 
-type Props = {
-  sponsor: Sponsor;
-};
-
-export default function SpeakerSection({ speaker, sponsor }: Props) {
+export default function SpeakerSection({ speaker }: Props) {
   return (
     <>
       <Link href="/speakers">
@@ -63,16 +57,6 @@ export default function SpeakerSection({ speaker, sponsor }: Props) {
         </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
-        <iframe
-          className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
-          allow="picture-in-picture"
-          allowFullScreen
-          frameBorder="0"
-          height="100%"
-          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
-          title={speaker.name}
-          width="100%"
-        />
         <div style={{ minWidth: '300px' }}>
           <Image
             alt={speaker.name}
