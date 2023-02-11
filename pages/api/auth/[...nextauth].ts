@@ -1,5 +1,5 @@
-import NextAuth, { NextAuthOptions } from "next-auth"
 import { NextApiRequest, NextApiResponse } from 'next';
+import NextAuth from "next-auth"
 import { COOKIE } from '@lib/constants';
 import redis from '@lib/redis';
 import GoogleProvider from "next-auth/providers/google"
@@ -59,7 +59,7 @@ export default NextAuth({
   },
 })
 
-export default NextAuth(authOptions)
+export default NextAuth
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   const id = req.cookies[COOKIE];
