@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Leaflet from "./leaflet";
 import useWindowSize from "../../../lib/hooks/use-window-size";
 
-export default function Modal({
+export default function ModalPopup({
   children,
   showModal,
   setShowModal,

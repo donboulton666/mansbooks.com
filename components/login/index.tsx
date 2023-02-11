@@ -2,16 +2,16 @@ import { FADE_IN_ANIMATION_SETTINGS } from "../../lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { signIn, useSession } from "next-auth/react"
 import { PersonIcon } from '@100mslive/react-icons';
-import { Modal, useModal } from "./sign-in-modal";
+import { ModalPopup, useModalPopup } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
 
 export default function Modal() {
   const { data: session, status } = useSession();
-  const { setShownModal } = useModal();
+  const { setShownModal } = useModalPopup();
 
   return (
     <>
-      <Modal />
+      <ModalPopup />
       <div>
         <AnimatePresence>
           {!session && status !== "loading" ? (            
