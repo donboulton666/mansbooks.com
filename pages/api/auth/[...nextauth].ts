@@ -4,16 +4,8 @@ import { COOKIE } from '@lib/constants';
 import redis from '@lib/redis';
 import GoogleProvider from "next-auth/providers/google"
 import GithubProvider from "next-auth/providers/github"
-// import FacebookProvider from "next-auth/providers/facebook"
-// import TwitterProvider from "next-auth/providers/twitter"
-// import Auth0Provider from "next-auth/providers/auth0"
-// import AppleProvider from "next-auth/providers/apple"
-// import EmailProvider from "next-auth/providers/email"
 
-// For more information on each option (and a full list of options) go to
-// https://next-auth.js.org/configuration/options
-export const authOptions: NextAuthOptions = {
-  // https://next-auth.js.org/configuration/providers/oauth
+export default NextAuth({
   providers: [
     /* EmailProvider({
          server: process.env.EMAIL_SERVER,
@@ -65,7 +57,7 @@ export const authOptions: NextAuthOptions = {
       return token
     },
   },
-}
+})
 
 export default NextAuth(authOptions)
 
