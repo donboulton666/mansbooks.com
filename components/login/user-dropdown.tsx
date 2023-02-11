@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link"
 import { signOut, useSession } from "next-auth/react"
-import { ExitIcon, SpotlightIcon, ChatIcon } from '@100mslive/react-icons';
+import { ExitIcon, SpotlightIcon } from '@100mslive/react-icons';
 import Popover from "./shared/popover";
 import Image from "next/image";
 import { motion } from "framer-motion";

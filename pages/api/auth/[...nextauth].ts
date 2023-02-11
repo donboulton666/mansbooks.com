@@ -1,4 +1,5 @@
 import NextAuth from "next-auth"
+import { JWT } from "next-auth/jwt";
 import GoogleProvider from "next-auth/providers/google"
 import GithubProvider from "next-auth/providers/github"
 
@@ -45,13 +46,13 @@ export default NextAuth({
     }),
     */
   ],
-  theme: {
-    colorScheme: "dark",
-  },
-  callbacks: {
-    async jwt({ token }) {
-      token.userRole = "admin"
-      return token
-    },
-  },
 })
+
+declare module "next-auth/jwt" {
+  /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
+  interface JWT {
+    /** OpenID ID Token */
+    token.userRole = "admin"
+    idToken?: string
+  }
+}
