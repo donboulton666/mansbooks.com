@@ -1,12 +1,8 @@
-const { mauve, violet } = require('@radix-ui/colors');
-
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        ...mauve,
-        ...violet,
         foreground: 'var(--foreground)',
         gray: {
           100: 'var(--accents-1)',
@@ -39,21 +35,7 @@ module.exports = {
       },
       minWidth: {
         btn: '160px'
-      },
-      keyframes: {
-        slideDown: {
-          from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        slideUp: {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-      },
+      }
     }
   },
   plugins: []

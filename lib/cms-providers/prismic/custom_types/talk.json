@@ -16,7 +16,9 @@
             "type": "Link",
             "config": {
               "select": "document",
-              "customtypes": ["speaker"],
+              "customtypes": [
+                "speaker"
+              ],
               "label": "Speaker",
               "placeholder": "Add a speaker"
             }

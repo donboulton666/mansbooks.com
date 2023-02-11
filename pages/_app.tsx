@@ -22,25 +22,21 @@ import type { AppProps } from 'next/app';
 import NProgress from '@components/nprogress';
 import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
-import { SessionProvider } from "next-auth/react";
 import { HMSRoomProvider } from '@100mslive/react-sdk';
 
-export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     document.body.classList?.remove('loading');
   }, []);
-  
   return (
-    <SessionProvider session={session}>
-      <SSRProvider>
-        <OverlayProvider>
-          <HMSRoomProvider>
-            <Component {...pageProps} />
-            <ResizeHandler />
-            <NProgress />
-          </HMSRoomProvider>
-        </OverlayProvider>
-      </SSRProvider>
-    </SessionProvider>
+    <SSRProvider>
+      <OverlayProvider>
+        <HMSRoomProvider>
+          <Component {...pageProps} />
+          <ResizeHandler />
+          <NProgress />
+        </HMSRoomProvider>
+      </OverlayProvider>
+    </SSRProvider>
   );
 }
