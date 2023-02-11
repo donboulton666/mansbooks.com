@@ -29,7 +29,7 @@ export default function SponsorSection({ sponsor }: Props) {
   return (
     <>
       <Link href="/expo">
-        <span className={styles.backlink}>
+        <a className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
             width="24"
@@ -44,7 +44,7 @@ export default function SponsorSection({ sponsor }: Props) {
             <path d="M15 18l-6-6 6-6" />
           </svg>
           Back to Videos
-        </span>
+        </a>
       </Link>
       <div className={styles.layout}>
         <iframe

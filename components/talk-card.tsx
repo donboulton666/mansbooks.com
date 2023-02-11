@@ -49,7 +49,7 @@ export default function TalkCard({ talk: { title, speaker, start, end }, showTim
     <div key={title} className={styles.talk}>
       {showTime && <p className={styles.time}>{startAndEndTime || <>&nbsp;</>}</p>}
       <Link href={firstSpeakerLink}>
-        <span
+        <a
           className={cn(styles.card, {
             [styles['is-live']]: isTalkLive
           })}
@@ -79,7 +79,7 @@ export default function TalkCard({ talk: { title, speaker, start, end }, showTim
               </h5>
             </div>
           </div>
-        </span>
+        </a>
       </Link>
     </div>
   );

@@ -28,7 +28,7 @@ export default function SpeakersGrid({ speakers }: Props) {
     <div className={styles.grid}>
       {speakers.map(speaker => (
         <Link key={speaker.name} href={`/speakers/${speaker.slug}`}>
-          <span role="button" tabIndex={0} className={styles.card}>
+          <a role="button" tabIndex={0} className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
                 alt={speaker.name}
@@ -52,7 +52,7 @@ export default function SpeakersGrid({ speakers }: Props) {
                 </p>
               </div>
             </div>
-          </span>
+          </a>
         </Link>
       ))}
     </div>
