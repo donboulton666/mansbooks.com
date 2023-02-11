@@ -25,7 +25,7 @@
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fill, 1fr);
-  grid-gap: 24px;
+  grid-gap: 22px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
