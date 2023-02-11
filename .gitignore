@@ -32,5 +32,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
+.eslintcache
+
+*.tsbuildinfo
+next-env.d.ts
+
+.next
 .vercel
+.env*.local
