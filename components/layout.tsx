@@ -56,9 +56,9 @@ export default function Layout({
               <MobileMenu key={router.asPath} />
               <Link href="/">
                 {/* eslint-disable-next-line */}
-                <a className={styles.logo}>
+                <span className={styles.logo}>
                   <Logo />
-                </a>
+                </span>
               </Link>
             </div>
             <div className={styles.tabs}>

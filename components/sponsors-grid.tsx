@@ -23,7 +23,7 @@ import styles from './sponsors-grid.module.css';
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
     <Link key={sponsor.name} href={`/expo/${sponsor.slug}`}>
-      <a
+      <button
         role="button"
         tabIndex={0}
         className={cn(styles.card, {
@@ -52,7 +52,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
             </div>
           </div>
         )}
-      </a>
+      </button>
     </Link>
   );
 }
