@@ -64,27 +64,11 @@ export default function UserDropdown() {
             </button>
             <button className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-800">
               <SpotlightIcon className="h-4 w-4" />
-              <p className="text-sm"><Link href="/server">Server</Link></p>
-            </button>
-            <button className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-800">
-              <SpotlightIcon className="h-4 w-4" />
-              <p className="text-sm"><Link href="/server">Server</Link></p>
-            </button>
-            <button className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-800">
-              <SpotlightIcon className="h-4 w-4" />
-              <p className="text-sm"><Link href="/protected">Protected</Link></p>
-            </button>
-            <button className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-800">
-              <SpotlightIcon className="h-4 w-4" />
               <p className="text-sm"><Link href="/api-example">API</Link></p>
             </button>
             <button className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-800">
               <SpotlightIcon className="h-4 w-4" />
               <p className="text-sm"><Link href="/admin">Admin</Link></p>
-            </button>
-            <button className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-800">
-              <SpotlightIcon className="h-4 w-4" />
-              <p className="text-sm"><Link href="/me">Me</Link></p>
             </button>
           </div>
         }
