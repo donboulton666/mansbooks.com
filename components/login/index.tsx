@@ -2,12 +2,12 @@ import { FADE_IN_ANIMATION_SETTINGS } from "../../lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { signIn, useSession } from "next-auth/react"
 import { PersonIcon } from '@100mslive/react-icons';
-import { useModalPopup } from "./sign-in-modal";
+import { useModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
 
 export default function Modal() {
   const { data: session, status } = useSession();
-  const { setShownModal } = useModalPopup();
+  const { setShownModal } = useModal();
 
   return (
     <>
