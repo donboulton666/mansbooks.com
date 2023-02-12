@@ -13,26 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import { SessionProvider } from "next-auth/react"
 import { SSRProvider, OverlayProvider } from 'react-aria';
 import '@styles/global.css';
 import '@styles/nprogress.css';
 import '@styles/chrome-bug.css';
 import type { AppProps } from 'next/app';
+import type { Session } from "next-auth"
 import NProgress from '@components/nprogress';
 import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
 import { HMSRoomProvider } from '@100mslive/react-sdk';
 
-export default function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    document.body.classList?.remove('loading');
-  }, []);
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps<{ session: Session }>) {
   return (
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>
-          <Component {...pageProps} />
+          <SessionProvider session={session}>
+            <Component {...pageProps} />
+          </SessionProvider>
           <ResizeHandler />
           <NProgress />
         </HMSRoomProvider>

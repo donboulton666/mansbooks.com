@@ -1,4 +1,5 @@
-import NextAuth from "next-auth"
+import NextAuth from 'next-auth'
+import type { NextAuthOptions } from 'next-auth'
 import GoogleProvider from "next-auth/providers/google"
 // import FacebookProvider from "next-auth/providers/facebook"
 // import GithubProvider from "next-auth/providers/github"
@@ -9,7 +10,7 @@ import GoogleProvider from "next-auth/providers/google"
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
-export default NextAuth({
+export const authOptions: NextAuthOptions = {
   callbacks: {
     session({ session, token, user }) {
       return session // The return type will match the one returned in `useSession()`
@@ -66,5 +67,7 @@ export default NextAuth({
       return token
     },
   },
-})
+}
+
+export default NextAuth(authOptions);
 
