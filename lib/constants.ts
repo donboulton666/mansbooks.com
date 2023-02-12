@@ -13,7 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+export const EXAMPLE_PATH = 'mansbooks.com'
+export const FADE_IN_ANIMATION_SETTINGS = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.2 },
+};
 
+export const FADE_DOWN_ANIMATION_VARIANTS = {
+  hidden: { opacity: 0, y: -10 },
+  show: { opacity: 1, y: 0, transition: { type: "spring" } },
+};
+
+export const FADE_UP_ANIMATION_VARIANTS = {
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { type: "spring" } },
+};
+
+export const CMS_URL = 'https://mansbooks.com';
+export const CMS_NAME= 'mansbooks.com';
 export const SITE_URL = 'https://mansbooks.com';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = '@donboulton';
@@ -27,6 +45,7 @@ export const SHORT_DATE = 'Jan 10 - 12:00am PST';
 export const FULL_DATE = 'Jan 10th 12am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
+export const HOME_OG_IMAGE_URL = 'https://mansbooks.com/icon-512x512.png'
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name

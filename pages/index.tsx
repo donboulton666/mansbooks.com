@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { useSession } from "next-auth/react"
 import { useRouter } from 'next/router';
 import { SkipNavContent } from '@reach/skip-nav';
 
@@ -22,6 +23,7 @@ import ConfContent from '@components/index';
 import { META_DESCRIPTION } from '@lib/constants';
 
 export default function Conf() {
+  const { data: session } = useSession();
   const { query } = useRouter();
   const meta = {
     title: 'Angelina Jordan Webinar, Videos',

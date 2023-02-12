@@ -6,5 +6,6 @@
   "deploymentType": "vercel",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "DATOCMS_READ_ONLY_API_TOKEN",
-  "livePreviewUrl": "https://mansbooks.com.events/"
+  "livePreviewUrl": "https://mansbooks.com.events/",
+  "postInstallUrl": "/api/post-install"
 }
