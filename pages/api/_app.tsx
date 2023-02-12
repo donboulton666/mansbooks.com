@@ -23,11 +23,8 @@ import NProgress from '@components/nprogress';
 import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
 import { HMSRoomProvider } from '@100mslive/react-sdk';
-import { SessionProvider, useSession } from "next-auth/react"
 
-export default function App({ Component }: AppProps) {
-  const { data: session, status } = useSession();
-  const loading = status === "loading";
+export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     document.body.classList?.remove('loading');
   }, []);
@@ -35,9 +32,7 @@ export default function App({ Component }: AppProps) {
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>
-          <SessionProvider session={session} refetchInterval={5 * 60}>
-            <Component {...pageProps} />
-          </SessionProvider>
+          <Component {...pageProps} />
           <ResizeHandler />
           <NProgress />
         </HMSRoomProvider>
