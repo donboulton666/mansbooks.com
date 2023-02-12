@@ -30,15 +30,11 @@
 }
 
 .companyName {
+  font-weight: bold;
   color: #f1f1f1;
   font-size: 24px;
   margin: 0;
-  line-height: 1;
-  letter-spacing: -0.05em;
-  font-weight: 800;
-  margin: var(--space-4x) 0 var(--space);
-  padding-bottom: var(--space);
-  display: inline-flex;
+  line-height: 1.4;
 }
 
 @media (min-width: 500px) {

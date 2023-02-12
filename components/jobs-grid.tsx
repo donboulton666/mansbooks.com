@@ -34,6 +34,9 @@ function CompanyJobs({ jobs }: Props) {
         >
           <div className={styles.cardBody}>
             <div>
+              <h2 className={styles.companyName}>{companyName}</h2>
+            </div>
+            <div>
               <h3 className={styles.title}>{job.title}</h3>
               <p className={styles.company}>{job.companyName}</p>
               <p className={styles.description}>{job.description}</p>
@@ -75,7 +78,7 @@ export default function JobsGrid({ jobs }: Props) {
       {Object.keys(companies).map((companyName: string) => (
         <div key={companyName} className={styles.companyRow}>
           <div className={styles.rowHeader}>
-            <h2 className={styles.companyName}>{companyName}</h2>
+            
           </div>
           <CompanyJobs jobs={companies[companyName]} />
         </div>
