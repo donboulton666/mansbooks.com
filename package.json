@@ -23,6 +23,7 @@
     "@agility/content-sync": "1.0.3",
     "@datocms/cma-client-node": "*",
     "@hcaptcha/react-hcaptcha": "^0.3.7",
+    "@next/env": "^13.1.6",
     "@radix-ui/react-alert-dialog": "^1.0.2",
     "@radix-ui/react-dialog": "0.1.5",
     "@radix-ui/react-dropdown-menu": "0.1.4",
@@ -35,7 +36,7 @@
     "classnames": "2.2.6",
     "cookie": "0.4.1",
     "csstype": "^3.1.1",
-    "date-fns": "2.16.1",
+    "date-fns": "^2.28.0",
     "dotenv": "^16.0.3",
     "framer-motion": "^9.0.2",
     "htmlescape": "1.1.1",
@@ -54,13 +55,13 @@
     "puppeteer-core": "5.5.0",
     "react": "^18.2.0",
     "react-aria": "3.2.0",
-    "react-datocms": "^4.0.8",
+    "react-datocms": "^3.0.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.2.0",
     "react-particles": "^2.8.0",
     "smoothscroll-polyfill": "0.4.4",
     "swr": "0.3.9",
-    "tiny-json-http": "^7.4.2",
+    "tiny-json-http": "^7.3.1",
     "tsparticles": "^2.8.0",
     "tsparticles-preset-stars": "^2.8.0",
     "url": "^0.11.0",
@@ -101,5 +102,15 @@
     "prettier-plugin-tailwindcss": "^0.2.2",
     "tailwindcss": "^3.2.6",
     "typescript": "4.3.2"
-  }
+  },
+    "browserslist": [
+    "> 0.25%",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -4,8 +4,8 @@ export default function PolicyPage() {
   return (
     <Layout>
       <p>
-        This is an example site to demonstrate how to use{" "}
-        <a href="https://next-auth.js.org">NextAuth.js</a> for authentication.
+        PubliusLogic is to publish common sense{" "}
+        <a href="https://publiuslogic.com">NextAuth.js</a> God Government and all.
       </p>
       <h2>Terms of Service</h2>
       <p>

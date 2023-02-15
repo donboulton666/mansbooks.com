@@ -1,82 +1,143 @@
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import ErrorPage from 'next/error'
-import Container from '@components/container'
-import MoreStories from '@components/more-stories'
-import Header from '@components/header'
-import PostHeader from '@components/post-header'
-import PostBody from '@components/post-body'
-import SectionSeparator from '@components/section-separator'
-import Layout from '@components/layout'
-import PostTitle from '@components/post-title'
-import { CMS_NAME } from '@lib/constants'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '@lib/api'
+import Head from "next/head";
+import { renderMetaTags, useQuerySubscription } from "react-datocms";
+import Container from "@/components/container";
+import Header from "@/components/header";
+import Layout from "@/components/layout";
+import MoreStories from "@/components/more-stories";
+import PostBody from "@/components/post-body";
+import PostHeader from "@/components/post-header";
+import SectionSeparator from "@/components/section-separator";
+import { request } from "@/lib/datocms";
+import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
 
-export default function Post({ post, morePosts, preview }) {
-  const router = useRouter()
+export async function getStaticPaths() {
+  const data = await request({ query: `{ allPosts { slug } }` });
 
-  if (!router.isFallback && !post) {
-    return <ErrorPage statusCode={404} />
-  }
-
-  const title = `${
-    post?.title || 'dotcms'
-  } | Next.js Blog Example with ${CMS_NAME}`
-
-  return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>{title}</title>
-                <meta
-                  property="og:image"
-                  content={`${process.env.NEXT_PUBLIC_DOTCMS_HOST}${post.image.idPath}`}
-                />
-              </Head>
-
-              <PostHeader
-                title={post.title}
-                coverImage={post.image}
-                author={post.author}
-              />
-
-              <PostBody content={post} />
-            </article>
-
-            <SectionSeparator />
-
-            {morePosts && morePosts.length > 0 && (
-              <MoreStories posts={morePosts} />
-            )}
-          </>
-        )}
-      </Container>
-    </Layout>
-  )
+  return {
+    paths: data.allPosts.map((post) => `/posts/${post.slug}`),
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview)
+  const graphqlRequest = {
+    query: `
+      query PostBySlug($slug: String) {
+        site: _site {
+          favicon: faviconMetaTags {
+            ...metaTagsFragment
+          }
+        }
+        post(filter: {slug: {eq: $slug}}) {
+          seo: _seoMetaTags {
+            ...metaTagsFragment
+          }
+          title
+          slug
+          content {
+            value
+            blocks {
+              __typename
+              ...on ImageBlockRecord {
+                id
+                image {
+                  responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+                    ...responsiveImageFragment
+                  }
+                }
+              }
+            }
+          }
+          date
+          ogImage: coverImage{
+            url(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 })
+          }
+          coverImage {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
+          author {
+            name
+            picture {
+              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
+                ...responsiveImageFragment
+              }
+            }
+          }
+        }
+
+        morePosts: allPosts(orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
+          title
+          slug
+          excerpt
+          date
+          coverImage {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
+          author {
+            name
+            picture {
+              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 100, h: 100, sat: -100}) {
+                ...responsiveImageFragment
+              }
+            }
+          }
+        }
+      }
+
+      ${responsiveImageFragment}
+      ${metaTagsFragment}
+    `,
+    preview,
+    variables: {
+      slug: params.slug,
+    },
+  };
 
   return {
     props: {
+      subscription: preview
+        ? {
+            ...graphqlRequest,
+            initialData: await request(graphqlRequest),
+            token: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+          }
+        : {
+            enabled: false,
+            initialData: await request(graphqlRequest),
+          },
       preview,
-      ...data,
     },
-  }
+  };
 }
 
-export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug()
+export default function Post({ subscription, preview }) {
+  const {
+    data: { site, post, morePosts },
+  } = useQuerySubscription(subscription);
 
-  return {
-    paths: allPosts?.map((post) => `/posts/${post.urlTitle}`) || [],
-    fallback: true,
-  }
+  const metaTags = post.seo.concat(site.favicon);
+
+  return (
+    <Layout preview={preview}>
+      <Head>{renderMetaTags(metaTags)}</Head>
+      <Container>
+        <Header />
+        <article>
+          <PostHeader
+            title={post.title}
+            coverImage={post.coverImage}
+            date={post.date}
+            author={post.author}
+          />
+          <PostBody content={post.content} />
+        </article>
+        <SectionSeparator />
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      </Container>
+    </Layout>
+  );
 }

@@ -19,27 +19,20 @@ import '@styles/global.css';
 import '@styles/nprogress.css';
 import '@styles/chrome-bug.css';
 import type { AppProps } from 'next/app';
-import NProgress from '@components/nprogress';
-import ResizeHandler from '@components/resize-handler';
 import { useEffect } from 'react';
+import ResizeHandler from '@components/resize-handler';
 import { HMSRoomProvider } from '@100mslive/react-sdk';
-import { SessionProvider, useSession } from "next-auth/react"
 
-export default function App({ Component }: AppProps) {
-  const { data: session, status } = useSession();
-  const loading = status === "loading";
+export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     document.body.classList?.remove('loading');
   }, []);
   return (
     <SSRProvider>
       <OverlayProvider>
-        <HMSRoomProvider>
-          <SessionProvider session={session} refetchInterval={5 * 60}>
-            <Component {...pageProps} />
-          </SessionProvider>
+        <HMSRoomProvider>          
+          <Component {...pageProps} />          
           <ResizeHandler />
-          <NProgress />
         </HMSRoomProvider>
       </OverlayProvider>
     </SSRProvider>

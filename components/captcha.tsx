@@ -41,7 +41,7 @@ const Captcha = forwardRef<HCaptcha, Props>((props, ref) => {
     <Suspense fallback={null}>
       <LazyCaptcha
         ref={ref}
-        sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
+        sitekey={process.env.DATOCMS_READ_ONLY_API_TOKEN}
         size="invisible"
         {...props}
       />

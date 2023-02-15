@@ -392,3 +392,11 @@ input {
   background-repeat: no-repeat;
   background: cover;
 }
+
+.max-w-8xl {
+  max-width: 90rem;
+}
+
+.max-w-9xl {
+  max-width: 110rem;
+}
