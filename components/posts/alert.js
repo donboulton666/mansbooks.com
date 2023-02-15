@@ -10,21 +10,21 @@ export default function Alert({ preview }) {
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className="py-2 text-center align-enter text-sm">
           {preview ? (
             <>
-              This is page is showing draft content.{" "}
+              Draft content.{" "}
               <a
                 href="/api/exit-preview"
                 className="underline hover:text-cyan duration-200 transition-colors"
               >
                 Click here
               </a>{" "}
-              to exit preview mode.
+                to exit preview mode.
             </>
           ) : (
             <>
-              This is page is showing published content.{" "}
+              Published content.{" "}
               <a
                 href="/api/preview"
                 className="underline hover:text-cyan duration-200 transition-colors"

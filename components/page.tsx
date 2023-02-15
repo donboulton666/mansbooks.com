@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { ReactNode } from 'react'
 import cn from 'classnames';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -29,13 +30,13 @@ type Meta = {
 
 type Props = {
   meta: Meta;
-  children: React.ReactNode;
+  children: ReactNode;
   fullViewport?: boolean;
 };
 
 export default function Page({ meta, children, fullViewport = false }: Props) {
   const router = useRouter();
-  const image = meta.image || '/twitter-card.png';
+  const image = meta.image || '/twitter-card.jpg';
   const title = meta.title || SITE_NAME;
   const url = meta.url || `${SITE_URL}${router.asPath}`;
   const description = meta.description || SITE_NAME;

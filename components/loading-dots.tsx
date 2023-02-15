@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { ReactNode } from 'react'
 import px from '@lib/to-pixels';
 import cn from 'classnames';
 import styles from './loading-dots.module.css';
@@ -22,7 +23,7 @@ interface Props {
   size?: number;
   height?: number | string;
   reverse?: boolean;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export default function LoadingDots({ size = 2, height, children, reverse }: Props) {

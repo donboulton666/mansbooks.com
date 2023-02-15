@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { ReactNode } from 'react'
 import Link from 'next/link';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
@@ -30,7 +31,7 @@ import { hmsConfig } from './hms/config';
 import ViewSource from './view-source';
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   hideNav?: boolean;
   layoutStyles?: any;

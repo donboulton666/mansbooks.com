@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { CrossIcon, PersonIcon } from '@100mslive/react-icons';
 import DemoModal from '../demo-modal';
@@ -52,7 +52,7 @@ const RoomCta = () => {
 
 export default RoomCta;
 
-export const ChangeRoleDialog: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const ChangeRoleDialog: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Dialog.Root>
       <Dialog.Overlay className="fixed inset-0" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }} />

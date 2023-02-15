@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
+import { ReactNode } from 'react'
 import styles from './conf-container.module.css';
 
-export default function ConfContainer({ children }: { children: React.ReactNode }) {
+export default function ConfContainer({ children }: { children: ReactNode }) {
   return <div className={styles.container}>{children}</div>;
 }

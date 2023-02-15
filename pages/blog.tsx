@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
-import Container from "../../components/posts/container";
-import HeroPost from "../../components/posts/hero-post";
-import Intro from "../../components/posts/intro";
-import Layout from "../../components/posts/layout";
-import MoreStories from "../../components/posts/more-stories";
+import Container from "../components/posts/container";
+import HeroPost from "../components/posts/hero-post";
+import Intro from "../components/posts/intro";
+import Layout from "../components/posts/layout";
+import MoreStories from "../components/posts/more-stories";
 import { request } from "../lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
 
@@ -55,7 +55,7 @@ export async function getStaticProps({ preview }) {
         ? {
             ...graphqlRequest,
             initialData: await request(graphqlRequest),
-            token: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+            token: process.env.DATOCMS_READ_ONLY_API_TOKEN,
             environment: process.env.NEXT_DATOCMS_ENVIRONMENT || null,
           }
         : {
@@ -66,7 +66,7 @@ export async function getStaticProps({ preview }) {
   };
 }
 
-export default function Index({ subscription }) {
+export default function Blog({ subscription }) {
   const {
     data: { allPosts, site, blog },
   } = useQuerySubscription(subscription);
