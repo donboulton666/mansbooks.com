@@ -11,7 +11,7 @@ import IconFitScreen from '@components/icons/icon-fit-screen';
 import Button from './Button';
 import { CrossIcon } from '@100mslive/react-icons';
 import { hmsConfig } from './config';
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 const ScreenshareTile = () => {
   const screenSharePeer = useHMSStore(selectPeerScreenSharing);

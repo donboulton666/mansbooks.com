@@ -15,7 +15,7 @@
  */
 
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
 import { Speaker } from '@lib/types';
@@ -38,8 +38,7 @@ type Props = {
 export default function SpeakerSection({ speaker }: Props) {
   return (
     <>
-      <Link href="/speakers">
-        <a className={styles.backlink}>
+      <Link href="/speakers" className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
             width="24"
@@ -54,7 +53,6 @@ export default function SpeakerSection({ speaker }: Props) {
             <path d="M15 18l-6-6 6-6" />
           </svg>
           Back to Speakers
-        </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
         <div style={{ minWidth: '300px' }}>
@@ -79,21 +77,21 @@ export default function SpeakerSection({ speaker }: Props) {
             <p className={styles.bio}>{speaker.bio}</p>
             <h3 className={styles['socials-header']}>Social Media</h3>
             {speaker.twitter ? (
-              <a
+              <Link
                 aria-label="Twitter"
                 href={speaker.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <TwitterIcon />
-              </a>
+              </Link>
             ) : (
               <span className={styles.disabled}>
                 <TwitterIcon />
               </span>
             )}
             {speaker.github ? (
-              <a
+              <Link
                 aria-label="GitHub"
                 className={styles.githubIcon}
                 href={speaker.github}
@@ -101,7 +99,7 @@ export default function SpeakerSection({ speaker }: Props) {
                 rel="noopener noreferrer"
               >
                 <GithubIcon color="#D8D8D8" size={24} />
-              </a>
+              </Link>
             ) : (
               <span className={cn(styles.githubIcon, styles.disabled)}>
                 <GithubIcon color="#D8D8D8" size={24} />

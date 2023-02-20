@@ -209,34 +209,32 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
             ) : (
               <>
                 GitHub OAuth app is required.{' '}
-                <a
+                <Link
                   href={`${REPO}#authentication`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={ticketFormStyles['learn-more']}
                 >
                   Learn more.
-                </a>
+                </Link>
               </>
             )}
           </p>
         </div>
         <div className={formStyles['or-divider']}>OR</div>
-          <Link href="/stage/a">
-            <a
-              className={cn(
-                formStyles.submit,
-                formStyles['generate-with-github'],
-                formStyles['stage-btn']
-              )}
-            >
-              <div className={ticketFormStyles.generateWithGithub}>
-                <span className={ticketFormStyles.githubIcon}>
-                <InviteStageIcon />
-                </span>
+          <Link href="/stage/a"
+            className={cn(
+              formStyles.submit,
+              formStyles['generate-with-github'],
+              formStyles['stage-btn']
+            )}
+          >
+            <div className={ticketFormStyles.generateWithGithub}>
+              <span className={ticketFormStyles.githubIcon}>
+              <InviteStageIcon />
+              </span>
                 Go to Live Stage
-              </div>
-            </a>
+            </div>
           </Link>
       </div>
     </form>

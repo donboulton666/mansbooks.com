@@ -15,7 +15,7 @@
  */
 
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import cn from 'classnames';
 import { Sponsor } from '@lib/types';
 import styles from './sponsor-section.module.css';
@@ -28,8 +28,7 @@ type Props = {
 export default function SponsorSection({ sponsor }: Props) {
   return (
     <>
-      <Link href="/expo">
-        <a className={styles.backlink}>
+      <Link href="/expo" className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
             width="24"
@@ -44,7 +43,6 @@ export default function SponsorSection({ sponsor }: Props) {
             <path d="M15 18l-6-6 6-6" />
           </svg>
           Back to Videos
-        </a>
       </Link>
       <div className={styles.layout}>
         <iframe
@@ -72,7 +70,7 @@ export default function SponsorSection({ sponsor }: Props) {
           </div>
           <p className={styles.description}>{sponsor.description}</p>
           <div className={styles['sponsor-details']}>
-            <a
+            <Link
               href={sponsor.callToActionLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -95,8 +93,8 @@ export default function SponsorSection({ sponsor }: Props) {
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
                 </svg>
-            </a>
-            <a
+            </Link>
+            <Link
               href={sponsor.discord}
               target="_blank"
               rel="noopener noreferrer"
@@ -104,12 +102,12 @@ export default function SponsorSection({ sponsor }: Props) {
               className={cn(styles.button, styles['button-link'])}
             >
               Chat on Discord
-            </a>
+            </Link>
           </div>
           <div className={styles.resources}>
             <h2 className={styles.heading}>Resources</h2>
             {sponsor.links.map(link => (
-              <a
+              <Link
                 key={link.url}
                 href={link.url}
                 target="_blank"
@@ -132,7 +130,7 @@ export default function SponsorSection({ sponsor }: Props) {
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
                 </svg>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

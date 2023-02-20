@@ -13,7 +13,7 @@ import React, { useCallback, useRef } from 'react';
 import Avatar from './Avatar';
 import { hmsConfig } from './config';
 import useVideo from './lib/useVideo';
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 interface Props {
   trackId: HMSTrackID;

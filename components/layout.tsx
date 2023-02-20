@@ -55,24 +55,21 @@ export default function Layout({
           <header className={cn(styles.header)}>
             <div className={styles['header-logos']}>
               <MobileMenu key={router.asPath} />
-              <Link href="/">
-                {/* eslint-disable-next-line */}
-                <a className={styles.logo}>
-                  <Logo />
-                </a>
+              <Link href="/" className={styles.logo}>
+                <Logo />
               </Link>
             </div>
             <div className={styles.tabs}>
               {NAVIGATION.map(({ name, route }) => (
-                <a
-                  key={name}
+                <Link 
+                  key={name} 
                   href={route}
                   className={cn(styles.tab, {
                     [styles['tab-active']]: activeRoute.startsWith(route)
                   })}
                 >
                   {name}
-                </a>
+                </Link>
               ))}
             </div>
 
