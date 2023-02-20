@@ -39,4 +39,4 @@ export function emailToId(email: string) {
   }
 }
 
-export default redis;
+export default redis

@@ -2,39 +2,39 @@
 # yarn lockfile v1
 
 
-"@100mslive/hms-video-store@0.2.89":
-  version "0.2.89"
-  resolved "https://registry.yarnpkg.com/@100mslive/hms-video-store/-/hms-video-store-0.2.89.tgz#b92018c20cc8bb1d43f5a187a379042443de41bf"
-  integrity sha512-XID0mb7CQ8cIaPPHDtXmeoYkH6dKeHYQio8fqBMHH7KoILXzKV5Ztdjr6EMkbI9kkM8z9YdgCNs6DqtAQleKhA==
+"@100mslive/hms-video-store@0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@100mslive/hms-video-store/-/hms-video-store-0.8.3.tgz#d987a8b8328e996cf1f357662dc4bd4710392ea1"
+  integrity sha512-kjPVlsYvYvbkCGGA5ET/0aAD75ZgeGCU32ZupovG5w0c6Z0Fg2YqpWdBvlhaSQET/nUVZ5EjXgrHMafFtzvVrA==
   dependencies:
-    "@100mslive/hms-video" "0.1.43"
-    eventemitter2 "^6.4.5"
+    "@100mslive/hms-video" "0.7.3"
+    eventemitter2 "^6.4.7"
     immer "^9.0.6"
     reselect "4.0.0"
     zustand "3.5.7"
 
-"@100mslive/hms-video@0.1.43":
-  version "0.1.43"
-  resolved "https://registry.yarnpkg.com/@100mslive/hms-video/-/hms-video-0.1.43.tgz#404776553f525e4e8fb6157b7423d7c1e6c6b94f"
-  integrity sha512-zb5Z55HCSqdvcl/JcR3A7nXlWqG/uQM8cf5hNnsHMTzSTgkCWeIWxL/mSP79DTWjdgJ9wAGLO26s/zGQBWfFjA==
+"@100mslive/hms-video@0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@100mslive/hms-video/-/hms-video-0.7.3.tgz#0a8a0838511a06bf02407e4949d02106c4ce72d0"
+  integrity sha512-njFQkumjCE14eEXS0bGHydCijy1CfwzySmkqPKeNKRKlj5nYN1uqRiLp6fy5W/w5LBeFvaE3hOPvwsB7sEWkMw==
   dependencies:
-    eventemitter2 "^6.4.5"
+    eventemitter2 "^6.4.7"
     sdp-transform "^2.14.1"
     ua-parser-js "^1.0.1"
     uuid "^8.3.2"
     webrtc-adapter "^8.0.0"
 
-"@100mslive/react-icons@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@100mslive/react-icons/-/react-icons-0.0.6.tgz#43316f94915d00dcf3f2195e2e6fd3643d8f08bd"
-  integrity sha512-ZNF06qv7/6wirtfVMxXEzPMp4i0A4yHCoEhJ7irTngBo2fjjy1tlHS0QxQlY05ImuEpPm2vwVjgd3gj6ZdmBXg==
+"@100mslive/react-icons@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@100mslive/react-icons/-/react-icons-0.6.3.tgz#cedecae86ba287f849e6de1715addd7d471b7aab"
+  integrity sha512-S2xH7pU8fpm5LdreZJ6WWCAtZDxaPCb5YA/0cHnQ1Yh6yhWhJ3OVUeqDK8Nm2Cbp0u3mTWfm7GSP2vhUt5J40w==
 
-"@100mslive/react-sdk@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@100mslive/react-sdk/-/react-sdk-0.0.6.tgz#7321ead526a7d4172fba7cccbe91eb148d569ff1"
-  integrity sha512-48aI8YshLIl9GgoHA/klOG9zCAGBrF5CoCx4msecmKQuIe5a8HN1r6GxThA89EnS+3YODaDatAVSOEsRQjZ+mA==
+"@100mslive/react-sdk@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@100mslive/react-sdk/-/react-sdk-0.6.3.tgz#30c90d05102af21437c123840b2082860e6bda02"
+  integrity sha512-k8cudNNl3MbuxADhX8JvAPbl46TQix87h8rIGhomoqQlnzDPePX/B34zhsI4StwyPFXzcJlYIheWLz01ZZbUhw==
   dependencies:
-    "@100mslive/hms-video-store" "0.2.89"
+    "@100mslive/hms-video-store" "0.8.3"
     react-intersection-observer "^8.33.1"
     react-resize-detector "^7.0.0"
     zustand "^3.6.2"
@@ -1419,11 +1419,6 @@
   integrity sha512-2+rHfXZ56YgsC6i3fKvBue/xatnSm0Jv+C/x4+n3wg5xAcLh4LPW3GvZ/9ifxNAz9+IWplgZHa1FRIbSuUvNWg==
   dependencies:
     "@swc/helpers" "^0.4.14"
-
-"@ioredis/commands@^1.1.1":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@ioredis/commands/-/commands-1.2.0.tgz#6d61b3097470af1fdbbe622795b8921d42018e11"
-  integrity sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
@@ -4277,10 +4272,10 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
 
-denque@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/denque/-/denque-2.1.0.tgz#e93e1a6569fb5e66f16a3c2a2964617d349d6ab1"
-  integrity sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==
+denque@^1.1.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/denque/-/denque-1.5.1.tgz#07f670e29c9a78f8faecb2566a1e2c11929c5cbf"
+  integrity sha512-XwE+iZ4D6ZUB7mfYRMb5wByE8L74HCn30FBN7sWnXksWc1LO1bPDl67pBR9o/kC4z/xSNAwkMYcGgqDV3BE3Hw==
 
 dequal@^2.0.2:
   version "2.0.3"
@@ -4751,7 +4746,7 @@ event-target-shim@^5.0.0:
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
   integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
-eventemitter2@^6.4.5:
+eventemitter2@^6.4.7:
   version "6.4.9"
   resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-6.4.9.tgz#41f2750781b4230ed58827bc119d293471ecb125"
   integrity sha512-JEPTiaOt9f04oa6NOkc4aH+nVp5I3wEjpHbIPqfgCdD5v5bUzy7xQqwcVO2aDQgOWhI28da57HksMrzK9HlRxg==
@@ -5303,17 +5298,19 @@ invariant@^2.2.4:
   dependencies:
     loose-envify "^1.0.0"
 
-ioredis@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.3.1.tgz#55d394a51258cee3af9e96c21c863b1a97bf951f"
-  integrity sha512-C+IBcMysM6v52pTLItYMeV4Hz7uriGtoJdz7SSBDX6u+zwSYGirLdQh3L7t/OItWITcw3gTFMjJReYUwS4zihg==
+ioredis@^4.19.4:
+  version "4.28.5"
+  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-4.28.5.tgz#5c149e6a8d76a7f8fa8a504ffc85b7d5b6797f9f"
+  integrity sha512-3GYo0GJtLqgNXj4YhrisLaNNvWSNwSS2wS4OELGfGxH8I69+XfNdnmV1AyN+ZqMh0i7eX+SWjrwFKDBDgfBC1A==
   dependencies:
-    "@ioredis/commands" "^1.1.1"
     cluster-key-slot "^1.1.0"
-    debug "^4.3.4"
-    denque "^2.1.0"
+    debug "^4.3.1"
+    denque "^1.1.0"
     lodash.defaults "^4.2.0"
+    lodash.flatten "^4.4.0"
     lodash.isarguments "^3.1.0"
+    p-map "^2.1.0"
+    redis-commands "1.7.0"
     redis-errors "^1.2.0"
     redis-parser "^3.0.0"
     standard-as-callback "^2.1.0"
@@ -5764,6 +5761,11 @@ lodash.defaults@^4.2.0:
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
   integrity sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==
 
+lodash.flatten@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
+  integrity sha512-C5N2Z3DgnnKr0LOpv/hKCgKdb7ZZwafIrsesve6lmzvZIRZRGaZ/l6Q8+2W7NaT+ZwO3fFlSCzCzrDCFdJfZ4g==
+
 lodash.isarguments@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
@@ -6154,7 +6156,7 @@ p-locate@^4.1.0:
   dependencies:
     p-limit "^2.2.0"
 
-p-map@^2.0.0:
+p-map@^2.0.0, p-map@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-2.1.0.tgz#310928feef9c9ecc65b68b17693018a665cea175"
   integrity sha512-y3b8Kpd8OAN444hxfBbFfj1FY/RjtTd8tzYwhUqNYXx0fXx2iX4maP4Qr6qhIKbQXI02wTLAda4fYUbDagTUFw==
@@ -6880,6 +6882,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+redis-commands@1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/redis-commands/-/redis-commands-1.7.0.tgz#15a6fea2d58281e27b1cd1acfb4b293e278c3a89"
+  integrity sha512-nJWqw3bTFy21hX/CPKHth6sfhZbdiHP6bTawSgQBlKOVRG7EZkfHbbHwQJnrE4vsQf0CMNE+3gJ4Fmm16vdVlQ==
 
 redis-errors@^1.0.0, redis-errors@^1.2.0:
   version "1.2.0"
