@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
 
-export default function PolicyPage() {
+export default function Privacy() {
   return (
     <Layout>
       <p>
-        PubliusLogic is to publish common sense{" "}
-        <a href="https://publiuslogic.com">NextAuth.js</a> God Government and all.
+        Extended Policy: Terms & Conditions with Cookie's Usage at:{" "}
+        <a href="https://publiuslogic.com">publiuslogic.com</a>
       </p>
       <h2>Terms of Service</h2>
       <p>
@@ -23,7 +23,7 @@ export default function PolicyPage() {
         every ~2 hours.
       </p>
       <p>
-        Data provided to this site is exclusively used to support signing in and
+        Data provided by DatoCMS to this site is exclusively used to support signing in and
         is not passed to any third party services, other than via SMTP or OAuth
         for the purposes of authentication.
       </p>

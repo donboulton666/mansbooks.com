@@ -11,6 +11,7 @@ import IconFitScreen from '@components/icons/icon-fit-screen';
 import Button from './Button';
 import { CrossIcon } from '@100mslive/react-icons';
 import { hmsConfig } from './config';
+import Image from 'next/image'
 
 const ScreenshareTile = () => {
   const screenSharePeer = useHMSStore(selectPeerScreenSharing);
@@ -86,5 +87,5 @@ const ScreenshareTile = () => {
 export default ScreenshareTile;
 
 const HmsWatermark = () => {
-  return <img src="/hms-coachmark.svg" className="md:block hidden absolute left-2 bottom-2 z-10" />;
+  return <Image src="/hms-coachmark.svg" className="md:block hidden absolute left-2 bottom-2 z-10" />;
 };

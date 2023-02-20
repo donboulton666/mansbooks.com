@@ -28,36 +28,40 @@ function CompanyJobs({ jobs }: Props) {
         <a
           key={job.id}
           className={styles.card}
-          href={job.link}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <div className={styles.cardBody}>
-            <div>
-              <h3 className={styles.title}>{job.title}</h3>
-              <p className={styles.company}>{job.companyName}</p>
-              <p className={styles.description}>{job.description}</p>
+            <h3 className={styles.title}>{job.title}</h3>
+            <div className={styles.company}>{job.companyName}</div>
+            <div className={styles.description}>{job.description}</div>
+              <div className={styles.description}>
+                <a
+                 type="button"
+                  key={job.id}
+                  className={styles.link}
+                  href={job.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                Learn More
+                <svg
+                  className={styles.icon}
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                  shapeRendering="geometricPrecision"
+                >
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14L21 3" />
+                </svg>
+              </a>
             </div>
-            <p className={styles.link}>
-              Learn More
-              <svg
-                className={styles.icon}
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                shapeRendering="geometricPrecision"
-              >
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                <path d="M15 3h6v6" />
-                <path d="M10 14L21 3" />
-              </svg>
-            </p>
-          </div>
+          </div>          
         </a>
       ))}
     </div>

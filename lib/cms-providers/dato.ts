@@ -131,6 +131,8 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
   return data.allCompanies;
 }
 
+
+
 export async function getAllJobs(): Promise<Job[]> {
   const data = await fetchCmsAPI(`
      {

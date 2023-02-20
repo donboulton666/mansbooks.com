@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "../../components/posts/container";
-import Header from "../../components/header";
+import Header from "../../components/posts/header";
 import Layout from "../../components/layout";
 import MoreStories from "../../components/posts/more-stories";
 import PostBody from "../../components/posts/post-body";
@@ -103,7 +103,7 @@ export async function getStaticProps({ params, preview = false }) {
         ? {
             ...graphqlRequest,
             initialData: await request(graphqlRequest),
-            token: process.env.DATOCMS_READ_ONLY_API_TOKEN,
+            token: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
           }
         : {
             enabled: false,

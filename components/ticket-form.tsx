@@ -28,6 +28,7 @@ import ticketFormStyles from './ticket-form.module.css';
 import { saveGithubToken } from '@lib/user-api';
 import { GitHubOAuthData } from '@lib/types';
 import { InviteStageIcon } from '@100mslive/react-icons';
+import Link from 'next/link'
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -221,21 +222,22 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
           </p>
         </div>
         <div className={formStyles['or-divider']}>OR</div>
-        <a
-          href="/stage/a"
-          className={cn(
-            formStyles.submit,
-            formStyles['generate-with-github'],
-            formStyles['stage-btn']
-          )}
-        >
-          <div className={ticketFormStyles.generateWithGithub}>
-            <span className={ticketFormStyles.githubIcon}>
-              <InviteStageIcon />
-            </span>
-            Go to Live Stage
-          </div>
-        </a>
+          <Link href="/stage/a">
+            <a
+              className={cn(
+                formStyles.submit,
+                formStyles['generate-with-github'],
+                formStyles['stage-btn']
+              )}
+            >
+              <div className={ticketFormStyles.generateWithGithub}>
+                <span className={ticketFormStyles.githubIcon}>
+                <InviteStageIcon />
+                </span>
+                Go to Live Stage
+              </div>
+            </a>
+          </Link>
       </div>
     </form>
   );

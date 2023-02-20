@@ -19,6 +19,7 @@ import GithubIcon from '@components/icons/icon-github';
 import cn from 'classnames';
 import IconAvatar from './icons/icon-avatar';
 import styles from './ticket-profile.module.css';
+import Image from 'next/image'
 
 type Props = {
   name?: string;
@@ -36,7 +37,7 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
         })}
       >
         {username ? (
-          <img src={`https://github.com/${username}.png`} alt={username} className={styles.image} />
+          <Image src={`https://github.com/${username}.png`} alt={username} className={styles.image} />
         ) : (
           <span className={cn(styles.image, styles['empty-icon'])}>
             <IconAvatar />

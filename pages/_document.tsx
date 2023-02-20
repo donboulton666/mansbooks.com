@@ -15,6 +15,7 @@
  */
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script'
 
 export default class CustomDocument extends Document {
   render() {
@@ -37,14 +38,18 @@ export default class CustomDocument extends Document {
           <link rel="apple-touch-icon" sizes="152x152" href="/icons/touch-icon-ipad.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/touch-icon-iphone-retina.png" />
           <link rel="apple-touch-icon" sizes="167x167" href="/icons/touch-icon-ipad-retina.png" />
-
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&Noto+Sans+HK:wght@700&family=Noto+Sans+JP:wght@700&family=Noto+Sans+KR:wght@700&family=Noto+Sans+SC:wght@700&family=Noto+Sans+TC:wght@700&family=Noto+Sans:wght@700&display=swap"
+            rel="stylesheet"
+          />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
           <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=optional" />
           <meta name="google-site-verification" content="DERBmWes64nsERJF7euwN3Y7sarDxsPOx3eDQUB21uM" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://mansbooks.com" />
@@ -59,7 +64,7 @@ export default class CustomDocument extends Document {
           <meta property="og:url" content="https://mansbooks.com" />
           <meta property="og:image" content="https://mansbooks.com/icons/apple-touch-icon.png" />
 
-          <script
+          <Script id="google-analytics" strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -68,7 +73,7 @@ export default class CustomDocument extends Document {
                })(window,document,'script','dataLayer','GTM-PXRSPG6');`,
             }}
           />
-          <script
+          <Script id="cookiehub" strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

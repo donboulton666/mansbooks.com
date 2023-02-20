@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mansbooks.com
+
+# Sitemaps
+Sitemap: https://mansbooks.com/sitemap.xml

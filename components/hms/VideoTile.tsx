@@ -13,6 +13,7 @@ import React, { useCallback, useRef } from 'react';
 import Avatar from './Avatar';
 import { hmsConfig } from './config';
 import useVideo from './lib/useVideo';
+import Image from 'next/image'
 
 interface Props {
   trackId: HMSTrackID;
@@ -81,7 +82,7 @@ const PeerName: React.FC<{ name: string }> = ({ name }) => {
 };
 
 const HmsWatermark = () => {
-  return <img src="/hms-coachmark.svg" className="absolute right-6 top-6 z-30" />;
+  return <Image src="/hms-coachmark.svg" className="absolute right-6 top-6 z-30" />;
 };
 
 export const AudioLevel: React.FC<{ audioTrack: HMSPeer['audioTrack'] }> = ({ audioTrack }) => {

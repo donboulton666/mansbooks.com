@@ -23,7 +23,8 @@ import { useEffect } from 'react';
 import ResizeHandler from '@components/resize-handler';
 import { HMSRoomProvider } from '@100mslive/react-sdk';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
+  const AnyComponent = Component as any;
   useEffect(() => {
     document.body.classList?.remove('loading');
   }, []);
@@ -31,10 +32,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>          
-          <Component {...pageProps} />          
+          <AnyComponent {...pageProps} />          
           <ResizeHandler />
         </HMSRoomProvider>
       </OverlayProvider>
     </SSRProvider>
   );
 }
+export default App

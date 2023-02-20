@@ -36,12 +36,8 @@ const DemoModal = () => {
     }
   }, [router]);
   return (
-    <div className="font-sans z-30 overflow-hidden">
-      <p className="text-[32px] font-semibold my-0">Take your Webinar for a test drive</p>
-      <p className="text-gray-300 text-[15px] my-0">
-        We have setup a few profiles to make it easy for you or your team to experience each
-        perspective. Join in one click or share access with anyone else.
-      </p>
+    <div className="font-sans z-30 overflow-hidden nav-scroll">
+      <p className="text-[32px] font-semibold my-0">Angelina's Webinar</p>
       <div>
         {data.map(m => (
           <div

@@ -1,14 +1,10 @@
 import tiny from "tiny-json-http";
 
-export async function request({ query, variables, preview }) {
+export async function request({ query, variables }) {
   let endpoint = "https://graphql.datocms.com";
 
   if (process.env.NEXT_DATOCMS_ENVIRONMENT) {
     endpoint += `/environments/${process.env.NEXT_DATOCMS_ENVIRONMENT}`;
-  }
-
-  if (preview) {
-    endpoint += `/preview`;
   }
 
   const { body } = await tiny.post({

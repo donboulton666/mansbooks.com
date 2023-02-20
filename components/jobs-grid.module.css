@@ -19,13 +19,13 @@
 }
 
 .grid {
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fill, 1fr);
-  grid-gap: 24px;
+  grid-gap: 14px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
@@ -58,8 +58,7 @@
 
 .rowHeader {
   display: flex;
-  justify-content: space-between;
-  align-items: intial;
+  justify-content: space-around;
   margin-bottom: var(--space-4x);
   flex-direction: column;
 }
