@@ -51,7 +51,7 @@
     "puppeteer-core": "5.5.0",
     "react": "^18.2.0",
     "react-aria": "3.22.0",
-    "react-datocms": "^3.1.4",
+    "react-datocms": "^4.0.8",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-particles": "^2.9.3",
@@ -69,7 +69,7 @@
     "@types/react-dom": "17.0.15"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^12.3.3",
+    "@next/eslint-plugin-next": "^13.1.6",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.2",
@@ -78,7 +78,7 @@
     "@types/htmlescape": "^1.1.1",
     "@types/ioredis": "4.17.9",
     "@types/ms": "^0.7.31",
-    "@types/node": "12.19.8",
+    "@types/node": "18.14.0",
     "@types/nprogress": "^0.2.0",
     "@types/puppeteer-core": "^2.0.0",
     "@types/react": "^17.0.39",

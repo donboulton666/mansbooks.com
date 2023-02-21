@@ -1459,10 +1459,17 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.3.4.tgz#c787837d36fcad75d72ff8df6b57482027d64a47"
   integrity sha512-H/69Lc5Q02dq3o+dxxy5O/oNxFsZpdL6WREtOOtOM1B/weonIwDXkekr1KV5DPVPr12IHFPrMrcJQ6bgPMfn7A==
 
-"@next/eslint-plugin-next@12.3.4", "@next/eslint-plugin-next@^12.3.3":
+"@next/eslint-plugin-next@12.3.4":
   version "12.3.4"
   resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.3.4.tgz#e7dc00e2e89ed361f111d687b8534483ec15518b"
   integrity sha512-BFwj8ykJY+zc1/jWANsDprDIu2MgwPOIKxNVnrKvPs+f5TPegrVnem8uScND+1veT4B7F6VeqgaNLFW1Hzl9Og==
+  dependencies:
+    glob "7.1.7"
+
+"@next/eslint-plugin-next@^13.1.6":
+  version "13.1.6"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-13.1.6.tgz#ad8be22dd3d8aee9a9bd9a2507e2c55a2f7ebdd9"
+  integrity sha512-o7cauUYsXjzSJkay8wKjpKJf2uLzlggCsGUkPu3lP09Pv97jYlekTC20KJrjQKmSv5DXV0R/uks2ZXhqjNkqAw==
   dependencies:
     glob "7.1.7"
 
@@ -3506,10 +3513,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.13.0.tgz#0400d1e6ce87e9d3032c19eb6c58205b0d3f7850"
   integrity sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==
 
-"@types/node@12.19.8":
-  version "12.19.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.19.8.tgz#efd6d1a90525519fc608c9db16c8a78f7693a978"
-  integrity sha512-D4k2kNi0URNBxIRCb1khTnkWNHv8KSL1owPmS/K5e5t8B2GzMReY7AsJIY1BnP5KdlgC4rj9jk2IkDMasIE7xg==
+"@types/node@18.14.0":
+  version "18.14.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.0.tgz#94c47b9217bbac49d4a67a967fdcdeed89ebb7d0"
+  integrity sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==
 
 "@types/nprogress@^0.2.0":
   version "0.2.0"
@@ -7163,10 +7170,10 @@ react-aria@3.22.0:
     "@react-aria/utils" "^3.14.2"
     "@react-aria/visually-hidden" "^3.6.1"
 
-react-datocms@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-3.1.4.tgz#6326ee4bf0babbff4be61609a3b56e45cea61745"
-  integrity sha512-L+esZt3id1b/shQkjPmIUU+CEjwuz1ZRTMU+LylMC3uPUat3iuads/V625Bnz6blyrRxpPlcd14Uit9LxnHfcg==
+react-datocms@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-4.0.8.tgz#c8fd3b37c598e7ed1f536f0a52210dc90a8c95ca"
+  integrity sha512-YuS3mz3WP3/oeMi1pWuQFgMr9kWzbX6VCdsMbOC4MLfc3ZwnmzG5KITSmflibyh2wnY6+pJ/y1q+qAMYghMcxQ==
   dependencies:
     datocms-listen "^0.1.9"
     datocms-structured-text-generic-html-renderer "^2.0.1"
