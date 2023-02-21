@@ -3,7 +3,7 @@ export default async (req, res) => {
   // on Vercel/Netlify, or everyone will be able to enter Preview Mode and
   // see draft content!
 
-  const secret = process.env.NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET;
+  const secret = process.env.NEXT_CMS_DATOCMS_PREVIEW_SECRET;
 
   // Check the secret and next parameters
   if (secret && req.query.secret !== secret) {
@@ -17,7 +17,7 @@ export default async (req, res) => {
 
   // Redirect to the homepage, or to the URL provided with the `redirect` query
   // string parameter:
-  const redirectUrl = new URL(req.query.redirect || '/', 'https://example.com');
+  const redirectUrl = new URL(req.query.redirect || '/', 'https://mansbooks.com');
 
   res.redirect(`${redirectUrl.pathname}${redirectUrl.search}`);
 };

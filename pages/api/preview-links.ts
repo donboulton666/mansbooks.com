@@ -8,10 +8,11 @@
   URL: <YOUR_WEBSITE>/api/preview-links
 */
 
-const findUrlForItem = ({ item, itemType }) => {
+const findUrlForItem = ({ item, itemType, locale }) => {
   switch (itemType.attributes.api_key) {
     case 'post':
-      return `/posts/${item.attributes.slug}`;
+      const localePrefix = locale === 'en' ? '' : `/${locale}`;
+      return `${localePrefix}/blog/${item.attributes.slug[locale]}`;
     default:
       return null;
   }
