@@ -68,6 +68,10 @@ export const NAVIGATION = [
   {
     name: 'Social',
     route: '/jobs'
+  },
+  {
+    name: 'Blog',
+    route: '/blog'
   }
 ];
 
