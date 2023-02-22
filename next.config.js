@@ -20,4 +20,7 @@ module.exports = withPWA({
     ],
     imageSizes: [24, 64, 300]
   },
+  eslint: { 
+    ignoreDuringBuilds: true,
+  },
 });

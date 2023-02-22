@@ -4,6 +4,16 @@
   command   = "next build"
 [build.environment]
   NODE_VERSION = "18.13.0"
+[plugins]]
+  included_files = [
+    "!./node_modules/sharp/vendor/**",
+    "!node_modules/sharp/**",
+    "!node_modules/sharp/vendor/8.12.2/linux-x64/lib/libvips-cpp.so.42",
+    "!./node_modules/chrome-aws-lambda/**",
+  ]
+
+[build.environment]
+  NODE_VERSION = "18.13.0"
 [[headers]]
   for = "/*"
   [headers.values]
@@ -16,7 +26,7 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Access-Control-Allow-Origin = '''
-      https://mansbooks.com,
+      https://publiuslogic.com,
       https://graphql.fauna.com,
       https://graphql.fauna.com/graphql
       https://img.badgesize.io/, 
