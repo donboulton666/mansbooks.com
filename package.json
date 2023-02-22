@@ -23,6 +23,9 @@
     "license": "addlicense -l apache -c 'Angelina Jordan Inc.' components/**/* lib/**/* pages/**/* styles/**/* *.ts"
   },
   "dependencies": {
+    "@100mslive/hls-stats": "0.0.5",
+    "@100mslive/hms-noise-suppression": "0.7.3",
+    "@100mslive/hms-virtual-background": "1.9.3",
     "@100mslive/react-icons": "^0.6.3",
     "@100mslive/react-sdk": "^0.6.3",
     "@100mslive/react-ui": "0.6.3",

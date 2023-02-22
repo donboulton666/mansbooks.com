@@ -2,6 +2,7 @@ import Avatar from "./avatar";
 import Date from "./date";
 import CoverImage from "./cover-image";
 import Link from "next/link";
+import styles from "../sponsors-grid.module.css";
 
 export default function PostPreview({
   title,
@@ -12,25 +13,33 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <section class="mb-32 overflow-hidden">
-      <div class="center container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-        <div class="-m-1 flex flex-wrap justify-center md:-m-2">
-          <div class="flex flex-wrap">
-            <CoverImage
-              slug={slug}
-              title={title}
-              responsiveImage={coverImage.responsiveImage}
-            />
+    <section class="mb-32 overflow-hidden rounded-lg border-double border-sky-600 bg-gray-800">
+      <div className={styles.grid}>
+        <div className={styles.imageWrapper}>
+          <CoverImage
+            className="rounded-t-md mt-4"
+            slug={slug}
+            title={title}
+            responsiveImage={coverImage.responsiveImage}
+          />
+        </div>
+        <div className={styles.cardBody}>
+          <div className="sm:flex sm:items-start">
+            <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
+              <Avatar picture={author.picture} />
+              <div className="-mt-1 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <div className="text-base leading-6">
+                  <span className="font-medium italic mr-6">{author.name} </span>
+                    <span className="font-medium italic pl-4 ml-4"><Date dateString={date} /></span>
+                </div>
+              </div>
+            </div>
           </div>
-          <Avatar name={author.name} picture={author.picture} />
           <h3 className="mb-3 text-3xl leading-snug">
             <Link href={`/posts/${slug}`} className="hover:underline">
               {title}
             </Link>
           </h3>
-          <div className="mb-4 text-lg">
-            <Date dateString={date} />
-          </div>
           <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
         </div>
       </div>
