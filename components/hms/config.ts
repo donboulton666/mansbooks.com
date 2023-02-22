@@ -8,7 +8,7 @@ export const hmsConfig = {
    */
   aspectRatio: {
     width: 1.8,
-    height: 1
+    height: 1,
   },
   /**
    * maximum no.of tiles that can be rendered in speakers row
@@ -18,13 +18,13 @@ export const hmsConfig = {
    * Turn off 100ms added things ->
    * Disable for removing Invite change role CTAs
    */
-  hmsIntegration: true,
+  hmsIntegration: false,
   /**
    * border color for audioLevel
    */
-  audioLevelColor: '#702ec2',
+  audioLevelColor: "#702ec2",
   /**
    * setHmsWatermark
    */
-  setHmsWatermark: true
+  setHmsWatermark: true,
 };

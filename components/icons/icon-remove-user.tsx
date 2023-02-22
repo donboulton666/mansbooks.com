@@ -1,6 +1,6 @@
 const RemoveUserIcon = () => (
   <svg
-    style={{ marginRight: '10px' }}
+    style={{ marginRight: "10px" }}
     width={20}
     height={20}
     fill="none"

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-import cn from 'classnames';
-import { Stage, Talk } from '@lib/types';
-import styles from './schedule.module.css';
-import TalkCard from './talk-card';
+import cn from "classnames";
+import { Stage, Talk } from "@lib/types";
+import styles from "./schedule.module.css";
+import TalkCard from "./talk-card";
 
 function StageRow({ stage }: { stage: Stage }) {
   // Group talks by the time block
@@ -28,7 +28,7 @@ function StageRow({ stage }: { stage: Stage }) {
 
   return (
     <div key={stage.name} className={styles.row}>
-      <h3 className={cn(styles['stage-name'], styles[stage.slug])}>
+      <h3 className={cn(styles["stage-name"], styles[stage.slug])}>
         <span>{stage.name}</span>
       </h3>
       <div className={cn(styles.talks, styles[stage.slug])}>
@@ -51,8 +51,8 @@ type Props = {
 export default function Schedule({ allStages }: Props) {
   return (
     <div className={styles.container}>
-      <div className={styles['row-wrapper']}>
-        {allStages.map(stage => (
+      <div className={styles["row-wrapper"]}>
+        {allStages.map((stage) => (
           <StageRow key={stage.slug} stage={stage} />
         ))}
       </div>

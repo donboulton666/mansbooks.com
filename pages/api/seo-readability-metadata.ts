@@ -1,5 +1,5 @@
-import { buildClient } from '@datocms/cma-client-node';
-import { JSDOM } from 'jsdom';
+import { buildClient } from "@datocms/cma-client-node";
+import { JSDOM } from "jsdom";
 
 const baseUrl = process.env.VERCEL_URL
   ? // Vercel auto-populates this environment variable
@@ -9,7 +9,7 @@ const baseUrl = process.env.VERCEL_URL
 
 const findSlugAndUrlForItem = (item, itemTypeApiKey) => {
   switch (itemTypeApiKey) {
-    case 'post':
+    case "post":
       return [item.slug, `/posts/${item.slug}`];
     default:
       return null;
@@ -18,12 +18,12 @@ const findSlugAndUrlForItem = (item, itemTypeApiKey) => {
 
 const handler = async (req, res) => {
   // setup CORS permissions
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   // This will allow OPTIONS request
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     return res.status(200).json({ success: true });
   }
 
@@ -49,9 +49,9 @@ const handler = async (req, res) => {
   res.setPreviewData({});
 
   const cookie = res
-    .getHeader('Set-Cookie')
-    .map((cookie) => cookie.split(';')[0])
-    .join(';');
+    .getHeader("Set-Cookie")
+    .map((cookie) => cookie.split(";")[0])
+    .join(";");
 
   res.clearPreviewData();
 
@@ -66,7 +66,7 @@ const handler = async (req, res) => {
 
   const { document } = new JSDOM(body).window;
 
-  const contentEl = document.getElementById('main-content');
+  const contentEl = document.getElementById("main-content");
 
   if (!contentEl) {
     res.status(422).json({
@@ -76,11 +76,11 @@ const handler = async (req, res) => {
   }
 
   const content = contentEl.innerHTML;
-  const locale = document.querySelector('html').getAttribute('lang') || 'en';
-  const title = document.querySelector('title').textContent;
+  const locale = document.querySelector("html").getAttribute("lang") || "en";
+  const title = document.querySelector("title").textContent;
   const description = document
     .querySelector('meta[name="description"]')
-    .getAttribute('content');
+    .getAttribute("content");
 
   res.status(200).json({
     locale,

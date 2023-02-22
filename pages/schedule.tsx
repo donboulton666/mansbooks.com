@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-import { GetStaticProps } from 'next';
+import { GetStaticProps } from "next";
 
-import Page from '@components/page';
-import Schedule from '@components/schedule';
-import Layout from '@components/layout';
-import Header from '@components/header';
+import Page from "@components/page";
+import Schedule from "@components/schedule";
+import Layout from "@components/layout";
+import Header from "@components/header";
 
-import { getAllStages } from '@lib/cms-api';
-import { Stage } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { getAllStages } from "@lib/cms-api";
+import { Stage } from "@lib/types";
+import { META_DESCRIPTION } from "@lib/constants";
 
 type Props = {
   allStages: Stage[];
@@ -31,8 +31,8 @@ type Props = {
 
 export default function SchedulePage({ allStages }: Props) {
   const meta = {
-    title: 'Schedule - Angelina Jordan',
-    description: META_DESCRIPTION
+    title: "Schedule - Angelina Jordan",
+    description: META_DESCRIPTION,
   };
 
   return (
@@ -50,8 +50,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      allStages
+      allStages,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 };

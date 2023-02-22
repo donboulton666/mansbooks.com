@@ -3,21 +3,23 @@ import {
   useHMSStore,
   selectScreenShareByPeerID,
   selectIsLocalScreenShared,
-  selectPeerScreenSharing
-} from '@100mslive/react-sdk';
-import { ShareScreenIcon } from '@100mslive/react-icons';
-import React from 'react';
-import IconFitScreen from '@components/icons/icon-fit-screen';
-import Button from './Button';
-import { CrossIcon } from '@100mslive/react-icons';
-import { hmsConfig } from './config';
-import Image from 'next/legacy/image'
+  selectPeerScreenSharing,
+} from "@100mslive/react-sdk";
+import { ShareScreenIcon } from "@100mslive/react-icons";
+import React from "react";
+import IconFitScreen from "@components/icons/icon-fit-screen";
+import Button from "./Button";
+import { CrossIcon } from "@100mslive/react-icons";
+import { hmsConfig } from "./config";
+import Image from "next/legacy/image";
 
 const ScreenshareTile = () => {
   const screenSharePeer = useHMSStore(selectPeerScreenSharing);
   const hmsActions = useHMSActions();
   const videoRef = React.useRef<HTMLVideoElement>(null);
-  const videoTrack = useHMSStore(selectScreenShareByPeerID(screenSharePeer?.id));
+  const videoTrack = useHMSStore(
+    selectScreenShareByPeerID(screenSharePeer?.id)
+  );
   const isLocalScreenShared = useHMSStore(selectIsLocalScreenShared);
   React.useEffect(() => {
     (async () => {
@@ -35,44 +37,45 @@ const ScreenshareTile = () => {
     try {
       await hmsActions.setScreenShareEnabled(false);
     } catch (error) {
-      console.log('Error: ', error);
+      console.log("Error: ", error);
     }
   };
   const fullScreen = () => {
-    if (typeof window !== 'undefined') {
-      const element = document.getElementById('screen-share-video');
+    if (typeof window !== "undefined") {
+      const element = document.getElementById("screen-share-video");
       element?.requestFullscreen();
     }
   };
   return (
     <div className="screenshare self-screenshare">
       {isLocalScreenShared ? (
-        <div className="flex flex-col items-center justify-center font-bold screenshare self-screenshare">
-          <p>You're sharing screen</p>{' '}
+        <div className="screenshare self-screenshare flex flex-col items-center justify-center font-bold">
+          <p>You're sharing screen</p>{" "}
           <Button variant="danger" onClick={stopScreenShare}>
             <CrossIcon className="mr-2" /> Stop screen share
           </Button>
         </div>
       ) : (
-        <div className="flex w-full justify-center items-center h-full md:p-0 p-2">
-          <div className="max-w-full block h-auto md:h-full relative">
+        <div className="flex h-full w-full items-center justify-center p-2 md:p-0">
+          <div className="relative block h-auto max-w-full md:h-full">
             {hmsConfig.setHmsWatermark ? <HmsWatermark /> : null}
             <div
-              className="absolute flex items-center bottom-0 -right-1 text-sm p-2 rounded-tl-lg"
-              style={{ backgroundColor: 'rgba(0,0,0,0.8)' }}
+              className="absolute bottom-0 -right-1 flex items-center rounded-tl-lg p-2 text-sm"
+              style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
             >
-              <ShareScreenIcon className="mr-2" /> Viewing {screenSharePeer?.name}’s Screen
+              <ShareScreenIcon className="mr-2" /> Viewing{" "}
+              {screenSharePeer?.name}’s Screen
             </div>
             <button
               onClick={fullScreen}
-              style={{ backgroundColor: 'rgba(0,0,0,0.8)' }}
-              className="absolute top-0 -right-1 display items-center  justify-center rounded-bl-lg cursor-pointer z-10"
+              style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
+              className="display absolute top-0 -right-1 z-10  cursor-pointer items-center justify-center rounded-bl-lg"
             >
               <IconFitScreen />
             </button>
             <video
               id="screen-share-video"
-              className="max-w-full block h-auto md:h-full"
+              className="block h-auto max-w-full md:h-full"
               ref={videoRef}
               autoPlay
               muted
@@ -87,5 +90,10 @@ const ScreenshareTile = () => {
 export default ScreenshareTile;
 
 const HmsWatermark = () => {
-  return <Image src="/hms-coachmark.svg" className="md:block hidden absolute left-2 bottom-2 z-10" />;
+  return (
+    <Image
+      src="/hms-coachmark.svg"
+      className="absolute left-2 bottom-2 z-10 hidden md:block"
+    />
+  );
 };

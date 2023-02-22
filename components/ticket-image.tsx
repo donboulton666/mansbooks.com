@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { useRouter } from 'next/router';
-import TicketVisual from './ticket-visual';
-import styles from './ticket-image.module.css';
+import { useRouter } from "next/router";
+import TicketVisual from "./ticket-visual";
+import styles from "./ticket-image.module.css";
 
 export default function TicketImage() {
   const { query } = useRouter();

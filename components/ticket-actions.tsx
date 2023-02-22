@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-import { useState, useRef, useEffect } from 'react';
-import cn from 'classnames';
-import { SITE_URL, TWEET_TEXT } from '@lib/constants';
-import IconTwitter from './icons/icon-twitter';
-import IconLinkedin from './icons/icon-linkedin';
-import IconDownload from './icons/icon-download';
-import LoadingDots from './loading-dots';
-import styleUtils from './utils.module.css';
-import styles from './ticket-actions.module.css';
+import { useState, useRef, useEffect } from "react";
+import cn from "classnames";
+import { SITE_URL, TWEET_TEXT } from "@lib/constants";
+import IconTwitter from "./icons/icon-twitter";
+import IconLinkedin from "./icons/icon-linkedin";
+import IconDownload from "./icons/icon-download";
+import LoadingDots from "./loading-dots";
+import styleUtils from "./utils.module.css";
+import styles from "./ticket-actions.module.css";
 
 type Props = {
   username: string;
@@ -57,7 +57,12 @@ export default function TicketActions({ username }: Props) {
   return (
     <>
       <a
-        className={cn(styles.button, styleUtils.appear, styles.first, 'icon-button')}
+        className={cn(
+          styles.button,
+          styleUtils.appear,
+          styles.first,
+          "icon-button"
+        )}
         href={tweetUrl}
         rel="noopener noreferrer"
         target="_blank"
@@ -69,9 +74,9 @@ export default function TicketActions({ username }: Props) {
           styles.button,
           styleUtils.appear,
           styles.second,
-          'icon-button',
+          "icon-button",
           // LinkedIn Share widget doesn’t work on mobile
-          styles['linkedin-button']
+          styles["linkedin-button"]
         )}
         href={linkedInUrl}
         rel="noopener noreferrer"
@@ -80,11 +85,17 @@ export default function TicketActions({ username }: Props) {
         <IconLinkedin width={20} /> Share on LinkedIn
       </a>
       <a
-        className={cn(styles.button, styleUtils.appear, styles.third, 'icon-button', {
-          [styles.loading]: loading
-        })}
+        className={cn(
+          styles.button,
+          styleUtils.appear,
+          styles.third,
+          "icon-button",
+          {
+            [styles.loading]: loading,
+          }
+        )}
         href={loading ? undefined : downloadUrl}
-        onClick={e => {
+        onClick={(e) => {
           if (imgReady) return;
 
           e.preventDefault();

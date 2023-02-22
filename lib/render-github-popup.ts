@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import htmlescape from 'htmlescape';
-import { GitHubOAuthData } from '@lib/types';
-import { SITE_ORIGIN } from '@lib/constants';
+import htmlescape from "htmlescape";
+import { GitHubOAuthData } from "@lib/types";
+import { SITE_ORIGIN } from "@lib/constants";
 
 export function renderSuccess(data?: GitHubOAuthData) {
   return `
@@ -104,7 +104,9 @@ export function renderSuccess(data?: GitHubOAuthData) {
     <p>You may close this window and see your ticket image.</p>
     <script>
       if (window.opener) {
-        window.opener.postMessage(${htmlescape(data || '')}, ${htmlescape(SITE_ORIGIN || '*')});
+        window.opener.postMessage(${htmlescape(data || "")}, ${htmlescape(
+    SITE_ORIGIN || "*"
+  )});
       } else {
         window.close();
       }

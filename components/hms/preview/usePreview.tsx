@@ -1,13 +1,13 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from "react";
 import {
   useHMSActions,
   useHMSStore,
   HMSRoomState,
   selectIsConnectedToRoom,
   selectRoomState,
-  hooksErrHandler
-} from '@100mslive/react-sdk';
-import { HMSConfig } from '@100mslive/hms-video';
+  hooksErrHandler,
+} from "@100mslive/react-sdk";
+import { HMSConfig } from "@100mslive/hms-video";
 
 export interface usePreviewInput {
   /**
@@ -50,7 +50,11 @@ export interface usePreviewResult {
  * muting/unmuting and useAudioLevelStyles for showing mic audio level to the user.
  * Any device change or mute/unmute will be carried across to join.
  */
-export const usePreview = ({ name, token, metadata }: usePreviewInput): usePreviewResult => {
+export const usePreview = ({
+  name,
+  token,
+  metadata,
+}: usePreviewInput): usePreviewResult => {
   const actions = useHMSActions();
   const roomState = useHMSStore(selectRoomState);
   const isConnected = useHMSStore(selectIsConnectedToRoom) || false;
@@ -62,7 +66,7 @@ export const usePreview = ({ name, token, metadata }: usePreviewInput): usePrevi
       authToken: token,
       metaData: metadata,
       rememberDeviceSelection: true,
-      initEndpoint: process.env.NEXT_PUBLIC_HMS_INIT_PEER_ENPOINT || undefined
+      initEndpoint: process.env.NEXT_PUBLIC_HMS_INIT_PEER_ENPOINT || undefined,
     };
   }, [name, token, metadata]);
 
@@ -77,7 +81,7 @@ export const usePreview = ({ name, token, metadata }: usePreviewInput): usePrevi
       try {
         await actions.preview(config);
       } catch (err) {
-        console.log('Error: ', err);
+        console.log("Error: ", err);
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -90,13 +94,13 @@ export const usePreview = ({ name, token, metadata }: usePreviewInput): usePrevi
     try {
       actions.join(config);
     } catch (err) {
-      console.log('Error: ', err);
+      console.log("Error: ", err);
     }
   }, [actions, token, config]);
 
   return {
     enableJoin,
     join,
-    isConnected
+    isConnected,
   };
 };

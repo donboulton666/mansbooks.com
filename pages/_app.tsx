@@ -14,29 +14,29 @@
  * limitations under the License.
  */
 
-import { SSRProvider, OverlayProvider } from 'react-aria';
-import '@styles/global.css';
-import '@styles/nprogress.css';
-import '@styles/chrome-bug.css';
-import type { AppProps } from 'next/app';
-import { useEffect } from 'react';
-import ResizeHandler from '@components/resize-handler';
-import { HMSRoomProvider } from '@100mslive/react-sdk';
+import { SSRProvider, OverlayProvider } from "react-aria";
+import "@styles/global.css";
+import "@styles/nprogress.css";
+import "@styles/chrome-bug.css";
+import type { AppProps } from "next/app";
+import { useEffect } from "react";
+import ResizeHandler from "@components/resize-handler";
+import { HMSRoomProvider } from "@100mslive/react-sdk";
 
 function App({ Component, pageProps }: AppProps) {
   const AnyComponent = Component as any;
   useEffect(() => {
-    document.body.classList?.remove('loading');
+    document.body.classList?.remove("loading");
   }, []);
   return (
     <SSRProvider>
       <OverlayProvider>
-        <HMSRoomProvider>          
-          <AnyComponent {...pageProps} />          
+        <HMSRoomProvider>
+          <AnyComponent {...pageProps} />
           <ResizeHandler />
         </HMSRoomProvider>
       </OverlayProvider>
     </SSRProvider>
   );
 }
-export default App
+export default App;

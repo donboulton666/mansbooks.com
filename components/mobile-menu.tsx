@@ -14,19 +14,26 @@
  * limitations under the License.
  */
 
-import { useRef } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import cn from 'classnames';
-import { NAVIGATION } from '@lib/constants';
-import { useOverlayTriggerState } from '@react-stately/overlays';
-import { useOverlay, usePreventScroll, useModal, OverlayContainer } from '@react-aria/overlays';
-import { useDialog } from '@react-aria/dialog';
-import { FocusScope } from '@react-aria/focus';
-import { useButton } from '@react-aria/button';
-import styles from './mobile-menu.module.css';
+import { useRef } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import cn from "classnames";
+import { NAVIGATION } from "@lib/constants";
+import { useOverlayTriggerState } from "@react-stately/overlays";
+import {
+  useOverlay,
+  usePreventScroll,
+  useModal,
+  OverlayContainer,
+} from "@react-aria/overlays";
+import { useDialog } from "@react-aria/dialog";
+import { FocusScope } from "@react-aria/focus";
+import { useButton } from "@react-aria/button";
+import styles from "./mobile-menu.module.css";
 
-function ModalDialog(props: Parameters<typeof useOverlay>[0] & Parameters<typeof useDialog>[0]) {
+function ModalDialog(
+  props: Parameters<typeof useOverlay>[0] & Parameters<typeof useDialog>[0]
+) {
   const router = useRouter();
   const activeRoute = router.asPath;
 
@@ -38,18 +45,24 @@ function ModalDialog(props: Parameters<typeof useOverlay>[0] & Parameters<typeof
   usePreventScroll();
 
   return (
-    <div className={styles['nav-overlay']}>
+    <div className={styles["nav-overlay"]}>
       <FocusScope contain restoreFocus autoFocus>
-        <nav className={styles.nav} {...overlayProps} {...dialogProps} {...modalProps} ref={ref}>
+        <nav
+          className={styles.nav}
+          {...overlayProps}
+          {...dialogProps}
+          {...modalProps}
+          ref={ref}
+        >
           {NAVIGATION.map(({ name, route }) => (
-            <Link 
-              key={name} 
+            <Link
+              key={name}
               href={route}
-              className={cn(styles['nav-item'], {
-                [styles['nav-active']]: activeRoute.startsWith(route)
+              className={cn(styles["nav-item"], {
+                [styles["nav-active"]]: activeRoute.startsWith(route),
               })}
-            >              
-                {name}
+            >
+              {name}
             </Link>
           ))}
         </nav>
@@ -63,7 +76,7 @@ export default function Overlay() {
   const ref = useRef<HTMLButtonElement | null>(null);
   const { buttonProps } = useButton(
     {
-      onPress: () => (state.isOpen ? state.close() : state.open())
+      onPress: () => (state.isOpen ? state.close() : state.open()),
     },
     ref
   );

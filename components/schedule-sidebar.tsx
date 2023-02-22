@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Stage } from '@lib/types';
-import styles from './schedule-sidebar.module.css';
-import Select from './select';
-import TalkCard from './talk-card';
-import { SHORT_DATE } from '@lib/constants';
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { Stage } from "@lib/types";
+import styles from "./schedule-sidebar.module.css";
+import Select from "./select";
+import TalkCard from "./talk-card";
+import { SHORT_DATE } from "@lib/constants";
 
 type Props = {
   allStages: Stage[];
@@ -29,7 +29,9 @@ type Props = {
 export default function ScheduleSidebar({ allStages }: Props) {
   const router = useRouter();
   const [currentStageSlug, setCurrentStageSlug] = useState(router.query.slug);
-  const currentStage = allStages.find((s: Stage) => s.slug === currentStageSlug);
+  const currentStage = allStages.find(
+    (s: Stage) => s.slug === currentStageSlug
+  );
 
   useEffect(() => {
     setCurrentStageSlug(router.query.slug);
@@ -42,20 +44,20 @@ export default function ScheduleSidebar({ allStages }: Props) {
       <Select
         aria-label="Select a stage"
         value={currentStageSlug}
-        onChange={e => {
+        onChange={(e) => {
           const slug = e.target.value;
           setCurrentStageSlug(slug);
           router.push(`/stage/${slug}`);
         }}
       >
-        {allStages.map(stage => (
+        {allStages.map((stage) => (
           <option key={stage.slug} value={stage.slug}>
             {stage.name}
           </option>
         ))}
       </Select>
       <div className={styles.talks}>
-        {currentStage?.schedule.map(talk => (
+        {currentStage?.schedule.map((talk) => (
           <TalkCard key={talk.title} talk={talk} showTime />
         ))}
       </div>

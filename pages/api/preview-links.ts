@@ -10,8 +10,8 @@
 
 const findUrlForItem = ({ item, itemType, locale }) => {
   switch (itemType.attributes.api_key) {
-    case 'post':
-      const localePrefix = locale === 'en' ? '' : `/${locale}`;
+    case "post":
+      const localePrefix = locale === "en" ? "" : `/${locale}`;
       return `${localePrefix}/blog/${item.attributes.slug[locale]}`;
     default:
       return null;
@@ -20,12 +20,12 @@ const findUrlForItem = ({ item, itemType, locale }) => {
 
 const handler = (req, res) => {
   // setup CORS permissions
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   // This will allow OPTIONS request
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     return res.status(200).json({ success: true });
   }
 
@@ -43,13 +43,13 @@ const handler = (req, res) => {
 
   const previewLinks = [
     {
-      label: 'Published version',
+      label: "Published version",
       url: `${baseUrl}${url}`,
     },
     {
-      label: 'Draft version',
+      label: "Draft version",
       url: `${baseUrl}/api/preview?redirect=${url}&secret=${
-        process.env.NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET || ''
+        process.env.NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET || ""
       }`,
     },
   ];

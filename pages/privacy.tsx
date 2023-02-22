@@ -23,9 +23,9 @@ export default function Privacy() {
         every ~2 hours.
       </p>
       <p>
-        Data provided by DatoCMS to this site is exclusively used to support signing in and
-        is not passed to any third party services, other than via SMTP or OAuth
-        for the purposes of authentication.
+        Data provided by DatoCMS to this site is exclusively used to support
+        signing in and is not passed to any third party services, other than via
+        SMTP or OAuth for the purposes of authentication.
       </p>
     </Layout>
   );

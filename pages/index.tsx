@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-import { useRouter } from 'next/router';
-import { SkipNavContent } from '@reach/skip-nav';
+import { useRouter } from "next/router";
+import { SkipNavContent } from "@reach/skip-nav";
 
-import Page from '@components/page';
-import ConfContent from '@components/index';
-import { META_DESCRIPTION } from '@lib/constants';
+import Page from "@components/page";
+import ConfContent from "@components/index";
+import { META_DESCRIPTION } from "@lib/constants";
 
 export default function Conf() {
   const { query } = useRouter();
   const meta = {
-    title: 'Angelina Jordan Webinar, Videos',
-    description: META_DESCRIPTION
+    title: "Angelina Jordan Webinar, Videos",
+    description: META_DESCRIPTION,
   };
   const ticketNumber = query.ticketNumber?.toString();
   const defaultUserData = {
     id: query.id?.toString(),
     ticketNumber: ticketNumber ? parseInt(ticketNumber, 10) : undefined,
     name: query.name?.toString(),
-    username: query.username?.toString()
+    username: query.username?.toString(),
   };
 
   return (
@@ -40,7 +40,7 @@ export default function Conf() {
       <SkipNavContent />
       <ConfContent
         defaultUserData={defaultUserData}
-        defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
+        defaultPageState={query.ticketNumber ? "ticket" : "registration"}
       />
     </Page>
   );

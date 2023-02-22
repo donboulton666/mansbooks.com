@@ -1,5 +1,5 @@
-import { TrackWithPeer } from '@100mslive/react-sdk/dist/utils/layout';
-import React from 'react';
+import { TrackWithPeer } from "@100mslive/react-sdk/dist/utils/layout";
+import React from "react";
 
 interface Props {
   page: number;
@@ -21,15 +21,15 @@ const Pagination: React.FC<Props> = ({ list, page, setPage }) => {
   };
   return (
     <div
-      className={`flex items-center space-x-2 absolute -bottom-16 right-10 z-20 border-solid border-gray-700 border px-1 py-2 rounded-3xl`}
+      className={`absolute -bottom-16 right-10 z-20 flex items-center space-x-2 rounded-3xl border border-solid border-gray-700 px-1 py-2`}
     >
       <button className="arrow-btn" onClick={prevPage} disabled={disableLeft}>
         <ChevronLeft />
       </button>
       {list.map((_, i: number) => (
         <div
-          className={`w-[6px] h-[6px] rounded-full cursor-pointer ${
-            i === page ? 'bg-gray-200' : 'bg-gray-500'
+          className={`h-[6px] w-[6px] cursor-pointer rounded-full ${
+            i === page ? "bg-gray-200" : "bg-gray-500"
           }`}
           onClick={() => setPage(i)}
         />

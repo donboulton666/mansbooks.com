@@ -1,13 +1,13 @@
 const IconButton: React.FC<{ active?: boolean; onClick?: () => void }> = ({
   active = false,
   onClick,
-  children
+  children,
 }) => {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center justify-center p-1 rounded-md ${
-        active ? 'bg-white text-black' : 'icon-btn'
+      className={`flex items-center justify-center rounded-md p-1 ${
+        active ? "bg-white text-black" : "icon-btn"
       }`}
       type="button"
     >

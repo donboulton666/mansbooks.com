@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { Job } from '@lib/types';
-import styles from './jobs-grid.module.css';
+import { Job } from "@lib/types";
+import styles from "./jobs-grid.module.css";
 
 type Props = {
   jobs: Job[];
@@ -24,24 +24,21 @@ type Props = {
 function CompanyJobs({ jobs }: Props) {
   return (
     <div className={styles.grid}>
-      {jobs.map(job => (
-        <a
-          key={job.id}
-          className={styles.card}
-        >
+      {jobs.map((job) => (
+        <a key={job.id} className={styles.card}>
           <div className={styles.cardBody}>
             <h3 className={styles.title}>{job.title}</h3>
             <div className={styles.company}>{job.companyName}</div>
             <div className={styles.description}>{job.description}</div>
-              <div className={styles.description}>
-                <a
-                 type="button"
-                  key={job.id}
-                  className={styles.link}
-                  href={job.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+            <div className={styles.description}>
+              <a
+                type="button"
+                key={job.id}
+                className={styles.link}
+                href={job.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Learn More
                 <svg
                   className={styles.icon}
@@ -61,7 +58,7 @@ function CompanyJobs({ jobs }: Props) {
                 </svg>
               </a>
             </div>
-          </div>          
+          </div>
         </a>
       ))}
     </div>
@@ -70,7 +67,10 @@ function CompanyJobs({ jobs }: Props) {
 
 export default function JobsGrid({ jobs }: Props) {
   const companies = jobs.reduce((allCompanies: any, job) => {
-    allCompanies[job.companyName] = [...(allCompanies[job.companyName] || []), job];
+    allCompanies[job.companyName] = [
+      ...(allCompanies[job.companyName] || []),
+      job,
+    ];
     return allCompanies;
   }, {});
 

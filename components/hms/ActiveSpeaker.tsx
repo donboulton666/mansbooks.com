@@ -3,11 +3,11 @@ import {
   useVideoList,
   selectLocalPeer,
   selectDominantSpeaker,
-  HMSPeer
-} from '@100mslive/react-sdk';
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { hmsConfig } from './config';
-import VideoTile from './VideoTile';
+  HMSPeer,
+} from "@100mslive/react-sdk";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { hmsConfig } from "./config";
+import VideoTile from "./VideoTile";
 
 const ActiveSpeaker = () => {
   const localPeer = useHMSStore(selectLocalPeer);
@@ -23,7 +23,7 @@ const ActiveSpeaker = () => {
   const prevPeer = usePrevious(activeSpeaker);
 
   const getPeer = useCallback(() => {
-    if (localPeer.roleName === 'viewer') {
+    if (localPeer.roleName === "viewer") {
       return prevPeer || localPeer;
     } else {
       return localPeer;
@@ -37,20 +37,25 @@ const ActiveSpeaker = () => {
   const { pagesWithTiles, ref } = useVideoList({
     maxTileCount: 1,
     peers: [activeSpeaker],
-    aspectRatio: hmsConfig.aspectRatio
+    aspectRatio: hmsConfig.aspectRatio,
   });
   return (
     <div
       className="py-2"
       style={{
-        height: 'calc((100vh - 3.2 * var(--header-height)) - var(--video-list-height))'
+        height:
+          "calc((100vh - 3.2 * var(--header-height)) - var(--video-list-height))",
       }}
     >
-      <div ref={ref} className="flex justify-center  w-full h-full">
+      <div ref={ref} className="flex h-full  w-full justify-center">
         {pagesWithTiles &&
           pagesWithTiles.length > 0 &&
           pagesWithTiles[0].map((p, _) => (
-            <VideoTile width={p.width} height={p.height} trackId={p.peer.videoTrack || ''} />
+            <VideoTile
+              width={p.width}
+              height={p.height}
+              trackId={p.peer.videoTrack || ""}
+            />
           ))}
       </div>
     </div>

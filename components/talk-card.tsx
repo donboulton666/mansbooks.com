@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import cn from 'classnames';
-import Image from 'next/legacy/image';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { parseISO, format, isBefore, isAfter } from 'date-fns';
-import { Talk } from '@lib/types';
-import styles from './talk-card.module.css';
+import cn from "classnames";
+import Image from "next/legacy/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { parseISO, format, isBefore, isAfter } from "date-fns";
+import { Talk } from "@lib/types";
+import styles from "./talk-card.module.css";
 
 type Props = {
   key: string;
@@ -33,13 +33,18 @@ const formatDate = (date: string) => {
   return format(parseISO(date), "h:mmaaaaa'm'");
 };
 
-export default function TalkCard({ talk: { title, speaker, start, end }, showTime }: Props) {
+export default function TalkCard({
+  talk: { title, speaker, start, end },
+  showTime,
+}: Props) {
   const [isTalkLive, setIsTalkLive] = useState(false);
-  const [startAndEndTime, setStartAndEndTime] = useState('');
+  const [startAndEndTime, setStartAndEndTime] = useState("");
 
   useEffect(() => {
     const now = Date.now();
-    setIsTalkLive(isAfter(now, parseISO(start)) && isBefore(now, parseISO(end)));
+    setIsTalkLive(
+      isAfter(now, parseISO(start)) && isBefore(now, parseISO(end))
+    );
     setStartAndEndTime(`${formatDate(start)} – ${formatDate(end)}`);
   }, [end, start]);
 
@@ -47,20 +52,23 @@ export default function TalkCard({ talk: { title, speaker, start, end }, showTim
 
   return (
     <div key={title} className={styles.talk}>
-      {showTime && <p className={styles.time}>{startAndEndTime || <>&nbsp;</>}</p>}
-      <Link href={firstSpeakerLink}
+      {showTime && (
+        <p className={styles.time}>{startAndEndTime || <>&nbsp;</>}</p>
+      )}
+      <Link
+        href={firstSpeakerLink}
         className={cn(styles.card, {
-          [styles['is-live']]: isTalkLive
+          [styles["is-live"]]: isTalkLive,
         })}
       >
-        <div className={styles['card-body']}>
+        <div className={styles["card-body"]}>
           <h4 title={title} className={styles.title}>
             {title}
           </h4>
           <div className={styles.speaker}>
-            <div className={styles['avatar-group']}>
-              {speaker.map(s => (
-                <div key={s.name} className={styles['avatar-wrapper']}>
+            <div className={styles["avatar-group"]}>
+              {speaker.map((s) => (
+                <div key={s.name} className={styles["avatar-wrapper"]}>
                   <Image
                     loading="lazy"
                     alt={s.name}
@@ -74,7 +82,9 @@ export default function TalkCard({ talk: { title, speaker, start, end }, showTim
               ))}
             </div>
             <h5 className={styles.name}>
-              {speaker.length === 1 ? speaker[0].name : `${speaker.length} speakers`}
+              {speaker.length === 1
+                ? speaker[0].name
+                : `${speaker.length} speakers`}
             </h5>
           </div>
         </div>

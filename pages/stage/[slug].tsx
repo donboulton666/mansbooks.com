@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths } from "next";
 
-import Page from '@components/page';
-import StageContainer from '@components/stage-container';
-import Layout from '@components/layout';
+import Page from "@components/page";
+import StageContainer from "@components/stage-container";
+import Layout from "@components/layout";
 
-import { getAllStages } from '@lib/cms-api';
-import { Stage } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { getAllStages } from "@lib/cms-api";
+import { Stage } from "@lib/types";
+import { META_DESCRIPTION } from "@lib/constants";
 
 type Props = {
   stage: Stage;
@@ -31,8 +31,8 @@ type Props = {
 
 export default function StagePage({ stage, allStages }: Props) {
   const meta = {
-    title: 'Stage - Angelina Jordan',
-    description: META_DESCRIPTION
+    title: "Stage - Angelina Jordan",
+    description: META_DESCRIPTION,
   };
   return (
     <Page meta={meta} fullViewport>
@@ -50,16 +50,16 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
   if (!stage) {
     return {
-      notFound: true
+      notFound: true,
     };
   }
 
   return {
     props: {
       stage,
-      allStages: stages
+      allStages: stages,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 };
 
@@ -69,6 +69,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: slugs,
-    fallback: false
+    fallback: false,
   };
 };

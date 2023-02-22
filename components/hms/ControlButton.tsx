@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
   active?: boolean;
@@ -7,15 +7,21 @@ interface Props {
   className?: string;
 }
 
-const ControlButton: React.FC<Props> = ({ active, text, children, onClick, className = '' }) => {
+const ControlButton: React.FC<Props> = ({
+  active,
+  text,
+  children,
+  onClick,
+  className = "",
+}) => {
   return (
     <div className="flex flex-col items-center">
       <button
         onClick={onClick}
         type="button"
-        className={`flex items-center justify-center w-11 h-11 rounded-full border-solid border-2 ${
-          active ? 'border-gray-200' : 'border-gray-base'
-        } focus:outline-none focus:border-gray-400 focus:bg-gray-800 ${className}`}
+        className={`flex h-11 w-11 items-center justify-center rounded-full border-2 border-solid ${
+          active ? "border-gray-200" : "border-gray-base"
+        } focus:border-gray-400 focus:bg-gray-800 focus:outline-none ${className}`}
       >
         {children}
       </button>

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-import { TicketGenerationState } from '@lib/constants';
-import TicketColoredMobile from './ticket-colored-mobile';
-import TicketColored from './ticket-colored';
-import styles from './ticket-visual.module.css';
-import TicketProfile from './ticket-profile';
-import TicketNumber from './ticket-number';
-import TicketMono from './ticket-mono';
-import TicketInfo from './ticket-info';
-import TicketMonoMobile from './ticket-mono-mobile';
+import { TicketGenerationState } from "@lib/constants";
+import TicketColoredMobile from "./ticket-colored-mobile";
+import TicketColored from "./ticket-colored";
+import styles from "./ticket-visual.module.css";
+import TicketProfile from "./ticket-profile";
+import TicketNumber from "./ticket-number";
+import TicketMono from "./ticket-mono";
+import TicketInfo from "./ticket-info";
+import TicketMonoMobile from "./ticket-mono-mobile";
 
 type Props = {
   size?: number;
@@ -37,15 +37,15 @@ export default function TicketVisual({
   name,
   username,
   ticketNumber,
-  ticketGenerationState = 'default'
+  ticketGenerationState = "default",
 }: Props) {
   return (
     <>
-      <div className={styles.visual} style={{ ['--size' as string]: size }}>
-        <div className={styles['horizontal-ticket']}>
+      <div className={styles.visual} style={{ ["--size" as string]: size }}>
+        <div className={styles["horizontal-ticket"]}>
           {username ? <TicketColored /> : <TicketMono />}
         </div>
-        <div className={styles['vertical-ticket']}>
+        <div className={styles["vertical-ticket"]}>
           {username ? <TicketColoredMobile /> : <TicketMonoMobile />}
         </div>
         <div className={styles.profile}>
@@ -57,11 +57,13 @@ export default function TicketVisual({
           />
         </div>
         <div className={styles.info}>
-          <TicketInfo logoTextSecondaryColor={ticketNumber ? 'var(--brand)' : undefined} />
+          <TicketInfo
+            logoTextSecondaryColor={ticketNumber ? "var(--brand)" : undefined}
+          />
         </div>
         {ticketNumber && (
-          <div className={styles['ticket-number-wrapper']}>
-            <div className={styles['ticket-number']}>
+          <div className={styles["ticket-number-wrapper"]}>
+            <div className={styles["ticket-number"]}>
               <TicketNumber number={ticketNumber} />
             </div>
           </div>

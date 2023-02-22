@@ -14,20 +14,22 @@
  * limitations under the License.
  */
 
-import Link from 'next/link';
-import Image from 'next/legacy/image';
-import cn from 'classnames';
-import { Sponsor } from '@lib/types';
-import styles from './sponsors-grid.module.css';
+import Link from "next/link";
+import Image from "next/legacy/image";
+import cn from "classnames";
+import { Sponsor } from "@lib/types";
+import styles from "./sponsors-grid.module.css";
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
-    <Link key={sponsor.name} href={`/expo/${sponsor.slug}`}
+    <Link
+      key={sponsor.name}
+      href={`/expo/${sponsor.slug}`}
       role="button"
       tabIndex={0}
       className={cn(styles.card, {
-        [styles.diamond]: sponsor.tier === 'diamond',
-        [styles.gold]: sponsor.tier === 'gold'
+        [styles.diamond]: sponsor.tier === "diamond",
+        [styles.gold]: sponsor.tier === "gold",
       })}
     >
       <div className={styles.imageWrapper}>
@@ -35,15 +37,15 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
           alt={sponsor.name}
           src={sponsor.cardImage.url}
           className={cn(styles.image, {
-            [styles.silver]: sponsor.tier === 'silver'
+            [styles.silver]: sponsor.tier === "silver",
           })}
           loading="lazy"
           title={sponsor.name}
           width={900}
           height={500}
-         />
+        />
       </div>
-        {sponsor.tier !== 'silver' && (
+      {sponsor.tier !== "silver" && (
         <div className={styles.cardBody}>
           <div>
             <h2 className={styles.name}>{sponsor.name}</h2>
@@ -60,18 +62,18 @@ type Props = {
 };
 
 export default function SponsorsGrid({ sponsors }: Props) {
-  const silverSponsors = sponsors.filter(s => s.tier === 'silver');
-  const otherSponsors = sponsors.filter(s => s.tier !== 'silver');
+  const silverSponsors = sponsors.filter((s) => s.tier === "silver");
+  const otherSponsors = sponsors.filter((s) => s.tier !== "silver");
 
   return (
     <>
       <div className={styles.grid}>
-        {otherSponsors.map(sponsor => (
+        {otherSponsors.map((sponsor) => (
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>
       <div className={styles.grid}>
-        {silverSponsors.map(sponsor => (
+        {silverSponsors.map((sponsor) => (
           <SponsorCard key={sponsor.name} sponsor={sponsor} />
         ))}
       </div>

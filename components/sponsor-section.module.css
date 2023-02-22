@@ -91,7 +91,7 @@
 }
 
 .image::before {
-  content: '';
+  content: "";
   padding-top: 50%;
   float: left;
 }

@@ -1,5 +1,10 @@
-import { useEffect, useRef } from 'react';
-import { useHMSActions, useHMSStore, selectTrackByID, HMSPeerID } from '@100mslive/react-sdk';
+import { useEffect, useRef } from "react";
+import {
+  useHMSActions,
+  useHMSStore,
+  selectTrackByID,
+  HMSPeerID,
+} from "@100mslive/react-sdk";
 
 const useVideo = (trackId: HMSPeerID) => {
   const actions = useHMSActions();

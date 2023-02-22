@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-import useSWR from 'swr';
-import cn from 'classnames';
-import { Stage } from '@lib/types';
-import useLoginStatus from '@lib/hooks/use-login-status';
-import styles from './stage-container.module.css';
-import styleUtils from './utils.module.css';
-import ConfEntry from './conf-entry';
-import Room from './hms/Room';
-import Sidebar from './hms/sidebar';
-import { useHMSStore, selectIsConnectedToRoom } from '@100mslive/react-sdk';
-import ScheduleSidebar from './schedule-sidebar';
-import Link from 'next/link';
+import useSWR from "swr";
+import cn from "classnames";
+import { Stage } from "@lib/types";
+import useLoginStatus from "@lib/hooks/use-login-status";
+import styles from "./stage-container.module.css";
+import styleUtils from "./utils.module.css";
+import ConfEntry from "./conf-entry";
+import Room from "./hms/Room";
+import Sidebar from "./hms/sidebar";
+import { useHMSStore, selectIsConnectedToRoom } from "@100mslive/react-sdk";
+import ScheduleSidebar from "./schedule-sidebar";
+import Link from "next/link";
 
 type Props = {
   stage: Stage;
@@ -33,20 +33,31 @@ type Props = {
 };
 
 export default function StageContainer({ stage, allStages }: Props) {
-  const response = useSWR('/api/stages', {
+  const response = useSWR("/api/stages", {
     initialData: allStages,
-    refreshInterval: 5000
+    refreshInterval: 5000,
   });
   const updatedStages = response.data || [];
-  const updatedStage = updatedStages.find((s: Stage) => s.slug === stage.slug) || stage;
+  const updatedStage =
+    updatedStages.find((s: Stage) => s.slug === stage.slug) || stage;
   const { loginStatus, mutate } = useLoginStatus();
   const isConnected = useHMSStore(selectIsConnectedToRoom);
   return (
     <div className={styles.container}>
-      <div className={`${styles.streamContainer} ${isConnected ? '' : styles.streamYt}`}>
-        {loginStatus === 'loggedIn' ? (
+      <div
+        className={`${styles.streamContainer} ${
+          isConnected ? "" : styles.streamYt
+        }`}
+      >
+        {loginStatus === "loggedIn" ? (
           !stage.isLive ? (
-            <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>
+            <div
+              className={cn(
+                styles.stream,
+                styleUtils.appear,
+                styleUtils["appear-first"]
+              )}
+            >
               <iframe
                 allow="autoplay; picture-in-picture"
                 allowFullScreen
@@ -55,7 +66,13 @@ export default function StageContainer({ stage, allStages }: Props) {
                 title={updatedStage.name}
                 width="100%"
               />
-              <div className={cn(styles.bottom, styleUtils.appear, styleUtils['appear-second'])}>
+              <div
+                className={cn(
+                  styles.bottom,
+                  styleUtils.appear,
+                  styleUtils["appear-second"]
+                )}
+              >
                 <div className={styles.messageContainer}>
                   <h2 className={styles.stageName}>{stage.name}</h2>
                 </div>
@@ -91,7 +108,7 @@ export default function StageContainer({ stage, allStages }: Props) {
               roomId={stage.roomId}
             />
           )
-        ) : loginStatus === 'loading' ? null : (
+        ) : loginStatus === "loading" ? null : (
           <ConfEntry onRegister={() => mutate()} />
         )}
       </div>

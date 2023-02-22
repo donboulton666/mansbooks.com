@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker } from "@lib/types";
 
-import * as strapiApi from './cms-providers/strapi';
-import * as agilityApi from './cms-providers/agility';
-import * as datoCmsApi from './cms-providers/dato';
-import * as contentfulApi from './cms-providers/contentful';
-import * as prismicApi from './cms-providers/prismic';
-import * as storyblokApi from './cms-providers/storyblok';
+import * as strapiApi from "./cms-providers/strapi";
+import * as agilityApi from "./cms-providers/agility";
+import * as datoCmsApi from "./cms-providers/dato";
+import * as contentfulApi from "./cms-providers/contentful";
+import * as prismicApi from "./cms-providers/prismic";
+import * as storyblokApi from "./cms-providers/storyblok";
 
 let cmsApi: {
   getAllSpeakers: () => Promise<Speaker[]>;
@@ -31,7 +31,10 @@ let cmsApi: {
 
 if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
   cmsApi = datoCmsApi;
-} else if (process.env.CONTENTFUL_ACCESS_TOKEN && process.env.CONTENTFUL_SPACE_ID) {
+} else if (
+  process.env.CONTENTFUL_ACCESS_TOKEN &&
+  process.env.CONTENTFUL_SPACE_ID
+) {
   cmsApi = contentfulApi;
 } else if (process.env.STORYBLOK_PREVIEW_TOKEN) {
   cmsApi = storyblokApi;
@@ -50,7 +53,7 @@ if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
     getAllSpeakers: () => Promise.resolve([]),
     getAllStages: () => Promise.resolve([]),
     getAllSponsors: () => Promise.resolve([]),
-    getAllJobs: () => Promise.resolve([])
+    getAllJobs: () => Promise.resolve([]),
   };
 }
 

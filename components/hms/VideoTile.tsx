@@ -1,4 +1,4 @@
-import { MicOffIcon } from '@100mslive/react-icons';
+import { MicOffIcon } from "@100mslive/react-icons";
 import {
   useHMSStore,
   HMSPeer,
@@ -7,13 +7,13 @@ import {
   selectIsPeerVideoEnabled,
   HMSTrackID,
   selectPeerByID,
-  selectTrackByID
-} from '@100mslive/react-sdk';
-import React, { useCallback, useRef } from 'react';
-import Avatar from './Avatar';
-import { hmsConfig } from './config';
-import useVideo from './lib/useVideo';
-import Image from 'next/legacy/image'
+  selectTrackByID,
+} from "@100mslive/react-sdk";
+import React, { useCallback, useRef } from "react";
+import Avatar from "./Avatar";
+import { hmsConfig } from "./config";
+import useVideo from "./lib/useVideo";
+import Image from "next/legacy/image";
 
 interface Props {
   trackId: HMSTrackID;
@@ -27,17 +27,27 @@ const VideoTile: React.FC<Props> = ({ width, height, trackId }) => {
   const isVideoEnabled = useHMSStore(selectIsPeerVideoEnabled(peer?.id));
   const isAudioEnabled = useHMSStore(selectIsPeerAudioEnabled(peer?.id));
   return (
-    <div className="p-2 relative" style={{ width, height }}>
+    <div className="relative p-2" style={{ width, height }}>
       {peer ? (
-        <div className="w-full h-full relative rounded-lg flex justify-center items-center">
+        <div className="relative flex h-full w-full items-center justify-center rounded-lg">
           <PeerName name={peer?.name} />
-          {peer.videoTrack ? <Video mirror={peer.isLocal} id={peer.videoTrack} /> : null}
+          {peer.videoTrack ? (
+            <Video mirror={peer.isLocal} id={peer.videoTrack} />
+          ) : null}
           {isAudioEnabled ? null : <AudioIndicator />}
           <AudioLevel audioTrack={peer.audioTrack} />
           {isVideoEnabled ? (
-            <>{height > 300 || hmsConfig.setHmsWatermark ? <HmsWatermark /> : null}</>
+            <>
+              {height > 300 || hmsConfig.setHmsWatermark ? (
+                <HmsWatermark />
+              ) : null}
+            </>
           ) : (
-            <Avatar size={width < 400 ? 'lg' : 'xl'} className="absolute" name={peer.name} />
+            <Avatar
+              size={width < 400 ? "lg" : "xl"}
+              className="absolute"
+              name={peer.name}
+            />
           )}
         </div>
       ) : null}
@@ -51,8 +61,8 @@ const Video: React.FC<{ id: string; mirror: boolean }> = ({ id, mirror }) => {
   const ref = useVideo(id);
   return (
     <video
-      className={`bg-gray-base border-solid border-transparent w-full h-full rounded-lg object-cover  ${
-        mirror ? 'mirror' : ''
+      className={`bg-gray-base h-full w-full rounded-lg border-solid border-transparent object-cover  ${
+        mirror ? "mirror" : ""
       }`}
       ref={ref}
       autoPlay
@@ -64,7 +74,7 @@ const Video: React.FC<{ id: string; mirror: boolean }> = ({ id, mirror }) => {
 
 const AudioIndicator = () => {
   return (
-    <div className="absolute right-2 bottom-2 p-1 flex items-center justify-center rounded-full bg-red-500">
+    <div className="absolute right-2 bottom-2 flex items-center justify-center rounded-full bg-red-500 p-1">
       <MicOffIcon />
     </div>
   );
@@ -73,7 +83,7 @@ const AudioIndicator = () => {
 const PeerName: React.FC<{ name: string }> = ({ name }) => {
   return (
     <span
-      style={{ textShadow: 'black 1px 0 10px' }}
+      style={{ textShadow: "black 1px 0 10px" }}
       className="absolute bottom-3 left-3 z-40 text-sm"
     >
       {name}
@@ -82,14 +92,18 @@ const PeerName: React.FC<{ name: string }> = ({ name }) => {
 };
 
 const HmsWatermark = () => {
-  return <Image src="/hms-coachmark.svg" className="absolute right-6 top-6 z-30" />;
+  return (
+    <Image src="/hms-coachmark.svg" className="absolute right-6 top-6 z-30" />
+  );
 };
 
-export const AudioLevel: React.FC<{ audioTrack: HMSPeer['audioTrack'] }> = ({ audioTrack }) => {
+export const AudioLevel: React.FC<{ audioTrack: HMSPeer["audioTrack"] }> = ({
+  audioTrack,
+}) => {
   const getStyle = useCallback((level: number) => {
-    console.log('AL: ', level);
+    console.log("AL: ", level);
     const style: Record<string, string> = {
-      border: `${level > 10 ? 3 : 0}px solid ${hmsConfig.audioLevelColor}`
+      border: `${level > 10 ? 3 : 0}px solid ${hmsConfig.audioLevelColor}`,
     };
     return style;
   }, []);
@@ -97,7 +111,9 @@ export const AudioLevel: React.FC<{ audioTrack: HMSPeer['audioTrack'] }> = ({ au
   useAudioLevelStyles({
     trackId: audioTrack,
     getStyle,
-    ref
+    ref,
   });
-  return <div className="w-full h-full absolute left-0 top-0 rounded-lg" ref={ref} />;
+  return (
+    <div className="absolute left-0 top-0 h-full w-full rounded-lg" ref={ref} />
+  );
 };

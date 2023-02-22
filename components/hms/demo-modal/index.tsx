@@ -1,30 +1,29 @@
-import { ArrowRightIcon } from '@100mslive/react-icons';
-import HmsLogo from '@components/icons/icon-hms';
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import Button from '../Button';
-import LinkButton from '../LinkButton';
+import { ArrowRightIcon } from "@100mslive/react-icons";
+import HmsLogo from "@components/icons/icon-hms";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import Button from "../Button";
+import LinkButton from "../LinkButton";
 
 const data = [
   {
-    name: 'Moderator',
-    roleName: 'moderator',
-    role: 'backstage',
-    desc: `This role is meant for the event organisers. The moderator is like a stage admin - can add speakers, remove them, invite attendees on stage, kick them out of the event, etc`
+    name: "Moderator",
+    roleName: "moderator",
+    role: "backstage",
+    desc: `This role is meant for the event organisers. The moderator is like a stage admin - can add speakers, remove them, invite attendees on stage, kick them out of the event, etc`,
   },
   {
-    name: 'Speaker',
-    roleName: 'speaker',
-    role: 'stage',
-    desc:
-      'This one is self explanatory. Use this role for folks who are going to be the main guests of the session. Speakers can also invite attendees on the stage, and respond to public chat messages.'
+    name: "Speaker",
+    roleName: "speaker",
+    role: "stage",
+    desc: "This one is self explanatory. Use this role for folks who are going to be the main guests of the session. Speakers can also invite attendees on the stage, and respond to public chat messages.",
   },
   {
-    name: 'Attendee',
-    roleName: 'attendee',
-    role: 'viewer',
-    desc: `This one is the most basic role - can see and hear whatever is happening on the stage, cannot share their audio and video, and can put up messages on the public chat section.`
-  }
+    name: "Attendee",
+    roleName: "attendee",
+    role: "viewer",
+    desc: `This one is the most basic role - can see and hear whatever is happening on the stage, cannot share their audio and video, and can put up messages on the public chat section.`,
+  },
 ];
 
 const DemoModal = () => {
@@ -37,31 +36,41 @@ const DemoModal = () => {
   }, [router]);
   return (
     <div className="font-sans">
-      <p className="text-[32px] font-semibold my-0">Take your Webinar for a test drive</p>
-      <p className="text-gray-300 text-[15px] my-0">
-        We have setup a few profiles to make it easy for you or your team to experience each
-        perspective. Join in one click or share access with anyone else.
+      <p className="my-0 text-[32px] font-semibold">
+        Take your Webinar for a test drive
+      </p>
+      <p className="my-0 text-[15px] text-gray-300">
+        We have setup a few profiles to make it easy for you or your team to
+        experience each perspective. Join in one click or share access with
+        anyone else.
       </p>
       <div>
-        {data.map(m => (
+        {data.map((m) => (
           <div
-            className="flex md:flex-row flex-col justify-between py-4"
-            style={{ borderBottom: '1px solid #323232' }}
+            className="flex flex-col justify-between py-4 md:flex-row"
+            style={{ borderBottom: "1px solid #323232" }}
             key={`${m.roleName}-${m.name}`}
           >
-            <div className="text-left max-w-xs">
+            <div className="max-w-xs text-left">
               <span className={`badge ${m.roleName}-badge`}>{m.roleName}</span>
-              <p className="text-gray-300 text-xs">{m.desc}</p>
+              <p className="text-xs text-gray-300">{m.desc}</p>
             </div>
             <div className="flex items-center space-x-6">
-              <CopyButton text={`${window.location.host}/stage/${stage || 'a'}?role=${m.role}`} />
-              <LinkButton className="w-[200px]" href={`/stage/${stage || 'a'}?role=${m.role}`}>
+              <CopyButton
+                text={`${window.location.host}/stage/${stage || "a"}?role=${
+                  m.role
+                }`}
+              />
+              <LinkButton
+                className="w-[200px]"
+                href={`/stage/${stage || "a"}?role=${m.role}`}
+              >
                 Join as {m.name} <ArrowRightIcon height={20} />
               </LinkButton>
             </div>
           </div>
         ))}
-        <div className="flex items-center justify-center mt-4 ">
+        <div className="mt-4 flex items-center justify-center ">
           Powered by <HmsLogo />
         </div>
       </div>
@@ -71,7 +80,7 @@ const DemoModal = () => {
 
 export default DemoModal;
 
-export const CopyButton = ({ text = '' }) => {
+export const CopyButton = ({ text = "" }) => {
   const [copied, setCopied] = useState(false);
   const copy = () => {
     navigator.clipboard.writeText(text);
@@ -85,7 +94,7 @@ export const CopyButton = ({ text = '' }) => {
   return (
     <div className="relative">
       {copied ? (
-        <p className="absolute top-10 left-0 flex bg-gray-600 justify-center  rounded-lg w-48 p-2">
+        <p className="absolute top-10 left-0 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
           Copied to clipboard!
         </p>
       ) : null}

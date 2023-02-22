@@ -1,10 +1,10 @@
-import { useHMSStore, selectLocalPeerRole } from '@100mslive/react-sdk';
-import React from 'react';
-import Chat from './Chat';
-import Participants from './Participants';
-import ScheduleSidebar from '@components/schedule-sidebar-individual';
-import { Stage } from '@lib/types';
-import * as Tabs from '@radix-ui/react-tabs';
+import { useHMSStore, selectLocalPeerRole } from "@100mslive/react-sdk";
+import React from "react";
+import Chat from "./Chat";
+import Participants from "./Participants";
+import ScheduleSidebar from "@components/schedule-sidebar-individual";
+import { Stage } from "@lib/types";
+import * as Tabs from "@radix-ui/react-tabs";
 
 type Props = {
   allStages: Stage[];
@@ -12,26 +12,26 @@ type Props = {
 
 const Sidebar = ({ allStages }: Props) => {
   const localRole = useHMSStore(selectLocalPeerRole);
-  console.log('ROLE CHANGE');
+  console.log("ROLE CHANGE");
   return (
     <Tabs.Root asChild defaultValue="1">
       <div className="sidebar-container">
-        <Tabs.List className="w-full px-4 tabs">
+        <Tabs.List className="tabs w-full px-4">
           <Tabs.Trigger asChild value="1">
-            <button className="w-1/2 text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-l-md">
+            <button className="h-[35px] w-1/2 rounded-l-md border border-solid border-gray-700 text-[14px] text-gray-300">
               Chat
             </button>
           </Tabs.Trigger>
 
-          {localRole?.name === 'viewer' || localRole?.name === 'invitee' ? (
+          {localRole?.name === "viewer" || localRole?.name === "invitee" ? (
             <Tabs.Trigger asChild value="3">
-              <button className="w-1/2  text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-r-md">
+              <button className="h-[35px]  w-1/2 rounded-r-md border border-solid border-gray-700 text-[14px] text-gray-300">
                 Schedule
               </button>
             </Tabs.Trigger>
           ) : (
             <Tabs.Trigger asChild value="2">
-              <button className="w-1/2  text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-r-md">
+              <button className="h-[35px]  w-1/2 rounded-r-md border border-solid border-gray-700 text-[14px] text-gray-300">
                 Participants
               </button>
             </Tabs.Trigger>

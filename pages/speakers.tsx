@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-import { GetStaticProps } from 'next';
+import { GetStaticProps } from "next";
 
-import Page from '@components/page';
-import SpeakersGrid from '@components/speakers-grid';
-import Layout from '@components/layout';
-import Header from '@components/header';
+import Page from "@components/page";
+import SpeakersGrid from "@components/speakers-grid";
+import Layout from "@components/layout";
+import Header from "@components/header";
 
-import { getAllSpeakers } from '@lib/cms-api';
-import { Speaker } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { getAllSpeakers } from "@lib/cms-api";
+import { Speaker } from "@lib/types";
+import { META_DESCRIPTION } from "@lib/constants";
 
 type Props = {
   speakers: Speaker[];
@@ -31,8 +31,8 @@ type Props = {
 
 export default function Speakers({ speakers }: Props) {
   const meta = {
-    title: 'Vlogs - Angelina Jordan',
-    description: META_DESCRIPTION
+    title: "Vlogs - Angelina Jordan",
+    description: META_DESCRIPTION,
   };
   return (
     <Page meta={meta}>
@@ -49,8 +49,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      speakers
+      speakers,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 };

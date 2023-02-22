@@ -14,10 +14,13 @@
  * limitations under the License.
  */
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 function calcVh() {
-  document.documentElement.style.setProperty('--100vh', `${window.innerHeight}px`);
+  document.documentElement.style.setProperty(
+    "--100vh",
+    `${window.innerHeight}px`
+  );
 }
 
 /**
@@ -26,10 +29,10 @@ function calcVh() {
  */
 export default function ResizeHandler() {
   useEffect(() => {
-    window.addEventListener('resize', calcVh);
+    window.addEventListener("resize", calcVh);
     calcVh();
     return () => {
-      window.removeEventListener('resize', calcVh);
+      window.removeEventListener("resize", calcVh);
     };
   }, []);
   return <></>;

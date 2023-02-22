@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { ReactNode } from 'react'
-import styles from './header.module.css';
+import { ReactNode } from "react";
+import styles from "./header.module.css";
 
 type Props = {
   hero: ReactNode;

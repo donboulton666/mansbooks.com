@@ -1,5 +1,5 @@
-import React from 'react';
-import { SVGProps } from 'react';
+import React from "react";
+import { SVGProps } from "react";
 
 const HmsLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -213,7 +213,12 @@ const HmsLogo = (props: SVGProps<SVGSVGElement>) => (
         <stop stopColor="#2475F5" stopOpacity={0.3} />
         <stop offset={0.613} stopColor="#2475F5" stopOpacity={0.45} />
       </radialGradient>
-      <pattern id="a" patternContentUnits="objectBoundingBox" width={1} height={1}>
+      <pattern
+        id="a"
+        patternContentUnits="objectBoundingBox"
+        width={1}
+        height={1}
+      >
         <use xlinkHref="#n" />
       </pattern>
       <image

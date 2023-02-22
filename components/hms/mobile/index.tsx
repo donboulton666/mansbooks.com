@@ -1,31 +1,35 @@
-import React from 'react';
-import Avatar from '../Avatar';
+import React from "react";
+import Avatar from "../Avatar";
 import {
   useHMSStore,
   useVideoList,
   HMSPeer,
   selectIsSomeoneScreenSharing,
-  selectPeersByRole
-} from '@100mslive/react-sdk';
-import VideoTile from '../VideoTile';
-import ScreenshareTile from '../ScreenshareTile';
-import { hmsConfig } from '../config';
+  selectPeersByRole,
+} from "@100mslive/react-sdk";
+import VideoTile from "../VideoTile";
+import ScreenshareTile from "../ScreenshareTile";
+import { hmsConfig } from "../config";
 
 const MobileView: React.FC<{ activePeer: HMSPeer; allPeers: HMSPeer[] }> = ({
   activePeer,
-  allPeers
+  allPeers,
 }) => {
   const isSomeoneScreenSharing = useHMSStore(selectIsSomeoneScreenSharing);
   return (
-    <div className="md:hidden w-full h-full flex flex-col">
+    <div className="flex h-full w-full flex-col md:hidden">
       {allPeers.length > 0 ? (
         <MobileHeader />
       ) : (
-        <div className="w-full h-full flex items-center justify-center font-medium">
+        <div className="flex h-full w-full items-center justify-center font-medium">
           No Speakers Present
         </div>
       )}
-      {isSomeoneScreenSharing ? <ScreenshareTile /> : <VideoList peer={activePeer} />}
+      {isSomeoneScreenSharing ? (
+        <ScreenshareTile />
+      ) : (
+        <VideoList peer={activePeer} />
+      )}
     </div>
   );
 };
@@ -36,15 +40,15 @@ const VideoList: React.FC<{ peer: HMSPeer }> = ({ peer }) => {
     maxRowCount: 1,
     maxTileCount: 1,
     peers: [peer],
-    aspectRatio: hmsConfig.aspectRatio
+    aspectRatio: hmsConfig.aspectRatio,
   });
   return (
-    <div ref={ref} className="w-full h-full flex items-center">
+    <div ref={ref} className="flex h-full w-full items-center">
       {pagesWithTiles && pagesWithTiles.length > 0 ? (
         <VideoTile
           width={pagesWithTiles[0][0].width}
           height={pagesWithTiles[0][0].height}
-          trackId={pagesWithTiles[0][0].peer.videoTrack || ''}
+          trackId={pagesWithTiles[0][0].peer.videoTrack || ""}
         />
       ) : null}
     </div>
@@ -52,19 +56,22 @@ const VideoList: React.FC<{ peer: HMSPeer }> = ({ peer }) => {
 };
 
 const MobileHeader = () => {
-  const stagePeers = useHMSStore(selectPeersByRole('stage'));
+  const stagePeers = useHMSStore(selectPeersByRole("stage"));
   return (
-    <div className="w-full flex items-center h-[90px] pl-4 my-2">
-      <div className="flex flex-col justify-center items-center space-y-1">
+    <div className="my-2 flex h-[90px] w-full items-center pl-4">
+      <div className="flex flex-col items-center justify-center space-y-1">
         <button>
           <LayoutModeIcon />
         </button>
         <span className="text-xs">Auto</span>
       </div>
-      <div className="h-[80%] w-[1px] bg-gray-700 mx-4" />
-      <div className="w-full flex overflow-x-scroll">
-        {stagePeers.map(l => (
-          <div key={l.id} className="flex flex-col justify-center items-center space-y-2 mx-2">
+      <div className="mx-4 h-[80%] w-[1px] bg-gray-700" />
+      <div className="flex w-full overflow-x-scroll">
+        {stagePeers.map((l) => (
+          <div
+            key={l.id}
+            className="mx-2 flex flex-col items-center justify-center space-y-2"
+          >
             <Avatar customSize={40} name={l.name} />
             <span className="text-xs">{l.name}</span>
           </div>
@@ -78,7 +85,13 @@ export default MobileView;
 
 const LayoutModeIcon = () => {
   return (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="20" cy="20" r="18.5" stroke="#702EC2" strokeWidth="3" />
       <path
         fillRule="evenodd"

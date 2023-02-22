@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-import { GetStaticProps } from 'next';
+import { GetStaticProps } from "next";
 
-import Page from '@components/page';
-import JobsGrid from '@components/jobs-grid';
-import Layout from '@components/layout';
-import Header from '@components/header';
+import Page from "@components/page";
+import JobsGrid from "@components/jobs-grid";
+import Layout from "@components/layout";
+import Header from "@components/header";
 
-import { getAllJobs } from '@lib/cms-api';
-import { Job } from '@lib/types';
-import { META_DESCRIPTION } from '@lib/constants';
+import { getAllJobs } from "@lib/cms-api";
+import { Job } from "@lib/types";
+import { META_DESCRIPTION } from "@lib/constants";
 
 type Props = {
   jobs: Job[];
@@ -31,8 +31,8 @@ type Props = {
 
 export default function Jobs({ jobs }: Props) {
   const meta = {
-    title: 'Social - Angelina Jordan',
-    description: META_DESCRIPTION
+    title: "Social - Angelina Jordan",
+    description: META_DESCRIPTION,
   };
 
   return (
@@ -50,8 +50,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      jobs
+      jobs,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 };

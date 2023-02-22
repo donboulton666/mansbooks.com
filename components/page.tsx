@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-import { ReactNode } from 'react'
-import cn from 'classnames';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { ReactNode } from "react";
+import cn from "classnames";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
-import { SITE_NAME, SITE_URL, TWITTER_USER_NAME } from '@lib/constants';
+import { SITE_NAME, SITE_URL, TWITTER_USER_NAME } from "@lib/constants";
 
 type Meta = {
   title: string | null;
@@ -36,13 +36,13 @@ type Props = {
 
 export default function Page({ meta, children, fullViewport = false }: Props) {
   const router = useRouter();
-  const image = meta.image || '/twitter-card.jpg';
+  const image = meta.image || "/twitter-card.jpg";
   const title = meta.title || SITE_NAME;
   const url = meta.url || `${SITE_URL}${router.asPath}`;
   const description = meta.description || SITE_NAME;
 
   return (
-    <div className={cn('page-container', { full: fullViewport })}>
+    <div className={cn("page-container", { full: fullViewport })}>
       <Head>
         <title>{title}</title>
         <meta property="og:title" content={title} />
@@ -50,11 +50,28 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
         <meta name="twitter:site" content={`@${TWITTER_USER_NAME}`} />
-        <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+        <meta
+          name="twitter:card"
+          content={image ? "summary_large_image" : "summary"}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
@@ -67,9 +84,11 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
         {image && (
           <meta
             property="og:image"
-            content={image.startsWith('https://') ? image : `${SITE_URL}${image}`}
+            content={
+              image.startsWith("https://") ? image : `${SITE_URL}${image}`
+            }
           />
-        )}        
+        )}
       </Head>
       {children}
     </div>

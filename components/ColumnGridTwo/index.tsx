@@ -1,16 +1,16 @@
-import { ReactNode, FC } from 'react'
+import { ReactNode, FC } from "react";
 
 interface ColumnGridTwoProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
-const ColumnGridTwo: FC<ColumnGridTwoProps> = props => {
-  const { children } = props
+const ColumnGridTwo: FC<ColumnGridTwoProps> = (props) => {
+  const { children } = props;
   return (
     <>
       <div className="flex flex-wrap items-center">{children}</div>
     </>
-  )
-}
+  );
+};
 
-export default ColumnGridTwo
+export default ColumnGridTwo;

@@ -97,11 +97,11 @@ export type ConfUser = {
 
 export type GitHubOAuthData =
   | {
-      type: 'token';
+      type: "token";
       token: string;
     }
   | {
-      type: 'user';
+      type: "user";
       name: string;
       login: string;
     };

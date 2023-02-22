@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
   /**
@@ -13,7 +13,11 @@ interface Props {
 
 type LoadingProps = Props & React.SVGProps<SVGSVGElement>;
 
-export const Loading = ({ size = 24, color = 'white', ...props }: LoadingProps) => (
+export const Loading = ({
+  size = 24,
+  color = "white",
+  ...props
+}: LoadingProps) => (
   <svg
     width={size}
     height={size}

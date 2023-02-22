@@ -2,15 +2,15 @@ import {
   HMSPublishAllowed,
   selectDevices,
   selectIsAllowedToPublish,
-  selectLocalMediaSettings
-} from '@100mslive/hms-video-store';
-import { useCallback } from 'react';
-import { useHMSActions, useHMSStore } from '@100mslive/react-sdk';
+  selectLocalMediaSettings,
+} from "@100mslive/hms-video-store";
+import { useCallback } from "react";
+import { useHMSActions, useHMSStore } from "@100mslive/react-sdk";
 
 export enum DeviceType {
-  videoInput = 'videoInput',
-  audioInput = 'audioInput',
-  audioOutput = 'audioOutput'
+  videoInput = "videoInput",
+  audioInput = "audioInput",
+  audioOutput = "audioOutput",
 }
 
 type DeviceTypeInfo<T> = {
@@ -22,7 +22,7 @@ export interface useDevicesResult {
   selectedDeviceIDs: DeviceTypeInfo<string>;
   updateDevice: ({
     deviceType,
-    deviceId
+    deviceId,
   }: {
     deviceType: DeviceType;
     deviceId: string;
@@ -45,14 +45,15 @@ export interface useDevicesResult {
  */
 export const useDevices = (): useDevicesResult => {
   const hmsActions = useHMSActions();
-  const allDevices: DeviceTypeInfo<MediaDeviceInfo[]> = useHMSStore(selectDevices);
+  const allDevices: DeviceTypeInfo<MediaDeviceInfo[]> =
+    useHMSStore(selectDevices);
   const sdkSelectedDevices = useHMSStore(selectLocalMediaSettings);
   const isAllowedToPublish = useHMSStore(selectIsAllowedToPublish);
 
   const selectedDeviceIDs: DeviceTypeInfo<string> = {
     [DeviceType.audioInput]: sdkSelectedDevices.audioInputDeviceId,
     [DeviceType.audioOutput]: sdkSelectedDevices.audioOutputDeviceId,
-    [DeviceType.videoInput]: sdkSelectedDevices.videoInputDeviceId
+    [DeviceType.videoInput]: sdkSelectedDevices.videoInputDeviceId,
   };
 
   if (!isAllowedToPublish.video && allDevices.videoInput === []) {
@@ -87,6 +88,6 @@ export const useDevices = (): useDevicesResult => {
     allDevices,
     selectedDeviceIDs,
     updateDevice,
-    isAllowedToPublish
+    isAllowedToPublish,
   };
 };

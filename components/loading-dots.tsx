@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-import { ReactNode } from 'react'
-import px from '@lib/to-pixels';
-import cn from 'classnames';
-import styles from './loading-dots.module.css';
+import { ReactNode } from "react";
+import px from "@lib/to-pixels";
+import cn from "classnames";
+import styles from "./loading-dots.module.css";
 
 interface Props {
   size?: number;
@@ -26,13 +26,18 @@ interface Props {
   children?: ReactNode;
 }
 
-export default function LoadingDots({ size = 2, height, children, reverse }: Props) {
+export default function LoadingDots({
+  size = 2,
+  height,
+  children,
+  reverse,
+}: Props) {
   return (
     <span
       className={cn(styles.loading, { [styles.reverse]: reverse })}
       style={{
-        ['--loading-dots-height' as string]: height ? px(height) : undefined,
-        ['--loading-dots-size' as string]: size !== 2 ? px(size) : undefined
+        ["--loading-dots-height" as string]: height ? px(height) : undefined,
+        ["--loading-dots-size" as string]: size !== 2 ? px(size) : undefined,
       }}
     >
       {children && <div className={styles.spacer}>{children}</div>}
