@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import Bridge from '@components/gallery/Icons/Bridge'
-import Modal from '@components/Gallery/Modal'
+import Modal from '../components/gallery/Modal'
 import angelina from "../public/icon-192x192.png"
 import cloudinary from '../utils/cloudinary'
 import getBase64ImageUrl from '../utils/generateBlurPlaceholder'
