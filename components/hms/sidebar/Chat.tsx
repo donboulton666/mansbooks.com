@@ -41,7 +41,7 @@ const Chat = () => {
                       isMod={m.senderRole === "backstage"}
                     />
                   ) : null}
-                  <span className="text-xxs ml-1 text-gray-400">
+                  <span className="ml-1 text-xxs text-gray-400">
                     {m.time.toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
@@ -65,7 +65,7 @@ const Chat = () => {
         ) : (
           <div className="flex h-full items-center justify-center">
             <div className="flex w-full flex-col items-center text-center">
-              <div className="text-foreground flex h-[50px] w-[50px] items-center justify-center rounded-full bg-gray-700 md:h-[80px] md:w-[80px]">
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-gray-700 text-foreground md:h-[80px] md:w-[80px]">
                 <ChatIcon className="h-[30px] w-[30px] md:h-[50px] md:w-[50px]" />
               </div>
               <p>
@@ -104,11 +104,11 @@ const Badge: React.FC<{ isMod?: boolean; isLocal: boolean }> = ({
       style={{
         border: `${isMod ? "1px solid transparent" : "1px solid #2f6eeb"}`,
       }}
-      className={`text-foreground mx-1 inline-flex items-center rounded bg-gray-700 p-0.5 text-[10px]`}
+      className={`mx-1 inline-flex items-center rounded bg-gray-700 p-0.5 text-[10px] text-foreground`}
     >
       {isLocal ? (
         <>
-          You <span className="bg-foreground mx-1 h-1 w-1 rounded-full" />
+          You <span className="mx-1 h-1 w-1 rounded-full bg-foreground" />
         </>
       ) : null}{" "}
       {isMod ? "Moderator" : "Speaker"}

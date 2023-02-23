@@ -25,7 +25,7 @@ const ControlButton: React.FC<Props> = ({
       >
         {children}
       </button>
-      <span className="text-xxs mt-1">{text}</span>
+      <span className="mt-1 text-xxs">{text}</span>
     </div>
   );
 };

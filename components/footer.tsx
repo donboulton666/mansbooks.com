@@ -1,24 +1,44 @@
-import * as React from "react"
+import * as React from "react";
 import { SOCIAL } from "../lib/constants";
 import Link from "next/link";
-import A from "../components/A"
-import Subscriptions from "../components/subsctiptions"
-import LinkedIn from "./icons/linkedin.inline"
-import Facebook from "./icons/facebook-inline"
-import Instagram from "./icons/instagram-inline"
-import Twitter from "./icons/twitter-inline"
-import Github from "./icons/github-inline"
+import A from "../components/A";
+import Subscriptions from "../components/subsctiptions";
+import LinkedIn from "./icons/linkedin.inline";
+import Facebook from "./icons/facebook-inline";
+import Instagram from "./icons/instagram-inline";
+import Twitter from "./icons/twitter-inline";
+import Github from "./icons/github-inline";
 
 export default function Footer() {
-  const social = SOCIAL
+  const social = SOCIAL;
 
   const socialLinks = [
-    { name: "LinkedIn", link: "linkedin" in social ? social.linkedin : null, image: LinkedIn },
-    { name: "Facebook", link: "facebook" in social ? social.facebook : null, image: Facebook },
-    { name: "Instagram", link: "instagram" in social ? social.instagram : null, image: Instagram },
-    { name: "Twitter", link: "twitter" in social ? social.twitter : null, image: Twitter },
-    { name: "Github", link: "github" in social ? social.github : null, image: Github },
-  ]
+    {
+      name: "LinkedIn",
+      link: "linkedin" in social ? social.linkedin : null,
+      image: LinkedIn,
+    },
+    {
+      name: "Facebook",
+      link: "facebook" in social ? social.facebook : null,
+      image: Facebook,
+    },
+    {
+      name: "Instagram",
+      link: "instagram" in social ? social.instagram : null,
+      image: Instagram,
+    },
+    {
+      name: "Twitter",
+      link: "twitter" in social ? social.twitter : null,
+      image: Twitter,
+    },
+    {
+      name: "Github",
+      link: "github" in social ? social.github : null,
+      image: Github,
+    },
+  ];
 
   return (
     <>
@@ -36,19 +56,24 @@ export default function Footer() {
             x="0"
             y="0"
           >
-            <polygon className="fill-current text-slate-900" points="2560 0 2560 100 0 100"></polygon>
+            <polygon
+              className="fill-current text-slate-900"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
           </svg>
         </div>
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
-              <h4 className="text-3xl font-semibold text-gray-200">Let"s keep in touch!</h4>
+              <h4 className="text-3xl font-semibold text-gray-200">
+                Let"s keep in touch!
+              </h4>
               <h5 className="mt-0 mb-2 text-lg text-gray-100">
                 Find us on any of these platforms, we respond 1-2 business days.
               </h5>
               <div className="mt-4">
                 <span className="mt-4 inline-flex justify-center md:ml-auto md:mt-0 md:justify-start">
-                  {socialLinks.map(s =>
+                  {socialLinks.map((s) =>
                     s.link ? (
                       <A href={s.link} key={s.link} className="ml-3" external>
                         <s.image className=" h-6 w-6" />
@@ -61,15 +86,21 @@ export default function Footer() {
                 </span>
               </div>
               <div className="mt-4">
-                <h4 className="text-3xl font-semibold text-gray-200">Subscriptions</h4>
-                <h5 className="mt-0 mb-2 text-lg text-gray-200">Get exclusive newsletter-only content now and then</h5>
+                <h4 className="text-3xl font-semibold text-gray-200">
+                  Subscriptions
+                </h4>
+                <h5 className="mt-0 mb-2 text-lg text-gray-200">
+                  Get exclusive newsletter-only content now and then
+                </h5>
                 <Subscriptions />
               </div>
             </div>
             <div className="w-full px-4 lg:w-6/12">
               <div className="items-top -mb-2 flex flex-wrap">
                 <div className="ml-auto w-full px-4 lg:w-4/12">
-                  <span className="mb-2 block text-sm font-semibold uppercase text-gray-200">Useful Links</span>
+                  <span className="mb-2 block text-sm font-semibold uppercase text-gray-200">
+                    Useful Links
+                  </span>
                   <ul className="list-unstyled">
                     <li>
                       <Link
@@ -122,7 +153,9 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
-                  <span className="mb-2 block text-sm font-semibold uppercase text-gray-100">Other Resources</span>
+                  <span className="mb-2 block text-sm font-semibold uppercase text-gray-100">
+                    Other Resources
+                  </span>
                   <ul className="list-unstyled">
                     <li>
                       <Link
@@ -203,5 +236,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }

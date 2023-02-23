@@ -1,14 +1,19 @@
-import { ReactNode } from "react"
-import { Link } from "next"
+import { ReactNode } from "react";
+import { Link } from "next";
 
 interface AProps {
-  href: string
-  external?: boolean
-  className?: string
-  children: ReactNode
+  href: string;
+  external?: boolean;
+  className?: string;
+  children: ReactNode;
 }
 
-export default function A({ href, external = false, className, children }: AProps) {
+export default function A({
+  href,
+  external = false,
+  className,
+  children,
+}: AProps) {
   if (external) {
     return (
       <a
@@ -21,7 +26,7 @@ export default function A({ href, external = false, className, children }: AProp
       >
         {children}
       </a>
-    )
+    );
   } else {
     return (
       <Link
@@ -34,6 +39,6 @@ export default function A({ href, external = false, className, children }: AProp
       >
         {children}
       </Link>
-    )
+    );
   }
 }

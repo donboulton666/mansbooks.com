@@ -58,7 +58,7 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
             placeholder="Enter your name"
             required
             maxLength={20}
-            className="text-md h-10 w-full rounded-lg bg-gray-600 pl-2 placeholder:text-gray-400 focus:bg-gray-700 focus:outline-none"
+            className="h-10 w-full rounded-lg bg-gray-600 pl-2 text-md placeholder:text-gray-400 focus:bg-gray-700 focus:outline-none"
             onChange={(e) => {
               setName(e.target.value);
               localStorage.setItem("name", e.target.value);

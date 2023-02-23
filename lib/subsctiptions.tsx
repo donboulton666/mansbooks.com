@@ -1,14 +1,19 @@
-import React from "react"
-import { ReactNode, FC } from "react"
-import { useNetlifyForm, NetlifyFormProvider, NetlifyFormComponent, Honeypot } from "react-netlify-forms"
-import { useForm, Resolver } from "react-hook-form"
+import React from "react";
+import { ReactNode, FC } from "react";
+import {
+  useNetlifyForm,
+  NetlifyFormProvider,
+  NetlifyFormComponent,
+  Honeypot,
+} from "react-netlify-forms";
+import { useForm, Resolver } from "react-hook-form";
 
 type FormValues = {
-  email: string
-  acceptTerms: boolean
-}
+  email: string;
+  acceptTerms: boolean;
+};
 
-const resolver: Resolver<FormValues> = async values => {
+const resolver: Resolver<FormValues> = async (values) => {
   return {
     values: values.email ? values : {},
     errors: !values.email
@@ -19,39 +24,38 @@ const resolver: Resolver<FormValues> = async values => {
           },
         }
       : {},
-  }
-}
+  };
+};
 
 interface SubscriptionsProps {
-  email: string
-  acceptTerms: boolean
-  action?: string | undefined
-  honeypotName?: string | undefined
-  children: ReactNode
+  email: string;
+  acceptTerms: boolean;
+  action?: string | undefined;
+  honeypotName?: string | undefined;
+  children: ReactNode;
 }
 
-const Subscriptions: FC<SubscriptionsProps> = props => {
-  
+const Subscriptions: FC<SubscriptionsProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { email, action, acceptTerms, honeypotName, children } = props
+  const { email, action, acceptTerms, honeypotName, children } = props;
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>({ resolver })
+  } = useForm<FormValues>({ resolver });
   const netlify = useNetlifyForm({
     name: "subscriptions",
     action: "/thanks",
-    
+
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSuccess: (response, context) => {
-      console.log("Successfully sent form data to Netlify Server")
+      console.log("Successfully sent form data to Netlify Server");
     },
-  })
+  });
 
-  const onSubmit = data => netlify.handleSubmit(null, data)
+  const onSubmit = (data) => netlify.handleSubmit(null, data);
 
-  const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i
+  const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i;
 
   return (
     <>
@@ -62,14 +66,19 @@ const Subscriptions: FC<SubscriptionsProps> = props => {
               <Honeypot />
               <p className="hidden">
                 <label>
-                  Don not fill this out if you are human: <input name="bot-field" />
+                  Don not fill this out if you are human:{" "}
+                  <input name="bot-field" />
                 </label>
               </p>
-              {netlify.success && <p className="container ml-6 mt-6 text-yellow-500">Thanks for contacting us!</p>}
+              {netlify.success && (
+                <p className="container ml-6 mt-6 text-yellow-500">
+                  Thanks for contacting us!
+                </p>
+              )}
               {netlify.error && (
                 <p className="container ml-6 mt-6 text-red-500">
-                  Sorry, we could not reach servers. Because it only works on Netlify, our GitHub demo does not provide
-                  a response.
+                  Sorry, we could not reach servers. Because it only works on
+                  Netlify, our GitHub demo does not provide a response.
                 </p>
               )}
               <div className="mx-auto space-x-1 overflow-hidden p-1">
@@ -122,14 +131,16 @@ const Subscriptions: FC<SubscriptionsProps> = props => {
                     />
                   </div>
                 </span>
-                {errors.email && <div className="text-red-500">{errors.email.message}</div>}
+                {errors.email && (
+                  <div className="text-red-500">{errors.email.message}</div>
+                )}
               </div>
             </>
           </NetlifyFormComponent>
         </NetlifyFormProvider>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Subscriptions
+export default Subscriptions;

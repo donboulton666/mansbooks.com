@@ -1,56 +1,61 @@
-import { ReactNode, FC } from 'react'
-import { useNetlifyForm, NetlifyFormProvider, NetlifyFormComponent, Honeypot } from 'react-netlify-forms'
-import { useForm, Resolver } from 'react-hook-form'
+import { ReactNode, FC } from "react";
+import {
+  useNetlifyForm,
+  NetlifyFormProvider,
+  NetlifyFormComponent,
+  Honeypot,
+} from "react-netlify-forms";
+import { useForm, Resolver } from "react-hook-form";
 
 type FormValues = {
-  email: string
-  acceptTerms: boolean
-}
+  email: string;
+  acceptTerms: boolean;
+};
 
-const resolver: Resolver<FormValues> = async values => {
+const resolver: Resolver<FormValues> = async (values) => {
   return {
     values: values.email ? values : {},
     errors: !values.email
       ? {
-        email: {
-            type: 'required',
-            message: 'This is required.',
+          email: {
+            type: "required",
+            message: "This is required.",
           },
         }
       : {},
-  }
-}
+  };
+};
 
 interface SubscriptionsProps {
-  email: string
-  acceptTerms: boolean
-  action?: string | undefined
-  honeypotName?: string | undefined
-  children: ReactNode
+  email: string;
+  acceptTerms: boolean;
+  action?: string | undefined;
+  honeypotName?: string | undefined;
+  children: ReactNode;
 }
 
-const Subscriptions: FC<SubscriptionsProps> = props => {
+const Subscriptions: FC<SubscriptionsProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { email, action, acceptTerms, honeypotName, children } = props
+  const { email, action, acceptTerms, honeypotName, children } = props;
   const {
     register,
     handleSubmit,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     reset,
     formState: { errors },
-  } = useForm<FormValues>({ resolver })
+  } = useForm<FormValues>({ resolver });
   const netlify = useNetlifyForm({
-    name: 'subscriptions',
-    action: '/thanks',
+    name: "subscriptions",
+    action: "/thanks",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSuccess: (response, context) => {
-      console.log('Successfully sent form data to Netlify Server')
+      console.log("Successfully sent form data to Netlify Server");
     },
-  })
+  });
 
-  const onSubmit = data => netlify.handleSubmit(null, data)
+  const onSubmit = (data) => netlify.handleSubmit(null, data);
 
-  const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i
+  const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i;
 
   return (
     <>
@@ -61,14 +66,19 @@ const Subscriptions: FC<SubscriptionsProps> = props => {
               <Honeypot />
               <p className="hidden">
                 <label>
-                  Don not fill this out if you are human: <input name="bot-field" />
+                  Don not fill this out if you are human:{" "}
+                  <input name="bot-field" />
                 </label>
               </p>
-              {netlify.success && <p className="container ml-6 mt-6 text-yellow-500">Thanks for contacting us!</p>}
+              {netlify.success && (
+                <p className="container ml-6 mt-6 text-yellow-500">
+                  Thanks for contacting us!
+                </p>
+              )}
               {netlify.error && (
                 <p className="container ml-6 mt-6 text-red-500">
-                  Sorry, we could not reach servers. Because it only works on Netlify, our GitHub demo does not provide
-                  a response.
+                  Sorry, we could not reach servers. Because it only works on
+                  Netlify, our GitHub demo does not provide a response.
                 </p>
               )}
               <div className="mx-auto space-x-1 overflow-hidden p-1">
@@ -91,11 +101,11 @@ const Subscriptions: FC<SubscriptionsProps> = props => {
                     placeholder="Email"
                     className="w-48 appearance-none rounded border-slate-700 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 focus:border-fuchsia-500 focus:outline-none focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200"
                     aria-label="Enter Email"
-                    {...register('email', {
-                      required: 'Email is required',
+                    {...register("email", {
+                      required: "Email is required",
                       pattern: {
                         value: EMAIL_REGEX,
-                        message: 'Invalid email address',
+                        message: "Invalid email address",
                       },
                     })}
                   />
@@ -114,21 +124,23 @@ const Subscriptions: FC<SubscriptionsProps> = props => {
                       type="checkbox"
                       name="acceptTerms"
                       aria-label="Terms Checkbox"
-                      {...register('acceptTerms')}
+                      {...register("acceptTerms")}
                       className={`ml-1 h-6 w-6 rounded border-red-700 bg-slate-700 ring-offset-red-800 focus:ring-2 focus:ring-red-600 ${
-                        errors.acceptTerms ? 'is-invalid' : ''
+                        errors.acceptTerms ? "is-invalid" : ""
                       }`}
                     />
                   </div>
                 </span>
-                {errors.email && <div className="text-red-500">{errors.email.message}</div>}
+                {errors.email && (
+                  <div className="text-red-500">{errors.email.message}</div>
+                )}
               </div>
             </>
           </NetlifyFormComponent>
         </NetlifyFormProvider>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Subscriptions
+export default Subscriptions;
