@@ -1,12 +1,24 @@
+import React from "react";
+import Image from "next/legacy/image";
 import Layout from "../components/layout";
 import Section from "../components/Section";
 import Center from "../components/Center";
+import suspiciousminds from "../public/suspiciousminds.jpg";
 
 export default function Profile() {
   return (
     <Layout>
-      <div className="ml-10 mr-10 mt-8 mb-32">
-        <Center>Description</Center>
+      <div className="ml-10 mr-10 mt-8 mb-32">        
+        <Center>Angelina Jordan</Center>
+        <Image
+          alt="Angie"
+          title="Angie"
+          src={suspiciousminds}
+          className="w-full"
+          loading="lazy"
+          height={762}
+          width={1400}
+        />
         <h1>This is a Fanpage OF ANGELINA JORDAN 🎸</h1>
         <p>
           This page is not for any

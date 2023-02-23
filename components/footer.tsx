@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SOCIAL } from "../lib/constants";
 import Link from "next/link";
-import A from "../components/A";
+import ColumnGridLeft from "../components/column-grid-left";
 import Subscriptions from "../components/subsctiptions";
 import LinkedIn from "./icons/linkedin.inline";
 import Facebook from "./icons/facebook-inline";
@@ -69,21 +69,45 @@ export default function Footer() {
                 Let"s keep in touch!
               </h4>
               <h5 className="mt-0 mb-2 text-lg text-gray-100">
-                Find us on any of these platforms, we respond 1-2 business days.
+                Find Angelina's Connections below, responding 1-2 business days.
               </h5>
               <div className="mt-4">
-                <span className="mt-4 inline-flex justify-center md:ml-auto md:mt-0 md:justify-start">
-                  {socialLinks.map((s) =>
-                    s.link ? (
-                      <A href={s.link} key={s.link} className="ml-3" external>
-                        <s.image className=" h-6 w-6" />
-                        <span className="sr-only">{s.name}</span>
-                      </A>
-                    ) : (
-                      ""
-                    )
-                  )}
-                </span>
+                <ColumnGridLeft>
+                  <div className='mr-2'>
+                    <a href="https://angelinajordanofficial.com">
+                        🔗 Official Website
+                      </a>
+                    </div>
+                      <div>
+                        <a href="https://youtube.com/c/AngelinaJordanOfficial">
+                          🔗 YouTube Channel
+                        </a>
+                      </div>
+                    </ColumnGridLeft>
+                    <ColumnGridLeft>
+                      <div className='mr-2'>
+                        <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
+                          🔗 Cover Offical
+                        </a>
+                      </div>
+                      <div>
+                        <a href="https://www.instagram.com/angelinajordana/">
+                          🔗 Instagram
+                        </a>
+                      </div>
+                    </ColumnGridLeft>
+                    <ColumnGridLeft>
+                      <div className='mr-2'>
+                        <a href="https://www.facebook.com/angelinajordanofficial">
+                          🔗 Facebook
+                        </a>
+                      </div>
+                      <div>
+                    <a href="https://www.tiktok.com/@angelinajordana">
+                    🔗 TikTok
+                    </a>
+                  </div>
+                </ColumnGridLeft>
               </div>
               <div className="mt-4">
                 <h4 className="text-3xl font-semibold text-gray-200">
