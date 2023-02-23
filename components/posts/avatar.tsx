@@ -7,7 +7,7 @@ export default function Avatar({ name, picture }) {
         <Image
           alt={name}
           data={picture.responsiveImage}
-          className="rounded-full bio-avatar mb-4 ring ring-purple-500 ring-offset-4"
+          className="rounded-full mb-4 ring ring-purple-500 ring-offset-4"
         />
       </div>
     </div>

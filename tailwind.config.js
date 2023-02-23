@@ -1,10 +1,33 @@
+/** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+const plugin = require('tailwindcss/plugin')
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
+    './app/**/*.{js,ts,jsx,tsx}',
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
+  },
   theme: {
     extend: {
+      screens: {
+        narrow: { raw: '(max-aspect-ratio: 3 / 2)' },
+        wide: { raw: '(min-aspect-ratio: 3 / 2)' },
+        'taller-than-854': { raw: '(min-height: 854px)' },
+      },
+      boxShadow: {
+        highlight: 'inset 0 0 0 1px rgba(255, 255, 255, 0.05)',
+      },
       colors: {
         foreground: "var(--foreground)",
         gray: {
@@ -41,5 +64,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

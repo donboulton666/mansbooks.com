@@ -27,6 +27,7 @@
     U+FEFF, U+FFFD;
 }
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 

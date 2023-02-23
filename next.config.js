@@ -8,19 +8,18 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   env: {
-    NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN:
-      process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+    DATOCMS_READ_ONLY_API_TOKEN:
+      process.env.DATOCMS_READ_ONLY_API_TOKEN ,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
+    formats: ['image/avif', 'image/webp'],
     domains: [
       'www.datocms-assets.com',
+      'res.cloudinary.com',
     ],
     imageSizes: [24, 64, 300]
-  },
-  eslint: { 
-    ignoreDuringBuilds: true,
   },
 });

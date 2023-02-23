@@ -28,6 +28,7 @@ type Props = {
 export default function SponsorSection({ sponsor }: Props) {
   return (
     <>
+    <div className="mb-48">
       <Link href="/expo" className={styles.backlink}>
         <svg
           viewBox="0 0 24 24"
@@ -138,6 +139,7 @@ export default function SponsorSection({ sponsor }: Props) {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </>
   );

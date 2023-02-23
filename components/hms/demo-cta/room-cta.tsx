@@ -43,7 +43,7 @@ const RoomCta = () => {
       <ChangeRoleDialog>
         <Button className='className="h-[40px]"' variant="secondary">
           <PersonIcon height={20} className="mr-2" />
-          Change Role
+          Roles
         </Button>
       </ChangeRoleDialog>
     </div>

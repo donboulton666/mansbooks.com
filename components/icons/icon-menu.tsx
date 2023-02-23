@@ -1,4 +1,7 @@
-function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
+import React from "react";
+import { SVGProps } from "react";
+
+function MenuIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={24}

@@ -75,7 +75,7 @@ const ViewersJoin: React.FC<{ token: string }> = ({ token }) => {
         />
         <button
           type="submit"
-          className="bg-brand-300 hover:bg-brand-200 mt-4 w-80 cursor-pointer rounded-lg px-4 py-4 md:mt-0 md:w-20"
+          className="bg-purple-800 hover:bg-purple-700 text-slate-200 mt-4 w-80 cursor-pointer rounded-lg px-4 py-4 md:mt-0 md:w-20"
         >
           Join
         </button>

@@ -21,7 +21,7 @@ import { useRouter } from "next/router";
 import { SkipNavContent } from "@reach/skip-nav";
 import { NAVIGATION } from "@lib/constants";
 import styles from "./layout.module.css";
-import Logo from "./icons/icon-logo";
+import Logo from "./icons/icon-hms";
 import MobileMenu from "./mobile-menu";
 import Footer from "./footer";
 import React from "react";

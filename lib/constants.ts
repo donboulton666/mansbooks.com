@@ -43,17 +43,18 @@ export const CODE_OF_CONDUCT =
   "https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78";
 export const REPO = "https://github.com/donaldboulton/mansbooks.com";
 export const SAMPLE_TICKET_NUMBER = 1234;
+
 export const NAVIGATION = [
   {
-    name: "Live Stage",
-    route: "/stage/a",
+    name: "Live Stages",
+    route: "/stage/a?role=stage",
   },
   {
-    name: "Vercel Stage",
+    name: "Vercel",
     route: "/stage/c",
   },
   {
-    name: "100ms Stage",
+    name: "100ms",
     route: "/stage/m",
   },
   {
@@ -75,6 +76,34 @@ export const NAVIGATION = [
   {
     name: "Blog",
     route: "/blog",
+  },
+  {
+    name: "Gallery",
+    route: "/gallery",
+  },
+];
+
+export const SOCIAL = [
+  {
+    email: "mailto:donaldboulton@gmail.com",
+  },
+  {
+    phone: "tel:+405-863-2165",
+  },
+  {
+    facebook: "https://www.facebook.com/donboulton",
+  },
+  {
+    instagram: "https://www.instagram.com/boulton3662",
+  },
+  {
+    twitter: "https://twitter.com/donboulton",
+  },
+  {
+    linkedin: "https://www.linkedin.com/donboulton",
+  },
+  {
+    github: "https://github.com/donaldboulton/",
   },
 ];
 

@@ -67,15 +67,17 @@ export default function SponsorsGrid({ sponsors }: Props) {
 
   return (
     <>
-      <div className={styles.grid}>
-        {otherSponsors.map((sponsor) => (
-          <SponsorCard key={sponsor.name} sponsor={sponsor} />
-        ))}
-      </div>
-      <div className={styles.grid}>
-        {silverSponsors.map((sponsor) => (
-          <SponsorCard key={sponsor.name} sponsor={sponsor} />
-        ))}
+      <div className="mb-32">
+        <div className={styles.grid}>
+          {otherSponsors.map((sponsor) => (
+            <SponsorCard key={sponsor.name} sponsor={sponsor} />
+          ))}
+        </div>
+        <div className={styles.grid}>
+          {silverSponsors.map((sponsor) => (
+            <SponsorCard key={sponsor.name} sponsor={sponsor} />
+          ))}
+        </div>
       </div>
     </>
   );
