@@ -1,45 +1,9 @@
 import * as React from "react";
-import { SOCIAL } from "../lib/constants";
 import Link from "next/link";
 import ColumnGridLeft from "../components/column-grid-left";
 import Subscriptions from "../components/subsctiptions";
-import LinkedIn from "./icons/linkedin.inline";
-import Facebook from "./icons/facebook-inline";
-import Instagram from "./icons/instagram-inline";
-import Twitter from "./icons/twitter-inline";
-import Github from "./icons/github-inline";
 
 export default function Footer() {
-  const social = SOCIAL;
-
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      link: "linkedin" in social ? social.linkedin : null,
-      image: LinkedIn,
-    },
-    {
-      name: "Facebook",
-      link: "facebook" in social ? social.facebook : null,
-      image: Facebook,
-    },
-    {
-      name: "Instagram",
-      link: "instagram" in social ? social.instagram : null,
-      image: Instagram,
-    },
-    {
-      name: "Twitter",
-      link: "twitter" in social ? social.twitter : null,
-      image: Twitter,
-    },
-    {
-      name: "Github",
-      link: "github" in social ? social.github : null,
-      image: Github,
-    },
-  ];
-
   return (
     <>
       <footer className="relative bg-slate-900 pt-8 pb-6">
