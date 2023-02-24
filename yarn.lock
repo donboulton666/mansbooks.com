@@ -1320,7 +1320,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.1.1.tgz#c9c61d9fe5ca5ac664e1153bb0aa0eba1c6d6308"
   integrity sha512-jwx+WCqszn53YHOfvFMJJRd/B2GqkCBt+1MJSG6o5/s8+ytHMvDZXsJgUEWLk12UnLd7HYKac4BYU5i/Ron1Cw==
 
-"@datocms/cma-client-node@^1.1.22":
+"@datocms/cma-client-node@1.2.4":
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/@datocms/cma-client-node/-/cma-client-node-1.2.4.tgz#834de8f2a47ebdabc91f6300d4b9b42a8584ede7"
   integrity sha512-LJ7asstCIYjOdUcusTwi5tWuTh3VyvIo41Wf9d2dCj9timlBNfqbfhnRUfKi6T7tvdRO/XumhHyurWjb3dpvVw==
