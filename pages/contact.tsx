@@ -66,6 +66,7 @@ export default function Contact() {
               className="container"
               method="POST"
               name="contact-form"
+              action="/thanks"
               onSubmit={handleSubmit(onSubmit)}
               data-netlify="true"
               data-netlify-honeypot="bot-field"
@@ -77,21 +78,21 @@ export default function Contact() {
                 </label>
               </p>
               <div>
-                <label className="mb-2 mt-2 block text-xs font-bold uppercase tracking-wide text-slate-200">First Name</label>
-                <input {...register('firstName')} className="mt-1 block w-96 rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm" />
+                <label htmlFor="firstname" className="mb-2 mt-2 block text-xs font-bold uppercase tracking-wide text-slate-200">First Name</label>
+                <input name="firstname" {...register('firstName')} className="mt-1 block w-96 rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm" />
               </div>
 
               <div>
-                <label className="mb-2 mt-2 block text-xs font-bold uppercase tracking-wide text-slate-200">Last Name</label>
-                <input {...register('lastName')} className="w-96 mt-1 block rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm" />
+                <label htmlFor="lastname" className="mb-2 mt-2 block text-xs font-bold uppercase tracking-wide text-slate-200">Last Name</label>
+                <input name="lastname" {...register('lastName')} className="w-96 mt-1 block rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm" />
               </div>
 
               <div>
                 <label htmlFor="email" className="mb-2 mt-2 block text-xs font-bold uppercase tracking-wide text-slate-200">Email</label>
-                <input type="email" {...register('email')} className="mt-1 block w-96 rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm" />
+                <input type="email" name="email" {...register('email')} className="mt-1 block w-96 rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm" />
               </div>
 
-              <input className="rounded-md my-2 px-4 text-slate-200 shadow-lg bg-slate-900 hover:shadow-slate-800/50" type="submit" />
+              <input className="rounded-md my-2 py-2 px-4 text-slate-200 shadow-lg bg-slate-900 hover:shadow-slate-800/50" type="submit" />
             </form>   
           </div>
         </ColumnGridLeft>    
