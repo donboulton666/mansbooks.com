@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/legacy/image";
 import Layout from "../components/layout";
 import Section from "../components/Section";
@@ -8,6 +9,9 @@ import suspiciousminds from "../public/suspiciousminds.jpg";
 export default function Profile() {
   return (
     <Layout>
+      <Head>
+        <title>Profile</title>
+      </Head>
       <div className="ml-10 mr-10 mt-8 mb-32">        
         <Center>Angelina Jordan</Center>
         <Image

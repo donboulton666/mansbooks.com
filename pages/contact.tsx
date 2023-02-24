@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from "next/head";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import Center from "../components/Center";
 import LeftText from "../components/LeftText";
@@ -17,6 +18,9 @@ export default function Contact() {
     alert(JSON.stringify(data));
   return (
     <Layout>
+      <Head>
+        <title>Contact</title>
+      </Head>
       <div className="mr-10 ml-10 mt-10 mb-20">
         <p>
           <Center>Contact the Queen</Center>

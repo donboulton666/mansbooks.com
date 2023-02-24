@@ -129,9 +129,9 @@ export default function Footer() {
                     <li>
                       <Link
                         className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
-                        href="/privacy"
+                        href="/about"
                       >
-                        About Us
+                        About Angie
                       </Link>
                     </li>
                     <li>
@@ -230,9 +230,9 @@ export default function Footer() {
                     <li>
                       <Link
                         className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
-                        href="/rss.xml"
+                        href="https://netlify.com"
                       >
-                        Site Rss
+                        Netlify
                       </Link>
                     </li>
                   </ul>

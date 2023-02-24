@@ -1,8 +1,12 @@
+import Head from "next/head";
 import Layout from "../components/layout";
 
 export default function SearchForm() {
   return (
     <Layout>
+      <Head>
+        <title>Search</title>
+      </Head>
       <div className="mx-18">
         <div className="z-30 -mt-4">
           <div className="mt-10">

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/legacy/image";
 import Layout from "../components/layout";
 import Center from "../components/Center";
@@ -15,6 +16,9 @@ import cookies from "../public/cookies.png";
 export default function Privacy() {
   return (
     <Layout>
+      <Head>
+        <title>Privacy</title>
+      </Head>
       <div className="mx-8 mt-8 mb-32">
         <Center>Privacy Policy / Terms of Usage</Center>
         <Image

@@ -7,7 +7,7 @@ export default function Intro() {
       <h4 className="mt-5 text-center text-lg md:pl-8 md:text-left">
         Angelina Jordan's{" "}
         <a
-          href="https://mansbooks.com/blog"
+          href="https://mansbooks.com/expo"
           className="hover:text-success underline transition-colors duration-200"
         >
           Vlogs
