@@ -81,6 +81,8 @@ export default function TicketActions({ username }: Props) {
         href={linkedInUrl}
         rel="noopener noreferrer"
         target="_blank"
+        aria-describedby="Share on Linkedin"
+        area-label="Share on Linkedin"
       >
         <IconLinkedin width={20} /> Share on LinkedIn
       </a>

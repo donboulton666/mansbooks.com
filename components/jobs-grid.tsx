@@ -37,8 +37,10 @@ function CompanyJobs({ jobs }: Props) {
                   key={job.id}
                   className={styles.link}
                   href={job.link}
-                  target="_blank"
                   rel="noopener noreferrer"
+                  target="_blank"
+                  aria-describedby="Learn More"
+                  area-label="Learn More"
                 >
                   Learn More
                   <svg
@@ -84,8 +86,10 @@ export default function JobsGrid({ jobs }: Props) {
             <h2 className={styles.companyName}>{companyName}</h2>
             <a
               href={companies[companyName][0].discord}
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
+              aria-describedby="AJ Join"
+              area-label="AJ Join"
               className={styles.button}
             >
               <span>Join the recruiters live on</span>

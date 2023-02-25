@@ -77,8 +77,10 @@ export default function SponsorSection({ sponsor }: Props) {
             <div className={styles["sponsor-details"]}>
               <Link
                 href={sponsor.callToActionLink}
-                target="_blank"
                 rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="AJ Action"
+                area-label="AJ Action"
                 type="button"
                 className={cn(styles.button, styles["button-resource"])}
               >

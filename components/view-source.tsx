@@ -30,8 +30,10 @@ export default function ViewSource() {
       <a
         title="View Source"
         href={REPO}
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
+        aria-describedby="Repo"
+        area-label="Repo"
       >
         <path d="M0 0l115 115h15l12 27 108 108V0z" fill="#7e22ce" />
         <path

@@ -33,8 +33,10 @@ export default function LearnMore() {
       <Link
         href={REPO}
         className={styles["contact-email"]}
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
+        aria-describedby="Github"
+        area-label="Github"
       >
         GitHub
       </Link>

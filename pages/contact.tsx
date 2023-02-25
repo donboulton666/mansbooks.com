@@ -249,6 +249,7 @@ export default function Contact() {
                           type="text"
                           className="mt-1 block w-full rounded-md border-slate-800 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 shadow-sm focus:border-blue-500 focus:ring-slate-500 sm:text-sm"
                           name="subject"
+                          placeholder="Subject"
                           required="true"
                         />
                       </div>

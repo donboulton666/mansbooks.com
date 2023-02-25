@@ -25,7 +25,7 @@ export default function Privacy() {
           alt="Privacy"
           title="Privacy"
           src={about}
-          className="h-20 w-20"
+          className="h-20 w-20 opacity-60"
           loading="lazy"
           height={450}
           width={1400}
@@ -52,8 +52,16 @@ export default function Privacy() {
         <Section>
           🍪 When you visit this site "convenience" cookies are stored on your
           computer when you submit a comment to help you log in faster to 🔗{" "}
-          <a href="https://twitter.com/donboulton">Twitter</a> the next time you
-          do a tweet.
+          <a 
+            href="https://twitter.com/donboulton"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="Don Boulton Twitter"
+            area-label="Don Boulton Twitter"
+          >
+            Twitter
+          </a>
+            the next time you do a tweet.
         </Section>
         <Section>
           <LeftText>Cookies Purpose and Usage</LeftText>
@@ -95,17 +103,32 @@ export default function Privacy() {
           ⚖️ The Law
           <p>
             🔗{" "}
-            <a href="https://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/">
+            <a href="https://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-describedby="EU's cookie law confusing you too"
+              area-label="EU's cookie law confusing you too"
+            >
               Is the EU's cookie law confusing you too?
             </a>
           </p>
           🔗{" "}
-          <a href="https://ec.europa.eu/info/cookies_en">
+          <a href="https://ec.europa.eu/info/cookies_en"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="EU cookie law e-Privacy Directive"
+            area-label="EU cookie law e-Privacy Directive"
+          >
             New EU cookie law e-Privacy Directive
           </a>
           <p>
             🔗{" "}
-            <a href="https://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/">
+            <a href="https://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-describedby="Cookies Doing nothing isn't the right answer"
+              area-label="Cookies Doing nothing isn't the right answer"
+            >
               Cookies Doing nothing isn't the right answer.
             </a>
           </p>
@@ -123,7 +146,10 @@ export default function Privacy() {
             🔗 \*{" "}
             <a
               href="https://www.cookiesandyou.com/disable-cookies/windows/edge/"
+              rel="noopener noreferrer"
               target="_blank"
+              aria-describedby="MS Edge"
+              area-label="MS Edge"
             >
               Disabling cookies in MS Edge
             </a>
@@ -132,7 +158,10 @@ export default function Privacy() {
             🔗 \*{" "}
             <a
               href="https://support.google.com/chrome/bin/answer.py?hl=en-GB&answer=95647&p=cpn_cookies"
+              rel="noopener noreferrer"
               target="_blank"
+              aria-describedby="Chrome"
+              area-label="Chrome"
             >
               Disabling cookies in Google Chrome
             </a>
@@ -141,7 +170,10 @@ export default function Privacy() {
             🔗 \*{" "}
             <a
               href="https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox"
+              rel="noopener noreferrer"
               target="_blank"
+              aria-describedby="Firefox"
+              area-label="firefox"
             >
               Disabling cookies in Mozilla Firefox
             </a>
@@ -150,7 +182,10 @@ export default function Privacy() {
             🔗 \*{" "}
             <a
               href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac"
+              rel="noopener noreferrer"
               target="_blank"
+              aria-describedby="Safari"
+              area-label="Safari"
             >
               Disabling cookies in Apple Safari
             </a>
@@ -206,7 +241,10 @@ export default function Privacy() {
             From Stackoverflow: 🔗{" "}
             <a
               href="https://stackoverflow.com/questions/1823406/what-does-utma-mean"
+              rel="noopener noreferrer"
               target="_blank"
+              aria-describedby="Stackoverflow"
+              area-label="Stackoverflow"
             >
               What does \_\_utma mean?
             </a>
@@ -251,7 +289,10 @@ export default function Privacy() {
           🔗{" "}
           <a
             href="https://tools.google.com/dlpage/gaoptout?hl=None"
+            rel="noopener noreferrer"
             target="_blank"
+            aria-describedby="Google tools"
+            area-label="Google tools"
           >
             Opt Out Google tools
           </a>
@@ -289,7 +330,10 @@ export default function Privacy() {
           🔗{" "}
           <a
             href="https://www.google.com/analytics/learn/privacy.html"
+            rel="noopener noreferrer"
             target="_blank"
+            aria-describedby="Google Privacy"
+            area-label="Google Privacy"
           >
             Google Analytics Privacy Policy
           </a>
@@ -305,7 +349,10 @@ export default function Privacy() {
             🔗{" "}
             <a
               href="https://www.google.com/analytics/learn/privacy.html"
+              rel="noopener noreferrer"
               target="_blank"
+              aria-describedby="Analytics Privacy"
+              area-label="Analytics Privacy"
             >
               Google Analytics Privacy Policy
             </a>
@@ -321,7 +368,10 @@ export default function Privacy() {
           🔗{" "}
           <a
             href="https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182"
+            rel="noopener noreferrer"
             target="_blank"
+            aria-describedby="AdSense Privacy"
+            area-label="AdSense Privacy"
           >
             Google AdSense Privacy Policy
           </a>
@@ -332,7 +382,10 @@ export default function Privacy() {
           🔗{" "}
           <a
             href="https://www.termsfeed.com/blog/privacy-policy-google-adsense/"
+            rel="noopener noreferrer"
             target="_blank"
+            aria-describedby="Privacy Policy Creator"
+            area-label="Privacy Policy Creator"
           >
             Privacy Policy Creator Google
           </a>
@@ -369,8 +422,14 @@ export default function Privacy() {
           support this website because I'll get a percentage of that sale.
         </Section>
         Donald Boulton and this 🔗{" "}
-        <a href="https://mansbooks.com" target="_blank">
-          Angelina Jordan
+        <a 
+          href="https://mansbooks.com" 
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-describedby="AJ Official"
+          area-label="AJ Official"
+        >
+          Angelina Jordan's
         </a>{" "}
         🗸 Website is a Affiliate for Google AdSense.
         <Section>

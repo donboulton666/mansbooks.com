@@ -15,15 +15,20 @@ export default function About() {
       <div className="ml-10 mr-10 mt-8 mb-32">
         <Center>WebSite Framework & Design</Center>
         <Image
-          alt="Angie"
-          title="Angie"
+          alt="NextJs"
+          title="NextJs"
           src={nextjs}
-          className="w-full"
+          className="w-full opacity-80"
           loading="lazy"
           height={762}
           width={1400}
         />
-        <a href="https://nextjs.org/">
+        <a href="https://nextjs.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-describedby="Built with NextJs"
+          area-label="Built with NextJs"
+        >
           <h2>This Website is built with NextJs</h2>
         </a>
         <p>
@@ -35,8 +40,13 @@ export default function About() {
         <Center>Dato Cms</Center>
         <Section>
           <div>
-            <a href="https://www.datocms.com/">
-              <h2>HEADLESS CMS, DONE RIGHT</h2>
+            <a href="https://www.datocms.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-describedby="Headless CMS"
+              area-label="Headless CMS"
+            >
+              <h2>Headless CMS, Done Right</h2>
             </a>
             <div>
               Simply put, the most complete, user-friendly and performant
@@ -59,8 +69,13 @@ export default function About() {
         </Section>
         <Center>Redis Database</Center>
         <Section>
-          <a href="https://redis.io/">
-            <h2>DATABASE, DONE RIGHT</h2>
+          <a href="https://redis.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="Memory Database"
+            area-label="Memory Database"
+          >
+            <h2>Memory Database, Done Right</h2>
           </a>
           <p>
             The open source, in-memory data store used by millions of developers
@@ -76,8 +91,13 @@ export default function About() {
 
         <Center>100ms</Center>
         <Section>
-          <a href="https://www.100ms.live/">
-            <h2>STREAMING VIDEO SERVICE</h2>
+          <a href="https://www.100ms.live/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="Streaming Video Service"
+            area-label="Streaming Video Service"
+          >
+            <h2>Streaming Video Service</h2>
           </a>
           <p>The only live video API you will ever need.</p>
           <p>
@@ -95,23 +115,49 @@ export default function About() {
             for Facebook & Disney+ Hotstar. We know what works and what buffers.
           </p>
         </Section>
+        <Center>Cloudinary Image Transformations</Center>
+        <Section>
+          <a href="https://cloudinary.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="Image and Video APIs"
+            area-label="Image and Video APIs"
+          >
+            <h2>The Most Powerful Image and Video APIs</h2>
+          </a>
+          <p>         
+            Trusted by 1.3 million developers and 10,000
+            enterprise and hyper-growth companies as a
+            critical part of their tech stack.
+          </p>
+          <p> Image and Video API for Powerful Visual Experiences</p>
+          <p>
+            Image and Video API for Powerful Visual Experiences
+            Store, transform, optimize, and deliver all your media assets with easy-to-use APIs, widgets, or user interface.
+          </p>
+        </Section>
         <Section>
           <Center>About Angie</Center>
-
           <p>
-            <a href="https://youtube.com/c/AngelinaJordanOfficial">
-              <h2>For those who don't know about Angelina jordan</h2>
+            <a 
+              href="https://youtube.com/c/AngelinaJordanOfficial"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-describedby="About Angelina Jordan"
+              area-label="About Angelina Jordan"
+            >
+              <h2>For those who don't know about Queen Angelina Jordan</h2>
             </a>
-            :👇👇👇
+            👇👇👇
           </p>
           <p>
-            Angelina jordan is a singer born in Oslo, Norway. And, also the
+            Angelina Jordan is a singer born in Oslo, Norway. And, also the
             youngest author of Norway.
           </p>
         </Section>
         <Section>
           <p>
-            Angelina jordan (barefoot princess) is the winner of Norway got
+            Angelina Jordan (barefoot queen) is the winner of Norway got
             talent 2014. She also auditioned for America's got talent in 2020
             where she received GOLDEN BUZZER from Heidi Klum. Currently, she
             signed with Republic records.
@@ -125,27 +171,52 @@ export default function About() {
           <div>
             Extended Profile Information:{" "}
             <p>
-              <a href="https://angelinajordanofficial.com">
+              <a href="https://angelinajordanofficial.com"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan"
+                area-label="Angelina Jordan"
+              >
                 🔗 Angelina Jordan official Website
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanOfficial">
+              <a href="https://youtube.com/c/AngelinaJordanOfficial"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan YouTube Channel"
+                area-label="Angelina Jordan YouTube Channel"
+              >
                 🔗 Angelina Jordan YouTube Channel
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
+              <a href="https://youtube.com/c/AngelinaJordanCoverChannel"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Cover Offical"
+                area-label="Angelina Jordan Cover Offical"
+              >
                 🔗 Angelina Jordan Cover Offical
               </a>
             </p>
             <p>
-              <a href="https://www.instagram.com/angelinajordana/">
+              <a href="https://www.instagram.com/angelinajordana/"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Instagram"
+                area-label="Angelina Jordan Instagram"
+              >
                 🔗 Angelina Jordan Instagram
               </a>
             </p>
             <p>
-              <a href="https://www.facebook.com/angelinajordanofficial">
+              <a href="https://www.facebook.com/angelinajordanofficial"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Facebook"
+                area-label="Angelina Jordan Facebook"
+              >
                 🔗 Angelina Jordan Facebook
               </a>
             </p>

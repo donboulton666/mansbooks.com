@@ -29,55 +29,97 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
-              <h4 className="text-3xl font-semibold text-gray-200">
+              <h4 className="text-3xl font-semibold text-blue-500">
                 Let"s keep in touch!
               </h4>
-              <h5 className="mt-0 mb-2 text-lg text-gray-100">
+              <h5 className="mt-0 mb-2 text-lg text-slate-400">
                 Find Angelina's Connections below, responding 1-2 business days.
               </h5>
               <div className="mt-4">
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a href="https://angelinajordanofficial.com">
+                    <a 
+                      className="hover:text-pink-500"
+                      href="https://angelinajordanofficial.com"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="AJ Official"
+                      area-label="AJ Official"
+                    >
                       🔗 Official Website
                     </a>
                   </div>
                   <div>
-                    <a href="https://youtube.com/c/AngelinaJordanOfficial">
+                    <a
+                      className="hover:text-pink-500"
+                      href="https://youtube.com/c/AngelinaJordanOfficial"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="YouTube Channel"
+                      area-label="YouTube Channel"
+                    >
                       🔗 YouTube Channel
                     </a>
                   </div>
                 </ColumnGridLeft>
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
+                    <a 
+                      href="https://youtube.com/c/AngelinaJordanCoverChannel"
+                      className="hover:text-pink-500"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="AJ Cover Official"
+                      area-label="AJ Cover Official"
+                    >
                       🔗 Cover Offical
                     </a>
                   </div>
                   <div>
-                    <a href="https://www.instagram.com/angelinajordana/">
+                    <a 
+                      href="https://www.instagram.com/angelinajordana/"
+                      className="hover:text-pink-500"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="AJ Instagram"
+                      area-label="AJ Instagram"
+                    >
                       🔗 Instagram
                     </a>
                   </div>
                 </ColumnGridLeft>
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a href="https://www.facebook.com/angelinajordanofficial">
+                    <a 
+                      href="https://www.facebook.com/angelinajordanofficial"
+                      className="hover:text-pink-500"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="AJ Facebook"
+                      area-label="AJ Facebook"
+                    >
                       🔗 Facebook
                     </a>
                   </div>
                   <div>
-                    <a href="https://www.tiktok.com/@angelinajordana">
+                    <a 
+                      href="https://www.tiktok.com/@angelinajordana"
+                      className="hover:text-pink-500"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="AJ TikTok"
+                      area-label="AJ TikTok"
+                    >
                       🔗 TikTok
                     </a>
                   </div>
                 </ColumnGridLeft>
               </div>
               <div className="mt-4">
-                <h4 className="text-3xl font-semibold text-gray-200">
+                <h4 className="text-3xl font-semibold text-blue-500">
                   Subscriptions
                 </h4>
-                <h5 className="mt-0 mb-2 text-lg text-gray-200">
+                <h5 className="mt-0 mb-2 text-lg text-slate-400">
                   Get exclusive newsletter-only content now and then
                 </h5>
                 <Subscriptions />
@@ -86,13 +128,13 @@ export default function Footer() {
             <div className="w-full px-4 lg:w-6/12">
               <div className="items-top -mb-2 flex flex-wrap">
                 <div className="ml-auto w-full px-4 lg:w-4/12">
-                  <span className="mb-2 block text-sm font-semibold uppercase text-gray-200">
+                  <span className="mb-2 block text-sm font-semibold uppercase text-blue-500">
                     Useful Links
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/about"
                       >
                         About Angie
@@ -100,7 +142,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/blog"
                       >
                         Blog
@@ -108,7 +150,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/contact"
                       >
                         Contact Us
@@ -116,7 +158,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/profile"
                       >
                         Profile
@@ -124,7 +166,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/search"
                       >
                         Search Page
@@ -132,7 +174,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/sitemap.xml"
                       >
                         Sitemap XML
@@ -141,13 +183,13 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
-                  <span className="mb-2 block text-sm font-semibold uppercase text-gray-100">
+                  <span className="mb-2 block text-sm font-semibold uppercase text-blue-500">
                     Other Resources
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="https://publiuslogic.com/blog/0bsd-licence"
                       >
                         BSD License
@@ -155,9 +197,10 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         rel="noopener noreferrer"
                         target="_blank"
+                        aria-describedby="Github"
                         area-label="Github"
                         href="https://www.github.com/donaldboulton"
                       >
@@ -166,7 +209,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         rel="noopener noreferrer"
                         target="_blank"
                         area-label="Gatsby Starter Basic Instructions"
@@ -177,7 +220,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/privacy"
                       >
                         Terms
@@ -185,7 +228,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/privacy"
                       >
                         Privacy Policy
@@ -193,7 +236,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 text-sm font-semibold text-gray-200 hover:text-fuchsia-500"
+                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="https://netlify.com"
                       >
                         Netlify
@@ -204,17 +247,17 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <hr className="my-6 border-gray-400" />
+          <hr className="my-6 border-slate-400" />
           <div className="flex flex-wrap items-center justify-center md:justify-between">
             <div className="mx-auto w-full px-4 text-center md:w-4/12">
-              <div className="py-1 text-sm font-semibold text-gray-200">
+              <div className="py-1 text-sm font-semibold text-slate-400">
                 © {new Date().getFullYear()} Mansbooks by:{" "}
                 <a
                   href="https://donboulton.com"
                   rel="noopener noreferrer"
                   target="_blank"
                   area-label="Donald Boulton Web Site"
-                  className="text-gray-200 hover:text-fuchsia-500"
+                  className="text-slate-400 hover:text-pink-500"
                 >
                   Donald W. Boulton
                 </a>

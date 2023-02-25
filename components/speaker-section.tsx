@@ -84,8 +84,10 @@ export default function SpeakerSection({ speaker }: Props) {
               <Link
                 aria-label="Twitter"
                 href={speaker.twitter}
-                target="_blank"
                 rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="AJ Twitter"
+                area-label="AJ Twitter"
               >
                 <TwitterIcon />
               </Link>
