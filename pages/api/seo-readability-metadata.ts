@@ -28,7 +28,7 @@ const handler = async (req, res) => {
   }
 
   const client = buildClient({
-    apiToken: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+    apiToken: process.env.DATOCMS_READ_ONLY_API_TOKEN,
     environment: req.query.sandboxEnvironmentId,
   });
 

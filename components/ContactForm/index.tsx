@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Link } from "next";
 import { Image } from "next/legacy/image";
-import { useForm } from "react-hook-form";
 import formImage from "../../public/react-hook-form-48.png";
 
 type ContactFormProps = {
@@ -17,19 +16,13 @@ type ContactFormProps = {
 
 const ContactForm: FC<ContactFormProps> = (props) => {
   const { firstName, lastName, email, phone, userName, subject, message, acceptTerms } = props;
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-
-  console.log(watch("example"));
-  const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i;
-  const PHONE_REGEX = /^[0-9+-]+$/;
   return (
       <div className="-pt-2 mb-24 text-slate-200 lg:col-span-2 lg:mt-0">
           <form
             className="container"
             method="POST"
-            name="contact-form"
-            onSubmit={handleSubmit(onSubmit)}
+            name="contact"
+            data-netlify-recaptcha="true"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
@@ -46,7 +39,6 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                   <div className="mb-6 w-full px-3 md:mb-0 md:w-1/2">
                     <label
                       className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-200"
-                      htmlFor={firstName}
                     >
                       First Name
                     </label>
@@ -69,22 +61,16 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                       </div>
                       <input
                         className="mb-3 block w-full appearance-none rounded border-slate-900 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 focus:border-blue-500 focus:outline-none focus:ring-slate-500 sm:text-sm"
-                        id={firstName}
                         name={firstName}
                         type="text"
                         placeholder="First name"
-                        {...register("firstName", {
-                          required: true,
-                          maxLength: 80,
-                        })}
+                        required="true"
                       />
                     </div>
-                    {errors?.firstName && <p>{errors.firstName.message}</p>}
                   </div>
                   <div className="w-full px-3 md:w-1/2">
                     <label
                       className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-200"
-                      htmlFor={lastName}
                     >
                       Last Name
                     </label>
@@ -107,15 +93,10 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                       </div>
                       <input
                         className="block w-full appearance-none rounded border-slate-900 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 focus:border-blue-500 focus:outline-none focus:ring-slate-500 sm:text-sm"
-                        id={lastName}
                         name={lastName}
                         type="text"
                         placeholder="Last name"
-                        {...register("lastName", {
-                          required: true,
-                          pattern: /^[a-zA-Z]+$/,
-                          maxLength: 100,
-                        })}
+                        required="true"
                       />
                     </div>
                   </div>
@@ -148,21 +129,15 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                       <input
                         type="text"
                         name={userName}
-                        id={userName}
                         autoComplete="off"
                         placeholder="User Name"
                         className="mt-1 block w-full rounded-md border-slate-800 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 shadow-sm focus:border-blue-500 focus:ring-slate-500 sm:text-sm"
-                        {...register("userName", {
-                          required: true,
-                          pattern: /^[a-zA-Z]+$/,
-                          maxLength: 100,
-                        })}
+                        required="true"
                       />
                     </div>
                   </div>
                   <div className="col-span-6">
                     <label
-                      htmlFor={email}
                       className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-200"
                     >
                       Email address
@@ -181,28 +156,17 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         </svg>
                       </div>
                       <input
-                        type="text"
+                        type="email"
                         name={email}
-                        id={email}
                         autoComplete="on"
                         placeholder="Email"
                         className="mt-1 block w-full rounded-md border-slate-800 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 shadow-sm focus:border-blue-500 focus:ring-slate-500 sm:text-sm"
-                        {...register("email", {
-                          required: "Email is required",
-                          pattern: {
-                            value: EMAIL_REGEX,
-                            message: "Invalid email address",
-                          },
-                        })}
+                        required="true"
                       />
                     </div>
-                    {errors.email && (
-                      <div className="text-red-500">{errors.email.message}</div>
-                    )}
                   </div>
                   <div className="col-span-6">
                     <label
-                      htmlFor={phone}
                       className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-200"
                     >
                       Phone
@@ -231,25 +195,13 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         autoComplete="on"
                         placeholder="Phone Number"
                         className="mt-1 block w-full rounded-md border-slate-800 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 shadow-sm focus:border-blue-500 focus:ring-slate-500 sm:text-sm"
-                        {...register("phone", {
-                          required: "Phone Number is required",
-                          pattern: {
-                            value: PHONE_REGEX,
-                            message: "Invalid Phone Number",
-                          },
-                          minLength: 6,
-                          maxLength: 12,
-                        })}
+                        required="true"
                       />
                     </div>
-                    {errors.phone && (
-                      <div className="text-red-500">{errors.phone.message}</div>
-                    )}
                   </div>
 
                   <div className="col-span-6">
                     <label
-                      htmlFor={subject}
                       className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-200"
                     >
                       Subject
@@ -274,17 +226,13 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                       <input
                         type="text"
                         name={subject}
-                        id={subject}
-                        placeholder="Subject"
-                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 shadow-sm focus:border-blue-500 focus:ring-slate-500 sm:text-sm"
-                        {...register("subject", { required: true })}
+                        required="true"
                       />
                     </div>
                   </div>
 
                   <div className="col-span-6">
                     <label
-                      htmlFor={message}
                       className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-200"
                     >
                       Message
@@ -311,8 +259,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         name={message}
                         className="mt-1 block w-full rounded-md border-slate-900 bg-slate-800 p-2.5 pl-14 text-slate-200 caret-blue-500 shadow-sm focus:border-blue-500 focus:caret-indigo-500 focus:ring-slate-500 sm:text-sm"
                         rows={5}
-                        name="text"
-                        {...register("message", { required: true })}
+                        required="true"
                       />
                     </div>
                   </div>
@@ -335,16 +282,11 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                     </button>
                     <div className="ml-2 flex items-center">
                       <input
-                        id={acceptTerms}
                         type="checkbox"
-                        name="acceptTerms"
-                        aria-label="Terms Checkbox"
-                        {...register("acceptTerms")}
-                        className={`ml-1 h-6 w-6 rounded border-red-700 bg-slate-700 ring-offset-red-800 focus:ring-2 focus:ring-red-600 
-                        ${errors.acceptTerms ? "is-invalid" : ""}`}
+                        name={acceptTerms}
+                        required="true"
                       />
                       <label
-                        htmlFor="acceptTerms"
                         className="ml-3 block text-xs font-bold uppercase tracking-wide text-slate-200"
                       >
                         <Link
@@ -357,9 +299,6 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           Agree to Terms
                         </Link>
                       </label>
-                      <div className="test-red-500">
-                        {errors.acceptTerms?.message}
-                      </div>
                     </div>
                   </span>
                 </div>
