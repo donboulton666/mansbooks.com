@@ -24,6 +24,7 @@ export default function About() {
           width={1400}
         />
         <a href="https://nextjs.org/"
+          className="hover:text-pink-500"
           rel="noopener noreferrer"
           target="_blank"
           aria-describedby="Built with NextJs"
@@ -41,6 +42,7 @@ export default function About() {
         <Section>
           <div>
             <a href="https://www.datocms.com/"
+              className="hover:text-pink-500"
               rel="noopener noreferrer"
               target="_blank"
               aria-describedby="Headless CMS"
@@ -70,6 +72,7 @@ export default function About() {
         <Center>Redis Database</Center>
         <Section>
           <a href="https://redis.io/"
+            className="hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
             aria-describedby="Memory Database"
@@ -92,6 +95,7 @@ export default function About() {
         <Center>100ms</Center>
         <Section>
           <a href="https://www.100ms.live/"
+            className="hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
             aria-describedby="Streaming Video Service"
@@ -112,12 +116,13 @@ export default function About() {
           <p>You are in safe hands</p>
           <p>
             100ms is built by a team of video engineers that powered live video
-            for Facebook & Disney+ Hotstar. We know what works and what buffers.
+            for Facebook & Disney + Hotstar. We know what works and what buffers.
           </p>
         </Section>
         <Center>Cloudinary Image Transformations</Center>
         <Section>
           <a href="https://cloudinary.com/"
+            className="hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
             aria-describedby="Image and Video APIs"
@@ -141,6 +146,7 @@ export default function About() {
           <p>
             <a 
               href="https://youtube.com/c/AngelinaJordanOfficial"
+              className="hover:text-pink-500"
               rel="noopener noreferrer"
               target="_blank"
               aria-describedby="About Angelina Jordan"
@@ -172,6 +178,7 @@ export default function About() {
             Extended Profile Information:{" "}
             <p>
               <a href="https://angelinajordanofficial.com"
+                className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-describedby="Angelina Jordan"
@@ -182,6 +189,7 @@ export default function About() {
             </p>
             <p>
               <a href="https://youtube.com/c/AngelinaJordanOfficial"
+                className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-describedby="Angelina Jordan YouTube Channel"
@@ -192,6 +200,7 @@ export default function About() {
             </p>
             <p>
               <a href="https://youtube.com/c/AngelinaJordanCoverChannel"
+                className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-describedby="Angelina Jordan Cover Offical"
@@ -202,6 +211,7 @@ export default function About() {
             </p>
             <p>
               <a href="https://www.instagram.com/angelinajordana/"
+                className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-describedby="Angelina Jordan Instagram"
@@ -212,6 +222,7 @@ export default function About() {
             </p>
             <p>
               <a href="https://www.facebook.com/angelinajordanofficial"
+                className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-describedby="Angelina Jordan Facebook"

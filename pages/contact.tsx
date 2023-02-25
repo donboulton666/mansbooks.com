@@ -16,40 +16,70 @@ export default function Contact() {
       </Head>
       <div className="mr-10 ml-10 mt-10 mb-20">
         <p>
-          <Center>Contact the Queen</Center>
-          <p>Use the form below to Contact Angelina Jordan.</p>
+          <Center>Contact Queen Angelina Jordan</Center>
+          <p>Use the form below to Contact the Angelic Queen.</p>
         </p>
         <LeftText>Social Links</LeftText>
         <ColumnGridLeft>
           <div className="mr-20 mt-4">
             Extended Profile Information:{" "}
             <p>
-              <a href="https://angelinajordanofficial.com">
+              <a href="https://angelinajordanofficial.com"
+                className="hover:text-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="hookForm"
+              >
                 🔗 Angelina Jordan official Website
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanOfficial">
+              <a href="https://youtube.com/c/AngelinaJordanOfficial"
+                className="hover:text-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="hookForm"
+              >
                 🔗 Angelina Jordan YouTube Channel
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
+              <a href="https://youtube.com/c/AngelinaJordanCoverChannel"
+                className="hover:text-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="hookForm"
+              >
                 🔗 Angelina Jordan Cover Offical
               </a>
             </p>
             <p>
-              <a href="https://www.instagram.com/angelinajordana/">
+              <a href="https://www.instagram.com/angelinajordana/"
+                className="hover:text-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="hookForm"
+              >
                 🔗 Angelina Jordan Instagram
               </a>
             </p>
             <p>
-              <a href="https://www.facebook.com/angelinajordanofficial">
+              <a href="https://www.facebook.com/angelinajordanofficial"
+                className="hover:text-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="Angelina Jordan Facebook"
+              >
                 🔗 Angelina Jordan Facebook
               </a>
             </p>
             <p>
-              <a href="https://www.tiktok.com/@angelinajordana">
+              <a href="https://www.tiktok.com/@angelinajordana"
+                className="hover:text-pink-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="Angelina Jordan TikTok"
+              >
                 🔗 Angelina Jordan TikTok
               </a>
             </p>
@@ -59,10 +89,12 @@ export default function Contact() {
               className="container"
               method="POST"
               name="contact"
+              action="https://mansbooks.com/thanks"
               data-netlify-recaptcha="true"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <p className="hidden">
                 <label>
                   Don not fill this out if you are human:{" "}
@@ -85,7 +117,7 @@ export default function Contact() {
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            className="h-5 w-5 text-slate-200"
+                            className="h-5 w-5 text-pink-500"
                           >
                             <path
                               stroke-linecap="round"
@@ -115,7 +147,7 @@ export default function Contact() {
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            className="h-5 w-5 text-slate-200"
+                            className="h-5 w-5 text-pink-500"
                           >
                             <path
                               stroke-linecap="round"

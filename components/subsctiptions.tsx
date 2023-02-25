@@ -46,7 +46,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
   } = useForm<FormValues>({ resolver });
   const netlify = useNetlifyForm({
     name: "subscriptions",
-    action: "/thanks",
+    action: "https://mansbooks.com/thanks",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSuccess: (response, context) => {
       console.log("Successfully sent form data to Netlify Server");
@@ -64,6 +64,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
           <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)}>
             <>
               <Honeypot />
+              <input type="hidden" name="form-name" value="subscriptions" />
               <p className="hidden">
                 <label>
                   Don not fill this out if you are human:{" "}
