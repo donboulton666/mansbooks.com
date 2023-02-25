@@ -1,4 +1,4 @@
-import { buildClient } from '@datocms/cma-client-node';
+import { buildClient } from "@datocms/cma-client-node";
 
 const baseUrl = process.env.VERCEL_URL
   ? // Vercel auto-populates this environment variable
@@ -8,13 +8,13 @@ const baseUrl = process.env.VERCEL_URL
 
 async function installWebPreviewsPlugin(client) {
   const webPreviewsPlugin = await client.plugins.create({
-    package_name: 'datocms-plugin-web-previews',
+    package_name: "datocms-plugin-web-previews",
   });
 
   await client.plugins.update(webPreviewsPlugin, {
     parameters: {
       frontends: [
-        { name: 'Production', previewWebhook: `${baseUrl}/api/preview-links` },
+        { name: "Production", previewWebhook: `${baseUrl}/api/preview-links` },
       ],
       startOpen: true,
     },
@@ -23,13 +23,13 @@ async function installWebPreviewsPlugin(client) {
 
 async function installSeoReadabilityPlugin(client) {
   const seoReadabilityPlugin = await client.plugins.create({
-    package_name: 'datocms-plugin-seo-readability-analysis',
+    package_name: "datocms-plugin-seo-readability-analysis",
   });
 
   await client.plugins.update(seoReadabilityPlugin, {
     parameters: {
       htmlGeneratorUrl: `${baseUrl}/api/seo-readability-metadata`,
-      autoApplyToFieldsWithApiKey: 'seo_readability_analysis',
+      autoApplyToFieldsWithApiKey: "seo_readability_analysis",
     },
   });
 }
@@ -41,17 +41,17 @@ async function installSeoReadabilityPlugin(client) {
 
 export default async (req, res) => {
   // setup CORS permissions
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   // This will allow OPTIONS request
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     return res.status(200).json({ success: true });
   }
 
-  if (req.method !== 'POST') {
-    return res.status(404).json({ error: 'Invalid route' });
+  if (req.method !== "POST") {
+    return res.status(404).json({ error: "Invalid route" });
   }
 
   const client = buildClient({ apiToken: req.body.datocmsApiToken });

@@ -12,7 +12,8 @@ export default function Thanks() {
           <div className="mt-10">
             <div className="mt-16 mb-16 p-8 sm:mt-2">
               <div className="mb-2">
-                Thank You for your form submission. Turn around is 1 - 2 business days.
+                Thank You for your form submission. Turn around is 1 - 2
+                business days.
               </div>
             </div>
           </div>

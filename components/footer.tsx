@@ -37,38 +37,38 @@ export default function Footer() {
               </h5>
               <div className="mt-4">
                 <ColumnGridLeft>
-                  <div className='mr-2'>
+                  <div className="mr-2">
                     <a href="https://angelinajordanofficial.com">
-                        🔗 Official Website
-                      </a>
-                    </div>
-                      <div>
-                        <a href="https://youtube.com/c/AngelinaJordanOfficial">
-                          🔗 YouTube Channel
-                        </a>
-                      </div>
-                    </ColumnGridLeft>
-                    <ColumnGridLeft>
-                      <div className='mr-2'>
-                        <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
-                          🔗 Cover Offical
-                        </a>
-                      </div>
-                      <div>
-                        <a href="https://www.instagram.com/angelinajordana/">
-                          🔗 Instagram
-                        </a>
-                      </div>
-                    </ColumnGridLeft>
-                    <ColumnGridLeft>
-                      <div className='mr-2'>
-                        <a href="https://www.facebook.com/angelinajordanofficial">
-                          🔗 Facebook
-                        </a>
-                      </div>
-                      <div>
+                      🔗 Official Website
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://youtube.com/c/AngelinaJordanOfficial">
+                      🔗 YouTube Channel
+                    </a>
+                  </div>
+                </ColumnGridLeft>
+                <ColumnGridLeft>
+                  <div className="mr-2">
+                    <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
+                      🔗 Cover Offical
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.instagram.com/angelinajordana/">
+                      🔗 Instagram
+                    </a>
+                  </div>
+                </ColumnGridLeft>
+                <ColumnGridLeft>
+                  <div className="mr-2">
+                    <a href="https://www.facebook.com/angelinajordanofficial">
+                      🔗 Facebook
+                    </a>
+                  </div>
+                  <div>
                     <a href="https://www.tiktok.com/@angelinajordana">
-                    🔗 TikTok
+                      🔗 TikTok
                     </a>
                   </div>
                 </ColumnGridLeft>

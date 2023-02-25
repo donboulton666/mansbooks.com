@@ -9,7 +9,7 @@ import UserProfile from "../components/UserProfile";
 import Section from "../components/Section";
 import VideoWrapper from "../components/VideoWrapper";
 import SingleAccordion from "../components/SingleAccordion";
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import about from "../public/about.jpg";
 import cookies from "../public/cookies.png";
 
@@ -40,7 +40,6 @@ export default function Privacy() {
         personal information to anyone without your direct consent.
         <h2>Log Files</h2>
         <Section>
-
           🏴󠁡󠁦󠁬󠁯󠁧󠁿 Like many other websites, this site uses log files to help
           learn about when, from where, and how often traffic flows to this
           site. The information in these log files include: - Internet Protocol
@@ -51,14 +50,12 @@ export default function Privacy() {
         </Section>
         <h2> Cookies Beacons</h2>
         <Section>
-
           🍪 When you visit this site "convenience" cookies are stored on your
           computer when you submit a comment to help you log in faster to 🔗{" "}
           <a href="https://twitter.com/donboulton">Twitter</a> the next time you
           do a tweet.
         </Section>
         <Section>
-
           <LeftText>Cookies Purpose and Usage</LeftText>
           <ColumnGridTwo>
             <UserProfile
@@ -79,15 +76,11 @@ export default function Privacy() {
               />
             </UserProfile>
             <VideoWrapper>
-              <LiteYouTubeEmbed 
-                id="yoE9-tNvhRs"
-                title="Cookies Explained"
-              />                
+              <LiteYouTubeEmbed id="yoE9-tNvhRs" title="Cookies Explained" />
             </VideoWrapper>
           </ColumnGridTwo>
         </Section>
         <Section>
-
           Third-party advertisers may also place and read cookies on your
           browser and / or use web beacons to collect information. This site has
           no access or control over these cookies. You should review the
@@ -119,7 +112,6 @@ export default function Privacy() {
         </SingleAccordion>
         <h2>Disabling Cookies</h2>
         <Section>
-
           ❌ If you would like to restrict the use of cookies you can control
           this in your Internet browser. Links to advice on how to do this for
           the most popular Internet browsers are provided below for convenience
@@ -166,7 +158,6 @@ export default function Privacy() {
         </SingleAccordion>
         <h2>Angelina Jordan UI cookies</h2>
         <Section>
-
           CookieHub is a complete cookie consent solution that you can easily
           integrated with any website. The cookie consent plugin can be
           customized to match your brand and is compliant with cookie laws,
@@ -176,14 +167,12 @@ export default function Privacy() {
         </Section>
         <h2>Google Analytics</h2>
         <Section>
-
           📈 The cookies in use to deliver Google Analytics service are
           described below. Returning, New Session, Time, Custom Variable Data,
           Source
         </Section>
         <h2>Analytics Cookie Types</h2>
         <Section>
-
           <p>- \_\_utma</p>
           🤚 This cookie is used to determine new and returning visitors. It has
           an expiration time of 2 years. If the ga.js library is executed and no
@@ -225,7 +214,6 @@ export default function Privacy() {
           <p>- \_\_utmv</p>
         </Section>
         <Section>
-
           <p>
             🤚 This cookie is used for storing visitor-level custom variable
             data. It is created when the \_setCustomVar method is used with a
@@ -249,7 +237,6 @@ export default function Privacy() {
         </Section>
         <h3>Opt-out</h3>
         <Section>
-
           😜 In order to provide website visitors with more choice on how data
           is collected by Google Analytics, Google has developed the Google
           Analytics Opt-out Browser Add-on. The add-on communicates with the
@@ -270,14 +257,12 @@ export default function Privacy() {
           </a>
         </p>
         <Section>
-
           ⚒️ For more information on the usage of cookies by Google Analytics
           please see the Google website. A link to the privacy advice for this
           product is provided below for your convenience.
         </Section>
         <h2> Hubspot</h2>
         <Section>
-
           <p>- \_\_hstc Cookie</p>
           🥠 About this cookie \_\_hstc
           <p>
@@ -289,7 +274,6 @@ export default function Privacy() {
         </Section>
         <h4>Key numbers for \_\_hstc</h4>
         <Section>
-
           🗝️ Cookies with this name have been found on 316 websites, set by 269
           host domains. It has been found as a First Party cookie on 277
           websites and a Third Party cookie on 71 websites. It has been found as
@@ -311,14 +295,12 @@ export default function Privacy() {
           </a>
         </p>
         <Section>
-
           🗠 Google Analytics is a web analytics tool I use to help understand
           how visitors engage with this website. It reports website trends using
           cookies and web beacons without identifying individual visitors.
         </Section>
         <h2>Read Analytics Policy</h2>
         <Section>
-
           <p>
             🔗{" "}
             <a
@@ -345,10 +327,7 @@ export default function Privacy() {
           </a>
         </p>
         <h2>Create Your Own</h2>
-        <Section>
-          
-          🦸 Google AdSense Privacy Policy creator
-        </Section>
+        <Section>🦸 Google AdSense Privacy Policy creator</Section>
         <p>
           🔗{" "}
           <a
@@ -360,7 +339,6 @@ export default function Privacy() {
         </p>
         <h2> Donation Policy</h2>
         <Section>
-
           🩸 All Donations thought our external pay sites and or through our
           PayPal buttons will not be refundable, as they are a donation to a
           free website designer, that has limited ability's to do money
@@ -377,7 +355,6 @@ export default function Privacy() {
         <h2>1 house rule is simple</h2>
         <h2>Don’t be a jerk</h2>
         <Section>
-
           Want to be the kind of commenter we’d love to bring home to
           Thanksgiving dinner? Here’s what we like to see in comments: Weigh in
           with smart, informed ideas that contribute further to the story. Give
@@ -387,7 +364,6 @@ export default function Privacy() {
         </Section>
         <h2> Disclosure Policy</h2>
         <Section>
-
           🩸 I make money on this website through affiliate programs. If you
           click an affiliate link or ad banner and buy the product, you help
           support this website because I'll get a percentage of that sale.
@@ -398,7 +374,6 @@ export default function Privacy() {
         </a>{" "}
         🗸 Website is a Affiliate for Google AdSense.
         <Section>
-
           What this means for you: - I became an affiliate to earn revenue
           towards the costs of running and maintaining this website. Where I
           have direct control over which ads are served on this website I offer
@@ -413,28 +388,25 @@ export default function Privacy() {
           revenue streams evolve, so will this page.
         </Section>
         <Section>
-
-        <h2>License OBSD</h2>
-        🔰 The 0BSD (Zero-Clause BSD) license.
-        <p>Copyright (C) [year] by [copyright holder] [email]</p>
-        <p>
-          Permission to use, copy, modify, and/or distribute this software for
-          any purpose with or without fee is hereby granted.
-        </p>
-        THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-        WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-        MERCHANTABILITY AND FITNESS.
-        <p>
-          IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-          INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
-          FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
-          NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
-          WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-        </p>
+          <h2>License OBSD</h2>
+          🔰 The 0BSD (Zero-Clause BSD) license.
+          <p>Copyright (C) [year] by [copyright holder] [email]</p>
+          <p>
+            Permission to use, copy, modify, and/or distribute this software for
+            any purpose with or without fee is hereby granted.
+          </p>
+          THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+          WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+          WARRANTIES OF MERCHANTABILITY AND FITNESS.
+          <p>
+            IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+            INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER
+            RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+            CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+            CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+          </p>
         </Section>
-        
         <Section>
-
           <h2>Attribution</h2>
           Everything Under Father God
         </Section>

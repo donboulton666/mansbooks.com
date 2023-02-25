@@ -12,7 +12,7 @@ export default function Profile() {
       <Head>
         <title>Profile</title>
       </Head>
-      <div className="ml-10 mr-10 mt-8 mb-32">        
+      <div className="ml-10 mr-10 mt-8 mb-32">
         <Center>Angelina Jordan</Center>
         <Image
           alt="Angie"
@@ -25,9 +25,8 @@ export default function Profile() {
         />
         <h1>This is a Fanpage OF ANGELINA JORDAN 🎸</h1>
         <p>
-          This page is not for any
-          commercial benefits. This is only for Angelina's fan so that they can
-          find her all videos easily.
+          This page is not for any commercial benefits. This is only for
+          Angelina's fan so that they can find her all videos easily.
         </p>
         <p>And, for those who don't know about Angelina jordan:👇👇👇</p>
         <p>
@@ -36,46 +35,45 @@ export default function Profile() {
         </p>
 
         <Section>
-        <p>
-          Angelina jordan (barefoot princess) is the winner of Norway got talent
-          2014. She also auditioned for America's got talent in 2020 where she
-          received GOLDEN BUZZER from Heidi Klum. Currently, she signed with
-          Republic records.
-        </p>
-        <p>She also plays piano, violin, guitar, flute and also paints.</p>
-        <p>Thanks 🙏</p>
+          <p>
+            Angelina jordan (barefoot princess) is the winner of Norway got
+            talent 2014. She also auditioned for America's got talent in 2020
+            where she received GOLDEN BUZZER from Heidi Klum. Currently, she
+            signed with Republic records.
+          </p>
+          <p>She also plays piano, violin, guitar, flute and also paints.</p>
+          <p>Thanks 🙏</p>
         </Section>
 
         <Section>
-
-        <div>
-          Extended Profile Information:{" "}
-          <p>
-            <a href="https://angelinajordanofficial.com">
-             🔗 Angelina Jordan official Website
-            </a>
-          </p>
-          <p>
-            <a href="https://youtube.com/c/AngelinaJordanOfficial">
-              🔗 Angelina Jordan YouTube Channel
-            </a>
-          </p>
-          <p>
-            <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
-              🔗 Angelina Jordan Cover Offical
-            </a>
-          </p>
-          <p>
-            <a href="https://www.instagram.com/angelinajordana/">
-              🔗 Angelina Jordan Instagram
-            </a>
-          </p>
-          <p>
-            <a href="https://www.facebook.com/angelinajordanofficial">
-              🔗 Angelina Jordan Facebook
-            </a>
-          </p>
-        </div>
+          <div>
+            Extended Profile Information:{" "}
+            <p>
+              <a href="https://angelinajordanofficial.com">
+                🔗 Angelina Jordan official Website
+              </a>
+            </p>
+            <p>
+              <a href="https://youtube.com/c/AngelinaJordanOfficial">
+                🔗 Angelina Jordan YouTube Channel
+              </a>
+            </p>
+            <p>
+              <a href="https://youtube.com/c/AngelinaJordanCoverChannel">
+                🔗 Angelina Jordan Cover Offical
+              </a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/angelinajordana/">
+                🔗 Angelina Jordan Instagram
+              </a>
+            </p>
+            <p>
+              <a href="https://www.facebook.com/angelinajordanofficial">
+                🔗 Angelina Jordan Facebook
+              </a>
+            </p>
+          </div>
         </Section>
       </div>
     </Layout>

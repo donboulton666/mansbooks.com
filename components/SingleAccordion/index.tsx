@@ -5,7 +5,8 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useInView } from "react-intersection-observer";
 import { LazyMotion, m } from "framer-motion";
 
-const loadFeatures = () =>import("../FramerFeatures").then((res) => res.default);
+const loadFeatures = () =>
+  import("../FramerFeatures").then((res) => res.default);
 
 interface SingleAccordionProps {
   children: ReactNode;
