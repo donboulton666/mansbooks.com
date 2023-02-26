@@ -6,7 +6,6 @@ import Section from "@components/Section";
 import LeftText from "@components/LeftText";
 import Center from "@components/Center";
 import nextjs from "../public/nextjs.jpg";
-import LiteYouTubeEmbed from "@components/YouTube";
 
 export default function About() {
   return (
@@ -110,7 +109,6 @@ export default function About() {
             <h2>Streaming Video Service</h2>
           </a>
           <p>The only live video API you will ever need.</p>
-          <LiteYouTubeEmbed id="3noinkcEsHk" title="100ms API" />
           <p>
             Go beyond basic video calls, take video experiences to the next
             level with 100ms. Intricately customizable, infinitely extensible.

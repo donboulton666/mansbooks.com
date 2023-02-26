@@ -1,4 +1,5 @@
 import { Redis } from "@upstash/redis";
+import crypto from "crypto";
 
 const redis = new Redis({
   url: "https://usw1-certain-osprey-33919.upstash.io",
@@ -6,19 +7,19 @@ const redis = new Redis({
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const data = await redis.set("emailToId", "name");
+const data = await redis.set("emailToId", "email");
 
 export function emailToId(email: string) {
-  if (process.env.REDIS_EMAIL_TO_ID_SECRET) {
+  if (process.env.UPSTASH_EMAIL_TO_ID_SECRET) {
     const hmac = crypto.createHmac(
       "sha1",
-      process.env.REDIS_EMAIL_TO_ID_SECRET
+      process.env.UPSTASH_EMAIL_TO_ID_SECRET
     );
     hmac.update(email);
     const result = hmac.digest("hex");
     return result;
   } else {
-    throw new Error("REDIS_EMAIL_TO_ID_SECRET is missing");
+    throw new Error("UPSTASH_EMAIL_TO_ID_SECRET is missing");
   }
 }
 

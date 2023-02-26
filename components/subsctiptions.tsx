@@ -126,7 +126,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                       name="acceptTerms"
                       aria-label="Terms Checkbox"
                       {...register("acceptTerms")}
-                      className={`ml-1 h-6 w-6 rounded border-red-700 bg-slate-700 ring-offset-red-800 focus:ring-2 focus:ring-red-600 ${
+                      className={`ml-1 h-6 w-6 rounded border-wine-400 bg-wine-200 ring-offset-wine-300 focus:ring-2 focus:ring-wine-400 ${
                         errors.acceptTerms ? "is-invalid" : ""
                       }`}
                     />

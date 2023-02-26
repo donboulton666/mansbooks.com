@@ -168,14 +168,14 @@ You need a database to save user data and enable the following features:
 
 The demo ([demo.vercel.events](https://demo.vercel.events/)) uses [Redis](https://redis.io/), but you can customize it to use any database you like.
 
-### **Running Redis Locally**
+### **Running Upstash Redis Locally**
 
-1. Install Redis locally and run it.
+1. Install Upstash Redis locally and run it.
 2. Specify the following in `.env.local`:
 
-`REDIS_PORT=6379 # Default Redis port number REDIS_URL=localhost REDIS_PASSWORD= REDIS_SSL_ENABLED= REDIS_EMAIL_TO_ID_SECRET=foo # Come up with your own secret string`
+`REDIS_PORT=6379 # Default Redis port number REDIS_URL=localhost REDIS_PASSWORD= REDIS_SSL_ENABLED= UPSTASH_EMAIL_TO_ID_SECRET=foo # Come up with your own secret string`
 
-> REDIS_EMAIL_TO_ID_SECRET will be used to create a hash of the email address, which will be used for the Redis key for each user data (i.e. id:<hash>). See lib/redis.ts for details.
+> UPSTASH_EMAIL_TO_ID_SECRET will be used to create a hash of the email address, which will be used for the Redis key for each user data (i.e. id:<hash>). See lib/redis.ts for details.
 
 > If your Redis server has SSL (TLS) encryption enabled then set REDIS_SSL_ENABLED=true
 

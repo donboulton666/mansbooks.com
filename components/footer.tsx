@@ -1,7 +1,9 @@
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/legacy/image";
 import ColumnGridLeft from "../components/column-grid-left";
 import Subscriptions from "../components/subsctiptions";
+import angieImage from "../public/icons/apple-touch-icon.png";
 
 export default function Footer() {
   return (
@@ -29,25 +31,38 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
-              <h4 className="text-3xl font-semibold text-blue-500">
+              <h4 className="text-3xl font-semibold text-wine-200">
                 Let's keep in touch!
               </h4>
               <h5 className="mt-0 mb-2 text-lg text-slate-400">
-                Find Angelina's Connections below, responding 1-2 business days.
+                Find Angelina's Connections below.
               </h5>
               <div className="mt-4">
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a
-                      className="hover:text-pink-500"
-                      href="https://angelinajordanofficial.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      aria-describedby="AJ Official"
-                      area-label="AJ Official"
-                    >
-                      🔗 Official Website
-                    </a>
+                    <span className="group relative flex items-center text-slate-800">
+                      <a
+                        className="hover:text-pink-500"
+                        href="https://angelinajordanofficial.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-describedby="AJ Official"
+                        area-label="AJ Official"
+                      >
+                        <span className="mr-2">
+                          <Image                          
+                            layout="fixed"
+                            src={angieImage}
+                            width={20}
+                            height={20}
+                            quality={95}
+                            alt="Profile picture"
+                            loading="lazy"
+                          />
+                        </span>
+                           Official Website
+                      </a>
+                    </span>
                   </div>
                   <div>
                     <a
@@ -116,7 +131,7 @@ export default function Footer() {
                 </ColumnGridLeft>
               </div>
               <div className="mt-4">
-                <h4 className="text-3xl font-semibold text-blue-500">
+                <h4 className="text-3xl font-semibold text-wine-200">
                   Subscriptions
                 </h4>
                 <h5 className="mt-0 mb-2 text-lg text-slate-400">
@@ -128,7 +143,7 @@ export default function Footer() {
             <div className="w-full px-4 lg:w-6/12">
               <div className="items-top -mb-2 flex flex-wrap">
                 <div className="ml-auto w-full px-4 lg:w-4/12">
-                  <span className="mb-2 block text-sm font-semibold uppercase text-blue-500">
+                  <span className="mb-2 block text-sm font-semibold uppercase text-wine-200">
                     Useful Links
                   </span>
                   <ul className="list-unstyled">
@@ -183,7 +198,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
-                  <span className="mb-2 block text-sm font-semibold uppercase text-blue-500">
+                  <span className="mb-2 block text-sm font-semibold uppercase text-wine-200">
                     Other Resources
                   </span>
                   <ul className="list-unstyled">
