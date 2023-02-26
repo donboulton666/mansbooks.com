@@ -72,7 +72,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-describedby="Instagram"
-                area-label="Instagram" 
+                area-label="Instagram"
               >
                 Instagram
               </a>

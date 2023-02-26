@@ -1,10 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/legacy/image";
-import Layout from "../components/layout";
-import Section from "../components/Section";
-import LeftText from "../components/LeftText";
+import Layout from "@components/layout";
+import Section from "@components/Section";
+import LeftText from "@components/LeftText";
+import Center from "@components/Center";
 import nextjs from "../public/nextjs.jpg";
+import LiteYouTubeEmbed from "@components/YouTube";
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
         <title>About</title>
       </Head>
       <div className="ml-10 mr-10 mt-8 mb-32">
-        <LeftText>WebSite Framework & Design</LeftText>
+        <Center>WebSite Framework & Design</Center>
         <Image
           alt="NextJs"
           title="NextJs"
@@ -23,7 +25,8 @@ export default function About() {
           height={762}
           width={1400}
         />
-        <a href="https://nextjs.org/"
+        <a
+          href="https://nextjs.org/"
           className="hover:text-pink-500"
           rel="noopener noreferrer"
           target="_blank"
@@ -41,7 +44,8 @@ export default function About() {
         <LeftText>Dato Cms</LeftText>
         <Section>
           <div>
-            <a href="https://www.datocms.com/"
+            <a
+              href="https://www.datocms.com/"
               className="hover:text-pink-500"
               rel="noopener noreferrer"
               target="_blank"
@@ -69,16 +73,17 @@ export default function About() {
             </p>
           </div>
         </Section>
-        <LeftText>Redis Database</LeftText>
+        <LeftText>Upstash Redis Database</LeftText>
         <Section>
-          <a href="https://redis.io/"
+          <a
+            href="https://upstash.com/"
             className="hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
-            aria-describedby="Memory Database"
-            area-label="Memory Database"
+            aria-describedby="Upstash Redis"
+            area-label="Upstash Redis"
           >
-            <h2>Memory Database, Done Right</h2>
+            <h2>Upstash Redis Memory Database, Done Right</h2>
           </a>
           <p>
             The open source, in-memory data store used by millions of developers
@@ -94,7 +99,8 @@ export default function About() {
 
         <LeftText>100ms</LeftText>
         <Section>
-          <a href="https://www.100ms.live/"
+          <a
+            href="https://www.100ms.live/"
             className="hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
@@ -104,6 +110,7 @@ export default function About() {
             <h2>Streaming Video Service</h2>
           </a>
           <p>The only live video API you will ever need.</p>
+          <LiteYouTubeEmbed id="3noinkcEsHk" title="100ms API" />
           <p>
             Go beyond basic video calls, take video experiences to the next
             level with 100ms. Intricately customizable, infinitely extensible.
@@ -116,12 +123,14 @@ export default function About() {
           <p>You are in safe hands</p>
           <p>
             100ms is built by a team of video engineers that powered live video
-            for Facebook & Disney + Hotstar. We know what works and what buffers.
+            for Facebook & Disney + Hotstar. We know what works and what
+            buffers.
           </p>
         </Section>
         <LeftText>Cloudinary Image Transformations</LeftText>
         <Section>
-          <a href="https://cloudinary.com/"
+          <a
+            href="https://cloudinary.com/"
             className="hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
@@ -130,21 +139,21 @@ export default function About() {
           >
             <h2>The Most Powerful Image and Video APIs</h2>
           </a>
-          <p>         
-            Trusted by 1.3 million developers and 10,000
-            enterprise and hyper-growth companies as a
-            critical part of their tech stack.
+          <p>
+            Trusted by 1.3 million developers and 10,000 enterprise and
+            hyper-growth companies as a critical part of their tech stack.
           </p>
           <p> Image and Video API for Powerful Visual Experiences</p>
           <p>
-            Image and Video API for Powerful Visual Experiences
-            Store, transform, optimize, and deliver all your media assets with easy-to-use APIs, widgets, or user interface.
+            Image and Video API for Powerful Visual Experiences Store,
+            transform, optimize, and deliver all your media assets with
+            easy-to-use APIs, widgets, or user interface.
           </p>
         </Section>
         <Section>
           <LeftText>About Angie</LeftText>
           <p>
-            <a 
+            <a
               href="https://youtube.com/c/AngelinaJordanOfficial"
               className="hover:text-pink-500"
               rel="noopener noreferrer"
@@ -163,10 +172,10 @@ export default function About() {
         </Section>
         <Section>
           <p>
-            Angelina Jordan (barefoot queen) is the winner of Norway got
-            talent 2014. She also auditioned for America's got talent in 2020
-            where she received GOLDEN BUZZER from Heidi Klum. Currently, she
-            signed with Republic records.
+            Angelina Jordan (barefoot queen) is the winner of Norway got talent
+            2014. She also auditioned for America's got talent in 2020 where she
+            received GOLDEN BUZZER from Heidi Klum. Currently, she signed with
+            Republic records.
           </p>
         </Section>
         <Section>
@@ -177,7 +186,8 @@ export default function About() {
           <div>
             Extended Profile Information:{" "}
             <p>
-              <a href="https://angelinajordanofficial.com"
+              <a
+                href="https://angelinajordanofficial.com"
                 className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -188,7 +198,8 @@ export default function About() {
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanOfficial"
+              <a
+                href="https://youtube.com/c/AngelinaJordanOfficial"
                 className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -199,7 +210,8 @@ export default function About() {
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanCoverChannel"
+              <a
+                href="https://youtube.com/c/AngelinaJordanCoverChannel"
                 className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -210,7 +222,8 @@ export default function About() {
               </a>
             </p>
             <p>
-              <a href="https://www.instagram.com/angelinajordana/"
+              <a
+                href="https://www.instagram.com/angelinajordana/"
                 className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -221,7 +234,8 @@ export default function About() {
               </a>
             </p>
             <p>
-              <a href="https://www.facebook.com/angelinajordanofficial"
+              <a
+                href="https://www.facebook.com/angelinajordanofficial"
                 className="hover:text-pink-500"
                 rel="noopener noreferrer"
                 target="_blank"

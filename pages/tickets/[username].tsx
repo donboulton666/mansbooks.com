@@ -18,7 +18,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Error from "next/error";
 import Head from "next/head";
 import { SkipNavContent } from "@reach/skip-nav";
-import redis from "@lib/redis";
+import redis from "@lib/upstash";
 
 import Page from "@components/page";
 import ConfContent from "@components/index";
@@ -54,7 +54,7 @@ export default function TicketShare({
         url: `${SITE_URL}/tickets/${username}`,
       }
     : {
-        title: "Ticket Angelina Jordan",
+        title: "Ticket's Angelina Jordan",
         description: META_DESCRIPTION,
         image: `/api/ticket-images/${usernameFromParams}`,
         url: `${SITE_URL}/tickets/${usernameFromParams}`,

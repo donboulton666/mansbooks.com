@@ -17,7 +17,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { nanoid } from "nanoid";
 import * as qs from "querystring";
-import redis from "@lib/redis";
+import redis from "@lib/upstash";
 import { renderSuccess, renderError } from "@lib/render-github-popup";
 
 /**

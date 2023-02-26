@@ -1,12 +1,13 @@
-// pages/api/algolia-sync.js
-import { request } from '../../lib/datocms';
-import algoliasearch from 'algoliasearch/lite';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const request = require('../../lib/datocms'); 
+const algoliasearch = require('algoliasearch/lite');
+
 export default async (req, res) => {
   // initializing the Algolia client with the secret keys
   if (req.method === 'POST') {
     // Process a POST request
     const algoliaClient = algoliasearch(
-      process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
+      process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
       process.env.ALGOLIA_ADMIN_KEY,
     );
     // setting the Algolia index related to your blog

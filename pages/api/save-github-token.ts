@@ -15,7 +15,7 @@
  */
 
 import { NextApiRequest, NextApiResponse } from "next";
-import redis from "@lib/redis";
+import redis from "@lib/upstash";
 
 export default async function saveGithubToken(
   req: NextApiRequest,

@@ -38,15 +38,14 @@ export const COOKIE = "user-id";
 export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;
 export const COPYRIGHT_HOLDER = process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
 
-export const CODE_OF_CONDUCT =
-  "https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78";
+export const CODE_OF_CONDUCT = "https://mansbooks.com/privacy/code-of-conduct";
 export const REPO = "https://github.com/donaldboulton/mansbooks.com";
 export const SAMPLE_TICKET_NUMBER = 1234;
 
 export const NAVIGATION = [
   {
     name: "Live Stages",
-    route: "/stage/a?role=stage",
+    route: "/stage/a",
   },
   {
     name: "Vercel",

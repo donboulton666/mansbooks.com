@@ -24,7 +24,8 @@ export default function Contact() {
           <div className="mr-20 mt-4">
             Extended Profile Information:{" "}
             <p>
-              <a href="https://angelinajordanofficial.com"
+              <a
+                href="https://angelinajordanofficial.com"
                 className="hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,7 +35,8 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanOfficial"
+              <a
+                href="https://youtube.com/c/AngelinaJordanOfficial"
                 className="hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -44,7 +46,8 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <a href="https://youtube.com/c/AngelinaJordanCoverChannel"
+              <a
+                href="https://youtube.com/c/AngelinaJordanCoverChannel"
                 className="hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +57,8 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <a href="https://www.instagram.com/angelinajordana/"
+              <a
+                href="https://www.instagram.com/angelinajordana/"
                 className="hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -64,7 +68,8 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <a href="https://www.facebook.com/angelinajordanofficial"
+              <a
+                href="https://www.facebook.com/angelinajordanofficial"
                 className="hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,7 +79,8 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <a href="https://www.tiktok.com/@angelinajordana"
+              <a
+                href="https://www.tiktok.com/@angelinajordana"
                 className="hover:text-pink-500"
                 target="_blank"
                 rel="noopener noreferrer"

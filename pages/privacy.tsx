@@ -52,7 +52,7 @@ export default function Privacy() {
         <Section>
           🍪 When you visit this site "convenience" cookies are stored on your
           computer when you submit a comment to help you log in faster to 🔗{" "}
-          <a 
+          <a
             href="https://twitter.com/donboulton"
             rel="noopener noreferrer"
             target="_blank"
@@ -61,7 +61,7 @@ export default function Privacy() {
           >
             Twitter
           </a>
-            the next time you do a tweet.
+          the next time you do a tweet.
         </Section>
         <Section>
           <LeftText>Cookies Purpose and Usage</LeftText>
@@ -103,7 +103,8 @@ export default function Privacy() {
           ⚖️ The Law
           <p>
             🔗{" "}
-            <a href="https://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/"
+            <a
+              href="https://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/"
               rel="noopener noreferrer"
               target="_blank"
               aria-describedby="EU's cookie law confusing you too"
@@ -113,7 +114,8 @@ export default function Privacy() {
             </a>
           </p>
           🔗{" "}
-          <a href="https://ec.europa.eu/info/cookies_en"
+          <a
+            href="https://ec.europa.eu/info/cookies_en"
             rel="noopener noreferrer"
             target="_blank"
             aria-describedby="EU cookie law e-Privacy Directive"
@@ -123,7 +125,8 @@ export default function Privacy() {
           </a>
           <p>
             🔗{" "}
-            <a href="https://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/"
+            <a
+              href="https://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/"
               rel="noopener noreferrer"
               target="_blank"
               aria-describedby="Cookies Doing nothing isn't the right answer"
@@ -415,6 +418,86 @@ export default function Privacy() {
           know and we will correct it. Demonstrate and share the intelligence,
           wisdom, and humor we know you possess.
         </Section>
+        <h2>Chat and Webinar Conduct</h2>
+        <SingleAccordion label="Code of Conduct">
+          <Section>
+            This is the Code of Conduct for your online event. If you would like
+            to use it, please replace [Event Name] and [Event Email] below.
+            <p>
+              At [Event Name] we believe in **inclusivity**, **kindness** and a
+              **positive** community for all. We expect participants of [Event
+              Name] to conduct themselves in a **professional** and
+              **respectful** manner at all times.
+            </p>
+          </Section>
+          <Section>
+            <p>
+              This means: **Do:** - Use welcoming and positive language -
+              Respect others views whether they do/don’t align with yours
+            </p>
+            - Display empathy towards other community members - Be respectful of
+            others in the public & private media **Don't:** - Make personal or
+            political attacks - Harass another person, whether publicly or
+            privately - Use sexualized language or make nonconsensual sexual /
+            nonsexual advances - Use another person's property whether physical
+            or electronic, without their permission - Do any other actions that
+            can be interpreted as inappropriate in a professional setting
+            **NOTE**: Permission and consent can be revoked at any given time.
+            Once it has been revoked, it is no longer acceptable to continue a
+            certain act, conversation or interaction with all involved parties
+            whom no longer wish to take part.
+          </Section>
+          <Section>
+            <p>
+              **If you are being harassed, notice that someone else is being
+              harassed, or have any other concerns, please contact the
+              organizers immediately at [Event Email].** --- [Event Name] is
+              dedicated to providing a harassment-free conference experience for
+              everyone, regardless of gender, gender identity and expression,
+              age, sexual orientation, disability, physical appearance, body
+              size, race, ethnicity, religion (or lack thereof), location, or
+              technology choices.
+            </p>
+          </Section>
+          <Section>
+            <p>
+              We do not tolerate harassment of conference participants in any
+              form. Sexual language and imagery are not appropriate anywhere,
+              including talks, chat rooms, Twitter and other online media.
+              Conference participants violating these rules may be expelled from
+              the conference at the discretion of the conference organizers.
+            </p>
+          </Section>
+          <Section>
+            <p>
+              Harassment includes offensive verbal comments related to gender,
+              gender identity and expression, age, sexual orientation,
+              disability, physical appearance, body size, race, ethnicity,
+              religion, technology choices, sexual images on any media,
+              deliberate intimidation, stalking, following, sustained disruption
+              of talks or other events, and unwelcome sexual attention.
+              Participants asked to stop any harassing behavior are expected to
+              comply immediately.
+            </p>
+          </Section>
+          <Section>
+            <p>
+              Sponsors and speakers are also subject to the anti-harassment
+              policy. Sponsors and speakers may not use sexualized images,
+              activities, or other material during their talks or any media in
+              relation to the conference.
+            </p>
+          </Section>
+          <Section>
+            <p>
+              If a participant engages in harassing behavior, the conference
+              organizers may take any action they deem appropriate, including
+              warning the offender or expulsion from any private, online
+              conference platforms. We expect participants to follow these rules
+              at all conference platforms.
+            </p>
+          </Section>
+        </SingleAccordion>
         <h2> Disclosure Policy</h2>
         <Section>
           🩸 I make money on this website through affiliate programs. If you
@@ -422,8 +505,8 @@ export default function Privacy() {
           support this website because I'll get a percentage of that sale.
         </Section>
         Donald Boulton and this 🔗{" "}
-        <a 
-          href="https://mansbooks.com" 
+        <a
+          href="https://mansbooks.com"
           rel="noopener noreferrer"
           target="_blank"
           aria-describedby="AJ Official"

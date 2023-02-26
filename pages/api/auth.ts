@@ -16,7 +16,7 @@
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { COOKIE } from "@lib/constants";
-import redis from "@lib/redis";
+import redis from "@lib/upstash";
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   const id = req.cookies[COOKIE];

@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { createServer } = require('http')
+// eslint-disable-next-line @typescript-eslint/unbound-method
 const { join } = require('path')
 const { parse } = require('url')
 const next = require('next')

@@ -17,7 +17,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import screenshot from "@lib/screenshot";
 import { SITE_URL, SAMPLE_TICKET_NUMBER } from "@lib/constants";
-import redis from "@lib/redis";
+import redis from "@lib/upstash";
 
 export default async function ticketImages(
   req: NextApiRequest,

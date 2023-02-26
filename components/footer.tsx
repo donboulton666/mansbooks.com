@@ -38,7 +38,7 @@ export default function Footer() {
               <div className="mt-4">
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a 
+                    <a
                       className="hover:text-pink-500"
                       href="https://angelinajordanofficial.com"
                       rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export default function Footer() {
                 </ColumnGridLeft>
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a 
+                    <a
                       href="https://youtube.com/c/AngelinaJordanCoverChannel"
                       className="hover:text-pink-500"
                       rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function Footer() {
                     </a>
                   </div>
                   <div>
-                    <a 
+                    <a
                       href="https://www.instagram.com/angelinajordana/"
                       className="hover:text-pink-500"
                       rel="noopener noreferrer"
@@ -90,7 +90,7 @@ export default function Footer() {
                 </ColumnGridLeft>
                 <ColumnGridLeft>
                   <div className="mr-2">
-                    <a 
+                    <a
                       href="https://www.facebook.com/angelinajordanofficial"
                       className="hover:text-pink-500"
                       rel="noopener noreferrer"
@@ -102,7 +102,7 @@ export default function Footer() {
                     </a>
                   </div>
                   <div>
-                    <a 
+                    <a
                       href="https://www.tiktok.com/@angelinajordana"
                       className="hover:text-pink-500"
                       rel="noopener noreferrer"
@@ -134,7 +134,7 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <Link
-                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/about"
                       >
                         About Angie
@@ -142,7 +142,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/blog"
                       >
                         Blog
@@ -150,7 +150,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/contact"
                       >
                         Contact Us
@@ -158,7 +158,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/profile"
                       >
                         Profile
@@ -166,7 +166,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/search"
                       >
                         Search Page
@@ -174,7 +174,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/sitemap.xml"
                       >
                         Sitemap XML
@@ -189,7 +189,7 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <Link
-                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="https://publiuslogic.com/blog/0bsd-licence"
                       >
                         BSD License
@@ -197,7 +197,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         rel="noopener noreferrer"
                         target="_blank"
                         aria-describedby="Github"
@@ -209,7 +209,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         rel="noopener noreferrer"
                         target="_blank"
                         area-label="Gatsby Starter Basic Instructions"
@@ -220,7 +220,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/privacy"
                       >
                         Terms
@@ -228,7 +228,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/privacy"
                       >
                         Privacy Policy
@@ -236,7 +236,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="block pb-2 ml-6 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="https://netlify.com"
                       >
                         Netlify
