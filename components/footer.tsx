@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
               <h4 className="text-3xl font-semibold text-blue-500">
-                Let"s keep in touch!
+                Let's keep in touch!
               </h4>
               <h5 className="mt-0 mb-2 text-lg text-slate-400">
                 Find Angelina's Connections below, responding 1-2 business days.

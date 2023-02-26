@@ -1,8 +1,8 @@
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F100mslive%2Fvirtual-event-starter-kit&project-name=virtual-events-starter-kit&repository-name=virtual-events-starter-kit&demo-url=https%3A%2F%2Fvirtual-events-starter-kit-live-demo.vercel.app&demo-image=https%3A%2F%2Fstorage.googleapis.com%2F100ms-cms-prod%2Fcms%2FVirtual_Events_Latest_f236d47a0e%2FVirtual_Events_Latest_f236d47a0e.png&integration-ids=oac_7yeSwUoVR5no3SlA9WM6oR7l&demo-title=Virtual+Events+Starter+Kit&demo-description=Own+your+live+event%E2%80%94with+a+self-hosted+virtual+events+starter+kit+with+real-time+audio-video+interactions+that+you+can+configure+on+the+go.&external-id=3)
 
-# Virtual Events Starter Kit
+# Mansbooks Virtual Event
 
-This virtual event starter kit was used to run [Next.js Conf 2020](https://nextjs.org/2020/conf), which had almost 40,000 live attendees. It includes the following features:
+This Mansbooks Virtual Event was based off of [Next.js Conf 2020](https://nextjs.org/2020/conf), which had almost 40,000 live attendees. It includes the following features:
 
 - Multiple stages - with the ability to add multiple sessions on each stage
 - Each stage can be configured as -
@@ -30,7 +30,7 @@ This platform is built upon three principles:
 - CMS: [Multiple Options](https://github.com/vercel/virtual-event-starter-kit#cms)
 - Video (Pre-recorded): [YouTube](https://www.youtube.com/)
 - Live interactive video: [100ms](http://www.100ms.live)
-- Deployment: [Vercel](https://vercel.com/)
+- Deployment: [VNetlify](https://natlify.com/)
 - Authentication: [GitHub OAuth](https://docs.github.com/en/free-pro-team@latest/developers/apps/authorizing-oauth-apps)
 - Database: [Redis](https://redis.io/)
 

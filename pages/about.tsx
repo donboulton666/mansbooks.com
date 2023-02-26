@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/legacy/image";
 import Layout from "../components/layout";
 import Section from "../components/Section";
-import Center from "../components/Center";
+import LeftText from "../components/LeftText";
 import nextjs from "../public/nextjs.jpg";
 
 export default function About() {
@@ -13,7 +13,7 @@ export default function About() {
         <title>About</title>
       </Head>
       <div className="ml-10 mr-10 mt-8 mb-32">
-        <Center>WebSite Framework & Design</Center>
+        <LeftText>WebSite Framework & Design</LeftText>
         <Image
           alt="NextJs"
           title="NextJs"
@@ -38,7 +38,7 @@ export default function About() {
           features, and integrating powerful Rust-based JavaScript tooling for
           the fastest builds.
         </p>
-        <Center>Dato Cms</Center>
+        <LeftText>Dato Cms</LeftText>
         <Section>
           <div>
             <a href="https://www.datocms.com/"
@@ -69,7 +69,7 @@ export default function About() {
             </p>
           </div>
         </Section>
-        <Center>Redis Database</Center>
+        <LeftText>Redis Database</LeftText>
         <Section>
           <a href="https://redis.io/"
             className="hover:text-pink-500"
@@ -92,7 +92,7 @@ export default function About() {
           </p>
         </Section>
 
-        <Center>100ms</Center>
+        <LeftText>100ms</LeftText>
         <Section>
           <a href="https://www.100ms.live/"
             className="hover:text-pink-500"
@@ -119,7 +119,7 @@ export default function About() {
             for Facebook & Disney + Hotstar. We know what works and what buffers.
           </p>
         </Section>
-        <Center>Cloudinary Image Transformations</Center>
+        <LeftText>Cloudinary Image Transformations</LeftText>
         <Section>
           <a href="https://cloudinary.com/"
             className="hover:text-pink-500"
@@ -142,7 +142,7 @@ export default function About() {
           </p>
         </Section>
         <Section>
-          <Center>About Angie</Center>
+          <LeftText>About Angie</LeftText>
           <p>
             <a 
               href="https://youtube.com/c/AngelinaJordanOfficial"
