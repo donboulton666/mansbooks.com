@@ -34,6 +34,16 @@ export default function About() {
         >
           <h2>This Website is built with NextJs</h2>
         </a>
+        <a 
+          href="https://app.netlify.com/sites/mansbookscom/deploys"
+          className="hover:text-pink-500"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-describedby="Built on Netlify"
+          area-label="Built on Netlify"
+        >
+          Netlify Build Status
+        </a>
         <p>
           Used by some of the world's largest companies, Next.js enables you to
           create full-stack web applications by extending the latest React
