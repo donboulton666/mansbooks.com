@@ -71,6 +71,8 @@
       https://mansbooks.com/api/github-oauth
       https://prod-init.100ms.live/
       https://prod-in2.100ms.live/hmsapi/donaldboultonyjl.app.100ms.live/
+      https://*.hcaptcha.com
+      https://hcaptcha.com
       
     '''      
     Access-Control-Allow-Methods = '''
