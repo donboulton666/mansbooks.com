@@ -12,6 +12,7 @@ import SingleAccordion from "../components/SingleAccordion";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import about from "../public/about.jpg";
 import cookies from "../public/cookies.png";
+import CalloutDanger from "@components/Callout/CalloutDanger";
 
 export default function Privacy() {
   return (
@@ -408,6 +409,7 @@ export default function Privacy() {
           reserve the right to delete comments and ban users as needed to keep
           the comment threads here civil and substantive.
         </Section>
+        <CalloutDanger>
         <h2>1 house rule is simple</h2>
         <h2>Don’t be a jerk</h2>
         <Section>
@@ -496,8 +498,9 @@ export default function Privacy() {
               conference platforms. We expect participants to follow these rules
               at all conference platforms.
             </p>
-          </Section>
+          </Section>          
         </SingleAccordion>
+        </CalloutDanger>
         <h2> Disclosure Policy</h2>
         <Section>
           🩸 I make money on this website through affiliate programs. If you

@@ -18,7 +18,7 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Access-Control-Allow-Origin = '''
-      https://publiuslogic.com,
+      https://mansbooks.com,
       https://graphql.fauna.com,
       https://graphql.fauna.com/graphql
       https://img.badgesize.io/, 
@@ -63,11 +63,15 @@
       https://api.github.com,
       https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js,
       https://stats.g.doubleclick.net/,
-      https://www.google.com/recaptcha/api.js,
+      https://hcaptcha.com/siteverify",
       https://cdn.lr-in-prod.com/LogRocket.min.js,
-      https://www.gstatic.com/recaptcha/releases/0aeEuuJmrVqDrEL39Fsg5-UJ/recaptcha__en.js,
-      https://www.gstatic.com/recaptcha/releases/kcXVPRWG7fMILHmzon0--fD3/recaptcha__en.js,
       https://unpkg.com/leaflet@1.9.2/dist/leaflet.css
+      https://usw1-certain-osprey-33919.upstash.io
+      https://discord.new/
+      https://mansbooks.com/api/github-oauth
+      https://prod-init.100ms.live/
+      https://prod-in2.100ms.live/hmsapi/donaldboultonyjl.app.100ms.live/
+      
     '''      
     Access-Control-Allow-Methods = '''
       POST, 
