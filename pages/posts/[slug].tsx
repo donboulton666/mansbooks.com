@@ -34,6 +34,14 @@ export async function getStaticProps({ params, preview = false }) {
           }
           title
           slug
+          video {
+            provider
+            providerUid
+            thumbnailUrl
+            title
+            url
+            width
+          }
           content {
             value
             blocks {
@@ -72,6 +80,14 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           excerpt
           date
+          video {
+            provider
+            providerUid
+            thumbnailUrl
+            title
+            url
+            width
+          }
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
               ...responsiveImageFragment

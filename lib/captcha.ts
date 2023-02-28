@@ -16,7 +16,7 @@
 
 export async function validateCaptchaResult(result: string): Promise<boolean> {
   const { success }: { success: boolean } = await fetch(
-    "https://hcaptcha.com/siteverify",
+    "https://api.hcaptcha.com/siteverify",
     {
       method: "POST",
       headers: {

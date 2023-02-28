@@ -22,25 +22,27 @@ import Link from "next/link";
 
 export default function LearnMore() {
   return (
-    <div
-      className={cn(
-        styleUtils.appear,
-        styleUtils["appear-fifth"],
-        styles.contact
-      )}
-    >
-      Learn more on{" "}
-      <Link
-        href={REPO}
-        className={styles["contact-email"]}
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-describedby="Github"
-        area-label="Github"
+    <div className="mb-20">
+      <div
+        className={cn(
+          styleUtils.appear,
+          styleUtils["appear-fifth"],
+          styles.contact
+        )}
       >
-        GitHub
-      </Link>
-      .
+        Learn more on{" "}
+        <Link
+          href={REPO}
+          className={styles["contact-email"]}
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-describedby="Github"
+          area-label="Github"
+        >
+          GitHub
+        </Link>
+        .
+      </div>
     </div>
   );
 }

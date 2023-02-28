@@ -4,7 +4,7 @@ import styles from "../sponsors-grid.module.css";
 export default function MoreStories({ posts }) {
   return (
     <section>
-      <h2 className="text-wine-200 mb-4 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
+      <h2 className="mb-4 text-6xl font-bold leading-tight tracking-tighter text-wine-200 md:text-7xl">
         More Posts
       </h2>
       <div className={styles.grid}>

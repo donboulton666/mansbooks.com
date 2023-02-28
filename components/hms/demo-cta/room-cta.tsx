@@ -62,7 +62,7 @@ export const ChangeRoleDialog: React.FC<{ children: ReactNode }> = ({
         style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       />
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
-      <Dialog.Content className="dialog-content dialog-animation h-[600px] w-[95%] overflow-y-scroll rounded-lg bg-gray-800 text-center md:h-[700px] md:w-[700px]">
+      <Dialog.Content className="dialog-content dialog-animation nav-scroll h-[600px] w-[95%] rounded-lg bg-gray-800 text-center md:h-[700px] md:w-[700px]">
         <Dialog.Close asChild className="flex w-full justify-end">
           <button>
             <CrossIcon />

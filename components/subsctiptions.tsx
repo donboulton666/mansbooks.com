@@ -83,13 +83,13 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                 </p>
               )}
               <div className="mx-auto space-x-1 overflow-hidden p-1">
-                <span className="group relative flex items-center text-slate-800">
-                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-l-md border border-r-0 border-gray-700 bg-gray-700 pl-3 pr-3 text-gray-200 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-400">
+                <span className="group relative flex items-center text-slate-300">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-l-md border border-r-0 border-slate-700 bg-slate-800 pl-3 pr-3 text-slate-300">
                     <svg
                       width="20"
                       height="20"
                       fill="currentColor"
-                      className="h-5 w-5 text-gray-200 dark:text-gray-200"
+                      className="h-5 w-5 text-slate-300"
                       aria-hidden="true"
                       viewBox="0 0 512 512"
                     >
@@ -100,7 +100,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="w-48 appearance-none rounded border-slate-700 bg-slate-800 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-200 focus:border-fuchsia-500 focus:outline-none focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200"
+                    className="w-48 appearance-none rounded border-wine-200 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 focus:border-wine-400 focus:bg-wine-200 focus:outline-none focus:ring-wine-200"
                     aria-label="Enter Email"
                     {...register("email", {
                       required: "Email is required",
@@ -113,7 +113,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                   <span className="block space-x-2">
                     <button
                       aria-label="Submit Button"
-                      className="ml-2 rounded-md border border-transparent bg-gray-800 p-2 text-sm font-medium text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-800/50"
+                      className="ml-2 rounded-md border border-transparent bg-slate-800 p-2 text-sm font-medium text-slate-200 shadow-lg hover:bg-slate-900 hover:shadow-slate-800/50"
                       type="submit"
                     >
                       Subscribe

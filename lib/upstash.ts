@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 const redis = new Redis({
   url: "https://usw1-certain-osprey-33919.upstash.io",
-  token: process.env.UPSTASH_REDIS_REST_TOKEN
+  token: process.env.UPSTASH_REDIS_REST_TOKEN,
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -23,4 +23,4 @@ export function emailToId(email: string) {
   }
 }
 
-export default redis
+export default redis;

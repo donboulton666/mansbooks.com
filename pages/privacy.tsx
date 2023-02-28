@@ -410,96 +410,98 @@ export default function Privacy() {
           the comment threads here civil and substantive.
         </Section>
         <CalloutDanger>
-        <h2>1 house rule is simple</h2>
-        <h2>Don’t be a jerk</h2>
-        <Section>
-          Want to be the kind of commenter we’d love to bring home to
-          Thanksgiving dinner? Here’s what we like to see in comments: Weigh in
-          with smart, informed ideas that contribute further to the story. Give
-          us useful, constructive criticism. Spot a typo or an error? Let us
-          know and we will correct it. Demonstrate and share the intelligence,
-          wisdom, and humor we know you possess.
-        </Section>
-        <h2>Chat and Webinar Conduct</h2>
-        <SingleAccordion label="Code of Conduct">
+          <h2>1 house rule is simple</h2>
+          <h2>Don’t be a jerk</h2>
           <Section>
-            This is the Code of Conduct for your online event. If you would like
-            to use it, please replace [Event Name] and [Event Email] below.
-            <p>
-              At [Event Name] we believe in **inclusivity**, **kindness** and a
-              **positive** community for all. We expect participants of [Event
-              Name] to conduct themselves in a **professional** and
-              **respectful** manner at all times.
-            </p>
+            Want to be the kind of commenter we’d love to bring home to
+            Thanksgiving dinner? Here’s what we like to see in comments: Weigh
+            in with smart, informed ideas that contribute further to the story.
+            Give us useful, constructive criticism. Spot a typo or an error? Let
+            us know and we will correct it. Demonstrate and share the
+            intelligence, wisdom, and humor we know you possess.
           </Section>
-          <Section>
-            <p>
-              This means: **Do:** - Use welcoming and positive language -
-              Respect others views whether they do/don’t align with yours
-            </p>
-            - Display empathy towards other community members - Be respectful of
-            others in the public & private media **Don't:** - Make personal or
-            political attacks - Harass another person, whether publicly or
-            privately - Use sexualized language or make nonconsensual sexual /
-            nonsexual advances - Use another person's property whether physical
-            or electronic, without their permission - Do any other actions that
-            can be interpreted as inappropriate in a professional setting
-            **NOTE**: Permission and consent can be revoked at any given time.
-            Once it has been revoked, it is no longer acceptable to continue a
-            certain act, conversation or interaction with all involved parties
-            whom no longer wish to take part.
-          </Section>
-          <Section>
-            <p>
-              **If you are being harassed, notice that someone else is being
-              harassed, or have any other concerns, please contact the
-              organizers immediately at [Event Email].** --- [Event Name] is
-              dedicated to providing a harassment-free conference experience for
-              everyone, regardless of gender, gender identity and expression,
-              age, sexual orientation, disability, physical appearance, body
-              size, race, ethnicity, religion (or lack thereof), location, or
-              technology choices.
-            </p>
-          </Section>
-          <Section>
-            <p>
-              We do not tolerate harassment of conference participants in any
-              form. Sexual language and imagery are not appropriate anywhere,
-              including talks, chat rooms, Twitter and other online media.
-              Conference participants violating these rules may be expelled from
-              the conference at the discretion of the conference organizers.
-            </p>
-          </Section>
-          <Section>
-            <p>
-              Harassment includes offensive verbal comments related to gender,
-              gender identity and expression, age, sexual orientation,
-              disability, physical appearance, body size, race, ethnicity,
-              religion, technology choices, sexual images on any media,
-              deliberate intimidation, stalking, following, sustained disruption
-              of talks or other events, and unwelcome sexual attention.
-              Participants asked to stop any harassing behavior are expected to
-              comply immediately.
-            </p>
-          </Section>
-          <Section>
-            <p>
-              Sponsors and speakers are also subject to the anti-harassment
-              policy. Sponsors and speakers may not use sexualized images,
-              activities, or other material during their talks or any media in
-              relation to the conference.
-            </p>
-          </Section>
-          <Section>
-            <p>
-              If a participant engages in harassing behavior, the conference
-              organizers may take any action they deem appropriate, including
-              warning the offender or expulsion from any private, online
-              conference platforms. We expect participants to follow these rules
-              at all conference platforms.
-            </p>
-          </Section>          
-        </SingleAccordion>
+          <h2>Chat and Webinar Conduct</h2>
+          <SingleAccordion label="Code of Conduct">
+            <Section>
+              This is the Code of Conduct for your online event. If you would
+              like to use it, please replace [Event Name] and [Event Email]
+              below.
+              <p>
+                At [Event Name] we believe in **inclusivity**, **kindness** and
+                a **positive** community for all. We expect participants of
+                [Event Name] to conduct themselves in a **professional** and
+                **respectful** manner at all times.
+              </p>
+            </Section>
+            <Section>
+              <p>
+                This means: **Do:** - Use welcoming and positive language -
+                Respect others views whether they do/don’t align with yours
+              </p>
+              - Display empathy towards other community members - Be respectful
+              of others in the public & private media **Don't:** - Make personal
+              or political attacks - Harass another person, whether publicly or
+              privately - Use sexualized language or make nonconsensual sexual /
+              nonsexual advances - Use another person's property whether
+              physical or electronic, without their permission - Do any other
+              actions that can be interpreted as inappropriate in a professional
+              setting **NOTE**: Permission and consent can be revoked at any
+              given time. Once it has been revoked, it is no longer acceptable
+              to continue a certain act, conversation or interaction with all
+              involved parties whom no longer wish to take part.
+            </Section>
+            <Section>
+              <p>
+                **If you are being harassed, notice that someone else is being
+                harassed, or have any other concerns, please contact the
+                organizers immediately at [Event Email].** --- [Event Name] is
+                dedicated to providing a harassment-free conference experience
+                for everyone, regardless of gender, gender identity and
+                expression, age, sexual orientation, disability, physical
+                appearance, body size, race, ethnicity, religion (or lack
+                thereof), location, or technology choices.
+              </p>
+            </Section>
+            <Section>
+              <p>
+                We do not tolerate harassment of conference participants in any
+                form. Sexual language and imagery are not appropriate anywhere,
+                including talks, chat rooms, Twitter and other online media.
+                Conference participants violating these rules may be expelled
+                from the conference at the discretion of the conference
+                organizers.
+              </p>
+            </Section>
+            <Section>
+              <p>
+                Harassment includes offensive verbal comments related to gender,
+                gender identity and expression, age, sexual orientation,
+                disability, physical appearance, body size, race, ethnicity,
+                religion, technology choices, sexual images on any media,
+                deliberate intimidation, stalking, following, sustained
+                disruption of talks or other events, and unwelcome sexual
+                attention. Participants asked to stop any harassing behavior are
+                expected to comply immediately.
+              </p>
+            </Section>
+            <Section>
+              <p>
+                Sponsors and speakers are also subject to the anti-harassment
+                policy. Sponsors and speakers may not use sexualized images,
+                activities, or other material during their talks or any media in
+                relation to the conference.
+              </p>
+            </Section>
+            <Section>
+              <p>
+                If a participant engages in harassing behavior, the conference
+                organizers may take any action they deem appropriate, including
+                warning the offender or expulsion from any private, online
+                conference platforms. We expect participants to follow these
+                rules at all conference platforms.
+              </p>
+            </Section>
+          </SingleAccordion>
         </CalloutDanger>
         <h2> Disclosure Policy</h2>
         <Section>

@@ -19,6 +19,25 @@ export type Image = {
   blurDataURL?: string;
 };
 
+export type Video = {
+  url: string;
+  provider: string;
+  providerUid: string;
+  thumbnailUrl: string;
+  title: string;
+  width: string;
+};
+
+export type Picture = {
+  fileName: string;
+  alt: string;
+  
+};
+export type Author = {
+  picture: Picture;
+  name: string;
+};
+
 export type Speaker = {
   name: string;
   bio: string;
@@ -69,6 +88,14 @@ export type Sponsor = {
   cardImage: Image;
   logo: Image;
   youtubeSlug: string;
+};
+
+export type Post = {
+  title: string;
+  date: string;
+  coverImage: Image;
+  author: Author;
+  video: Video;
 };
 
 export type SponsorLink = {

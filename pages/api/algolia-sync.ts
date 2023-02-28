@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const request = require('../../lib/datocms'); 
-const algoliasearch = require('algoliasearch/lite');
+const request = require("../../lib/datocms");
+const algoliasearch = require("algoliasearch/lite");
 
 export default async (req, res) => {
   // initializing the Algolia client with the secret keys
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     // Process a POST request
     const algoliaClient = algoliasearch(
       process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
-      process.env.ALGOLIA_ADMIN_KEY,
+      process.env.ALGOLIA_ADMIN_KEY
     );
     // setting the Algolia index related to your blog
-    const index = algoliaClient.initIndex('dev_mansbooks');
+    const index = algoliaClient.initIndex("dev_mansbooks");
     const pageSize = 20;
     // retrieving all posts from the headless CMS
     const allPostsGraphqlRequest = (first, skip) => {
@@ -39,7 +39,7 @@ export default async (req, res) => {
     // by default
     for (let page = 0; page < Math.ceil(postCount / pageSize); page++) {
       const posts = await request(
-        allPostsGraphqlRequest(pageSize, page * pageSize),
+        allPostsGraphqlRequest(pageSize, page * pageSize)
       );
       // converting tha data retrieved by the headless CMS
       // into the desired Algolia format

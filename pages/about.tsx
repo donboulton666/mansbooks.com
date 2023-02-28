@@ -34,7 +34,7 @@ export default function About() {
         >
           <h2>This Website is built with NextJs</h2>
         </a>
-        <a 
+        <a
           href="https://app.netlify.com/sites/mansbookscom/deploys"
           className="hover:text-pink-500"
           rel="noopener noreferrer"

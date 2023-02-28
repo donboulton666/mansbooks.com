@@ -1,2 +1,2 @@
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 export default HCaptcha;

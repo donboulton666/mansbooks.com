@@ -35,7 +35,7 @@ const DemoModal = () => {
     }
   }, [router]);
   return (
-    <div className="font-sans">
+    <div className="nav-scroll mt-4 font-sans">
       <p className="my-0 text-[32px] font-semibold">
         Take your Webinar for a test drive
       </p>

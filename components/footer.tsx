@@ -50,7 +50,7 @@ export default function Footer() {
                         area-label="AJ Official"
                       >
                         <span className="mr-2">
-                          <Image                          
+                          <Image
                             layout="fixed"
                             src={angieImage}
                             width={20}
@@ -60,7 +60,7 @@ export default function Footer() {
                             loading="lazy"
                           />
                         </span>
-                           Official Website
+                        Official Website
                       </a>
                     </span>
                   </div>
@@ -205,7 +205,7 @@ export default function Footer() {
                     <li>
                       <Link
                         className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="https://publiuslogic.com/blog/0bsd-licence"
+                        href="/licence"
                       >
                         BSD License
                       </Link>
@@ -236,7 +236,7 @@ export default function Footer() {
                     <li>
                       <Link
                         className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="/privacy"
+                        href="/terms"
                       >
                         Terms
                       </Link>

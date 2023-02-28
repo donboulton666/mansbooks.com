@@ -69,13 +69,13 @@ const ViewersJoin: React.FC<{ token: string }> = ({ token }) => {
             localStorage.setItem("name", e.target.value);
           }}
           required
-          className="w-80 rounded-lg bg-gray-600 p-4 text-md placeholder:text-gray-400 focus:bg-gray-700 focus:outline-none"
+          className="w-80 rounded-lg bg-gray-600 p-4 text-md placeholder:text-gray-400 focus:bg-wine-300 focus:outline-none"
           placeholder="Enter your name to join the event"
           type="text"
         />
         <button
           type="submit"
-          className="mt-4 w-80 cursor-pointer rounded-lg bg-purple-800 px-4 py-4 text-slate-200 hover:bg-purple-700 md:mt-0 md:w-20"
+          className="mt-4 w-80 cursor-pointer rounded-lg bg-wine-300 px-4 py-4 text-slate-200 hover:bg-wine-300 md:mt-0 md:w-20"
         >
           Join
         </button>

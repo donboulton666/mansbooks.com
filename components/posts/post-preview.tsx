@@ -13,7 +13,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <section class="mb-32 overflow-hidden rounded-lg border-double border-sky-600 bg-gray-800">
+    <section className="mb-32 overflow-hidden rounded-lg border-double border-sky-600 bg-gray-800">
       <div className={styles.grid}>
         <div className={styles.imageWrapper}>
           <CoverImage

@@ -21,6 +21,12 @@
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.js", "**/*.tsx", "pages/api/algolia-sync.mjs"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.js",
+    "**/*.tsx",
+    "pages/api/algolia-sync.mjs"
+  ],
   "exclude": ["node_modules"]
 }

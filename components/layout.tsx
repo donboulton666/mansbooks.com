@@ -25,6 +25,7 @@ import Logo from "./icons/icon-hms";
 import MobileMenu from "./mobile-menu";
 import Footer from "./footer";
 import React from "react";
+import ScrollIndicator from "./ScrollIndicator";
 import DemoButton from "./hms/demo-cta";
 import RoomCta from "./hms/demo-cta/room-cta";
 import { hmsConfig } from "./hms/config";
@@ -50,6 +51,7 @@ export default function Layout({
   const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
   return (
     <>
+      <ScrollIndicator />
       <div className={styles.background}>
         {!hideNav && (
           <header className={cn(styles.header)}>

@@ -8,14 +8,14 @@ export default function Intro() {
         Angelina Jordan's{" "}
         <a
           href="https://mansbooks.com/expo"
-          className="hover:text-success text-wine-200 underline transition-colors duration-200"
+          className="hover:text-success text-blue-500 underline transition-colors duration-200"
         >
           Vlogs
         </a>{" "}
-        <span className="text-pink-500">&</span>{" "}
+        <span className="text-wine-200">&</span>{" "}
         <a
           href="https://mansbooks.com/blog"
-          className="hover:text-success text-wine-200 underline transition-colors duration-200"
+          className="hover:text-success text-blue-500 underline transition-colors duration-200"
         >
           Blogs
         </a>
