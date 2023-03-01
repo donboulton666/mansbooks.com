@@ -1,12 +1,18 @@
-import React from 'react'
-import Link from 'next/link'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import { SearchIcon, UserGroupIcon, UserIcon, PhotographIcon, MapIcon } from '@heroicons/react/outline'
-import Control from '@components/icons/control'
+import React from "react";
+import Link from "next/link";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
+import {
+  SearchIcon,
+  UserGroupIcon,
+  UserIcon,
+  PhotographIcon,
+  MapIcon,
+} from "@heroicons/react/outline";
+import Control from "@components/icons/control";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Navigation() {
@@ -42,7 +48,11 @@ export default function Navigation() {
                         />
                         <span className="sr-only">Open Control Menu</span>
                         <ChevronDownIcon
-                          className={`${open ? 'rotate-180 transform text-wine-300' : 'text-opacity-75'}
+                          className={`${
+                            open
+                              ? "rotate-180 transform text-wine-300"
+                              : "text-opacity-75"
+                          }
                           -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
                           aria-hidden="true"
                         />
@@ -62,12 +72,15 @@ export default function Navigation() {
                             <Link
                               href="/profile"
                               className={classNames(
-                                active ? 'bg-slate-700' : '',
-                                'ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white'
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <UserGroupIcon className="block h-8 w-8 pr-2 text-blue-500" aria-hidden="true" />
+                                <UserGroupIcon
+                                  className="block h-8 w-8 pr-2 text-blue-500"
+                                  aria-hidden="true"
+                                />
                                 <span>Profile</span>
                               </span>
                             </Link>
@@ -78,12 +91,15 @@ export default function Navigation() {
                             <Link
                               href="/gallery"
                               className={classNames(
-                                active ? 'bg-slate-700' : '',
-                                'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white'
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <PhotographIcon className="block h-8 w-9 pr-2 text-pink-500" aria-hidden="true" />
+                                <PhotographIcon
+                                  className="block h-8 w-9 pr-2 text-pink-500"
+                                  aria-hidden="true"
+                                />
                                 <span>Gallery</span>
                               </span>
                             </Link>
@@ -94,12 +110,15 @@ export default function Navigation() {
                             <Link
                               href="/jobs"
                               className={classNames(
-                                active ? 'bg-slate-700' : '',
-                                'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white'
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <UserIcon className="block h-8 w-9 pr-2 text-wine-200" aria-hidden="true" />
+                                <UserIcon
+                                  className="block h-8 w-9 pr-2 text-wine-200"
+                                  aria-hidden="true"
+                                />
                                 <span>Social</span>
                               </span>
                             </Link>
@@ -110,12 +129,15 @@ export default function Navigation() {
                             <Link
                               href="/speakers"
                               className={classNames(
-                                active ? 'bg-slate-700' : '',
-                                'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white'
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <UserIcon className="block h-8 w-9 pr-2 text-fuchsia-500" aria-hidden="true" />
+                                <UserIcon
+                                  className="block h-8 w-9 pr-2 text-fuchsia-500"
+                                  aria-hidden="true"
+                                />
                                 <span>Speakers</span>
                               </span>
                             </Link>
@@ -125,14 +147,17 @@ export default function Navigation() {
                           {({ active }) => (
                             <Link
                               target="_blank"
-                              href="https://publiuslogic.com/sitemap.xml"
+                              href="/sitemap.xml"
                               className={classNames(
-                                active ? 'bg-slate-700' : '',
-                                'ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white'
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <MapIcon className="block h-9 w-9 pr-2 text-green-600" aria-hidden="true" />
+                                <MapIcon
+                                  className="block h-9 w-9 pr-2 text-green-600"
+                                  aria-hidden="true"
+                                />
                                 <span>Sitemap</span>
                               </span>
                             </Link>
@@ -147,17 +172,14 @@ export default function Navigation() {
 
             <Disclosure.Panel className="lg:hidden">
               <div className="space-y-1 px-2 pt-2 pb-3">
-                  <Link
-                    href='/Speakers'
-                    className="bg-gray-200 text-slate-200"
-                  >
-                    Speakers
-                  </Link>
+                <Link href="/Speakers" className="bg-gray-200 text-slate-200">
+                  Speakers
+                </Link>
               </div>
             </Disclosure.Panel>
           </>
         )}
       </Disclosure>
     </>
-  )
+  );
 }

@@ -24,7 +24,7 @@ export const TWITTER_USER_NAME = "@donboulton";
 export const BRAND_NAME = "Webinar,";
 export const SITE_NAME_MULTILINE = ["Angies", " Video Webinar"];
 export const SITE_NAME = "Angies Video Webinar";
-export const META_DESCRIPTION = "Angelina Jordans Video and Webinar Site.";
+export const META_DESCRIPTION = "Angelina Jordans Video and Webinar's.";
 export const SITE_DESCRIPTION =
   "An interactive online experience by the community, free for everyone.";
 export const DATE = "10 January 2024";

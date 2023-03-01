@@ -3,11 +3,7 @@ import React from "react";
 const Dummy = () => {
   return (
     <>
-      <div
-        className="hidden"
-      >
-        Hidden
-      </div>
+      <div className="hidden">Hidden</div>
     </>
   );
 };

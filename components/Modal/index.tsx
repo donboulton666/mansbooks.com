@@ -1,29 +1,29 @@
-import React from 'react';
-import { Fragment, ReactNode, useRef, useState, FC } from 'react';
-import Image from 'next/legacy/image';
-import { Dialog, Transition } from '@headlessui/react';
-import Help from '@components/icons/help';
+import React from "react";
+import { Fragment, ReactNode, useRef, useState, FC } from "react";
+import Image from "next/legacy/image";
+import { Dialog, Transition } from "@headlessui/react";
+import Help from "@components/icons/help";
 import angie from "../../public/icon-192x192.png";
 
 export interface ModalProps {
-  dialogContent: JSX.Element
-  dialogTitle: string
-  children: ReactNode
+  dialogContent: JSX.Element;
+  dialogTitle: string;
+  children: ReactNode;
 }
 
-export const Modal: FC<ModalProps> = props => {
-  const { dialogTitle, dialogContent, children, ...rest } = props
-  const [isOpen, setIsOpen] = useState(true)
+export const Modal: FC<ModalProps> = (props) => {
+  const { dialogTitle, dialogContent, children, ...rest } = props;
+  const [isOpen, setIsOpen] = useState(true);
 
   /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   function closeModal() {
-    setIsOpen(false)
+    setIsOpen(false);
   }
 
   function openModal() {
-    setIsOpen(true)
+    setIsOpen(true);
   }
-  const closeButtonRef = useRef(null)
+  const closeButtonRef = useRef(null);
 
   return (
     <>
@@ -31,7 +31,7 @@ export const Modal: FC<ModalProps> = props => {
         <button
           type="button"
           onClick={openModal}
-          className="bg-wine-300 -ml-1 h-auto w-8 rounded-r-md pr-2 pl-3 pt-2 pb-0 text-slate-300"
+          className="-ml-1 h-auto w-8 rounded-r-md bg-wine-300 pr-2 pl-3 pt-2 pb-0 text-slate-300"
         >
           <span className="headings-center inline-flex">
             <Help className="mt-2 h-6 w-6 px-2 text-slate-300" />
@@ -104,14 +104,19 @@ export const Modal: FC<ModalProps> = props => {
                           </Dialog.Title>
                         </div>
                         <div className="mt-2">
-                          <p key={dialogContent} className="mt-4 text-sm text-slate-900 dark:text-slate-200">
+                          <p
+                            key={dialogContent}
+                            className="mt-4 text-sm text-slate-900 dark:text-slate-200"
+                          >
                             {dialogContent}
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="mx-4 mt-2 py-2 leading-6 text-slate-900 dark:text-slate-200">{children}</div>
+                  <div className="mx-4 mt-2 py-2 leading-6 text-slate-900 dark:text-slate-200">
+                    {children}
+                  </div>
                   <div className="mt-4 py-4">
                     <button
                       ref={closeButtonRef}
@@ -129,7 +134,7 @@ export const Modal: FC<ModalProps> = props => {
         </Dialog>
       </Transition.Root>
     </>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

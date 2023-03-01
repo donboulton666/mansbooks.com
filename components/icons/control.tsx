@@ -1,31 +1,32 @@
-import React from 'react'
-import { FC } from 'react'
-import { LazyMotion, m, useMotionValue } from 'framer-motion'
+import React from "react";
+import { FC } from "react";
+import { LazyMotion, m, useMotionValue } from "framer-motion";
 
-const loadFeatures = () => import('@components/FramerFeatures').then(res => res.default)
+const loadFeatures = () =>
+  import("@components/FramerFeatures").then((res) => res.default);
 
 interface ControlProps {
-  onClick: () => void
-  open: boolean
+  onClick: () => void;
+  open: boolean;
 }
 
 const Control: FC = (props: ControlProps) => {
   /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-  const { onClick } = props
-  const duration = 0.7
+  const { onClick } = props;
+  const duration = 0.7;
 
   const commandCenterVariants = {
     pressed: { pathLength: 0.05 },
     checked: { pathLength: 0 },
     unchecked: { pathLength: 1 },
-  }
-  const pathLength = useMotionValue(1)
+  };
+  const pathLength = useMotionValue(1);
 
   return (
     <LazyMotion features={loadFeatures}>
       <m.svg
         xmlns="http://www.w3.org/2000/svg"
-        className="text-wine-300 hover:text-slate-300 h-7 w-7 stroke-wine-300 hover:stroke-slate-300 text-opacity-75"
+        className="h-7 w-7 stroke-wine-300 text-wine-300 text-opacity-75 hover:stroke-slate-300 hover:text-slate-300"
         viewBox="0 0 25 25"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +46,7 @@ const Control: FC = (props: ControlProps) => {
         />
       </m.svg>
     </LazyMotion>
-  )
-}
+  );
+};
 
-export default Control
+export default Control;

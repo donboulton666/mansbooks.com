@@ -27,7 +27,7 @@ import MobileMenu from "./mobile-menu";
 import Footer from "./footer";
 import ScrollIndicator from "./ScrollIndicator";
 import DemoButton from "./hms/demo-cta";
-import NavDropdown from "@components/NavDropdown"
+import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 

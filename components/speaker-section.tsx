@@ -109,7 +109,7 @@ export default function SpeakerSection({ speaker }: Props) {
                 </Link>
               ) : (
                 <span className={cn(styles.githubIcon, styles.disabled)}>
-                  <GithubIcon color="#D8D8D8" size={24} /> 
+                  <GithubIcon color="#D8D8D8" size={24} />
                 </span>
               )}
             </div>

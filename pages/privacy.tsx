@@ -399,15 +399,14 @@ export default function Privacy() {
           🩸 All Donations thought our external pay sites and or through our
           PayPal buttons will not be refundable, as they are a donation to a
           free website designer, that has limited ability's to do money
-          transfers back to you. Thank You for your donations to
-          publiuslogic.com.
+          transfers back to you. Thank You for your donations to mansbooks.com.
           <h2> Comment Policy</h2>
           🩸 We want you to feel at home when you post a comment on
-          publiuslogic.com. We want everyone to feel at home posting comments on
-          publiuslogic.com. We don’t know what your home is like, but we know
-          how we expect people to behave when they visit ours. That’s why we
-          reserve the right to delete comments and ban users as needed to keep
-          the comment threads here civil and substantive.
+          mansbooks.com. We want everyone to feel at home posting comments on
+          mansbooks.com. We don’t know what your home is like, but we know how
+          we expect people to behave when they visit ours. That’s why we reserve
+          the right to delete comments and ban users as needed to keep the
+          comment threads here civil and substantive.
         </Section>
         <CalloutDanger>
           <h2>1 house rule is simple</h2>

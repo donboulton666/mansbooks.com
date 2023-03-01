@@ -31,7 +31,6 @@ export type Video = {
 export type Picture = {
   fileName: string;
   alt: string;
-  
 };
 export type Author = {
   picture: Picture;

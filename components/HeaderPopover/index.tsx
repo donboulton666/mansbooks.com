@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import * as React from "react";
+import { Link } from "gatsby";
+import { Popover, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 import {
   GlobeAltIcon,
   BanIcon,
@@ -19,100 +19,100 @@ import {
   SparklesIcon,
   QuestionMarkCircleIcon,
   UserGroupIcon,
-} from '@heroicons/react/outline'
+} from "@heroicons/react/outline";
 
 const posts = [
   {
-    name: 'Creation',
-    description: 'Creation of All Things',
-    href: '/blog/creation-of-all',
+    name: "Creation",
+    description: "Creation of All Things",
+    href: "/blog/creation-of-all",
     icon: SparklesIcon,
   },
   {
-    name: 'Gatsby v5',
-    description: 'Gatsby v5 partial Hydration and Slices',
-    href: '/blog/gatsby-version-five',
+    name: "Gatsby v5",
+    description: "Gatsby v5 partial Hydration and Slices",
+    href: "/blog/gatsby-version-five",
     icon: CodeIcon,
   },
   {
-    name: 'War Machine',
-    description: 'Kiddy Playtime War Toys',
-    href: '/blog/war-machine',
+    name: "War Machine",
+    description: "Kiddy Playtime War Toys",
+    href: "/blog/war-machine",
     icon: GlobeAltIcon,
   },
   {
-    name: 'Commandments',
-    description: 'Commandments',
-    href: '/blog/commandments',
+    name: "Commandments",
+    description: "Commandments",
+    href: "/blog/commandments",
     icon: ScaleIcon,
   },
   {
-    name: 'Applause',
-    description: 'Applause useSound Confetti',
-    href: '/blog/applause-use-sound-confetti',
+    name: "Applause",
+    description: "Applause useSound Confetti",
+    href: "/blog/applause-use-sound-confetti",
     icon: HandIcon,
   },
   {
-    name: 'USA Election',
-    description: 'Scandal-Less Non Sense',
-    href: '/blog/usa-election',
+    name: "USA Election",
+    description: "Scandal-Less Non Sense",
+    href: "/blog/usa-election",
     icon: QuestionMarkCircleIcon,
   },
   {
-    name: 'Jew Who',
-    description: 'Who are the Jewish People',
-    href: '/blog/jew-who',
+    name: "Jew Who",
+    description: "Who are the Jewish People",
+    href: "/blog/jew-who",
     icon: BanIcon,
   },
   {
-    name: 'Cookie Consent',
-    description: 'Gatsby GDPR Cookie Consent',
-    href: '/blog/cookies',
+    name: "Cookie Consent",
+    description: "Gatsby GDPR Cookie Consent",
+    href: "/blog/cookies",
     icon: ShieldCheckIcon,
   },
   {
-    name: 'Cyber Attack',
-    description: 'My Cyber Attack',
-    href: '/blog/cyber-attack',
+    name: "Cyber Attack",
+    description: "My Cyber Attack",
+    href: "/blog/cyber-attack",
     icon: ShieldExclamationIcon,
   },
   {
-    name: 'Trinity of Man',
-    description: 'The Holy, Lost, & Evil Ones',
-    href: '/blog/trinity-of-man',
+    name: "Trinity of Man",
+    description: "The Holy, Lost, & Evil Ones",
+    href: "/blog/trinity-of-man",
     icon: UserGroupIcon,
   },
   {
-    name: 'React Netlify Forms',
-    description: 'Secured Netlify Forms',
-    href: '/blog/react-netlify-forms',
+    name: "React Netlify Forms",
+    description: "Secured Netlify Forms",
+    href: "/blog/react-netlify-forms",
     icon: BeakerIcon,
   },
   {
-    name: 'Government',
-    description: 'United People of America',
-    href: '/blog/government',
+    name: "Government",
+    description: "United People of America",
+    href: "/blog/government",
     icon: LibraryIcon,
   },
   {
-    name: 'Virtue',
-    description: 'What is Needed Virtue',
-    href: '/blog/virtue',
+    name: "Virtue",
+    description: "What is Needed Virtue",
+    href: "/blog/virtue",
     icon: HeartIcon,
   },
   {
-    name: 'React Hook Form',
-    description: 'Secured React Forms',
-    href: '/blog/react-hook-form',
+    name: "React Hook Form",
+    description: "Secured React Forms",
+    href: "/blog/react-hook-form",
     icon: CakeIcon,
   },
   {
-    name: 'Vaccination',
-    description: 'No Do Not Do It',
-    href: '/blog/vaccination',
+    name: "Vaccination",
+    description: "No Do Not Do It",
+    href: "/blog/vaccination",
     icon: PresentationChartLineIcon,
   },
-]
+];
 
 function HeaderPopover() {
   return (
@@ -122,12 +122,14 @@ function HeaderPopover() {
           <>
             <Popover.Button
               className={`
-                ${open ? '' : 'text-opacity-90'}
+                ${open ? "" : "text-opacity-90"}
                 group inline-flex items-center rounded-md px-3 py-2 text-lg text-white hover:bg-gray-800 hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-opacity-75`}
             >
               <span>Featured</span>
               <ChevronDownIcon
-                className={`${open ? 'rotate-180 transform text-red-600' : 'text-opacity-75'}
+                className={`${
+                  open ? "rotate-180 transform text-red-600" : "text-opacity-75"
+                }
                   ml-1 h-5 w-5 text-gray-200 transition duration-150 ease-in-out group-hover:text-opacity-75`}
                 aria-hidden="true"
               />
@@ -144,7 +146,7 @@ function HeaderPopover() {
                 <div className="overflow-hidden rounded-lg bg-slate-800 shadow-lg ring-1 ring-black ring-opacity-5">
                   <nav className="nav-scroll">
                     <div className="relative grid h-96 max-h-full gap-8 bg-slate-800 p-7 md:max-h-screen lg:grid-cols-3">
-                      {posts.map(item => (
+                      {posts.map((item) => (
                         <Link
                           key={item.name}
                           to={item.href}
@@ -154,8 +156,12 @@ function HeaderPopover() {
                             <item.icon aria-hidden="true" />
                           </div>
                           <div className="ml-4">
-                            <p className="text-sm font-medium text-rose-500 hover:text-rose-600">{item.name}</p>
-                            <p className="text-sm text-slate-200">{item.description}</p>
+                            <p className="text-sm font-medium text-rose-500 hover:text-rose-600">
+                              {item.name}
+                            </p>
+                            <p className="text-sm text-slate-200">
+                              {item.description}
+                            </p>
                           </div>
                         </Link>
                       ))}
@@ -188,7 +194,7 @@ function HeaderPopover() {
         )}
       </Popover>
     </div>
-  )
+  );
 }
 
-export default HeaderPopover
+export default HeaderPopover;
