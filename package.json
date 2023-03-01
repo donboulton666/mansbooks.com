@@ -74,6 +74,7 @@
     "react-aria": "3.22.0",
     "react-datocms": "^4.0.8",
     "react-dom": "^18.2.0",
+    "react-google-calendar-api": "^2.1.0",
     "react-hook-form": "^7.43.2",
     "react-hooks-global-state": "^2.1.0",
     "react-hot-toast": "^2.4.0",

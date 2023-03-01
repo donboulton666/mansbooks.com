@@ -15,6 +15,7 @@
  */
 
 import Link from "next/link";
+import Script from "next/script";
 import Image from "next/legacy/image";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";
@@ -28,6 +29,9 @@ type Props = {
 export default function SponsorSection({ sponsor }: Props) {
   return (
     <>
+      <>
+        <Script src="https://apis.google.com/js/platform.js" />
+      </>
       <div className="mb-48">
         <Link href="/expo" className={styles.backlink}>
           <svg
@@ -139,6 +143,15 @@ export default function SponsorSection({ sponsor }: Props) {
                   </svg>
                 </Link>
               ))}
+              <div className={cn(styles.button, styles["button-resource"])}>
+                <div
+                  class="g-ytsubscribe"
+                  data-channelid="UC1Pwa4nFvIPbtYVLcBGDpjA"
+                  data-layout="full"
+                  data-theme="dark"
+                  data-count="default"
+                ></div>
+              </div>
             </div>
           </div>
         </div>

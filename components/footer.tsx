@@ -151,6 +151,8 @@ export default function Footer() {
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/about"
+                        aria-describedby="About"
+                        area-label="About"
                       >
                         About Angie
                       </Link>
@@ -159,6 +161,8 @@ export default function Footer() {
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/blog"
+                        aria-describedby="Blog"
+                        area-label="Blog"
                       >
                         Blog
                       </Link>
@@ -167,6 +171,8 @@ export default function Footer() {
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/contact"
+                        aria-describedby="Contact"
+                        area-label="Contact"
                       >
                         Contact Us
                       </Link>
@@ -175,6 +181,8 @@ export default function Footer() {
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/profile"
+                        aria-describedby="Profile"
+                        area-label="Profile"
                       >
                         Profile
                       </Link>
@@ -183,6 +191,8 @@ export default function Footer() {
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/search"
+                        aria-describedby="Search"
+                        area-label="Search"
                       >
                         Search Page
                       </Link>
@@ -191,28 +201,46 @@ export default function Footer() {
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/sitemap.xml"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-describedby="Sitemap"
+                        area-label="Sitemap"
                       >
                         Sitemap XML
                       </Link>
+                    </li>
+                    <li>
+                      <a
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        href="https://angelina-jordan-official-store.creator-spring.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-describedby="Angie's Store"
+                        area-label="Angie's Store"
+                      >
+                        Angie's Store
+                      </a>
                     </li>
                   </ul>
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
                   <span className="mb-2 block text-sm font-semibold uppercase text-wine-200">
-                    Other Resources
+                    Resources
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <Link
-                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="/licence"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        href="/license"
+                        aria-describedby="BSD License"
+                        area-label="BSD License"
                       >
                         BSD License
                       </Link>
                     </li>
                     <li>
                       <a
-                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         rel="noopener noreferrer"
                         target="_blank"
                         aria-describedby="Github"
@@ -224,7 +252,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         rel="noopener noreferrer"
                         target="_blank"
                         area-label="Gatsby Starter Basic Instructions"
@@ -235,27 +263,47 @@ export default function Footer() {
                     </li>
                     <li>
                       <Link
-                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/terms"
+                        aria-describedby="Terms"
+                        area-label="Terms"
                       >
                         Terms
                       </Link>
                     </li>
                     <li>
                       <Link
-                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/privacy"
+                        aria-describedby="Privacy"
+                        area-label="Privacy"
                       >
-                        Privacy Policy
+                        Privacy
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="ml-6 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                      <a
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="https://netlify.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-describedby="Netlify"
+                        area-label="Netlify"
                       >
                         Netlify
-                      </Link>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        href="https://www.100ms.live/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-describedby="100ms"
+                        area-label="100ms"
+                      >
+                        100ms
+                      </a>
                     </li>
                   </ul>
                 </div>

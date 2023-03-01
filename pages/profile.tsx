@@ -14,7 +14,7 @@ export default function Profile() {
         <title>Profile</title>
       </Head>
       <div className="ml-10 mr-10 mt-8 mb-32">
-      <Center>Angelina Jordan</Center>
+        <Center>Angelina Jordan</Center>
         <Image
           alt="NextJs"
           title="Angelina Jordan"
