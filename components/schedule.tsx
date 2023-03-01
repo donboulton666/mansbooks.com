@@ -18,7 +18,6 @@ import cn from "classnames";
 import { Stage, Talk } from "@lib/types";
 import styles from "./schedule.module.css";
 import TalkCard from "./talk-card";
-import GoogleCalendar from "./GoogleCalendar";
 
 function StageRow({ stage }: { stage: Stage }) {
   // Group talks by the time block
@@ -58,9 +57,6 @@ export default function Schedule({ allStages }: Props) {
         {allStages.map((stage) => (
           <StageRow key={stage.slug} stage={stage} />
         ))}
-      </div>
-      <div className="mb-20">
-        <GoogleCalendar />
       </div>
     </div>
   );
