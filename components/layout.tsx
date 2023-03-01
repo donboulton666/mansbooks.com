@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import React from "react";
 import { ReactNode } from "react";
 import Link from "next/link";
 import cn from "classnames";
@@ -24,10 +25,9 @@ import styles from "./layout.module.css";
 import Logo from "./icons/icon-hms";
 import MobileMenu from "./mobile-menu";
 import Footer from "./footer";
-import React from "react";
 import ScrollIndicator from "./ScrollIndicator";
 import DemoButton from "./hms/demo-cta";
-import RoomCta from "./hms/demo-cta/room-cta";
+import NavDropdown from "@components/NavDropdown"
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 
@@ -80,10 +80,13 @@ export default function Layout({
               !disableCta.includes(activeRoute)) ||
             activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <DemoButton /> : <RoomCta />}
+                {activeRoute === "/" ? <DemoButton /> : <Dummy />}
               </div>
             ) : (
-              <div />
+              <>
+                <div />
+                <NavDropdown />
+              </>
             )}
           </header>
         )}

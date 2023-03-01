@@ -27,7 +27,7 @@ export const SITE_NAME = "Angies Video Webinar";
 export const META_DESCRIPTION = "Angelina Jordans Video and Webinar Site.";
 export const SITE_DESCRIPTION =
   "An interactive online experience by the community, free for everyone.";
-export const DATE = "10 January 2023";
+export const DATE = "10 January 2024";
 export const SHORT_DATE = "Jan 10 - 12:00am PST";
 export const FULL_DATE = "Jan 10th 12am Pacific Time (GMT-7)";
 export const TWEET_TEXT = META_DESCRIPTION;
@@ -48,7 +48,7 @@ export const NAVIGATION = [
     route: "/stage/a",
   },
   {
-    name: "Vercel",
+    name: "Angie",
     route: "/stage/c",
   },
   {
@@ -60,24 +60,12 @@ export const NAVIGATION = [
     route: "/schedule",
   },
   {
-    name: "Speakers",
-    route: "/speakers",
-  },
-  {
     name: "Videos",
     route: "/expo",
   },
   {
-    name: "Social",
-    route: "/jobs",
-  },
-  {
     name: "Blog",
     route: "/blog",
-  },
-  {
-    name: "Gallery",
-    route: "/gallery",
   },
 ];
 

@@ -97,7 +97,7 @@
   margin-top: var(--space-4x);
   border-radius: var(--space-2x);
   border: 1px solid var(--brand);
-  background: var(--brand);
+  background: #620024;
   cursor: pointer;
   font-family: inherit;
   font-size: var(--text-md);
