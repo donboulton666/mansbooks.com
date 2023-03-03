@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const request = require("../../lib/datocms");
+const request = require("@lib/datocms");
 const algoliasearch = require("algoliasearch/lite");
+
+const client_id = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
 
 export default async (req, res) => {
   // initializing the Algolia client with the secret keys
@@ -8,6 +10,7 @@ export default async (req, res) => {
     // Process a POST request
     const algoliaClient = algoliasearch(
       process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+      ...client_id,
       process.env.ALGOLIA_ADMIN_KEY
     );
     // setting the Algolia index related to your blog

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import Layout from "../components/layout";
 import { GetServerSideProps } from "next";
 import { renderToString } from "react-dom/server";
 import algoliasearch from "algoliasearch/lite";
@@ -18,7 +17,7 @@ import {
 import { getServerState } from "react-instantsearch-hooks-server";
 import { createInstantSearchRouterNext } from "react-instantsearch-hooks-router-nextjs";
 import singletonRouter from "next/router";
-import { Panel } from "@components/Panel";
+import { Panel } from "../components/Panel";
 
 const client = algoliasearch("latency", "6be0576ff61c053d5f9a3225e2a90f76");
 
@@ -38,50 +37,39 @@ function Hit({ hit }: HitProps) {
   );
 }
 
-type SearchPageProps = {
+type HomePageProps = {
   serverState?: InstantSearchServerState;
   url?: string;
 };
 
-export default function SearchPage({ serverState, url }: SearchPageProps) {
+export default function HomePage({ serverState, url }: HomePageProps) {
   return (
-    <Layout>
-      <InstantSearchSSRProvider {...serverState}>
-        <Head>
-          <title>React InstantSearch Hooks - Next.js</title>
-        </Head>
+    <InstantSearchSSRProvider {...serverState}>
+      <Head>
+        <title>React InstantSearch Hooks - Next.js</title>
+      </Head>
 
-        <InstantSearch
-          searchClient={client}
-          indexName="instant_search"
-          routing={{
-            router: createInstantSearchRouterNext({
-              serverUrl: url,
-              singletonRouter,
-            }),
-          }}
-        >
-          <div className="Container">
-            <div>
-              <DynamicWidgets fallbackComponent={FallbackComponent} />
-            </div>
-            <div className="mx-18">
-              <div className="z-30 -mt-4">
-                <div className="mt-10">
-                  <Center>Search this website</Center>
-                  <div className="mt-16 mb-16 p-8 sm:mt-2">
-                    <div className="mb-2">
-                      <SearchBox />
-                      <Hits hitComponent={Hit} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <InstantSearch
+        searchClient={client}
+        indexName="instant_search"
+        routing={{
+          router: createInstantSearchRouterNext({
+            serverUrl: url,
+            singletonRouter,
+          }),
+        }}
+      >
+        <div className="Container">
+          <div>
+            <DynamicWidgets fallbackComponent={FallbackComponent} />
           </div>
-        </InstantSearch>
-      </InstantSearchSSRProvider>
-    </Layout>
+          <div>
+            <SearchBox />
+            <Hits hitComponent={Hit} />
+          </div>
+        </div>
+      </InstantSearch>
+    </InstantSearchSSRProvider>
   );
 }
 
@@ -93,11 +81,11 @@ function FallbackComponent({ attribute }: { attribute: string }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps<SearchPageProps> =
+export const getServerSideProps: GetServerSideProps<HomePageProps> =
   async function getServerSideProps({ req }) {
     const protocol = req.headers.referer?.split("://")[0] || "https";
     const url = `${protocol}://${req.headers.host}${req.url}`;
-    const serverState = await getServerState(<SearchPage url={url} />, {
+    const serverState = await getServerState(<HomePage url={url} />, {
       renderToString,
     });
 
