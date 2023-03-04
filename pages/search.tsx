@@ -19,7 +19,7 @@ import { getServerState } from "react-instantsearch-hooks-server";
 import { createInstantSearchRouterNext } from "react-instantsearch-hooks-router-nextjs";
 import singletonRouter from "next/router";
 import { Panel } from "@components/Panel";
-
+import "instantsearch.css/themes/satellite-min.css";
 const client = algoliasearch("latency", "6be0576ff61c053d5f9a3225e2a90f76");
 
 type HitProps = {
