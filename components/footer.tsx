@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import ColumnGridLeft from "../components/column-grid-left";
-import Subscriptions from "../components/subsctiptions";
+import Subscriptions from "./subscriptions";
 import angieImage from "../public/icons/apple-touch-icon.png";
 
 export default function Footer() {
@@ -87,7 +87,7 @@ export default function Footer() {
                       aria-describedby="AJ Cover Official"
                       area-label="AJ Cover Official"
                     >
-                      🔗 Cover Offical
+                      🔗 Cover Official
                     </a>
                   </div>
                   <div>
@@ -158,6 +158,18 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
+                      <a
+                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
+                        href="https://angelina-jordan-official-store.creator-spring.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-describedby="Angie's Store"
+                        area-label="Angie's Store"
+                      >
+                        Angie's Store
+                      </a>
+                    </li>
+                    <li>
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
                         href="/blog"
@@ -208,18 +220,6 @@ export default function Footer() {
                       >
                         Sitemap XML
                       </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="https://angelina-jordan-official-store.creator-spring.com/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        aria-describedby="Angie's Store"
-                        area-label="Angie's Store"
-                      >
-                        Angie's Store
-                      </a>
                     </li>
                   </ul>
                 </div>

@@ -8,7 +8,7 @@ function SearchBox({ refine }) {
           width="20"
           height="20"
           fill="currentColor"
-          className="pointer-events-none absolute left-3 top-1/2 -mt-2.5 text-gray-400 group-focus-within:text-purple-500"
+          className="pointer-events-none absolute left-3 top-1/2 -mt-2.5 text-slate-300 group-focus-within:text-wine-300"
           aria-hidden="true"
         >
           <path
@@ -18,7 +18,7 @@ function SearchBox({ refine }) {
           />
         </svg>
         <input
-          className="search-box w-full rounded-md bg-slate-900 py-2 pl-10 text-sm leading-6 text-slate-200 placeholder-gray-400 shadow-sm ring-1 ring-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="search-box w-full rounded-md bg-slate-900 py-2 pl-10 text-sm leading-6 text-slate-300 placeholder-slate-400 shadow-sm ring-1 ring-wine-300 focus:outline-none focus:ring-2 focus:ring-wine-200"
           type="search"
           placeholder="Search..."
           onChange={(e) => refine(e.currentTarget.value)}
