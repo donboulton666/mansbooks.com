@@ -18,7 +18,7 @@ import useSWR, { ConfigInterface } from "swr";
 
 export default function useLoginStatus(opts?: ConfigInterface) {
   const { data, error, mutate } = useSWR(
-    `/api/auth`,
+    `/api/github-oauth`,
     async (url) => {
       const res = await fetch(url);
       if (!res.ok) {

@@ -44,7 +44,7 @@ export default function PostHeader({
               "@context": "https://schema.org",
               "@type": "WebPage",
               name: "Contact",
-              url: "https://mansbooks.com/contact",
+              url: seo.path,
               image: {
                 "@type": "ImageObject",
                 url: coverImage.responsiveImage,
@@ -55,7 +55,7 @@ export default function PostHeader({
                 "@type": "Organization",
                 name: "Mansbooks",
               },
-              license: "http://mansbooks.com/licence",
+              license: "http://mansbooks.com/license",
             })}
             ,
           </script>
