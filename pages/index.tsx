@@ -21,6 +21,7 @@ import { SkipNavContent } from "@reach/skip-nav";
 import Page from "@components/page";
 import ConfContent from "@components/index";
 import { META_DESCRIPTION } from "@lib/constants";
+import angie from "../../public/angie/angelina.jpg"
 
 export default function Conf() {
   const { query } = useRouter();
@@ -52,7 +53,7 @@ export default function Conf() {
                   name: "Angelina Jordan",
                 },
               ],
-              image: "/twitter-card.jpg",
+              image: angie,
               datePublished: "Jan 10th 2023",
             })}
             ,
@@ -65,7 +66,7 @@ export default function Conf() {
               url: "https://mansbooks.com",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
@@ -96,7 +97,7 @@ export default function Conf() {
               location: "OKC, Middle Earth",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },

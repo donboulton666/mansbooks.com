@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Section from "../components/Section";
+import angie from "../../public/angie/angelina.jpg"
 
 export default function Terms() {
   return (
@@ -16,7 +17,7 @@ export default function Terms() {
               url: "https://mansbooks.com/terms",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
@@ -47,7 +48,7 @@ export default function Terms() {
               location: "OKC, Middle Earth",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },

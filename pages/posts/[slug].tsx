@@ -34,6 +34,7 @@ export async function getStaticProps({ params, preview = false }) {
           }
           title
           slug
+          description
           video {
             provider
             providerUid
@@ -80,6 +81,7 @@ export async function getStaticProps({ params, preview = false }) {
           slug
           excerpt
           date
+          description
           video {
             provider
             providerUid

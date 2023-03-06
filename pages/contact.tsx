@@ -5,6 +5,7 @@ import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Layout from "@components/layout";
 import ContactForm from "@components/ContactForm";
+import angie from "../../public/angie/angelina.jpg"
 
 export default function Contact() {
   return (
@@ -20,7 +21,7 @@ export default function Contact() {
               url: "https://mansbooks.com/contact",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
@@ -51,7 +52,7 @@ export default function Contact() {
               location: "OKC, Middle Earth",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },

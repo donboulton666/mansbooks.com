@@ -87,14 +87,24 @@ export default function SpeakerSection({ speaker }: Props) {
                   href={speaker.twitter}
                   rel="noopener noreferrer"
                   target="_blank"
-                  aria-describedby="AJ Twitter"
-                  area-label="AJ Twitter"
+                  aria-describedby="Twitter"
+                  area-label="Twitter"
                 >
-                  <TwitterIcon />
+                  <span className="flex flex-col items-center pr-2 md:flex-row">
+                    <span className="mr-2">
+                      <TwitterIcon />
+                    </span>
+                    {speaker.twitter}
+                  </span>
                 </Link>
               ) : (
                 <span className={styles.disabled}>
-                  <TwitterIcon />
+                  <span className="flex flex-col items-center pr-2 md:flex-row">
+                    <span className="mr-2">
+                      <TwitterIcon />
+                    </span>
+                    {speaker.twitter}
+                  </span>
                 </span>
               )}
               {speaker.github ? (
@@ -105,11 +115,21 @@ export default function SpeakerSection({ speaker }: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GithubIcon color="#D8D8D8" size={24} />
+                  <span className="flex flex-col items-center pr-2 md:flex-row">
+                    <span className="mr-2">
+                      <GithubIcon color="#D8D8D8" size={24} />
+                    </span>
+                    {speaker.github}
+                  </span>
                 </Link>
               ) : (
                 <span className={cn(styles.githubIcon, styles.disabled)}>
-                  <GithubIcon color="#D8D8D8" size={24} />
+                  <span className="flex flex-col items-center md:flex-row">
+                    <span className="mr-2">
+                      <GithubIcon color="#D8D8D8" size={24} />
+                    </span>
+                    {speaker.github}
+                  </span>
                 </span>
               )}
             </div>

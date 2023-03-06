@@ -13,6 +13,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import about from "../public/about.jpg";
 import cookies from "../public/cookies.png";
 import CalloutDanger from "@components/Callout/CalloutDanger";
+import angie from "../../public/angie/angelina.jpg"
 
 export default function Privacy() {
   return (
@@ -28,7 +29,7 @@ export default function Privacy() {
               url: "https://mansbooks.com/privacy",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
@@ -59,7 +60,7 @@ export default function Privacy() {
               location: "OKC, Middle Earth",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },

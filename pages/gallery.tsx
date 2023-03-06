@@ -12,6 +12,7 @@ import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
 import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
 import Layout from "@components/layout";
+import angie from "../../public/angie/angelina.jpg"
 
 const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter();
@@ -41,7 +42,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
               url: "https://mansbooks.com/gallery",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
@@ -72,7 +73,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
               location: "OKC, Middle Earth",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },

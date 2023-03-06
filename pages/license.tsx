@@ -4,6 +4,7 @@ import Layout from "@components/layout";
 import Section from "@components/Section";
 import CalloutLabel from "@components/Callout/CalloutLabel";
 import Modal from "@components/Modal";
+import angie from "../../public/angie/angelina.jpg"
 
 export default function License() {
   return (
@@ -19,7 +20,7 @@ export default function License() {
               url: "https://mansbooks.com/license",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
@@ -50,7 +51,7 @@ export default function License() {
               location: "OKC, Middle Earth",
               image: {
                 "@type": "ImageObject",
-                url: "/twitter-card.jpg",
+                url: angie,
                 width: "1400",
                 height: "450",
               },
