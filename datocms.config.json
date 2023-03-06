@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "default": {
+      "logLevel": "y",
+      "migrations": {
+        "directory": "./migrations",
+        "modelApiKey": "schema_migration",
+        "tsconfig": "y"
+      }
+    }
+  }
+}

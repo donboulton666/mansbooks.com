@@ -21,7 +21,7 @@ import { SkipNavContent } from "@reach/skip-nav";
 import Page from "@components/page";
 import ConfContent from "@components/index";
 import { META_DESCRIPTION } from "@lib/constants";
-import angie from "../../public/angie/angelina.jpg";
+import angie from "../public/angie/angelina.jpg";
 
 export default function Conf() {
   const { query } = useRouter();

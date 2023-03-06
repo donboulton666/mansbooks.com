@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Section from "../components/Section";
-import angie from "../../public/angie/angelina.jpg";
+import angie from "../public/angie/angelina.jpg";
 
 export default function Terms() {
   return (

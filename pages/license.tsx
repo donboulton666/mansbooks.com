@@ -4,7 +4,7 @@ import Layout from "@components/layout";
 import Section from "@components/Section";
 import CalloutLabel from "@components/Callout/CalloutLabel";
 import Modal from "@components/Modal";
-import angie from "../../public/angie/angelina.jpg";
+import angie from "../public/angie/angelina.jpg";
 
 export default function License() {
   return (

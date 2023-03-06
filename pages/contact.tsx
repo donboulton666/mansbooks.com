@@ -5,7 +5,7 @@ import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Layout from "@components/layout";
 import ContactForm from "@components/ContactForm";
-import angie from "../../public/angie/angelina.jpg";
+import angie from "../public/angie/angelina.jpg";
 
 export default function Contact() {
   return (
