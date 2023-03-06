@@ -13,7 +13,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import about from "../public/about.jpg";
 import cookies from "../public/cookies.png";
 import CalloutDanger from "@components/Callout/CalloutDanger";
-import angie from "../../public/angie/angelina.jpg"
+import angie from "../../public/angie/angelina.jpg";
 
 export default function Privacy() {
   return (

@@ -21,7 +21,7 @@ import { SkipNavContent } from "@reach/skip-nav";
 import Page from "@components/page";
 import ConfContent from "@components/index";
 import { META_DESCRIPTION } from "@lib/constants";
-import angie from "../../public/angie/angelina.jpg"
+import angie from "../../public/angie/angelina.jpg";
 
 export default function Conf() {
   const { query } = useRouter();
@@ -41,6 +41,41 @@ export default function Conf() {
     <Page meta={meta} fullViewport>
       <Head>
         <>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              about: {
+                "@id": "https://mansbooks.com",
+              },
+              audience: "public",
+              abstract:
+                "Angelina Jordans Webinar Home Page.",
+              author: {
+                "@id": "https://donboulton.com",
+              },
+              copyrightHolder: {
+                "@id": "https://mansbooks.com",
+              },
+              copyrightYear: 2023,
+              creator: {
+                "@id": "https://mansbooks.com",
+              },
+              description: "Angelina Jordans Webinar Home Page",
+              image: {
+                "@type": "ImageObject",
+                url: angie,
+                width: "1400px",
+                height: "450px",
+              },
+              inLanguage: "en",
+              name: "Mansbooks",
+              publisher: {
+                "@id": "https://mansbooks.com",
+              },
+              url: "https://mansbooks.com",
+            })}
+          </script>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",

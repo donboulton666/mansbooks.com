@@ -7,7 +7,7 @@ import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Center from "@components/Center";
 import suspiciousMinds from "../public/suspiciousminds.jpg";
-import angie from "../../public/angie/angelina.jpg"
+import angie from "../../public/angie/angelina.jpg";
 
 export default function Profile() {
   return (

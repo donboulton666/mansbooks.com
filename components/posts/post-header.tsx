@@ -3,7 +3,7 @@ import Avatar from "./avatar";
 import Date from "./date";
 import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
-import angie from "../../public/angie/angelina.jpg"
+import angie from "../../public/angie/angelina.jpg";
 
 export default function PostHeader({
   title,
@@ -12,7 +12,7 @@ export default function PostHeader({
   author,
   excerpt,
 }) {
-  const seo = typeof window !== 'undefined' ? window.location.href : ''
+  const seo = typeof window !== "undefined" ? window.location.href : "";
   return (
     <>
       <Head>
