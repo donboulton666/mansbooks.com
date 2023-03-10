@@ -1,14 +1,17 @@
 import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
-import Container from "../components/posts/container";
-import HeroPost from "../components/posts/hero-post";
-import Intro from "../components/posts/intro";
-import Layout from "../components/layout";
-import MoreStories from "../components/posts/more-stories";
-import { request } from "../lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments";
+import Container from "@components/posts/container";
+import HeroPost from "@components/posts/hero-post";
+import Intro from "@components/posts/intro";
+import Layout from "@components/layout";
+import MoreStories from "@components/posts/more-stories";
+import { request } from "@lib/datocms";
+import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
+import LanguageBar from "@components/posts/language-bar";
+import { useRouter } from "next/router";
 
-export async function getStaticProps({ preview }) {
+export async function getStaticProps({preview, locale}) {
+  const formattedLocale = locale.split("-")[0];
   const graphqlRequest = {
     query: `
       {
@@ -22,7 +25,7 @@ export async function getStaticProps({ preview }) {
             ...metaTagsFragment
           }
         }
-        allPosts(orderBy: date_DESC, first: 20) {
+        allPosts(locale: ${formattedLocale}, orderBy: date_DESC, first: 20) {
           title
           slug
           excerpt
@@ -70,6 +73,9 @@ export default function Index({ subscription }) {
   const {
     data: { allPosts, site, blog },
   } = useQuerySubscription(subscription);
+  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { locale, locales, asPath } = useRouter().locale;
 
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
@@ -80,6 +86,7 @@ export default function Index({ subscription }) {
       <Layout preview={subscription.preview}>
         <Head>{renderMetaTags(metaTags)}</Head>
         <Container>
+          <LanguageBar />
           <Intro />
           {heroPost && (
             <HeroPost

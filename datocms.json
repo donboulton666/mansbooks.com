@@ -1,10 +1,11 @@
 {
   "name": "Angelina Jordan's Webinar",
-  "description": "Angelina Jordan's Webinar and virtual event.",
+  "description": "Angelina Jordan's Webinar and virtual events.",
   "previewImage": "https://mansbooks.com/twitter-card.jpg",
   "datocmsProjectId": "prj_AMPucdePlzOdr9CvAOpqQ69Lxvb6",
   "deploymentType": "next",
   "buildCommand": "npm run build",
   "datocmsApiTokenEnvName": "DATOCMS_READ_ONLY_API_TOKEN",
-  "livePreviewUrl": "https://mansbooks.com"
+  "livePreviewUrl": "https://mansbooks.com",
+  "postInstallUrl": "/api/post-install"
 }

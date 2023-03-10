@@ -49,7 +49,7 @@ const handler = (req, res) => {
     {
       label: "Draft version",
       url: `${baseUrl}/api/preview?redirect=${url}&secret=${
-        process.env.NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET || ""
+        process.env.NEXT_CMS_DATOCMS_PREVIEW_SECRET || ""
       }`,
     },
   ];

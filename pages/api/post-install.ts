@@ -1,51 +1,65 @@
 import { buildClient } from "@datocms/cma-client-node";
 
-const baseUrl = process.env.VERCEL_URL
-  ? // Vercel auto-populates this environment variable
-    `https://${process.env.VERCEL_URL}`
-  : // Netlify auto-populates this environment variable
-    process.env.URL;
-
-async function installWebPreviewsPlugin(client) {
-  const webPreviewsPlugin = await client.plugins.create({
-    package_name: "datocms-plugin-web-previews",
-  });
-
-  await client.plugins.update(webPreviewsPlugin, {
-    parameters: {
-      frontends: [
-        { name: "Production", previewWebhook: `${baseUrl}/api/preview-links` },
-      ],
-      startOpen: true,
+async function vercelInitialization(
+  vercelProjectId,
+  vercelTeamId,
+  vercelApiToken,
+  buildTriggerId,
+  siteSearchToken
+) {
+  await fetch(`https://api.vercel.com/v10/projects/${vercelProjectId}/env`, {
+    headers: {
+      Authorization: `Bearer ${vercelApiToken}`,
     },
+    method: "post",
+    body: JSON.stringify([
+      {
+        type: "encrypted",
+        key: "NEXT_CMS_DATOCMS_BUILD_TRIGGER_ID",
+        value: buildTriggerId,
+        target: ["development", "production", "preview"],
+      },
+      {
+        type: "encrypted",
+        key: "NEXT_CMS_DATOCMS_API_TOKEN_SITE_SEARCH",
+        value: siteSearchToken,
+        target: ["development", "production", "preview"],
+      },
+    ]),
   });
 }
 
-async function installSeoReadabilityPlugin(client) {
-  const seoReadabilityPlugin = await client.plugins.create({
-    package_name: "datocms-plugin-seo-readability-analysis",
-  });
-
-  await client.plugins.update(seoReadabilityPlugin, {
-    parameters: {
-      htmlGeneratorUrl: `${baseUrl}/api/seo-readability-metadata`,
-      autoApplyToFieldsWithApiKey: "seo_readability_analysis",
+async function netlifyInitialization(
+  apiToken,
+  netlifySiteId,
+  netlifyToken,
+  buildTriggerId,
+  siteSearchToken
+) {
+  await fetch(`https://api.netlify.com/api/v1/sites/${netlifySiteId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${netlifyToken}`,
     },
+    method: "PUT",
+    body: JSON.stringify({
+      build_settings: {
+        env: {
+          NEXT_CMS_DATOCMS_API_TOKEN: apiToken,
+          NEXT_CMS_DATOCMS_BUILD_TRIGGER_ID: buildTriggerId,
+          NEXT_CMS_DATOCMS_API_TOKEN_SITE_SEARCH: siteSearchToken,
+        },
+      },
+    }),
   });
 }
-
-/*
-  This endpoint is called right after bootstrapping the Starter project...
-  it can be removed afterwards!
-*/
 
 export default async (req, res) => {
-  // setup CORS permissions
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // This will allow OPTIONS request
   if (req.method === "OPTIONS") {
     return res.status(200).json({ success: true });
   }
@@ -54,15 +68,45 @@ export default async (req, res) => {
     return res.status(404).json({ error: "Invalid route" });
   }
 
-  const client = buildClient({ apiToken: req.body.datocmsApiToken });
-
   try {
-    await Promise.all([
-      installWebPreviewsPlugin(client),
-      installSeoReadabilityPlugin(client),
-    ]);
+    const client = buildClient({ apiToken: req.body.datocmsApiToken });
 
-    return res.status(200).json({ success: true });
+    const buildTriggers = await client.buildTriggers.list();
+    const buildTriggerId = buildTriggers[0].id;
+
+    await client.buildTriggers.update(buildTriggerId, {
+      indexing_enabled: true,
+    });
+
+    const accessTokens = await client.accessTokens.list();
+
+    const siteSearchToken = accessTokens.find(
+      (token) => token.name === "Site Search"
+    ).token;
+
+    if (req.body.integrationInfo.adapter === "vercel") {
+      await vercelInitialization(
+        req.body.integrationInfo.vercelProjectId,
+        req.body.integrationInfo.vercelTeamId,
+        req.body.integrationInfo.vercelApiToken,
+        buildTriggerId,
+        siteSearchToken
+      );
+    }
+
+    if (req.body.integrationInfo.adapter === "netlify") {
+      await netlifyInitialization(
+        req.body.datocmsApiToken,
+        req.body.integrationInfo.netlifySiteId,
+        req.body.integrationInfo.netlifyToken,
+        buildTriggerId,
+        siteSearchToken
+      );
+    }
+
+    await client.buildTriggers.trigger(buildTriggerId);
+
+    return res.status(200).json({ success: siteSearchToken });
   } catch (error) {
     return res.status(500).json({
       error: error.message,

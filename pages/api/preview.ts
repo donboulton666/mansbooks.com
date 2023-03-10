@@ -1,3 +1,5 @@
+import url from "url";
+
 export default async (req, res) => {
   // Please set the NEXT_EXAMPLE_CMS_DATOCMS_PREVIEW_SECRET env variable
   // on Vercel/Netlify, or everyone will be able to enter Preview Mode and
@@ -7,20 +9,14 @@ export default async (req, res) => {
 
   // Check the secret and next parameters
   if (secret && req.query.secret !== secret) {
-    return res
-      .status(401)
-      .json({ message: "Missing or invalid `secret` query string parameter!" });
+    return res.status(401).json({ message: "Invalid token" });
   }
 
   // Enable Preview Mode by setting the cookies
   res.setPreviewData({});
 
-  // Redirect to the homepage, or to the URL provided with the `redirect` query
-  // string parameter:
-  const redirectUrl = new URL(
-    req.query.redirect || "/",
-    "https://mansbooks.com"
-  );
+  const uri = url.parse(req.query.page || req.query.slug || "/", true);
+  const sanitizedUrl = `${uri.pathname}${uri.search || ""}`;
 
-  res.redirect(`${redirectUrl.pathname}${redirectUrl.search}`);
+  res.redirect(sanitizedUrl);
 };

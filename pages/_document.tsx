@@ -1,26 +1,11 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
 export default class CustomDocument extends Document {
   render() {
+    const { lanaguage } = this.props.__NEXT_DATA__.query;
     return (
-      <Html lang="en">
+      <Html lang={lanaguage}>
         <Head>
           <meta name="application-name" content="Mansbooks" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,7 +112,7 @@ export default class CustomDocument extends Document {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-               })(window,document,'script','dataLayer','GTM-PXRSPG6');`,
+               })(window,document,'script','dataLayer','G-6QPYXMYV09');`,
             }}
           />
           <Script

@@ -30,7 +30,7 @@ const getMs = (dateString) => new Date(dateString).getTime();
 
   const QUERY = `
       {
-        allPosts(filter: { _status: { eq: published } }) {
+        allArticles(filter: { _status: { eq: published } }) {
           _updatedAt
           objectID: id
           title

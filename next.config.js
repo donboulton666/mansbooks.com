@@ -7,6 +7,10 @@ const withPWA = require('next-pwa')({
 })
 
 module.exports = withPWA({
+  i18n: {
+    locales: ["en", "es", "it", "nn"],
+     defaultLocale: "en",
+  },
   env: {
     DATOCMS_READ_ONLY_API_TOKEN:
       process.env.DATOCMS_READ_ONLY_API_TOKEN ,

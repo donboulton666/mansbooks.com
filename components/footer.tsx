@@ -8,7 +8,7 @@ import angieImage from "../public/icons/apple-touch-icon.png";
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-slate-900 pt-8 pb-6">
+      <footer className="relative bg-slate-900 pt-8 pb-6" data-datocms-noindex>
         <div
           className="pointer-events-none absolute bottom-auto top-0 left-0 right-0 -mt-20 w-full overflow-hidden"
           style={{ height: "80px" }}

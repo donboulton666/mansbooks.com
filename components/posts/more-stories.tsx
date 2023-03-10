@@ -1,11 +1,19 @@
 import PostPreview from "./post-preview";
 import styles from "../sponsors-grid.module.css";
+import { useRouter } from "next/router";
+import i18n from "@lib/i18n";
 
 export default function MoreStories({ posts }) {
+  if (posts[0].localeVersion) {
+    //if the posts are localized versions, make sure that it is not null (would be for unpublished posts)
+    //and pick that locale version
+    posts = posts.map((post) => post.localeVersion).filter((post) => post);
+  }
+  const { locale } = useRouter();
   return (
     <section>
       <h2 className="mb-4 text-4xl font-bold leading-tight tracking-tighter text-wine-200 md:text-7xl">
-        More Posts
+        {i18n.stories.more[locale]}
       </h2>
       <div className={styles.grid}>
         {posts.map((post) => (

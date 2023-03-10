@@ -1,4 +1,8 @@
 # *
+
+User-Agent: DatoCmsSearchBot
+Disallow: /thanks/
+
 User-agent: *
 Allow: /
 

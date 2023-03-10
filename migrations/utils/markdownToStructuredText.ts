@@ -1,16 +1,16 @@
-import unified from 'unified';
-import toHast from 'mdast-util-to-hast';
-import parse from 'remark-parse';
+import unified from "unified";
+import toHast from "mdast-util-to-hast";
+import parse from "remark-parse";
 import {
   hastToStructuredText,
   Options,
   HastRootNode,
-} from 'datocms-html-to-structured-text';
-import { validate } from 'datocms-structured-text-utils';
+} from "datocms-html-to-structured-text";
+import { validate } from "datocms-structured-text-utils";
 
 export default async function markdownToStructuredText(
   markdown: string,
-  options: Options,
+  options: Options
 ) {
   if (!markdown) {
     return null;
