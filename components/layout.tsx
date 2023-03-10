@@ -52,9 +52,9 @@ export default function Layout({
   return (
     <>
       <ScrollIndicator />
-      <div className={styles.background} data-datocms-noindex>
+      <div className={styles.background}>
         {!hideNav && (
-          <header className={cn(styles.header)}>
+          <header className={cn(styles.header)} data-datocms-noindex>
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
