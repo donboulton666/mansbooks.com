@@ -16,7 +16,7 @@ function SearchWidget() {
     resultsPerPage: 10,
   });
   return (
-    <div className="mt-2 pt-2 z-30">
+    <div className="mt-2 pt-2 h-8">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -25,7 +25,7 @@ function SearchWidget() {
       >
         <input
           type="search"
-          className="rounded-lg border border-slate-900 bg-slate-800 pt-4 pr-4 pl-4 pb-2 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
+          className="rounded-lg border border-slate-900 bg-slate-800 pt-4 pl-4 h-8 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
