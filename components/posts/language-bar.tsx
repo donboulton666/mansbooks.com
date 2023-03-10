@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function LanguageBar() {
   const currentPath = useRouter().asPath;
   return (
-    <section className="mr-0 mt-0 mb-0 flex flex-col items-center md:mb-0 md:flex-row md:justify-start">
+    <section className="mr-0 mt-0 mb-0 flex flex-col items-center md:mb-0 md:flex-row md:justify-end">
       <Link
         href={currentPath}
         locale="en"
