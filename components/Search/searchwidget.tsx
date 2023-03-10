@@ -16,7 +16,7 @@ function SearchWidget() {
     resultsPerPage: 10,
   });
   return (
-    <div className="mt-1 pt-0.5 h-10 w-40">
+    <div className="mt-1 pt-0.5 h-10">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -31,7 +31,7 @@ function SearchWidget() {
           onChange={(e) => setQuery(e.target.value)}
         />
         <select
-          className="h-9 bg-slate-800 text-sm border-slate-900 focus:border-transparent text-slate-300"
+          className="h-10 bg-slate-800 text-sm border-slate-900 focus:border-transparent text-slate-300"
           value={state.locale}
           onChange={(e) => {
             state.setLocale(e.target.value);
