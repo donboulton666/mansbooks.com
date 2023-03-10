@@ -28,7 +28,7 @@ export default function Search() {
             width="20"
             height="20"
             fill="currentColor"
-            className="pointer-events-none absolute left-3 top-1/2 -mt-2.5 text-slate-300 group-focus-within:text-wine-300"
+            className="pointer-events-none absolute left-3 top-1/2 text-slate-300 group-focus-within:text-wine-300"
             aria-hidden="true"
           >
             <path
@@ -41,7 +41,7 @@ export default function Search() {
             ref={searchedValue}
             type="search"
             id="default-search"
-            className="block w-full rounded-lg border border-slate-900 bg-slate-800 p-4 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
+            className="block w-full rounded-lg border border-slate-900 bg-slate-800 pt-4 pr-4 pl-4 pb-2 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
             required
           ></input>
         </div>
