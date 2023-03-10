@@ -12,11 +12,11 @@ function SearchWidget() {
   const { state, error, data } = useSiteSearch({
     client,
     initialState: { locale: "en" },
-    buildTriggerId: "netlify",
+    buildTriggerId: "26574",
     resultsPerPage: 10,
   });
   return (
-    <div>
+    <div className="mt-2 pt-2 z-30">
       <form
         onSubmit={(e) => {
           e.preventDefault();

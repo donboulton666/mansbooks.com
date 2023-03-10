@@ -23,24 +23,12 @@ export default function Search() {
   return (
     <form onSubmit={handleSearch}>
       <div className="flex h-12">
-        <div className="group relative">
-          <svg
-            width="20"
-            height="20"
-            fill="currentColor"
-            className="pointer-events-none absolute left-3 top-1/2 mb-2 mr-2 pr-2 text-slate-300 group-focus-within:text-wine-300"
-            aria-hidden="true"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-            />
-          </svg>
+        <div>          
           <input
             ref={searchedValue}
             type="search"
             id="default-search"
+            placeholder="Search posts..."
             className="block w-full rounded-lg border border-slate-900 bg-slate-800 pt-4 pr-4 pl-4 pb-2 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
             required
           ></input>
