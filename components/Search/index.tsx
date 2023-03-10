@@ -42,7 +42,6 @@ export default function Search() {
             type="search"
             id="default-search"
             className="block w-full rounded-lg border border-slate-900 bg-slate-800 p-4 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
-            placeholder="Search posts..."
             required
           ></input>
         </div>

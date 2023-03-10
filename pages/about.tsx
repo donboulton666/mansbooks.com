@@ -227,7 +227,7 @@ export default function About() {
                 aria-describedby="Built with NextJs"
                 area-label="Built with NextJs"
               >
-                🔗 Angelina Jordan Official STore
+                🔗 Angelina Jordan Official Store
               </a>
             </p>
             <p>
@@ -276,6 +276,18 @@ export default function About() {
                 area-label="Angelina Jordan Facebook"
               >
                 🔗 Angelina Jordan Facebook
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://twitter.com/angelinajordana"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Twitter"
+                area-label="Angelina Jordan Twitter"
+              >
+                🔗 Angelina Jordan Twitter
               </a>
             </p>
           </div>
