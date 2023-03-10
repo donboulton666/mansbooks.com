@@ -54,7 +54,7 @@ export default function Search(props) {
               const formatedSlug = "/posts/" + slug;
 
               return (
-                <div key={result.id} className="mb-5">
+                <div key={result.id} className="mb-20">
                   <h3 className="mb-3 text-3xl leading-snug">
                     <Link as={formatedSlug} href={formatedSlug}>
                       <a className="hover:underline">{result.title}</a>

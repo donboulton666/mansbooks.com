@@ -28,7 +28,7 @@ export default function Search() {
             width="20"
             height="20"
             fill="currentColor"
-            className="pointer-events-none absolute left-3 top-1/2 text-slate-300 group-focus-within:text-wine-300"
+            className="pointer-events-none absolute left-3 top-1/2 mb-2 mr-2 pr-2 text-slate-300 group-focus-within:text-wine-300"
             aria-hidden="true"
           >
             <path
