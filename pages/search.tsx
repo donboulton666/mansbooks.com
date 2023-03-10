@@ -16,7 +16,7 @@ export default function Search() {
     client,
     initialState: { locale: "en" },
     buildTriggerId: "26574",
-    resultsPerPage: 10,
+    resultsPerPage: 5,
   });
   return (
     <Layout>
@@ -128,12 +128,12 @@ export default function Search() {
         </>
         ,
       </Head>
-      <div className="mx-18">
+      <div className="mx-18 mb-48 min-h-max">
         <div className="mt-10">
           <Center>Search this website</Center>
-          <div className="mt-16 mb-28 p-8 sm:mt-2">
+          <div className="mt-16 p-8 sm:mt-2">
             <div className="mb-2">
-              <div className="mt-1 h-10 w-full pt-0.5">
+              <div className="mt-1 h-96 w-full pt-0.5">
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -142,13 +142,13 @@ export default function Search() {
                 >
                   <input
                     type="search"
-                    className="h-10 w-96 rounded-lg border border-slate-900 bg-slate-800 pl-4 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
+                    className="h-10 w-96 rounded-bl-lg rounded-tl-lg border border-slate-900 bg-slate-800 pl-4 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
                     value={query}
                     placeholder="Search..."
                     onChange={(e) => setQuery(e.target.value)}
                   />
                   <select
-                    className="h-10 border-slate-900 bg-slate-800 text-sm text-slate-300 focus:border-transparent"
+                    className="h-10 rounded-r-lg border-slate-900 bg-slate-800 text-sm text-slate-300 focus:border-transparent"
                     value={state.locale}
                     onChange={(e) => {
                       state.setLocale(e.target.value);
@@ -165,7 +165,7 @@ export default function Search() {
                 {data && (
                   <>
                     {data.pageResults.map((result) => (
-                      <div key={result.id}>
+                      <div key={result.id} className="mb-40">
                         <a href={result.url}>{result.title}</a>
                         <div>{result.bodyExcerpt}</div>
                         <div>{result.url}</div>
