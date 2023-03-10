@@ -16,7 +16,7 @@ function SearchWidget() {
     resultsPerPage: 10,
   });
   return (
-    <div className="mt-1 pt-1 h-10">
+    <div className="mt-1 pt-0.5 h-10 w-40">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -25,12 +25,13 @@ function SearchWidget() {
       >
         <input
           type="search"
-          className="rounded-lg border border-slate-900 bg-slate-800 pt-4 pl-4 h-10 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
+          className="rounded-lg border border-slate-900 bg-slate-800 pl-4 h-10 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
           value={query}
+          placeholder="Search..."
           onChange={(e) => setQuery(e.target.value)}
         />
         <select
-          className="bg-slate-800 text-sm text-slate-300"
+          className="h-9 bg-slate-800 text-sm border-slate-900 focus:border-transparent text-slate-300"
           value={state.locale}
           onChange={(e) => {
             state.setLocale(e.target.value);
@@ -55,7 +56,7 @@ function SearchWidget() {
               <div>{result.url}</div>
             </div>
           ))}
-          <p className="mt-2 pt-2">Total results: {data.totalResults}</p>
+          <p className="mt-1 pt-1 ml-2">Total results: {data.totalResults}</p>
           <ReactPaginate
             pageCount={data.totalPages}
             forcePage={state.page}
