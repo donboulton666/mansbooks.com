@@ -1,28 +1,28 @@
-import { useState } from "react";
-import { buildClient } from "@datocms/cma-client-browser";
-import ReactPaginate from "react-paginate";
-import { useSiteSearch } from "react-datocms";
+import { useRouter } from "next/router";
+import { useEffect, useRef } from "react";
 
-const client = buildClient({
-  apiToken: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
-});
+export default function Search() {
+  const searchedValue = useRef("");
+  const router = useRouter();
+  const { term } = router.query;
 
-function Search() {
-  const [query, setQuery] = useState("");
-  const { state, error, data } = useSiteSearch({
-    client,
-    initialState: { locale: "en" },
-    buildTriggerId: "netlify",
-    resultsPerPage: 10,
-  });
+  useEffect(() => {
+    if (term) {
+      searchedValue.current.value = term;
+    }
+  }, [term]);
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    if (searchedValue.current.value) {
+      // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
+      router.push("/search/" + searchedValue.current.value);
+    }
+  };
+
   return (
-    <div className="bg-slate-900 pt-8 pb-6 text-slate-300">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          state.setQuery(query);
-        }}
-      >
+    <form onSubmit={handleSearch}>
+      <div className="flex h-12">
         <div className="group relative">
           <svg
             width="20"
@@ -38,49 +38,21 @@ function Search() {
             />
           </svg>
           <input
-            className="search-box w-96 rounded-md bg-slate-900 py-2 pl-10 text-sm leading-6 text-slate-300 placeholder-slate-400 shadow-sm ring-1 ring-wine-300 focus:outline-none focus:ring-2 focus:ring-wine-200"
+            ref={searchedValue}
             type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <select
-            value={state.locale}
-            onChange={(e) => {
-              state.setLocale(e.target.value);
-            }}
-          >
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-            <option value="it">Italian</option>
-            <option value="nn">Norwegian</option>
-          </select>
+            id="default-search"
+            className="block w-full rounded-lg border border-slate-900 bg-slate-800 p-4 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
+            placeholder="Search posts..."
+            required
+          ></input>
         </div>
-      </form>
-      {!data && !error && <p>Loading...</p>}
-      {error && <p>Error! {error}</p>}
-      {data && (
-        <>
-          {data.pageResults.map((result) => (
-            <div key={result.id}>
-              <a href={result.url}>{result.title}</a>
-              <div>{result.bodyExcerpt}</div>
-              <div>{result.url}</div>
-            </div>
-          ))}
-          <p>Total results: {data.totalResults}</p>
-          <ReactPaginate
-            pageCount={data.totalPages}
-            forcePage={state.page}
-            onPageChange={({ selected }) => {
-              state.setPage(selected);
-            }}
-            activeClassName="active"
-            renderOnZeroPageCount={() => null}
-          />
-        </>
-      )}
-    </div>
+        <button
+          type="submit"
+          className="right-2.5 bottom-2.5 rounded-lg bg-wine-300 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-wine-200 focus:outline-none focus:ring-4 focus:ring-wine-300"
+        >
+          Search
+        </button>
+      </div>
+    </form>
   );
 }
-
-export default Search;

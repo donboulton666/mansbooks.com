@@ -202,23 +202,11 @@ export default function Footer() {
                     <li>
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="/search"
-                        aria-describedby="Search"
-                        area-label="Search"
+                        href="/privacy"
+                        aria-describedby="Privacy"
+                        area-label="Privacy"
                       >
-                        Search Page
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="/sitemap.xml"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        aria-describedby="Sitemap"
-                        area-label="Sitemap"
-                      >
-                        Sitemap XML
+                        Privacy
                       </Link>
                     </li>
                   </ul>
@@ -269,16 +257,6 @@ export default function Footer() {
                         area-label="Terms"
                       >
                         Terms
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="/privacy"
-                        aria-describedby="Privacy"
-                        area-label="Privacy"
-                      >
-                        Privacy
                       </Link>
                     </li>
                     <li>

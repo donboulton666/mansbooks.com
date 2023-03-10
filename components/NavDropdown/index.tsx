@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+
 import {
-  SearchIcon,
   UserGroupIcon,
   UserIcon,
   PhotographIcon,
@@ -24,18 +24,6 @@ export default function Navigation() {
             <div className="mx-auto mr-7 max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <div className="p-1">
-                    <span className="sr-only">Search</span>
-                    <Link href="/search">
-                      <span className="flex flex-shrink-0 items-center pr-1 text-lg">
-                        <SearchIcon
-                          className="h-7 w-8 text-wine-300 text-opacity-75 hover:text-slate-300"
-                          aria-hidden="true"
-                        />
-                      </span>
-                    </Link>
-                  </div>
-
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-1">
                     <div>
@@ -45,16 +33,6 @@ export default function Navigation() {
                           className="text-wine-300 text-opacity-75 hover:text-slate-300"
                           aria-hidden="true"
                           aria-label="DarkMode"
-                        />
-                        <span className="sr-only">Open Control Menu</span>
-                        <ChevronDownIcon
-                          className={`${
-                            open
-                              ? "rotate-180 transform text-wine-300"
-                              : "text-opacity-75"
-                          }
-                          -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
-                          aria-hidden="true"
                         />
                       </Menu.Button>
                     </div>
