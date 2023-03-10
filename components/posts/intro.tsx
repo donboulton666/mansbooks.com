@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Intro() {
   return (
     <section className="mt-16 mb-16 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
@@ -6,19 +8,19 @@ export default function Intro() {
       </h1>
       <h4 className="mt-5 text-center text-lg md:pl-8 md:text-left">
         Angelina Jordan's{" "}
-        <a
-          href="https://mansbooks.com/expo"
+        <Link
+          href="/expo"
           className="hover:text-success text-blue-500 underline transition-colors duration-200"
         >
           Vlogs
-        </a>{" "}
+        </Link>{" "}
         <span className="text-wine-200">&</span>{" "}
-        <a
-          href="https://mansbooks.com/blog"
+        <Link
+          href="/blog"
           className="hover:text-success text-blue-500 underline transition-colors duration-200"
         >
           Blogs
-        </a>
+        </Link>
         .
       </h4>
     </section>

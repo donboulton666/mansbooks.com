@@ -1,4 +1,4 @@
-import { buildClient } from "@datocms/cma-client-node";
+import { buildClient } from "@datocms/cma-client";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -8,6 +8,7 @@ import Intro from "@components/posts/intro";
 import LanguageBar from "@components/posts/language-bar";
 import Layout from "@components/layout";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function getServerSideProps(context) {
   const token = process.env.NEXT_CMS_DATOCMS_API_TOKEN_SITE_SEARCH;
   const buildTriggerId = process.env.NEXT_CMS_DATOCMS_BUILD_TRIGGER_ID;
@@ -22,6 +23,7 @@ export default function Search(props) {
 
   const client = buildClient({
     headers: {
+      "Content-Type": "application/json",
       authorization: `Bearer ${process.env.DATOCMS_READ_ONLY_API_TOKEN}`,
     },
     apiToken: props.token,
@@ -58,12 +60,16 @@ export default function Search(props) {
               return (
                 <div key={result.id} className="mb-20">
                   <h3 className="mb-3 text-3xl leading-snug">
-                    <Link as={formatedSlug} href={formatedSlug}>
-                      <a className="hover:underline">{result.title}</a>
+                    <Link
+                      as={formatedSlug}
+                      href={formatedSlug}
+                      className="hover:underline"
+                    >
+                      {result.title}
                     </Link>
                   </h3>
                   <p className="mb-4 text-lg leading-relaxed">
-                    "{result.bodyExcerpt}"
+                    {result.bodyExcerpt}
                   </p>
                 </div>
               );

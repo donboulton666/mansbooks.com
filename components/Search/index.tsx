@@ -23,7 +23,7 @@ export default function Search() {
   return (
     <form onSubmit={handleSearch}>
       <div className="flex h-12">
-        <div>          
+        <div>
           <input
             ref={searchedValue}
             type="search"
