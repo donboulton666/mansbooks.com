@@ -439,3 +439,7 @@ input:-webkit-autofill:active {
 input:-webkit-autofill {
   -webkit-text-fill-color: #ffffff !important;
 }
+
+.active {
+  color: #70002a;
+}

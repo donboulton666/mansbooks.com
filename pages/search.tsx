@@ -165,7 +165,7 @@ export default function Search() {
                 {data && (
                   <>
                     {data.pageResults.map((result) => (
-                      <div key={result.id} className="mb-40">
+                      <div key={result.id} className="pb-4">
                         <a href={result.url}>{result.title}</a>
                         <div>{result.bodyExcerpt}</div>
                         <div>{result.url}</div>
@@ -181,6 +181,7 @@ export default function Search() {
                         state.setPage(selected);
                       }}
                       activeClassName="active"
+                      className="flex flex-col items-center md:flex-row" 
                       renderOnZeroPageCount={() => null}
                     />
                   </>
