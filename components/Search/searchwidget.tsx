@@ -16,7 +16,7 @@ function SearchWidget() {
     resultsPerPage: 10,
   });
   return (
-    <div className="mt-1 h-10 pt-0.5 w-96">
+    <div className="mt-1 h-10 pt-0.5 w-full">
       <form
         onSubmit={(e) => {
           e.preventDefault();
