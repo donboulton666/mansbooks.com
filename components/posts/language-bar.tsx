@@ -8,28 +8,28 @@ export default function LanguageBar() {
       <Link
         href={currentPath}
         locale="en"
-        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-8 transition duration-300 hover:text-wine-200"
+        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-4 transition duration-300 hover:text-wine-200"
       >
         English
       </Link>
       <Link
         href={currentPath}
         locale="it"
-        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-8 transition duration-300 hover:text-wine-200"
+        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-4 transition duration-300 hover:text-wine-200"
       >
         Italian
       </Link>
       <Link
         href={currentPath}
         locale="es"
-        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-8 transition duration-300 hover:text-wine-200"
+        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-4 transition duration-300 hover:text-wine-200"
       >
         Spanish
       </Link>
       <Link
         href={currentPath}
         locale="nn"
-        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-8 transition duration-300 hover:text-wine-200"
+        className="p-1 text-wine-200 underline decoration-wine-300 decoration-wavy underline-offset-4 transition duration-300 hover:text-wine-200"
       >
         Norwegian
       </Link>

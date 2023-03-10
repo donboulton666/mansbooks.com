@@ -28,7 +28,6 @@ import Footer from "./footer";
 import ScrollIndicator from "./ScrollIndicator";
 import DemoButton from "./hms/demo-cta";
 import NavDropdown from "@components/NavDropdown";
-import SearchWidget from "./Search/searchwidget";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 
@@ -86,7 +85,6 @@ export default function Layout({
             ) : (
               <>
                 <div />
-                <SearchWidget />
                 <NavDropdown />
               </>
             )}

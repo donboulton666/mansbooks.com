@@ -1,4 +1,4 @@
-import { buildClient } from "@datocms/cma-client";
+import { buildClient } from "@datocms/cma-client-browser";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
