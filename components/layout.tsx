@@ -52,7 +52,7 @@ export default function Layout({
   return (
     <>
       <ScrollIndicator />
-      <div className={styles.background}>
+      <div className={styles.background} data-datocms-noindex>
         {!hideNav && (
           <header className={cn(styles.header)}>
             <div className={styles["header-logos"]}>

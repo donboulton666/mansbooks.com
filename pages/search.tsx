@@ -181,7 +181,7 @@ export default function Search() {
                         state.setPage(selected);
                       }}
                       activeClassName="active"
-                      className="flex flex-col items-center md:flex-row" 
+                      className="flex flex-col items-center px-4 space-x-1.5 md:flex-row" 
                       renderOnZeroPageCount={() => null}
                     />
                   </>
