@@ -171,9 +171,7 @@ export default function Search() {
                         <div>{result.url}</div>
                       </div>
                     ))}
-                    <p>
-                      Total results: {data.totalResults}
-                    </p>
+                    <p>Total results: {data.totalResults}</p>
                     <ReactPaginate
                       pageCount={data.totalPages}
                       forcePage={state.page}
@@ -181,7 +179,7 @@ export default function Search() {
                         state.setPage(selected);
                       }}
                       activeClassName="active"
-                      className="flex flex-col items-center px-4 space-x-1.5 md:flex-row" 
+                      className="flex flex-col items-center space-x-1.5 px-4 md:flex-row"
                       renderOnZeroPageCount={() => null}
                     />
                   </>
