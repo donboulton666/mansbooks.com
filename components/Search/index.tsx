@@ -38,7 +38,7 @@ function Search() {
             />
           </svg>
           <input
-            className="search-box w-full rounded-md bg-slate-900 py-2 pl-10 text-sm leading-6 text-slate-300 placeholder-slate-400 shadow-sm ring-1 ring-wine-300 focus:outline-none focus:ring-2 focus:ring-wine-200"
+            className="search-box w-96 rounded-md bg-slate-900 py-2 pl-10 text-sm leading-6 text-slate-300 placeholder-slate-400 shadow-sm ring-1 ring-wine-300 focus:outline-none focus:ring-2 focus:ring-wine-200"
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -50,7 +50,9 @@ function Search() {
             }}
           >
             <option value="en">English</option>
+            <option value="es">Spanish</option>
             <option value="it">Italian</option>
+            <option value="nn">Norwegian</option>
           </select>
         </div>
       </form>

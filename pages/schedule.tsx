@@ -15,12 +15,12 @@
  */
 
 import { GetStaticProps } from "next";
-
 import Page from "@components/page";
 import Schedule from "@components/schedule";
 import Layout from "@components/layout";
 import Header from "@components/header";
-
+import LanguageBar from "@components/posts/language-bar";
+import Container from "@components/posts/container";
 import { getAllStages } from "@lib/cms-api";
 import { Stage } from "@lib/types";
 import { META_DESCRIPTION } from "@lib/constants";
@@ -38,8 +38,11 @@ export default function SchedulePage({ allStages }: Props) {
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Schedule" description={meta.description} />
-        <Schedule allStages={allStages} />
+        <Container>
+          <LanguageBar />
+          <Header hero="Schedule" description={meta.description} />
+          <Schedule allStages={allStages} />
+        </Container>
       </Layout>
     </Page>
   );

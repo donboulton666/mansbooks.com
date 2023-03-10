@@ -10,7 +10,7 @@ import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/posts/language-bar";
 import { useRouter } from "next/router";
 
-export async function getStaticProps({preview, locale}) {
+export async function getStaticProps({ preview, locale }) {
   const formattedLocale = locale.split("-")[0];
   const graphqlRequest = {
     query: `
@@ -73,7 +73,7 @@ export default function Index({ subscription }) {
   const {
     data: { allPosts, site, blog },
   } = useQuerySubscription(subscription);
-  
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { locale, locales, asPath } = useRouter().locale;
 

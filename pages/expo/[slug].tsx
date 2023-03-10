@@ -19,7 +19,8 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Page from "@components/page";
 import SponsorSection from "@components/sponsor-section";
 import Layout from "@components/layout";
-
+import LanguageBar from "@components/posts/language-bar";
+import Container from "@components/posts/container";
 import { getAllSponsors } from "@lib/cms-api";
 import { Sponsor } from "@lib/types";
 import { META_DESCRIPTION } from "@lib/constants";
@@ -37,7 +38,10 @@ export default function SponsorPage({ sponsor }: Props) {
   return (
     <Page meta={meta}>
       <Layout>
-        <SponsorSection sponsor={sponsor} />
+        <Container>
+          <LanguageBar />
+          <SponsorSection sponsor={sponsor} />
+        </Container>
       </Layout>
     </Page>
   );

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Search from "../Search";
 import i18n from "@lib/i18n";
 
 export default function Intro() {
@@ -6,6 +7,9 @@ export default function Intro() {
   const formattedLocale = locale.split("-")[0];
   return (
     <section className="mt-16 mb-16 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
+      <div className="mt-10 w-full md:w-1/2 lg:w-1/3">
+        <Search />
+      </div>
       <h1 className="text-3xl font-bold leading-tight tracking-tighter text-wine-200 md:pr-8 md:text-2xl">
         Blog Posts
       </h1>
