@@ -1,10 +1,23 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import SearchWidget from "../components/Search/searchwidget";
+import { useState } from "react";
+import { buildClient } from "@datocms/cma-client-browser";
+import ReactPaginate from "react-paginate";
+import { useSiteSearch } from "react-datocms";
 import Center from "../components/Center";
 import angie from "../public/angie/angelina.jpg";
 
-export default function SearchForm() {
+export default function Search() {
+  const client = buildClient({
+    apiToken: process.env.DATOCMS_READ_ONLY_API_TOKEN,
+  });
+  const [query, setQuery] = useState("");
+  const { state, error, data } = useSiteSearch({
+    client,
+    initialState: { locale: "en" },
+    buildTriggerId: "26574",
+    resultsPerPage: 10,
+  });
   return (
     <Layout>
       <Head>
@@ -116,15 +129,67 @@ export default function SearchForm() {
         ,
       </Head>
       <div className="mx-18">
-          <div className="mt-10">
-            <Center>Search this website</Center>
-            <div className="mt-16 mb-28 p-8 sm:mt-2">
-              <div className="mb-2">
-                <SearchWidget />
+        <div className="mt-10">
+          <Center>Search this website</Center>
+          <div className="mt-16 mb-28 p-8 sm:mt-2">
+            <div className="mb-2">
+              <div className="mt-1 h-10 w-full pt-0.5">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    state.setQuery(query);
+                  }}
+                >
+                  <input
+                    type="search"
+                    className="h-10 w-96 rounded-lg border border-slate-900 bg-slate-800 pl-4 text-sm text-slate-300 placeholder-slate-400 focus:border-wine-300 focus:ring-wine-400"
+                    value={query}
+                    placeholder="Search..."
+                    onChange={(e) => setQuery(e.target.value)}
+                  />
+                  <select
+                    className="h-10 border-slate-900 bg-slate-800 text-sm text-slate-300 focus:border-transparent"
+                    value={state.locale}
+                    onChange={(e) => {
+                      state.setLocale(e.target.value);
+                    }}
+                  >
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="nn">Norwegian</option>
+                  </select>
+                </form>
+                {!data && !error && <p>Loading...</p>}
+                {error && <p>Error! {error}</p>}
+                {data && (
+                  <>
+                    {data.pageResults.map((result) => (
+                      <div key={result.id}>
+                        <a href={result.url}>{result.title}</a>
+                        <div>{result.bodyExcerpt}</div>
+                        <div>{result.url}</div>
+                      </div>
+                    ))}
+                    <p>
+                      Total results: {data.totalResults}
+                    </p>
+                    <ReactPaginate
+                      pageCount={data.totalPages}
+                      forcePage={state.page}
+                      onPageChange={({ selected }) => {
+                        state.setPage(selected);
+                      }}
+                      activeClassName="active"
+                      renderOnZeroPageCount={() => null}
+                    />
+                  </>
+                )}
               </div>
             </div>
           </div>
         </div>
+      </div>
     </Layout>
   );
 }
