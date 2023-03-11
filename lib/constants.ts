@@ -60,10 +60,6 @@ export const NAVIGATION = [
     route: "/expo",
   },
   {
-    name: "Profile",
-    route: "/profile",
-  },
-  {
     name: "Schedule",
     route: "/schedule",
   },

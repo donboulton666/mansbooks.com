@@ -8,7 +8,7 @@ import WavyHr from "../WavyHr";
 export default function LanguageBar() {
   const currentPath = useRouter().asPath;
   return (
-    <div className="fixed left-1 top-1/4 z-10 mb-4 w-32 pb-4 md:left-1">
+    <div className="fixed left-1 top-1/4 z-10 mb-4 w-28 pb-4 md:left-1">
       <Popover as="div">
         {({ open }) => (
           <>
@@ -51,7 +51,7 @@ export default function LanguageBar() {
                   </div>
                   <div className="text-center text-xl text-slate-200 underline decoration-blue-300 decoration-wavy underline-offset-2"></div>
                   <WavyHr className="mt-1 mb-1" />
-                  <nav className="nav-scroll h-40 w-auto overflow-y-auto overflow-x-hidden">
+                  <nav className="nav-scroll h-44 w-auto overflow-y-auto overflow-x-hidden">
                     <ul className="flex flex-col">
                       <Link
                         href={currentPath}
