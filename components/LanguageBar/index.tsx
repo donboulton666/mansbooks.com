@@ -51,7 +51,7 @@ export default function LanguageBar() {
                   </div>
                   <div className="text-center text-xl text-slate-200 underline decoration-blue-300 decoration-wavy underline-offset-2"></div>
                   <WavyHr className="mt-1 mb-1" />
-                  <nav className="nav-scroll h-32 w-auto overflow-y-auto overflow-x-hidden">
+                  <nav className="nav-scroll h-40 w-auto overflow-y-auto overflow-x-hidden">
                     <ul className="flex flex-col">
                       <Link
                         href={currentPath}
