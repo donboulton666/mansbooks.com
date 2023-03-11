@@ -7,7 +7,7 @@ import Layout from "@components/layout";
 import MoreStories from "@components/posts/more-stories";
 import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
-import LanguageBar from "@components/posts/language-bar";
+import LanguageBar from "@components/LanguageBar";
 import { useRouter } from "next/router";
 
 export async function getStaticProps({ preview, locale }) {

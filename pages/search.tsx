@@ -135,6 +135,7 @@ export default function Search() {
             <div className="mb-2">
               <div className="mt-1 h-96 w-full pt-0.5">
                 <form
+                  autocomplete="on"
                   onSubmit={(e) => {
                     e.preventDefault();
                     state.setQuery(query);

@@ -203,121 +203,119 @@ export default function About() {
             Republic records. August 2020.
           </p>
         </Section>
-        <Center>Extended Profile Information:{" "}</Center>
-      <div
-        className="mb-20"
-      >
-        <div className={styles.grid}>
-          <div>
-            <a
-              href="https://angelinajordanofficial.com"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan"
-              area-label="Angelina Jordan"
-            >
-              🔗 Angelina Jordan official Website
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://angelina-jordan-official-store.creator-spring.com/"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Built with NextJs"
-              area-label="Built with NextJs"
-            >
-              🔗 Angelina Jordan Official Store
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://youtube.com/c/AngelinaJordanOfficial"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan YouTube Channel"
-              area-label="Angelina Jordan YouTube Channel"
-            >
-              🔗 Angelina Jordan YouTube
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://youtube.com/c/AngelinaJordanCoverChannel"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan Cover Offical"
-              area-label="Angelina Jordan Cover Offical"
-            >
-              🔗 Angelina Jordan Covers
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://www.instagram.com/angelinajordana/"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan Instagram"
-              area-label="Angelina Jordan Instagram"
-            >
-              🔗 Angelina Jordan Instagram
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://www.facebook.com/angelinajordanofficial"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan Facebook"
-              area-label="Angelina Jordan Facebook"
-            >
-              🔗 Angelina Jordan Facebook
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://twitter.com/angelinajordana"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan Twitter"
-              area-label="Angelina Jordan Twitter"
-            >
-              🔗 Angelina Jordan Twitter
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://www.tiktok.com/@angelinajordana/"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan"
-              area-label="Angelina Jordan"
-            >
-              🔗 Angelina Jordan TikTok
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://angelinajordandatabase.com/"
-              className="hover:text-pink-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-describedby="Angelina Jordan Database"
-              area-label="Angelina Jordan Database"
-            >
-              🔗 Angelina Jordan Database
-            </a>
+        <Center>Extended Profile Information: </Center>
+        <div className="mb-20">
+          <div className={styles.grid}>
+            <div>
+              <a
+                href="https://angelinajordanofficial.com"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan"
+                area-label="Angelina Jordan"
+              >
+                🔗 Angelina Jordan official Website
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://angelina-jordan-official-store.creator-spring.com/"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Built with NextJs"
+                area-label="Built with NextJs"
+              >
+                🔗 Angelina Jordan Official Store
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://youtube.com/c/AngelinaJordanOfficial"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan YouTube Channel"
+                area-label="Angelina Jordan YouTube Channel"
+              >
+                🔗 Angelina Jordan YouTube
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://youtube.com/c/AngelinaJordanCoverChannel"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Cover Offical"
+                area-label="Angelina Jordan Cover Offical"
+              >
+                🔗 Angelina Jordan Covers
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.instagram.com/angelinajordana/"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Instagram"
+                area-label="Angelina Jordan Instagram"
+              >
+                🔗 Angelina Jordan Instagram
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.facebook.com/angelinajordanofficial"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Facebook"
+                area-label="Angelina Jordan Facebook"
+              >
+                🔗 Angelina Jordan Facebook
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://twitter.com/angelinajordana"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Twitter"
+                area-label="Angelina Jordan Twitter"
+              >
+                🔗 Angelina Jordan Twitter
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.tiktok.com/@angelinajordana/"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan"
+                area-label="Angelina Jordan"
+              >
+                🔗 Angelina Jordan TikTok
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://angelinajordandatabase.com/"
+                className="hover:text-pink-500"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-describedby="Angelina Jordan Database"
+                area-label="Angelina Jordan Database"
+              >
+                🔗 Angelina Jordan Database
+              </a>
+            </div>
           </div>
         </div>
-      </div>
         <Section>
           <Center>WebSite Framework & Design</Center>
           <Image

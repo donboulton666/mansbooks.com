@@ -20,6 +20,7 @@ import Page from "@components/page";
 import SpeakersGrid from "@components/speakers-grid";
 import Layout from "@components/layout";
 import Header from "@components/header";
+import LanguageBar from "@components/posts/language-bar";
 import { getAllSpeakers } from "@lib/cms-api";
 import { Speaker } from "@lib/types";
 import { META_DESCRIPTION } from "@lib/constants";
@@ -37,6 +38,7 @@ export default function Speakers({ speakers }: Props) {
   return (
     <Page meta={meta}>
       <Layout>
+        <LanguageBar />
         <Container>
           <div className="mb-20">
             <Header hero="Speakers" description={meta.description} />

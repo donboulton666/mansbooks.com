@@ -103,7 +103,10 @@ export default class CustomDocument extends Document {
             property="og:image"
             content="https://mansbooks.com/icons/apple-touch-icon.png"
           />
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6QPYXMYV09" />
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-6QPYXMYV09"
+          />
           <Script
             id="gtag"
             strategy="afterInteractive"

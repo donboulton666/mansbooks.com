@@ -9,7 +9,7 @@ import PostHeader from "@components/posts/post-header";
 import SectionSeparator from "@components/posts/section-separator";
 import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
-import LanguageBar from "@components/posts/language-bar";
+import LanguageBar from "@components/LanguageBar";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { format } from "date-fns";
 
