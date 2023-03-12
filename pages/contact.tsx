@@ -12,7 +12,7 @@ import heidisParty from "../public/angie/heidis-party.jpg";
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout data-datocms-noindex>
       <Head>
         <title>Contact</title>
         <>
@@ -121,7 +121,7 @@ export default function Contact() {
         </>
         ,
       </Head>
-      <div className="mr-10 ml-10 mt-10 mb-20">
+      <div className="mr-10 ml-10 mt-10 mb-20" data-datocms-noindex>
         <p>
           <Center>Contact Queen Angelina Jordan</Center>
           <p>Use the form below to Contact the Angelic Queen.</p>
