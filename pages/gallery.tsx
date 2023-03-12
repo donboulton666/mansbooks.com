@@ -173,7 +173,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                 Queen Amgelina Jordan, collection of photos!
               </p>
               <a
-                className="pointer z-10 mt-6 rounded-lg border border-purple-800 bg-purple-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-white md:mt-4"
+                className="pointer z-10 mt-6 rounded-lg border border-wine-400 bg-wine-300 px-3 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-slate-200 md:mt-4"
                 href="https://www.instagram.com/angelinajordana/"
                 rel="noopener noreferrer"
                 target="_blank"
