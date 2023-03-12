@@ -8,7 +8,6 @@ import {
   NetlifyFormProvider,
   NetlifyFormComponent,
   Honeypot,
-  Recaptcha,
 } from "react-netlify-forms";
 import { useForm, Resolver } from "react-hook-form";
 
@@ -46,8 +45,7 @@ interface ContactFormProps {
 
 const ContactForm: FC<ContactFormProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { name, action, honeypotName, recaptcha, children } = props
-  const SITE_RECAPTCHA_KEY = process.env.NEXT_SITE_RECAPTCHA_KEY
+  const { name, action, honeypotName, children } = props;
   const {
     register,
     handleSubmit,
@@ -72,10 +70,9 @@ const ContactForm: FC<ContactFormProps> = (props) => {
   return (
     <div className="-pt-2 mb-24 text-slate-300 lg:col-span-2 lg:mt-0">
       <NetlifyFormProvider {...netlify}>
-        <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)} enableRecaptcha>
+        <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)}>
           <>
             <Honeypot />
-            <Recaptcha siteKey={SITE_RECAPTCHA_KEY} theme="dark" invisible />
             <p className="hidden">
               <label>
                 Don not fill this out if you are human:{" "}
@@ -427,7 +424,12 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                     rel="noopener noreferrer"
                     aria-describedby="Netlify"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" className="inline-flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40px"
+                      height="40px"
+                      className="inline-flex"
+                    >
                       <defs>
                         <radialGradient
                           id="a"
