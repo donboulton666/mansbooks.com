@@ -354,10 +354,10 @@ export default function Contact() {
             <div className="mt-4">
               <Image
                 layout="fixed"
-                className="h-5 w-5 self-center"
+                className="h-5 w-5 self-center rounded-lg"
                 src={heidisParty}
-                width={300}
-                height={533}
+                width={325}
+                height={573}
                 quality={95}
                 alt="Angie Elvira"
                 loading="lazy"

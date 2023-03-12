@@ -131,7 +131,7 @@ export default function Search() {
       <div className="mx-18 mb-48 min-h-max">
         <div className="mt-10">
           <Center>Search this website</Center>
-          <div className="mt-16 p-8 sm:mt-2">
+          <div className="mt-16 p-8 sm:mt-2 flex justify-center">
             <div className="mb-2">
               <div className="mt-1 h-96 w-full pt-0.5">
                 <form
