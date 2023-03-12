@@ -8,7 +8,7 @@ import {
   NetlifyFormProvider,
   NetlifyFormComponent,
   Honeypot,
-  Recaptcha
+  Recaptcha,
 } from "react-netlify-forms";
 import { useForm, Resolver } from "react-hook-form";
 
@@ -45,6 +45,7 @@ interface ContactFormProps {
 }
 
 const ContactForm: FC<ContactFormProps> = (props) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { name, action, honeypotName, recaptcha, children } = props
   const SITE_RECAPTCHA_KEY = process.env.NEXT_SITE_RECAPTCHA_KEY
   const {
@@ -74,7 +75,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
         <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)} enableRecaptcha>
           <>
             <Honeypot />
-            <Recaptcha siteKey={NEXT_SITE_RECAPTCHA_KEY} theme="dark" invisible />
+            <Recaptcha siteKey={SITE_RECAPTCHA_KEY} theme="dark" invisible />
             <p className="hidden">
               <label>
                 Don not fill this out if you are human:{" "}
