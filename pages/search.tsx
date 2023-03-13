@@ -6,6 +6,7 @@ import ReactPaginate from "react-paginate";
 import { useSiteSearch } from "react-datocms";
 import Center from "../components/Center";
 import angie from "../public/angie/angelina.jpg";
+import LanguageBar from "@components/LanguageBar";
 import { useRouter } from "next/router";
 import i18n from "@lib/i18n";
 
@@ -131,6 +132,7 @@ export default function Search() {
         </>
         ,
       </Head>
+      <LanguageBar />
       <div className="mx-18 mb-48 min-h-max">
         <div className="mt-10">
           <Center>{i18n.search.description[locale]}</Center>
