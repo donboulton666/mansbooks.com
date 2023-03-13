@@ -10,6 +10,7 @@ module.exports = withPWA({
   i18n: {
     locales: ["en", "es", "it", "nn"],
      defaultLocale: "en",
+     localeDetection: false,
   },
   env: {
     DATOCMS_READ_ONLY_API_TOKEN:

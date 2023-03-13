@@ -63,6 +63,56 @@ export default {
       nn: "Rute",
     },
   },
+  dropdown: {
+    livestage: {
+      en: "Live Stage",
+      it: "Palco dal vivo",
+      es: "Escenario en vivo",
+      nn: "Live Stage",
+    },
+    vercelstage: {
+      en: "Vercel Stage",
+      it: "Palco Vercel",
+      es: "Escenario Vercel",
+      nn: "Vercel Stage",
+    },
+    msstage: {
+      en: "100ms Stage",
+      it: "Palco da 100 ms",
+      es: "Etapa de 100ms",
+      nn: "100 ms scene",
+    },
+    profile: {
+      en: "Profile",
+      it: "Profilo",
+      es: "Perfil",
+      nn: "Profil",
+    },
+    gallery: {
+      en: "Gallery",
+      it: "Galleria",
+      es: "Galería",
+      nn: "Galleri",
+    },
+    social: {
+      en: "Social",
+      it: "Sociale",
+      es: "Social",
+      nn: "Sosial",
+    },
+    speakers: {
+      en: "Speakers",
+      it: "Altoparlanti",
+      es: "Oradoras",
+      nn: "Høyttalere",
+    },
+    sitemap: {
+      en: "Sitemap",
+      it: "Mappa del sito",
+      es: "Mapa del sitio",
+      nn: "Nettstedkart",
+    },
+  },
   footer: {
     contact: {
       en: "Let's keep in touch!.",
@@ -93,6 +143,42 @@ export default {
       it: "Ricevi contenuti esclusivi solo per newsletter di tanto in tanto",
       es: "Obtenga contenido exclusivo solo para boletines de vez en cuando",
       nn: "Få eksklusivt innhold kun for nyhetsbrev nå og da",
+    },
+    contactpage: {
+      en: "Let's keep in touch!.",
+      it: "Teniamoci in contatto!.",
+      es: "¡Mantengámonos en contacto!",
+      nn: "La oss holde kontakten!",
+    },
+    thanks: {
+      en: "Thanks.",
+      it: "Grazie",
+      es: "Gracias",
+      nn: "Takk",
+    },
+    license: {
+      en: "License",
+      it: "Licenza",
+      es: "Licencia",
+      nn: "Tillatelse",
+    },
+    privacy: {
+      en: "Privacy",
+      it: "Riservatezza",
+      es: "Privacidad",
+      nn: "Personvern",
+    },
+    terms: {
+      en: "Terms",
+      it: "Termini",
+      es: "Términos",
+      nn: "Vilkår",
+    },
+    about: {
+      en: "About Angie",
+      it: "Angi",
+      es: "Angie",
+      nn: "Om Angie",
     },
   },
   intro: {
