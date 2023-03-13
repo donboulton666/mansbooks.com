@@ -31,24 +31,68 @@ export default {
       nn: "legge til forhåndsvisningstokenet ditt for å gå inn i forhåndsvisningsmodus!",
     },
   },
+  header: {
+    angie: {
+      en: "Angie",
+      it: "Angie",
+      es: "Angie",
+      nn: "Angie",
+    },
+    blog: {
+      en: "Blog",
+      it: "Blog",
+      es: "Blog",
+      nn: "Blogg.",
+    },
+    gallery: {
+      en: "Gallery",
+      it: "Galleria",
+      es: "Galería",
+      nn: "Galleri",
+    },
+    videos: {
+      en: "Videos",
+      it: "Video",
+      es: "Videos",
+      nn: "Videoer",
+    },
+    schedule: {
+      en: "Schedule",
+      it: "Programma",
+      es: "Cronograma",
+      nn: "Rute",
+    },
+  },
   footer: {
-    static: {
-      en: "Statically Generated with Next.js.",
-      it: "Generato staticamente con Next.js.",
-      es: "Generada estáticamente con Next.js",
-      nn: "Statisk generert med Next.js",
+    contact: {
+      en: "Let's keep in touch!.",
+      it: "Teniamoci in contatto!.",
+      es: "¡Mantengámonos en contacto!",
+      nn: "La oss holde kontakten!",
     },
-    read: {
-      en: "Read Documentation",
-      it: "Leggi la documentazione",
-      es: "Leer documentación",
-      nn: "Les dokumentasjon",
+    subscribe: {
+      en: "Subscriptions",
+      it: "Abbonamenti",
+      es: "Suscripciones",
+      nn: "Abonnementer",
     },
-    github: {
-      en: "View on GitHub",
-      it: "Visualizza su GitHub",
-      es: "Ver en GitHub",
-      nn: "Se på GitHub",
+    links: {
+      en: "USEFUL LINKS",
+      it: "LINK UTILI",
+      es: "ENLACES ÚTILES",
+      nn: "NYTTIGE LENKER",
+    },
+    resource: {
+      en: "RESOURCES",
+      it: "RISORSE",
+      es: "RECURSOS",
+      nn: "RESSURSER",
+    },
+    exclusive: {
+      en: "Get exclusive newsletter-only content now and then",
+      it: "Ricevi contenuti esclusivi solo per newsletter di tanto in tanto",
+      es: "Obtenga contenido exclusivo solo para boletines de vez en cuando",
+      nn: "Få eksklusivt innhold kun for nyhetsbrev nå og da",
     },
   },
   intro: {
@@ -63,6 +107,20 @@ export default {
       it: "e",
       es: "y",
       nn: "og",
+    },
+  },
+  search: {
+    title: {
+      en: "Search",
+      it: "Ricerca",
+      es: "Buscar",
+      nn: "Søk",
+    },
+    description: {
+      en: "Search this Website",
+      it: "Cerca in questo sito web",
+      es: "Busca este sitio web",
+      nn: "Søk på denne nettsiden",
     },
   },
   stories: {

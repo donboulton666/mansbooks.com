@@ -14,7 +14,7 @@ export default function Thanks() {
     <Layout>
       <>
         <Head>
-          <title>Thank You</title>
+          <title>Profile</title>
         </Head>
         <main class="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-8">
           <div class="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-20">
@@ -29,7 +29,7 @@ export default function Thanks() {
             <div class="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
               <Image
                 src={sevenHeaven}
-                alt=""
+                alt="Seventh Heaven"
                 class="h-60 w-96 rounded-lg object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
@@ -42,7 +42,7 @@ export default function Thanks() {
                   height="24"
                   fill="none"
                   aria-hidden="true"
-                  class="mr-1 stroke-current dark:stroke-wine-200"
+                  class="mr-1 stroke-current"
                 >
                   <path
                     d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"

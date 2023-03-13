@@ -20,7 +20,7 @@ import Page from "@components/page";
 import SpeakersGrid from "@components/speakers-grid";
 import Layout from "@components/layout";
 import Header from "@components/header";
-import LanguageBar from "@components/posts/language-bar";
+import LanguageBar from "@components/LanguageBar";
 import { getAllSpeakers } from "@lib/cms-api";
 import { Speaker } from "@lib/types";
 import { META_DESCRIPTION } from "@lib/constants";

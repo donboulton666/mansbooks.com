@@ -10,7 +10,7 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         alt: `Cover Image for ${title}`,
       }}
       className={cn("shadow-small", {
-        "hover:shadow-medium transition-shadow duration-200 rounded-lg": slug,
+        "hover:shadow-medium rounded-lg transition-shadow duration-200": slug,
       })}
     />
   );

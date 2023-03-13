@@ -1,11 +1,14 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
-import ColumnGridLeft from "../components/column-grid-left";
+import ColumnGridLeft from "@components/column-grid-left";
 import Subscriptions from "./subscriptions";
 import angieImage from "../public/icons/apple-touch-icon.png";
+import { useRouter } from "next/router";
+import i18n from "@lib/i18n";
 
 export default function Footer() {
+  const { locale } = useRouter();
   return (
     <>
       <footer className="relative bg-slate-900 pt-8 pb-6" data-datocms-noindex>
@@ -32,7 +35,7 @@ export default function Footer() {
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-6/12">
               <h4 className="text-3xl font-semibold text-wine-200">
-                Let's keep in touch!
+                {i18n.footer.contact[locale]}
               </h4>
               <h5 className="mt-0 mb-2 text-lg text-slate-400">
                 Find Angelina's Connections below.
@@ -263,10 +266,10 @@ export default function Footer() {
               </div>
               <div className="mt-4">
                 <h4 className="text-3xl font-semibold text-wine-200">
-                  Subscriptions
+                  {i18n.footer.subscribe[locale]}
                 </h4>
                 <h5 className="mt-0 mb-2 text-lg text-slate-400">
-                  Get exclusive newsletter-only content now and then
+                  {i18n.footer.exclusive[locale]}
                 </h5>
                 <Subscriptions />
               </div>
@@ -275,7 +278,7 @@ export default function Footer() {
               <div className="items-top -mb-2 flex flex-wrap">
                 <div className="ml-auto w-full px-4 lg:w-4/12">
                   <span className="mb-2 block text-sm font-semibold uppercase text-wine-200">
-                    Useful Links
+                    {i18n.footer.links[locale]}
                   </span>
                   <ul className="list-unstyled">
                     <li>
@@ -344,7 +347,7 @@ export default function Footer() {
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
                   <span className="mb-2 block text-sm font-semibold uppercase text-wine-200">
-                    Resources
+                    {i18n.footer.resource[locale]}
                   </span>
                   <ul className="list-unstyled">
                     <li>

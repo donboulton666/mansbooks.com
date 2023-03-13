@@ -6,8 +6,11 @@ import ReactPaginate from "react-paginate";
 import { useSiteSearch } from "react-datocms";
 import Center from "../components/Center";
 import angie from "../public/angie/angelina.jpg";
+import { useRouter } from "next/router";
+import i18n from "@lib/i18n";
 
 export default function Search() {
+  const { locale } = useRouter();
   const client = buildClient({
     apiToken: process.env.DATOCMS_READ_ONLY_API_TOKEN,
   });
@@ -21,7 +24,7 @@ export default function Search() {
   return (
     <Layout>
       <Head>
-        <title>Search</title>
+        <title>{i18n.search.title[locale]}</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
@@ -130,8 +133,8 @@ export default function Search() {
       </Head>
       <div className="mx-18 mb-48 min-h-max">
         <div className="mt-10">
-          <Center>Search this website</Center>
-          <div className="mt-16 p-8 sm:mt-2 flex justify-center">
+          <Center>{i18n.search.description[locale]}</Center>
+          <div className="mt-16 flex justify-center p-8 sm:mt-2">
             <div className="mb-2">
               <div className="mt-1 h-96 w-full pt-0.5">
                 <form
