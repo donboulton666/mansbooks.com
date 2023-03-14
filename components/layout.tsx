@@ -26,7 +26,7 @@ import Logo from "./icons/icon-hms";
 import MobileMenu from "./mobile-menu";
 import Footer from "./footer";
 import ScrollIndicator from "./ScrollIndicator";
-import DemoButton from "./hms/demo-cta";
+import RoomCta from './hms/demo-cta/room-cta';
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
@@ -80,12 +80,11 @@ export default function Layout({
               !disableCta.includes(activeRoute)) ||
             activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <DemoButton /> : <Dummy />}
+                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
               </div>
             ) : (
               <>
-                <div />
-                <NavDropdown />
+                <div />                
               </>
             )}
           </header>
