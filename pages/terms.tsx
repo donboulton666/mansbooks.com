@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "@components/PageLayout";
 import Section from "../components/Section";
 import angie from "../public/angie/angelina.jpg";
 
@@ -120,7 +120,7 @@ export default function Terms() {
             <div className="mt-16 mb-16 p-8 sm:mt-2">
               <div className="mb-2">
                 <h2>Angelina Jordan Terms</h2>
-                <p>
+                <div>
                   Welcome, and thank you for your interest in Angelina Jordan
                   Official (“Angelina Jordan Official ” “we,” or “us”) and our
                   website at
@@ -134,11 +134,11 @@ export default function Terms() {
                   Privacy Policy (together, the “Terms”). If you are not
                   eligible, or you do not agree to the Terms, then you do not
                   have our permission to use the Site.
-                </p>
-                <p>
+                </div>
+                <div>
                   <h2>Eligibility</h2>
-                </p>
-                <p>
+                </div>
+                <div>
                   You must be at least 18 years of age to use the Site. By
                   agreeing to these Terms, you represent and warrant to us that:
                   (a) you are at least 18 years of age; and (b) your use of the
@@ -147,12 +147,12 @@ export default function Terms() {
                   the individual accepting these Terms on your behalf represents
                   and warrants that they have authority to bind you to these
                   Terms and you agree to be bound by these Terms.
-                </p>
-                <p>
+                </div>
+                <div>
                   <h2>Purchases</h2>
-                </p>
+                </div>
                 <Section>
-                  <p>
+                  <div>
                     Payment: Purchases of any merchandise are facilitated
                     through a third-party service provider. We may provide such
                     service provider with information regarding your credit card
@@ -171,11 +171,11 @@ export default function Terms() {
                     an item constitutes a waiver of any and all intellectual
                     property, proprietary, personal, and privacy claims relating
                     to that purchase.
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <h2>Changes to the Terms</h2>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     We may periodically make changes to these Terms. When we do,
                     we will update the “Last Updated” date above. It is your
                     responsibility to review the most recent version of these
@@ -186,22 +186,22 @@ export default function Terms() {
                     Terms will be resolved in accordance with the version of
                     these Terms that was in effect at the time the dispute
                     arose.
-                  </p>
+                  </div>
                   <h2>Changes to the Site</h2>
-                  <p>
+                  <div>
                     We reserve the right to modify or discontinue, temporarily
                     or permanently, all or a part of the Site without notice. We
                     will not be liable to you or to any third party for any
                     modification, suspension, or discontinuance of the Site.
-                  </p>
+                  </div>
                   <h2>Limited License</h2>
-                  <p>
+                  <div>
                     Subject to these Terms, Angelina Jordan Official grants you
                     a limited, revocable license to access and use the Site
                     solely for non-commercial purposes to learn more about
                     Angelina Jordan Official products and services. No other use
                     of the Site is authorized.
-                  </p>
+                  </div>
                   <h2>Restrictions</h2>
                   You must comply with all applicable laws when using the Site.
                   Except as may be expressly permitted by applicable law or
@@ -364,19 +364,19 @@ export default function Terms() {
                   provisions will remain in full force and effect.
                 </Section>
                 <h2>Using hCaptcha</h2>
-                <p>
+                <div>
                   We use the hCaptcha anti-bot service (hereinafter "hCaptcha")
                   on our website.
-                </p>
-                <p>
+                </div>
+                <div>
                   This service is provided by Intuition Machines, Inc., a
                   Delaware US Corporation ("IMI"). hCaptcha is used to check
                   whether the data entered on our website (such as on a login
                   page or contact form) has been entered by a human or by an
                   automated program.
-                </p>
+                </div>
                 <Section>
-                  <p>
+                  <div>
                     To do this, hCaptcha analyzes the behavior of the website or
                     mobile app visitor based on various characteristics. This
                     analysis starts automatically as soon as the website or
@@ -395,13 +395,13 @@ export default function Terms() {
                     as a "data processor" acting on behalf of its customers as
                     defined under the GDPR, and a "service provider" for the
                     purposes of the California Consumer Privacy Act (CCPA).
-                  </p>
+                  </div>
                 </Section>
                 <Section>
-                  <p>
+                  <div>
                     For more information about hCaptcha and IMI's privacy policy
                     and terms of use, please visit the following links:
-                  </p>
+                  </div>
                   <a
                     href="https://www.hcaptcha.com/privacy"
                     className="hover:text-pink-500"

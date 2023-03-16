@@ -4,7 +4,7 @@ import Center from "@components/Center";
 import Image from "next/legacy/image";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
-import Layout from "@components/layout";
+import Layout from "@components/PageLayout";
 import ContactForm from "@components/ContactForm";
 import angie from "../public/angie/angelina.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
@@ -122,10 +122,10 @@ export default function Contact() {
         ,
       </Head>
       <div className="mr-10 ml-10 mt-10 mb-20" data-datocms-noindex>
-        <p>
+        <div>
           <Center>Contact Queen Angelina Jordan</Center>
-          <p>Use the form below to Contact the Angelic Queen.</p>
-        </p>
+          <div>Use the form below to Contact the Angelic Queen.</div>
+        </div>
         <LeftText>Social Contacts</LeftText>
         <ColumnGridLeft>
           <div className="mt-4">
@@ -237,8 +237,8 @@ export default function Contact() {
                       >
                         <stop
                           offset=".64"
-                          stop-color="#8c3aaa"
-                          stop-opacity="0"
+                          stopColor="#8c3aaa"
+                          stopOpacity="0"
                         />
                         <stop offset="1" stop-color="#8c3aaa" />
                       </radialGradient>
@@ -309,11 +309,11 @@ export default function Contact() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    image-rendering="optimizeQuality"
-                    shape-rendering="geometricPrecision"
-                    text-rendering="geometricPrecision"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    imageRendering="optimizeQuality"
+                    shapeRendering="geometricPrecision"
+                    textRendering="geometricPrecision"
                     viewBox="0 0 512 512"
                   >
                     <defs>

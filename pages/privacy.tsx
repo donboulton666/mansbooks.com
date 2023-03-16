@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/legacy/image";
-import Layout from "../components/layout";
+import Layout from "@components/PageLayout";
 import Center from "../components/Center";
 import LeftText from "../components/LeftText";
 import ColumnGridTwo from "../components/column-grid";
@@ -138,11 +138,11 @@ export default function Privacy() {
           width={1400}
         />
         <h2>User data is encrypted</h2>
-        <p>⚓ The privacy of my visitors is extremely important.</p>
-        <p>
+        <div>⚓ The privacy of my visitors is extremely important.</div>
+        <div>
           This Privacy Policy outlines the types of personal information that is
           received and collected and how it is used.
-        </p>
+        </div>
         First and foremost, I will never share your email address or any other
         personal information to anyone without your direct consent.
         <h2>Log Files</h2>
@@ -208,7 +208,7 @@ export default function Privacy() {
         <h2>Cookies in EU Law</h2>
         <SingleAccordion label="Cookies Confusion">
           ⚖️ The Law
-          <p>
+          <div>
             🔗{" "}
             <a
               href="https://www.123-reg.co.uk/blog/security-issues/is-the-eus-cookie-law-confusing-you-too/"
@@ -219,7 +219,7 @@ export default function Privacy() {
             >
               Is the EU's cookie law confusing you too?
             </a>
-          </p>
+          </div>
           🔗{" "}
           <a
             href="https://ec.europa.eu/info/cookies_en"
@@ -230,7 +230,7 @@ export default function Privacy() {
           >
             New EU cookie law e-Privacy Directive
           </a>
-          <p>
+          <div>
             🔗{" "}
             <a
               href="https://chriswharton.me/2012/05/cookies-doing-nothing-isnt-the-right-answer/"
@@ -241,7 +241,7 @@ export default function Privacy() {
             >
               Cookies Doing nothing isn't the right answer.
             </a>
-          </p>
+          </div>
         </SingleAccordion>
         <h2>Disabling Cookies</h2>
         <Section>
@@ -252,7 +252,7 @@ export default function Privacy() {
           online or via the software help (normally available via key F1).
         </Section>
         <SingleAccordion label="Disable in the Browser">
-          <p>
+          <div>
             🔗 \*{" "}
             <a
               href="https://www.cookiesandyou.com/disable-cookies/windows/edge/"
@@ -263,8 +263,8 @@ export default function Privacy() {
             >
               Disabling cookies in MS Edge
             </a>
-          </p>
-          <p>
+          </div>
+          <div>
             🔗 \*{" "}
             <a
               href="https://support.google.com/chrome/bin/answer.py?hl=en-GB&answer=95647&p=cpn_cookies"
@@ -275,8 +275,8 @@ export default function Privacy() {
             >
               Disabling cookies in Google Chrome
             </a>
-          </p>
-          <p>
+          </div>
+          <div>
             🔗 \*{" "}
             <a
               href="https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox"
@@ -287,8 +287,8 @@ export default function Privacy() {
             >
               Disabling cookies in Mozilla Firefox
             </a>
-          </p>
-          <p>
+          </div>
+          <div>
             🔗 \*{" "}
             <a
               href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac"
@@ -299,7 +299,7 @@ export default function Privacy() {
             >
               Disabling cookies in Apple Safari
             </a>
-          </p>
+          </div>
         </SingleAccordion>
         <h2>Angelina Jordan UI cookies</h2>
         <Section>
@@ -318,28 +318,28 @@ export default function Privacy() {
         </Section>
         <h2>Analytics Cookie Types</h2>
         <Section>
-          <p>- \_\_utma</p>
+          <div>- \_\_utma</div>
           🤚 This cookie is used to determine new and returning visitors. It has
           an expiration time of 2 years. If the ga.js library is executed and no
           \_utma cookie exists, this will be recorded as the users’ first visit
           and a \_utma cookie will be set. If a \_utma cookie is already in
           place, the expiration time is reset and the user is recorded as a
           return visitor.
-          <p>- \_\_utmb</p>
+          <div>- \_\_utmb</div>
           🤚 This cookie is used to determine a new session. The cookie is set
           when the ga.js library executes and there is no \_utmb cookie in
           place. It has an expiration time of 30 minutes, therefore if a user is
           inactive for a period longer than this, a new cookie will be set when
           the library executes and the interaction will be recorded as a new
           session.
-          <p>- \_\_utmz</p>
+          <div>- \_\_utmz</div>
           🤚 This cookie is used to determine the traffic source, medium,
           campaign name and campaign term which delivered the user to your
           website. It is created when the javaScript library executes and
           expires after 6 months. This helps Google collect the data which can
           then help them to determine which traffic sources assist conversions
           within the multi-channel section of Analytics.
-          <p>- \_\_utmc</p>
+          <div>- \_\_utmc</div>
           🤚 This Cookie waits 30 minutes, and then it expires. You see,
           \_\_utmc has no way of knowing when a user closes their browser or
           leaves a website, so it waits 30 minutes for another pageview to
@@ -347,7 +347,7 @@ export default function Privacy() {
           information, such as what time your current visit occurred, whether
           you have been to the site before, and what site referred you to the
           web page.
-          <p>
+          <div>
             From Stackoverflow: 🔗{" "}
             <a
               href="https://stackoverflow.com/questions/1823406/what-does-utma-mean"
@@ -358,26 +358,26 @@ export default function Privacy() {
             >
               What does \_\_utma mean?
             </a>
-          </p>
-          <p>- \_\_utmv</p>
+          </div>
+          <div>- \_\_utmv</div>
         </Section>
         <Section>
-          <p>
+          <div>
             🤚 This cookie is used for storing visitor-level custom variable
             data. It is created when the \_setCustomVar method is used with a
             visitor level custom variable. Like the \_utma cookie, this cookie
             expires after 2 years and is reset each time the user visits your
             site before the expiration of the cookie.
-          </p>
+          </div>
           Although each of these cookies has a set expiration time, each time
           the ga.js library is executed and the expiration time has not been met
           the cookie is updated, resetting the expiration date to its original
           value.
-          <p>
+          <div>
             These cookies contain no personally identifiable information but
             they will use your computer's IP address to know from where in the
             world you are accessing the Internet.
-          </p>
+          </div>
           Google stores the information collected by these cookies on servers in
           the United States. Google may transfer this information to
           third-parties where required to do so by law, or where such
@@ -395,7 +395,7 @@ export default function Privacy() {
           your convenience.
         </Section>
         <h2>Opt Out Google tools</h2>
-        <p>
+        <div>
           🔗{" "}
           <a
             href="https://tools.google.com/dlpage/gaoptout?hl=None"
@@ -406,7 +406,7 @@ export default function Privacy() {
           >
             Opt Out Google tools
           </a>
-        </p>
+        </div>
         <Section>
           ⚒️ For more information on the usage of cookies by Google Analytics
           please see the Google website. A link to the privacy advice for this
@@ -414,13 +414,13 @@ export default function Privacy() {
         </Section>
         <h2> Hubspot</h2>
         <Section>
-          <p>- \_\_hstc Cookie</p>
+          <div>- \_\_hstc Cookie</div>
           🥠 About this cookie \_\_hstc
-          <p>
+          <div>
             This cookie name is associated with websites built on the HubSpot
             platform. It is reported by them as being used for website
             analytics.
-          </p>
+          </div>
           The main purpose of this cookie is: Performance
         </Section>
         <h4>Key numbers for \_\_hstc</h4>
@@ -436,7 +436,7 @@ export default function Privacy() {
           website based search.
         </Section>
         <h2>Privacy Google</h2>
-        <p>
+        <div>
           🔗{" "}
           <a
             href="https://www.google.com/analytics/learn/privacy.html"
@@ -447,7 +447,7 @@ export default function Privacy() {
           >
             Google Analytics Privacy Policy
           </a>
-        </p>
+        </div>
         <Section>
           🗠 Google Analytics is a web analytics tool I use to help understand
           how visitors engage with this website. It reports website trends using
@@ -455,7 +455,7 @@ export default function Privacy() {
         </Section>
         <h2>Read Analytics Policy</h2>
         <Section>
-          <p>
+          <div>
             🔗{" "}
             <a
               href="https://www.google.com/analytics/learn/privacy.html"
@@ -466,7 +466,7 @@ export default function Privacy() {
             >
               Google Analytics Privacy Policy
             </a>
-          </p>
+          </div>
           <h2> Google AdSense</h2>
           💹 Google AdSense, a third party affiliate marketing network, uses
           cookies to help make sure I get a commission when you buy a product
@@ -474,7 +474,7 @@ export default function Privacy() {
           one of their merchants.
         </Section>
         <h2>Read AdSense Policy</h2>
-        <p>
+        <div>
           🔗{" "}
           <a
             href="https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182"
@@ -485,10 +485,10 @@ export default function Privacy() {
           >
             Google AdSense Privacy Policy
           </a>
-        </p>
+        </div>
         <h2>Create Your Own</h2>
         <Section>🦸 Google AdSense Privacy Policy creator</Section>
-        <p>
+        <div>
           🔗{" "}
           <a
             href="https://www.termsfeed.com/blog/privacy-policy-google-adsense/"
@@ -499,7 +499,7 @@ export default function Privacy() {
           >
             Privacy Policy Creator Google
           </a>
-        </p>
+        </div>
         <h2> Donation Policy</h2>
         <Section>
           🩸 All Donations thought our external pay sites and or through our
@@ -531,18 +531,18 @@ export default function Privacy() {
               This is the Code of Conduct for your online event. If you would
               like to use it, please replace [Event Name] and [Event Email]
               below.
-              <p>
+              <div>
                 At [Event Name] we believe in **inclusivity**, **kindness** and
                 a **positive** community for all. We expect participants of
                 [Event Name] to conduct themselves in a **professional** and
                 **respectful** manner at all times.
-              </p>
+              </div>
             </Section>
             <Section>
-              <p>
+              <div>
                 This means: **Do:** - Use welcoming and positive language -
                 Respect others views whether they do/don’t align with yours
-              </p>
+              </div>
               - Display empathy towards other community members - Be respectful
               of others in the public & private media **Don't:** - Make personal
               or political attacks - Harass another person, whether publicly or
@@ -556,7 +556,7 @@ export default function Privacy() {
               involved parties whom no longer wish to take part.
             </Section>
             <Section>
-              <p>
+              <div>
                 **If you are being harassed, notice that someone else is being
                 harassed, or have any other concerns, please contact the
                 organizers immediately at [Event Email].** --- [Event Name] is
@@ -565,20 +565,20 @@ export default function Privacy() {
                 expression, age, sexual orientation, disability, physical
                 appearance, body size, race, ethnicity, religion (or lack
                 thereof), location, or technology choices.
-              </p>
+              </div>
             </Section>
             <Section>
-              <p>
+              <div>
                 We do not tolerate harassment of conference participants in any
                 form. Sexual language and imagery are not appropriate anywhere,
                 including talks, chat rooms, Twitter and other online media.
                 Conference participants violating these rules may be expelled
                 from the conference at the discretion of the conference
                 organizers.
-              </p>
+              </div>
             </Section>
             <Section>
-              <p>
+              <div>
                 Harassment includes offensive verbal comments related to gender,
                 gender identity and expression, age, sexual orientation,
                 disability, physical appearance, body size, race, ethnicity,
@@ -587,24 +587,24 @@ export default function Privacy() {
                 disruption of talks or other events, and unwelcome sexual
                 attention. Participants asked to stop any harassing behavior are
                 expected to comply immediately.
-              </p>
+              </div>
             </Section>
             <Section>
-              <p>
+              <div>
                 Sponsors and speakers are also subject to the anti-harassment
                 policy. Sponsors and speakers may not use sexualized images,
                 activities, or other material during their talks or any media in
                 relation to the conference.
-              </p>
+              </div>
             </Section>
             <Section>
-              <p>
+              <div>
                 If a participant engages in harassing behavior, the conference
                 organizers may take any action they deem appropriate, including
                 warning the offender or expulsion from any private, online
                 conference platforms. We expect participants to follow these
                 rules at all conference platforms.
-              </p>
+              </div>
             </Section>
           </SingleAccordion>
         </CalloutDanger>
@@ -642,21 +642,21 @@ export default function Privacy() {
         <Section>
           <h2>License OBSD</h2>
           🔰 The 0BSD (Zero-Clause BSD) license.
-          <p>Copyright (C) [year] by [copyright holder] [email]</p>
-          <p>
+          <div>Copyright (C) [year] by [copyright holder] [email]</div>
+          <div>
             Permission to use, copy, modify, and/or distribute this software for
             any purpose with or without fee is hereby granted.
-          </p>
+          </div>
           THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
           WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
           WARRANTIES OF MERCHANTABILITY AND FITNESS.
-          <p>
+          <div>
             IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
             INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER
             RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
             CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
             CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-          </p>
+          </div>
         </Section>
         <Section>
           <h2>Attribution</h2>

@@ -24,9 +24,9 @@ import { NAVIGATION } from "@lib/constants";
 import styles from "./layout.module.css";
 import Logo from "./icons/icon-hms";
 import MobileMenu from "./mobile-menu";
-import Footer from "./footer";
+import Footer from "@components/PageFooter";
 import ScrollIndicator from "./ScrollIndicator";
-import RoomCta from './hms/demo-cta/room-cta';
+import RoomCta from "./hms/demo-cta/room-cta";
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
@@ -85,7 +85,6 @@ export default function Layout({
             ) : (
               <>
                 <div />
-                <NavDropdown />               
               </>
             )}
           </header>

@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Layout from "@components/layout";
+import Layout from "@components/PageLayout";
 import Section from "@components/Section";
 import CalloutLabel from "@components/Callout/CalloutLabel";
 import Modal from "@components/Modal";
@@ -123,7 +123,7 @@ export default function License() {
             <div className="mt-16 mb-16 p-8 sm:mt-2">
               <div className="mb-2">
                 <h2>Rob Landley</h2>
-                <p>
+                <div>
                   Posted this on
                   <a href="http://lists.landley.net/pipermail/toybox-landley.net/2013-March/004589.html">
                     this on
@@ -154,7 +154,7 @@ export default function License() {
                   that says the new thing can give code to a project that says
                   the old thing, whether it could receive it depends on how
                   paranoid your lawyers are. Rob
-                </p>
+                </div>
                 <CalloutLabel label="Zero-Clause BSD">
                   The 0BSD Zero-Clause BSD license was originated by Rob Landley
                   in <a href="http://www.landley.net/toybox">ToyBox</a>. It's
@@ -167,16 +167,16 @@ export default function License() {
                   require the user to include the copyright notice, license
                   text, or disclaimer in either source or binary forms.
                 </CalloutLabel>
-                <p>
+                <div>
                   This service is provided by Intuition Machines, Inc., a
                   Delaware US Corporation ("IMI"). hCaptcha is used to check
                   whether the data entered on our website (such as on a login
                   page or contact form) has been entered by a human or by an
                   automated program.
-                </p>
+                </div>
                 <Section>
                   <h2>0BSD Template</h2>
-                  <p>
+                  <div>
                     🔰 The 0BSD (Zero-Clause BSD) license. Copyright (C) [year]
                     by [copyright holder] email Permission to use, copy, modify,
                     and/or distribute this software for any purpose with or
@@ -189,13 +189,13 @@ export default function License() {
                     USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
                     NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
                     CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-                  </p>
+                  </div>
                 </Section>
                 <Section>
-                  <p>
+                  <div>
                     For more information about hCaptcha and IMI's privacy policy
                     and terms of use, please visit the following links:
-                  </p>
+                  </div>
                   <a
                     href="https://www.hcaptcha.com/privacy"
                     className="hover:text-pink-500"

@@ -11,7 +11,7 @@ import cloudinary from "../utils/cloudinary";
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
 import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
-import Layout from "@components/layout";
+import Layout from "@components/PageLayout";
 import angie from "../public/angie/angelina.jpg";
 
 const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {

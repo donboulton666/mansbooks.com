@@ -202,6 +202,12 @@ export default {
       es: "Buscar",
       nn: "Søk",
     },
+    count: {
+      en: "Total results:",
+      it: "Risultati totali:",
+      es: "Resultados totales:",
+      nn: "Totale resultater:",
+    },
     description: {
       en: "Search this Website",
       it: "Cerca in questo sito web",

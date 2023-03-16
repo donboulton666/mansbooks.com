@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Page from "@components/page";
 import Schedule from "@components/schedule";
-import Layout from "@components/layout";
+import Layout from "@components/PageLayout";
 import Header from "@components/header";
 import Container from "@components/posts/container";
 import { getAllStages } from "@lib/cms-api";

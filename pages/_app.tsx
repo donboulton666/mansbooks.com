@@ -14,16 +14,18 @@
  * limitations under the License.
  */
 
+import React from "react";
 import { SSRProvider, OverlayProvider } from "react-aria";
-import "@styles/global.css";
-import "@styles/nprogress.css";
-import "@styles/chrome-bug.css";
+import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
+import "@styles/global.css";
+import "@styles/nprogress.css";
+import "@styles/chrome-bug.css";
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, session, pageProps }: AppProps) {
   const AnyComponent = Component as any;
   useEffect(() => {
     document.body.classList?.remove("loading");
@@ -32,11 +34,14 @@ function App({ Component, pageProps }: AppProps) {
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>
-          <AnyComponent {...pageProps} />
+          <SessionProvider session={pageProps.session}>
+            <AnyComponent {...pageProps} />
+          </SessionProvider>
           <ResizeHandler />
         </HMSRoomProvider>
       </OverlayProvider>
     </SSRProvider>
   );
 }
+
 export default App;

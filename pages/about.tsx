@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/legacy/image";
-import Layout from "@components/layout";
+import Layout from "@components/PageLayout";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";
 import Center from "@components/Center";
@@ -134,7 +134,7 @@ export default function About() {
         />
         <Section>
           <LeftText>About Angie</LeftText>
-          <p>
+          <div>
             <a
               href="https://youtube.com/c/AngelinaJordanOfficial"
               className="hover:text-pink-500"
@@ -145,50 +145,50 @@ export default function About() {
             >
               <h2>For those who don't know about Queen Angelina Jordan</h2>
             </a>
-          </p>
+          </div>
           <div>
             Born and raised in Oslo, Norway; this world-renowned singer has
             earned fantastic reviews for the amazing breadth, depth and maturity
             of her vocal talent that simply belies her young age.
-            <p>
+            <div>
               Angelina’s videos have received over several billions views on
               YouTube and more than 4 billion views on Facebook.
-            </p>
-            <p>
+            </div>
+            <div>
               Amazingly, her passion for music began at just one-and- a-half
               years of age when Angelina first saw Whitney Houston on YouTube
               performing I Will Always Love You. Whitney - and later Billie
               Holiday, Dinah Washington - became her first major musical
               influences.
-            </p>
-            <p>
+            </div>
+            <div>
               At the age of seven, Angelina auditioned for Norway’s Got Talent
               performing Billie Holiday’s Gloomy Sunday. She won the competition
               with the show drawing record TV audiences.
-            </p>
-            <p>
+            </div>
+            <div>
               Not surprisingly, throughout her rising career, Angelina has
               featured in prominent media outlets including TIME, CNN, BBC, and
               People while also performing on the U.S. network TV shows Little
               Big Shots and The View.
-            </p>
-            <p>
+            </div>
+            <div>
               In 2016, Avicii chose Angelina for the vocals on his worldwide
               Volvo commercial campaign, a brilliant cover of Nina Simone’s
               Feeling Good.
-            </p>
-            <p>
+            </div>
+            <div>
               As well as singing before Nobel Peace Prize Laureates, charitable
               causes to which Angelina has given her talent include the
               Rainforest Alliance at the American Museum of Natural History in
               New York and Ein Herz für Kinder in Berlin where she helped raise
               over 21 Million Euros for children and families in need.
-            </p>
-            <p>
+            </div>
+            <div>
               This multi-talented singing prodigy has also written a successful,
               illustrated children’s book in her native Norway making Angelina
               the youngest published author in the country’s history.
-            </p>
+            </div>
             Based on the true story of when she was six years old, Angelina met
             a homeless, shoeless girl. After they talked for a long time, she
             gave the girl her shoes and vowed never to appear on stage again
@@ -197,12 +197,12 @@ export default function About() {
           </div>
         </Section>
         <Section>
-          <p>
+          <div>
             Angelina Jordan (barefoot queen) is the winner of Norway got talent
             2014. She also auditioned for America's got talent in 2020 where she
             received GOLDEN BUZZER from Heidi Klum. Currently, she signed with
             Republic records. August 2020.
-          </p>
+          </div>
         </Section>
         <LeftText>Social Contacts</LeftText>
         <div className="mt-4 mr-20 mb-20">
@@ -315,8 +315,8 @@ export default function About() {
                       >
                         <stop
                           offset=".64"
-                          stop-color="#8c3aaa"
-                          stop-opacity="0"
+                          stopColor="#8c3aaa"
+                          stopOpacity="0"
                         />
                         <stop offset="1" stop-color="#8c3aaa" />
                       </radialGradient>
@@ -387,11 +387,11 @@ export default function About() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    image-rendering="optimizeQuality"
-                    shape-rendering="geometricPrecision"
-                    text-rendering="geometricPrecision"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    imageRendering="optimizeQuality"
+                    shapeRendering="geometricPrecision"
+                    textRendering="geometricPrecision"
                     viewBox="0 0 512 512"
                   >
                     <defs>
@@ -462,12 +462,12 @@ export default function About() {
           >
             Netlify Build Status
           </a>
-          <p>
+          <div>
             Used by some of the world's largest companies, Next.js enables you
             to create full-stack web applications by extending the latest React
             features, and integrating powerful Rust-based JavaScript tooling for
             the fastest builds.
-          </p>
+          </div>
         </Section>
         <Section>
           <LeftText>Dato Cms</LeftText>
@@ -486,19 +486,19 @@ export default function About() {
               Simply put, the most complete, user-friendly and performant
               Headless CMS.
             </div>
-            <p>
+            <div>
               It's the headless CMS for the modern web. More than 25,000
               businesses use DatoCMS to create online content at scale from a
               central hub and distribute it via API.
-            </p>
+            </div>
           </div>
           <div>
             <h2>Empower every member of your team.</h2>
-            <p>
+            <div>
               The headless CMS technology provides an end-to-end solution for
               businesses who create and distribute content to websites and other
               digital experiences at scale.
-            </p>
+            </div>
           </div>
         </Section>
         <Section>
@@ -513,16 +513,16 @@ export default function About() {
           >
             <h2>Upstash Redis Memory Database, Done Right</h2>
           </a>
-          <p>
+          <div>
             The open source, in-memory data store used by millions of developers
             as a database, cache, streaming engine, and message broker.
-          </p>
-          <p>A vibrant, open source database</p>
-          <p>
+          </div>
+          <div>A vibrant, open source database</div>
+          <div>
             Voted the most-loved database for 5 years running, Redis is at the
             center of an engaged community of developers, architects, and open
             source contributors.
-          </p>
+          </div>
         </Section>
         <Section>
           <LeftText>100ms</LeftText>
@@ -536,22 +536,22 @@ export default function About() {
           >
             <h2>Streaming Video Service</h2>
           </a>
-          <p>The only live video API you will ever need.</p>
-          <p>
+          <div>The only live video API you will ever need.</div>
+          <div>
             Go beyond basic video calls, take video experiences to the next
             level with 100ms. Intricately customizable, infinitely extensible.
-          </p>
-          <p>Go from 1:1 calling to massive streams</p>
-          <p>
+          </div>
+          <div>Go from 1:1 calling to massive streams</div>
+          <div>
             Offer 1:1 video calls. Stream live to millions. Or switch your calls
             to live streams with a single API call.
-          </p>
-          <p>You are in safe hands</p>
-          <p>
+          </div>
+          <div>You are in safe hands</div>
+          <div>
             100ms is built by a team of video engineers that powered live video
             for Facebook & Disney + Hotstar. We know what works and what
             buffers.
-          </p>
+          </div>
         </Section>
         <Section>
           <LeftText>Cloudinary Image Transformations</LeftText>
@@ -565,16 +565,16 @@ export default function About() {
           >
             <h2>The Most Powerful Image and Video APIs</h2>
           </a>
-          <p>
+          <div>
             Trusted by 1.3 million developers and 10,000 enterprise and
             hyper-growth companies as a critical part of their tech stack.
-          </p>
-          <p> Image and Video API for Powerful Visual Experiences</p>
-          <p>
+          </div>
+          <div> Image and Video API for Powerful Visual Experiences</div>
+          <div>
             Image and Video API for Powerful Visual Experiences Store,
             transform, optimize, and deliver all your media assets with
             easy-to-use APIs, widgets, or user interface.
-          </p>
+          </div>
         </Section>
       </div>
     </Layout>

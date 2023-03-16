@@ -53,7 +53,7 @@ export default function Navigation() {
                             }
                             -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
                             aria-hidden="true"
-                        />
+                          />
                         </Control>
                       </Menu.Button>
                     </div>
@@ -66,7 +66,7 @@ export default function Navigation() {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
-                      <Menu.Item>
+                        <Menu.Item>
                           {({ active }) => (
                             <Link
                               href="/stage/a"

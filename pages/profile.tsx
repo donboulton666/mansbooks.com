@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/legacy/image";
-import Layout from "../components/layout";
+import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";
@@ -22,9 +22,9 @@ export default function Thanks() {
               <h1 class="mt-1 text-lg font-semibold text-wine-200 sm:text-wine-300 md:text-2xl">
                 Angelina Jordan
               </h1>
-              <p class="text-sm font-medium leading-4 text-white sm:text-slate-500">
+              <div class="text-sm font-medium leading-4 text-white sm:text-slate-500">
                 Queen Of Jazz
-              </p>
+              </div>
             </div>
             <div class="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
               <Image
@@ -92,15 +92,15 @@ export default function Thanks() {
                 7th Heaven
               </Link>
             </div>
-            <p class="col-start-1 mt-4 text-sm leading-6 text-slate-300 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
-              <p>
+            <div class="col-start-1 mt-4 text-sm leading-6 text-slate-300 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
+              <div>
                 Angelina Jordan Astar was born and raised in Oslo, Norway; this
                 world-renowned singer has earned fantastic reviews for the
                 amazing breadth, depth and maturity of her vocal talent that
                 simply belies her young age.
-              </p>
+              </div>
               <Section>
-                <p>
+                <div>
                   Amazingly, her passion for music began at just one-and- a-half
                   years of age when Angelina first saw Whitney Houston on
                   YouTube performing I Will Always Love You. Whitney - and later
@@ -109,15 +109,15 @@ export default function Thanks() {
                   for Norway’s Got Talent performing Billie Holiday’s Gloomy
                   Sunday. She won the competition with the show drawing record
                   TV audiences.
-                </p>
+                </div>
               </Section>
-            </p>
+            </div>
           </div>
         </main>
         <Center>Extended Profile Information: </Center>
         <div className="ml-20 mr-20">
           <Section>
-            <p>
+            <div>
               Angelina’s videos have received over several billions views on
               YouTube and more than 4 billion views on Facebook. Amazingly, her
               passion for music began at just one-and- a-half years of age when
@@ -127,28 +127,28 @@ export default function Thanks() {
               of seven, Angelina auditioned for Norway’s Got Talent performing
               Billie Holiday’s Gloomy Sunday. She won the competition with the
               show drawing record TV audiences.
-            </p>
-            <p>
+            </div>
+            <div>
               Not surprisingly, throughout her rising career, Angelina has
               featured in prominent media outlets including TIME, CNN, BBC, and
               People while also performing on the U.S. network TV shows Little
               Big Shots and The View.
-            </p>
-            <p>
+            </div>
+            <div>
               In 2016, Avicii chose Angelina for the vocals on his worldwide
               Volvo commercial campaign, a brilliant cover of Nina Simone’s
               Feeling Good.
-            </p>
-            <p>
+            </div>
+            <div>
               As well as singing before Nobel Peace Prize Laureates, charitable
               causes to which Angelina has given her talent include the
               Rainforest Alliance at the American Museum of Natural History in
               New York and Ein Herz für Kinder in Berlin where she helped raise
               over 21 Million Euros for children and families in need.
-            </p>
+            </div>
           </Section>
           <Section>
-            <p>
+            <div>
               This multi-talented singing prodigy has also written a successful,
               illustrated children’s book in her native Norway making Angelina
               the youngest published author in the country’s history. Based on
@@ -157,7 +157,7 @@ export default function Thanks() {
               gave the girl her shoes and vowed never to appear on stage again
               wearing shoes until all the world’s children had them. Since that
               time, Angelina has always performed barefoot in public.
-            </p>
+            </div>
           </Section>
           <Section>
             Angelina Jordan (barefoot queen) is the winner of Norway got talent
@@ -277,8 +277,8 @@ export default function Thanks() {
                       >
                         <stop
                           offset=".64"
-                          stop-color="#8c3aaa"
-                          stop-opacity="0"
+                          stopColor="#8c3aaa"
+                          stopOpacity="0"
                         />
                         <stop offset="1" stop-color="#8c3aaa" />
                       </radialGradient>
@@ -349,11 +349,11 @@ export default function Thanks() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    image-rendering="optimizeQuality"
-                    shape-rendering="geometricPrecision"
-                    text-rendering="geometricPrecision"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    fillRule="optimizeQuality"
+                    shapeRendering="geometricPrecision"
+                    textRendering="geometricPrecision"
                     viewBox="0 0 512 512"
                   >
                     <defs>

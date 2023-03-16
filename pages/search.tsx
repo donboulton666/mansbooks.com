@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "@components/PageLayout";
 import { useState } from "react";
 import { buildClient } from "@datocms/cma-client-browser";
 import ReactPaginate from "react-paginate";
@@ -177,7 +177,9 @@ export default function Search() {
                         <div>{result.url}</div>
                       </div>
                     ))}
-                    <p>Total results: {data.totalResults}</p>
+                    <p>
+                      {i18n.search.count[locale]} {data.totalResults}
+                    </p>
                     <ReactPaginate
                       pageCount={data.totalPages}
                       forcePage={state.page}

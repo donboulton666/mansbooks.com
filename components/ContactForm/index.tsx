@@ -351,7 +351,6 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         name="message"
                         className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 pl-14 text-slate-300 caret-blue-500 shadow-sm focus:border-wine-300 focus:caret-indigo-500 focus:ring-wine-200 sm:text-sm"
                         rows={5}
-                        name="text"
                         {...register("message", { required: true })}
                       />
                     </div>
@@ -378,6 +377,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                     >
                       Send
                     </button>
+
                     <button
                       type="reset"
                       className="ml-2 rounded-md bg-red-500 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"

@@ -189,12 +189,12 @@ a[role="button"] {
 }
 
 svg {
-  shape-rendering: crispEdges;
+  shaperendering: crispEdges;
 }
 
 svg path,
 svg circle {
-  shape-rendering: geometricprecision;
+  shaperendering: geometricprecision;
 }
 [data-reach-skip-link] {
   border: 0;
@@ -442,4 +442,34 @@ input:-webkit-autofill {
 
 .active {
   color: #70002a;
+}
+
+@layer utilities {
+  .text-dimmed {
+    @apply text-zinc-500;
+  }
+}
+
+@layer components {
+  .form-select {
+    @apply rounded border-zinc-600
+    bg-transparent;
+  }
+
+  .form-input {
+    @apply block w-full rounded border-zinc-600 bg-transparent bg-zinc-800
+    shadow-sm;
+  }
+
+  .button {
+    @apply rounded bg-zinc-900 px-4 py-2
+    text-zinc-300
+    hover:opacity-60;
+  }
+
+  .button-ghost {
+    @apply rounded border border-zinc-600 bg-transparent px-4
+    py-2
+    hover:opacity-60;
+  }
 }

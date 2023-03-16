@@ -18,7 +18,7 @@ import { GetStaticProps } from "next";
 
 import Page from "@components/page";
 import JobsGrid from "@components/jobs-grid";
-import Layout from "@components/layout";
+import Layout from "@components/PageLayout";
 import Header from "@components/header";
 
 import { getAllJobs } from "@lib/cms-api";

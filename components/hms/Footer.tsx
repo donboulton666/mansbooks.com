@@ -35,7 +35,7 @@ const Footer = () => {
   const isLocalScreenShare = useHMSStore(selectIsLocalScreenShared);
   return (
     <div
-      className="hidden w-full items-center justify-center space-x-5 md:flex"
+      className="mb-28 hidden w-full items-center justify-center space-x-5 md:flex"
       style={{ height: "calc(var(--header-height) * 1.2)" }}
     >
       {isAllowedToPublish.audio ? (

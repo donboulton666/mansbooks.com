@@ -29,6 +29,4 @@ export async function validateCaptchaResult(result: string): Promise<boolean> {
   return success;
 }
 
-export const IS_CAPTCHA_ENABLED = Boolean(
-  process.env.NEXT_IS_CAPTCHA_ENABLED
-);
+export const IS_CAPTCHA_ENABLED = Boolean(process.env.NEXT_IS_CAPTCHA_ENABLED);

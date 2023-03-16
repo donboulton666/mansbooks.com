@@ -59,11 +59,11 @@ export default function Hero() {
           styles.info
         )}
       >
-        <p>{DATE}</p>
+        <div>{DATE}</div>
         <div className={styles["description-separator"]} />
-        <p>
+        <div>
           <strong>18 Online</strong>
-        </p>
+        </div>
       </div>
     </div>
   );

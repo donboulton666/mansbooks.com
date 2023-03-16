@@ -149,8 +149,8 @@ export default function Footer() {
                           >
                             <stop
                               offset=".64"
-                              stop-color="#8c3aaa"
-                              stop-opacity="0"
+                              stopColor="#8c3aaa"
+                              stopOpacity="0"
                             />
                             <stop offset="1" stop-color="#8c3aaa" />
                           </radialGradient>
@@ -221,11 +221,11 @@ export default function Footer() {
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        image-rendering="optimizeQuality"
-                        shape-rendering="geometricPrecision"
-                        text-rendering="geometricPrecision"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        imageRendering="optimizeQuality"
+                        shapeRendering="geometricPrecision"
+                        textRendering="geometricPrecision"
                         viewBox="0 0 512 512"
                       >
                         <defs>
