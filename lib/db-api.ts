@@ -33,8 +33,8 @@ let dbApi: {
 };
 
 if (
-  process.env.REDIS_PORT &&
-  process.env.REDIS_URL &&
+  process.env.UPSTASH_REDIS_REST_URL &&
+  process.env.UPSTASH_REDIS_REST_URL &&
   process.env.EMAIL_TO_ID_SECRET
 ) {
   dbApi = redisApi;
