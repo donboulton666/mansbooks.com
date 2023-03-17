@@ -5,8 +5,8 @@ import i18n from "@lib/i18n";
 
 export default function MoreStories({ posts }) {
   if (posts[0].localeVersion) {
-    //if the posts are localized versions, make sure that it is not null (would be for unpublished posts)
-    //and pick that locale version
+    // if the posts are localized versions, make sure that it is not null (would be for unpublished posts)
+    // and pick that locale version
     posts = posts.map((post) => post.localeVersion).filter((post) => post);
   }
   const { locale } = useRouter();

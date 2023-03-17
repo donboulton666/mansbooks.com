@@ -69,7 +69,7 @@ export default function Navigation() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/stage/a"
+                              href="/login"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
@@ -80,45 +80,7 @@ export default function Navigation() {
                                   className="block h-8 w-8 pr-2 text-blue-500"
                                   aria-hidden="true"
                                 />
-                                <span>Live Stage</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href="/stage/c"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <UserGroupIcon
-                                  className="block h-8 w-8 pr-2 text-blue-500"
-                                  aria-hidden="true"
-                                />
-                                <span>Vercel Stage</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href="/stage/m"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <UserGroupIcon
-                                  className="block h-8 w-8 pr-2 text-blue-500"
-                                  aria-hidden="true"
-                                />
-                                <span>100ms</span>
+                                <span>Login</span>
                               </span>
                             </Link>
                           )}

@@ -19,7 +19,7 @@ export default NextAuth({
     }),
   ],
   session: {
-    strategy: 'jwt'
+    strategy: "jwt",
   },
   jwt: {
     // A secret to use for key generation (you should set this explicitly)
@@ -31,5 +31,4 @@ export default NextAuth({
     // encode: async ({ secret, token, maxAge }) => {},
     // decode: async ({ secret, token, maxAge }) => {},
   },
-})
-
+});
