@@ -16,33 +16,33 @@ export default function Thanks() {
         <Head>
           <title>Profile</title>
         </Head>
-        <main class="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-8">
-          <div class="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-20">
-            <div class="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
-              <h1 class="mt-1 text-lg font-semibold text-wine-200 sm:text-wine-300 md:text-2xl">
+        <main className="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-8">
+          <div className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-20">
+            <div className="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
+              <h1 className="mt-1 text-lg font-semibold text-wine-200 sm:text-wine-300 md:text-2xl">
                 Angelina Jordan
               </h1>
-              <div class="text-sm font-medium leading-4 text-white sm:text-slate-500">
+              <div className="text-sm font-medium leading-4 text-white sm:text-slate-500">
                 Queen Of Jazz
               </div>
             </div>
-            <div class="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
+            <div className="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
               <Image
                 src={sevenHeaven}
                 alt="Seventh Heaven"
-                class="h-60 w-96 rounded-lg object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
+                className="h-60 w-96 rounded-lg object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
             </div>
-            <dl class="row-start-2 mt-4 flex items-center text-xs font-medium sm:row-start-3 sm:mt-1 md:mt-2.5 lg:row-start-2">
-              <dt class="sr-only">Reviews</dt>
-              <dd class="flex items-center text-wine-300">
+            <dl className="row-start-2 mt-4 flex items-center text-xs font-medium sm:row-start-3 sm:mt-1 md:mt-2.5 lg:row-start-2">
+              <dt className="sr-only">Reviews</dt>
+              <dd className="flex items-center text-wine-300">
                 <svg
                   width="24"
                   height="24"
                   fill="none"
                   aria-hidden="true"
-                  class="mr-1 stroke-current"
+                  className="mr-1 stroke-current"
                 >
                   <path
                     d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
@@ -52,17 +52,17 @@ export default function Thanks() {
                   />
                 </svg>
                 <span>
-                  4.89 <span class="font-normal text-slate-400">(128)</span>
+                  4.89 <span className="font-normal text-slate-400">(128)</span>
                 </span>
               </dd>
-              <dt class="sr-only">Location</dt>
-              <dd class="flex items-center">
+              <dt className="sr-only">Location</dt>
+              <dd className="flex items-center">
                 <svg
                   width="2"
                   height="2"
                   aria-hidden="true"
                   fill="currentColor"
-                  class="mx-3 text-slate-300"
+                  className="mx-3 text-slate-300"
                 >
                   <circle cx="1" cy="1" r="1" />
                 </svg>
@@ -74,7 +74,7 @@ export default function Thanks() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="mr-1 text-slate-400"
+                  className="mr-1 text-slate-400"
                   aria-hidden="true"
                 >
                   <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
@@ -83,16 +83,16 @@ export default function Thanks() {
                 Los Angeles CA.
               </dd>
             </dl>
-            <div class="col-start-1 row-start-3 mt-4 self-center sm:col-start-2 sm:row-span-2 sm:row-start-2 sm:mt-0 lg:col-start-1 lg:row-start-3 lg:row-end-4 lg:mt-6">
+            <div className="col-start-1 row-start-3 mt-4 self-center sm:col-start-2 sm:row-span-2 sm:row-start-2 sm:mt-0 lg:col-start-1 lg:row-start-3 lg:row-end-4 lg:mt-6">
               <Link
                 href="/expo/seventhheaven"
                 type="button"
-                class="rounded-lg bg-wine-300 py-2 px-3 text-sm font-medium leading-6 text-white"
+                className="rounded-lg bg-wine-300 py-2 px-3 text-sm font-medium leading-6 text-white"
               >
                 7th Heaven
               </Link>
             </div>
-            <div class="col-start-1 mt-4 text-sm leading-6 text-slate-300 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
+            <div className="col-start-1 mt-4 text-sm leading-6 text-slate-300 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
               <div>
                 Angelina Jordan Astar was born and raised in Oslo, Norway; this
                 world-renowned singer has earned fantastic reviews for the

@@ -11,7 +11,7 @@ const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
       focusable="false"
       data-prefix="fab"
       data-icon="github-alt"
-      class="svg-inline--fa fa-github-alt fa-w-15"
+      className="svg-inline--fa fa-github-alt fa-w-15"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

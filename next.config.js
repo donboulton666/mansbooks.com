@@ -25,7 +25,6 @@ module.exports = withPWA({
       'www.datocms-assets.com',
       'res.cloudinary.com',
     ],
-    imageSizes: [24, 64, 300]
   },
   webpack: (config) => {
     // this will override the experiments

@@ -19,6 +19,7 @@ import Script from "next/script";
 import Image from "next/legacy/image";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";
+import GiscusComments from "@components/GiscusComments";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
 
@@ -27,12 +28,14 @@ type Props = {
 };
 
 export default function SponsorSection({ sponsor }: Props) {
+  const url = typeof window !== 'undefined' ? window.location.href : ''
+
   return (
     <>
       <>
         <Script src="https://apis.google.com/js/platform.js" />
       </>
-      <div className="mb-48">
+      <div className="mb-20">
         <Link href="/expo" className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
@@ -145,7 +148,7 @@ export default function SponsorSection({ sponsor }: Props) {
               ))}
               <div className={cn(styles.button, styles["button-resource"])}>
                 <div
-                  class="g-ytsubscribe"
+                  className="g-ytsubscribe"
                   data-channelid="UC1Pwa4nFvIPbtYVLcBGDpjA"
                   data-layout="full"
                   data-theme="dark"
@@ -155,6 +158,9 @@ export default function SponsorSection({ sponsor }: Props) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mb-24 mt-6 w-screen">
+        <GiscusComments mapping={url} />
       </div>
     </>
   );

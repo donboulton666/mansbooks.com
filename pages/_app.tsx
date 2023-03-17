@@ -16,7 +16,6 @@
 
 import React from "react";
 import { SSRProvider, OverlayProvider } from "react-aria";
-import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import ResizeHandler from "@components/resize-handler";
@@ -25,7 +24,7 @@ import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
 
-function App({ Component, session, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const AnyComponent = Component as any;
   useEffect(() => {
     document.body.classList?.remove("loading");
@@ -34,9 +33,7 @@ function App({ Component, session, pageProps }: AppProps) {
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>
-          <SessionProvider session={pageProps.session}>
-            <AnyComponent {...pageProps} />
-          </SessionProvider>
+          <AnyComponent {...pageProps} />
           <ResizeHandler />
         </HMSRoomProvider>
       </OverlayProvider>

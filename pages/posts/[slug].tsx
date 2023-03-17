@@ -10,6 +10,7 @@ import SectionSeparator from "@components/posts/section-separator";
 import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/LanguageBar";
+import GiscusComments from "@components/GiscusComments";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { format } from "date-fns";
 
@@ -148,7 +149,7 @@ export default function Post({ subscription, preview }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
-
+  const url = typeof window !== 'undefined' ? window.location.href : ''
   return (
     <Layout preview={preview}>
       <Head>{renderMetaTags(metaTags)}</Head>
@@ -163,6 +164,9 @@ export default function Post({ subscription, preview }) {
             author={post.author}
           />
           <PostBody content={post.content} />
+          <div className="mx-auto mb-4 mt-6 max-w-4xl">
+            <GiscusComments mapping={url} />
+          </div>
         </article>
         <SectionSeparator />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
