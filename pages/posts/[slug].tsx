@@ -22,7 +22,7 @@ export async function getStaticPaths({ locales }) {
       pathsArray.push({ params: { slug: post.slug }, locale: language });
     });
   });
-  const url = typeof window !== "undefined" ? window.location.href : "";
+ 
   return {
     paths: pathsArray,
     fallback: false,
@@ -172,7 +172,7 @@ export default function Post({ subscription, preview }) {
                 repoId="R_kgDOI7HnKA"
                 category="General"
                 categoryId="DIC_kwDOI7HnKM4CU8od"
-                mapping={url}
+                mapping="url"
                 term="Welcome to @giscus/react component!"
                 reactionsEnabled="1"
                 emitMetadata="0"
