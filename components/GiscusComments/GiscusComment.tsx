@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import type { GiscusProps } from "../../lib/types";
 
-export default function Giscus({
+function GiscusComment({
   id,
   repo,
   repoId,
@@ -45,3 +45,5 @@ export default function Giscus({
     />
   );
 }
+
+export default GiscusComment

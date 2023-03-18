@@ -1,5 +1,5 @@
 import React from "react";
-import Giscus from "@components/GiscusComments/Giscus";
+import Giscus from "@components/GiscusComments/GiscusComment";
 import Section from "@components/Section";
 
 function GiscusComments() {
