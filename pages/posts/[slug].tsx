@@ -10,7 +10,7 @@ import SectionSeparator from "@components/posts/section-separator";
 import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/LanguageBar";
-import Comments from "@components/Comments";
+import Giscus from "@giscus/react";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { format } from "date-fns";
 
@@ -22,7 +22,7 @@ export async function getStaticPaths({ locales }) {
       pathsArray.push({ params: { slug: post.slug }, locale: language });
     });
   });
-  
+  const url = typeof window !== "undefined" ? window.location.href : "";
   return {
     paths: pathsArray,
     fallback: false,
@@ -149,7 +149,7 @@ export default function Post({ subscription, preview }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
-  
+
   return (
     <Layout preview={preview}>
       <Head>{renderMetaTags(metaTags)}</Head>
@@ -164,8 +164,22 @@ export default function Post({ subscription, preview }) {
             author={post.author}
           />
           <PostBody content={post.content} />
-          <div className="center">
-            <Comments />
+          <div className="center mx-auto mb-4 mt-6 max-w-4xl">
+            <div className="comments-container">
+              <Giscus
+                id="comments"
+                repo="donaldboulton/mansbooks.com"
+                repoId="R_kgDOI7HnKA"
+                category="General"
+                categoryId="DIC_kwDOI7HnKM4CU8od"
+                mapping={url}
+                term="Welcome to @giscus/react component!"
+                reactionsEnabled="1"
+                emitMetadata="0"
+                inputPosition="top"
+                theme="transparent_dark"
+              />
+            </div>
           </div>
         </article>
         <SectionSeparator />

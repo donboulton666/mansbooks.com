@@ -15,6 +15,10 @@ module.exports = withPWA({
   env: {
     DATOCMS_READ_ONLY_API_TOKEN:
       process.env.DATOCMS_READ_ONLY_API_TOKEN ,
+    UPSTASH_REDIS_REST_TOKEN:
+      process.env.UPSTASH_REDIS_REST_TOKEN,
+    UPSTASH_REDIS_REST_URL:  
+      process.env.UPSTASH_REDIS_REST_URL,
   },
   typescript: {
     ignoreBuildErrors: true,

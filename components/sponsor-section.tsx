@@ -19,7 +19,7 @@ import Script from "next/script";
 import Image from "next/legacy/image";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";
-import GiscusComments from "@components/GiscusComments";
+import Giscus from "@giscus/react";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
 
@@ -28,8 +28,7 @@ type Props = {
 };
 
 export default function SponsorSection({ sponsor }: Props) {
-  const url = typeof window !== 'undefined' ? window.location.href : ''
-
+  const url = typeof window !== "undefined" ? window.location.href : "";
   return (
     <>
       <>
@@ -160,7 +159,21 @@ export default function SponsorSection({ sponsor }: Props) {
         </div>
       </div>
       <div className="mb-24 mt-6 w-screen">
-        <GiscusComments mapping={url} />
+        <div className="comments-container">
+          <Giscus
+            id="comments"
+            repo="donaldboulton/mansbooks.com"
+            repoId="R_kgDOI7HnKA"
+            category="General"
+            categoryId="DIC_kwDOI7HnKM4CU8od"
+            mapping={url}
+            term="Welcome to @giscus/react component!"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            theme="transparent_dark"
+          />
+        </div>
       </div>
     </>
   );
