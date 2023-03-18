@@ -1,5 +1,5 @@
 import React from "react";
-import Giscus from "@lib/Giscus";
+import Giscus from "@components/GiscusComments/Giscus";
 import Section from "@components/Section";
 
 function GiscusComments() {
@@ -15,7 +15,7 @@ function GiscusComments() {
         reactionsEnabled="1"
         emitMetadata="1"
         inputPosition="top"
-        theme="dark"
+        theme="dark_tritanopia"
         lang="en"
       />
     </Section>

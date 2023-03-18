@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import type { GiscusProps } from "./types";
+import type { GiscusProps } from "../../lib/types";
 
 export default function Giscus({
   id,
