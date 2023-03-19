@@ -22,7 +22,7 @@ export async function getStaticPaths({ locales }) {
       pathsArray.push({ params: { slug: post.slug }, locale: language });
     });
   });
- 
+
   return {
     paths: pathsArray,
     fallback: false,

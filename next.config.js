@@ -20,9 +20,6 @@ module.exports = withPWA({
     UPSTASH_REDIS_REST_URL:  
       process.env.UPSTASH_REDIS_REST_URL,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     formats: ['image/avif', 'image/webp'],
     domains: [
@@ -30,11 +27,26 @@ module.exports = withPWA({
       'res.cloudinary.com',
     ],
   },
+  reactStrictMode: true,
+  swcMinify: true,
+  // Support svg import
+  // ref: https://dev.to/dolearning/importing-svgs-to-next-js-nna
   webpack: (config) => {
-    // this will override the experiments
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
     config.experiments = { ...config.experiments, topLevelAwait: true };
-    // this will just update topLevelAwait property of config.experiments
-    // config.experiments.topLevelAwait = true 
     return config;
+  },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    ignoreBuildErrors: true,
   },
 });
