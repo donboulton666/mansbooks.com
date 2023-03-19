@@ -15,7 +15,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Robots-Tag = "index"
     X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "ACCEPT"
     X-XSS-Protection = "1; mode=block"
     Access-Control-Allow-Origin = '''
       https://mansbooks.com,
@@ -73,6 +73,7 @@
       https://prod-in2.100ms.live/hmsapi/donaldboultonyjl.app.100ms.live/
       https://*.hcaptcha.com
       https://hcaptcha.com
+      https://www.youtube.com/
       
     '''      
     Access-Control-Allow-Methods = '''
