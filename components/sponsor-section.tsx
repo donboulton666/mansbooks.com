@@ -165,7 +165,7 @@ export default function SponsorSection({ sponsor }: Props) {
             repoId="R_kgDOI7HnKA"
             category="General"
             categoryId="DIC_kwDOI7HnKM4CU8od"
-            mapping="url"
+            mapping="pathname"
             term="Welcome to @giscus/react component!"
             reactionsEnabled="1"
             emitMetadata="0"
