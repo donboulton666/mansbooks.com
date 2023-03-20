@@ -32,7 +32,7 @@ const Video = () => {
           sources={sources}
           className="w-full"
           ref={videoEl}
-          controls={true}
+          controls
           autoPlay
           loop
           plugins={[lazyload()]}

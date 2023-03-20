@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import Layout from "@components/PageLayout";
@@ -7,7 +6,6 @@ import Center from "@components/Center";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "../components/column-grid-left";
-import sevenHeaven from "../public/angie/angelina-jordan-seventh-heaven.jpg";
 import nothingHandsHeart from "../public/angie/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.jpg";
 import summerTime from "../public/angie/young-angelina.jpg";
 import goldenBuzzer from "../public/angie/angelinas-agt-golden-buzzer.jpg";
@@ -24,7 +22,7 @@ export default function Profile() {
         <main className="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-8">
           <div className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-20">
             <div className="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
-              <h1 className="mt-1 text-lg font-scenteribold text-wine-200 sm:text-wine-300 md:text-2xl">
+              <h1 className="mt-1 text-lg text-wine-200 sm:text-wine-300 md:text-2xl">
                 Angelina Jordan
               </h1>
               <div className="text-sm font-medium leading-4 text-white sm:text-slate-500">
@@ -33,15 +31,15 @@ export default function Profile() {
             </div>
             <div className="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
               <Image
-                src={sevenHeaven}
+                src={summerTime}
                 alt="Seventh Heaven"
-                className="h-60 w-96 rounded-lg object-center object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
+                className="h-60 w-96 rounded-lg object-cover object-center sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
             </div>
-            <dl className="row-start-2 mt-4 flex item-center text-xs font-medium sm:row-start-3 sm:mt-1 md:mt-2.5 lg:row-start-2">
+            <dl className="item-center row-start-2 mt-4 flex text-xs font-medium sm:row-start-3 sm:mt-1 md:mt-2.5 lg:row-start-2">
               <dt className="sr-only">Reviews</dt>
-              <dd className="flex item-center text-wine-300">
+              <dd className="item-center flex text-wine-300">
                 <svg
                   width="24"
                   height="24"
@@ -61,7 +59,7 @@ export default function Profile() {
                 </span>
               </dd>
               <dt className="sr-only">Location</dt>
-              <dd className="flex item-center">
+              <dd className="item-center flex">
                 <svg
                   width="2"
                   height="2"
@@ -160,8 +158,8 @@ export default function Profile() {
               the true story of when she was six years old, Angelina met a
               homeless, shoeless girl. After they talked for a long time, she
               gave the girl her shoes and vowed never to appear on stage again
-              wearing shoes until all the world’s children had thcenter. Since that
-              time, Angelina has always performed barefoot in public.
+              wearing shoes until all the world’s children had thcenter. Since
+              that time, Angelina has always performed barefoot in public.
             </div>
           </Section>
           <Section>
@@ -199,9 +197,7 @@ export default function Profile() {
                 href="https://youtu.be/VJjG68Dfr-8"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  18 months
-                </span>
+                <span className="text-blue-500">18 months</span>
               </a>{" "}
               and by 3 knew that's what she wanted to do with her life—become an
               international singing superstar.{" "}
@@ -227,7 +223,7 @@ export default function Profile() {
                   <Image
                     src={summerTime}
                     alt="Seventh Heaven"
-                    className="h-60 w-96 rounded-lg object-center object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
+                    className="h-60 w-96 rounded-lg object-cover object-center sm:col-span-2 sm:h-52 lg:col-span-full"
                     loading="lazy"
                   />
                 </a>
@@ -257,9 +253,7 @@ export default function Profile() {
                 href="https://theuncarvedblog.com/2021/10/07/how-long-will-i-love-you-sung-by-ellie-goulding-highlights-4-romantic-comedies-by-richard-curtis/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  How Long Will I Love You?
-                </span>
+                <span className="text-blue-500">How Long Will I Love You?</span>
               </a>
               . That's the moment Norway, and, when the video went viral, the
               rest of the world, fell in love with Angelina and her amazing
@@ -273,12 +267,9 @@ export default function Profile() {
                 href="https://youtu.be/d3gSho9yf88?t=278"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  You ARE music!
-                </span>
+                <span className="text-blue-500">You ARE music!</span>
               </a>
-              <span className="underline"></span> The other finale
-              judge said:{" "}
+              <span className="underline"></span> The other finale judge said:{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://youtu.be/d3gSho9yf88?t=285"
@@ -299,9 +290,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=zN4kAof1is0't=5s"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  final full show
-                </span>
+                <span className="text-blue-500">final full show</span>
               </a>{" "}
               where
               <a
@@ -309,9 +298,7 @@ export default function Profile() {
                 href="https://youtu.be/zN4kAof1is0?t=112"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  she sings Summertime
-                </span>
+                <span className="text-blue-500">she sings Summertime</span>
               </a>{" "}
               and goes on to win NGT with 46% of the vote at 7 years of age! See{" "}
               <a
@@ -325,9 +312,12 @@ export default function Profile() {
               </a>
               .
             </div>
-              <div className="w-full h-[500px] content-center justify-center justify-self-center">
-                <iframe src="/allproformances.html" className="w-full h-[500px] content-center justify-self-center justify-center"></iframe>
-              </div>
+            <div className="h-[260px] w-full content-center justify-center justify-self-center">
+              <iframe
+                src="/allproformances.html"
+                className="h-[260px] w-full content-center justify-center justify-self-center"
+              ></iframe>
+            </div>
             <div>She puts a spell on you</div>
             <div>
               Here is another jaw-dropping, mind-blowing experience. Watch
@@ -337,9 +327,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=nwFloCPXzCs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Put A Spell On You
-                </span>
+                <span className="text-blue-500">I Put A Spell On You</span>
               </a>{" "}
               in a studio with musicians, and later, live on{" "}
               <a
@@ -361,9 +349,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="text-blue-500">
-                  Watch him sing it
-                </span>
+                <span className="text-blue-500">Watch him sing it</span>
               </a>
               , then you will understand how she honors him he's on the candle
               she holds up to the camera by staying true to the original, yet
@@ -374,16 +360,14 @@ export default function Profile() {
               Angelina has recorded over 130 covers from 80 different artists
               that she's posted on Facebook and YouTube over the years. She
               arranges her own versions of popular songs and directs musicians
-              how to play thcenter. This video ranks as one of the most outrageous
-              mind-blowers, with hundreds of reactor videos and millions of
-              views! I love to see reactors try to respond in disbelief when
-              they hear her sing this song. It's a double enjoyment for
-              me—reacting to their reactions, as well as my own, again!! For
-              example:{" "}
+              how to play thcenter. This video ranks as one of the most
+              outrageous mind-blowers, with hundreds of reactor videos and
+              millions of views! I love to see reactors try to respond in
+              disbelief when they hear her sing this song. It's a double
+              enjoyment for me—reacting to their reactions, as well as my own,
+              again!! For example:{" "}
               <a href="https://youtu.be/_-a-7vJKPg0">
-                <span className="text-blue-500">
-                  Soul Reacts
-                </span>
+                <span className="text-blue-500">Soul Reacts</span>
               </a>
               , a songwriter who cannot comprehend what he is hearing; and{" "}
               <a
@@ -391,14 +375,15 @@ export default function Profile() {
                 href="https://youtu.be/Ph8MtT1FMJE"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  joethmarkaster
-                </span>
+                <span className="text-blue-500">joethmarkaster</span>
               </a>
               &#8216;s over-the-top reaction.{" "}
             </div>
-            <div className="w-full h-full content-center justify-center">
-              <iframe src="/osterlin.html" className="w-full h-[500px] content-center justify-center"></iframe>
+            <div className="h-full w-full content-center justify-center">
+              <iframe
+                src="/osterlin.html"
+                className="h-[260px] w-full content-center justify-center"
+              ></iframe>
             </div>
             <div>
               Pontus Österlin at{" "}
@@ -415,9 +400,7 @@ export default function Profile() {
                 href="https://youtu.be/4HM3kL7CEcQ"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  8-minute compilation
-                </span>
+                <span className="text-blue-500">8-minute compilation</span>
               </a>{" "}
               of a range of many reactors' reactions as Angelina belts out I Put
               A Spell On You. During the credits listing the mark, he included
@@ -487,9 +470,7 @@ export default function Profile() {
                 href="https://youtu.be/7HaMvkflBAo"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Allsang På Grensen – TV2
-                </span>
+                <span className="text-blue-500">Allsang På Grensen – TV2</span>
               </a>
               , and later{" "}
               <a
@@ -498,9 +479,7 @@ export default function Profile() {
                 target="_blank"
               >
                 LIVE on{" "}
-                <span className="text-blue-500">
-                  The Stream Gir Tilbake
-                </span>
+                <span className="text-blue-500">The Stream Gir Tilbake</span>
               </a>
               .
             </div>
@@ -520,8 +499,7 @@ export default function Profile() {
                   Queen's Bohcenterian Rhapsody
                 </span>
               </a>
-              , which won her a
-              <span className="text-blue-500"> </span>
+              , which won her a<span className="text-blue-500"> </span>
               Golden Buzzer from Heidi, who could hardly contain herself. After
               the show had aired, Angelina{" "}
               <a
@@ -529,12 +507,10 @@ export default function Profile() {
                 href="https://twitter.com/angelinajordanA/status/1214379711070998528"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  posted a tweet
-                </span>
+                <span className="text-blue-500">posted a tweet</span>
               </a>{" "}
-              thanking thcenter all for having her and for the Golden Buzzer, which
-              is included there.{" "}
+              thanking thcenter all for having her and for the Golden Buzzer,
+              which is included there.{" "}
             </div>
             <div className="inline">
               <div className="center">
@@ -542,7 +518,7 @@ export default function Profile() {
                   <Image
                     src={goldenBuzzer}
                     alt="goldenBuzzer"
-                    className="h-60 w-96 rounded-lg object-center object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
+                    className="h-60 w-96 rounded-lg object-cover object-center sm:col-span-2 sm:h-52 lg:col-span-full"
                     loading="lazy"
                   />
                 </a>
@@ -563,16 +539,14 @@ export default function Profile() {
               falling on me. It was really the best moment of my life.{" "}
             </div>
             <div>
-              As the judges and audience mcenterbers were on their feet applauding
-              wildly, I heard an excerpt of{" "}
+              As the judges and audience mcenterbers were on their feet
+              applauding wildly, I heard an excerpt of{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://theuncarvedblog.com/2018/01/21/the-hauntingly-beautiful-voice-of-eva-cassidy/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Eva Cassidy
-                </span>
+                <span className="text-blue-500">Eva Cassidy</span>
               </a>{" "}
               singing{" "}
               <a
@@ -580,9 +554,7 @@ export default function Profile() {
                 href="https://youtu.be/2rd8VktT8xY"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Over The Rainbow
-                </span>
+                <span className="text-blue-500">Over The Rainbow</span>
               </a>{" "}
               playing in the background and thought, how appropriate! One
               amazing angelic voice honoring another as her dream finally,
@@ -622,19 +594,17 @@ export default function Profile() {
                   She then went on stage to hug and kiss Angelina on both cheeks
                 </span>
               </a>
-              . The other judges joined thcenter on stage. Simon also hugged her and
-              said: I don't think you know how good you are. Really! The camera
-              then segues to Angelina's family: her thankful uncle Michael,
-              sister Juliette's happy tears, and mother Sara and grandma Mery
-              hugging. Kaleidoscope RMX also posted the{" "}
+              . The other judges joined thcenter on stage. Simon also hugged her
+              and said: I don't think you know how good you are. Really! The
+              camera then segues to Angelina's family: her thankful uncle
+              Michael, sister Juliette's happy tears, and mother Sara and
+              grandma Mery hugging. Kaleidoscope RMX also posted the{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=3QLhZ5N8-F4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Full Golden Buzzer Moment
-                </span>
+                <span className="text-blue-500">Full Golden Buzzer Moment</span>
               </a>
               .
             </div>
@@ -646,9 +616,7 @@ export default function Profile() {
                 href="https://youtu.be/ZhEOq2EHjIg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Goodbye Yellow Brick Road
-                </span>
+                <span className="text-blue-500">Goodbye Yellow Brick Road</span>
               </a>
               . She blew the judges away again, and the crowd went nuts in
               joyful disbelief.{" "}
@@ -660,19 +628,15 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=StT8I7sa1f4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Kseniya Simonova
-                </span>
+                <span className="text-blue-500">Kseniya Simonova</span>
               </a>{" "}
               and talented young violinist Tyler Butler-Figueroa for an exciting
               group performance of Someone You Loved in the AGT Champions
               Finale.{" "}
             </div>
-            <div className="w-full h-full">
-              <div className="w-full h-full">
-                <span className="centerbed-youtube">
-                 
-                </span>
+            <div className="h-full w-full">
+              <div className="h-full w-full">
+                <span className="centerbed-youtube"></span>
               </div>
             </div>
             <div>
@@ -681,9 +645,7 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Boris Palenovski
-                </span>
+                <span className="text-blue-500">Boris Palenovski</span>
               </a>{" "}
               later edited all 3 performances together in higher res:{" "}
               <a
@@ -715,9 +677,7 @@ export default function Profile() {
                 href="https://youtu.be/MS2XdfgIti0"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bohcenterian Rhapsody
-                </span>
+                <span className="text-blue-500">Bohcenterian Rhapsody</span>
               </a>
               , with Queen's blessing, for her official channel. She also sings
               many cover songs by today's great artists, like{" "}
@@ -726,9 +686,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=8gJuprckBxI"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Adele's All I Ask
-                </span>
+                <span className="text-blue-500">Adele's All I Ask</span>
               </a>{" "}
               and her cover of{" "}
               <a
@@ -763,13 +721,13 @@ export default function Profile() {
               is filled with centerotive power and heartfelt feelings as seen in
               this screensaver from a video of her singing the song.{" "}
             </div>
-            <div className="inline center">
+            <div className="center inline">
               <div className="center">
                 <a href="https://kenchawkin.files.wordpress.com/2021/06/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.png">
                   <Image
                     src={nothingHandsHeart}
                     alt="nothingHandsHeart"
-                    className="h-60 w-96 rounded-lg object-center object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
+                    className="h-60 w-96 rounded-lg object-cover object-center sm:col-span-2 sm:h-52 lg:col-span-full"
                     loading="lazy"
                   />
                 </a>
@@ -786,12 +744,12 @@ export default function Profile() {
               </div>
             </div>
             <div>
-              Angelina may centerulate these artists, vocally and centerotionally as she
-              inhabits their songs, but she interprets thcenter in her own unique
-              stylistic way, oftentimes better than the original! Like any great
-              jazz artist, she is developing her own sound, finding her own
-              voice, and now performing her own music. We are all in for many
-              surprising treats.
+              Angelina may centerulate these artists, vocally and
+              centerotionally as she inhabits their songs, but she interprets
+              thcenter in her own unique stylistic way, oftentimes better than
+              the original! Like any great jazz artist, she is developing her
+              own sound, finding her own voice, and now performing her own
+              music. We are all in for many surprising treats.
             </div>
             <div>
               When she was 10 years old Angelina was asked to record a song by
@@ -801,9 +759,7 @@ export default function Profile() {
                 href="https://en.wikipedia.org/wiki/Sterling_Fox"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Sterling Fox
-                </span>
+                <span className="text-blue-500">Sterling Fox</span>
               </a>{" "}
               or Baby FuzZ. Angelina's version was a dcentero, not meant to be
               released. She said she would never record it again because it
@@ -815,9 +771,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=exlgtCM_rac'lc=Ugx0tcGGIhK6Qsdk2bl4AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  in this comment
-                </span>
+                <span className="text-blue-500">in this comment</span>
               </a>
               . He includes Baby Fuzz's comment—an attcenterpt to clear the air
               about it after he had heard it. Angelina's version of{" "}
@@ -838,17 +792,17 @@ export default function Profile() {
               goosebumps and moves thcenter to tears are the powerful soulful
               feelings she puts into each song. How can someone that young, who
               has not yet experienced life's ups and downs, express such
-              centerotions and understanding? It boggles the mind! There is no doubt
-              that Angelina is an old soul in a young body—something the judges
-              at NGT and AGT said, as well as others who have commented on her
-              performances.{" "}
+              centerotions and understanding? It boggles the mind! There is no
+              doubt that Angelina is an old soul in a young body—something the
+              judges at NGT and AGT said, as well as others who have commented
+              on her performances.{" "}
             </div>
             <div>
               She has 2 billion Facebook views and over half a billion on
               YouTube. There are many compilation channels of her music and
               100's of reaction videos of people responding to some of the many
-              songs she's posted. Most of thcenter are visibly moved, jaw-dropped at
-              a loss for words.{" "}
+              songs she's posted. Most of thcenter are visibly moved,
+              jaw-dropped at a loss for words.{" "}
             </div>
             <div>
               One of the more qualified reactors is Spanish-speaking vocal coach{" "}
@@ -857,13 +811,11 @@ export default function Profile() {
                 href="https://www.youtube.com/playlist?list=PLsJFvt698FRddwD9Lt65FNn3KIw9Thxto"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Ceci Dover
-                </span>
+                <span className="text-blue-500">Ceci Dover</span>
               </a>
-              <span className="text-blue-500">.</span> She
-              explains things in detail, sharing valuable advice. See this one
-              she posted of Angelina covering{" "}
+              <span className="text-blue-500">.</span> She explains things in
+              detail, sharing valuable advice. See this one she posted of
+              Angelina covering{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=87LhCorUlOE"
@@ -881,9 +833,7 @@ export default function Profile() {
                 href="https://youtu.be/e3NKisBWbdE"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  In this enjoyable video
-                </span>
+                <span className="text-blue-500">In this enjoyable video</span>
               </a>{" "}
               select English subtitles, Ceci uses excerpts of Angela singing
               between ages 7-13 to give us an informed overview of the evolution
@@ -908,13 +858,11 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UCam0sj2MWFz2lCx_IU3I5dg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Kaleidoscope RMX
-                </span>
+                <span className="text-blue-500">Kaleidoscope RMX</span>
               </a>
               . It shows her commitment to and belief in herself using excerpts
-              from NGT to AGT and a sweet surprise ending. Very centerotional and
-              inspiring!!{" "}
+              from NGT to AGT and a sweet surprise ending. Very centerotional
+              and inspiring!!{" "}
             </div>
             <div>
               Creatively collaborating with Stargate, signing with Republic
@@ -940,18 +888,16 @@ export default function Profile() {
                 href="https://www.republicrecords.com/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Republic Records
-                </span>
+                <span className="text-blue-500">Republic Records</span>
               </a>
               .{" "}
             </div>
             <div>
               Angelina released her first singles on the Republic Records label:
-              “Million Miles” in Novcenterber 2020 and “7th Heaven” in March 2021.
-              Both songs are co-credited to the multiple Grammy-award-winning
-              Los Angeles-based Norwegian production duo, Tor Erik Hermansen and
-              Mikkel Storleer Eriksen, aka{" "}
+              “Million Miles” in Novcenterber 2020 and “7th Heaven” in March
+              2021. Both songs are co-credited to the multiple
+              Grammy-award-winning Los Angeles-based Norwegian production duo,
+              Tor Erik Hermansen and Mikkel Storleer Eriksen, aka{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://en.wikipedia.org/wiki/Stargate_record_producers"
@@ -987,9 +933,7 @@ export default function Profile() {
                 href="https://youtu.be/NhKRh5ZtuWk"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Official Lyric Video
-                </span>
+                <span className="text-blue-500">Official Lyric Video</span>
               </a>
               , a very personal song about losing her grandfather; and a more
               upbeat{" "}
@@ -998,9 +942,7 @@ export default function Profile() {
                 href="https://youtu.be/bM8DzMRbiIc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  7th Heaven Live in Studio
-                </span>
+                <span className="text-blue-500">7th Heaven Live in Studio</span>
               </a>{" "}
               and{" "}
               <a
@@ -1008,9 +950,7 @@ export default function Profile() {
                 href="https://youtu.be/o4Vl3I1WWq4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Official Lyric Video
-                </span>
+                <span className="text-blue-500">Official Lyric Video</span>
               </a>{" "}
               about her philosophy of life. The live in-studio videos were
               filmed in a sparse lounge-like setting. The official lyric videos
@@ -1020,9 +960,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=i9NxX0tSjS0"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Mery Zamani
-                </span>
+                <span className="text-blue-500">Mery Zamani</span>
               </a>
               , some of which were printed onto the outfit Angelina wore on AGT.
               A third, more personal,{" "}
@@ -1038,12 +976,18 @@ export default function Profile() {
               was later released in Jan 27, 2021.{" "}
             </div>
             <h2>Million Miles</h2>
-            <div className="w-full h-[500px]">
-              <iframe src="/million-miles.html" className="w-full h-[500px]"></iframe>
+            <div className="h-[260px] w-full">
+              <iframe
+                src="/million-miles.html"
+                className="h-[260px] w-full"
+              ></iframe>
             </div>
             <h2>Seventh Heaven</h2>
-            <div className="w-full h-[500px]">
-              <iframe src="/seventh-heaven.html" className="w-full h-[500px]"></iframe>
+            <div className="h-[260px] w-full">
+              <iframe
+                src="/seventh-heaven.html"
+                className="h-[260px] w-full"
+              ></iframe>
             </div>
             <div>
               Partnering with Stargate and Republic officially launched the
@@ -1107,10 +1051,10 @@ export default function Profile() {
               compassionate heart are expressed through her actions as well as
               her amazing voice!{" "}
             </div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>
-                Angelina’s centerpathy and compassionate heart are expressed through
-                her actions as well as her amazing voice!
+                Angelina’s centerpathy and compassionate heart are expressed
+                through her actions as well as her amazing voice!
               </div>
             </blockquote>
             <div>Publishes Between Two Hearts</div>
@@ -1122,9 +1066,7 @@ export default function Profile() {
                 href="https://www.angelinajordanofficial.com/book"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Between Two Hearts
-                </span>
+                <span className="text-blue-500">Between Two Hearts</span>
               </a>{" "}
               is illustrated by her grandmother Mery Zamani, herself a child
               prodigy who became a famous poet and painter at a very early age.
@@ -1132,11 +1074,11 @@ export default function Profile() {
               is responsible for her desire to become a jazz singer. They create
               art together, and design and make her own clothing. Mery tapes the
               many videos of Angelina singing. She also paints the backdrops for
-              some of thcenter, including images in the animated sequence for the
-              lyric version of Million Miles. Some of her images were made into
-              clothing that Angelina wears, like the colorful pant suit she wore
-              in her first appearance on AGT, when she sang Bohcenterian Rhapsody.
-              See this short{" "}
+              some of thcenter, including images in the animated sequence for
+              the lyric version of Million Miles. Some of her images were made
+              into clothing that Angelina wears, like the colorful pant suit she
+              wore in her first appearance on AGT, when she sang Bohcenterian
+              Rhapsody. See this short{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=Ld0GFRB-2u8"
@@ -1155,9 +1097,7 @@ export default function Profile() {
                 href="https://youtu.be/6p6iL989P_8"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  In a Book Talk podcast
-                </span>
+                <span className="text-blue-500">In a Book Talk podcast</span>
               </a>{" "}
               posted by Angelina Jordan’s publisher, Cappelen Damm, in 2015,
               Erling Kittelsen, a Norwegian author and poet, and friend of the
@@ -1171,9 +1111,7 @@ export default function Profile() {
                 href="https://angelina-jordan-official-store.creator-spring.com/listing/between-two-hearts-english?product=1227"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Between Two Hearts
-                </span>
+                <span className="text-blue-500">Between Two Hearts</span>
               </a>
               . It is very moving and gives us a glimpse into who Angelina
               really is. For her,
@@ -1247,9 +1185,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=sPPBtaxWQww'lc=Ugy3sB238SfrSHnXxIZ4AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  GEB Endeavors comments
-                </span>
+                <span className="text-blue-500">GEB Endeavors comments</span>
               </a>{" "}
               on how Angelina's uncle became her manager and eventually paved
               the way for the family to move to LA to pursue her career in
@@ -1265,11 +1201,11 @@ export default function Profile() {
             <div>
               When Angelina performs, she is in her elcenterent. She is calm and
               fearless. It is natural for her to powerfully project the
-              centerotional content of a song. She appears extroverted on stage, yet
-              is in her own world. But ask her questions in an interview, and
-              she gives short answers. She secenters shy, introverted. She's not
-              comfortable expressing herself personally. However, it secenters to be
-              easier for her the older she gets.{" "}
+              centerotional content of a song. She appears extroverted on stage,
+              yet is in her own world. But ask her questions in an interview,
+              and she gives short answers. She secenters shy, introverted. She's
+              not comfortable expressing herself personally. However, it
+              secenters to be easier for her the older she gets.{" "}
             </div>
             <div>
               I think she may be an introvert by nature and inhabits a rich
@@ -1292,7 +1228,7 @@ export default function Profile() {
               </a>
               That says it all.
             </div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>
                 I want to sing for the whole world. Singing is as important as
                 breathing to me. I just love to sing. — Angelina Jordan
@@ -1313,8 +1249,8 @@ export default function Profile() {
               after her. She was well eighteen months, and sang a Whitney
               Houston song in bed. I was almost shocked. It was so beautiful! We
               quickly realized that she had very great interest in music. It is
-              she who is first and forcenterost musical in the family. Neither my
-              husband nor I are particularly musical. This video,{" "}
+              she who is first and forcenterost musical in the family. Neither
+              my husband nor I are particularly musical. This video,{" "}
               <a
                 href="https://youtu.be/odiv-yJk7Ew?t=40"
                 target="_blank"
@@ -1326,7 +1262,7 @@ export default function Profile() {
               </a>
               , includes that clip of Angelina singing as a baby.{" "}
             </div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>I close my eyes and go in a different world. </div>
               <cite>
                 A young Angelina to an interviewer asking her about her singing.{" "}
@@ -1355,7 +1291,7 @@ export default function Profile() {
               A: I take it all in…and use it to spread love to everyone all over
               the world.
             </div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>
                 I take it all in…and use it to spread love to everyone all over
                 the world.
@@ -1372,7 +1308,7 @@ export default function Profile() {
                 href="https://youtu.be/97hjWg4ToRQ"
                 target="_blank"
               >
-                <span className="text-blue-500 pr-1">
+                <span className="pr-1 text-blue-500">
                   Singer Angelina Jordan: – I don't feel like a 12-year-old |
                   SVT/TV 2/Skavlan
                 </span>
@@ -1425,7 +1361,7 @@ export default function Profile() {
               feel like a 12-year-old?{" "}
             </div>
             <div>A: I feel like a 12-year-old when I look at my passport.</div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>
                 When I sing I go to another world. In the world, it’s like,
                 endless. It’s amazing. ' Like, full of happiness, and, I love '
@@ -1443,11 +1379,12 @@ export default function Profile() {
             </div>
             <div>
               The song sounds like a religious prayer, which could also serve as
-              the the centere song for a Bond movie. Skavlan said it rcenterinded him of
-              the Bond films and asks her if she's familiar with thcenter. She tells
-              him that she got the inspiration for her song from the Bond films.
-              He asks if she would sing a little bit of her favorite Bond song,
-              and she does, acapela, Diamonds Are Forever.
+              the the centere song for a Bond movie. Skavlan said it
+              rcenterinded him of the Bond films and asks her if she's familiar
+              with thcenter. She tells him that she got the inspiration for her
+              song from the Bond films. He asks if she would sing a little bit
+              of her favorite Bond song, and she does, acapela, Diamonds Are
+              Forever.
             </div>
             <div>
               Listen to her sing her song{" "}
@@ -1472,8 +1409,8 @@ export default function Profile() {
               with a band in an open air concert the following year in Norway,
               Jul 12, 2019, when she was 13.
             </div>
-            <div className="w-full h-[500px]">
-              <iframe src="/shield.html" className="w-full h-[500px]"></iframe>                 
+            <div className="h-[260px] w-full">
+              <iframe src="/shield.html" className="h-[260px] w-full"></iframe>
             </div>
             <div>Describing her destiny</div>
             <div>
@@ -1483,9 +1420,7 @@ export default function Profile() {
                 href="https://www.msn.com/en-us/music/news/viral-singing-prodigy-angelina-jordan-releases-new-single-million-miles/ar-BB1doxkY?ocid=st"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  People Magazine article
-                </span>
+                <span className="text-blue-500">People Magazine article</span>
               </a>
               , Alyssa Johnson asks her: Where do you hope to see yourself in
               five years from now?{" "}
@@ -1493,15 +1428,16 @@ export default function Profile() {
             <div>
               A: I'll have an important name in the music industry and to make
               timeless music that can live forever. Also to give the best music
-              experience to people and for thcenter to enjoy and feel centerotional or
-              dance or make mcenterories with the music I make.
+              experience to people and for thcenter to enjoy and feel
+              centerotional or dance or make mcenterories with the music I make.
             </div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>
                 I'll have an important name in the music industry and to make
                 timeless music that can live forever. Also to give the best
                 music experience to people and for thcenter to enjoy and feel
-                centerotional or dance or make mcenterories with the music I make.
+                centerotional or dance or make mcenterories with the music I
+                make.
               </div>
               <cite>
                 Angelina Jordan's answer to a People Magazine reporter asking
@@ -1539,9 +1475,7 @@ export default function Profile() {
                 href="https://www.angelinajordanofficial.com"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Angelina Jordan
-                </span>
+                <span className="text-blue-500">Angelina Jordan</span>
               </a>
               , and her various social media accounts:{" "}
               <a
@@ -1557,9 +1491,7 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UCv-QOBc_N1xb8dTwqazD9Kg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  CoverChannel
-                </span>
+                <span className="text-blue-500">CoverChannel</span>
               </a>{" "}
               to see selected videos of her performing well-known songs,
               including some of her own; and follow her on{" "}
@@ -1568,9 +1500,7 @@ export default function Profile() {
                 href="https://www.instagram.com/angelinajordana/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Instagram
-                </span>
+                <span className="text-blue-500">Instagram</span>
               </a>
               ,{" "}
               <a
@@ -1669,9 +1599,7 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UCJnLWcns8O7hZC1bD9IYyhQ"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  YouTube compilations
-                </span>
+                <span className="text-blue-500">YouTube compilations</span>
               </a>
               .
             </div>
@@ -1693,9 +1621,7 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UCEGRUdwLqrUJFydtZg5bl9A"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Julia Nilon
-                </span>
+                <span className="text-blue-500">Julia Nilon</span>
               </a>
               &#8216;s in-depth technical reaction to Angelina's performance of
               I Put A Spell On You he gives her{" "}
@@ -1704,9 +1630,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=hmIqzsYUz0k'lc=Ugw2nMLPFYGWKoTfjWN4AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  a comprehensive review
-                </span>
+                <span className="text-blue-500">a comprehensive review</span>
               </a>{" "}
               of the young singer's history that's worth reading.
             </div>
@@ -1736,9 +1660,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=mM_a68MdydU'list=PL54XsLUTxk4hbzix016aa_9rXWR3hJL44"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Angie's Music +
-                </span>
+                <span className="text-blue-500">Angie's Music +</span>
               </a>
               .{" "}
             </div>
@@ -1764,9 +1686,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=4HIWXZ4HQ6M'lc=UgzLwID340oceHudXMx4AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  a recent one
-                </span>
+                <span className="text-blue-500">a recent one</span>
               </a>
               .{" "}
             </div>
@@ -1783,8 +1703,8 @@ export default function Profile() {
                 </span>
               </a>{" "}
               of how Angelina was creating the sounds in her voice while singing
-              Bohcenterian Rhapsody on AGT, and was moved to tears listening to such
-              a rare talent.{" "}
+              Bohcenterian Rhapsody on AGT, and was moved to tears listening to
+              such a rare talent.{" "}
             </div>
             <div>
               Also see{" "}
@@ -1793,9 +1713,7 @@ export default function Profile() {
                 href="https://www.wikiwand.com/en/Angelina_Jordan"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Wikiwand’s page
-                </span>
+                <span className="text-blue-500">Wikiwand’s page</span>
               </a>{" "}
               for Angelina Jordan. Gary Rogers{" "}
               <a
@@ -1803,9 +1721,7 @@ export default function Profile() {
                 href="https://www.youtube.com/playlist?list=PLvdXi7X_SJN0ZxG5iBxZ4jyN3l8au1R2Q"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  posted a long list
-                </span>
+                <span className="text-blue-500">posted a long list</span>
               </a>{" "}
               of Angelina Jordan interviews, clips and everything else about
               her.{" "}
@@ -1817,9 +1733,7 @@ export default function Profile() {
                 href="https://angelina-jordan-official-store.creator-spring.com/listing/between-two-hearts-english?product=1227"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Between Two Hearts
-                </span>
+                <span className="text-blue-500">Between Two Hearts</span>
               </a>
               . I was just as moved by her story and the way she tells it of why
               she sings barefoot as I am when I hear her sing, even more so.
@@ -1866,9 +1780,7 @@ export default function Profile() {
                 href="https://youtu.be/H9NJenpBV2I"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Easy On Me
-                </span>
+                <span className="text-blue-500">Easy On Me</span>
               </a>
               . The next day, Angelina's Fanclub posted a{" "}
               <a
@@ -1876,12 +1788,10 @@ export default function Profile() {
                 href="https://youtu.be/fGxdQWCgCTo"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  TikTok clip
-                </span>
+                <span className="text-blue-500">TikTok clip</span>
               </a>{" "}
-              of her singing the song. The day after that Angelina prcenteriered her
-              amazing cover of the song:{" "}
+              of her singing the song. The day after that Angelina prcenteriered
+              her amazing cover of the song:{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://youtu.be/Mpw5Q76hWWE"
@@ -1891,20 +1801,17 @@ export default function Profile() {
                   Angelina Jordan '; Easy On Me Adele Cover Live From Studio
                 </span>
               </a>
-              <span className="text-blue-500">!</span> Republic
-              Records produced the in-studio black and white video of Angelina
-              at the mic with just her piano accompanist. Angelina pours her
-              heart and soul into this song. Her voice continues to mature as
-              well as her vocal dexterity. Surprisingly, she sounds even better!
-              I{" "}
+              <span className="text-blue-500">!</span> Republic Records produced
+              the in-studio black and white video of Angelina at the mic with
+              just her piano accompanist. Angelina pours her heart and soul into
+              this song. Her voice continues to mature as well as her vocal
+              dexterity. Surprisingly, she sounds even better! I{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=Mpw5Q76hWWE'lc=UgwCNRjSrSZ4mrvNkvl4AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  posted a comment
-                </span>
+                <span className="text-blue-500">posted a comment</span>
               </a>{" "}
               on the quality of the silence I felt at the end of the song. There
               have already been many videos posted on YouTube reacting to
@@ -1927,9 +1834,7 @@ export default function Profile() {
                 href="https://www.imdb.com/title/tt8718158/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  The Hating Game
-                </span>
+                <span className="text-blue-500">The Hating Game</span>
               </a>{" "}
               prcenteriered in the USA. Republic Records released the{" "}
               <a
@@ -2028,9 +1933,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=bWiLOnHJYxg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  My Funny Valentine
-                </span>
+                <span className="text-blue-500">My Funny Valentine</span>
               </a>
               ! Rcentercenterber when she sang it at{" "}
               <a
@@ -2038,9 +1941,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="text-blue-500">
-                  10 years old
-                </span>
+                <span className="text-blue-500">10 years old</span>
               </a>
               ?{" "}
             </div>
@@ -2077,12 +1978,10 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=RTbKhkceR00"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Suspicious Minds
-                </span>
+                <span className="text-blue-500">Suspicious Minds</span>
               </a>
-              . The song was written by Mcenterphis singer Mark James, an old friend
-              of Elvis. When he heard{" "}
+              . The song was written by Mcenterphis singer Mark James, an old
+              friend of Elvis. When he heard{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=mFP0EP-Oi2I"
@@ -2101,9 +2000,7 @@ export default function Profile() {
               </a>{" "}
               and{" "}
               <a href="https://www.songfacts.com/facts/elvis-presley/suspicious-minds">
-                <span className="text-blue-500">
-                  relaunched his career
-                </span>
+                <span className="text-blue-500">relaunched his career</span>
               </a>
               .{" "}
             </div>
@@ -2116,9 +2013,7 @@ export default function Profile() {
                 href="https://youtu.be/YZe_8u-rGWE"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  '68 Comeback Special
-                </span>
+                <span className="text-blue-500">'68 Comeback Special</span>
               </a>
               . Rob Christie arranged the music and accompanied Angelina on
               piano. Rob's{" "}
@@ -2151,16 +2046,17 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=bWiLOnHJYxg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  My Funny Valentine
-                </span>
+                <span className="text-blue-500">My Funny Valentine</span>
               </a>
               —an LA antique furniture and chandelier shop. This is an amazing
               performance and production!
             </div>
-              <div className="w-full h-[500px]">
-                <iframe src="/suspeciousminds.html" className="w-full h-[500px]"></iframe>
-              </div>
+            <div className="h-full w-full">
+            <iframe
+                src="/suspeciousminds.html"
+                className="h-[260px] w-full content-center justify-center justify-self-center"
+              ></iframe>
+            </div>
             <h3 className="wp-block-heading">Summer Concerts in Norway</h3>
             <div>June 22, 2022, Allsang på Grensen</div>
             <div>
@@ -2172,9 +2068,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=TqMqyAi-bsc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bohcenterian Rhapsody
-                </span>
+                <span className="text-blue-500">Bohcenterian Rhapsody</span>
               </a>{" "}
               in a vibrant red pant suit and{" "}
               <a
@@ -2182,9 +2076,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=AqtIVYFjapQ"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>{" "}
               in a stunning ice blue gown, both televised by TV2 Norway.{" "}
               <a
@@ -2192,9 +2084,7 @@ export default function Profile() {
                 href="https://www.youtube.com/c/AngelinaJordanVlogs/videos"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Angelina Jordan Vlogs
-                </span>
+                <span className="text-blue-500">Angelina Jordan Vlogs</span>
               </a>{" "}
               captured{" "}
               <a href="https://www.youtube.com/watch?v=TqMqyAi-bsc">
@@ -2223,9 +2113,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=LDZ4x0cFJRs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  best audio version
-                </span>
+                <span className="text-blue-500">best audio version</span>
               </a>{" "}
               so far with a clean music intro.{" "}
             </div>
@@ -2254,9 +2142,7 @@ export default function Profile() {
                 href="https://youtu.be/sjGkvd8htI0?t=21"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  quintessential message
-                </span>
+                <span className="text-blue-500">quintessential message</span>
               </a>
               : I'm probably repeating myself but, the most important thing is
               just to be yourself, be kind to each other, and just be happy.
@@ -2264,7 +2150,7 @@ export default function Profile() {
             </div>
             <div>An audience mcenterber shouts out, You make us happy. </div>
             <div>Visibly moved, Angelina replies: Oh, that means so much.</div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>
                 The most important thing is just to be yourself, be kind to each
                 other, and just be happy. That’s all that matters.
@@ -2281,9 +2167,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=LHlMrTpTWt4'lc=UgxpfEWYAxCqBTMMljB4AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Shodan Rich
-                </span>
+                <span className="text-blue-500">Shodan Rich</span>
               </a>{" "}
               after hearing her sing Suspicious Minds, the 3rd and final encore
               of the show.
@@ -2303,9 +2187,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=dxBOeYmcDno"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  All of Me
-                </span>
+                <span className="text-blue-500">All of Me</span>
               </a>
               ,{" "}
               <a
@@ -2313,9 +2195,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=cRns0JACfRI"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Yellow Brick Road
-                </span>
+                <span className="text-blue-500">Yellow Brick Road</span>
               </a>
               ,{" "}
               <a
@@ -2323,9 +2203,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=7oASxWtntTU"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Love on the Brain
-                </span>
+                <span className="text-blue-500">Love on the Brain</span>
               </a>
               ,{" "}
               <a
@@ -2343,9 +2221,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=eZ7kHOE5NKc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Million Miles
-                </span>
+                <span className="text-blue-500">Million Miles</span>
               </a>
               ,{" "}
               <a
@@ -2353,9 +2229,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=sjGkvd8htI0"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Tears Dry on Their Own
-                </span>
+                <span className="text-blue-500">Tears Dry on Their Own</span>
               </a>
               ,{" "}
               <a
@@ -2371,9 +2245,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=PI3p3mT-NNs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I'm Not the Only One
-                </span>
+                <span className="text-blue-500">I'm Not the Only One</span>
               </a>{" "}
               and{" "}
               <a
@@ -2381,9 +2253,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=LHlMrTpTWt4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Suspicious Minds
-                </span>
+                <span className="text-blue-500">Suspicious Minds</span>
               </a>
               .
             </div>
@@ -2404,9 +2274,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=JA8S2VibP8w"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  House of the Rising Sun
-                </span>
+                <span className="text-blue-500">House of the Rising Sun</span>
               </a>
               ,{" "}
               <a
@@ -2427,9 +2295,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=Bu4S2wgKetE"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bang Bang
-                </span>
+                <span className="text-blue-500">Bang Bang</span>
               </a>
               ,{" "}
               <a
@@ -2437,9 +2303,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=kCpGErK8dbk"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Love on the Brain
-                </span>
+                <span className="text-blue-500">Love on the Brain</span>
               </a>
               ,{" "}
               <a
@@ -2447,9 +2311,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=EpdAY4NenIY"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bad Romance
-                </span>
+                <span className="text-blue-500">Bad Romance</span>
               </a>
               ,{" "}
               <a
@@ -2457,9 +2319,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=WIwZ40mqOK4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  7th Heaven
-                </span>
+                <span className="text-blue-500">7th Heaven</span>
               </a>
               ,{" "}
               <a
@@ -2467,9 +2327,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=hwKeKXAB7a8"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Goodbye Yellow Brick Road
-                </span>
+                <span className="text-blue-500">Goodbye Yellow Brick Road</span>
               </a>
               ,{" "}
               <a
@@ -2477,9 +2335,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=euX2F6NcbHI"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Suspicious Minds
-                </span>
+                <span className="text-blue-500">Suspicious Minds</span>
               </a>
               .
             </div>
@@ -2490,9 +2346,7 @@ export default function Profile() {
                 href="https://youtu.be/E7KO26ovuZk"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  video of concert photos
-                </span>
+                <span className="text-blue-500">video of concert photos</span>
               </a>{" "}
               taken by NiceShot.no.
             </div>
@@ -2503,9 +2357,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=Oa6jaZZzhBs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  House of the Rising Sun
-                </span>
+                <span className="text-blue-500">House of the Rising Sun</span>
               </a>{" "}
               from Hege of The Shield fan group. He later posted a multi-cam
               video of{" "}
@@ -2514,12 +2366,10 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=7Q5WvL3P4bA"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Suspicious Minds
-                </span>
+                <span className="text-blue-500">Suspicious Minds</span>
               </a>{" "}
-              that he created from footage provided by many mcenterbers of the The
-              Shield fan group.
+              that he created from footage provided by many mcenterbers of the
+              The Shield fan group.
             </div>
             <div>July 7, 2022, Kongsberg Jazz Festival</div>
             <div>
@@ -2572,7 +2422,7 @@ export default function Profile() {
               </a>
               .{" "}
             </div>
-            <blockquote className="w-full h-full">
+            <blockquote className="h-full w-full">
               <div>I am fully committed to music. Music is my life.</div>
               <cite>Angelina Jordan answering a NRK interviewer</cite>
             </blockquote>
@@ -2594,9 +2444,7 @@ export default function Profile() {
                 href="https://tv.nrk.no/serie/festivalsommer/2022/MKDU45000422/avspiller"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Kongsberg Jazz Festival
-                </span>
+                <span className="text-blue-500">Kongsberg Jazz Festival</span>
               </a>{" "}
               7:45–17:20 opens with an interview followed by Angelina singing
               her original songs, 7th Heaven and Million Miles.{" "}
@@ -2605,9 +2453,7 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Boris Palenovski
-                </span>
+                <span className="text-blue-500">Boris Palenovski</span>
               </a>{" "}
               later enhanced the audio-visual quality of{" "}
               <a
@@ -2615,9 +2461,7 @@ export default function Profile() {
                 href="https://youtu.be/bnd-DkPzTPw"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  this NRK TV feature
-                </span>
+                <span className="text-blue-500">this NRK TV feature</span>
               </a>{" "}
               to 4K.{" "}
             </div>
@@ -2632,9 +2476,9 @@ export default function Profile() {
                   Angelina interacting with her audience
                 </span>
               </a>{" "}
-              before singing Valerie telling thcenter how happy she is to be back in
-              Norway after 3 years to sing for thcenter again. A month later Chris
-              posted{" "}
+              before singing Valerie telling thcenter how happy she is to be
+              back in Norway after 3 years to sing for thcenter again. A month
+              later Chris posted{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=vCnF-OlS04U"
@@ -2671,9 +2515,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=iLBBBudzSBE"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  You Don't Own Me
-                </span>
+                <span className="text-blue-500">You Don't Own Me</span>
               </a>
               , and{" "}
               <a
@@ -2681,9 +2523,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=y8UqOgy6TVI"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Crazy and Mercy
-                </span>
+                <span className="text-blue-500">Crazy and Mercy</span>
               </a>{" "}
               with improved sound, and{" "}
               <a
@@ -2691,9 +2531,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=UOA0Riz4thA"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bang Bang
-                </span>
+                <span className="text-blue-500">Bang Bang</span>
               </a>
               , followed by{" "}
               <a href="https://www.youtube.com/watch?v=fTCb4h2vS5I">
@@ -2708,20 +2546,16 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=F9AyPJ3pOto"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Mount Everest
-                </span>
+                <span className="text-blue-500">Mount Everest</span>
               </a>
-              , a song most were not familiar with. It blew thcenter away! Angelina
-              also performed the Amy Winehouse song{" "}
+              , a song most were not familiar with. It blew thcenter away!
+              Angelina also performed the Amy Winehouse song{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=jfwP3NHAMq4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Tears Dry On Their Own
-                </span>
+                <span className="text-blue-500">Tears Dry On Their Own</span>
               </a>
               . Chris created a hybrid version of{" "}
               <a
@@ -2729,9 +2563,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=bX-0UmxGhww"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  7th Heaven
-                </span>
+                <span className="text-blue-500">7th Heaven</span>
               </a>{" "}
               using NRK TV and fan footage. I recorded about 25% of the video
               and sound myself, and the other 75% is from NRK TV.
@@ -2763,9 +2595,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=yq5KAztslWw"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Million Miles
-                </span>
+                <span className="text-blue-500">Million Miles</span>
               </a>{" "}
               was posted by The Shield. Angelina introduced the song saying it
               is very meaningful to her about her grandpa and wanted to share a
@@ -2782,9 +2612,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=jdd_-lNnvVc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Mount Everest
-                </span>
+                <span className="text-blue-500">Mount Everest</span>
               </a>
               , which opened the show,{" "}
               <a
@@ -2792,9 +2620,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=haAhsQwICY0"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Killing Me Softly
-                </span>
+                <span className="text-blue-500">Killing Me Softly</span>
               </a>
               ,{" "}
               <a
@@ -2802,9 +2628,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=IfaA-2r83aA"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Fly Me to the Moon
-                </span>
+                <span className="text-blue-500">Fly Me to the Moon</span>
               </a>
               ,{" "}
               <a
@@ -2820,9 +2644,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=Tw_osE6J_0o"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  You Don't Own Me
-                </span>
+                <span className="text-blue-500">You Don't Own Me</span>
               </a>
               ,{" "}
               <a
@@ -2830,9 +2652,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=tMNWrkJL0uk"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Suspicious Minds
-                </span>
+                <span className="text-blue-500">Suspicious Minds</span>
               </a>
               ,{" "}
               <a
@@ -2840,9 +2660,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=yudm0IBDydU"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bohcenterian Rhapsody
-                </span>
+                <span className="text-blue-500">Bohcenterian Rhapsody</span>
               </a>
               ,{" "}
               <a
@@ -2850,9 +2668,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=gelFySO65TI"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Yellow Brick Road
-                </span>
+                <span className="text-blue-500">Yellow Brick Road</span>
               </a>
               ,{" "}
               <a
@@ -2860,9 +2676,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=WpD821uKtDs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  House of the Rising Sun
-                </span>
+                <span className="text-blue-500">House of the Rising Sun</span>
               </a>
               ,{" "}
               <a
@@ -2870,9 +2684,7 @@ export default function Profile() {
                 href="https://youtu.be/nQrzvsOe0_g"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Tears Dry on Their Own
-                </span>
+                <span className="text-blue-500">Tears Dry on Their Own</span>
               </a>
               ,{" "}
               <a
@@ -2880,9 +2692,7 @@ export default function Profile() {
                 href="https://youtu.be/wIRWOWpaFr0"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  7th Heaven
-                </span>
+                <span className="text-blue-500">7th Heaven</span>
               </a>
               ,{" "}
               <a
@@ -2890,9 +2700,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=KNcNxGN0NIM"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Love on the Brain
-                </span>
+                <span className="text-blue-500">Love on the Brain</span>
               </a>
               ,{" "}
               <a
@@ -2900,9 +2708,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=hTm_yY5KeWo"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  All of Me
-                </span>
+                <span className="text-blue-500">All of Me</span>
               </a>
               ,{" "}
               <a
@@ -2926,10 +2732,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=s-8RB1oYzVU"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bang Bang
-                </span>
-                ,
+                <span className="text-blue-500">Bang Bang</span>,
               </a>{" "}
               and a better quality video of{" "}
               <a
@@ -2937,9 +2740,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=fhn4pIDunGg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Million Miles
-                </span>
+                <span className="text-blue-500">Million Miles</span>
               </a>
               . From{" "}
               <a
@@ -2947,22 +2748,18 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=fhn4pIDunGg't=280s"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  4:40–4:50
-                </span>
+                <span className="text-blue-500">4:40–4:50</span>
               </a>
               , Angelina's voice kept soaring like never before. It surprised
               the audience, including the musicians. Thrilled, everyone
-              applauded. Angelina gave thcenter a little smile and kept on singing.
-              I{" "}
+              applauded. Angelina gave thcenter a little smile and kept on
+              singing. I{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgxadPplL92ziFsfVx14AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  asked Kathrine
-                </span>
+                <span className="text-blue-500">asked Kathrine</span>
               </a>{" "}
               what it must have felt like. Steve answered that he{" "}
               <a
@@ -2994,9 +2791,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=nTY8Dvy9LFs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>
               , which included Angelina's introduction. I want to dedicate this
               song to a very special person—my grandma. Applause She couldn't
@@ -3021,9 +2816,7 @@ export default function Profile() {
                 href="https://youtu.be/2b_d7PVAYMI?t=132"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>
               , ending with visuals of people lined up to get in. He then posted
               all{" "}
@@ -3040,9 +2833,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=KHCAgExJlCQ'list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r'index=2"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Mount Everest
-                </span>
+                <span className="text-blue-500">Mount Everest</span>
               </a>{" "}
               and ending with{" "}
               <a
@@ -3050,9 +2841,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=BkvsnY7J510'list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r'index=19"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>
               . This secenters to be a complete quality compilation.{" "}
             </div>
@@ -3063,9 +2852,7 @@ export default function Profile() {
                 href="https://www.youtube.com/playlist?list=PLgVH9DUPH5QorN0ofzcbOYQSXXlDzyfA9"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Full Playlist
-                </span>
+                <span className="text-blue-500">Full Playlist</span>
               </a>{" "}
               of 15 songs plus 3 encores, including a poster listing thcenter.{" "}
             </div>
@@ -3091,9 +2878,7 @@ export default function Profile() {
                 href="https://www.youtube.com/playlist?list=PL5OHYNhZE6vcUfPgFFzSGZBREt8RSQPa4"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  5 rehearsals
-                </span>
+                <span className="text-blue-500">5 rehearsals</span>
               </a>
               : 1 At last, 2-4 I Have Nothing, 5 Bang Bang. Hallvard Ulsaker
               filmed a closeup of Angelina singing{" "}
@@ -3102,9 +2887,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=gO8SaL0dE5M"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>{" "}
               and{" "}
               <a
@@ -3112,9 +2895,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=quBh8b1PlBc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Million Miles
-                </span>
+                <span className="text-blue-500">Million Miles</span>
               </a>
               . Trond Andersen{" "}
               <a
@@ -3122,9 +2903,7 @@ export default function Profile() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="text-blue-500">
-                  posted 11 songs
-                </span>
+                <span className="text-blue-500">posted 11 songs</span>
               </a>{" "}
               so far. Geir Stian Aaslund posted{" "}
               <a
@@ -3132,9 +2911,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=xZlRX-NYBPU"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Suspicious Minds
-                </span>
+                <span className="text-blue-500">Suspicious Minds</span>
               </a>
               ,{" "}
               <a
@@ -3142,9 +2919,7 @@ export default function Profile() {
                 href="https://youtu.be/rXvb5nkOetc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Bang Bang
-                </span>
+                <span className="text-blue-500">Bang Bang</span>
               </a>
               ,{" "}
               <a
@@ -3168,9 +2943,7 @@ export default function Profile() {
                 href="https://youtu.be/v7jakMA7mYY"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Fly Me to the Moon
-                </span>
+                <span className="text-blue-500">Fly Me to the Moon</span>
               </a>
               ,{" "}
               <a
@@ -3178,9 +2951,7 @@ export default function Profile() {
                 href="https://youtu.be/tnr9N66imJs"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Yellow Brick Road
-                </span>
+                <span className="text-blue-500">Yellow Brick Road</span>
               </a>
               , an excerpt of{" "}
               <a
@@ -3188,9 +2959,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=hgUeTrP31eU"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Million Miles
-                </span>
+                <span className="text-blue-500">Million Miles</span>
               </a>{" "}
               including someone reacting to AJ's unexpected high riff, and{" "}
               <a
@@ -3198,9 +2967,7 @@ export default function Profile() {
                 href="https://youtu.be/xV5fdKJsoqA"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>
               , starting with her dedication to Grandma Mery.{" "}
             </div>
@@ -3210,7 +2977,7 @@ export default function Profile() {
                   <Image
                     src={heartLove}
                     alt="heartLove"
-                    className="h-60 w-96 rounded-lg object-center object-cover sm:col-span-2 sm:h-52 lg:col-span-full"
+                    className="h-60 w-96 rounded-lg object-cover object-center sm:col-span-2 sm:h-52 lg:col-span-full"
                     loading="lazy"
                   />
                 </a>
@@ -3231,9 +2998,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=B8M5WRqA00w't=80s"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  giving and receiving love
-                </span>
+                <span className="text-blue-500">giving and receiving love</span>
               </a>
               . She even gave{" "}
               <a
@@ -3241,9 +3006,7 @@ export default function Profile() {
                 href="https://youtu.be/Oq4GV34zHsY?t=74"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  the heart sign
-                </span>
+                <span className="text-blue-500">the heart sign</span>
               </a>{" "}
               twice while singing{" "}
               <a
@@ -3251,9 +3014,7 @@ export default function Profile() {
                 href="https://youtu.be/Oq4GV34zHsY"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  All of Me
-                </span>
+                <span className="text-blue-500">All of Me</span>
               </a>
               . The love and appreciation the audience showed Angelina moved her
               to tears, just as her love and singing did for thcenter, and us.{" "}
@@ -3326,8 +3087,11 @@ export default function Profile() {
               depth and dexterity of her maturing voice now is absolutely
               phenomenal! And she is only 16 years old!
             </div>
-            <div className="w-full h-[500px]">
-              <iframe src="/ihavenothing.html" className="w-full h-[500px]"></iframe>                 
+            <div className="h-[260px] w-full">
+              <iframe
+                src="/ihavenothing.html"
+                className="h-[260px] w-full"
+              ></iframe>
             </div>
             <div>
               August 18, 2022: Chris Walker later created{" "}
@@ -3336,13 +3100,11 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=AKDL8LLp8xc"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  a multi-camera edit
-                </span>
+                <span className="text-blue-500">a multi-camera edit</span>
               </a>{" "}
-              of Angelina Jordan's centerotional performance of Elvis Presley's song
-              Suspicious Minds at Kurbadhagen, Norway, on July 10, 2022. The
-              edit uses video shot by fans from five different angles.
+              of Angelina Jordan's centerotional performance of Elvis Presley's
+              song Suspicious Minds at Kurbadhagen, Norway, on July 10, 2022.
+              The edit uses video shot by fans from five different angles.
             </div>
             <div>
               August 25, 2022: Rusty Shackleford later cleaned up and edited
@@ -3353,9 +3115,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=x9dVG5Pgq9o"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Million Miles
-                </span>
+                <span className="text-blue-500">Million Miles</span>
               </a>{" "}
               at Kurbadhagen on July 10, 2022.{" "}
             </div>
@@ -3366,9 +3126,7 @@ export default function Profile() {
                 href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Boris Palenovski
-                </span>
+                <span className="text-blue-500">Boris Palenovski</span>
               </a>{" "}
               posted the Septcenterber 13th visit of Jonathan Sugarfoot Moffett,
               Michael Jackson's drummer since 1979, to a Republic Records studio
@@ -3379,9 +3137,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=vaElvR9s5Ao"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  I Have Nothing
-                </span>
+                <span className="text-blue-500">I Have Nothing</span>
               </a>
               , on Boris' YouTube, and part of{" "}
               <a
@@ -3389,9 +3145,7 @@ export default function Profile() {
                 href="https://www.tiktok.com/@angelinajordana/video/7143172154266340650"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Billie Jean
-                </span>
+                <span className="text-blue-500">Billie Jean</span>
               </a>{" "}
               for him on his and Angelina's TikTok.{" "}
               <a
@@ -3440,9 +3194,7 @@ export default function Profile() {
                 href="https://www.youtube.com/user/thealanpapier"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Alan Papier
-                </span>
+                <span className="text-blue-500">Alan Papier</span>
               </a>{" "}
               and Pontus Österlin{" "}
               <a
@@ -3458,9 +3210,7 @@ export default function Profile() {
                 href="https://wrappedinawarmblanket.com/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Wrapped in a Warm Blanket
-                </span>
+                <span className="text-blue-500">Wrapped in a Warm Blanket</span>
               </a>
               , a podcast with heart-to-heart talks about Angelina Jordan’s
               artistry and how it affects our inner world. Their second season
@@ -3470,9 +3220,7 @@ export default function Profile() {
                 href="https://youtu.be/DI5qSQlSHT8"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  YouTube on Feb 10, 2022
-                </span>
+                <span className="text-blue-500">YouTube on Feb 10, 2022</span>
               </a>
               . Watch this beautifully edited{" "}
               <a
@@ -3513,9 +3261,9 @@ export default function Profile() {
                   Chawkin
                 </span>
               </a>
-              . Watch the Prcenteriere with Live Chat on Thursday, March 24 at 3pm
-              London time 10am Central Daylight Time. It will then be available
-              at this same link:{" "}
+              . Watch the Prcenteriere with Live Chat on Thursday, March 24 at
+              3pm London time 10am Central Daylight Time. It will then be
+              available at this same link:{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=YSyu6aAwLI4"
@@ -3532,15 +3280,13 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=YSyu6aAwLI4'lc=UgwOAMgrikqcGPx9Gr14AaABAg"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Jim Donaldson
-                </span>
+                <span className="text-blue-500">Jim Donaldson</span>
               </a>
               .{" "}
             </div>
             <div>
-              Novcenterber 24, 2022: Born to Sing, The Angelina Jordan story is a
-              documentary of Angelina Jordan's first eight years as an artist
+              Novcenterber 24, 2022: Born to Sing, The Angelina Jordan story is
+              a documentary of Angelina Jordan's first eight years as an artist
               and as a great humanitarian. Produced by Alan Papier and Pontus
               Osterlin, here is the{" "}
               <a
@@ -3565,8 +3311,8 @@ export default function Profile() {
               .
             </div>
             <div>
-              Deccenterber 8, 2022: Kaleidoscope RMX posted this stunning blended
-              video:{" "}
+              Deccenterber 8, 2022: Kaleidoscope RMX posted this stunning
+              blended video:{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=3fsh1okXVwk"
@@ -3594,9 +3340,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=oliyfdo67kQ"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  My Broadcast
-                </span>
+                <span className="text-blue-500">My Broadcast</span>
               </a>
               , of Angelina's 1-hour July 10th concert at Kurbadhagen. The sound
               quality is pristine. You can now hear every nuance of Angelina's
@@ -3617,8 +3361,8 @@ export default function Profile() {
               </a>
               . Love it! Happy Birthday, Angelina!
             </div>
-            <div className="w-full h-[500px]">
-              <iframe src="/hearing.html" className="w-full h-[500px]"></iframe>                 
+            <div className="h-[260px] w-full">
+              <iframe src="/hearing.html" className="h-[260px] w-full"></iframe>
             </div>
             <div>
               January 13, 2023: With yesterday's sudden and unexpected passing
@@ -3640,9 +3384,7 @@ export default function Profile() {
                 href="https://www.instagram.com/reel/CnWhq8YJr-0/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Instagram
-                </span>
+                <span className="text-blue-500">Instagram</span>
               </a>
               , and{" "}
               <a
@@ -3668,10 +3410,10 @@ export default function Profile() {
                 </span>
               </a>
               : I will use thcenter on children who are all alone, and who don't
-              have any shoes nor clothes. I want to make thcenter happy and I want
-              to sing for thcenter. When asked when she is hoping to do this, she
-              replies: Forever. As we know, Angelina went on to do just
-              that—sing to raise millions for such charities!{" "}
+              have any shoes nor clothes. I want to make thcenter happy and I
+              want to sing for thcenter. When asked when she is hoping to do
+              this, she replies: Forever. As we know, Angelina went on to do
+              just that—sing to raise millions for such charities!{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://www.youtube.com/watch?v=ZdzFXegRQBA'lc=Ugz-mbgBuW7985C9Mwx4AaABAg"
@@ -3685,8 +3427,8 @@ export default function Profile() {
             </div>
             <div>
               February 14, 2023: Released today. What a perfect Valentine's Day
-              gift! On Deccenterber 17, 2022, Angelina Jordan was invited to perform
-              during the 20th{" "}
+              gift! On Deccenterber 17, 2022, Angelina Jordan was invited to
+              perform during the 20th{" "}
               <a
                 rel="noreferrer noopener"
                 href="https://unforgettablegala.com/"
@@ -3702,9 +3444,7 @@ export default function Profile() {
                 href="https://charactermedia.com/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Character Media
-                </span>
+                <span className="text-blue-500">Character Media</span>
               </a>
               ’s Caroline Yu wrote this wonderful article about it:{" "}
               <a
@@ -3719,12 +3459,15 @@ export default function Profile() {
               </a>
               . Here are those two amazing performances.{" "}
             </div>
-            <div className="w-full h-[500px]">
-              <iframe src="/gala.html" className="w-full h-[500px]"></iframe>                  
+            <div className="h-[260px] w-full">
+              <iframe src="/gala.html" className="h-[260px] w-full"></iframe>
             </div>
             <h3>I have Nothing</h3>
-            <div className="w-full h-[500px]">
-              <iframe src="/ihavenothing.html" className="w-full h-[500px]"></iframe>
+            <div className="h-[260px] w-full">
+              <iframe
+                src="/ihavenothing.html"
+                className="h-[260px] w-full"
+              ></iframe>
             </div>
             <div>February 27, 2023: The Best FIFA Football Awards™ 2022</div>
             <div>
@@ -3751,9 +3494,7 @@ export default function Profile() {
                 href="https://www.instagram.com/p/CpLoocAtTO0/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Angelina posted a photo
-                </span>
+                <span className="text-blue-500">Angelina posted a photo</span>
               </a>{" "}
               on her Instagram with some of the best footballers in the world.{" "}
               <a
@@ -3761,9 +3502,7 @@ export default function Profile() {
                 href="https://www.instagram.com/p/CpLoocAtTO0/c/18272103988190274/"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  One person commented
-                </span>
+                <span className="text-blue-500">One person commented</span>
               </a>{" "}
               that there were about 695,000 watching on YouTube when you started
               singing! Angelina later{" "}
@@ -3783,9 +3522,7 @@ export default function Profile() {
                 href="https://www.youtube.com/watch?v=j3Atq-SOols"
                 target="_blank"
               >
-                <span className="text-blue-500">
-                  Revised Audio
-                </span>
+                <span className="text-blue-500">Revised Audio</span>
               </a>{" "}
               version by{" "}
               <a
@@ -3809,7 +3546,7 @@ export default function Profile() {
           <div className="mt-4">
             <ColumnGridLeft>
               <div className="mr-2">
-                <span className="group relative flex item-center text-slate-300">
+                <span className="item-center group relative flex text-slate-300">
                   <Image
                     layout="fixed"
                     className="h-5 w-5 self-center"
@@ -3833,7 +3570,7 @@ export default function Profile() {
                 </span>
               </div>
               <div className="mr-2">
-                <span className="group relative flex item-center text-slate-300">
+                <span className="item-center group relative flex text-slate-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 self-center"
@@ -3862,7 +3599,7 @@ export default function Profile() {
             </ColumnGridLeft>
             <ColumnGridLeft>
               <div className="mr-2">
-                <span className="group relative flex item-center text-slate-300">
+                <span className="item-center group relative flex text-slate-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="block h-5 w-5"
@@ -3889,7 +3626,7 @@ export default function Profile() {
                 </span>
               </div>
               <div className="mr-2">
-                <span className="group relative flex item-center text-slate-300">
+                <span className="item-center group relative flex text-slate-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -3953,7 +3690,7 @@ export default function Profile() {
             </ColumnGridLeft>
             <ColumnGridLeft>
               <div className="mr-2">
-                <span className="group relative flex item-center text-slate-300">
+                <span className="item-center group relative flex text-slate-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -3983,7 +3720,7 @@ export default function Profile() {
                 </span>
               </div>
               <div className="mr-2">
-                <span className="group relative flex item-center text-slate-300">
+                <span className="item-center group relative flex text-slate-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
