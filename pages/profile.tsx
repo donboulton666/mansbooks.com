@@ -236,11 +236,15 @@ export default function Profile() {
                 and People while also performing on the U.S. network TV shows
                 Little Big Shots and The View.
               </div>
+              </Section>
+              <Section>
               <div>
                 In 2016, Avicii chose Angelina for the vocals on his worldwide
                 Volvo commercial campaign, a brilliant cover of Nina Simone’s
                 Feeling Good.
               </div>
+              </Section>
+              <Section>
               <div>
                 As well as singing before Nobel Peace Prize Laureates,
                 charitable causes to which Angelina has given her talent include
@@ -266,7 +270,7 @@ export default function Profile() {
             <Section>
               Angelina Jordan barefoot queen is the winner of Norway got talent
               2014. She also auditioned for America's got talent in 2020 where
-              she received GOLDEN BUZZER from Heidi Klum. Currently, she signed
+              she received GOLDEN BUZZER from Heidi Klum. Currently, she is signed
               with Republic records. August 2020.
             </Section>
             <Center>Extended Profile Information:</Center>
@@ -373,7 +377,7 @@ export default function Profile() {
                 >
                   <span className="text-blue-500">You ARE music!</span>
                 </a>
-                <span className="underline"></span> The other finale judge said:{" "}
+                The other finale judge said:
                 <a
                   rel="noreferrer noopener"
                   href="https://youtu.be/d3gSho9yf88?t=285"
@@ -417,12 +421,7 @@ export default function Profile() {
                 </a>
                 .
               </div>
-              <div className="h-[260px] w-full content-center justify-center justify-self-center">
-                <iframe
-                  src="/allproformances.html"
-                  className="h-[260px] w-full content-center justify-center justify-self-center"
-                ></iframe>
-              </div>
+              <h2>All performances</h2>
               <div>She puts a spell on you</div>
               <div>
                 Here is another jaw-dropping, mind-blowing experience. Watch
@@ -483,12 +482,6 @@ export default function Profile() {
                   <span className="text-blue-500">joethmarkaster</span>
                 </a>
                 's over-the-top reaction.{" "}
-              </div>
-              <div className="h-full w-full content-center justify-center">
-                <iframe
-                  src="/osterlin.html"
-                  className="h-[260px] w-full content-center justify-center"
-                ></iframe>
               </div>
               <div>
                 Pontus Österlin at{" "}
@@ -745,14 +738,6 @@ export default function Profile() {
                 and talented young violinist Tyler Butler-Figueroa for an
                 exciting group performance of Someone You Loved in the AGT
                 Champions Finale.{" "}
-              </div>
-              <div className="h-full w-full">
-                <div className="h-[260px] w-full">
-                  <iframe
-                    src="/allproformances.html"
-                    className="h-[260px] w-full"
-                  ></iframe>
-                </div>
               </div>
               <div>
                 <a
@@ -1095,19 +1080,8 @@ export default function Profile() {
                 was later released in Jan 27, 2021.{" "}
               </div>
               <h2>Million Miles</h2>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/million-miles.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              Then
               <h2>Seventh Heaven</h2>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/seventh-heaven.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
               <div>
                 Partnering with Stargate and Republic officially launched the
                 career of this young teenage artist. She is now getting to
@@ -1532,12 +1506,7 @@ export default function Profile() {
                 with a band in an open air concert the following year in Norway,
                 Jul 12, 2019, when she was 13.
               </div>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/shield.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              <h2>The Shield</h2>
               <div>Describing her destiny</div>
               <div>
                 In this Feb 4, 2021{" "}
@@ -2178,13 +2147,8 @@ export default function Profile() {
                 —an LA antique furniture and chandelier shop. This is an amazing
                 performance and production!
               </div>
-              <div className="h-full w-full">
-                <iframe
-                  src="/suspeciousminds.html"
-                  className="h-[260px] w-full content-center justify-center justify-self-center"
-                ></iframe>
-              </div>
-              <h3 className="wp-block-heading">Summer Concerts in Norway</h3>
+              <h2>I have Nothing</h2>
+              <h3 className="wp-block-heading">Summer Concerts in Norway</h2>
               <div>June 22, 2022, Allsang på Grensen</div>
               <div>
                 Angelina will be performing at various venues in Norway this
@@ -3222,12 +3186,7 @@ export default function Profile() {
                 depth and dexterity of her maturing voice now is absolutely
                 phenomenal! And she is only 16 years old!
               </div>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/ihavenothing.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              <h2>I have Nothing</h2>
               <div>
                 August 18, 2022: Chris Walker later created{" "}
                 <a
@@ -3502,12 +3461,7 @@ export default function Profile() {
                 </a>
                 . Love it! Happy Birthday, Angelina!
               </div>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/hearing.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+                <h2>Reactions</h2>
               <div>
                 January 13, 2023: With yesterday's sudden and unexpected passing
                 of Lisa Marie Presley 54, Angelina Jordan posted an
@@ -3603,16 +3557,8 @@ export default function Profile() {
                 </a>
                 . Here are those two amazing performances.{" "}
               </div>
-              <div className="h-[260px] w-full">
-                <iframe src="/gala.html" className="h-[260px] w-full"></iframe>
-              </div>
-              <h3>I have Nothing</h3>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/ihavenothing.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              Gala
+              <h2>I have Nothing</h2>
               <div>February 27, 2023: The Best FIFA Football Awards™ 2022</div>
               <div>
                 Angelina Jordan and RedOne wrote and performed We're The Best,
