@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Next Cloudinary",
   "compilerOptions": {
     "baseUrl": ".",
     "target": "esnext",
@@ -29,5 +31,11 @@
     "**/*.tsx",
     "pages/api/algolia-sync.mjs"
   ],
+  "plugins": [
+    {
+      "name": "next"
+    }
+  ],
+  "jsx": "react",
   "exclude": ["node_modules"]
 }
