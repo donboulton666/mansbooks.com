@@ -2148,7 +2148,7 @@ export default function Profile() {
                 performance and production!
               </div>
               <h2>I have Nothing</h2>
-              <h3 className="wp-block-heading">Summer Concerts in Norway</h2>
+              <h3>Summer Concerts in Norway</h2>
               <div>June 22, 2022, Allsang på Grensen</div>
               <div>
                 Angelina will be performing at various venues in Norway this
