@@ -20,109 +20,105 @@ export default function Profile() {
         <Head>
           <title>Profile</title>
           <>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              name: "Privacy",
-              url: "https://mansbooks.com/profile",
-              image: {
-                "@type": "ImageObject",
-                url: angie,
-                width: "1400",
-                height: "450",
-              },
-              publisher: {
-                "@type": "Organization",
-                name: "Mansbooks",
-              },
-              license: "http://mansbooks.com/license",
-            })}
-            ,
-          </script>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@id": "https://mansbooks.com",
-              "@type": "Organization",
-              address: "LA, Evil Earth",
-              contactPoint: {
-                "@type": "ContactPoint",
-                email: "donaldboulton@gmail.com",
-                telephone: "+405-863-2165",
-              },
-              description: "Angelina's Profile",
-              email: "donaldboulton@gmail.com",
-              founder: {
-                "@id": "https://donboulton.com",
-              },
-              location: "LA, Evil Earth",
-              image: {
-                "@type": "ImageObject",
-                url: angie,
-                width: "1400",
-                height: "450",
-              },
-              logo: {
-                "@type": "ImageObject",
-                url: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLFRYVDhgQEhgNEh0PExYVFx8eGBYVIhUaHysjHR0oKRUiJTUlKC0vMjIyGSU4PTcwPCsxMi8BCgsLDg0OHBAQHDsoIig7NTsyOzs7OzsvLy81OzU7NjU1Ozs1LzY7OzsvNS87OzsvLy87OzsvLzIvLy87Lzs7O//AABEIABgAGAMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAABgcFAf/EAB0QAAEFAQEBAQAAAAAAAAAAAAEAAgMEEQUxIRL/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQA/8QAHBEAAQQDAQAAAAAAAAAAAAAAAgABAxEEEyEx/9oADAMBAAIRAxEAPwCu3Z2wwO0pTl6UYs5o9Wl2ZJBAc3xTm3LaN4/nfVBk5emuKuDH2H6qdR6MZYPoQlPnSWGxDdXFYEljaGSCipPHTqtlgJxKzeRG6zpaPUIQyALt1KjJ2fi2IOUxrBgQhCcAtSxG9r//2Q==",
-              },
-              name: "MansBooks",
-              sameAs: [
-                "mailto:donaldboulton@gmail.com",
-                "tel:+405-863-2165",
-                "https://www.facebook.com/donboulton",
-                "https://www.instagram.com/boulton3662",
-                "https://twitter.com/donboulton",
-                "https://www.linkedin.com/donboulton",
-                "https://github.com/donaldboulton/",
-              ],
-              url: "https://mansbooks.com",
-            })}
-            ,
-          </script>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "@id": "https://donboulton.com",
-              name: "Donald Boulton",
-              url: "https://donboulton.com",
-              worksFor: {
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                name: "Privacy",
+                url: "https://mansbooks.com/profile",
+                image: {
+                  "@type": "ImageObject",
+                  url: angieImage,
+                  width: "1400",
+                  height: "450",
+                },
+                publisher: {
+                  "@type": "Organization",
+                  name: "Mansbooks",
+                },
+                license: "http://mansbooks.com/license",
+              })}
+            </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
                 "@id": "https://mansbooks.com",
-              },
-            })}
-            ,
-          </script>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              description: "Breadcrumbs list",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  item: {
-                    "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
-                  },
-                  position: "1",
+                "@type": "Organization",
+                address: "LA, Evil Earth",
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  email: "donaldboulton@gmail.com",
+                  telephone: "+405-863-2165",
                 },
-                {
-                  "@type": "ListItem",
-                  item: {
-                    "@id": "https://mansbooks.com/profile",
-                    name: "Angelina's Profile",
-                  },
-                  position: "2",
+                description: "Angelina's Profile",
+                email: "donaldboulton@gmail.com",
+                founder: {
+                  "@id": "https://donboulton.com",
                 },
-              ],
-              numberOfItems: "2",
-              name: "Breadcrumbs",
-            })}
-            ,
-          </script>
-        </>
+                location: "LA, Evil Earth",
+                image: {
+                  "@type": "ImageObject",
+                  url: angieImage,
+                  width: "1400",
+                  height: "450",
+                },
+                logo: {
+                  "@type": "ImageObject",
+                  url: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLFRYVDhgQEhgNEh0PExYVFx8eGBYVIhUaHysjHR0oKRUiJTUlKC0vMjIyGSU4PTcwPCsxMi8BCgsLDg0OHBAQHDsoIig7NTsyOzs7OzsvLy81OzU7NjU1Ozs1LzY7OzsvNS87OzsvLy87OzsvLzIvLy87Lzs7O//AABEIABgAGAMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAABgcFAf/EAB0QAAEFAQEBAQAAAAAAAAAAAAEAAgMEEQUxIRL/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQA/8QAHBEAAQQDAQAAAAAAAAAAAAAAAgABAxEEEyEx/9oADAMBAAIRAxEAPwCu3Z2wwO0pTl6UYs5o9Wl2ZJBAc3xTm3LaN4/nfVBk5emuKuDH2H6qdR6MZYPoQlPnSWGxDdXFYEljaGSCipPHTqtlgJxKzeRG6zpaPUIQyALt1KjJ2fi2IOUxrBgQhCcAtSxG9r//2Q==",
+                },
+                name: "MansBooks",
+                sameAs: [
+                  "mailto:donaldboulton@gmail.com",
+                  "tel:+405-863-2165",
+                  "https://www.facebook.com/donboulton",
+                  "https://www.instagram.com/boulton3662",
+                  "https://twitter.com/donboulton",
+                  "https://www.linkedin.com/donboulton",
+                  "https://github.com/donaldboulton/",
+                ],
+                url: "https://mansbooks.com",
+              })}
+            </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "@id": "https://donboulton.com",
+                name: "Donald Boulton",
+                url: "https://donboulton.com",
+                worksFor: {
+                  "@id": "https://mansbooks.com",
+                },
+              })}
+            </script>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                description: "Breadcrumbs list",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    item: {
+                      "@id": "https://mansbooks.com/",
+                      name: "MansBooks Home",
+                    },
+                    position: "1",
+                  },
+                  {
+                    "@type": "ListItem",
+                    item: {
+                      "@id": "https://mansbooks.com/profile",
+                      name: "Angelina's Profile",
+                    },
+                    position: "2",
+                  },
+                ],
+                numberOfItems: "2",
+                name: "Breadcrumbs",
+              })}
+            </script>
+          </>
         </Head>
         <div className="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-4">
           <div className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-10">
@@ -1492,8 +1488,8 @@ export default function Profile() {
               <blockquote className="h-full w-full">
                 <div>
                   When I sing I go to another world. In the world, it’s like,
-                  endless. It’s amazing. 'Like, full of happiness, and, I love
-                  ' It's amazing!
+                  endless. It’s amazing. 'Like, full of happiness, and, I love '
+                  It's amazing!
                 </div>
                 <cite>
                   Angelina Jordan answers Skavlan's questions about what happens
@@ -1754,8 +1750,8 @@ export default function Profile() {
                 >
                   <span className="text-blue-500">Julia Nilon's</span>
                 </a>
-                 in-depth technical reaction to Angelina's performance
-                of I Put A Spell On You he gives her{" "}
+                in-depth technical reaction to Angelina's performance of I Put A
+                Spell On You he gives her{" "}
                 <a
                   rel="noreferrer noopener"
                   href="https://www.youtube.com/watch?v=hmIqzsYUz0k'lc=Ugw2nMLPFYGWKoTfjWN4AaABAg"
@@ -1932,11 +1928,11 @@ export default function Profile() {
                     Angelina Jordan'; Easy On Me Adele Cover Live From Studio!
                   </span>
                 </a>
-                Republic Records
-                produced the in-studio black and white video of Angelina at the
-                mic with just her piano accompanist. Angelina pours her heart
-                and soul into this song. Her voice continues to mature as well
-                as her vocal dexterity. Surprisingly, she sounds even better! I{" "}
+                Republic Records produced the in-studio black and white video of
+                Angelina at the mic with just her piano accompanist. Angelina
+                pours her heart and soul into this song. Her voice continues to
+                mature as well as her vocal dexterity. Surprisingly, she sounds
+                even better! I{" "}
                 <a
                   rel="noreferrer noopener"
                   href="https://www.youtube.com/watch?v=Mpw5Q76hWWE'lc=UgwCNRjSrSZ4mrvNkvl4AaABAg"
@@ -3557,7 +3553,11 @@ export default function Profile() {
                     Angelina's reply reveals her selfless compassionate heart
                   </span>
                 </a>
-                : I will use them on children who are all alone, and who don’t have any shoes nor clothes. I want to make them happy and I want to sing for them.” When asked when she is hoping to do this, she replies: “Forever.” As we know, Angelina went on to do just that—sing to raise millions for such charities!{" "}
+                : I will use them on children who are all alone, and who don’t
+                have any shoes nor clothes. I want to make them happy and I want
+                to sing for them.” When asked when she is hoping to do this, she
+                replies: “Forever.” As we know, Angelina went on to do just
+                that—sing to raise millions for such charities!{" "}
                 <a
                   rel="noreferrer noopener"
                   href="https://www.youtube.com/watch?v=ZdzFXegRQBA'lc=Ugz-mbgBuW7985C9Mwx4AaABAg"
