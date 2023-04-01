@@ -5,7 +5,6 @@ import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";
-import CldVideoPlayer from "@components/CldVideoPlayer";
 import ColumnGridLeft from "../components/column-grid-left";
 import seventhHeaven from "../public/angie/seventh-heaven.jpg";
 import nothingHandsHeart from "../public/angie/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.jpg";
@@ -122,7 +121,7 @@ export default function Profile() {
           </>
         </Head>
         <div className="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-4">
-          <div className="mx-auto mb-3 grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-10">
+          <div className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-10">
             <div className="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
               <h1 className="mt-1 text-lg text-wine-200 sm:text-wine-300 md:text-2xl">
                 Angelina Jordan
@@ -237,15 +236,11 @@ export default function Profile() {
                 and People while also performing on the U.S. network TV shows
                 Little Big Shots and The View.
               </div>
-            </Section>
-            <Section>
               <div>
                 In 2016, Avicii chose Angelina for the vocals on his worldwide
                 Volvo commercial campaign, a brilliant cover of Nina Simone’s
                 Feeling Good.
               </div>
-            </Section>
-            <Section>
               <div>
                 As well as singing before Nobel Peace Prize Laureates,
                 charitable causes to which Angelina has given her talent include
@@ -271,8 +266,8 @@ export default function Profile() {
             <Section>
               Angelina Jordan barefoot queen is the winner of Norway got talent
               2014. She also auditioned for America's got talent in 2020 where
-              she received GOLDEN BUZZER from Heidi Klum. Currently, she is
-              signed with Republic records. August 2020.
+              she received GOLDEN BUZZER from Heidi Klum. Currently, she signed
+              with Republic records. August 2020.
             </Section>
             <Center>Extended Profile Information:</Center>
             <div>
@@ -330,7 +325,7 @@ export default function Profile() {
                     <Image
                       src={summerTime}
                       alt="Seventh Heaven"
-                      className="mt-3 mb-3 flex h-60 w-96 justify-center rounded-lg object-center sm:col-span-2 sm:h-52 lg:col-span-full"
+                      className="flex h-60 w-96 justify-center rounded-lg object-center sm:col-span-2 sm:h-52 lg:col-span-full"
                       loading="lazy"
                     />
                   </a>
@@ -378,7 +373,7 @@ export default function Profile() {
                 >
                   <span className="text-blue-500">You ARE music!</span>
                 </a>
-                The other finale judge said:
+                <span className="underline"></span> The other finale judge said:{" "}
                 <a
                   rel="noreferrer noopener"
                   href="https://youtu.be/d3gSho9yf88?t=285"
@@ -422,7 +417,12 @@ export default function Profile() {
                 </a>
                 .
               </div>
-              <h2>All performances</h2>
+              <div className="h-[260px] w-full content-center justify-center justify-self-center">
+                <iframe
+                  src="/allproformances.html"
+                  className="h-[260px] w-full content-center justify-center justify-self-center"
+                ></iframe>
+              </div>
               <div>She puts a spell on you</div>
               <div>
                 Here is another jaw-dropping, mind-blowing experience. Watch
@@ -469,7 +469,7 @@ export default function Profile() {
                 mind-blowers, with hundreds of reactor videos and millions of
                 views! I love to see reactors try to respond in disbelief when
                 they hear her sing this song. It's a double enjoyment for
-                me—reacting to their reactions, as well as my own, again! For
+                me—reacting to their reactions, as well as my own, again!! For
                 example:{" "}
                 <a href="https://youtu.be/_-a-7vJKPg0">
                   <span className="text-blue-500">Soul Reacts</span>
@@ -483,6 +483,12 @@ export default function Profile() {
                   <span className="text-blue-500">joethmarkaster</span>
                 </a>
                 's over-the-top reaction.{" "}
+              </div>
+              <div className="h-full w-full content-center justify-center">
+                <iframe
+                  src="/osterlin.html"
+                  className="h-[260px] w-full content-center justify-center"
+                ></iframe>
               </div>
               <div>
                 Pontus Österlin at{" "}
@@ -740,6 +746,14 @@ export default function Profile() {
                 exciting group performance of Someone You Loved in the AGT
                 Champions Finale.{" "}
               </div>
+              <div className="h-full w-full">
+                <div className="h-[260px] w-full">
+                  <iframe
+                    src="/allproformances.html"
+                    className="h-[260px] w-full"
+                  ></iframe>
+                </div>
+              </div>
               <div>
                 <a
                   rel="noreferrer noopener"
@@ -968,7 +982,7 @@ export default function Profile() {
               </div>
               <div>
                 Creatively collaborating with Stargate, signing with Republic
-                Records.
+                Records
               </div>
               <div>
                 After turning down many requests to sign Angelina, the family
@@ -1081,8 +1095,19 @@ export default function Profile() {
                 was later released in Jan 27, 2021.{" "}
               </div>
               <h2>Million Miles</h2>
-              Then
+              <div className="h-[260px] w-full">
+                <iframe
+                  src="/million-miles.html"
+                  className="h-[260px] w-full"
+                ></iframe>
+              </div>
               <h2>Seventh Heaven</h2>
+              <div className="h-[260px] w-full">
+                <iframe
+                  src="/seventh-heaven.html"
+                  className="h-[260px] w-full"
+                ></iframe>
+              </div>
               <div>
                 Partnering with Stargate and Republic officially launched the
                 career of this young teenage artist. She is now getting to
@@ -1215,7 +1240,7 @@ export default function Profile() {
                   target="_blank"
                 >
                   <span className="text-blue-500">
-                    Love is very' Love means everything.
+                    Love is very ' Love means everything.
                   </span>
                 </a>
                 Angelina's book has been translated into English and is
@@ -1507,7 +1532,12 @@ export default function Profile() {
                 with a band in an open air concert the following year in Norway,
                 Jul 12, 2019, when she was 13.
               </div>
-              <h2>The Shield</h2>
+              <div className="h-[260px] w-full">
+                <iframe
+                  src="/shield.html"
+                  className="h-[260px] w-full"
+                ></iframe>
+              </div>
               <div>Describing her destiny</div>
               <div>
                 In this Feb 4, 2021{" "}
@@ -2148,96 +2178,71 @@ export default function Profile() {
                 —an LA antique furniture and chandelier shop. This is an amazing
                 performance and production!
               </div>
-              <div className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-10">
-                <div className="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
-                  <h1 className="mt-1 text-lg text-wine-200 sm:text-wine-300 md:text-2xl">
-                    Suspecious Minds
-                  </h1>
-                  <div className="text-sm font-medium leading-4 text-white sm:text-slate-500">
-                    Queen Of Jazz
-                  </div>
-                </div>
-                <div className="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
-                  <CldVideoPlayer
-                    width="384"
-                    height="240"
-                    className="h-60 w-96 content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
-                    src="videos/angelina_jordan_suspicious_minds"
-                  />
-                </div>
-                <dl className="item-center row-start-2 mt-4 flex text-xs font-medium sm:row-start-3 sm:mt-1 md:mt-2.5 lg:row-start-2">
-                  <dt className="sr-only">Reviews</dt>
-                  <dd className="item-center flex text-wine-300">
-                    <svg
-                      width="24"
-                      height="24"
-                      fill="none"
-                      aria-hidden="true"
-                      className="mr-1 stroke-current"
-                    >
-                      <path
-                        d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span>
-                      4.89{" "}
-                      <span className="font-normal text-slate-400">128</span>
-                    </span>
-                  </dd>
-                  <dt className="sr-only">Location</dt>
-                  <dd className="item-center flex">
-                    <svg
-                      width="2"
-                      height="2"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      className="mx-3 text-slate-300"
-                    >
-                      <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <svg
-                      width="24"
-                      height="24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="mr-1 text-slate-400"
-                      aria-hidden="true"
-                    >
-                      <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
-                      <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
-                    </svg>
-                    Los Angeles CA.
-                  </dd>
-                </dl>
-                <div className="col-start-1 row-start-3 mt-4 self-center sm:col-start-2 sm:row-span-2 sm:row-start-2 sm:mt-0 lg:col-start-1 lg:row-start-3 lg:row-end-4 lg:mt-6">
-                  <Link
-                    href="/expo/suspeciousminds"
-                    type="button"
-                    className="rounded-lg bg-wine-300 py-2 px-3 text-sm font-medium leading-6 text-white"
-                  >
-                    7th Heaven
-                  </Link>
-                </div>
-                <div className="col-start-1 mt-4 text-sm leading-6 text-slate-300 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
-                  <div>
-                    <div>
-                      Amazingly, her passion for music began at just one-and-
-                      a-half years of age when Angelina first saw Whitney
-                      Houston on YouTube performing I Will Always Love You.
-                      Whitney - and later Billie Holiday, Dinah Washington -
-                      became her first major musical influences. At the age of
-                      seven, Angelina auditioned for Norway’s Got Talent
-                      performing Billie Holiday’s Gloomy Sunday. She won the
-                      competition with the show drawing record TV audiences.
-                    </div>
-                  </div>
-                </div>
+              <div className="h-full w-full">
+                <iframe
+                  src="/suspeciousminds.html"
+                  className="h-[260px] w-full content-center justify-center justify-self-center"
+                ></iframe>
+              </div>
+              <h3 className="wp-block-heading">Summer Concerts in Norway</h3>
+              <div>June 22, 2022, Allsang på Grensen</div>
+              <div>
+                Angelina will be performing at various venues in Norway this
+                summer. At her first appearance she paid tribute to Freddie
+                Mercury and Whitney Houston. She sang{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=TqMqyAi-bsc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bohemian Rhapsody</span>
+                </a>{" "}
+                in a vibrant red pant suit and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=AqtIVYFjapQ"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>{" "}
+                in a stunning ice blue gown, both televised by TV2 Norway.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/c/AngelinaJordanVlogs/videos"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Angelina Jordan Vlogs</span>
+                </a>{" "}
+                captured{" "}
+                <a href="https://www.youtube.com/watch?v=TqMqyAi-bsc">
+                  <span className="text-blue-500">part</span>
+                </a>{" "}
+                of Bohemian Rhapsody, and I Have Nothing{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=NoeJair7gAs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">twice</span>
+                </a>{" "}
+                from the actual event. They also posted excerpts from the other
+                upcoming concerts. Phillip
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/c/pa1189j"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">pa1189j</span>
+                </a>
+                later provided with the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=LDZ4x0cFJRs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">best audio version</span>
+                </a>{" "}
+                so far with a clean music intro.{" "}
               </div>
               <div>July 1, 2022, Kurbadhagen</div>
               <div>
@@ -3217,7 +3222,12 @@ export default function Profile() {
                 depth and dexterity of her maturing voice now is absolutely
                 phenomenal! And she is only 16 years old!
               </div>
-              <h2>I have Nothing</h2>
+              <div className="h-[260px] w-full">
+                <iframe
+                  src="/ihavenothing.html"
+                  className="h-[260px] w-full"
+                ></iframe>
+              </div>
               <div>
                 August 18, 2022: Chris Walker later created{" "}
                 <a
@@ -3492,7 +3502,12 @@ export default function Profile() {
                 </a>
                 . Love it! Happy Birthday, Angelina!
               </div>
-              <h2>Reactions</h2>
+              <div className="h-[260px] w-full">
+                <iframe
+                  src="/hearing.html"
+                  className="h-[260px] w-full"
+                ></iframe>
+              </div>
               <div>
                 January 13, 2023: With yesterday's sudden and unexpected passing
                 of Lisa Marie Presley 54, Angelina Jordan posted an
@@ -3588,8 +3603,16 @@ export default function Profile() {
                 </a>
                 . Here are those two amazing performances.{" "}
               </div>
-              Gala
-              <h2>I have Nothing</h2>
+              <div className="h-[260px] w-full">
+                <iframe src="/gala.html" className="h-[260px] w-full"></iframe>
+              </div>
+              <h3>I have Nothing</h3>
+              <div className="h-[260px] w-full">
+                <iframe
+                  src="/ihavenothing.html"
+                  className="h-[260px] w-full"
+                ></iframe>
+              </div>
               <div>February 27, 2023: The Best FIFA Football Awards™ 2022</div>
               <div>
                 Angelina Jordan and RedOne wrote and performed We're The Best,

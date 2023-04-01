@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.js",
     "**/*.tsx",
-    "next.config.mjs"
+    "pages/api/algolia-sync.mjs"
   ],
   "plugins": [
     {
