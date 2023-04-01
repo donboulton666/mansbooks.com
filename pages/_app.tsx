@@ -23,6 +23,7 @@ import { HMSRoomProvider } from "@100mslive/react-sdk";
 import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
+import "@styles/chatbox.css";
 
 function App({ Component, pageProps }: AppProps) {
   const AnyComponent = Component as any;
