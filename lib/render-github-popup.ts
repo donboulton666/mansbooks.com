@@ -88,14 +88,14 @@ export function renderSuccess(data?: GitHubOAuthData) {
         d="M57 50C51.4771 50 47 54.4771 47 60C47 65.5228 51.4771 70 57 70C62.5228 70 67 65.5228 67 60C67 54.4771 62.5228 50 57 50Z"
         fill="white"
         stroke="black"
-        strokeWidth="1.5"
+        stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M53 59.8571L55.5 62.3572L60.8572 57"
         stroke="black"
-        strokeWidth="1.5"
+        stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -186,21 +186,21 @@ export function renderError() {
         d="M57 70C62.5228 70 67 65.5228 67 60C67 54.4772 62.5228 50 57 50C51.4772 50 47 54.4772 47 60C47 65.5228 51.4772 70 57 70Z"
         fill="#EE0000"
         stroke="black"
-        strokeWidth="1.5"
+        stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M60 57L54 63"
         stroke="black"
-        strokeWidth="1.5"
+        stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M54 57L60 63"
         stroke="black"
-        strokeWidth="1.5"
+        stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />

@@ -52,14 +52,14 @@
 }
 
 .header-logos {
-  max-width: 300px;
+  max-width: 200px;
   display: flex;
   align-items: center;
   margin: var(--space-2x) var(--space-4x);
 }
 
 .header-right {
-  margin: var(--space-1x) var(--space-2x);
+  margin: 4px;
   margin-right: 3rem;
   display: none;
 }

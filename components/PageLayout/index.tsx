@@ -21,12 +21,13 @@ import cn from "classnames";
 import { useRouter } from "next/router";
 import { SkipNavContent } from "@reach/skip-nav";
 import { NAVIGATION } from "@lib/constants";
-import styles from "../layout.module.css";
+import styles from "./layout.module.css";
 import Logo from "../icons/icon-hms";
 import MobileMenu from "../mobile-menu";
+import Search from "@components/Search"
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
-import RoomCta from "../hms/demo-cta/room-cta";
+import RoomCta from "@components/Search";
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
@@ -48,7 +49,6 @@ export default function Layout({
 }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
-  const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
   return (
     <>
       <ScrollIndicator />
@@ -74,30 +74,21 @@ export default function Layout({
                 </Link>
               ))}
             </div>
-
-            {(hmsConfig.hmsIntegration &&
-              isLive &&
-              !disableCta.includes(activeRoute)) ||
-            activeRoute === "/" ? (
-              <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
-              </div>
-            ) : (
-              <>
-                <div />
+            <div className={cn(styles["header-right"])}>
+              <div className="relative h-16 flex items-center justify-right">  
                 <NavDropdown />
-              </>
-            )}
+              </div>
+            </div>
           </header>
         )}
         <ViewSource />
-        <div className={styles.page}>
+        <div>
           <div className="blog-beams">
-            <main className={styles.main} style={layoutStyles}>
+            <main className="mx-auto">
               <SkipNavContent />
-              <div className={cn(styles.full, className)}>{children}</div>
+              <div>{children}</div>
             </main>
-            {!activeRoute.startsWith("/stage") && <PageFooter />}
+            <PageFooter />
           </div>
         </div>
       </div>

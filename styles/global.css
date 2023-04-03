@@ -473,3 +473,9 @@ input:-webkit-autofill {
     hover:opacity-60;
   }
 }
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
+}

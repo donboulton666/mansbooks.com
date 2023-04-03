@@ -9,7 +9,7 @@ const EmailIcon = (props: SVGProps<SVGSVGElement>) => {
       viewBox="0 0 2061 2061"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+      style="fill-rule:evenodd;clip-rule:evenodd;strokeLinejoin:round;stroke-miterlimit:2;"
       {...props}
     >
       <g transform="matrix(4.16667,0,0,4.16667,-5618.58,-8085.33)">
