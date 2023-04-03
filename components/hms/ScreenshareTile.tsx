@@ -60,7 +60,7 @@ const ScreenshareTile = () => {
           <div className="relative block h-auto max-w-full md:h-full">
             {hmsConfig.setHmsWatermark ? <HmsWatermark /> : null}
             <div
-              className="absolute bottom-0 -right-1 flex items-center rounded-tl-lg p-2 text-sm"
+              className="absolute -right-1 bottom-0 flex items-center rounded-tl-lg p-2 text-sm"
               style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
             >
               <ShareScreenIcon className="mr-2" /> Viewing{" "}
@@ -69,7 +69,7 @@ const ScreenshareTile = () => {
             <button
               onClick={fullScreen}
               style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
-              className="display absolute top-0 -right-1 z-10  cursor-pointer items-center justify-center rounded-bl-lg"
+              className="display absolute -right-1 top-0 z-10  cursor-pointer items-center justify-center rounded-bl-lg"
             >
               <IconFitScreen />
             </button>
@@ -93,7 +93,7 @@ const HmsWatermark = () => {
   return (
     <Image
       src="/hms-coachmark.svg"
-      className="absolute left-2 bottom-2 z-10 hidden md:block"
+      className="absolute bottom-2 left-2 z-10 hidden md:block"
     />
   );
 };

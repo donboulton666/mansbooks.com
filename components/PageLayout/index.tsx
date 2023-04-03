@@ -24,7 +24,7 @@ import { NAVIGATION } from "@lib/constants";
 import styles from "./layout.module.css";
 import Logo from "../icons/icon-hms";
 import MobileMenu from "../mobile-menu";
-import Search from "@components/Search"
+import Search from "@components/Search";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
 import RoomCta from "@components/Search";
@@ -75,7 +75,7 @@ export default function Layout({
               ))}
             </div>
             <div className={cn(styles["header-right"])}>
-              <div className="relative h-16 flex items-center justify-right">  
+              <div className="justify-right relative flex h-16 items-center">
                 <NavDropdown />
               </div>
             </div>

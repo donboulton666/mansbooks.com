@@ -126,7 +126,7 @@ export default function Survey() {
           </div>
 
           <input
-            className="rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-800/50"
+            className="rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-800/50"
             type="submit"
           />
         </form>

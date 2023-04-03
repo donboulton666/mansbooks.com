@@ -121,7 +121,7 @@ export default function Contact() {
         </>
         ,
       </Head>
-      <div className="mr-10 ml-10 mt-10 mb-20" data-datocms-noindex>
+      <div className="mb-20 ml-10 mr-10 mt-10" data-datocms-noindex>
         <div>
           <Center>Contact Queen Angelina Jordan</Center>
           <div>Use the form below to Contact the Angelic Queen.</div>

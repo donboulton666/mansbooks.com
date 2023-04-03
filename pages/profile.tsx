@@ -6,6 +6,9 @@ import Center from "@components/Center";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "../components/column-grid-left";
+import VideoWrapper from "../components/VideoWrapper";
+import SingleAccordion from "../components/SingleAccordion";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import seventhHeaven from "../public/angie/seventh-heaven.jpg";
 import nothingHandsHeart from "../public/angie/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.jpg";
 import summerTime from "../public/angie/young-angelina.jpg";
@@ -127,7 +130,7 @@ export default function Profile() {
             </script>
           </>
         </Head>
-        <div className="mb-10 py-6 px-4 sm:p-6 md:py-10 md:px-4">
+        <div className="mb-10 px-4 py-6 sm:p-6 md:px-4 md:py-10">
           <div className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-10">
             <div className="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
               <h1 className="mt-1 text-lg text-wine-200 sm:text-wine-300 md:text-2xl">
@@ -198,7 +201,7 @@ export default function Profile() {
               <Link
                 href="/expo/seventhheaven"
                 type="button"
-                className="rounded-lg bg-wine-300 py-2 px-3 text-sm font-medium leading-6 text-white"
+                className="rounded-lg bg-wine-300 px-3 py-2 text-sm font-medium leading-6 text-white"
               >
                 7th Heaven
               </Link>
@@ -424,13 +427,13 @@ export default function Profile() {
                 </a>
                 .
               </div>
-              <div className="h-[260px] w-full content-center justify-center justify-self-center">
-                <iframe
-                  src="/allproformances.html"
-                  className="h-[260px] w-full content-center justify-center justify-self-center"
-                ></iframe>
-              </div>
-              <div>She puts a spell on you</div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed
+                  id="O2bX15tYFVk"
+                  title="AGT All Performances"
+                />
+              </VideoWrapper>
+              <h2>She puts a spell on you</h2>
               <div>
                 Here is another jaw-dropping, mind-blowing experience. Watch
                 Angelina, now 9, belt out{" "}
@@ -492,10 +495,12 @@ export default function Profile() {
                 's over-the-top reaction.{" "}
               </div>
               <div className="h-full w-full content-center justify-center">
-                <iframe
-                  src="/osterlin.html"
-                  className="h-[260px] w-full content-center justify-center"
-                ></iframe>
+                <VideoWrapper>
+                  <LiteYouTubeEmbed
+                    id="nwFloCPXzCs"
+                    title="She puts a spell on you"
+                  />
+                </VideoWrapper>
               </div>
               <div>
                 Pontus Österlin at{" "}
@@ -753,14 +758,10 @@ export default function Profile() {
                 exciting group performance of Someone You Loved in the AGT
                 Champions Finale.{" "}
               </div>
-              <div className="h-full w-full">
-                <div className="h-[260px] w-full">
-                  <iframe
-                    src="/allproformances.html"
-                    className="h-[260px] w-full"
-                  ></iframe>
-                </div>
-              </div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed id="3-Q3I7FfvUU" title="Someone You Loved" />
+              </VideoWrapper>
+              <h2>Someone You Loved</h2>
               <div>
                 <a
                   rel="noreferrer noopener"
@@ -1102,19 +1103,13 @@ export default function Profile() {
                 was later released in Jan 27, 2021.{" "}
               </div>
               <h2>Million Miles</h2>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/million-miles.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed id="NhKRh5ZtuWk" title="Million Miles" />
+              </VideoWrapper>
               <h2>Seventh Heaven</h2>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/seventh-heaven.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed id="bM8DzMRbiIc" title="Seventh Heaven" />
+              </VideoWrapper>
               <div>
                 Partnering with Stargate and Republic officially launched the
                 career of this young teenage artist. She is now getting to
@@ -1539,13 +1534,13 @@ export default function Profile() {
                 with a band in an open air concert the following year in Norway,
                 Jul 12, 2019, when she was 13.
               </div>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/shield.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
-              <div>Describing her destiny</div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed
+                  id="lQtUbVKb0vs"
+                  title="Open air concert, at age 13"
+                />
+              </VideoWrapper>
+              <h2>Describing her destiny</h2>
               <div>
                 In this Feb 4, 2021{" "}
                 <a
@@ -2185,14 +2180,14 @@ export default function Profile() {
                 —an LA antique furniture and chandelier shop. This is an amazing
                 performance and production!
               </div>
-              <div className="h-full w-full">
-                <iframe
-                  src="/suspeciousminds.html"
-                  className="h-[260px] w-full content-center justify-center justify-self-center"
-                ></iframe>
-              </div>
-              <h3 className="wp-block-heading">Summer Concerts in Norway</h3>
-              <div>June 22, 2022, Allsang på Grensen</div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed
+                  id="RTbKhkceR00"
+                  title="Open air concert, at age 13"
+                />
+              </VideoWrapper>
+              <h2 className="wp-block-heading">Summer Concerts in Norway</h2>
+              <h3>June 22, 2022, Allsang på Grensen</h3>
               <div>
                 Angelina will be performing at various venues in Norway this
                 summer. At her first appearance she paid tribute to Freddie
@@ -3229,12 +3224,9 @@ export default function Profile() {
                 depth and dexterity of her maturing voice now is absolutely
                 phenomenal! And she is only 16 years old!
               </div>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/ihavenothing.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed id="iX0g99jN26U" title="I Have Nothing" />
+              </VideoWrapper>
               <div>
                 August 18, 2022: Chris Walker later created{" "}
                 <a
@@ -3509,12 +3501,12 @@ export default function Profile() {
                 </a>
                 . Love it! Happy Birthday, Angelina!
               </div>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/hearing.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed
+                  id="CU0tPGFTjUU"
+                  title="Open air concert, at age 13"
+                />
+              </VideoWrapper>
               <div>
                 January 13, 2023: With yesterday's sudden and unexpected passing
                 of Lisa Marie Presley 54, Angelina Jordan posted an
@@ -3610,84 +3602,89 @@ export default function Profile() {
                 </a>
                 . Here are those two amazing performances.{" "}
               </div>
-              <div className="h-[260px] w-full">
-                <iframe src="/gala.html" className="h-[260px] w-full"></iframe>
-              </div>
+              <h3>Bohemian Rhapsody</h3>
+              <VideoWrapper>
+                <LiteYouTubeEmbed id="1pnY11EzKwM" title="Bohemian Rhapsody" />
+              </VideoWrapper>
               <h3>I have Nothing</h3>
-              <div className="h-[260px] w-full">
-                <iframe
-                  src="/ihavenothing.html"
-                  className="h-[260px] w-full"
-                ></iframe>
-              </div>
-              <div>February 27, 2023: The Best FIFA Football Awards™ 2022</div>
-              <div>
-                Angelina Jordan and RedOne wrote and performed We're The Best,
-                the official song for The Best FIFA Football Awards 2022 in
-                Paris, at{" "}
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.fifa.com/fifaplus/en/watch/3T9UEx46wIl68ulx9xAV6r"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">1:24:01</span>
-                </a>{" "}
-                into the celebration. It's also on the FIFA YouTube Channel at{" "}
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.youtube.com/live/usIdSbd1jPw?feature=share't=5303"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">1:28:21</span>
-                </a>
-                . It was televised live to an audience of over 300 million.
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.instagram.com/p/CpLoocAtTO0/"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">Angelina posted a photo</span>
-                </a>{" "}
-                on her Instagram with some of the best footballers in the world.{" "}
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.instagram.com/p/CpLoocAtTO0/c/18272103988190274/"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">One person commented</span>
-                </a>{" "}
-                that there were about 695,000 watching on YouTube when you
-                started singing! Angelina later{" "}
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.instagram.com/p/CpQAu3opzio/"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">
-                    posted her performance on Instagram
-                  </span>
-                </a>
-                . You may noticed some technical difficulties with the FIFA
-                production. Here is an improved{" "}
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.youtube.com/watch?v=j3Atq-SOols"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">Revised Audio</span>
-                </a>{" "}
-                version by{" "}
-                <a
-                  rel="noreferrer noopener"
-                  href="https://www.youtube.com/@most2dot0"
-                  target="_blank"
-                >
-                  <span className="text-blue-500">
-                    AJ Playlists'; by most2dot0
-                  </span>
-                </a>
-                .{" "}
-              </div>
+              <VideoWrapper>
+                <LiteYouTubeEmbed id="dBjMxY-iiwY" title="I Have Nothing" />
+              </VideoWrapper>
+              <SingleAccordion label="FIFA Football Awards">
+                <div>
+                  February 27, 2023: The Best FIFA Football Awards™ 2022
+                </div>
+                <div>
+                  Angelina Jordan and RedOne wrote and performed We're The Best,
+                  the official song for The Best FIFA Football Awards 2022 in
+                  Paris, at{" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.fifa.com/fifaplus/en/watch/3T9UEx46wIl68ulx9xAV6r"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">1:24:01</span>
+                  </a>{" "}
+                  into the celebration. It's also on the FIFA YouTube Channel at{" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.youtube.com/live/usIdSbd1jPw?feature=share't=5303"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">1:28:21</span>
+                  </a>
+                  . It was televised live to an audience of over 300 million.
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.instagram.com/p/CpLoocAtTO0/"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">
+                      Angelina posted a photo
+                    </span>
+                  </a>{" "}
+                  on her Instagram with some of the best footballers in the
+                  world.{" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.instagram.com/p/CpLoocAtTO0/c/18272103988190274/"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">One person commented</span>
+                  </a>{" "}
+                  that there were about 695,000 watching on YouTube when you
+                  started singing! Angelina later{" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.instagram.com/p/CpQAu3opzio/"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">
+                      posted her performance on Instagram
+                    </span>
+                  </a>
+                  . You may noticed some technical difficulties with the FIFA
+                  production. Here is an improved{" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.youtube.com/watch?v=j3Atq-SOols"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">Revised Audio</span>
+                  </a>{" "}
+                  version by{" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://www.youtube.com/@most2dot0"
+                    target="_blank"
+                  >
+                    <span className="text-blue-500">
+                      AJ Playlists'; by most2dot0
+                    </span>
+                  </a>
+                  .{" "}
+                </div>
+              </SingleAccordion>
               <div>
                 Conclusion: Fill my heart with song and let me sing for evermore
               </div>

@@ -40,7 +40,7 @@ const EmptyRoom = () => {
       <div className="mt-8 flex space-x-4">
         <div className="relative">
           {copied ? (
-            <p className="absolute top-12 left-0 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
+            <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
               Copied to clipboard!
             </p>
           ) : null}

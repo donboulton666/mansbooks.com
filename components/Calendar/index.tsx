@@ -31,14 +31,14 @@ const Calendar = () => {
           <span className="group relative flex items-center text-slate-200">
             <button
               name="sign-in"
-              className="ml-2 rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+              className="ml-2 rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
               onClick={(e) => handleItemClick(e, "sign-in")}
             >
               Log in
             </button>
             <button
               name="sign-out"
-              className="ml-2 rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+              className="ml-2 rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
               onClick={(e) => handleItemClick(e, "sign-out")}
             >
               Log Out
@@ -48,7 +48,7 @@ const Calendar = () => {
       </div>
       <div style={{ padding: "0.5em" }}>
         <button
-          className="ml-2 rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+          className="ml-2 rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           onClick={(e) => {
             // eslint-disable-next-line @typescript-eslint/ban-types
@@ -73,7 +73,7 @@ const Calendar = () => {
       </div>
       <div style={{ padding: "0.5em" }}>
         <button
-          className="ml-2 rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+          className="ml-2 rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           onClick={(e) => {
             apiCalendar.listUpcomingEvents(10).then(({ result }: any) => {
@@ -94,7 +94,7 @@ const Calendar = () => {
       </div>
       <div style={{ padding: "0.5em" }}>
         <button
-          className="ml-2 rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+          className="ml-2 rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           onClick={(e) => {
             apiCalendar.listCalendars().then(({ result }: any) => {
@@ -115,7 +115,7 @@ const Calendar = () => {
       </div>
       <div style={{ padding: "0.5em" }}>
         <button
-          className="ml-2 rounded-md bg-slate-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+          className="ml-2 rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           onClick={(e) => {
             apiCalendar

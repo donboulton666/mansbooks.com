@@ -12,7 +12,7 @@ export default function LanguageBar() {
       <Popover as="div">
         {({ open }) => (
           <>
-            <Popover.Button className="-ml-1 h-auto w-auto rounded-r-md bg-slate-900 pr-2 pt-2 pb-0 text-slate-300">
+            <Popover.Button className="-ml-1 h-auto w-auto rounded-r-md bg-slate-900 pb-0 pr-2 pt-2 text-slate-300">
               <span className="headings-center inline-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +45,12 @@ export default function LanguageBar() {
               leaveTo="transform scale-95 opacity-0"
             >
               <Popover.Panel className="relative h-64 w-64">
-                <div className="mt-2 ml-2 mr-2 rounded-lg bg-slate-900 text-slate-300 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="ml-2 mr-2 mt-2 rounded-lg bg-slate-900 text-slate-300 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="mt-2 text-center underline decoration-blue-300 decoration-wavy underline-offset-4">
                     Languages
                   </div>
                   <div className="text-center text-xl text-slate-200 underline decoration-blue-300 decoration-wavy underline-offset-2"></div>
-                  <WavyHr className="mt-1 mb-1" />
+                  <WavyHr className="mb-1 mt-1" />
                   <nav className="nav-scroll h-44 w-auto overflow-y-auto overflow-x-hidden">
                     <ul className="flex flex-col">
                       <Link

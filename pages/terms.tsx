@@ -117,7 +117,7 @@ export default function Terms() {
       <div className="mx-18">
         <div className="z-30 -mt-4">
           <div className="mt-10">
-            <div className="mt-16 mb-16 p-8 sm:mt-2">
+            <div className="mb-16 mt-16 p-8 sm:mt-2">
               <div className="mb-2">
                 <h2>Angelina Jordan Terms</h2>
                 <div>
