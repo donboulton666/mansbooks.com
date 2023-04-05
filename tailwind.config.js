@@ -170,6 +170,15 @@ module.exports = {
               'tbody code': {
                 fontSize: theme('fontSize.xs')[0],
               },
+              'calloutDanger:last-child': {
+                marginBottom: "0px",
+              },
+              'calloutLabel:last-child': {
+                marginBottom: "0px",
+              },
+              'callout:last-child': {
+                marginBottom: "0px",
+              },
               'figure figcaption': {
                 textAlign: 'center',
                 fontStyle: 'italic',

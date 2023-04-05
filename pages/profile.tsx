@@ -427,7 +427,9 @@ export default function Profile() {
                 </a>
                 .
               </div>
+              <h2>Norways got talent All Performances</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed
                   id="O2bX15tYFVk"
                   title="AGT All Performances"
@@ -494,14 +496,14 @@ export default function Profile() {
                 </a>
                 's over-the-top reaction.{" "}
               </div>
-              <div className="h-full w-full content-center justify-center">
+               <h2>I put a Spell on You</h2>
                 <VideoWrapper>
+                  Click to Open
                   <LiteYouTubeEmbed
                     id="nwFloCPXzCs"
                     title="She puts a spell on you"
                   />
                 </VideoWrapper>
-              </div>
               <div>
                 Pontus Österlin at{" "}
                 <a
@@ -758,10 +760,11 @@ export default function Profile() {
                 exciting group performance of Someone You Loved in the AGT
                 Champions Finale.{" "}
               </div>
+              <h2>Someone You Loved</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed id="3-Q3I7FfvUU" title="Someone You Loved" />
               </VideoWrapper>
-              <h2>Someone You Loved</h2>
               <div>
                 <a
                   rel="noreferrer noopener"
@@ -1104,10 +1107,12 @@ export default function Profile() {
               </div>
               <h2>Million Miles</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed id="NhKRh5ZtuWk" title="Million Miles" />
               </VideoWrapper>
               <h2>Seventh Heaven</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed id="bM8DzMRbiIc" title="Seventh Heaven" />
               </VideoWrapper>
               <div>
@@ -1534,7 +1539,9 @@ export default function Profile() {
                 with a band in an open air concert the following year in Norway,
                 Jul 12, 2019, when she was 13.
               </div>
+              <h2>The Shield</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed
                   id="lQtUbVKb0vs"
                   title="Open air concert, at age 13"
@@ -1552,12 +1559,6 @@ export default function Profile() {
                 </a>
                 , Alyssa Johnson asks her: Where do you hope to see yourself in
                 five years from now?{" "}
-              </div>
-              <div>
-                A: I’ll have an important name in the music industry and to make
-                timeless music that can live forever. Also to give the best
-                music experience to people and for them to enjoy and feel
-                emotional or dance or make memories with the music I make.
               </div>
               <blockquote className="h-full w-full">
                 <div>
@@ -2180,7 +2181,9 @@ export default function Profile() {
                 —an LA antique furniture and chandelier shop. This is an amazing
                 performance and production!
               </div>
+              <h2>Suspecious Minds</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed
                   id="RTbKhkceR00"
                   title="Open air concert, at age 13"
@@ -3224,7 +3227,9 @@ export default function Profile() {
                 depth and dexterity of her maturing voice now is absolutely
                 phenomenal! And she is only 16 years old!
               </div>
+              <h2>I have Nothing</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed id="iX0g99jN26U" title="I Have Nothing" />
               </VideoWrapper>
               <div>
@@ -3501,7 +3506,9 @@ export default function Profile() {
                 </a>
                 . Love it! Happy Birthday, Angelina!
               </div>
+              <h2>17 Reactions</h2>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed
                   id="CU0tPGFTjUU"
                   title="Open air concert, at age 13"
@@ -3604,10 +3611,12 @@ export default function Profile() {
               </div>
               <h3>Bohemian Rhapsody</h3>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed id="1pnY11EzKwM" title="Bohemian Rhapsody" />
               </VideoWrapper>
               <h3>I have Nothing</h3>
               <VideoWrapper>
+                Click to Open
                 <LiteYouTubeEmbed id="dBjMxY-iiwY" title="I Have Nothing" />
               </VideoWrapper>
               <SingleAccordion label="FIFA Football Awards">

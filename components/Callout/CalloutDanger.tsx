@@ -25,10 +25,6 @@ export const callOutDangerWrapper: CSS.Properties = {
 };
 
 const calloutDanger: CSS.Properties = {
-  "*:last-child": {
-    marginBottom: "0px",
-  },
-
   position: "relative",
   padding: "10px 25px",
   marginBottom: "2.25rem",
@@ -71,7 +67,7 @@ const CalloutDanger: FC<CalloutDangerProps> = (props) => {
         {...rest}
       >
         <aside style={callOutDangerWrapper}>
-          <Alert className="h-6 w-6 text-red-600" />
+          <span className="h-6 w-6 text-red-600"><Alert /></span>          
         </aside>
         {children}
       </m.div>

@@ -20,21 +20,44 @@ import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
+import { Toaster } from "react-hot-toast";
+import { pageview } from '@lib/gtag';
 import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
 import "@styles/chatbox.css";
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps, router }: AppProps) {
   const AnyComponent = Component as any;
   useEffect(() => {
     document.body.classList?.remove("loading");
+  }, []);
+  useEffect(() => {
+    const handleRouteChange = url => {
+      pageview(url, document.title);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
   }, []);
   return (
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>
           <AnyComponent {...pageProps} />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              style: {
+                margin: "40px",
+                background: "#111111",
+                color: "#fff",
+                zIndex: 1,
+              },
+              duration: 5000,
+            }}
+          />
           <ResizeHandler />
         </HMSRoomProvider>
       </OverlayProvider>

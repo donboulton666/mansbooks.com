@@ -28,8 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.js",
-    "**/*.tsx",
-    "pages/api/algolia-sync.mjs"
+    "**/*.tsx"
   ],
   "plugins": [
     {
