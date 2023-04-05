@@ -8,7 +8,7 @@ const PhoneIcon = (props: SVGProps<SVGSVGElement>) => {
       height={24}
       stroke="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      style="fill-rule:evenodd;clip-rule:evenodd;strokeLinejoin:round;stroke-miterlimit:2;"
+      style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
       {...props}
     >
       <g transform="matrix(4.16667,0,0,4.16667,-3081.84,-3032.27)">

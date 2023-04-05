@@ -94,7 +94,7 @@ export const CopyButton = ({ text = "" }) => {
   return (
     <div className="relative">
       {copied ? (
-        <p className="absolute left-0 top-10 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
+        <p className="absolute top-10 left-0 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
           Copied to clipboard!
         </p>
       ) : null}

@@ -25,7 +25,6 @@ import { pageview } from '@lib/gtag';
 import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
-import "@styles/chatbox.css";
 
 function App({ Component, pageProps, router }: AppProps) {
   const AnyComponent = Component as any;

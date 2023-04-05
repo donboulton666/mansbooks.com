@@ -100,7 +100,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="w-48 appearance-none rounded border-wine-200 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 focus:border-wine-400 focus:bg-wine-200 focus:outline-none focus:ring-wine-200"
+                    className="w-48 appearance-none rounded border-wine-200 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 focus:border-wine-400 focus:bg-wine-200 focus:outline-none focus:ring-wine-200"
                     aria-label="Enter Email"
                     {...register("email", {
                       required: "Email is required",

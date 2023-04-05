@@ -4,7 +4,7 @@ const VideoWrapper = ({ children, ...delegated }) => {
   return (
     <>
       <div
-        className="h-full w-full rounded-lg border-2 border-wine-300 p-2"
+        className="ml-4 w-64 flex-initial rounded-lg border-2 border-purple-900 p-2"
         {...delegated}
       >
         {children}

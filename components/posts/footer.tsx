@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="flex flex-col items-center justify-center lg:w-1/2 lg:flex-row lg:pl-4">
             <a
               href="https://www.datocms.com/docs/next-js"
-              className="mx-3 mb-6 border border-black bg-black px-12 py-3 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-black lg:mb-0 lg:px-8"
+              className="mx-3 mb-6 border border-black bg-black py-3 px-12 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-black lg:mb-0 lg:px-8"
             >
               {i18n.footer.read[locale]}
             </a>

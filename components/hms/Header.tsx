@@ -73,7 +73,7 @@ const Header = () => {
       <div className="flex flex-row justify-end gap-4">
         <div className="flex items-center">
           <div
-            className="flex items-center gap-2 rounded-3xl border-solid px-4 py-2 text-sm font-normal leading-4 "
+            className="flex items-center gap-2 rounded-3xl border-solid py-2 px-4 text-sm font-normal leading-4 "
             style={{ borderWidth: "1px", borderColor: "#3b3b3b" }}
           >
             <UsersIcon /> <span className="">{peers.length}</span>{" "}

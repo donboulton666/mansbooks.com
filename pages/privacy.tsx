@@ -125,7 +125,7 @@ export default function Privacy() {
           </script>
         </>
       </Head>
-      <div className="mx-8 mb-32 mt-8">
+      <div className="mx-8 mt-8 mb-32">
         <Center>Privacy Policy / Terms of Usage</Center>
         <Image
           alt="Privacy"
@@ -205,7 +205,8 @@ export default function Privacy() {
           browsers' websites.
         </Section>
         <h2>Cookies in EU Law</h2>
-        <SingleAccordion label="⚖️ The Law, Cookies Confusion">
+        <SingleAccordion label="Cookies Confusion">
+          ⚖️ The Law
           <div>
             🔗{" "}
             <a

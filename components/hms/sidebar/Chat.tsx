@@ -54,7 +54,7 @@ const Chat = () => {
               </div>
               {localPeer.roleName === "stage" ||
               localPeer.roleName === "backstage" ? (
-                <div className="absolute right-0 top-0">
+                <div className="absolute top-0 right-0">
                   {localPeer.id !== m.sender ? (
                     <Dropdown role={m.senderRole || "viewer"} id={m.sender} />
                   ) : null}

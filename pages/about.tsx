@@ -121,7 +121,7 @@ export default function About() {
         </>
         ,
       </Head>
-      <div className="mb-32 ml-10 mr-10 mt-8">
+      <div className="ml-10 mr-10 mt-8 mb-32">
         <Center>Angelina Jordan</Center>
         <Image
           alt="NextJs"
@@ -205,7 +205,7 @@ export default function About() {
           </div>
         </Section>
         <LeftText>Social Contacts</LeftText>
-        <div className="mb-20 mr-20 mt-4">
+        <div className="mt-4 mr-20 mb-20">
           <div className="mt-4">
             <ColumnGridLeft>
               <div className="mr-2">

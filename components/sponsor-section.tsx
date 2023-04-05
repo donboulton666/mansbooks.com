@@ -157,8 +157,8 @@ export default function SponsorSection({ sponsor }: Props) {
           </div>
         </div>
       </div>
-      <div className="mb-24 mt-6 w-screen">
-        <div className="comments-container">
+      <div className="mb-24 mt-6 w-[95vw]">
+        <div className="comments-container mr-8 ml-8">
           <Giscus
             id="comments"
             repo="donaldboulton/mansbooks.com"
@@ -166,7 +166,7 @@ export default function SponsorSection({ sponsor }: Props) {
             category="General"
             categoryId="DIC_kwDOI7HnKM4CU8od"
             mapping="pathname"
-            term="Welcome to @giscus/react component!"
+            term="Welcome to ANgelina Jordan Comments!"
             reactionsEnabled="1"
             emitMetadata="0"
             inputPosition="top"

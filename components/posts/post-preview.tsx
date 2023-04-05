@@ -28,7 +28,7 @@ export default function PostPreview({
             <div className="mb-8 sm:flex sm:items-start">
               <div className="ml-2 flex h-12 w-12 flex-shrink-0 rounded-full sm:mx-0 sm:h-10 sm:w-10">
                 <Avatar name={author.name} picture={author.picture} />
-                <div className="-mt-1 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <div className="-mt-1 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <div className="text-base leading-6">
                     <span className="mr-6 font-medium italic">
                       {author.name}{" "}

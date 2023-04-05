@@ -25,6 +25,10 @@ export const callOutWrapper: CSS.Properties = {
 };
 
 const callout: CSS.Properties = {
+  "*:last-child": {
+    marginBottom: "0px",
+  },
+
   position: "relative",
   padding: "10px 25px",
   marginBottom: "2.25rem",
@@ -67,9 +71,7 @@ const Callout: FC<CalloutProps> = (props) => {
         {...rest}
       >
         <aside style={callOutWrapper}>
-          <span className="h-6 w-6">
-            <Info />
-          </span>
+          <Info className="h-6 w-6" />
         </aside>
         {children}
       </m.div>

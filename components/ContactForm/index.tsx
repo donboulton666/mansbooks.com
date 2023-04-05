@@ -96,19 +96,19 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="h-5 w-5 text-red-500"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                             d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                           />
                         </svg>
                       </div>
                       <input
-                        className="mb-3 block w-full appearance-none rounded border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 focus:border-wine-300 focus:outline-none focus:ring-wine-200 sm:text-sm"
+                        className="mb-3 block w-full appearance-none rounded border-slate-800 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 focus:border-wine-300 focus:outline-none focus:ring-wine-200 sm:text-sm"
                         id="firstName"
                         name="firstName"
                         type="text"
@@ -134,19 +134,19 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="h-5 w-5 text-red-500"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                             d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                           />
                         </svg>
                       </div>
                       <input
-                        className="block w-full appearance-none rounded border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 focus:border-wine-300 focus:outline-none focus:ring-wine-200 sm:text-sm"
+                        className="block w-full appearance-none rounded border-slate-800 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 focus:border-wine-300 focus:outline-none focus:ring-wine-200 sm:text-sm"
                         id="lastName"
                         name="lastName"
                         type="text"
@@ -174,13 +174,13 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="h-5 w-5 text-slate-300"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                             d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
                           />
                         </svg>
@@ -191,7 +191,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         id="userName"
                         autoComplete="off"
                         placeholder="User Name"
-                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
                         {...register("userName", {
                           required: true,
                           pattern: /^[a-zA-Z]+$/,
@@ -226,7 +226,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         id="email"
                         autoComplete="on"
                         placeholder="Email"
-                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
                         {...register("email", {
                           required: "Email is required",
                           pattern: {
@@ -253,13 +253,13 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="h-5 w-5 text-slate-300"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                             d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
                           />
                         </svg>
@@ -270,7 +270,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         id="phone"
                         autoComplete="on"
                         placeholder="Phone Number"
-                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
                         {...register("phone", {
                           required: "Phone Number is required",
                           pattern: {
@@ -300,13 +300,13 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="h-5 w-5 text-slate-300"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                             d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
                           />
                         </svg>
@@ -316,7 +316,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                         name="subject"
                         id="subject"
                         placeholder="Subject"
-                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 py-3 px-4 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
                         {...register("subject", { required: true })}
                       />
                     </div>
@@ -335,13 +335,13 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="h-5 w-5 text-slate-300"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                             d="M7.875 14.25l1.214 1.942a2.25 2.25 0 001.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 011.872 1.002l.164.246a2.25 2.25 0 001.872 1.002h2.092a2.25 2.25 0 001.872-1.002l.164-.246A2.25 2.25 0 0116.954 9h4.636M2.41 9a2.25 2.25 0 00-.16.832V12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 01.382-.632l3.285-3.832a2.25 2.25 0 011.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0021.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 002.25 2.25z"
                           />
                         </svg>
@@ -373,14 +373,14 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                   <span className="group relative flex items-center text-slate-200">
                     <button
                       type="submit"
-                      className="rounded-md bg-gray-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-800/50"
+                      className="rounded-md bg-gray-800 py-2 px-4 text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-800/50"
                     >
                       Send
                     </button>
 
                     <button
                       type="reset"
-                      className="ml-2 rounded-md bg-red-500 px-4 py-2 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
+                      className="ml-2 rounded-md bg-red-500 py-2 px-4 text-slate-200 shadow-lg hover:bg-red-600 hover:shadow-red-700/50"
                     >
                       Reset
                     </button>
@@ -415,7 +415,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                   </span>
                 </div>
               </div>
-              <div className="float-right mr-8 mt-4">
+              <div className="float-right mt-4 mr-8">
                 <span className="md:ml-10">
                   <a
                     href="https://netlify.com/"

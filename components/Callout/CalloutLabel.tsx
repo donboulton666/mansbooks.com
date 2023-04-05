@@ -28,6 +28,10 @@ export const calloutLabelWrapper: CSS.Properties = {
 };
 
 const calloutLabel: CSS.Properties = {
+  "*:last-child": {
+    marginBottom: "0px",
+  },
+
   position: "relative",
   padding: "10px 25px",
   marginBottom: "2.25rem",

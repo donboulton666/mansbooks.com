@@ -120,7 +120,7 @@ export default function License() {
       <div className="mx-18">
         <div className="z-30 -mt-4">
           <div className="mt-10">
-            <div className="mb-16 mt-16 p-8 sm:mt-2">
+            <div className="mt-16 mb-16 p-8 sm:mt-2">
               <div className="mb-2">
                 <h2>Rob Landley</h2>
                 <div>

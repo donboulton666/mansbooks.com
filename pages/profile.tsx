@@ -15,18 +15,11 @@ import summerTime from "../public/angie/young-angelina.jpg";
 import goldenBuzzer from "../public/angie/angelinas-agt-golden-buzzer.jpg";
 import heartLove from "../public/angie/angelina-makes-a-heart-sending-love-to-her-fans.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
-import dynamic from "next/dynamic";
-
-const ChatBoxWidget = dynamic({
-  loader: () => import("@upstash/chatbox").then((mod) => mod.ChatBoxWidget),
-  ssr: false,
-});
 
 export default function Profile() {
   return (
     <Layout>
       <>
-        <ChatBoxWidget />
         <Head>
           <title>Profile</title>
           <>
@@ -227,7 +220,7 @@ export default function Profile() {
               </Section>
             </div>
           </div>
-          <div>
+          <div>          
             <Section>
               <div>
                 Angelina’s videos have received over several billions views on

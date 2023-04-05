@@ -74,7 +74,7 @@ const Video: React.FC<{ id: string; mirror: boolean }> = ({ id, mirror }) => {
 
 const AudioIndicator = () => {
   return (
-    <div className="absolute bottom-2 right-2 flex items-center justify-center rounded-full bg-red-500 p-1">
+    <div className="absolute right-2 bottom-2 flex items-center justify-center rounded-full bg-red-500 p-1">
       <MicOffIcon />
     </div>
   );

@@ -85,7 +85,6 @@ export default function Layout({
             ) : (
               <>
                 <div />
-                <NavDropdown />
               </>
             )}
           </header>
