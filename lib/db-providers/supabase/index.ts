@@ -13,19 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { NextApiRequest, NextApiResponse } from 'next'
 import { ConfUser } from "@lib/types";
 import { createClient } from "@supabase/supabase-js";
+import { Database } from "../../types/supabase";
 
 const supabase =
-  process.env.NEXT_PUBLIC_SUPABASE_URL &&
+  process.env.SUPABASE_URL &&
   process.env.SUPABASE_SERVICE_ROLE_SECRET &&
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
   process.env.EMAIL_TO_ID_SECRET
-    ? createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL,
+    ? createClient<Database>(
+        process.env.SUPABASE_URL,
         process.env.SUPABASE_SERVICE_ROLE_SECRET
       )
     : undefined;
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const allOnlineUsers = await supabase.from('users').select('*').eq('status', 'ONLINE')
+  res.status(200).json(allOnlineUsers)
+}
 
 export async function getUserByUsername(username: string): Promise<ConfUser> {
   const { data } = await supabase
