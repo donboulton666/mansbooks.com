@@ -187,6 +187,10 @@ export interface GiscusProps {
   loading?: Loading;
 }
 
+interface Views {
+  count: number;
+}
+
 export type GitHubOAuthData =
   | {
       type: "token";

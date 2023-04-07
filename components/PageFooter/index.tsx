@@ -11,9 +11,9 @@ export default function Footer() {
   const { locale } = useRouter();
   return (
     <>
-      <footer className="relative bg-slate-900 pt-8 pb-6" data-datocms-noindex>
+      <footer className="relative bg-slate-900 pb-6 pt-8" data-datocms-noindex>
         <div
-          className="pointer-events-none absolute bottom-auto top-0 left-0 right-0 -mt-20 w-full overflow-hidden"
+          className="pointer-events-none absolute bottom-auto left-0 right-0 top-0 -mt-20 w-full overflow-hidden"
           style={{ height: "80px" }}
         >
           <svg
@@ -265,7 +265,7 @@ export default function Footer() {
                 <h4 className="text-3xl font-semibold text-wine-200">
                   {i18n.footer.subscribe[locale]}
                 </h4>
-                <h5 className="mt-0 mb-2 text-lg text-slate-400">
+                <h5 className="mb-2 mt-0 text-lg text-slate-400">
                   {i18n.footer.exclusive[locale]}
                 </h5>
                 <Subscriptions />

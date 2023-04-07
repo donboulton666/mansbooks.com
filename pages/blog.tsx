@@ -9,6 +9,9 @@ import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/LanguageBar";
 import { useRouter } from "next/router";
+import { Views } from "../lib/types";
+import useSWR from "swr";
+import fetcher from "lib/fetcher";
 
 export async function getStaticProps({ preview, locale }) {
   const formattedLocale = locale.split("-")[0];
@@ -69,18 +72,18 @@ export async function getStaticProps({ preview, locale }) {
   };
 }
 
-export default function Index({ subscription }) {
+export default function Blog({ subscription }) {
   const {
     data: { allPosts, site, blog },
   } = useQuerySubscription(subscription);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { locale, locales, asPath } = useRouter().locale;
-
+  const post = allPosts[0];
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const metaTags = blog.seo.concat(site.favicon);
-
+  const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher);
   return (
     <>
       <Layout preview={subscription.preview}>
@@ -88,6 +91,10 @@ export default function Index({ subscription }) {
         <Container>
           <LanguageBar />
           <Intro />
+          <div className="flex flex-row text-xs -mt-6 mr-2 text-slate-300">
+            <div className="flex-grow" />
+              <span>{`${data?.count ?? "0"} views`}</span>
+          </div>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -97,8 +104,10 @@ export default function Index({ subscription }) {
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          )}          
+          <div>
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          </div>
         </Container>
       </Layout>
     </>

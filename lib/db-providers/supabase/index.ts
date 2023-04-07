@@ -17,11 +17,12 @@ import { ConfUser } from "@lib/types";
 import { createClient } from "@supabase/supabase-js";
 
 const supabase =
-  process.env.SUPABASE_URL &&
+  process.env.NEXT_PUBLIC_SUPABASE_URL &&
   process.env.SUPABASE_SERVICE_ROLE_SECRET &&
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
   process.env.EMAIL_TO_ID_SECRET
     ? createClient(
-        process.env.SUPABASE_URL,
+        process.env.NEXT_PUBLIC_SUPABASE_URL,
         process.env.SUPABASE_SERVICE_ROLE_SECRET
       )
     : undefined;

@@ -220,7 +220,7 @@ export default function Profile() {
               </Section>
             </div>
           </div>
-          <div>          
+          <div>
             <Section>
               <div>
                 Angelina’s videos have received over several billions views on
@@ -489,14 +489,14 @@ export default function Profile() {
                 </a>
                 's over-the-top reaction.{" "}
               </div>
-               <h2>I put a Spell on You</h2>
-                <VideoWrapper>
-                  Click to Open
-                  <LiteYouTubeEmbed
-                    id="nwFloCPXzCs"
-                    title="She puts a spell on you"
-                  />
-                </VideoWrapper>
+              <h2>I put a Spell on You</h2>
+              <VideoWrapper>
+                Click to Open
+                <LiteYouTubeEmbed
+                  id="nwFloCPXzCs"
+                  title="She puts a spell on you"
+                />
+              </VideoWrapper>
               <div>
                 Pontus Österlin at{" "}
                 <a

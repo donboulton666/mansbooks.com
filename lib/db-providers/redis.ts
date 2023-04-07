@@ -28,7 +28,7 @@ const redis =
     : undefined;
 
 export async function getUserByUsername(username: string): Promise<ConfUser> {
-  const [name, ticketNumber] = await redis.hmget(
+  const [name, ticketNumber] = await redis!.hmget(
     `user:${username}`,
     "name",
     "ticketNumber"
@@ -40,19 +40,19 @@ export async function getUserByUsername(username: string): Promise<ConfUser> {
 }
 
 export async function getUserById(id: string): Promise<ConfUser> {
-  const [name, username, createdAt] = await redis.hmget(
+  const [name, username, createdAt] = await redis!.hmget(
     `id:${id}`,
     "name",
     "username",
     "createdAt"
   );
-  return { name, username, createdAt: parseInt(createdAt, 10) };
+  return { name, username, createdAt: parseInt(createdAt!, 10) };
 }
 
 export async function createUser(id: string, email: string): Promise<ConfUser> {
-  const ticketNumber = await redis.incr("count");
+  const ticketNumber = await redis!.incr("count");
   const createdAt = Date.now();
-  await redis.hmset(
+  await redis!.hmset(
     `id:${id}`,
     "email",
     email,
@@ -67,14 +67,14 @@ export async function createUser(id: string, email: string): Promise<ConfUser> {
 export async function getTicketNumberByUserId(
   id: string
 ): Promise<string | null> {
-  return await redis.hget(`id:${id}`, "ticketNumber");
+  return await redis!.hget(`id:${id}`, "ticketNumber");
 }
 
 export async function createGitHubUser(user: any): Promise<string> {
   const token = nanoid();
   const key = `github-user:${token}`;
 
-  await redis
+  await redis!
     .multi()
     .hmset(key, "id", user.id, "login", user.login, "name", user.name || "")
     .expire(key, 60 * 10) // 10m TTL
@@ -87,7 +87,7 @@ export async function updateUserWithGitHubUser(
   token: string,
   ticketNumber: string
 ): Promise<ConfUser> {
-  const [username, name] = await redis.hmget(
+  const [username, name] = await redis!.hmget(
     `github-user:${token}`,
     "login",
     "name"
@@ -99,7 +99,7 @@ export async function updateUserWithGitHubUser(
   const key = `id:${id}`;
   const userKey = `user:${username}`;
 
-  await redis
+  await redis!
     .multi()
     .hsetnx(key, "username", username)
     .hsetnx(key, "name", name || "")

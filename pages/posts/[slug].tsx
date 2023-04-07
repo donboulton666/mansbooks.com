@@ -11,6 +11,9 @@ import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/LanguageBar";
 import Giscus from "@giscus/react";
+import { Views } from "../lib/types";
+import useSWR from "swr";
+import fetcher from "lib/fetcher";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { format } from "date-fns";
 
@@ -149,7 +152,7 @@ export default function Post({ subscription, preview }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
-
+  const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher);
   return (
     <Layout preview={preview}>
       <Head>{renderMetaTags(metaTags)}</Head>
@@ -157,13 +160,19 @@ export default function Post({ subscription, preview }) {
         <LanguageBar />
         <Header />
         <article>
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={post.content} />
+          <div className="container">
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+            />
+            <div className="flex flex-row text-xs -mt-6 mr-2 text-slate-300">
+              <div className="flex-grow" />
+              <span>{`${data?.count ?? "0"} views`}</span>
+            </div>
+            <PostBody content={post.content} />
+          </div>
           <div className="center mx-auto mb-4 mt-6 max-w-4xl">
             <div className="comments-container">
               <Giscus

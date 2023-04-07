@@ -158,7 +158,7 @@ export default function SponsorSection({ sponsor }: Props) {
         </div>
       </div>
       <div className="mb-24 mt-6 w-[95vw]">
-        <div className="comments-container mr-8 ml-8">
+        <div className="comments-container ml-8 mr-8">
           <Giscus
             id="comments"
             repo="donaldboulton/mansbooks.com"

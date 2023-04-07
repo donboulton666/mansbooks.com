@@ -125,7 +125,7 @@ export default function Privacy() {
           </script>
         </>
       </Head>
-      <div className="mx-8 mt-8 mb-32">
+      <div className="mx-8 mb-32 mt-8">
         <Center>Privacy Policy / Terms of Usage</Center>
         <Image
           alt="Privacy"
