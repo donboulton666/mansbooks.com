@@ -21,9 +21,9 @@ import { useEffect, useState } from "react";
 import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
 import { Toaster } from "react-hot-toast";
-import { pageview } from '@lib/gtag';
-import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
-import { SessionContextProvider } from '@supabase/auth-helpers-react'
+import { pageview } from "@lib/gtag";
+import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
@@ -34,22 +34,25 @@ function App({ Component, pageProps, router }: AppProps) {
     document.body.classList?.remove("loading");
   }, []);
   useEffect(() => {
-    const handleRouteChange = url => {
+    const handleRouteChange = (url) => {
       pageview(url, document.title);
     };
-    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
 
-  const [supabase] = useState(() => createBrowserSupabaseClient())
+  const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
     <SSRProvider>
       <OverlayProvider>
         <HMSRoomProvider>
-          <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
+          <SessionContextProvider
+            supabaseClient={supabase}
+            initialSession={pageProps.initialSession}
+          >
             <AnyComponent {...pageProps} />
           </SessionContextProvider>
           <Toaster

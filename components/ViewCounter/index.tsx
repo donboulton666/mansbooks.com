@@ -4,24 +4,24 @@ import { useEffect } from "react";
 import useSWR from "swr";
 
 interface Props {
-   slug: string;
+  slug: string;
 }
 
 const ViewCounter = ({ slug }: Props) => {
-const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher);
-useEffect(() => {
-   const registerView = () =>
-   fetch(`/api/views/${slug}`, {
-   	method: "POST",
-   });
-   registerView();
-}, [slug]);
+  const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher);
+  useEffect(() => {
+    const registerView = () =>
+      fetch(`/api/views/${slug}`, {
+        method: "POST",
+      });
+    registerView();
+  }, [slug]);
 
-return (
-   <span className="group relative flex items-center justify-end">{`${
-   (data?.count ?? 0) > 0 ? data.count.toLocaleString() :"–––"
-   } views`}</span>
-   );
+  return (
+    <span className="group relative flex items-center justify-end">{`${
+      (data?.count ?? 0) > 0 ? data.count.toLocaleString() : "–––"
+    } views`}</span>
+  );
 };
 
 export default ViewCounter;

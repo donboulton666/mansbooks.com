@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import { Views } from "../lib/types";
 import useSWR from "swr";
 import fetcher from "lib/fetcher";
+import { EyeIcon } from "@heroicons/react/outline";
 
 export async function getStaticProps({ preview, locale }) {
   const formattedLocale = locale.split("-")[0];
@@ -91,9 +92,12 @@ export default function Blog({ subscription }) {
         <Container>
           <LanguageBar />
           <Intro />
-          <div className="flex flex-row text-xs -mt-6 mr-2 text-slate-300">
+          <div className="-mt-6 mr-2 flex flex-row text-xs text-slate-300">
             <div className="flex-grow" />
+            <div className="flex flex-row text-xs text-slate-300">
+              <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
               <span>{`${data?.count ?? "0"} views`}</span>
+            </div>
           </div>
           {heroPost && (
             <HeroPost
@@ -104,10 +108,8 @@ export default function Blog({ subscription }) {
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />
-          )}          
-          <div>
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          </div>
+          )}
+          <div>{morePosts.length > 0 && <MoreStories posts={morePosts} />}</div>
         </Container>
       </Layout>
     </>

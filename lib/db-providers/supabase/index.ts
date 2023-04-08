@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from "next";
 import { ConfUser } from "@lib/types";
 import { createClient } from "@supabase/supabase-js";
 import { Database } from "../../types/supabase";
@@ -29,9 +29,12 @@ const supabase =
     : undefined;
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const allOnlineUsers = await supabase.from('users').select('*').eq('status', 'ONLINE')
-  res.status(200).json(allOnlineUsers)
-}
+  const allOnlineUsers = await supabase
+    .from("users")
+    .select("*")
+    .eq("status", "ONLINE");
+  res.status(200).json(allOnlineUsers);
+};
 
 export async function getUserByUsername(username: string): Promise<ConfUser> {
   const { data } = await supabase

@@ -14,6 +14,7 @@ import Giscus from "@giscus/react";
 import { Views } from "../lib/types";
 import useSWR from "swr";
 import fetcher from "lib/fetcher";
+import { EyeIcon } from "@heroicons/react/outline";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { format } from "date-fns";
 
@@ -167,9 +168,12 @@ export default function Post({ subscription, preview }) {
               date={post.date}
               author={post.author}
             />
-            <div className="flex flex-row text-xs -mt-6 mr-2 text-slate-300">
+            <div className="-mt-6 mr-2 flex flex-row text-xs text-slate-300">
               <div className="flex-grow" />
-              <span>{`${data?.count ?? "0"} views`}</span>
+              <div className="flex flex-row text-xs text-slate-300">
+                <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
+                <span>{`${data?.count ?? "0"} views`}</span>
+              </div>
             </div>
             <PostBody content={post.content} />
           </div>

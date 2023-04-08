@@ -24,12 +24,7 @@
     },
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.js",
-    "**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.js", "**/*.tsx"],
   "plugins": [
     {
       "name": "next"
