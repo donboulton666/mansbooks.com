@@ -223,4 +223,30 @@ export default {
       nn: "Flere historier",
     },
   },
+  todo: {
+    title: {
+      en: "Todo List",
+      it: "Lista di cose da fare",
+      es: "Lista de quehaceres",
+      nn: "Gjøremålsliste",
+    },
+    add: {
+      en: "Add",
+      it: "Aggiungere",
+      es: "Agregar",
+      nn: "Legg til",
+    },
+    logout: {
+      en: "Logout",
+      it: "Disconnettersi",
+      es: "Cerrar sesión",
+      nn: "Logg ut",
+    },
+    login: {
+      en: "Login",
+      it: "Login",
+      es: "Acceso",
+      nn: "Logg Inn",
+    },
+  },
 };

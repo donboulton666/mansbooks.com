@@ -4,7 +4,7 @@ import {
   useSupabaseClient,
   Session,
 } from "@supabase/auth-helpers-react";
-import { Database } from "../utils/database";
+import { Database } from "../lib/schema";
 import Avatar from "./avatar";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -97,6 +97,12 @@ export default function Account({ session }: { session: Session }) {
     });
   }
 
+  async function signInWithSlack() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "slack",
+    });
+  }
+
   async function signInWithEmail() {
     const { data, error } = await supabase.auth.signInWithPassword({
       email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
@@ -110,22 +116,45 @@ export default function Account({ session }: { session: Session }) {
 
   return (
     <div className="form-widget ml-8">
-      <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
-      </div>
-      <div>
-        <label htmlFor="username">Username</label>
+      <div className="col-span-6">
+        <label
+          htmlFor="email"
+          className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-300"
+        >
+          Email
+        </label>
         <input
+          className="mb-3 w-28 appearance-none rounded border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 focus:border-blue-400 focus:outline-none focus:ring-blue-300 sm:text-sm"
+          id="email"
+          type="text"
+          value={session.user.email}
+          disabled
+        />
+      </div>
+      <div className="col-span-6">
+        <label
+          htmlFor="username"
+          className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-300"
+        >
+          Username
+        </label>
+        <input
+          className="mb-3 w-28 appearance-none rounded border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 focus:border-blue-400 focus:outline-none focus:ring-blue-300 sm:text-sm"
           id="username"
           type="text"
           value={username || ""}
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor="website">Website</label>
+      <div className="col-span-6">
+        <label
+          htmlFor="website"
+          className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-300"
+        >
+          Website
+        </label>
         <input
+          className="mb-3 w-28 appearance-none rounded border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 focus:border-blue-400 focus:outline-none focus:ring-blue-300 sm:text-sm"
           id="website"
           type="website"
           value={website || ""}

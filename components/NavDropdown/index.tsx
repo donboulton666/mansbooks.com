@@ -7,6 +7,7 @@ import {
   UserGroupIcon,
   UserIcon,
   MapIcon,
+  LoginIcon,
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
 
@@ -66,6 +67,25 @@ export default function Navigation() {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
+                      <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              href="/login"
+                              className={classNames(
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
+                              )}
+                            >
+                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
+                                <LoginIcon
+                                  className="block h-8 w-8 pr-2 text-blue-500"
+                                  aria-hidden="true"
+                                />
+                                <span>Login</span>
+                              </span>
+                            </Link>
+                          )}
+                        </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
                             <Link

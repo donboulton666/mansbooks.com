@@ -16,7 +16,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { ConfUser } from "@lib/types";
 import { createClient } from "@supabase/supabase-js";
-import { Database } from "../../types/supabase";
+import { Database } from "@/lib/schema";
 
 const supabase =
   process.env.SUPABASE_URL &&
