@@ -6,6 +6,7 @@ import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Image from "next/legacy/image";
 import LeftText from "@components/LeftText";
+import TodoList from "@components/TodoList";
 import ColumnGridLeft from "@components/column-grid-left";
 import angie from "../public/angie/angelina.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
@@ -17,7 +18,7 @@ const Login = () => {
 
   return (
     <Layout>
-      <div className="mb-20 ml-10 mr-10 mt-10" data-datocms-noindex>
+      <div className="mb-96 ml-10 mr-10 mt-10" data-datocms-noindex>
         <div>
           <Center>Login to Queen Angelina Jordan</Center>
           <div>Use the Auth below to Login to Angelic Queen.</div>
@@ -268,7 +269,15 @@ const Login = () => {
                 theme="dark"
               />
             ) : (
-              <Account session={session} />
+              <>
+                <Account session={session} />
+                <div
+                  className="flex h-full w-full flex-col items-center justify-center p-4"
+                  style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
+                >
+                  <TodoList session={session} />
+                </div>
+              </>
             )}
           </div>
         </ColumnGridLeft>

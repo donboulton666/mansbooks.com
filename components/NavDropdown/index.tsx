@@ -67,7 +67,7 @@ export default function Navigation() {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
-                      <Menu.Item>
+                        <Menu.Item>
                           {({ active }) => (
                             <Link
                               href="/login"

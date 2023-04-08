@@ -67,9 +67,9 @@ export default function TodoList({ session }: { session: Session }) {
         className="my-2 flex gap-2"
       >
         <input
-          className="w-full rounded p-2"
+          className="w-full rounded bg-slate-900 text-slate-200 p-2"
           type="text"
-          placeholder="make coffee"
+          placeholder="new songs"
           value={newTaskText}
           onChange={(e) => {
             setErrorText("");
@@ -126,7 +126,7 @@ const Todo = ({ todo, onDelete }: { todo: Todos; onDelete: () => void }) => {
         </div>
         <div>
           <input
-            className="cursor-pointer"
+            className="cursor-pointer ml-1 h-6 w-6 rounded border-blue-400 bg-blue-200 ring-offset-blue-400 focus:ring-2 focus:ring-blue-400"
             onChange={(e) => toggle()}
             type="checkbox"
             checked={isCompleted ? true : false}
