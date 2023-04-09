@@ -103,6 +103,12 @@ export default function Account({ session }: { session: Session }) {
     });
   }
 
+  async function signInWithSpotify() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+    });
+  }
+
   async function signInWithEmail() {
     const { data, error } = await supabase.auth.signInWithPassword({
       email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
@@ -116,6 +122,15 @@ export default function Account({ session }: { session: Session }) {
 
   return (
     <div className="form-widget ml-8">
+      <Avatar
+        uid={user.id}
+        url={avatar_url}
+        size={150}
+        onUpload={(url) => {
+          setAvatarUrl(url);
+          updateProfile({ username, website, avatar_url: url });
+        }}
+      />
       <div className="col-span-6">
         <label
           htmlFor="email"
@@ -236,15 +251,6 @@ export default function Account({ session }: { session: Session }) {
           Sign Out
         </button>
       </div>
-      <Avatar
-        uid={user.id}
-        url={avatar_url}
-        size={150}
-        onUpload={(url) => {
-          setAvatarUrl(url);
-          updateProfile({ username, website, avatar_url: url });
-        }}
-      />
     </div>
   );
 }

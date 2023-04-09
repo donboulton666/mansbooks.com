@@ -11,7 +11,7 @@ import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/LanguageBar";
 import Giscus from "@giscus/react";
-import { Views } from "../lib/types";
+import ViewCounter from "@components/ViewCounter";
 import useSWR from "swr";
 import fetcher from "lib/fetcher";
 import { EyeIcon } from "@heroicons/react/outline";
@@ -153,7 +153,7 @@ export default function Post({ subscription, preview }) {
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
-  const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher);
+
   return (
     <Layout preview={preview}>
       <Head>{renderMetaTags(metaTags)}</Head>
@@ -172,7 +172,7 @@ export default function Post({ subscription, preview }) {
               <div className="flex-grow" />
               <div className="flex flex-row text-xs text-slate-300">
                 <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
-                <span>{`${data?.count ?? "0"} views`}</span>
+                <ViewCounter slug={post.slug} />
               </div>
             </div>
             <PostBody content={post.content} />

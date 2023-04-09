@@ -10,7 +10,7 @@ import TodoList from "@components/TodoList";
 import ColumnGridLeft from "@components/column-grid-left";
 import angie from "../public/angie/angelina.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
-import heidisParty from "../public/angie/heidis-party.jpg";
+import iLoveYou from "../public/angie/ps-i-love-you.jpg";
 
 const Login = () => {
   const session = useSession();
@@ -252,11 +252,11 @@ const Login = () => {
               <Image
                 layout="fixed"
                 className="h-5 w-5 self-center rounded-lg"
-                src={heidisParty}
+                src={iLoveYou}
                 width={325}
                 height={573}
                 quality={95}
-                alt="Angie Elvira"
+                alt="PS I Love You"
                 loading="lazy"
               />
             </div>
@@ -270,13 +270,15 @@ const Login = () => {
               />
             ) : (
               <>
-                <Account session={session} />
-                <div
-                  className="flex h-full w-full flex-col items-center justify-center p-4"
-                  style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
-                >
-                  <TodoList session={session} />
-                </div>
+                <ColumnGridLeft>
+                  <Account session={session} />
+                  <div
+                    className="flex h-full w-full flex-col items-center justify-center p-4"
+                    style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
+                  >
+                    <TodoList session={session} />
+                  </div>
+                </ColumnGridLeft>
               </>
             )}
           </div>

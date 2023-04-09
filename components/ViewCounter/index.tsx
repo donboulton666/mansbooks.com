@@ -1,5 +1,5 @@
 import fetcher from "@lib/fetcher";
-import { Views } from "@lib/schema";
+import { Views } from "@lib/types";
 import { useEffect } from "react";
 import useSWR from "swr";
 

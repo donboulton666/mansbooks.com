@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 import Layout from "@components/PageLayout";
 import Center from "../components/Center";
 import LeftText from "../components/LeftText";
-import ColumnGridTwo from "../components/column-grid";
+import ColumnGridCenter from "../components/column-grid-center";
 import UserProfile from "../components/UserProfile";
 import Section from "../components/Section";
 import VideoWrapper from "../components/VideoWrapper";
@@ -171,7 +171,7 @@ export default function Privacy() {
         </Section>
         <Section>
           <LeftText>Cookies Purpose and Usage</LeftText>
-          <ColumnGridTwo>
+          <ColumnGridCenter>
             <UserProfile
               buttonLink="https://www.youtube.com/watch?v=yoE9-tNvhRs"
               title="Cookie"
@@ -192,7 +192,7 @@ export default function Privacy() {
             <VideoWrapper>
               <LiteYouTubeEmbed id="yoE9-tNvhRs" title="Cookies Explained" />
             </VideoWrapper>
-          </ColumnGridTwo>
+          </ColumnGridCenter>
         </Section>
         <Section>
           Third-party advertisers may also place and read cookies on your

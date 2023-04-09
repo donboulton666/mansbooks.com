@@ -44,7 +44,7 @@ const Video: FC<VideoProps> = (props) => {
             width="1000"
             height="600"
             autoPlay="on-scroll"
-            src="videos/angelina_jordan_suspicious_minds"
+            src="videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio"
           />
         </Wrapper>
       </m.div>

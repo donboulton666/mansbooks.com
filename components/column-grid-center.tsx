@@ -1,10 +1,10 @@
 import { ReactNode, FC } from "react";
 
-interface ColumnGridTwoProps {
+interface ColumnGridCenterProps {
   children: ReactNode;
 }
 
-const ColumnGridTwo: FC<ColumnGridTwoProps> = (props) => {
+const ColumnGridCenter: FC<ColumnGridCenterProps> = (props) => {
   const { children } = props;
   return (
     <>
@@ -13,4 +13,4 @@ const ColumnGridTwo: FC<ColumnGridTwoProps> = (props) => {
   );
 };
 
-export default ColumnGridTwo;
+export default ColumnGridCenter;

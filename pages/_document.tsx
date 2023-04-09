@@ -8,6 +8,7 @@ export default class CustomDocument extends Document {
       <Html lang={lanaguage}>
         <Head>
           <meta name="application-name" content="Mansbooks" />
+          <meta name="slack-app-id" content="A04TYHWB0S3" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
