@@ -109,6 +109,12 @@ export default function Account({ session }: { session: Session }) {
     });
   }
 
+  async function signInWithDiscord() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "discord",
+    });
+  }
+
   async function signInWithEmail() {
     const { data, error } = await supabase.auth.signInWithPassword({
       email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,

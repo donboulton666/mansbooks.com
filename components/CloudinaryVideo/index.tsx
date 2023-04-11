@@ -7,9 +7,12 @@ import { auto, vp9 } from "@cloudinary/url-gen/qualifiers/videoCodec";
 import VideoWrapper from "./wrapper";
 
 const Video = () => {
-  const vid = new CloudinaryVideo("videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio", {
-    cloudName: "mansbooks",
-  });
+  const vid = new CloudinaryVideo(
+    "videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio",
+    {
+      cloudName: "mansbooks",
+    }
+  );
   const videoEl = useRef();
   const sources = [
     {

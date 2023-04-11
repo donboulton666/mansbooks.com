@@ -12,10 +12,7 @@
     cache-control = '''
 	  public,
 	  max-age=2592000'''
-    Referrer-Policy = "strict-origin-when-cross-origin"
     X-Robots-Tag = "index"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "ACCEPT"
     X-XSS-Protection = "1; mode=block"
     Access-Control-Allow-Origin = '''
       https://mansbooks.com,
@@ -88,21 +85,6 @@
     Access-Control-Allow-Credentials = "true"
     Access-Control-Allow-Headers = "Content-Type, Authorization, Time-Zone"
     Access-Control-Max-Age = "3600"
-    Vary = "Accept-Encoding"
-    Permissions-Policy = '''
-      accelerometer=(self),
-      autoplay=*,
-      camera=(self),
-      encrypted-media=(self),
-      fullscreen=*,
-      geolocation=*,
-      gyroscope=(self),
-      magnetometer=(self),
-      microphone=(self),
-      midi=(self),
-      payment=(self),
-      picture-in-picture=*,
-      usb=(self)
     '''
 [[headers]]
   for = "/public/*"

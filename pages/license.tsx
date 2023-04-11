@@ -3,7 +3,7 @@ import Head from "next/head";
 import Layout from "@components/PageLayout";
 import Section from "@components/Section";
 import CalloutLabel from "@components/Callout/CalloutLabel";
-import Modal from "@components/Modal";
+import Modal from "@components/Modal/modal";
 import angie from "../public/angie/angelina.jpg";
 
 export default function License() {

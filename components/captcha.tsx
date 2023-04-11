@@ -46,12 +46,7 @@ const Captcha = forwardRef<HCaptcha, Props>((props, ref) => {
 
   return (
     <Suspense fallback={null}>
-      <LazyCaptcha
-        ref={ref}
-        sitekey="a1cd2024-626a-4491-89d9-a6010aca47a4"
-        size="invisible"
-        {...props}
-      />
+      <LazyCaptcha ref={ref} sitekey="" size="invisible" {...props} />
     </Suspense>
   );
 });

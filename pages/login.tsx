@@ -15,7 +15,6 @@ import iLoveYou from "../public/angie/ps-i-love-you.jpg";
 const Login = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
-
   return (
     <Layout>
       <div className="mb-96 ml-10 mr-10 mt-10" data-datocms-noindex>
@@ -43,7 +42,7 @@ const Login = () => {
               <Auth
                 supabaseClient={supabase}
                 appearance={{ theme: ThemeSupa }}
-                providers={['github', 'google', 'spotify', 'slack',]}
+                providers={["github", "google", "spotify", "slack", "discord"]}
                 theme="dark"
               />
             ) : (

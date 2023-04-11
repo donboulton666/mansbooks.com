@@ -31,7 +31,7 @@ type Props = {
 
 export default function ExpoPage({ sponsors }: Props) {
   const meta = {
-    title: "Videos - Angelina Jordan Videos",
+    title: "Videos - Angelina Jordan",
     description: META_DESCRIPTION,
   };
 
