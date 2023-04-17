@@ -66,8 +66,7 @@ module.exports = withPWA({
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-// https://securityheaders.com
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://netlify-rum.netlify.app/netlify-rum.js https://cookiehub.net/c2/6b9c3004.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://netlify-rum.netlify.app/netlify-rum.js https://cookiehub.net/c2/6b9c3004.js https://apis.google.com/js/platform.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
   child-src *.youtube.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   frame-src https://giscus.app/ youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app;
