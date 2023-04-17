@@ -7,7 +7,7 @@ export default function Thanks() {
       <Head>
         <title>Thank You</title>
       </Head>
-      <div className="mx-18">
+      <div className="mx-20">
         <div className="z-30 -mt-4">
           <div className="mt-10">
             <div className="mb-16 mt-16 p-8 sm:mt-2">

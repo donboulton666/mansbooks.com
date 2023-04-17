@@ -66,9 +66,9 @@ module.exports = withPWA({
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.zUi2Oiqh0cQ.O/m=ytsubscribe/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-VnflFHGTzk3OsaVpWbqz0Ysb2Jw/cb=gapi.loaded_0?le=scs https://netlify-rum.netlify.app/netlify-rum.js https://cookiehub.net/c2/6b9c3004.js https://apis.google.com/js/platform.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com/ https://netlify-rum.netlify.app/netlify-rum.js https://cookiehub.net/c2/6b9c3004.js https://apis.google.com/js/platform.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
   child-src *.youtube.com *.google.com *.twitter.com;
-  style-src 'self' 'unsafe-inline' https://static.cookiehub.com/c2/css/2.3.6.css' *.googleapis.com;
+  style-src 'self' https://static.cookiehub.com/c2/css/2.3.6.css *.static.cookiehub.com *.googleapis.com;
   frame-src https://giscus.app/ youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app;
   img-src * blob: data:;
   worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;

@@ -3,6 +3,8 @@ import {
   createServerSupabaseClient,
 } from "@supabase/auth-helpers-nextjs";
 import { GetServerSidePropsContext } from "next";
+import Head from "next/head";
+import Layout from "@components/PageLayout";
 
 export default function ProtectedPage({
   user,
@@ -13,11 +15,19 @@ export default function ProtectedPage({
 }) {
   return (
     <>
-      <div>Protected content for {user.email}</div>
-      <p>Data fetched with provider token:</p>
-      <pre>{JSON.stringify(allRepos, null, 2)}</pre>
-      <p>user:</p>
-      <pre>{JSON.stringify(user, null, 2)}</pre>
+      <Layout>
+        <Head>
+          <title>Github Repos</title>
+        </Head>
+        <div className="mx-20">
+          <h2>Github Repos</h2>
+          <div>Protected content for {user.email}</div>
+          <p>Data fetched with provider token:</p>
+          <pre>{JSON.stringify(allRepos, null, 2)}</pre>
+          <p>user:</p>
+          <pre>{JSON.stringify(user, null, 2)}</pre>
+        </div>
+      </Layout>
     </>
   );
 }
