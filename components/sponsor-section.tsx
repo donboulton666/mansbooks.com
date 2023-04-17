@@ -29,7 +29,6 @@ type Props = {
   sponsor: Sponsor;
 };
 
-
 export default function SponsorSection({ sponsor }: Props) {
   return (
     <>

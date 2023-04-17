@@ -624,7 +624,7 @@ export default function About() {
           <LeftText>Cloudinary Image Transformations</LeftText>
           <a
             href="https://cloudinary.com/"
-            className="hover:text-pink-500 mt-4"
+            className="mt-4 hover:text-pink-500"
             rel="noopener noreferrer"
             target="_blank"
             aria-describedby="Image and Video APIs"
@@ -634,7 +634,7 @@ export default function About() {
               alt="100ms"
               title="100ms"
               src={cloudinary}
-              className="w-96 mt-4 pt-4 opacity-80"
+              className="mt-4 w-96 pt-4 opacity-80"
               loading="lazy"
               height={128}
               width={384}

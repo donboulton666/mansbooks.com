@@ -17,6 +17,7 @@
 import React from "react";
 import { ReactNode } from "react";
 import Link from "next/link";
+import { CookieConsent } from "react-cookie-consent";
 import cn from "classnames";
 import { useRouter } from "next/router";
 import { SkipNavContent } from "@reach/skip-nav";
@@ -98,6 +99,47 @@ export default function Layout({
               <div className={cn(styles.full, className)}>{children}</div>
             </main>
             {!activeRoute.startsWith("/stage") && <PageFooter />}
+            <CookieConsent
+              enableDeclineButton
+              flipButtons
+              location="bottom"
+              buttonText="Accept"
+              declineButtonText="Decline"
+              ariaAcceptLabel="Accept Cookies"
+              ariaDeclineLabel="Decline Cookies"
+              cookieName="gtag"
+              style={{
+                background:
+                  "linear-gradient(to right, #4338ca, transparent, #4338ca)",
+                textShadow: "2px 2px black",
+              }}
+              buttonStyle={{
+                background:
+                  "radial-gradient(circle at top right, #4338ca, transparent)",
+                color: "white",
+                fontWeight: "bolder",
+                borderRadius: "3px",
+                border: "1px black",
+                textShadow: "2px 2px black",
+              }}
+            >
+              This Site uses cookies for user experience.{" "}
+              <span
+                style={{
+                  fontSize: "14px",
+                  textAlign: "center",
+                  marginLeft: "20px",
+                }}
+              >
+                <Link
+                  href="/privacy"
+                  className="text-slate-300"
+                  alt="Privacy Page"
+                >
+                  Privacy Page
+                </Link>
+              </span>
+            </CookieConsent>
           </div>
         </div>
       </div>

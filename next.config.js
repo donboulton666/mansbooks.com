@@ -66,13 +66,13 @@ module.exports = withPWA({
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com/ https://netlify-rum.netlify.app/netlify-rum.js https://cookiehub.net/c2/6b9c3004.js https://apis.google.com/js/platform.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com/ https://netlify-rum.netlify.app/netlify-rum.js https://apis.google.com/js/platform.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
   child-src *.youtube.com *.google.com *.twitter.com;
   style-src 'self' https://static.cookiehub.com/c2/css/2.3.6.css *.static.cookiehub.com *.googleapis.com;
   frame-src https://giscus.app/ youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app;
   img-src * blob: data:;
   worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
-  media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio.mp4?_a=ATFGlAA0 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
+  media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
   connect-src *;
   font-src 'self' https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2 https://fonts.googleapis.com *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com https://fonts.gstatic.com *.fonts.gstatic.com;
 `;

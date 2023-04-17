@@ -42,7 +42,7 @@ const Login = () => {
               <Auth
                 supabaseClient={supabase}
                 appearance={{ theme: ThemeSupa }}
-                providers={["github", "google", "spotify", "slack", "discord"]}
+                providers={["github", "google", "spotify", "slack"]}
                 theme="dark"
               />
             ) : (
