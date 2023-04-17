@@ -8,9 +8,6 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   reactStrictMode: true,
-  future: {
-    strictPostcssConfiguration: true,
-  },
   i18n: {
     locales: ["en", "es", "it", "nn"],
      defaultLocale: "en",
@@ -69,13 +66,14 @@ module.exports = withPWA({
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com cdn.usefathom.com;
-  child-src *.youtube.com *.google.com *.twitter.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.youtube.be *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
+  child-src *.youtube.com *.google.com *.twitter.com *.giscus.app;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;
-  media-src 'none';
+  worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
+  media-src *.res.cloudinary.com *.youtube.com *.youtube.be *.raw.githubusercontent.com;
   connect-src *;
-  font-src 'self';
+  font-src 'self' 'unsafe-inline' *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com *.fonts.gstatic.com;
 `;
 
 const securityHeaders = [
