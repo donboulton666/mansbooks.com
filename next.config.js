@@ -66,15 +66,16 @@ module.exports = withPWA({
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
+// https://securityheaders.com
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://netlify-rum.netlify.app/netlify-rum.js https://cookiehub.net/c2/6b9c3004.js cdn.vercel-insights.com youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
   child-src *.youtube.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
-  frame-src *.youtube.com *.youtube.be *.twitter.com *.cookiehub.net *.giscus.app;
+  frame-src https://giscus.app/ youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app;
   img-src * blob: data:;
   worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
   media-src *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
   connect-src *;
-  font-src 'self' data:;
+  font-src 'self' https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2 https://fonts.googleapis.com *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com https://fonts.gstatic.com *.fonts.gstatic.com;
 `;
 
 const securityHeaders = [
