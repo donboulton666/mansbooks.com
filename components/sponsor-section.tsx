@@ -20,12 +20,15 @@ import Image from "next/legacy/image";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";
 import Giscus from "@giscus/react";
+import ViewCounter from "@components/ViewCounter";
+import { EyeIcon } from "@heroicons/react/outline";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
 
 type Props = {
   sponsor: Sponsor;
 };
+
 
 export default function SponsorSection({ sponsor }: Props) {
   return (
@@ -77,6 +80,10 @@ export default function SponsorSection({ sponsor }: Props) {
                 width={64}
               />
               <h1 className={styles.name}>{sponsor.name}</h1>
+            </div>
+            <div className="flex flex-row text-xs text-slate-300">
+              <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
+              <ViewCounter slug={sponsor.slug} />
             </div>
             <p className={styles.description}>{sponsor.description}</p>
             <div className={styles["sponsor-details"]}>

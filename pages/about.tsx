@@ -9,6 +9,12 @@ import ColumnGridLeft from "../components/column-grid-left";
 import nextjs from "../public/nextjs.jpg";
 import angie from "../public/angie/angelina.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
+import oneHundredMs from "../public/100ms.jpg";
+import cloudinary from "../public/cloudinary.png";
+import supabase from "../public/supa.png";
+import upstash from "../public/upstash-logo.png";
+import datoCms from "../public/datoCms.jpg";
+import csp from "../public/cspMansbooks.jpg";
 
 export default function About() {
   return (
@@ -239,7 +245,7 @@ export default function About() {
                     className="h-5 w-5 self-center"
                     viewBox="0 0 16 16"
                   >
-                    <g fill-rule="evenodd" clip-rule="evenodd">
+                    <g fill-rule="evenodd" clipRule="evenodd">
                       <path
                         fill="#F44336"
                         d="M15.32 4.06c-.434-.772-.905-.914-1.864-.968C12.498 3.027 10.089 3 8.002 3c-2.091 0-4.501.027-5.458.091-.957.055-1.429.196-1.867.969C.23 4.831 0 6.159 0 8.497v.008c0 2.328.23 3.666.677 4.429.438.772.909.912 1.866.977.958.056 3.368.089 5.459.089 2.087 0 4.496-.033 5.455-.088.959-.065 1.43-.205 1.864-.977.451-.763.679-2.101.679-4.429v-.008c0-2.339-.228-3.667-.68-4.438z"
@@ -268,7 +274,7 @@ export default function About() {
                     className="block h-5 w-5"
                     viewBox="0 0 16 16"
                   >
-                    <g fill-rule="evenodd" clip-rule="evenodd">
+                    <g fill-rule="evenodd" clipRule="evenodd">
                       <path
                         fill="#F44336"
                         d="M15.32 4.06c-.434-.772-.905-.914-1.864-.968C12.498 3.027 10.089 3 8.002 3c-2.091 0-4.501.027-5.458.091-.957.055-1.429.196-1.867.969C.23 4.831 0 6.159 0 8.497v.008c0 2.328.23 3.666.677 4.429.438.772.909.912 1.866.977.958.056 3.368.089 5.459.089 2.087 0 4.496-.033 5.455-.088.959-.065 1.43-.205 1.864-.977.451-.763.679-2.101.679-4.429v-.008c0-2.339-.228-3.667-.68-4.438z"
@@ -433,15 +439,6 @@ export default function About() {
         </div>
         <Section>
           <Center>WebSite Framework & Design</Center>
-          <Image
-            alt="NextJs"
-            title="NextJs"
-            src={nextjs}
-            className="w-full opacity-80"
-            loading="lazy"
-            height={762}
-            width={1400}
-          />
           <a
             href="https://nextjs.org/"
             className="hover:text-pink-500"
@@ -450,6 +447,15 @@ export default function About() {
             aria-describedby="Built with NextJs"
             area-label="Built with NextJs"
           >
+            <Image
+              alt="NextJs"
+              title="NextJs"
+              src={nextjs}
+              className="w-full opacity-80"
+              loading="lazy"
+              height={762}
+              width={1400}
+            />
             <h2>This Website is built with NextJs</h2>
           </a>
           <a
@@ -480,6 +486,15 @@ export default function About() {
               aria-describedby="Headless CMS"
               area-label="Headless CMS"
             >
+              <Image
+                alt="Dato Cms"
+                title="Dato Cms"
+                src={datoCms}
+                className="w-80 opacity-80"
+                loading="lazy"
+                height={128}
+                width={320}
+              />
               <h2>Headless CMS, Done Right</h2>
             </a>
             <div>
@@ -511,6 +526,15 @@ export default function About() {
             aria-describedby="Upstash Redis"
             area-label="Upstash Redis"
           >
+            <Image
+              alt="Upstash"
+              title="Upstash"
+              src={upstash}
+              className="w-80 opacity-80"
+              loading="lazy"
+              height={128}
+              width={320}
+            />
             <h2>Upstash Redis Memory Database, Done Right</h2>
           </a>
           <div>
@@ -525,6 +549,40 @@ export default function About() {
           </div>
         </Section>
         <Section>
+          <LeftText>Supabase Database</LeftText>
+          <a
+            href="https://supabase.com/"
+            className="hover:text-pink-500"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="Supabase"
+            area-label="Supabase"
+          >
+            <Image
+              alt="Supabase"
+              title="Supabase"
+              src={supabase}
+              className="w-80 opacity-80"
+              loading="lazy"
+              height={128}
+              width={320}
+            />
+            <h2>Build in a weekend. Scale to millions.</h2>
+          </a>
+          <div>
+            Supabase is an open source Firebase alternative. Start your project
+            with a Postgres database, Authentication, instant APIs, Edge
+            Functions, Realtime subscriptions, and Storage.
+          </div>
+          <div>Build faster and focus on your products</div>
+          <h2>Open Source Auth (with tons of integrations)</h2>
+          <div>
+            Every Supabase project comes with a complete User Management system
+            that works without any additional tools. Including PostgreSQL's
+            policy engine, for fine-grained access rules.
+          </div>
+        </Section>
+        <Section>
           <LeftText>100ms</LeftText>
           <a
             href="https://www.100ms.live/"
@@ -534,6 +592,15 @@ export default function About() {
             aria-describedby="Streaming Video Service"
             area-label="Streaming Video Service"
           >
+            <Image
+              alt="100ms"
+              title="100ms"
+              src={oneHundredMs}
+              className="w-80 opacity-80"
+              loading="lazy"
+              height={128}
+              width={320}
+            />
             <h2>Streaming Video Service</h2>
           </a>
           <div>The only live video API you will ever need.</div>
@@ -557,12 +624,21 @@ export default function About() {
           <LeftText>Cloudinary Image Transformations</LeftText>
           <a
             href="https://cloudinary.com/"
-            className="hover:text-pink-500"
+            className="hover:text-pink-500 mt-4"
             rel="noopener noreferrer"
             target="_blank"
             aria-describedby="Image and Video APIs"
             area-label="Image and Video APIs"
           >
+            <Image
+              alt="100ms"
+              title="100ms"
+              src={cloudinary}
+              className="w-96 mt-4 pt-4 opacity-80"
+              loading="lazy"
+              height={128}
+              width={384}
+            />
             <h2>The Most Powerful Image and Video APIs</h2>
           </a>
           <div>
@@ -575,6 +651,16 @@ export default function About() {
             transform, optimize, and deliver all your media assets with
             easy-to-use APIs, widgets, or user interface.
           </div>
+        </Section>
+        <Section>
+          <Center>Security Policy's</Center>
+          <Image
+            alt="security Policy"
+            title="security Policy"
+            src={csp}
+            className="w-full opacity-80"
+            loading="lazy"
+          />
         </Section>
       </div>
     </Layout>

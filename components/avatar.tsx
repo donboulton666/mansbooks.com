@@ -75,7 +75,7 @@ export default function Avatar({
         <img
           src={avatarUrl}
           alt="Avatar"
-          className="avatar image rounded-full ring ring-wine-300 ring-offset-4"
+          className="avatar image mb-4 pb-4 rounded-full ring ring-wine-300 ring-offset-4"
           style={{ height: size, width: size }}
         />
       ) : (

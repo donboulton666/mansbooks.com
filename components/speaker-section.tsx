@@ -19,6 +19,8 @@ import Image from "next/legacy/image";
 import cn from "classnames";
 import GithubIcon from "@components/icons/icon-github";
 import { Speaker } from "@lib/types";
+import ViewCounter from "@components/ViewCounter";
+import { EyeIcon } from "@heroicons/react/outline";
 import styles from "./speaker-section.module.css";
 
 const TwitterIcon = () => (
@@ -78,6 +80,10 @@ export default function SpeakerSection({ speaker }: Props) {
                 {`${speaker.title} @ `}
                 <span className={styles.company}>{speaker.company}</span>
               </p>
+              <div className="flex flex-row text-xs text-slate-300">
+                <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
+                <ViewCounter slug={speaker.slug} />
+              </div>
               <h2 className={styles["bio-header"]}>Bio</h2>
               <p className={styles.bio}>{speaker.bio}</p>
               <h3 className={styles["socials-header"]}>Social Media</h3>

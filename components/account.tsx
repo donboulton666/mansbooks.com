@@ -5,7 +5,7 @@ import {
   Session,
 } from "@supabase/auth-helpers-react";
 import { Database } from "../lib/schema";
-import corsHeaders from "@lib/cors"
+import corsHeaders from "@lib/cors";
 import Avatar from "./avatar";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -110,12 +110,6 @@ export default function Account({ session }: { session: Session }) {
     });
   }
 
-  async function signInWithDiscord() {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "discord",
-    });
-  }
-
   async function signInWithEmail() {
     const { data, error } = await supabase.auth.signInWithPassword({
       email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
@@ -129,7 +123,7 @@ export default function Account({ session }: { session: Session }) {
 
   return (
     <div className="form-widget ml-8">
-      <div className="p-4 mb-2">
+      <div className="mb-4 p-6">
         <Avatar
           uid={user.id}
           url={avatar_url}
