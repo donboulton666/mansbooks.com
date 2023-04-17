@@ -66,16 +66,15 @@ module.exports = withPWA({
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.youtube.be *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
   child-src *.youtube.com *.google.com *.twitter.com;
-  script-src-elem *.apis.google.com *.cookiehub.net;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   frame-src *.youtube.com *.youtube.be *.twitter.com *.cookiehub.net *.giscus.app;
   img-src * blob: data:;
   worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
-  media-src *.res.cloudinary.com *.youtube.com *.youtube.be *.raw.githubusercontent.com;
+  media-src *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
   connect-src *;
-  font-src *.mansbooks.com *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com *.fonts.gstatic.com;
+  font-src 'self' data:;
 `;
 
 const securityHeaders = [
