@@ -6,7 +6,8 @@ const withPWA = require('next-pwa')({
   dest: 'public'
 })
 
-module.exports = withPWA({
+/** @type {import('next').NextConfig} */
+const nextConfig = withPWA({
   reactStrictMode: true,
   i18n: {
     locales: ["en", "es", "it", "nn"],
@@ -30,12 +31,18 @@ module.exports = withPWA({
     ];
   },
   images: {
+    dangerouslyAllowSVG: true,
     formats: ['image/avif', 'image/webp'],
     domains: [
       'www.datocms-assets.com',
       'res.cloudinary.com',
       "encrypted-tbn0.gstatic.com",
       "raw.githubusercontent.com",
+      'avatars.githubusercontent.com',
+      'github.com',
+      'ca.slack-edge.com',
+      'supabase.com',
+      'pbs.twimg.com',
     ],
   },
   reactStrictMode: true,
@@ -63,13 +70,15 @@ module.exports = withPWA({
   },
 });
 
+module.exports = nextConfig
+
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com/ https://netlify-rum.netlify.app/netlify-rum.js https://apis.google.com/js/platform.js cdn.vercel-insights.com https://youtube.com *.youtube.com *.twitter.com *.giscus.app *.apis.google.com *.googleapis.com *.googletagmanager.com *.netlify-rum.netlify.app *.gstatic.com cdn.usefathom.com;
   child-src *.youtube.com *.google.com *.twitter.com;
-  style-src 'self' 'unsafe-inline' https://.googleapis.com *.googleapis.com;
-  frame-src https://giscus.app/ youtube.com *.youtube.com *.twitter.com *.cookiehub.net *.giscus.app;
+  style-src 'self' https://fonts.googleapis.com *.googleapis.com 'unsafe-inline' data:;
+  frame-src https://giscus.app/ youtube.com *.youtube.com *.twitter.com *.giscus.app;
   img-src * blob: data:;
   worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
   media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
@@ -113,5 +122,9 @@ const securityHeaders = [
   {
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()",
+  },
+  {
+    key: 'X-Robots-Tag',
+    value: 'all',
   },
 ]

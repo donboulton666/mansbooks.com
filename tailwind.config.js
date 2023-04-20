@@ -292,6 +292,8 @@ module.exports = {
           300: "var(--brand)",
           400: "var(--brand-dark)",
         },
+        socialBg:'#F5F7FB',
+        socialBlue: '#218DFA',
       },
       fontSize: {
         xxs: "10px",

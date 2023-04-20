@@ -14,13 +14,9 @@
 	  public,
 	  max-age=2592000'''
     Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Robots-Tag = "index"
     X-XSS-Protection = "1; mode=block"
     Access-Control-Allow-Origin = '''
       https://mansbooks.com
-      https://cookiehub.net/c2/6b9c3004.js
-      https://graphql.fauna.com
-      https://graphql.fauna.com/graphql
       https://img.badgesize.io/
       https://www.unpkg.com/use-sound/dist/use-sound.esm.js.svg 
       https://www.google-analytics.com/analytics.js

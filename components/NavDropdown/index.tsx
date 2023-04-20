@@ -89,7 +89,7 @@ export default function Navigation() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/profile"
+                              href="/local-profile"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
@@ -100,7 +100,7 @@ export default function Navigation() {
                                   className="block h-8 w-8 pr-2 text-blue-500"
                                   aria-hidden="true"
                                 />
-                                <span>Profile</span>
+                                <span>Angies Profile</span>
                               </span>
                             </Link>
                           )}
@@ -108,7 +108,7 @@ export default function Navigation() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/jobs"
+                              href="/profile"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
