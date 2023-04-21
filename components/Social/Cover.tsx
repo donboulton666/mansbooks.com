@@ -1,6 +1,5 @@
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState } from "react";
-import Image from "next/legacy/image";
 import Preloader from "./Preloader";
 import { uploadUserProfileImage } from "../../helpers/user";
 
@@ -27,7 +26,7 @@ export default function Cover({ url, editable, onChange }) {
   return (
     <div className="relative flex h-36 items-center justify-center overflow-hidden">
       <div>
-        <Image src={url} alt="" />
+        <img src={url} alt="" />
       </div>
       {isUploading && (
         <div className="absolute inset-0 z-10 flex items-center bg-slate-900 bg-opacity-80">
