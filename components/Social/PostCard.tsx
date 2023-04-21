@@ -1,4 +1,4 @@
-import Avatar from "./SocialAvatar";
+import Avatar from "../avatar";
 import Card from "./Card";
 import ClickOutHandler from "react-clickout-handler";
 import { useContext, useEffect, useState } from "react";
@@ -8,6 +8,9 @@ import ReactTimeAgo from "react-time-ago";
 import { UserContext } from "../../contexts/UserContext";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import styles from "./home.module.css";
+import { Database } from "@lib/schema";
+
+type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function PostCard({
   id,
@@ -22,7 +25,9 @@ export default function PostCard({
   const [commentText, setCommentText] = useState("");
   const [isSaved, setIsSaved] = useState(false);
   const { profile: myProfile } = useContext(UserContext);
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
+  const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
+
   useEffect(() => {
     fetchLikes();
     fetchComments();
@@ -137,7 +142,7 @@ export default function PostCard({
         <div>
           <Link href={"/profile"}>
             <span className="cursor-pointer">
-              <Avatar url={author_url} />
+              <Avatar uid={user.id} url={avatar_url} />
             </span>
           </Link>
         </div>
@@ -368,7 +373,7 @@ export default function PostCard({
       </div>
       <div className="mt-4 flex gap-3">
         <div>
-          <Avatar url={myProfile?.avatar} />
+          <Avatar url={myProfile?.avatar_url} />
         </div>
         <div className="relative grow rounded-full border">
           <form onSubmit={postComment}>

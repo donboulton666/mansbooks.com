@@ -122,7 +122,7 @@ export default function Account({ session }: { session: Session }) {
 
   return (
     <div className="form-widget ml-8">
-      <div className="p-4 mb-2">
+      <div className="mb-2 p-4">
         <Avatar
           uid={user.id}
           url={avatar_url}

@@ -25,18 +25,18 @@ export default function SavedPostsPage() {
       });
   }, [session?.user?.id]);
   return (
-      <SocialLayout>
-        <div className="mb-32">
-          <UserContextProvider>
-            <h1 className="mb-4 text-6xl text-gray-300">Saved posts</h1>
-            {posts.length > 0 &&
-              posts.map((post) => (
-                <div key={post.id}>
-                  <PostCard {...post} />
-                </div>
-              ))}
-          </UserContextProvider>
-        </div>
-      </SocialLayout>
+    <SocialLayout>
+      <div className="mb-32">
+        <UserContextProvider>
+          <h1 className="mb-4 text-6xl text-gray-300">Saved posts</h1>
+          {posts.length > 0 &&
+            posts.map((post) => (
+              <div key={post.id}>
+                <PostCard {...post} />
+              </div>
+            ))}
+        </UserContextProvider>
+      </div>
+    </SocialLayout>
   );
 }

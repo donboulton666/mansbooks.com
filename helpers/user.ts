@@ -13,14 +13,14 @@ export async function uploadUserProfileImage(
 
     if (error) throw error;
     if (data) {
-      const url =
+      const avatar_url =
         process.env.SUPABASE_URL +
         `/storage/v1/object/public/${bucket}/` +
         data.path;
       supabase
         .from("profiles")
         .update({
-          [profileColumn]: url,
+          [profileColumn]: avatar_url,
         })
         .eq("id", userId)
         .then((result) => {

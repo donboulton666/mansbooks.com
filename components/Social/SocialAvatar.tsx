@@ -42,19 +42,19 @@ export default function SocialAvatar({
   return (
     <div className={`${width} relative`} data-datocms-noindex>
       <div className="overflow-hidden rounded-full">
-      {avatarUrl ? (
-        <img
-          src={avatarUrl}
-          alt="Avatar"
-          className="avatar image mb-4 rounded-full ring ring-wine-300 ring-offset-4"
-          style={{ height: size, width: size }}
-        />
-      ) : (
-        <div
-          className="avatar no-image"
-          style={{ height: size, width: size }}
-        />
-      )}
+        {avatarUrl ? (
+          <img
+            src={avatarUrl}
+            alt="Avatar"
+            className="avatar image mb-4 rounded-full ring ring-wine-300 ring-offset-4"
+            style={{ height: size, width: size }}
+          />
+        ) : (
+          <div
+            className="avatar no-image"
+            style={{ height: size, width: size }}
+          />
+        )}
       </div>
       {isUploading && (
         <div className="absolute inset-0 flex items-center rounded-full bg-slate-900 bg-opacity-50">

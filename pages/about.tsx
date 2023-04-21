@@ -15,7 +15,7 @@ import supabase from "../public/supa.png";
 import upstash from "../public/upstash-logo.png";
 import datoCms from "../public/datoCms.jpg";
 import csp from "../public/cspMansbooks.jpg";
-import supabaseSchema from "../public/beginning-supabase-schema.jpg"
+import supabaseSchema from "../public/beginning-supabase-schema.jpg";
 
 export default function About() {
   return (

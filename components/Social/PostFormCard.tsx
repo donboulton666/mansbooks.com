@@ -1,16 +1,20 @@
 import Card from "./Card";
-import Avatar from "./SocialAvatar";
-import Image from "next/legacy/image";
+import Avatar from "../avatar";
 import { useContext, useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { UserContext } from "../../contexts/UserContext";
 import Preloader from "./Preloader";
+import { Database } from "@lib/schema";
+
+type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function PostFormCard({ onPost }) {
   const [content, setContent] = useState("");
   const [uploads, setUploads] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
+  const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
+
   const session = useSession();
   const { profile } = useContext(UserContext);
 
@@ -60,14 +64,14 @@ export default function PostFormCard({ onPost }) {
     <Card>
       <div className="flex gap-2">
         <div>
-          <Avatar url={profile?.avatar} />
+          <Avatar url={profile?.avatar_url} />
         </div>
         {profile && (
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
             className="h-14 grow p-3"
-            placeholder={`Whats on your mind, ${profile?.name}?`}
+            placeholder={`Whats on your mind, ${profile?.username}?`}
           />
         )}
       </div>
@@ -80,7 +84,7 @@ export default function PostFormCard({ onPost }) {
         <div className="flex gap-2">
           {uploads.map((upload) => (
             <div className="mt-2">
-              <Image src={upload} alt="" className="h-24 w-auto rounded-md" />
+              <img src={upload} alt="" className="h-24 w-auto rounded-md" />
             </div>
           ))}
         </div>
