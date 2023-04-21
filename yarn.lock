@@ -4138,6 +4138,13 @@
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
+"@tailwindcss/nesting@^0.0.0-insiders.565cd3e":
+  version "0.0.0-insiders.565cd3e"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/nesting/-/nesting-0.0.0-insiders.565cd3e.tgz#cdfe802dd2900cd6b4e99006c7d13b21132d72fc"
+  integrity sha512-WhHoFBx19TnH/c+xLwT/sxei6+4RpdfiyG3MYXfmLaMsADmVqBkF7B6lDalgZD9YdM459MF7DtxVbWkOrV7IaQ==
+  dependencies:
+    postcss-nested "^5.0.5"
+
 "@tailwindcss/typography@^0.5.9":
   version "0.5.9"
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.9.tgz#027e4b0674929daaf7c921c900beee80dbad93e8"
@@ -9930,6 +9937,13 @@ postcss-nested@6.0.0:
   dependencies:
     postcss-selector-parser "^6.0.10"
 
+postcss-nested@^5.0.5:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-5.0.6.tgz#466343f7fc8d3d46af3e7dba3fcd47d052a945bc"
+  integrity sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==
+  dependencies:
+    postcss-selector-parser "^6.0.6"
+
 postcss-nesting@^11.2.1:
   version "11.2.2"
   resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-11.2.2.tgz#ddedfea5a1fdcd8d753298d82297ad15d5640c0f"
@@ -10050,7 +10064,7 @@ postcss-selector-parser@6.0.10:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.11, postcss-selector-parser@^6.0.4:
+postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.11, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.6:
   version "6.0.11"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.11.tgz#2e41dc39b7ad74046e1615185185cd0b17d0c8dc"
   integrity sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==
@@ -11527,10 +11541,10 @@ sucrase@^3.29.0:
     pirates "^4.0.1"
     ts-interface-checker "^0.1.9"
 
-supabase@^1.49.4:
-  version "1.49.4"
-  resolved "https://registry.yarnpkg.com/supabase/-/supabase-1.49.4.tgz#2ac00804f2dee7718ad17ebe2609bf1d03286e20"
-  integrity sha512-V7Q9wtzcRoC0nPJJg9iL+mLBGblV2YSolK2XDJcu6KRV7do+kQAUp3qbXlnTghGJMvc36slZmpNs4LS6oIym4g==
+supabase@^1.50.10:
+  version "1.50.10"
+  resolved "https://registry.yarnpkg.com/supabase/-/supabase-1.50.10.tgz#f7a1525ca803724c086f968be498df5a372ffe27"
+  integrity sha512-nv3Otpsk6okpni1HaNf6RdkQgR9Urso1yX/yLCBYpKjrXNTwO4Zv6B3suYdiBFQvA1Ae6p7LqzmUQT0AnZKiaw==
   dependencies:
     bin-links "^4.0.1"
     node-fetch "^3.2.10"

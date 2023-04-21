@@ -136,7 +136,7 @@ export default function PostCard({
         <div>
           <Link href={"/profile"}>
             <span className="cursor-pointer">
-              <Avatar url={authorProfile.avatar} />
+              <Avatar url={author_url} />
             </span>
           </Link>
         </div>
@@ -176,9 +176,9 @@ export default function PostCard({
           <ClickOutHandler onClickOut={handleClickOutsideDropdown}>
             <div className="relative">
               {dropdownOpen && (
-                <div className="absolute -right-6 w-52 rounded-sm border border-gray-100 bg-slate-900 p-3 shadow-md shadow-slate-300">
+                <div className="absolute -right-6 w-52 rounded-sm border border-gray-100 bg-slate-900 p-3 shadow-md shadow-slate-900">
                   <button onClick={toggleSave} className="-my-2 w-full">
-                    <span className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-300 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md">
+                    <span className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-900 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md">
                       {isSaved && (
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +216,7 @@ export default function PostCard({
                   </button>
                   <a
                     href=""
-                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-300 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
+                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-900 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -236,7 +236,7 @@ export default function PostCard({
                   </a>
                   <a
                     href=""
-                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-300 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
+                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-900 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +256,7 @@ export default function PostCard({
                   </a>
                   <a
                     href=""
-                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-300 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
+                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-900 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +276,7 @@ export default function PostCard({
                   </a>
                   <a
                     href=""
-                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-300 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
+                    className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-900 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

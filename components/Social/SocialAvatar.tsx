@@ -13,7 +13,7 @@ export default function SocialAvatar({ size, url, editable, onChange }) {
       setIsUploading(true);
       await uploadUserProfileImage(
         supabase,
-        session.user.id,
+        session.profile.id,
         file,
         "avatars",
         "avatar"
@@ -39,7 +39,7 @@ export default function SocialAvatar({ size, url, editable, onChange }) {
         </div>
       )}
       {editable && (
-        <label className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-500">
+        <label className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800">
           <input type="file" className="hidden" onChange={handleAvatarChange} />
           <svg
             xmlns="http://www.w3.org/2000/svg"

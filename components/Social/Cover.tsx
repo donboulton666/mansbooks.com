@@ -37,7 +37,7 @@ export default function Cover({ url, editable, onChange }) {
       )}
       {editable && (
         <div className="absolute bottom-0 right-0 m-2">
-          <label className="flex cursor-pointer items-center gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-md shadow-black">
+          <label className="flex cursor-pointer items-center gap-1 rounded-md bg-slate-900 text-slate-200 px-2 py-1 shadow-md shadow-black">
             <input type="file" onChange={updateCover} className="hidden" />
             <svg
               xmlns="http://www.w3.org/2000/svg"

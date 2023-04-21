@@ -93,7 +93,7 @@ export default function SocialProfile() {
                       <div>
                         <input
                           type="text"
-                          className="rounded-md border px-3 py-2"
+                          className="rounded-md border bg-slate-800 border-slate-800 text-slate-200 px-3 py-2"
                           placeholder={"Your name"}
                           onChange={(ev) => setName(ev.target.value)}
                           value={name}
@@ -112,7 +112,7 @@ export default function SocialProfile() {
                       <div>
                         <input
                           type="text"
-                          className="mt-1 rounded-md border px-3 py-2"
+                          className="mt-1 rounded-md bg-slate-800 text-slate-200 border-slate-800 border px-3 py-2"
                           placeholder={"Your location"}
                           onChange={(ev) => setPlace(ev.target.value)}
                           value={place}
@@ -129,7 +129,7 @@ export default function SocialProfile() {
                             setName(profile.name);
                             setPlace(profile.place);
                           }}
-                          className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-500"
+                          className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-800"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +151,7 @@ export default function SocialProfile() {
                       {isMyUser && editMode && (
                         <button
                           onClick={saveProfile}
-                          className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-500"
+                          className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-800"
                         >
                           Save profile
                         </button>
@@ -159,7 +159,7 @@ export default function SocialProfile() {
                       {isMyUser && editMode && (
                         <button
                           onClick={() => setEditMode(false)}
-                          className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-500"
+                          className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-800"
                         >
                           Cancel
                         </button>

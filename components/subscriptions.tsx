@@ -113,7 +113,7 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                   <span className="block space-x-2">
                     <button
                       aria-label="Submit Button"
-                      className="ml-2 rounded-md border border-transparent bg-slate-800 p-2 text-sm font-medium text-slate-200 shadow-lg hover:bg-slate-900 hover:shadow-slate-800/50"
+                      className="ml-2 rounded-md border border-transparent bg-slate-800 p-2 text-sm font-medium text-slate-200 shadow-lg hover:bg-slate-900 hover:shadow-slate-900/50"
                       type="submit"
                     >
                       Subscribe

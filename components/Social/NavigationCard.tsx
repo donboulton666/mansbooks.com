@@ -7,9 +7,9 @@ export default function NavigationCard() {
   const router = useRouter();
   const { asPath: pathname } = router;
   const activeElementClasses =
-    "text-sm md:text-md flex gap-1 md:gap-3 py-3 my-1 bg-socialBlue text-white md:-mx-7 px-6 md:px-7 rounded-md shadow-md shadow-slate-300 items-center";
+    "text-sm md:text-md flex gap-1 md:gap-3 py-3 my-1 bg-socialBlue text-white md:-mx-7 px-6 md:px-7 rounded-md shadow-md shadow-slate-900 items-center";
   const nonActiveElementClasses =
-    "text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 md:-mx-4 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-slate-300 items-center";
+    "text-sm md:text-md flex gap-1 md:gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 md:-mx-4 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-slate-900 items-center";
 
   const supabase = useSupabaseClient();
   async function logout() {
@@ -18,12 +18,12 @@ export default function NavigationCard() {
 
   return (
     <Card noPadding={true}>
-      <div className="flex justify-between px-4 py-2 shadow-md shadow-slate-500 md:block md:shadow-none">
+      <div className="flex justify-between px-4 py-2 shadow-md shadow-slate-800 md:block md:shadow-none">
         <h2 className="mb-3 hidden text-slate-300 md:block">Navigation</h2>
         <Link
-          href="/"
+          href="/profile"
           className={
-            pathname === "/" ? activeElementClasses : nonActiveElementClasses
+            pathname === "/profile" ? activeElementClasses : nonActiveElementClasses
           }
         >
           <svg
