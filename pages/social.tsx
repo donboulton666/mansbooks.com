@@ -36,7 +36,9 @@ export default function Social() {
   function fetchPosts() {
     supabase
       .from("posts")
-      .select("id, content, created_at, photos, profiles(id, avatar, name)")
+      .select(
+        "id, content, created_at, photos, profiles(id, avatar_url, username)"
+      )
       .is("parent", null)
       .order("created_at", { ascending: false })
       .then((result) => {

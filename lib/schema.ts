@@ -104,7 +104,7 @@ export interface Database {
           website?: string | null;
         };
       };
-      "saved-posts": {
+      saved_posts: {
         Row: {
           created_at: string | null;
           id: number;

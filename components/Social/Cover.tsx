@@ -2,9 +2,12 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState } from "react";
 import Preloader from "./Preloader";
 import { uploadUserProfileImage } from "../../helpers/user";
+import { Database } from "@lib/schema";
+
+type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function Cover({ url, editable, onChange }) {
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   const session = useSession();
   const [isUploading, setIsUploading] = useState(false);
 

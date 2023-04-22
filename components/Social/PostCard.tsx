@@ -12,11 +12,12 @@ import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
+type Posts = Database["public"]["Tables"]["posts"]["Row"];
+
 export default function PostCard({
   id,
   content,
   created_at,
-  photos,
   profiles: authorProfile,
 }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,6 +27,8 @@ export default function PostCard({
   const [isSaved, setIsSaved] = useState(false);
   const { profile: myProfile } = useContext(UserContext);
   const supabase = useSupabaseClient<Database>();
+  const [username, setUsername] = useState<Profiles["username"]>(null);
+  const [photos, setPhotos] = useState<Profiles["photos"]>(null);
   const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
 
   useEffect(() => {
@@ -142,7 +145,7 @@ export default function PostCard({
         <div>
           <Link href={"/profile"}>
             <span className="cursor-pointer">
-              <Avatar uid={user.id} url={avatar_url} />
+              <Avatar className="h-12 w-14" uid={user.id} url={avatar_url} />
             </span>
           </Link>
         </div>
@@ -150,7 +153,7 @@ export default function PostCard({
           <p>
             <Link href={"/profile/" + authorProfile.id}>
               <span className="mr-1 cursor-pointer font-semibold hover:underline">
-                {authorProfile.name}
+                {authorProfile.username}
               </span>
             </Link>
             shared a post
@@ -312,7 +315,7 @@ export default function PostCard({
           <div className="flex gap-4">
             {photos.map((photo) => (
               <div key={photo} className="photo">
-                <Image src={photo} className="rounded-md" alt="" />
+                <img src={photo} className="rounded-md" alt="" />
               </div>
             ))}
           </div>
@@ -373,7 +376,7 @@ export default function PostCard({
       </div>
       <div className="mt-4 flex gap-3">
         <div>
-          <Avatar url={myProfile?.avatar_url} />
+          <Avatar url={myProfile?.avatar_url} className="h-6 w-6" />
         </div>
         <div className="relative grow rounded-full border">
           <form onSubmit={postComment}>

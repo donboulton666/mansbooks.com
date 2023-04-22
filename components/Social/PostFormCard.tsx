@@ -8,11 +8,16 @@ import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
+type Posts = Database["public"]["Tables"]["posts"]["Row"];
+
 export default function PostFormCard({ onPost }) {
   const [content, setContent] = useState("");
   const [uploads, setUploads] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
   const supabase = useSupabaseClient<Database>();
+  const [username, setUsername] = useState<Profiles["username"]>(null);
+  const [author, setAuthor] = useState<Posts["author"]>(null);
+  const [photos, setPhotos] = useState<Posts["photos"]>(null);
   const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
 
   const session = useSession();
@@ -64,13 +69,13 @@ export default function PostFormCard({ onPost }) {
     <Card>
       <div className="flex gap-2">
         <div>
-          <Avatar url={profile?.avatar_url} />
+          <Avatar className="h-14 w-14" url={profile?.avatar_url} />
         </div>
         {profile && (
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
-            className="h-14 grow p-3"
+            className="h-14 grow bg-slate-800 p-3 text-slate-300"
             placeholder={`Whats on your mind, ${profile?.username}?`}
           />
         )}
@@ -177,7 +182,7 @@ export default function PostFormCard({ onPost }) {
             <span className="hidden md:block">Mood</span>
           </button>
         </div>
-        <div className="grow text-right">
+        <div className="mr-2 grow text-right">
           <button
             onClick={createPost}
             className="rounded-md bg-socialBlue px-6 py-1 text-white"

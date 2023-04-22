@@ -12,18 +12,21 @@ import Cover from "@components/Social/Cover";
 import ProfileTabs from "@components/Social/ProfileTabs";
 import ProfileContent from "@components/Social/ProfileContent";
 import { UserContextProvider } from "../contexts/UserContext";
+import { Database } from "@lib/schema";
+
+type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function SocialProfile() {
   const [profile, setProfile] = useState(null);
   const [editMode, setEditMode] = useState(false);
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [place, setPlace] = useState("");
   const router = useRouter();
   const tab = router?.query?.tab?.[0] || "posts";
   const session = useSession();
   const userId = router.query.id;
 
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
 
   useEffect(() => {
     if (!userId) {
@@ -51,7 +54,7 @@ export default function SocialProfile() {
     supabase
       .from("profiles")
       .update({
-        name,
+        username,
         place,
       })
       .eq("id", session.user.id)
@@ -80,7 +83,7 @@ export default function SocialProfile() {
                 <div className="absolute left-4 top-24 z-20">
                   {profile && (
                     <Avatar
-                      url={profile.avatar}
+                      url={profile.avatar_url}
                       size={"lg"}
                       editable={isMyUser}
                       onChange={fetchUser}
@@ -96,8 +99,8 @@ export default function SocialProfile() {
                             type="text"
                             className="rounded-md border border-slate-800 bg-slate-800 px-3 py-2 text-slate-200"
                             placeholder={"Your name"}
-                            onChange={(ev) => setName(ev.target.value)}
-                            value={name}
+                            onChange={(ev) => setUsername(ev.target.value)}
+                            value={username}
                           />
                         </div>
                       )}
