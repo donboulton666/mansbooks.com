@@ -1,12 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/database.types";
-
 export const UserContext = createContext({});
 
 export function UserContextProvider({ children }) {
   const session = useSession();
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   const [profile, setProfile] = useState(null);
   useEffect(() => {
     if (!session?.user?.id) {

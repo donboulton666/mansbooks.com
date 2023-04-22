@@ -1,14 +1,25 @@
 import { uploadUserProfileImage } from "../../helpers/user";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState } from "react";
-import Image from "next/legacy/image";
 import Preloader from "./Preloader";
-import { Database } from "@lib/database.types";
 
-export default function SocialAvatar({ size, url, editable, onChange }) {
-  const supabase = useSupabaseClient<Database>();
+export default function SocialAvatar({
+  uid,
+  url,
+  size,
+  editable,
+  onChange,
+  onUpload,
+}: {
+  uid: string;
+  url: Profiles["avatar_url"];
+  size: number;
+  onUpload: (url: string) => void;
+}) {
+  const supabase = useSupabaseClient();
   const session = useSession();
   const [isUploading, setIsUploading] = useState(false);
+  const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   async function handleAvatarChange(ev) {
     const file = ev.target.files?.[0];
     if (file) {
@@ -31,7 +42,19 @@ export default function SocialAvatar({ size, url, editable, onChange }) {
   return (
     <div className={`${width} relative`} data-datocms-noindex>
       <div className="overflow-hidden rounded-full">
-        <Image src={url} alt="" className="w-full" />
+      {avatarUrl ? (
+        <img
+          src={avatarUrl}
+          alt="Avatar"
+          className="avatar image mb-4 rounded-full ring ring-wine-300 ring-offset-4"
+          style={{ height: size, width: size }}
+        />
+      ) : (
+        <div
+          className="avatar no-image"
+          style={{ height: size, width: size }}
+        />
+      )}
       </div>
       {isUploading && (
         <div className="absolute inset-0 flex items-center rounded-full bg-slate-900 bg-opacity-50">

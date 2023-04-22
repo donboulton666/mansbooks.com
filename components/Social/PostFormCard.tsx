@@ -3,7 +3,6 @@ import Avatar from "./SocialAvatar";
 import Image from "next/legacy/image";
 import { useContext, useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/database.types";
 import { UserContext } from "../../contexts/UserContext";
 import Preloader from "./Preloader";
 
@@ -11,7 +10,7 @@ export default function PostFormCard({ onPost }) {
   const [content, setContent] = useState("");
   const [uploads, setUploads] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   const session = useSession();
   const { profile } = useContext(UserContext);
 

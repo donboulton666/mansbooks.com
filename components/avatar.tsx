@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/database.types";
+
 export default function Avatar({
   uid,
   url,
@@ -12,7 +12,7 @@ export default function Avatar({
   size: number;
   onUpload: (url: string) => void;
 }) {
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const [uploading, setUploading] = useState(false);
 

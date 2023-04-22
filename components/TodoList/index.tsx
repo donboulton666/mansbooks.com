@@ -1,6 +1,6 @@
 import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useEffect, useState } from "react";
-import { Database } from "@lib/database.types";
+import { Database } from "@lib/schema";
 import { useRouter } from "next/router";
 import i18n from "@lib/i18n";
 

@@ -56,7 +56,7 @@ export default function SocialProfile() {
       .eq("id", session.user.id)
       .then((result) => {
         if (!result.error) {
-          setProfile((prev) => ({ ...prev, name, place }));
+          setProfile((prev) => ({ ...prev, username, place }));
         }
         setEditMode(false);
       });
@@ -100,7 +100,7 @@ export default function SocialProfile() {
                       </div>
                     )}
                     {!editMode && (
-                      <h1 className="text-3xl font-bold">{profile?.name}</h1>
+                      <h1 className="text-3xl font-bold">{profile?.username}</h1>
                     )}
                     {!editMode && (
                       <div className="leading-4 text-slate-400">
@@ -125,7 +125,7 @@ export default function SocialProfile() {
                         <button
                           onClick={() => {
                             setEditMode(true);
-                            setName(profile.name);
+                            setName(profile.username);
                             setPlace(profile.place);
                           }}
                           className="mx-1 inline-flex gap-1 rounded-md bg-slate-900 px-2 py-1 shadow-sm shadow-slate-800"

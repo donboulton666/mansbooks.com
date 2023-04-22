@@ -7,7 +7,6 @@ import Image from "next/legacy/image";
 import ReactTimeAgo from "react-time-ago";
 import { UserContext } from "../../contexts/UserContext";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/database.types";
 import styles from "./home.module.css";
 
 export default function PostCard({
@@ -23,7 +22,7 @@ export default function PostCard({
   const [commentText, setCommentText] = useState("");
   const [isSaved, setIsSaved] = useState(false);
   const { profile: myProfile } = useContext(UserContext);
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   useEffect(() => {
     fetchLikes();
     fetchComments();

@@ -6,7 +6,7 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import LoginPage from "./login";
 import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
-import { Database } from "@lib/database.types";
+import { Database } from "@lib/schema";
 
 export default function Social() {
   const supabase = useSupabaseClient<Database>();

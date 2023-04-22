@@ -11,11 +11,10 @@ import ColumnGridLeft from "@components/column-grid-left";
 import angie from "../public/angie/angelina.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import iLoveYou from "../public/angie/ps-i-love-you.jpg";
-import { Database } from "@lib/database.types";
 
 const Login = () => {
   const session = useSession();
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   return (
     <Layout>
       <div className="mb-96 ml-10 mr-10 mt-10" data-datocms-noindex>

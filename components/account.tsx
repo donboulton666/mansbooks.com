@@ -4,8 +4,7 @@ import {
   useSupabaseClient,
   Session,
 } from "@supabase/auth-helpers-react";
-import { Database } from "../lib/schema";
-import corsHeaders from "@lib/cors";
+import { Database } from "@lib/schema";
 import Avatar from "./avatar";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -26,7 +25,7 @@ export default function Account({ session }: { session: Session }) {
       setLoading(true);
       if (!user) throw new Error("No user");
 
-      let { data, error, status, corsHeaders } = await supabase
+      let { data, error, status } = await supabase
         .from("profiles")
         .select(`username, website, avatar_url`)
         .eq("id", user.id)
@@ -123,7 +122,7 @@ export default function Account({ session }: { session: Session }) {
 
   return (
     <div className="form-widget ml-8">
-      <div className="mb-4 p-6">
+      <div className="p-4 mb-2">
         <Avatar
           uid={user.id}
           url={avatar_url}

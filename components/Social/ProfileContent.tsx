@@ -3,12 +3,11 @@ import Card from "./Card";
 import FriendInfo from "./FriendInfo";
 import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/database.types";
 
 export default function ProfileContent({ activeTab, userId }) {
   const [posts, setPosts] = useState([]);
   const [profile, setProfile] = useState(null);
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   useEffect(() => {
     if (!userId) {
       return;

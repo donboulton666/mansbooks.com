@@ -3,12 +3,10 @@ import PostCard from "@components/Social/PostCard";
 import { useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { UserContextProvider } from "../contexts/UserContext";
-import { Database } from "@lib/database.types";
-
 export default function SavedPostsPage() {
   const [posts, setPosts] = useState([]);
   const session = useSession();
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   useEffect(() => {
     if (!session?.user?.id) {
       return;
