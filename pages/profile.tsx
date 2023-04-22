@@ -1,5 +1,4 @@
 import SocialLayout from "@components/Social/SocialLayout";
-import Layout from "@components/PageLayout";
 import Card from "@components/Social/Card";
 import Avatar from "@components/Social/SocialAvatar";
 import Link from "next/link";
@@ -66,8 +65,8 @@ export default function SocialProfile() {
   const isMyUser = userId === session?.user?.id;
 
   return (
-    <Layout>
-      <SocialLayout>
+    <SocialLayout>
+      <div className="mb-32">
         <UserContextProvider>
           <Card noPadding={true}>
             <div className="relative overflow-hidden rounded-md">
@@ -93,7 +92,7 @@ export default function SocialProfile() {
                       <div>
                         <input
                           type="text"
-                          className="rounded-md border bg-slate-800 border-slate-800 text-slate-200 px-3 py-2"
+                          className="rounded-md border border-slate-800 bg-slate-800 px-3 py-2 text-slate-200"
                           placeholder={"Your name"}
                           onChange={(ev) => setName(ev.target.value)}
                           value={name}
@@ -112,7 +111,7 @@ export default function SocialProfile() {
                       <div>
                         <input
                           type="text"
-                          className="mt-1 rounded-md bg-slate-800 text-slate-200 border-slate-800 border px-3 py-2"
+                          className="mt-1 rounded-md border border-slate-800 bg-slate-800 px-3 py-2 text-slate-200"
                           placeholder={"Your location"}
                           onChange={(ev) => setPlace(ev.target.value)}
                           value={place}
@@ -173,7 +172,7 @@ export default function SocialProfile() {
           </Card>
           <ProfileContent activeTab={tab} userId={userId} />
         </UserContextProvider>
-      </SocialLayout>
-    </Layout>
+      </div>
+    </SocialLayout>
   );
 }

@@ -3,9 +3,11 @@ import Card from "./Card";
 import ClickOutHandler from "react-clickout-handler";
 import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/legacy/image";
 import ReactTimeAgo from "react-time-ago";
 import { UserContext } from "../../contexts/UserContext";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "@lib/database.types";
 import styles from "./home.module.css";
 
 export default function PostCard({
@@ -21,7 +23,7 @@ export default function PostCard({
   const [commentText, setCommentText] = useState("");
   const [isSaved, setIsSaved] = useState(false);
   const { profile: myProfile } = useContext(UserContext);
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   useEffect(() => {
     fetchLikes();
     fetchComments();
@@ -305,8 +307,8 @@ export default function PostCard({
         {photos?.length > 0 && (
           <div className="flex gap-4">
             {photos.map((photo) => (
-              <div key={photo} className="">
-                <img src={photo} className="rounded-md" alt="" />
+              <div key={photo} className="photo">
+                <Image src={photo} className="rounded-md" alt="" />
               </div>
             ))}
           </div>

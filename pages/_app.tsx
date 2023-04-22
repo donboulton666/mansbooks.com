@@ -27,6 +27,10 @@ import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en.json';
+
+TimeAgo.addDefaultLocale(en);
 
 function App({ Component, pageProps, router }: AppProps) {
   const AnyComponent = Component as any;

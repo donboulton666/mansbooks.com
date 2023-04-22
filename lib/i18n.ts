@@ -115,8 +115,8 @@ export default {
   },
   footer: {
     contact: {
-      en: "Let's keep in touch!.",
-      it: "Teniamoci in contatto!.",
+      en: "Let's keep in touch!",
+      it: "Teniamoci in contatto!",
       es: "¡Mantengámonos en contacto!",
       nn: "La oss holde kontakten!",
     },
@@ -145,8 +145,8 @@ export default {
       nn: "Få eksklusivt innhold kun for nyhetsbrev nå og da",
     },
     contactpage: {
-      en: "Let's keep in touch!.",
-      it: "Teniamoci in contatto!.",
+      en: "Let's keep in touch!",
+      it: "Teniamoci in contatto!",
       es: "¡Mantengámonos en contacto!",
       nn: "La oss holde kontakten!",
     },

@@ -1,7 +1,9 @@
 import Card from "./Card";
 import Avatar from "./SocialAvatar";
+import Image from "next/legacy/image";
 import { useContext, useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "@lib/database.types";
 import { UserContext } from "../../contexts/UserContext";
 import Preloader from "./Preloader";
 
@@ -9,7 +11,7 @@ export default function PostFormCard({ onPost }) {
   const [content, setContent] = useState("");
   const [uploads, setUploads] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   const session = useSession();
   const { profile } = useContext(UserContext);
 
@@ -79,7 +81,7 @@ export default function PostFormCard({ onPost }) {
         <div className="flex gap-2">
           {uploads.map((upload) => (
             <div className="mt-2">
-              <img src={upload} alt="" className="h-24 w-auto rounded-md" />
+              <Image src={upload} alt="" className="h-24 w-auto rounded-md" />
             </div>
           ))}
         </div>

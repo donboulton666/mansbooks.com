@@ -2,7 +2,7 @@ import Avatar from "./SocialAvatar";
 
 export default function FriendInfo() {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2" data-datocms-noindex>
       <Avatar />
       <div>
         <h3 className="text-xl font-bold">Jane Doe</h3>

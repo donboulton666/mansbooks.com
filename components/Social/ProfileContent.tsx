@@ -3,11 +3,12 @@ import Card from "./Card";
 import FriendInfo from "./FriendInfo";
 import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "@lib/database.types";
 
 export default function ProfileContent({ activeTab, userId }) {
   const [posts, setPosts] = useState([]);
   const [profile, setProfile] = useState(null);
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   useEffect(() => {
     if (!userId) {
       return;
@@ -38,7 +39,7 @@ export default function ProfileContent({ activeTab, userId }) {
   }
 
   return (
-    <div>
+    <div data-datocms-noindex>
       {activeTab === "posts" && (
         <div>
           {posts?.length > 0 &&

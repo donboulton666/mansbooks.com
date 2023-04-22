@@ -1,14 +1,14 @@
 import SocialLayout from "@components/Social/SocialLayout";
-import Layout from "@components/PageLayout";
 import PostCard from "@components/Social/PostCard";
 import { useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { UserContextProvider } from "../contexts/UserContext";
+import { Database } from "@lib/database.types";
 
 export default function SavedPostsPage() {
   const [posts, setPosts] = useState([]);
   const session = useSession();
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   useEffect(() => {
     if (!session?.user?.id) {
       return;
@@ -27,18 +27,18 @@ export default function SavedPostsPage() {
       });
   }, [session?.user?.id]);
   return (
-    <Layout>
       <SocialLayout>
-        <UserContextProvider>
-          <h1 className="mb-4 text-6xl text-gray-300">Saved posts</h1>
-          {posts.length > 0 &&
-            posts.map((post) => (
-              <div key={post.id}>
-                <PostCard {...post} />
-              </div>
-            ))}
-        </UserContextProvider>
+        <div className="mb-32">
+          <UserContextProvider>
+            <h1 className="mb-4 text-6xl text-gray-300">Saved posts</h1>
+            {posts.length > 0 &&
+              posts.map((post) => (
+                <div key={post.id}>
+                  <PostCard {...post} />
+                </div>
+              ))}
+          </UserContextProvider>
+        </div>
       </SocialLayout>
-    </Layout>
   );
 }

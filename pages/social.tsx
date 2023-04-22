@@ -6,9 +6,10 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import LoginPage from "./login";
 import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
+import { Database } from "@lib/database.types";
 
 export default function Social() {
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   const session = useSession();
   const [posts, setPosts] = useState([]);
   const [profile, setProfile] = useState(null);
@@ -49,14 +50,18 @@ export default function Social() {
   }
 
   return (
-    <Layout>
-      <SocialLayout>
-        <UserContext.Provider value={{ profile }}>
-          <PostFormCard onPost={fetchPosts} />
-          {posts?.length > 0 &&
-            posts.map((post) => <PostCard key={post.id} {...post} />)}
-        </UserContext.Provider>
-      </SocialLayout>
-    </Layout>
+    <>
+      <Layout>
+        <SocialLayout>
+          <div className="mb-32">
+            <UserContext.Provider value={{ profile }}>
+              <PostFormCard onPost={fetchPosts} />
+              {posts?.length > 0 &&
+                posts.map((post) => <PostCard key={post.id} {...post} />)}
+            </UserContext.Provider>
+          </div>
+        </SocialLayout>
+      </Layout>
+    </>
   );
 }

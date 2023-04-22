@@ -23,7 +23,9 @@ export default function NavigationCard() {
         <Link
           href="/profile"
           className={
-            pathname === "/profile" ? activeElementClasses : nonActiveElementClasses
+            pathname === "/profile"
+              ? activeElementClasses
+              : nonActiveElementClasses
           }
         >
           <svg

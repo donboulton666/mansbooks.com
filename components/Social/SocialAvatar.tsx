@@ -1,10 +1,12 @@
 import { uploadUserProfileImage } from "../../helpers/user";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useState } from "react";
+import Image from "next/legacy/image";
 import Preloader from "./Preloader";
+import { Database } from "@lib/database.types";
 
 export default function SocialAvatar({ size, url, editable, onChange }) {
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   const session = useSession();
   const [isUploading, setIsUploading] = useState(false);
   async function handleAvatarChange(ev) {
@@ -27,9 +29,9 @@ export default function SocialAvatar({ size, url, editable, onChange }) {
     width = "w-24 md:w-36";
   }
   return (
-    <div className={`${width} relative`}>
+    <div className={`${width} relative`} data-datocms-noindex>
       <div className="overflow-hidden rounded-full">
-        <img src={url} alt="" className="w-full" />
+        <Image src={url} alt="" className="w-full" />
       </div>
       {isUploading && (
         <div className="absolute inset-0 flex items-center rounded-full bg-slate-900 bg-opacity-50">

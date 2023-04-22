@@ -6,7 +6,7 @@ export default function ProfileTabs({ userId, active }) {
   const activeTabClasses =
     "flex gap-1 px-4 py-1 items-center border-socialBlue border-b-4 text-socialBlue font-bold";
   return (
-    <div className="mt-4 flex gap-0 md:mt-10">
+    <div className="mt-4 flex gap-0 md:mt-10" data-datocms-noindex>
       <Link
         href={`/profile/${userId}/posts`}
         className={active === "posts" ? activeTabClasses : tabClasses}
