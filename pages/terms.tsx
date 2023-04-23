@@ -7,13 +7,13 @@ export default function Terms() {
   return (
     <Layout>
       <Head>
-        <title>License</title>
+        <title>Terms</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "License",
+              name: "Terms",
               url: "https://mansbooks.com/terms",
               image: {
                 "@type": "ImageObject",

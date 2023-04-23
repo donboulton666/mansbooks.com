@@ -38,7 +38,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Contact",
+              name: "Gallery",
               url: "https://mansbooks.com/gallery",
               image: {
                 "@type": "ImageObject",

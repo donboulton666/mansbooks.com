@@ -21,14 +21,14 @@ export default function LocalProfile() {
     <Layout>
       <>
         <Head>
-          <title>Profile</title>
+          <title>Angies Profile</title>
           <>
             <script type="application/ld+json">
               {JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebPage",
                 name: "Privacy",
-                url: "https://mansbooks.com/profile",
+                url: "https://mansbooks.com/angies-profile",
                 image: {
                   "@type": "ImageObject",
                   url: angieImage,
@@ -111,7 +111,7 @@ export default function LocalProfile() {
                   {
                     "@type": "ListItem",
                     item: {
-                      "@id": "https://mansbooks.com/profile",
+                      "@id": "https://mansbooks.com/angies-profile",
                       name: "Angelina's Profile",
                     },
                     position: "2",
