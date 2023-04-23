@@ -21,7 +21,8 @@ import cn from "classnames";
 import { Sponsor } from "@lib/types";
 import Giscus from "@giscus/react";
 import ViewCounter from "@components/ViewCounter";
-import { EyeIcon } from "@heroicons/react/outline";
+import LovesCounter from "@components/LovesCounter";
+import { EyeIcon, HeartIcon } from "@heroicons/react/outline";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
 
@@ -80,9 +81,14 @@ export default function SponsorSection({ sponsor }: Props) {
               />
               <h1 className={styles.name}>{sponsor.name}</h1>
             </div>
-            <div className="flex flex-row text-xs text-slate-300">
-              <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
-              <ViewCounter slug={sponsor.slug} />
+            <div className="flex">
+              <div className="flex flex-row text-xs text-slate-300">
+                <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
+                <ViewCounter slug={sponsor.slug} />
+              </div>
+              <div className="flex flex-row text-xs text-slate-300">
+                <LovesCounter slug={sponsor.slug} />
+              </div>
             </div>
             <p className={styles.description}>{sponsor.description}</p>
             <div className={styles["sponsor-details"]}>
@@ -172,7 +178,7 @@ export default function SponsorSection({ sponsor }: Props) {
             category="General"
             categoryId="DIC_kwDOI7HnKM4CU8od"
             mapping="pathname"
-            term="Welcome to ANgelina Jordan Comments!"
+            term="Welcome to Angelina Jordan Comments!"
             reactionsEnabled="1"
             emitMetadata="0"
             inputPosition="top"

@@ -6,10 +6,9 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import LoginPage from "./login";
 import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
-import { Database } from "@lib/schema";
 
-export default function Social() {
-  const supabase = useSupabaseClient<Database>();
+export default function Social({ user }) {
+  const supabase = useSupabaseClient();
   const session = useSession();
   const [posts, setPosts] = useState([]);
   const [profile, setProfile] = useState(null);

@@ -167,8 +167,34 @@ export interface Database {
           slug?: string;
         };
       };
+      Views: {
+        [_ in never]: never;
+      };
+      loves: {
+        Row: {
+          count: number | null;
+          created_at: string | null;
+          id: number;
+          slug: string;
+          user_id: string | null;
+        };
+        Insert: {
+          count?: number | null;
+          created_at?: string | null;
+          id?: number;
+          slug?: string;
+          user_id: string | null;
+        };
+        Update: {
+          count?: number | null;
+          created_at?: string | null;
+          id?: number;
+          slug?: string;
+          user_id: string | null;
+        };
+      };
     };
-    Views: {
+    Loves: {
       [_ in never]: never;
     };
     Functions: {
@@ -204,5 +230,9 @@ export interface Database {
 }
 
 interface Views {
+  count: number;
+}
+
+interface Loves {
   count: number;
 }

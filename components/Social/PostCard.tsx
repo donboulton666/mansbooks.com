@@ -6,13 +6,27 @@ import Link from "next/link";
 import Image from "next/legacy/image";
 import ReactTimeAgo from "react-time-ago";
 import { UserContext } from "../../contexts/UserContext";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { createClient } from "@supabase/supabase-js";
+import useSWR from "swr";
 import styles from "./home.module.css";
 import { Database } from "@lib/schema";
+
+const supabase =
+  process.env.SUPABASE_URL &&
+  process.env.SUPABASE_SERVICE_ROLE_SECRET
+    ? createClient<Database>(
+        process.env.SUPABASE_URL,
+        process.env.SUPABASE_SERVICE_ROLE_SECRET
+      )
+    : undefined;
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 type Posts = Database["public"]["Tables"]["posts"]["Row"];
+
+type Saved_Posts = Database["public"]["Tables"]["saved_posts"]["Row"];
+
+type Likes = Database["public"]["Tables"]["likes"]["Row"];
 
 export default function PostCard({
   id,
@@ -26,10 +40,9 @@ export default function PostCard({
   const [commentText, setCommentText] = useState("");
   const [isSaved, setIsSaved] = useState(false);
   const { profile: myProfile } = useContext(UserContext);
-  const supabase = useSupabaseClient<Database>();
   const [username, setUsername] = useState<Profiles["username"]>(null);
-  const [photos, setPhotos] = useState<Profiles["photos"]>(null);
-  const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
+  const [photos, setPhotos] = useState<Posts["photos"]>(null);
+  const [avatar_url, setAvatar_url] = useState<Profiles["avatar_url"]>(null);
 
   useEffect(() => {
     fetchLikes();
@@ -145,7 +158,7 @@ export default function PostCard({
         <div>
           <Link href={"/profile"}>
             <span className="cursor-pointer">
-              <Avatar className="h-12 w-14" uid={user.id} url={avatar_url} />
+              <Avatar className="h-12 w-12" uid={user.id} url={avatar_url} />
             </span>
           </Link>
         </div>

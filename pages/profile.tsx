@@ -16,7 +16,7 @@ import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
-export default function SocialProfile() {
+export default function SocialProfile({ user }) {
   const [profile, setProfile] = useState(null);
   const [editMode, setEditMode] = useState(false);
   const [username, setUsername] = useState("");

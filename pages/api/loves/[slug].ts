@@ -1,4 +1,4 @@
-import { getViews, registerView } from "@lib/views";
+import { getLoves, registerLoves } from "@lib/loves";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 interface Data {
@@ -17,8 +17,8 @@ export default async function handler(
     return res.status(400).json({ message: `invalid slug` });
   }
   if (req.method == `POST`) {
-    await registerView(slug);
+    await registerLoves(slug);
   }
-  const count = await getViews(slug);
+  const count = await getLoves(slug);
   return res.status(200).json({ count: count });
 }
