@@ -7,12 +7,12 @@ import LoginPage from "./login";
 import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 
-export default function Social({ user }) {
+export default function Social() {
   const supabase = useSupabaseClient();
   const session = useSession();
   const [posts, setPosts] = useState([]);
   const [profile, setProfile] = useState(null);
-
+  const user = session.user;
   useEffect(() => {
     fetchPosts();
   }, []);

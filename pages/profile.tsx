@@ -16,7 +16,7 @@ import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
-export default function SocialProfile({ user }) {
+export default function SocialProfile() {
   const [profile, setProfile] = useState(null);
   const [editMode, setEditMode] = useState(false);
   const [username, setUsername] = useState("");
@@ -25,7 +25,7 @@ export default function SocialProfile({ user }) {
   const tab = router?.query?.tab?.[0] || "posts";
   const session = useSession();
   const userId = router.query.id;
-
+  const user = session.user;
   const supabase = useSupabaseClient<Database>();
 
   useEffect(() => {

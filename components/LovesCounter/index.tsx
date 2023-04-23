@@ -2,25 +2,15 @@ import fetcher from "@lib/fetcher";
 import { Loves } from "@lib/schema";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { createClient } from "@supabase/supabase-js";
+import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
 import useSWR from "swr";
 import { Database } from "@/lib/schema";
 
-const supabase =
-  process.env.SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET
-    ? createClient<Database>(
-        process.env.SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET
-      )
-    : undefined;
+type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
-interface Props {
-  slug: string;
-}
-
-const LovesCounter = ({ slug, user_id }: Props) => {
-  const [loves, setLoves] = useState([]);
+export default function Loves({ slug, user_id, session }: { session: Session }) {
+  const supabase = useSupabaseClient<Database>();
+  const [loves, setLoves] = useState<Loves[]>([]);
   const { profile: myProfile } = useContext(UserContext);
   const { data } = useSWR<Loves>(`/api/loves/${slug}`, fetcher);
   useEffect(() => {
@@ -30,17 +20,36 @@ const LovesCounter = ({ slug, user_id }: Props) => {
       });
   }, [slug]);
 
+  const user = session.user;
+
   const isLovedByMe = !!loves.find((love) => love.user_id === myProfile?.id);
 
+  const addLove = async (count: string) => {
+    if (isLovedByMe) {
+      const { data: love, error } = await supabase
+        .from("loves")
+        .insert({ love, user_id: user.id })
+        .select()
+        .single();
+
+      if (error) {
+        setErrorText(error.message);
+      } else {
+        setLoves([...loves, love]);
+      }
+    }
+  };
   function setLove() {
     if (isLovedByMe) {
       supabase
         .from("loves")
         .select()
+        .single();
         .delete()
         .registerLove()
         .eq("slug", count)
         .eq("user_id", myProfile.id)
+        .insert({ count, user_id: user.id })
         .then(() => {
           fetchLoves();
         });

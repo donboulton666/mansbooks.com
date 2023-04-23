@@ -70,9 +70,9 @@ export default function Avatar({
       setUploading(false);
     }
   };
-  let width = "w-14";
+  let width = "w-20";
   if (size === "lg") {
-    width = "w-14 md:w-20";
+    width = "w-20 md:w-20";
   }
   return (
     <div className={`${width} relative`}>
@@ -81,7 +81,7 @@ export default function Avatar({
           <img
             src={avatarUrl}
             alt="Avatar"
-            className="avatar image mb-4 h-14 w-14 rounded-full ring ring-wine-300 ring-offset-4"
+            className="avatar image mb-4 h-20 w-20 rounded-full ring ring-wine-300 ring-offset-4"
           />
         ) : (
           <div
