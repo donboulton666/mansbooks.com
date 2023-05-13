@@ -79,7 +79,7 @@ export default function SocialProfile({ user }) {
               {JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                name: "ProfileContent",
+                name: "Profile",
                 url: "https://mansbooks.com/profile",
                 image: {
                   "@type": "ImageObject",

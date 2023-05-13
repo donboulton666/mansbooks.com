@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import Preloader from "@components/Social/Preloader";
 import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
@@ -90,16 +89,12 @@ export default function Avatar({
           />
         )}
       </div>
-      {uploading && (
-        <div className="absolute inset-0 flex items-center rounded-full bg-white bg-opacity-50">
-          <div className="mx-auto inline-block">
-            <Preloader />
-          </div>
-        </div>
-      )}
-      <label className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800">
+      <label htmlFor="single" className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800">
         <input
-          className="hidden"
+          style={{
+            visibility: "hidden",
+            position: "absolute",
+          }}
           type="file"
           id="single"
           accept="image/*"
@@ -125,6 +120,7 @@ export default function Avatar({
             d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
           />
         </svg>
+        {uploading ? "Uploading ..." : "Upload"}
       </label>
     </div>
   );
