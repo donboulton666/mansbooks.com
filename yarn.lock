@@ -10502,14 +10502,6 @@ react-paginate@^8.1.4:
   dependencies:
     prop-types "^15"
 
-react-particles@^2.9.3:
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/react-particles/-/react-particles-2.9.3.tgz#2804e2e2513cdaad88939fb09322d64236d3c28d"
-  integrity sha512-MptmCrrBeugweBWLx7IZyxMc8t8Ok128ygzQA5uLIPPGfH+ecVz033fd8V8ktv/YOBMLof7asjA9m5XSm1iu6A==
-  dependencies:
-    fast-deep-equal "^3.1.3"
-    tsparticles-engine "^2.9.3"
-
 react-remove-scroll-bar@^2.3.3:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.4.tgz#53e272d7a5cb8242990c7f144c44d8bd8ab5afd9"
@@ -10586,6 +10578,14 @@ react-toastify@^9.1.2:
   integrity sha512-PBfzXO5jMGEtdYR5jxrORlNZZe/EuOkwvwKijMatsZZm8IZwLj01YvobeJYNjFcA6uy6CVrx2fzL9GWbhWPTDA==
   dependencies:
     clsx "^1.1.1"
+
+react-tsparticles@^2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/react-tsparticles/-/react-tsparticles-2.9.3.tgz#bfbac7fe2e13e010131624c52e1a25b3a3e50cbb"
+  integrity sha512-QSo5Y0iXcXzOKbOira+kn5Z9Yv0ugk4swcn44HkdublSS8XAmV2QiQSd9T2mdM1tGZ8xVSuqsfdgGWfRC1KKng==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    tsparticles-engine "^2.9.3"
 
 react-universal-interface@^0.6.2:
   version "0.6.2"

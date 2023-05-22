@@ -12,8 +12,7 @@ import styles from "./home.module.css";
 import { Database } from "@lib/schema";
 
 const supabase =
-  process.env.SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET
+  process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_SECRET
     ? createClient<Database>(
         process.env.SUPABASE_URL,
         process.env.SUPABASE_SERVICE_ROLE_SECRET

@@ -89,7 +89,10 @@ export default function Avatar({
           />
         )}
       </div>
-      <label htmlFor="single" className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800">
+      <label
+        htmlFor="single"
+        className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800"
+      >
         <input
           style={{
             visibility: "hidden",

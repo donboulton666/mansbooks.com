@@ -7,8 +7,7 @@ import useSWR from "swr";
 import { Database } from "@/lib/schema";
 
 const supabase =
-  process.env.SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET
+  process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_SECRET
     ? createClient<Database>(
         process.env.SUPABASE_URL,
         process.env.SUPABASE_SERVICE_ROLE_SECRET
@@ -67,7 +66,7 @@ const LovesCounter = ({ slug, user_id }: Props) => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          className="h-6 w-6 ml-2"
+          className="ml-2 h-6 w-6"
           strokeWidth={1.5}
           stroke="#ef4444"
           className={"h-6 w-6 pr-2 " + (isLovedByMe ? "fill-red-500" : "")}

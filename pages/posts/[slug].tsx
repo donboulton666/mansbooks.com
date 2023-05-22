@@ -162,13 +162,19 @@ export async function getStaticProps({ params, preview = false, locale }) {
   };
 }
 
-export default function Post({ subscription, preview, meta, children, fullViewport = false }: Props) {
+export default function Post({
+  subscription,
+  preview,
+  meta,
+  children,
+  fullViewport = false,
+}: Props) {
   const {
     data: { site, post, morePosts },
   } = useQuerySubscription(subscription);
 
   const metaTags = post.seo.concat(site.favicon);
-  const url = typeof window !== 'undefined' ? window.location.href : ''
+  const url = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <Layout preview={preview}>
@@ -278,7 +284,7 @@ export default function Post({ subscription, preview, meta, children, fullViewpo
             })}
           </script>
         </>
-      </Head>      
+      </Head>
       <Container>
         <LanguageBar />
         <Header />
