@@ -21,7 +21,7 @@ export default function Stars() {
     <Particles
       init={particlesInit}
       options={{
-        fpsLimit: 60,
+        fpsLimit: 120,
         background: {
           color: "transparent",
         },
