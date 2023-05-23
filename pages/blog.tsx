@@ -13,6 +13,7 @@ import { Views } from "../lib/types";
 import useSWR from "swr";
 import fetcher from "lib/fetcher";
 import angieImage from "../public/icons/apple-touch-icon.png";
+import Stars from "../components/Stars"
 import { EyeIcon } from "@heroicons/react/outline";
 
 export async function getStaticProps({ preview, locale }) {
@@ -88,6 +89,7 @@ export default function Blog({ subscription }) {
   const { data } = useSWR<Views>(`/api/views/${post.slug}`, fetcher);
   return (
     <>
+      <Stars />
       <Layout preview={subscription.preview}>
         <Head>
           {renderMetaTags(metaTags)}

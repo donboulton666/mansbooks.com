@@ -10,6 +10,7 @@ import LeftText from "@components/LeftText";
 import TodoList from "@components/TodoList";
 import ColumnGridLeft from "@components/column-grid-left";
 import angie from "../public/angie/angelina.jpg";
+import Stars from "@components/Stars"
 import angieImage from "../public/icons/apple-touch-icon.png";
 import iLoveYou from "../public/angie/ps-i-love-you.jpg";
 
@@ -18,6 +19,7 @@ const Login = () => {
   const supabase = useSupabaseClient();
   return (
     <Layout>
+      <Stars />
       <Head>
         <title>Login</title>
         <>

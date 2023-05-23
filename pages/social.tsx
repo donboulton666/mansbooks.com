@@ -9,6 +9,7 @@ import LoginPage from "./login";
 import { useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 import angieImage from "../public/icons/apple-touch-icon.png";
+import Stars from "@components/Stars"
 
 export default function Social() {
   const supabase = useSupabaseClient();
@@ -80,6 +81,7 @@ export default function Social() {
 
   return (
     <>
+      <Stars />
       <Layout>
         <Head>
           <title>Social</title>

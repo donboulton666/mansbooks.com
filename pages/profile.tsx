@@ -5,6 +5,7 @@ import Card from "@components/Social/Card";
 import Avatar from "@components/Social/SocialAvatar";
 import Link from "next/link";
 import PostCard from "@components/Social/PostCard";
+import Stars from "@components/Stars"
 import { useRouter } from "next/router";
 import FriendInfo from "@components/Social/FriendInfo";
 import { useEffect, useState } from "react";
@@ -71,6 +72,8 @@ export default function SocialProfile({ user }) {
   const isMyUser = userId === session?.user?.id;
 
   return (
+    <>
+    <Stars />
     <Layout>
       <Head>
         <title>Profile</title>
@@ -287,5 +290,6 @@ export default function SocialProfile({ user }) {
         </div>
       </SocialLayout>
     </Layout>
+    </>
   );
 }

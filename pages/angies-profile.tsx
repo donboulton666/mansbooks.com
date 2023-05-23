@@ -5,9 +5,9 @@ import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";
-import ColumnGridLeft from "../components/column-grid-left";
-import VideoWrapper from "../components/VideoWrapper";
-import SingleAccordion from "../components/SingleAccordion";
+import ColumnGridLeft from "@components/column-grid-left";
+import VideoWrapper from "@components/VideoWrapper";
+import SingleAccordion from "@components/SingleAccordion";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import seventhHeaven from "../public/angie/seventh-heaven.jpg";
 import nothingHandsHeart from "../public/angie/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.jpg";
@@ -15,10 +15,12 @@ import summerTime from "../public/angie/young-angelina.jpg";
 import goldenBuzzer from "../public/angie/angelinas-agt-golden-buzzer.jpg";
 import heartLove from "../public/angie/angelina-makes-a-heart-sending-love-to-her-fans.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
+import Stars from "@components/Stars"
 
 export default function LocalProfile() {
   return (
     <Layout>
+      <Stars />
       <>
         <Head>
           <title>Angies Profile</title>

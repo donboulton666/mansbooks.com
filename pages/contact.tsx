@@ -7,12 +7,14 @@ import ColumnGridLeft from "@components/column-grid-left";
 import Layout from "@components/PageLayout";
 import ContactForm from "@components/ContactForm";
 import angie from "../public/angie/angelina.jpg";
+import Stars from "@components/Stars"
 import angieImage from "../public/icons/apple-touch-icon.png";
 import heidisParty from "../public/angie/heidis-party.jpg";
 
 export default function Contact() {
   return (
     <Layout data-datocms-noindex>
+      <Stars />
       <Head>
         <title>Contact</title>
         <>

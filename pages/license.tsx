@@ -5,10 +5,12 @@ import Section from "@components/Section";
 import CalloutLabel from "@components/Callout/CalloutLabel";
 import Modal from "@components/Modal/modal";
 import angie from "../public/angie/angelina.jpg";
+import Stars from "@components/Stars"
 
 export default function License() {
   return (
     <Layout>
+      <Stars />
       <Head>
         <title>License</title>
         <>

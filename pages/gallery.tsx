@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import Bridge from "@components/gallery/Icons/Bridge";
-import Modal from "../components/gallery/Modal";
+import Modal from "@components/gallery/Modal";
+import Stars from "@components/Stars"
 import angelina from "../public/icon-192x192.png";
 import cloudinary from "../utils/cloudinary";
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
@@ -31,6 +32,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
 
   return (
     <>
+    <Stars />
       <Head>
         <title>Gallery</title>
         <>

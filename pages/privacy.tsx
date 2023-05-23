@@ -2,22 +2,24 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/legacy/image";
 import Layout from "@components/PageLayout";
-import Center from "../components/Center";
-import LeftText from "../components/LeftText";
-import ColumnGridCenter from "../components/column-grid-center";
-import UserProfile from "../components/UserProfile";
-import Section from "../components/Section";
-import VideoWrapper from "../components/VideoWrapper";
-import SingleAccordion from "../components/SingleAccordion";
+import Center from "@components/Center";
+import LeftText from "@components/LeftText";
+import ColumnGridCenter from "@components/column-grid-center";
+import UserProfile from "@components/UserProfile";
+import Section from "@components/Section";
+import VideoWrapper from "@components/VideoWrapper";
+import SingleAccordion from "@components/SingleAccordion";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import about from "../public/about.jpg";
 import cookies from "../public/cookies.png";
 import CalloutDanger from "@components/Callout/CalloutDanger";
 import angie from "../public/angie/angelina.jpg";
+import Stars from "@components/Stars"
 
 export default function Privacy() {
   return (
     <Layout>
+      <Stars />
       <Head>
         <title>Privacy</title>
         <>
