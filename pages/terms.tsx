@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "@components/PageLayout";
 import Section from "@components/Section";
 import angie from "../public/angie/angelina.jpg";
-import Stars from "@components/Stars"
+import Stars from "@components/Stars";
 
 export default function Terms() {
   return (

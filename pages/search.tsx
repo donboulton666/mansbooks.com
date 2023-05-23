@@ -9,7 +9,7 @@ import angie from "../public/angie/angelina.jpg";
 import LanguageBar from "@components/LanguageBar";
 import { useRouter } from "next/router";
 import i18n from "@lib/i18n";
-import Stars from "@components/Stars"
+import Stars from "@components/Stars";
 
 export default function Search() {
   const { locale } = useRouter();

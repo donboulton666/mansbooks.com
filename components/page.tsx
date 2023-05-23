@@ -17,7 +17,7 @@
 import { ReactNode } from "react";
 import cn from "classnames";
 import Head from "next/head";
-import Stars from "./Stars"
+import Stars from "./Stars";
 import { useRouter } from "next/router";
 
 import { SITE_NAME, SITE_URL, TWITTER_USER_NAME } from "@lib/constants";

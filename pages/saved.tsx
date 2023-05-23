@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { UserContextProvider } from "../contexts/UserContext";
 import { Database } from "@lib/schema";
-import Stars from "@components/Stars"
+import Stars from "@components/Stars";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 

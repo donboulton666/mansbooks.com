@@ -15,7 +15,7 @@ import summerTime from "../public/angie/young-angelina.jpg";
 import goldenBuzzer from "../public/angie/angelinas-agt-golden-buzzer.jpg";
 import heartLove from "../public/angie/angelina-makes-a-heart-sending-love-to-her-fans.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
-import Stars from "@components/Stars"
+import Stars from "@components/Stars";
 
 export default function LocalProfile() {
   return (

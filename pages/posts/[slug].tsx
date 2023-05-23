@@ -2,7 +2,7 @@ import Head from "next/head";
 import { renderMetaTags, useQuerySubscription } from "react-datocms";
 import Container from "@components/posts/container";
 import Header from "@components/posts/header";
-import Layout from "@components/PageLayout";
+import Layout from "@components/PostLayout";
 import MoreStories from "@components/posts/more-stories";
 import PostBody from "@components/posts/post-body";
 import PostHeader from "@components/posts/post-header";

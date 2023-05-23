@@ -42,9 +42,9 @@ export default function Stars() {
           number: { density: { enable: true, area: 800 }, value: 80 },
           opacity: {
             animation: {
-                enable: true,
-                speed: 1,
-                sync: false,
+              enable: true,
+              speed: 1,
+              sync: false,
             },
             value: { min: 0, max: 1 },
           },

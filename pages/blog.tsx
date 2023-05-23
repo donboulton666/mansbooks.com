@@ -13,7 +13,7 @@ import { Views } from "../lib/types";
 import useSWR from "swr";
 import fetcher from "lib/fetcher";
 import angieImage from "../public/icons/apple-touch-icon.png";
-import Stars from "../components/Stars"
+import Stars from "@components/Stars";
 import { EyeIcon } from "@heroicons/react/outline";
 
 export async function getStaticProps({ preview, locale }) {

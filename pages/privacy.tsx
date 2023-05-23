@@ -14,7 +14,7 @@ import about from "../public/about.jpg";
 import cookies from "../public/cookies.png";
 import CalloutDanger from "@components/Callout/CalloutDanger";
 import angie from "../public/angie/angelina.jpg";
-import Stars from "@components/Stars"
+import Stars from "@components/Stars";
 
 export default function Privacy() {
   return (

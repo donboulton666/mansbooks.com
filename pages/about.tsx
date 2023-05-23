@@ -10,7 +10,7 @@ import nextjs from "../public/nextjs.jpg";
 import angie from "../public/angie/angelina.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import oneHundredMs from "../public/100ms.jpg";
-import Stars from "@components/Stars"
+import Stars from "@components/Stars";
 import cloudinary from "../public/cloudinary.png";
 import supabase from "../public/supa.png";
 import upstash from "../public/upstash-logo.png";
