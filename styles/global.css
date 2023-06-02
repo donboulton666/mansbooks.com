@@ -497,3 +497,8 @@ input:-webkit-autofill {
   left: 0;
   z-index: -1;
 }
+
+#mark {
+  border-radius: 5px;
+  background-color: #4e8ff7 !important;
+}

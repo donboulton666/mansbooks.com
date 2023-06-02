@@ -53,6 +53,7 @@ export default function PostLayout({
   const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
   return (
     <>
+      <Stars />
       <ScrollIndicator />
       <div className={styles.background}>
         {!hideNav && (
