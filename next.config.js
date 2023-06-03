@@ -81,7 +81,7 @@ const ContentSecurityPolicy = `
   frame-src https://giscus.app/ https://accounts.google.com/ youtube.com *.youtube.com *.twitter.com *.giscus.app;
   img-src * blob: data:;
   worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
-  media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Easy_On_Me_Adele_Cover_Live_From_Studio.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
+  media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
   connect-src *;
   font-src 'self' https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2 https://fonts.googleapis.com *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com https://fonts.gstatic.com *.fonts.gstatic.com;
 `;
