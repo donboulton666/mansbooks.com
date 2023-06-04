@@ -22,6 +22,7 @@ import ConfContainer from "./conf-container";
 import Hero from "./hero";
 import Form from "./form";
 import LearnMore from "./learn-more";
+import Center from "./Center"
 import CloudinaryVideo from "./CloudinaryVideo";
 
 type Props = {
@@ -51,7 +52,8 @@ export default function Conf({
           {pageState === "registration" && !sharePage ? (
             <>
               <Hero />
-              <CloudinaryVideo />
+              <Center>Love Don't Let Me Go! Visualizer</Center>
+              <CloudinaryVideo />             
               <Form />
               <LearnMore />
             </>
