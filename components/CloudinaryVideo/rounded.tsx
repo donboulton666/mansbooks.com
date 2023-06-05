@@ -1,8 +1,13 @@
-import { Cloudinary } from "@cloudinary/url-gen";
-import { Transformation } from "@cloudinary/url-gen";
+import React from "react";
+import { useRef } from "react";
+import { AdvancedVideo, lazyload } from "@cloudinary/react";
+import { Cloudinary, Transformation } from "@cloudinary/url-gen";
 import { max } from "@cloudinary/url-gen/actions/roundCorners";
+import { videoCodec } from "@cloudinary/url-gen/actions/transcode";
+import { auto, vp9 } from "@cloudinary/url-gen/qualifiers/videoCodec";
+import { scale } from "@cloudinary/url-gen/actions/resize";
 
-function Rounded() {
+const Rounded = () => {
   // Create a Cloudinary instance and set your cloud name.
   const cld = new Cloudinary({
     cloud: {
@@ -12,17 +17,41 @@ function Rounded() {
       analytics: false,
     },
   });
-
-  // Use the video with public ID, 'ski_jump'.
+  const videoEl = useRef();
+  const sources = [
+    {
+      type: "mp4",
+      codecs: ["avc1.4d002a"],
+      transcode: videoCodec(auto()),
+    },
+    {
+      type: "webm",
+      codecs: ["vp8", "vorbis"],
+      transcode: videoCodec(vp9()),
+    },
+  ];
+  // Use the video with public ID,
   const myVideo = cld.video(
     "videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-"
   );
 
   // Apply the transformation.
-  myVideo
-    .roundCorners(max());
+  myVideo.resize(scale().width(0.8)).roundCorners(max());
 
-  return myVideo;
-}
+  // Render the transformed video in a React component.
+  return (
+    <div className="video_holder m-auto mb-10 mt-10 block w-screen">
+      <AdvancedVideo
+        cldVid={myVideo}
+        sources={sources}
+        ref={videoEl}
+        controls
+        autoPlay
+        loop
+        plugins={[lazyload()]}
+      />
+    </div>
+  );
+};
 
-export default Rounded
+export default Rounded;

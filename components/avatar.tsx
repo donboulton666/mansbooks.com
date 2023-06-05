@@ -69,9 +69,9 @@ export default function Avatar({
       setUploading(false);
     }
   };
-  let width = "w-20";
+  let width = "w-24";
   if (size === "lg") {
-    width = "w-20 md:w-20";
+    width = "w-24 md:w-24";
   }
   return (
     <div className={`${width} relative`}>
@@ -80,7 +80,7 @@ export default function Avatar({
           <img
             src={avatarUrl}
             alt="Avatar"
-            className="avatar image mb-4 h-20 w-20 rounded-full ring ring-wine-300 ring-offset-4"
+            className="avatar image mb-4 h-24 w-24 rounded-full ring ring-wine-300 ring-offset-4"
           />
         ) : (
           <div
@@ -123,7 +123,7 @@ export default function Avatar({
             d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
           />
         </svg>
-        {uploading ? "Uploading ..." : "Upload"}
+        {uploading ? "Uploading ..." : ""}
       </label>
     </div>
   );

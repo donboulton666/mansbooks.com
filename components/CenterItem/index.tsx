@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const CenterItem = ({ children, ...delegated }) => {
   return (
@@ -7,7 +7,7 @@ const CenterItem = ({ children, ...delegated }) => {
         {children}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CenterItem
+export default CenterItem;

@@ -434,7 +434,7 @@ export default function Footer() {
                   area-label="Donald Boulton Web Site"
                   className="text-slate-400 hover:text-pink-500"
                 >
-                  Donald W. Boulton
+                  - Visualizer -
                 </a>
               </div>
             </div>

@@ -16,6 +16,7 @@ import goldenBuzzer from "../public/angie/angelinas-agt-golden-buzzer.jpg";
 import heartLove from "../public/angie/angelina-makes-a-heart-sending-love-to-her-fans.jpg";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import Stars from "@components/Stars";
+import Bio from "@components/Bio";
 
 export default function LocalProfile() {
   return (
@@ -134,6 +135,7 @@ export default function LocalProfile() {
               <div className="text-sm font-medium leading-4 text-white sm:text-slate-500">
                 Queen Of Jazz
               </div>
+              <Bio />
             </div>
             <div className="col-start-1 col-end-2 row-start-1 grid gap-2 sm:mb-6 sm:grid-cols-1 lg:col-start-1 lg:row-span-4 lg:row-end-6 lg:mb-0 lg:gap-2">
               <Image

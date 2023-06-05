@@ -22,8 +22,8 @@ import ConfContainer from "./conf-container";
 import Hero from "./hero";
 import Form from "./form";
 import LearnMore from "./learn-more";
-import Center from "./Center"
-import CloudinaryVideo from "./CloudinaryVideo";
+import Center from "./Center";
+import CloudinaryVideo from "./CloudinaryVideo/rounded";
 
 type Props = {
   defaultUserData: UserData;
@@ -53,7 +53,7 @@ export default function Conf({
             <>
               <Hero />
               <Center>Love Don't Let Me Go! Visualizer</Center>
-              <CloudinaryVideo />             
+              <CloudinaryVideo />
               <Form />
               <LearnMore />
             </>

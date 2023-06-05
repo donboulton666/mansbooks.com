@@ -1,8 +1,9 @@
 import React from "react";
 import { LazyMotion, m } from "framer-motion";
+import Clapping from "@components/icons/Clapping";
 
 const loadFeatures = () =>
-  import("@/components/FramerFeatures").then((res) => res.default);
+  import("@components/FramerFeatures").then((res) => res.default);
 
 const WavingHand = () => (
   <LazyMotion features={loadFeatures}>
@@ -24,7 +25,7 @@ const WavingHand = () => (
         type: "tween",
       }}
     >
-      👋
+      <Clapping />
     </m.div>
   </LazyMotion>
 );
