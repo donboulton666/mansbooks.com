@@ -40,9 +40,10 @@ const Rounded = () => {
 
   // Render the transformed video in a React component.
   return (
-    <div className="video_holder m-auto mb-10 mt-10 block w-screen">
+    <div className="video_holder m-auto mb-10 mt-10 block w-full">
       <AdvancedVideo
         cldVid={myVideo}
+        className="w-full"
         sources={sources}
         ref={videoEl}
         controls
