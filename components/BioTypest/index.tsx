@@ -24,7 +24,9 @@ function BioTypist() {
           <span>
             {" "}
             Writing Songs and Singing{" "}
-            <span> Our Love to the World</span>
+            <span> Our <span role="img" aria-label="Love" className="text-red-500">
+              ❤️
+            </span> to the World</span>
             <Heart />️
           </span>
         </Typist>
