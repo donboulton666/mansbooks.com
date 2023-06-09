@@ -9,41 +9,27 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
-      discord_promise_challenge: {
+      applause: {
         Row: {
-          email: string | null;
-          id: number;
-          inserted_at: string;
-          promise: string;
-          resolved: boolean | null;
-          submission: string | null;
-          updated_at: string;
-          user_id: string;
-          username: string;
-        };
+          count: number | null
+          created_at: string | null
+          id: number
+          slug: string
+        }
         Insert: {
-          email?: string | null;
-          id?: number;
-          inserted_at?: string;
-          promise: string;
-          resolved?: boolean | null;
-          submission?: string | null;
-          updated_at?: string;
-          user_id: string;
-          username: string;
-        };
+          count?: number | null
+          created_at?: string | null
+          id?: number
+          slug: string
+        }
         Update: {
-          email?: string | null;
-          id?: number;
-          inserted_at?: string;
-          promise?: string;
-          resolved?: boolean | null;
-          submission?: string | null;
-          updated_at?: string;
-          user_id?: string;
-          username?: string;
-        };
-      };
+          count?: number | null
+          created_at?: string | null
+          id?: number
+          slug?: string
+        }
+        Relationships: []
+      }
       github_users: {
         Row: {
           createdAt: string;
