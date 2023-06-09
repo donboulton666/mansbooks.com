@@ -23,7 +23,7 @@ import { useRouter } from "next/router";
 import { SkipNavContent } from "@reach/skip-nav";
 import { NAVIGATION } from "@lib/constants";
 import styles from "../layout.module.css";
-import Logo from "../icons/icon-hms";
+import Image from "next/legacy/image";
 import MobileMenu from "../mobile-menu";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
@@ -31,6 +31,7 @@ import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
+import angieLogo from "../../public/angie/angelina-jordan-icon.jpg"
 
 type Props = {
   children: ReactNode;
@@ -59,7 +60,15 @@ export default function Layout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <Logo />
+              <span className="inline-flex">
+                  <Image
+                    src={angieLogo}
+                    width={40}
+                    height={40}
+                    className="rounded-full w-12 h-12"
+                    alt="Angie Logo"
+                  />
+                </span>
               </Link>
             </div>
             <div className={styles.tabs}>

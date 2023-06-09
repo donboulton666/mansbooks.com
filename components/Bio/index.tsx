@@ -8,9 +8,11 @@ const Bio = () => {
   return (
     <>
       <div className="sm:flex sm:items-start">
-        <div className="mx-auto flex flex-shrink-0 items-center justify-center sm:mx-0 sm:h-10 sm:w-10">
+        <div className="mx-auto flex flex-shrink-0 items-center justify-center sm:mx-0 sm:h-14 sm:w-14 bg-transparent">
           <Image
-            className="rounded-full h-16 w-16 ring ring-blue-400 ring-offset-4"
+            className="rounded-full h-16 w-16"
+            width={64}
+            height={64}
             loading="lazy"
             src={angieImage}
             alt="Profile picture"
@@ -20,10 +22,10 @@ const Bio = () => {
           <div className="text-base leading-6">
             <WavingHand />{" "}
             <span className="font-medium"> Developed by Angelina Jordan and the: </span>{" "}
-            <span className="font-medium italic">Visualizer</span>
+            <span className="font-medium italic">Visualizer</span>            
           </div>
-          <div className="ml-4 mt-1 text-base">
-            <BioTypist />
+          <div className="ml-4 mt-1 text-base inline-flex">
+            <BioTypist /> 
           </div>
         </div>
       </div>

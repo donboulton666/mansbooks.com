@@ -36,17 +36,17 @@ const Rounded = () => {
   );
 
   // Apply the transformation.
-  myVideo.resize(scale().width(0.8)).roundCorners(max());
+  myVideo.resize(scale().width(800).height(500)).roundCorners(max());
 
   // Render the transformed video in a React component.
   return (
-    <div className="video_holder m-auto mb-10 mt-10 block w-full">
+    <div className="mb-10 mt-10 block w-full">
       <AdvancedVideo
         cldVid={myVideo}
         className="w-full"
         sources={sources}
         ref={videoEl}
-        controls
+        controls="true"
         autoPlay
         loop
         plugins={[lazyload()]}
