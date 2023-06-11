@@ -10,6 +10,7 @@ import VideoWrapper from "@components/VideoWrapper";
 import SingleAccordion from "@components/SingleAccordion";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import seventhHeaven from "../public/angie/seventh-heaven.jpg";
+import love from "../public/angie/angelina-jordan-logo-800.jpg";
 import nothingHandsHeart from "../public/angie/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.jpg";
 import summerTime from "../public/angie/young-angelina.jpg";
 import goldenBuzzer from "../public/angie/angelinas-agt-golden-buzzer.jpg";
@@ -426,7 +427,7 @@ export default function LocalProfile() {
               </div>
               <h2>Norways got talent All Performances</h2>
               <VideoWrapper>
-                Click to Open
+                AGT All
                 <LiteYouTubeEmbed
                   id="O2bX15tYFVk"
                   title="AGT All Performances"
@@ -495,7 +496,7 @@ export default function LocalProfile() {
               </div>
               <h2>I put a Spell on You</h2>
               <VideoWrapper>
-                Click to Open
+                I put a Spell on You
                 <LiteYouTubeEmbed
                   id="nwFloCPXzCs"
                   title="She puts a spell on you"
@@ -759,7 +760,7 @@ export default function LocalProfile() {
               </div>
               <h2>Someone You Loved</h2>
               <VideoWrapper>
-                Click to Open
+                Someone You Loved
                 <LiteYouTubeEmbed id="3-Q3I7FfvUU" title="Someone You Loved" />
               </VideoWrapper>
               <div>
@@ -1104,12 +1105,12 @@ export default function LocalProfile() {
               </div>
               <h2>Million Miles</h2>
               <VideoWrapper>
-                Click to Open
+                Million Miles
                 <LiteYouTubeEmbed id="NhKRh5ZtuWk" title="Million Miles" />
               </VideoWrapper>
               <h2>Seventh Heaven</h2>
               <VideoWrapper>
-                Click to Open
+                Seventh Heaven
                 <LiteYouTubeEmbed id="bM8DzMRbiIc" title="Seventh Heaven" />
               </VideoWrapper>
               <div>
@@ -1538,7 +1539,7 @@ export default function LocalProfile() {
               </div>
               <h2>The Shield</h2>
               <VideoWrapper>
-                Click to Open
+                The Shield
                 <LiteYouTubeEmbed
                   id="lQtUbVKb0vs"
                   title="Open air concert, at age 13"
@@ -2180,7 +2181,7 @@ export default function LocalProfile() {
               </div>
               <h2>Suspecious Minds</h2>
               <VideoWrapper>
-                Click to Open
+                Suspecious Minds
                 <LiteYouTubeEmbed
                   id="RTbKhkceR00"
                   title="Open air concert, at age 13"
@@ -3226,7 +3227,7 @@ export default function LocalProfile() {
               </div>
               <h2>I have Nothing</h2>
               <VideoWrapper>
-                Click to Open
+                I have Nothing
                 <LiteYouTubeEmbed id="iX0g99jN26U" title="I Have Nothing" />
               </VideoWrapper>
               <div>
@@ -3505,7 +3506,7 @@ export default function LocalProfile() {
               </div>
               <h2>17 Reactions</h2>
               <VideoWrapper>
-                Click to Open
+                17 Reactions
                 <LiteYouTubeEmbed
                   id="CU0tPGFTjUU"
                   title="Open air concert, at age 13"
@@ -3606,14 +3607,14 @@ export default function LocalProfile() {
                 </a>
                 . Here are those two amazing performances.{" "}
               </div>
-              <h3>Bohemian Rhapsody</h3>
+              <h3>Bohemian Rhapsody</h3>I have Nothing
               <VideoWrapper>
-                Click to Open
+                Bohemian Rhapsody
                 <LiteYouTubeEmbed id="1pnY11EzKwM" title="Bohemian Rhapsody" />
               </VideoWrapper>
               <h3>I have Nothing</h3>
               <VideoWrapper>
-                Click to Open
+                I have Nothing
                 <LiteYouTubeEmbed id="dBjMxY-iiwY" title="I Have Nothing" />
               </VideoWrapper>
               <SingleAccordion label="FIFA Football Awards">
@@ -3691,9 +3692,35 @@ export default function LocalProfile() {
                   .{" "}
                 </div>
               </SingleAccordion>
-              <div>
-                Conclusion: Fill my heart with song and let me sing for evermore
+              <Center>My Song (Visualizer)</Center>
+              <div class="grid grid-cols-3 gap-4 place-items-center">
+                <div>My Love</div>
+                <a href="https://www.youtube.com/watch?v=1U6WY_z8Vu8">
+                  <Image
+                    src={love}
+                    alt="Love Don't Let Me Go!"
+                    width={512}
+                    height={512}
+                    className="m-auto h-[512px] w-[512px] justify-center rounded-full object-center align-middle"
+                    loading="lazy"
+                  />
+                </a>
+                <div>Angelina Jordan</div>
               </div>
+              <Center className="italic">Love Don't Let Me Go!</Center>
+              <div>
+                <LiteYouTubeEmbed
+                  id="1U6WY_z8Vu8"
+                  activeClass="lyt-activated" // Default as "lyt-activated", gives control to wrapper once clicked
+                  iframeClass="bg-slate-900" // Default none, gives control to add a class to iframe element itself
+                  playerClass="lty-playbtn" // Default as "lty-playbtn" to control player button styles
+                  wrapperClass="yt-lite"
+                  title="Angelina Jordan - Love Don't Let Me Go (Visualizer)"
+                />
+              </div>
+              <Center>
+                Conclusion: Fill my heart with song and let me sing for evermore!
+              </Center>
             </div>
           </div>
         </div>

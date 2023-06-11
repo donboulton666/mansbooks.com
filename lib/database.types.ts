@@ -11,25 +11,25 @@ export interface Database {
     Tables: {
       applause: {
         Row: {
-          count: number | null
-          created_at: string | null
-          id: number
-          slug: string
-        }
+          count: number | null;
+          created_at: string | null;
+          id: number;
+          slug: string;
+        };
         Insert: {
-          count?: number | null
-          created_at?: string | null
-          id?: number
-          slug: string
-        }
+          count?: number | null;
+          created_at?: string | null;
+          id?: number;
+          slug: string;
+        };
         Update: {
-          count?: number | null
-          created_at?: string | null
-          id?: number
-          slug?: string
-        }
-        Relationships: []
-      }
+          count?: number | null;
+          created_at?: string | null;
+          id?: number;
+          slug?: string;
+        };
+        Relationships: [];
+      };
       github_users: {
         Row: {
           createdAt: string;

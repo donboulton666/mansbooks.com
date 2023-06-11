@@ -1,6 +1,6 @@
 import React from "react";
 import { LazyMotion, m } from "framer-motion";
-import * as emoji from 'node-emoji'
+import * as emoji from "node-emoji";
 
 const loadFeatures = () =>
   import("@components/FramerFeatures").then((res) => res.default);

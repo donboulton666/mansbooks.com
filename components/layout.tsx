@@ -31,7 +31,7 @@ import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
-import angieLogo from "../public/angie/angelina-jordan-icon.jpg"
+import angieLogo from "../public/angie/angelina-jordan-icon.jpg";
 
 type Props = {
   children: ReactNode;
@@ -60,12 +60,12 @@ export default function Layout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <span className="inline-flex mr-4">
+                <span className="mr-4 inline-flex">
                   <Image
                     src={angieLogo}
                     width={40}
                     height={40}
-                    className="ml-4 rounded-full w-12 h-12"
+                    className="ml-4 h-12 w-12 rounded-full"
                     alt="Angie Logo"
                   />
                 </span>
