@@ -21,7 +21,7 @@ import cn from "classnames";
 import { Sponsor } from "@lib/types";
 import Giscus from "@giscus/react";
 import ViewCounter from "@components/ViewCounter";
-import Applause from "@components/Applause";
+import LovesCounter from "@components/LovesCounter";
 import { EyeIcon, HeartIcon } from "@heroicons/react/outline";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
@@ -82,12 +82,12 @@ export default function SponsorSection({ sponsor }: Props) {
               <h1 className={styles.name}>{sponsor.name}</h1>
             </div>
             <div className="flex">
-              <div className="flex flex-row text-lg text-slate-300">
+              <div className="flex flex-row text-xs text-slate-300">
                 <EyeIcon className="-mt-1 h-8 w-8 pr-2" />{" "}
                 <ViewCounter slug={sponsor.slug} />
               </div>
               <div className="flex flex-row text-xs text-slate-300">
-                <Applause />
+                <LovesCounter />
               </div>
             </div>
             <p className={styles.description}>{sponsor.description}</p>
