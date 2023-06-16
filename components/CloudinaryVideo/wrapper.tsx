@@ -7,7 +7,7 @@ interface WrapperProps {
 
 const Wrapper = ({ children }: WrapperProps) => {
   return (
-    <div className="mb-10 w-full space-y-reverse bg-slate-900 bg-transparent text-center opacity-50">
+    <div className="mb-10 w-full space-y-reverse bg-transparent text-center opacity-50">
       {children}
     </div>
   );

@@ -142,7 +142,7 @@ export default function LocalProfile() {
               <Image
                 src={seventhHeaven}
                 alt="Seventh Heaven"
-                className="h-60 w-96 mb-4 content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
+                className="h-full w-full mb-4 content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
             </div>
@@ -425,9 +425,8 @@ export default function LocalProfile() {
                 </a>
                 .
               </div>
-              <h2>Norways got talent All Performances</h2>
+              <Center>Norways got talent All Performances</Center>
               <VideoWrapper>
-                AGT All
                 <LiteYouTubeEmbed
                   id="O2bX15tYFVk"
                   title="AGT All Performances"
@@ -494,9 +493,8 @@ export default function LocalProfile() {
                 </a>
                 's over-the-top reaction.{" "}
               </div>
-              <h2>I put a Spell on You</h2>
+              <Center>I put a Spell on You</Center>
               <VideoWrapper>
-                I put a Spell on You
                 <LiteYouTubeEmbed
                   id="nwFloCPXzCs"
                   title="She puts a spell on you"
@@ -758,9 +756,8 @@ export default function LocalProfile() {
                 exciting group performance of Someone You Loved in the AGT
                 Champions Finale.{" "}
               </div>
-              <h2>Someone You Loved</h2>
+              <Center>Someone You Loved</Center>
               <VideoWrapper>
-                Someone You Loved
                 <LiteYouTubeEmbed id="3-Q3I7FfvUU" title="Someone You Loved" />
               </VideoWrapper>
               <div>
@@ -1105,12 +1102,10 @@ export default function LocalProfile() {
               </div>
               <h2>Million Miles</h2>
               <VideoWrapper>
-                Million Miles
                 <LiteYouTubeEmbed id="NhKRh5ZtuWk" title="Million Miles" />
               </VideoWrapper>
-              <h2>Seventh Heaven</h2>
+              <Center>Seventh Heaven</Center>
               <VideoWrapper>
-                Seventh Heaven
                 <LiteYouTubeEmbed id="bM8DzMRbiIc" title="Seventh Heaven" />
               </VideoWrapper>
               <div>
@@ -1537,9 +1532,8 @@ export default function LocalProfile() {
                 with a band in an open air concert the following year in Norway,
                 Jul 12, 2019, when she was 13.
               </div>
-              <h2>The Shield</h2>
+              <Center>The Shield</Center>
               <VideoWrapper>
-                The Shield
                 <LiteYouTubeEmbed
                   id="lQtUbVKb0vs"
                   title="Open air concert, at age 13"
@@ -2179,9 +2173,8 @@ export default function LocalProfile() {
                 —an LA antique furniture and chandelier shop. This is an amazing
                 performance and production!
               </div>
-              <h2>Suspecious Minds</h2>
+              <Center>Suspecious Minds</Center>
               <VideoWrapper>
-                Suspecious Minds
                 <LiteYouTubeEmbed
                   id="RTbKhkceR00"
                   title="Open air concert, at age 13"
@@ -3225,9 +3218,8 @@ export default function LocalProfile() {
                 depth and dexterity of her maturing voice now is absolutely
                 phenomenal! And she is only 16 years old!
               </div>
-              <h2>I have Nothing</h2>
+              <Center>I have Nothing</Center>
               <VideoWrapper>
-                I have Nothing
                 <LiteYouTubeEmbed id="iX0g99jN26U" title="I Have Nothing" />
               </VideoWrapper>
               <div>
@@ -3504,9 +3496,8 @@ export default function LocalProfile() {
                 </a>
                 . Love it! Happy Birthday, Angelina!
               </div>
-              <h2>17 Reactions</h2>
+              <Center>17 Reactions</Center>
               <VideoWrapper>
-                17 Reactions
                 <LiteYouTubeEmbed
                   id="CU0tPGFTjUU"
                   title="Open air concert, at age 13"
@@ -3607,14 +3598,12 @@ export default function LocalProfile() {
                 </a>
                 . Here are those two amazing performances.{" "}
               </div>
-              <h3>Bohemian Rhapsody</h3>I have Nothing
+              <Center>Bohemian Rhapsody</Center>
               <VideoWrapper>
-                Bohemian Rhapsody
                 <LiteYouTubeEmbed id="1pnY11EzKwM" title="Bohemian Rhapsody" />
               </VideoWrapper>
-              <h3>I have Nothing</h3>
+              <Center>I have Nothing</Center>
               <VideoWrapper>
-                I have Nothing
                 <LiteYouTubeEmbed id="dBjMxY-iiwY" title="I Have Nothing" />
               </VideoWrapper>
               <SingleAccordion label="FIFA Football Awards">
@@ -3707,7 +3696,8 @@ export default function LocalProfile() {
                 </a>
                 <div>Angelina Jordan</div>
               </div>
-              <Center className="italic">Love Don't Let Me Go!</Center>
+              <Center>Love Don't Let Me Go!</Center>
+              <Center>Visualizer</Center>
               <div>
                 <LiteYouTubeEmbed
                   id="1U6WY_z8Vu8"
