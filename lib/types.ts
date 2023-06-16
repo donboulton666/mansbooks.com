@@ -191,6 +191,11 @@ interface Views {
   count: number;
 }
 
+interface Loves {
+  count: number;
+  slug: string;
+}
+
 export type GitHubOAuthData =
   | {
       type: "token";

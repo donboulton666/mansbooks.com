@@ -81,13 +81,21 @@ export default function SponsorSection({ sponsor }: Props) {
               />
               <h1 className={styles.name}>{sponsor.name}</h1>
             </div>
-            <div className="flex">
+            <div className="flex mt-4">
               <div className="flex flex-row text-xs text-slate-300">
-                <EyeIcon className="-mt-1 h-8 w-8 pr-2" />{" "}
-                <ViewCounter slug={sponsor.slug} />
+                <span className={cn(styles.button, styles["button-resource"])}>
+                  <EyeIcon className="-mt-1 h-8 w-8 pr-2" />{" "}
+                  <ViewCounter slug={sponsor.slug} />
+                </span>
               </div>
               <div className="flex flex-row text-xs text-slate-300">
-                <LovesCounter />
+              <span className={cn(styles.button, styles["button-resource"])}>
+                  <LovesCounter 
+                    slug={sponsor.slug} 
+                    type="button"
+                    aria-describedby="AJ Loves Action"                  
+                  />
+                </span>
               </div>
             </div>
             <p className={styles.description}>{sponsor.description}</p>

@@ -1,27 +1,22 @@
 import fetcher from "@lib/fetcher";
-import { Loves } from "@lib/schema";
+import { Loves } from "@lib/types";
 import { useEffect, useState, useContext } from "react";
-import { UserContext } from "../../contexts/UserContext";
-import { createClient } from "@supabase/supabase-js";
 import useSWR from "swr";
 import { Database } from "@/lib/schema";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
-const supabase =
-  process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_SECRET
-    ? createClient<Database>(
-        process.env.SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET
-      )
-    : undefined;
+type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
 interface Props {
   slug: string;
+  count: number;
 }
 
-const LovesCounter = ({ slug, user_id }: Props) => {
-  const [loves, setLoves] = useState([]);
-  const { profile: myProfile } = useContext(UserContext);
+const LovesCounter = ({ slug, count }: Props) => {
+  const supabase = useSupabaseClient<Database>();
+  const [loves, registerLoves] = useState([]);
   const { data } = useSWR<Loves>(`/api/loves/${slug}`, fetcher);
+
   useEffect(() => {
     const registerLove = () =>
       fetch(`/api/loves/${slug}`, {
@@ -31,18 +26,12 @@ const LovesCounter = ({ slug, user_id }: Props) => {
 
   const isLovedByMe = !!loves.find((love) => love.user_id === myProfile?.id);
 
-  function setLove() {
+  function registerLove() {
     if (isLovedByMe) {
       supabase
         .from("loves")
-        .select()
-        .delete()
-        .registerLove()
-        .eq("slug", count)
+        .registerLove("slug", count)
         .eq("user_id", myProfile.id)
-        .then(() => {
-          fetchLoves();
-        });
       return;
     }
     supabase
@@ -60,13 +49,13 @@ const LovesCounter = ({ slug, user_id }: Props) => {
     <span className="group relative ml-2 mr-2 flex items-center justify-end pr-4">
       <button
         className="flex items-center gap-2 text-red-500"
-        onClick={setLove}
+        onClick={registerLove}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          className="ml-2 h-6 w-6"
+          className="ml-2 h-8 w-8"
           strokeWidth={1.5}
           stroke="#ef4444"
           className={"h-6 w-6 pr-2 " + (isLovedByMe ? "fill-red-500" : "")}
@@ -78,7 +67,7 @@ const LovesCounter = ({ slug, user_id }: Props) => {
           />
         </svg>
       </button>
-      {`${(data?.count ?? 0) > 0 ? data.count.toLocaleString() : "–––"} love`}
+      {`${(data?.count ?? 0) > 0 ? data.count.toLocaleString() : "–––"} Loves`}
     </span>
   );
 };

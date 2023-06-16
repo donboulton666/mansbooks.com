@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import ColumnGridLeft from "@components/column-grid-left";
-import Subscriptions from "./subscriptions";
+import Subscriptions from "../subscriptions";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import { useRouter } from "next/router";
 import i18n from "@lib/i18n";
@@ -434,7 +434,7 @@ export default function Footer() {
                   area-label="Donald Boulton Web Site"
                   className="text-slate-400 hover:text-pink-500"
                 >
-                  - Visualizer -
+                  DWB - Visualizer
                 </a>
               </div>
             </div>

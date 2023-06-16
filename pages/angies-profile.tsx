@@ -142,7 +142,7 @@ export default function LocalProfile() {
               <Image
                 src={seventhHeaven}
                 alt="Seventh Heaven"
-                className="h-60 w-96 content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
+                className="h-60 w-96 mb-4 content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
             </div>

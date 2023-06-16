@@ -46,7 +46,7 @@ const Rounded = () => {
         className="w-full"
         sources={sources}
         ref={videoEl}
-        controls="true"
+        controls
         autoPlay
         loop
         plugins={[lazyload()]}

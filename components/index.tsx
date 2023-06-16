@@ -52,7 +52,8 @@ export default function Conf({
           {pageState === "registration" && !sharePage ? (
             <>
               <Hero />
-              <Center>Love Don't Let Me Go! Visualizer</Center>
+              <Center>Love Don't Let Me Go!</Center>
+              <Center>Visualizer</Center>
               <CloudinaryVideo />
               <Form />
               <LearnMore />
