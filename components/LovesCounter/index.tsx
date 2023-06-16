@@ -55,7 +55,6 @@ const LovesCounter = ({ slug, user_id }: Props) => {
         fetchLoves();
       });
   }
-
   return (
     <span className="group relative ml-2 mr-2 flex items-center justify-end pr-4">
       <button
@@ -78,7 +77,7 @@ const LovesCounter = ({ slug, user_id }: Props) => {
           />
         </svg>
       </button>
-      {`${(data?.count ?? 0) > 0 ? data.count.toLocaleString() : "–––"} love`}
+      {`${(data?.count ?? 0) > 0 ? data.count.toLocaleString() : "–––"} loves`}
     </span>
   );
 };

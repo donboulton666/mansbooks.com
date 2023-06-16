@@ -67,6 +67,40 @@ export interface Database {
           user_id?: string | null;
         };
       };
+      loves: {
+        Row: {
+          count: number | null
+          created_at: string | null
+          email: string | null
+          id: number
+          slug: string
+          user_id: string | null
+        }
+        Insert: {
+          count?: number | null
+          created_at?: string | null
+          email?: string | null
+          id?: number
+          slug?: string
+          user_id?: string | null
+        }
+        Update: {
+          count?: number | null
+          created_at?: string | null
+          email?: string | null
+          id?: number
+          slug?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "loves_user_id_fkey"
+            columns: ["user_id"]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       posts: {
         Row: {
           author: string | null;
@@ -224,6 +258,9 @@ export interface Database {
     Views: {
       [_ in never]: never;
     };
+    Loves: {
+      [_ in never]: never;
+    };
     Functions: {
       delete_avatar: {
         Args: {
@@ -257,5 +294,9 @@ export interface Database {
 }
 
 interface Views {
+  count: number;
+}
+
+interface Loves {
   count: number;
 }
