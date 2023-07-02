@@ -69,38 +69,38 @@ export interface Database {
       };
       loves: {
         Row: {
-          count: number | null
-          created_at: string | null
-          email: string | null
-          id: number
-          slug: string
-          user_id: string | null
-        }
+          count: number | null;
+          created_at: string | null;
+          email: string | null;
+          id: number;
+          slug: string;
+          user_id: string | null;
+        };
         Insert: {
-          count?: number | null
-          created_at?: string | null
-          email?: string | null
-          id?: number
-          slug?: string
-          user_id?: string | null
-        }
+          count?: number | null;
+          created_at?: string | null;
+          email?: string | null;
+          id?: number;
+          slug?: string;
+          user_id?: string | null;
+        };
         Update: {
-          count?: number | null
-          created_at?: string | null
-          email?: string | null
-          id?: number
-          slug?: string
-          user_id?: string | null
-        }
+          count?: number | null;
+          created_at?: string | null;
+          email?: string | null;
+          id?: number;
+          slug?: string;
+          user_id?: string | null;
+        };
         Relationships: [
           {
-            foreignKeyName: "loves_user_id_fkey"
-            columns: ["user_id"]
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            foreignKeyName: "loves_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
           }
-        ]
-      }
+        ];
+      };
       posts: {
         Row: {
           author: string | null;

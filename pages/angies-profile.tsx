@@ -142,7 +142,7 @@ export default function LocalProfile() {
               <Image
                 src={seventhHeaven}
                 alt="Seventh Heaven"
-                className="h-full w-full mb-4 content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
+                className="mb-4 h-full w-full content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
             </div>
@@ -3682,7 +3682,7 @@ export default function LocalProfile() {
                 </div>
               </SingleAccordion>
               <Center>My Song (Visualizer)</Center>
-              <div class="grid grid-cols-3 gap-4 place-items-center">
+              <div class="grid grid-cols-3 place-items-center gap-4">
                 <div>My Love</div>
                 <a href="https://www.youtube.com/watch?v=1U6WY_z8Vu8">
                   <Image
@@ -3709,7 +3709,8 @@ export default function LocalProfile() {
                 />
               </div>
               <Center>
-                Conclusion: Fill my heart with song and let me sing for evermore!
+                Conclusion: Fill my heart with song and let me sing for
+                evermore!
               </Center>
             </div>
           </div>

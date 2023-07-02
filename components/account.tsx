@@ -109,7 +109,7 @@ export default function Account({ session }: { session: Session }) {
       provider: "spotify",
     });
   }
-  
+
   async function signInWithEmail() {
     const { data, error } = await supabase.auth.signInWithPassword({
       email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,

@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import Image from "next/legacy/image";
@@ -22,15 +24,21 @@ import { Sponsor } from "@lib/types";
 import Giscus from "@giscus/react";
 import ViewCounter from "@components/ViewCounter";
 import LovesCounter from "@components/LovesCounter";
-import { EyeIcon, HeartIcon } from "@heroicons/react/outline";
+import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import ModalDialog from "@components/Modal/ModalDialog";
+import Share from "@components/Share";
 
 type Props = {
   sponsor: Sponsor;
 };
 
 export default function SponsorSection({ sponsor }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const session = useSession();
+  const supabase = useSupabaseClient();
   return (
     <>
       <>
@@ -81,7 +89,7 @@ export default function SponsorSection({ sponsor }: Props) {
               />
               <h1 className={styles.name}>{sponsor.name}</h1>
             </div>
-            <div className="flex mt-4">
+            <div className="mt-4 flex">
               <div className="flex flex-row text-xs text-slate-300">
                 <span className={cn(styles.button, styles["button-resource"])}>
                   <EyeIcon className="-mt-1 h-8 w-8 pr-2" />{" "}
@@ -89,12 +97,23 @@ export default function SponsorSection({ sponsor }: Props) {
                 </span>
               </div>
               <div className="flex flex-row text-xs text-slate-300">
-              <span className={cn(styles.button, styles["button-resource"])}>
-                  <LovesCounter 
-                    slug={sponsor.slug} 
+                <span className={cn(styles.button, styles["button-resource"])}>
+                  <LovesCounter
+                    slug={sponsor.slug}
+                    session={session}
                     type="button"
-                    aria-describedby="AJ Loves Action"                  
+                    aria-describedby="AJ Loves Action"
                   />
+                </span>
+              </div>
+              <div className="flex flex-row text-xs text-slate-300">
+                <ModalDialog isOpen={isOpen} setIsOpen={setIsOpen}>
+                  <Share />
+                </ModalDialog>
+                <span className={cn(styles.button, styles["button-resource"])}>
+                  <button onClick={() => setIsOpen(true)}>
+                    <ShareIcon className="-mt-1 h-8 w-8 pr-2" /> Share
+                  </button>
                 </span>
               </div>
             </div>
