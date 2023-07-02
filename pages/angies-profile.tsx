@@ -1100,7 +1100,7 @@ export default function LocalProfile() {
                 </a>{" "}
                 was later released in Jan 27, 2021.{" "}
               </div>
-              <h2>Million Miles</h2>
+              <Center>Million Miles</Center>
               <VideoWrapper>
                 <LiteYouTubeEmbed id="NhKRh5ZtuWk" title="Million Miles" />
               </VideoWrapper>

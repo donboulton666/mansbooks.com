@@ -1,25 +1,19 @@
 import fetcher from "@lib/fetcher";
+import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "@lib/schema";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { createClient } from "@supabase/supabase-js";
 import useSWR from "swr";
-import { Database, Loves } from "@/lib/schema";
 
-const supabase =
-  process.env.SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET
-    ? createClient<Database>(
-        process.env.SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET
-      )
-    : undefined;
+type Loves = Database["public"]["Tables"]["loves"]["Row"]
 
 interface Props {
   slug: string;
 }
 
-const LovesCounter = ({ slug, user_id }: Props) => {
-  const [loves, setLoves] = useState([]);
+export default function LovesCounter({ session, slug, user_id }: { session: Session }) {
+  const supabase = useSupabaseClient<Database>();
+  const [loves, setLoves] = useState<Loves[]>([]);
   const { profile: myProfile } = useContext(UserContext);
   const { data } = useSWR<Loves>(`/api/loves/${slug}`, fetcher);
   useEffect(() => {
@@ -35,8 +29,8 @@ const LovesCounter = ({ slug, user_id }: Props) => {
     if (isLovedByMe) {
       supabase
         .from("loves")
+
         .select()
-        .delete()
         .registerLove()
         .eq("slug", count)
         .eq("user_id", myProfile.id)
@@ -55,31 +49,48 @@ const LovesCounter = ({ slug, user_id }: Props) => {
         fetchLoves();
       });
   }
+  const deleteLove = async (id: number) => {
+    try {
+      await supabase.from("loves").delete().eq("id", id).throwOnError();
+      setLoves(loves.filter((x) => x.id != id));
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
+
   return (
     <span className="group relative ml-2 mr-2 flex items-center justify-end pr-4">
       <button
         className="flex items-center gap-2 text-red-500"
-        onClick={setLove}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setLove(slug);
+        }}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          className="h-6 w-6 ml-2"
-          strokeWidth={1.5}
-          stroke="#ef4444"
-          className={"h-8 w-8 pr-2 " + (isLovedByMe ? "fill-red-500" : "")}
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className={"h-8 w-8 pr-2 " + (isLovedByMe ? "fill-red-500" : "")} 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor" 
+          stroke-width="2"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-          />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
         </svg>
       </button>
       {`${(data?.count ?? 0) > 0 ? data.count.toLocaleString() : "–––"} loves`}
+      <button
+        className="flex items-center gap-2 text-red-500"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          onDelete();
+        }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+      </svg>
+      </button>
     </span>
   );
-};
-
-export default LovesCounter;
+}
