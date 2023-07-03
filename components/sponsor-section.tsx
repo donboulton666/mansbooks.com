@@ -114,18 +114,18 @@ export default function SponsorSection({ sponsor }: Props) {
                     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
                       <div className="relative mx-auto my-6 w-auto max-w-3xl">
                         {/*content*/}
-                        <div className="relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none">
+                        <div className="relative flex w-full flex-col rounded-lg border-0 bg-slate-900 shadow-lg outline-none focus:outline-none">
                           {/*header*/}
-                          <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-200 p-5">
+                          <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-700 p-5">
                             <Center>Social Share</Center>
                             <button
                               className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 opacity-5 outline-none focus:outline-none"
                               onClick={() => setShowModal(false)}
                             >
-                              <span className="block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none">
+                              <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
-                                  class="h-6 w-6"
+                                  className="h-6 w-6 text-slate-200"
                                   fill="none"
                                   viewBox="0 0 24 24"
                                   stroke="currentColor"
@@ -142,10 +142,10 @@ export default function SponsorSection({ sponsor }: Props) {
                           </div>
                           {/*body*/}
                           <div className="relative flex-auto p-6">
-                            <p className="my-4 bg-slate-900 text-lg leading-relaxed text-slate-300">
+                            <p className="my-4 px-2 bg-slate-900 text-lg leading-relaxed text-slate-300">
                               <EmailShareButton
                                 url={sponsor.slug}
-                                subject={"Email"}
+                                subject={sponsor.name}
                                 body="body"
                               >
                                 <EmailIcon size={32} round />
@@ -180,14 +180,15 @@ export default function SponsorSection({ sponsor }: Props) {
                             </p>
                           </div>
                           {/*footer*/}
-                          <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-200 p-6">
-                            <button
-                              className="background-transparent mb-1 mr-1 px-6 py-2 text-sm font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none"
+                          <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
+                          <span className={cn(styles.button, styles["button-resource"])}>
+                            <button                              
                               type="button"
                               onClick={() => setShowModal(false)}
                             >
                               Close
                             </button>
+                            </span>
                           </div>
                         </div>
                       </div>
