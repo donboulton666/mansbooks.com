@@ -13,7 +13,6 @@ import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import ModalDialog from "@components/Modal/ModalDialog";
 import Share from "@components/Share";
 import {
   EmailShareButton,
@@ -153,7 +152,7 @@ export default function SponsorSection({ sponsor }: Props) {
                               </EmailShareButton>
                               <TwitterShareButton
                                 url={sponsor.slug}
-                                title={slug}
+                                title={sponsor.name}
                               >
                                 <TwitterIcon size={32} round />
                               </TwitterShareButton>
@@ -165,7 +164,7 @@ export default function SponsorSection({ sponsor }: Props) {
                               </PinterestShareButton>
                               <TelegramShareButton
                                 url={sponsor.slug}
-                                title={slug}
+                                title={sponsor.name}
                               >
                                 <TelegramIcon size={32} round />
                               </TelegramShareButton>

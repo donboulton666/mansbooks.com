@@ -50,6 +50,12 @@ export default {
       es: "Galería",
       nn: "Galleri",
     },
+    license: {
+      en: "License Rob Landley",
+      it: "license Rob Landley",
+      es: "license Rob Landley",
+      nn: "license Rob Landley",
+    },
     videos: {
       en: "Videos",
       it: "Video",

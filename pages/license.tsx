@@ -6,13 +6,16 @@ import CalloutLabel from "@components/Callout/CalloutLabel";
 import Modal from "@components/Modal/modal";
 import angie from "../public/angie/angelina.jpg";
 import Stars from "@components/Stars";
+import { useRouter } from "next/router";
+import i18n from "@lib/i18n";
 
 export default function License() {
+  const { locale } = useRouter();
   return (
     <Layout>
       <Stars />
       <Head>
-        <title>License</title>
+        <title>{i18n.header.license[locale]}</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
@@ -124,7 +127,7 @@ export default function License() {
           <div className="mt-10">
             <div className="mb-16 mt-16 p-8 sm:mt-2">
               <div className="mb-2">
-                <h2>Rob Landley</h2>
+                <h2>{i18n.header.license[locale]}</h2>
                 <div>
                   Posted this on
                   <a href="http://lists.landley.net/pipermail/toybox-landley.net/2013-March/004589.html">
