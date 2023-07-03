@@ -1,5 +1,6 @@
 import React from "react";
 import Center from "@components/Center";
+
 import {
   EmailShareButton,
   EmailIcon,
@@ -23,7 +24,7 @@ const slug = typeof window !== "undefined" ? window.location.href : "";
 
 export default function Share() {
   return (
-    <div>
+    <div className="bg-slate-900">
       <Center>Social Share</Center>
       <EmailShareButton url={slug} subject={"Email"} body="body">
         <EmailIcon size={32} round />

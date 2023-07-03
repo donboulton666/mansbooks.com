@@ -15,7 +15,6 @@ const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
 const supabase = createClient<Database>(supabaseUrl, supabaseKey);
 
-
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 type Posts = Database["public"]["Tables"]["posts"]["Row"];

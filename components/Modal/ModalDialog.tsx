@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactNode, useState, FC } from "react";
-import { Dialog } from "@headlessui/react";
+import { Dialog } from "";
 import Share from "@components/Share";
 
 export interface ModalDialogProps {

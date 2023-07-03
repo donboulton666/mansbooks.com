@@ -1,24 +1,9 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import Image from "next/legacy/image";
+import Center from "@components/Center";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";
 import Giscus from "@giscus/react";
@@ -30,13 +15,31 @@ import styleUtils from "./utils.module.css";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import ModalDialog from "@components/Modal/ModalDialog";
 import Share from "@components/Share";
+import {
+  EmailShareButton,
+  EmailIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  RedditShareButton,
+  RedditIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from "next-share";
 
 type Props = {
   sponsor: Sponsor;
 };
 
 export default function SponsorSection({ sponsor }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const session = useSession();
   const supabase = useSupabaseClient();
   return (
@@ -107,12 +110,95 @@ export default function SponsorSection({ sponsor }: Props) {
                 </span>
               </div>
               <div className="flex flex-row text-xs text-slate-300">
-                <ModalDialog isOpen={isOpen} setIsOpen={setIsOpen}>
-                  <Share />
-                </ModalDialog>
+                {showModal ? (
+                  <>
+                    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+                      <div className="relative mx-auto my-6 w-auto max-w-3xl">
+                        {/*content*/}
+                        <div className="relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none">
+                          {/*header*/}
+                          <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-200 p-5">
+                            <Center>Social Share</Center>
+                            <button
+                              className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 opacity-5 outline-none focus:outline-none"
+                              onClick={() => setShowModal(false)}
+                            >
+                              <span className="block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                  />
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+                          {/*body*/}
+                          <div className="relative flex-auto p-6">
+                            <p className="my-4 bg-slate-900 text-lg leading-relaxed text-slate-300">
+                              <EmailShareButton
+                                url={sponsor.slug}
+                                subject={"Email"}
+                                body="body"
+                              >
+                                <EmailIcon size={32} round />
+                              </EmailShareButton>
+                              <TwitterShareButton
+                                url={sponsor.slug}
+                                title={slug}
+                              >
+                                <TwitterIcon size={32} round />
+                              </TwitterShareButton>
+                              <FacebookShareButton url={sponsor.slug}>
+                                <FacebookIcon size={32} round />
+                              </FacebookShareButton>
+                              <PinterestShareButton url={sponsor.slug}>
+                                <PinterestIcon size={32} round />
+                              </PinterestShareButton>
+                              <TelegramShareButton
+                                url={sponsor.slug}
+                                title={slug}
+                              >
+                                <TelegramIcon size={32} round />
+                              </TelegramShareButton>
+                              <RedditShareButton url={sponsor.slug}>
+                                <RedditIcon size={32} round />
+                              </RedditShareButton>
+                              <WhatsappShareButton url={sponsor.slug}>
+                                <WhatsappIcon size={32} round />
+                              </WhatsappShareButton>
+                              <LinkedinShareButton url={sponsor.slug}>
+                                <LinkedinIcon size={32} round />
+                              </LinkedinShareButton>
+                            </p>
+                          </div>
+                          {/*footer*/}
+                          <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-200 p-6">
+                            <button
+                              className="background-transparent mb-1 mr-1 px-6 py-2 text-sm font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none"
+                              type="button"
+                              onClick={() => setShowModal(false)}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
+                  </>
+                ) : null}
                 <span className={cn(styles.button, styles["button-resource"])}>
-                  <button onClick={() => setIsOpen(true)}>
-                    <ShareIcon className="-mt-1 h-8 w-8 pr-2" /> Share
+                  <button onClick={() => setShowModal(true)}>
+                    <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
                   </button>
                 </span>
               </div>
