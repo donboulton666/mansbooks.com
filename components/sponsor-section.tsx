@@ -33,6 +33,8 @@ import {
   LinkedinIcon,
 } from "next-share";
 
+const slug = typeof window !== "undefined" ? window.location.href : "";
+
 type Props = {
   sponsor: Sponsor;
 };
@@ -114,12 +116,12 @@ export default function SponsorSection({ sponsor }: Props) {
                     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
                       <div className="relative mx-auto my-6 w-auto max-w-3xl">
                         {/*content*/}
-                        <div className="relative flex w-full flex-col rounded-lg border-0 bg-slate-900 shadow-lg outline-none focus:outline-none">
+                        <div className="relative flex w-full flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
                           {/*header*/}
                           <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-700 p-5">
                             <Center>Social Share</Center>
                             <button
-                              className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 opacity-5 outline-none focus:outline-none"
+                              className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 outline-none focus:outline-none"
                               onClick={() => setShowModal(false)}
                             >
                               <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
@@ -142,39 +144,39 @@ export default function SponsorSection({ sponsor }: Props) {
                           </div>
                           {/*body*/}
                           <div className="relative flex-auto p-6">
-                            <p className="my-4 px-2 bg-slate-900 text-lg leading-relaxed text-slate-300">
+                            <p className="my-4 px-2 bg-[#111111] text-lg leading-relaxed text-slate-300">
                               <EmailShareButton
-                                url={sponsor.slug}
+                                url={slug}
                                 subject={sponsor.name}
                                 body="body"
                               >
                                 <EmailIcon size={32} round />
-                              </EmailShareButton>
+                              </EmailShareButton>{" "}
                               <TwitterShareButton
-                                url={sponsor.slug}
+                                url={slug}
                                 title={sponsor.name}
                               >
                                 <TwitterIcon size={32} round />
-                              </TwitterShareButton>
-                              <FacebookShareButton url={sponsor.slug}>
+                              </TwitterShareButton>{" "}
+                              <FacebookShareButton url={slug}>
                                 <FacebookIcon size={32} round />
-                              </FacebookShareButton>
-                              <PinterestShareButton url={sponsor.slug}>
+                              </FacebookShareButton>{" "}
+                              <PinterestShareButton url={slug}>
                                 <PinterestIcon size={32} round />
-                              </PinterestShareButton>
+                              </PinterestShareButton>{" "}
                               <TelegramShareButton
-                                url={sponsor.slug}
+                                url={slug}
                                 title={sponsor.name}
                               >
                                 <TelegramIcon size={32} round />
-                              </TelegramShareButton>
-                              <RedditShareButton url={sponsor.slug}>
+                              </TelegramShareButton>{" "}
+                              <RedditShareButton url={slug}>
                                 <RedditIcon size={32} round />
-                              </RedditShareButton>
-                              <WhatsappShareButton url={sponsor.slug}>
+                              </RedditShareButton>{" "}
+                              <WhatsappShareButton url={slug}>
                                 <WhatsappIcon size={32} round />
-                              </WhatsappShareButton>
-                              <LinkedinShareButton url={sponsor.slug}>
+                              </WhatsappShareButton>{" "}
+                              <LinkedinShareButton url={slug}>
                                 <LinkedinIcon size={32} round />
                               </LinkedinShareButton>
                             </p>
