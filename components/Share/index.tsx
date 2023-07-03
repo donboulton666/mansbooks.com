@@ -12,7 +12,7 @@ import {
   TelegramShareButton,
   TelegramIcon,
   TwitterShareButton,
-  TwitterShareIcon,
+  TwitterIcon,
   WhatsappShareButton,
   WhatsappIcon,
   LinkedinShareButton,

@@ -53,7 +53,7 @@ export default function PostFormCard({ onPost }) {
           .upload(newName, file);
         if (result.data) {
           const url =
-            process.env.SUPABASE_URL +
+            process.env.NEXT_PUBLIC_SUPABASE_URL +
             "/storage/v1/object/public/photos/" +
             result.data.path;
           setUploads((prevUploads) => [...prevUploads, url]);

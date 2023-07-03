@@ -11,13 +11,10 @@ import useSWR from "swr";
 import styles from "./home.module.css";
 import { Database } from "@lib/schema";
 
-const supabase =
-  process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_SECRET
-    ? createClient<Database>(
-        process.env.SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET
-      )
-    : undefined;
+const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
+const supabase = createClient<Database>(supabaseUrl, supabaseKey);
+
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 

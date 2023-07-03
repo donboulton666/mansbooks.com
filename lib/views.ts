@@ -1,9 +1,10 @@
 import { createClient, PostgrestError } from "@supabase/supabase-js";
+import { Database } from "@lib/schema";
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
-);
+const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
+const supabase = createClient<Database>(supabaseUrl, supabaseKey);
+
 
 interface SupabaseResult {
   data?: { count: number };

@@ -39,7 +39,7 @@ if (
 ) {
   dbApi = redisApi;
 } else if (
-  process.env.SUPABASE_URL &&
+  process.env.NEXT_PUBLIC_SUPABASE_URL &&
   process.env.SUPABASE_SERVICE_ROLE_SECRET &&
   process.env.EMAIL_TO_ID_SECRET
 ) {

@@ -14,7 +14,7 @@ export async function uploadUserProfileImage(
     if (error) throw error;
     if (data) {
       const avatar_url =
-        process.env.SUPABASE_URL +
+        process.env.NEXT_PUBLIC_SUPABASE_URL +
         `/storage/v1/object/public/${bucket}/` +
         data.path;
       supabase
