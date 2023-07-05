@@ -146,37 +146,37 @@ export default function SponsorSection({ sponsor }: Props) {
                           <div className="relative flex-auto p-6">
                             <p className="my-4 px-2 bg-[#111111] text-lg leading-relaxed text-slate-300">
                               <EmailShareButton
-                                url={slug}
+                                url="https://mansbooks.com/expo/sponsor.slug/"
                                 subject={sponsor.name}
                                 body="body"
                               >
                                 <EmailIcon size={32} round />
                               </EmailShareButton>{" "}
                               <TwitterShareButton
-                                url={slug}
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
                                 title={sponsor.name}
                               >
                                 <TwitterIcon size={32} round />
                               </TwitterShareButton>{" "}
-                              <FacebookShareButton url={slug}>
+                              <FacebookShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
                                 <FacebookIcon size={32} round />
                               </FacebookShareButton>{" "}
-                              <PinterestShareButton url={slug}>
+                              <PinterestShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
                                 <PinterestIcon size={32} round />
                               </PinterestShareButton>{" "}
                               <TelegramShareButton
-                                url={slug}
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
                                 title={sponsor.name}
                               >
                                 <TelegramIcon size={32} round />
                               </TelegramShareButton>{" "}
-                              <RedditShareButton url={slug}>
+                              <RedditShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
                                 <RedditIcon size={32} round />
                               </RedditShareButton>{" "}
-                              <WhatsappShareButton url={slug}>
+                              <WhatsappShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
                                 <WhatsappIcon size={32} round />
                               </WhatsappShareButton>{" "}
-                              <LinkedinShareButton url={slug}>
+                              <LinkedinShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
                                 <LinkedinIcon size={32} round />
                               </LinkedinShareButton>
                             </p>
