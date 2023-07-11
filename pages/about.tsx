@@ -26,9 +26,7 @@ export default function About() {
         <title>About</title>
         <>
           <script src="https://www.paypal.com/sdk/js?client-id=@donaldboulton&enable-funding=venmo"></script>
-          <script>    
-            paypal.Buttons().render('#paypal-button-container')
-          </script>
+          <script>paypal.Buttons().render('#paypal-button-container')</script>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -128,9 +126,9 @@ export default function About() {
               ],
               numberOfItems: "2",
               name: "Breadcrumbs",
-            })}            
+            })}
           </script>
-        </>        
+        </>
       </Head>
       <div className="mb-32 ml-10 mr-10 mt-8">
         <Center>Angelina Jordan</Center>
@@ -679,7 +677,7 @@ export default function About() {
             loading="lazy"
           />
         </Section>
-          <div id="paypal-button-container"></div>
+        <div id="paypal-button-container"></div>
       </div>
     </Layout>
   );

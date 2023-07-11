@@ -13,7 +13,6 @@ import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
 import styles from "./sponsor-section.module.css";
 import styleUtils from "./utils.module.css";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Share from "@components/Share";
 import {
   EmailShareButton,
   EmailIcon,
@@ -32,8 +31,6 @@ import {
   LinkedinShareButton,
   LinkedinIcon,
 } from "next-share";
-
-const slug = typeof window !== "undefined" ? window.location.href : "";
 
 type Props = {
   sponsor: Sponsor;
@@ -144,7 +141,7 @@ export default function SponsorSection({ sponsor }: Props) {
                           </div>
                           {/*body*/}
                           <div className="relative flex-auto p-6">
-                            <p className="my-4 px-2 bg-[#111111] text-lg leading-relaxed text-slate-300">
+                            <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                               <EmailShareButton
                                 url="https://mansbooks.com/expo/sponsor.slug/"
                                 subject={sponsor.name}
@@ -158,10 +155,14 @@ export default function SponsorSection({ sponsor }: Props) {
                               >
                                 <TwitterIcon size={32} round />
                               </TwitterShareButton>{" "}
-                              <FacebookShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
+                              <FacebookShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <FacebookIcon size={32} round />
                               </FacebookShareButton>{" "}
-                              <PinterestShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
+                              <PinterestShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <PinterestIcon size={32} round />
                               </PinterestShareButton>{" "}
                               <TelegramShareButton
@@ -170,26 +171,37 @@ export default function SponsorSection({ sponsor }: Props) {
                               >
                                 <TelegramIcon size={32} round />
                               </TelegramShareButton>{" "}
-                              <RedditShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
+                              <RedditShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <RedditIcon size={32} round />
                               </RedditShareButton>{" "}
-                              <WhatsappShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
+                              <WhatsappShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <WhatsappIcon size={32} round />
                               </WhatsappShareButton>{" "}
-                              <LinkedinShareButton url={`https://mansbooks.com/expo/${sponsor.slug}`}>
+                              <LinkedinShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <LinkedinIcon size={32} round />
                               </LinkedinShareButton>
                             </p>
                           </div>
                           {/*footer*/}
                           <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
-                          <span className={cn(styles.button, styles["button-resource"])}>
-                            <button                              
-                              type="button"
-                              onClick={() => setShowModal(false)}
+                            <span
+                              className={cn(
+                                styles.button,
+                                styles["button-resource"]
+                              )}
                             >
-                              Close
-                            </button>
+                              <button
+                                type="button"
+                                onClick={() => setShowModal(false)}
+                              >
+                                Close
+                              </button>
                             </span>
                           </div>
                         </div>

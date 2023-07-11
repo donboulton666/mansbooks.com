@@ -1,11 +1,11 @@
+import { useEffect, useRef, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
 import Bridge from "@components/gallery/Icons/Bridge";
-import Modal from "@components/gallery/Modal";
+import Dialogue from "@components/gallery/Dialogue";
 import Stars from "@components/Stars";
 import Center from "@components/Center";
 import { ShareIcon } from "@heroicons/react/outline";
@@ -17,28 +17,7 @@ import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
 import Layout from "@components/PageLayout";
 import angie from "../public/angie/angelina.jpg";
-
-import {
-  EmailShareButton,
-  EmailIcon,
-  FacebookShareButton,
-  FacebookIcon,
-  PinterestShareButton,
-  PinterestIcon,
-  RedditShareButton,
-  RedditIcon,
-  TelegramShareButton,
-  TelegramIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-} from "next-share";
 import styles from "@components/sponsor-section.module.css";
-
-const slug = typeof window !== "undefined" ? window.location.href : "";
 
 const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
   const [showModal, setShowModal] = useState(false);
@@ -168,7 +147,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
       <Layout>
         <main className="mx-auto mb-32 mt-4 max-w-[1960px] p-4">
           {photoId && (
-            <Modal
+            <Dialogue
               images={images}
               onClose={() => {
                 setLastViewedPhoto(photoId);
@@ -198,7 +177,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
               <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
                 Queen Angelina Jordan, collection of photos!
               </p>
-              <div>
+              <div className="flex flex-row text-xs text-slate-300">
                 {showModal ? (
                   <>
                     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
@@ -212,7 +191,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                               className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 outline-none focus:outline-none"
                               onClick={() => setShowModal(false)}
                             >
-                              <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 outline-none focus:outline-none">
+                              <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   className="h-6 w-6 text-slate-200"
@@ -235,36 +214,46 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                             <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                               <EmailShareButton
                                 url="https://mansbooks.com/gallery"
-                                subject="Angelina Jordan Gallery"
+                                subject="Gallery"
                                 body="body"
                               >
                                 <EmailIcon size={32} round />
                               </EmailShareButton>{" "}
                               <TwitterShareButton
-                                url="https://mansbooks.com/gallery"
-                                title="Angelina Jordan Gallery"
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                                title="Gallery"
                               >
                                 <TwitterIcon size={32} round />
                               </TwitterShareButton>{" "}
-                              <FacebookShareButton url="https://mansbooks.com/gallery">
+                              <FacebookShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <FacebookIcon size={32} round />
                               </FacebookShareButton>{" "}
-                              <PinterestShareButton url="https://mansbooks.com/gallery">
+                              <PinterestShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <PinterestIcon size={32} round />
                               </PinterestShareButton>{" "}
                               <TelegramShareButton
-                                url="https://mansbooks.com/gallery"
-                                title="Angelina Jordan Gallery"
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                                title="Gallery"
                               >
                                 <TelegramIcon size={32} round />
                               </TelegramShareButton>{" "}
-                              <RedditShareButton url="https://mansbooks.com/gallery">
+                              <RedditShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <RedditIcon size={32} round />
                               </RedditShareButton>{" "}
-                              <WhatsappShareButton url="https://mansbooks.com/gallery">
+                              <WhatsappShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <WhatsappIcon size={32} round />
                               </WhatsappShareButton>{" "}
-                              <LinkedinShareButton url="https://mansbooks.com/gallery">
+                              <LinkedinShareButton
+                                url={`https://mansbooks.com/expo/${sponsor.slug}`}
+                              >
                                 <LinkedinIcon size={32} round />
                               </LinkedinShareButton>
                             </p>
@@ -291,13 +280,11 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                     <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
                   </>
                 ) : null}
-                  <span
-                    className={cn(styles.button, styles["button-resource"])}
-                  >
-                    <button onClick={() => setShowModal(true)}>
-                      <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
-                    </button>
-                  </span>
+                <span className={cn(styles.button, styles["button-resource"])}>
+                  <button onClick={() => setShowModal(true)}>
+                    <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
+                  </button>
+                </span>
               </div>
             </div>
             {images.map(({ id, public_id, format, blurDataUrl }) => (

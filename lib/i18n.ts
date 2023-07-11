@@ -100,6 +100,12 @@ export default {
       es: "Galería",
       nn: "Galleri",
     },
+    privacy: {
+      en: "Privacy Policy / Terms of Usage",
+      sp: "Política de privacidad / Términos de uso",
+      it: "Informativa sulla privacy / Condizioni d'uso",
+      nn: "Personvernerklæring / Vilkår for bruk",
+    },
     social: {
       en: "Social",
       it: "Sociale",

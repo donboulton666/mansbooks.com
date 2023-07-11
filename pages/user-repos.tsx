@@ -5,6 +5,7 @@ import {
 import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
 import Layout from "@components/PageLayout";
+import Accordion from "@components/Accordion";
 
 export default function ProtectedPage({
   user,
@@ -19,13 +20,18 @@ export default function ProtectedPage({
         <Head>
           <title>Github Repos</title>
         </Head>
-        <div className="mx-20">
+        <div className="mx-20 my-20 border-2 border-slate-900 bg-black p-4 text-slate-300">
           <h2>Github Repos</h2>
-          <div>Protected content for {user.email}</div>
-          <p>Data fetched with provider token:</p>
-          <pre>{JSON.stringify(allRepos, null, 2)}</pre>
-          <p>user:</p>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
+          <div className="flex flex-row text-xs text-slate-300">
+            Protected content for {user.full_name} {user.avatar_url}
+          </div>
+          <div>{user.email}</div>
+          <Accordion title="Json Response" buttonTitle="Json Response">
+            <p>Data fetched with provider token:</p>
+            <pre>{JSON.stringify(allRepos, null, 2)}</pre>
+            <p>user:</p>
+            <pre>{JSON.stringify(user, null, 2)}</pre>
+          </Accordion>
         </div>
       </Layout>
     </>

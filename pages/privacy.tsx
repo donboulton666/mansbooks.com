@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/legacy/image";
+import cn from "classnames";
+import { ShareIcon } from "@heroicons/react/outline";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import LeftText from "@components/LeftText";
@@ -15,10 +18,34 @@ import cookies from "../public/cookies.png";
 import CalloutDanger from "@components/Callout/CalloutDanger";
 import angie from "../public/angie/angelina.jpg";
 import Stars from "@components/Stars";
+import { useRouter } from "next/router";
+import i18n from "@lib/i18n";
+import {
+  EmailShareButton,
+  EmailIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  RedditShareButton,
+  RedditIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from "next-share";
+
+import styles from "@components/sponsor-section.module.css";
 
 export default function Privacy() {
+  const { locale } = useRouter();
+  const [showModal, setShowModal] = useState(false);
   return (
-    <Layout>
+    <Layout data-datocms-noindex>
       <Stars />
       <Head>
         <title>Privacy</title>
@@ -128,7 +155,7 @@ export default function Privacy() {
         </>
       </Head>
       <div className="mx-8 mb-32 mt-8">
-        <Center>Privacy Policy / Terms of Usage</Center>
+        <Center>{i18n.dropdown.privacy[locale]}</Center>
         <Image
           alt="Privacy"
           title="Privacy"
@@ -666,6 +693,107 @@ export default function Privacy() {
         <h2>Purchases</h2>
         <h2>Purchase Policy</h2>
         <h3>Return Policy working</h3>
+        <div className="mt-4 flex">
+          <div className="flex flex-row text-xs text-slate-300">
+            {showModal ? (
+              <>
+                <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+                  <div className="relative mx-auto my-6 w-auto max-w-3xl">
+                    {/*content*/}
+                    <div className="relative flex w-full flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
+                      {/*header*/}
+                      <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-700 p-5">
+                        <Center>Social Share</Center>
+                        <button
+                          className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 outline-none focus:outline-none"
+                          onClick={() => setShowModal(false)}
+                        >
+                          <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-slate-200"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                      {/*body*/}
+                      <div className="relative flex-auto p-6">
+                        <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
+                          <EmailShareButton
+                            url="https://mansbooks.com/expo/sponsor.slug/"
+                            subject="Privacy"
+                            body="body"
+                          >
+                            <EmailIcon size={32} round />
+                          </EmailShareButton>{" "}
+                          <TwitterShareButton
+                            url="https://mansbooks.com/privacy"
+                            title="Privacy"
+                          >
+                            <TwitterIcon size={32} round />
+                          </TwitterShareButton>{" "}
+                          <FacebookShareButton url="https://mansbooks.com/privacy">
+                            <FacebookIcon size={32} round />
+                          </FacebookShareButton>{" "}
+                          <PinterestShareButton url="https://mansbooks.com/privacy">
+                            <PinterestIcon size={32} round />
+                          </PinterestShareButton>{" "}
+                          <TelegramShareButton
+                            url="https://mansbooks.com/privacy"
+                            title="Privacy"
+                          >
+                            <TelegramIcon size={32} round />
+                          </TelegramShareButton>{" "}
+                          <RedditShareButton url="https://mansbooks.com/privacy">
+                            <RedditIcon size={32} round />
+                          </RedditShareButton>{" "}
+                          <WhatsappShareButton url="https://mansbooks.com/privacy">
+                            <WhatsappIcon size={32} round />
+                          </WhatsappShareButton>{" "}
+                          <LinkedinShareButton url="https://mansbooks.com/privacy">
+                            <LinkedinIcon size={32} round />
+                          </LinkedinShareButton>
+                        </p>
+                      </div>
+                      {/*footer*/}
+                      <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
+                        <span
+                          className={cn(
+                            styles.button,
+                            styles["button-resource"]
+                          )}
+                        >
+                          <button
+                            type="button"
+                            onClick={() => setShowModal(false)}
+                          >
+                            Close
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
+              </>
+            ) : null}
+            <span className={cn(styles.button, styles["button-resource"])}>
+              <button onClick={() => setShowModal(true)}>
+                <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
+              </button>
+            </span>
+          </div>
+        </div>
       </div>
     </Layout>
   );

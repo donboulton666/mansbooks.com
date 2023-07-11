@@ -1,20 +1,20 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 export default function ActiveLink({ children, href }) {
-  const router = useRouter()
+  const router = useRouter();
   const style = {
     marginRight: 10,
-    color: router.pathname === href ? 'blue' : 'white',
-  }
+    color: router.pathname === href ? "blue" : "white",
+  };
 
-  const handleClick = e => {
-    e.preventDefault()
-    router.push(href)
-  }
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(href);
+  };
 
   return (
     <a href={href} onClick={handleClick} style={style}>
       {children}
     </a>
-  )
+  );
 }

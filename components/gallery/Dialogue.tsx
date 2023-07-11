@@ -6,7 +6,7 @@ import useKeypress from "react-use-keypress";
 import type { ImageProps } from "../../utils/types";
 import SharedModal from "./SharedModal";
 
-export default function Modal({
+export default function Dialogue({
   images,
   onClose,
 }: {

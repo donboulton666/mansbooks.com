@@ -11,7 +11,8 @@ export interface ModalRootProps {
   children: ReactNode;
 }
 
-export const ModalRoot: FC<ModalRootProps> = (props) => {
+const ModalRoot: FC<ModalRootProps> = (props) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { dialogTitle, dialogContent, children, ...rest } = props;
   const [isOpen, setIsOpen] = useState(true);
 
