@@ -15,6 +15,7 @@ import cloudinary from "../public/cloudinary.png";
 import supabase from "../public/supa.png";
 import upstash from "../public/upstash-logo.png";
 import datoCms from "../public/datoCms.jpg";
+import redux from "../public/redux-logo.png";
 import csp from "../public/cspMansbooks.jpg";
 import supabaseSchema from "../public/beginning-supabase-schema.jpg";
 
@@ -584,7 +585,7 @@ export default function About() {
             that works without any additional tools. Including PostgreSQL's
             policy engine, for fine-grained access rules.
           </div>
-          <h2>Beginning Supabase Schema and foreign key relationships</h2>
+          <h2>Beginning Supabase Schema and foreign key relationships</h2>{" "}
           <div>
             <Image
               alt="Supabase Schema"
@@ -596,6 +597,40 @@ export default function About() {
               width={1400}
             />
           </div>
+        </Section>
+        <Section>
+          <LeftText>Redux Session Storage</LeftText>
+          <a
+            href="https://redux.com/"
+            className="hover:text-pink-500"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-describedby="Redux"
+            area-label="Redux"
+          >
+            <Image
+              alt="Redux"
+              title="Redux"
+              src={redux}
+              className="w-80 opacity-80"
+              loading="lazy"
+              height={128}
+              width={320}
+            />
+            <h2>Lets you focus on the core logic your app needs.</h2>
+          </a>
+          <div>
+            Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more.
+          </div>
+          <div>Build faster and focus on your products</div>
+          <h2>Opinionated</h2>
+          <div>
+            Provides good defaults for store setup out of the box, and includes the most commonly used Redux addons built-in.
+          </div>
+          <h2>Powerful</h2>
+          <div>Takes inspiration from libraries like Immer and Autodux to let you write "mutative" immutable update logic, and even create entire "slices" of state automatically.</div>
+          <h2>Effective</h2>
+          <div>Lets you focus on the core logic your app needs, so you can do more work with less code.</div>
         </Section>
         <Section>
           <LeftText>100ms</LeftText>
