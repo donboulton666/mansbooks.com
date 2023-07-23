@@ -117,7 +117,7 @@ export default function Account({ session }: { session: Session }) {
     });
   }
 
-  async function signout() {
+  async function signOut() {
     const { error } = await supabase.auth.signOut();
   }
 
