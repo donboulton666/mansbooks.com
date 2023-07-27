@@ -95,7 +95,7 @@ export default function PostLayout({
         )}
         <ViewSource />
         <div className={styles.page}>
-          <div className="blog-beams">
+          <div className="beams">
             <main className={styles.main} style={layoutStyles}>
               <SkipNavContent />
               <div className={cn(styles.full, className)}>{children}</div>

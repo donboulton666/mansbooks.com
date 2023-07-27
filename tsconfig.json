@@ -24,7 +24,14 @@
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "sounds.d.ts", "**/*.ts", "**/*.js", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "sounds.d.ts",
+    "**/*.ts",
+    "**/*.js",
+    "**/*.tsx",
+    "components/Slack/Layout,tsx"
+  ],
   "plugins": [
     {
       "name": "next"

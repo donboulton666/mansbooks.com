@@ -620,17 +620,26 @@ export default function About() {
             <h2>Lets you focus on the core logic your app needs.</h2>
           </a>
           <div>
-            Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more.
+            Includes utilities to simplify common use cases like store setup,
+            creating reducers, immutable update logic, and more.
           </div>
           <div>Build faster and focus on your products</div>
           <h2>Opinionated</h2>
           <div>
-            Provides good defaults for store setup out of the box, and includes the most commonly used Redux addons built-in.
+            Provides good defaults for store setup out of the box, and includes
+            the most commonly used Redux addons built-in.
           </div>
           <h2>Powerful</h2>
-          <div>Takes inspiration from libraries like Immer and Autodux to let you write "mutative" immutable update logic, and even create entire "slices" of state automatically.</div>
+          <div>
+            Takes inspiration from libraries like Immer and Autodux to let you
+            write "mutative" immutable update logic, and even create entire
+            "slices" of state automatically.
+          </div>
           <h2>Effective</h2>
-          <div>Lets you focus on the core logic your app needs, so you can do more work with less code.</div>
+          <div>
+            Lets you focus on the core logic your app needs, so you can do more
+            work with less code.
+          </div>
         </Section>
         <Section>
           <LeftText>100ms</LeftText>

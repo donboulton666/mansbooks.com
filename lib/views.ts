@@ -1,7 +1,7 @@
 import { createClient, PostgrestError } from "@supabase/supabase-js";
 import { Database } from "@lib/schema";
 
-const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
 const supabase = createClient<Database>(supabaseUrl, supabaseKey);
 

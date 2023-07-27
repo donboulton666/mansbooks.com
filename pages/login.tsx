@@ -18,7 +18,7 @@ const Login = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
   return (
-    <Layout>
+    <Layout data-datocms-noindex>
       <Stars />
       <Head>
         <title>Login</title>
@@ -123,7 +123,7 @@ const Login = () => {
           </script>
         </>
       </Head>
-      <div className="mb-96 ml-10 mr-10 mt-10" data-datocms-noindex>
+      <div className="mb-96 ml-10 mr-10 mt-10">
         <div>
           <Center>Login Angelina Jordan</Center>
         </div>

@@ -17,8 +17,6 @@ import { UserContextProvider } from "../contexts/UserContext";
 import { Database } from "@lib/schema";
 import angieImage from "../public/icons/apple-touch-icon.png";
 
-type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
-
 export default function SocialProfile({ user }) {
   const [profile, setProfile] = useState(null);
   const [editMode, setEditMode] = useState(false);

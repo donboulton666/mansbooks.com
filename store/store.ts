@@ -5,11 +5,15 @@ import {
   Action,
 } from "@reduxjs/toolkit";
 import { authSlice } from "./authSlice";
+import count from "./count/reducer";
+import tick from "./tick/reducer";
 import { createWrapper } from "next-redux-wrapper";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 const rootReducer = combineReducers({
+  tick,
+  count,
   [authSlice.name]: authSlice.reducer,
 });
 
@@ -28,7 +32,7 @@ export const makeStore = () => {
     // we need it only on client side
 
     const persistConfig = {
-      key: "nextjs",
+      key: "user",
       whitelist: ["auth"], // make sure it does not clash with server keys
       storage,
     };

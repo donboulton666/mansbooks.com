@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 export const EXAMPLE_PATH = "https://mansbooks.com";
+export const IS_CAPTCHA_ENABLED = false;
 export const CMS_NAME = "Mansbooks";
 export const CMS_URL = "https://mansbooks.com";
 export const SITE_URL = "https://mansbooks.com";
@@ -43,6 +44,10 @@ export const REPO = "https://github.com/donaldboulton/mansbooks.com";
 export const SAMPLE_TICKET_NUMBER = 1234;
 
 export const NAVIGATION = [
+  {
+    name: "Live Stage",
+    route: "/stage/a",
+  },
   {
     name: "Blog",
     route: "/blog",

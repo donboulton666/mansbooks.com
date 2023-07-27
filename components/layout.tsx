@@ -29,6 +29,7 @@ import Footer from "@components/PageFooter";
 import ScrollIndicator from "./ScrollIndicator";
 import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
+import RoomCta from "./hms/demo-cta/room-cta";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 import angieLogo from "../public/angie/angelina-jordan-icon.jpg";
@@ -90,7 +91,7 @@ export default function Layout({
               !disableCta.includes(activeRoute)) ||
             activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <Dummy />}
+                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
               </div>
             ) : (
               <>
@@ -102,7 +103,7 @@ export default function Layout({
         )}
         <ViewSource />
         <div className={styles.page}>
-          <div className="blog-beams">
+          <div className="beams">
             <main className={styles.main} style={layoutStyles}>
               <SkipNavContent />
               <div className={cn(styles.full, className)}>{children}</div>

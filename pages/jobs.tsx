@@ -37,7 +37,7 @@ export default function Jobs({ jobs }: Props) {
 
   return (
     <Page meta={meta}>
-      <Layout>
+      <Layout data-datocms-noindex>
         <Header hero="Social" description={meta.description} />
         <JobsGrid jobs={jobs} />
       </Layout>

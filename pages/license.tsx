@@ -12,7 +12,7 @@ import i18n from "@lib/i18n";
 export default function License() {
   const { locale } = useRouter();
   return (
-    <Layout>
+    <Layout data-datocms-noindex>
       <Stars />
       <Head>
         <title>{i18n.header.license[locale]}</title>
