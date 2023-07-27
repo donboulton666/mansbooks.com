@@ -11,7 +11,7 @@ export default function MoreStories({ posts }) {
   }
   const { locale } = useRouter();
   return (
-    <section>
+    <section className="center mx-auto max-w-5xl">
       <h2 className="mb-4 text-4xl font-bold leading-tight tracking-tighter text-wine-200 md:text-7xl">
         {i18n.stories.more[locale]}
       </h2>

@@ -95,6 +95,7 @@ export type Post = {
   coverImage: Image;
   author: Author;
   video: Video;
+  youtubeSlug: string;
 };
 
 export type SponsorLink = {

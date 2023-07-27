@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, FC } from "react";
 import { Loading } from "../Loading";
 import {
   MicOffIcon,
@@ -26,9 +27,9 @@ import Avatar from "../Avatar";
 import Button from "../Button";
 import IconButton from "./IconButton";
 
-export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
+export const PreviewScreen: FC<{ token: string }> = ({ token }) => {
   const router = useRouter();
-  const [name, setName] = React.useState(localStorage.getItem("name") || "");
+  const [name, setName] = useState(localStorage.getItem("name") || "");
   const audioEnabled = useHMSStore(selectIsLocalAudioEnabled);
   const videoEnabled = useHMSStore(selectIsLocalVideoDisplayEnabled);
   const { enableJoin, join } = usePreview({

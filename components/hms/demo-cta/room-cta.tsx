@@ -1,4 +1,5 @@
-import React, { useState, ReactNode } from "react";
+import React from "react";
+import { useState, ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { CrossIcon, PersonIcon } from "@100mslive/react-icons";
 import DemoModal from "../demo-modal";

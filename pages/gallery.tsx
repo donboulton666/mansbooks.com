@@ -281,7 +281,10 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                   </>
                 ) : null}
                 <span className={cn(styles.button, styles["button-resource"])}>
-                  <button onClick={() => setShowModal(true)}>
+                  <button
+                    className="button-glow"
+                    onClick={() => setShowModal(true)}
+                  >
                     <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
                   </button>
                 </span>

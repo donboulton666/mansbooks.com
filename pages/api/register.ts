@@ -21,7 +21,8 @@ import validator from "validator";
 import { SAMPLE_TICKET_NUMBER, COOKIE } from "@lib/constants";
 import cookie from "cookie";
 import ms from "ms";
-import supabase, { emailToId } from "@lib/db-providers/supabase";
+import supabase from "@lib/db-providers/supabase";
+import { emailToId } from "@lib/user-api";
 import { validateCaptchaResult, IS_CAPTCHA_ENABLED } from "@lib/captcha";
 
 type ErrorResponse = {

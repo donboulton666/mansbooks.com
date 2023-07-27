@@ -122,7 +122,7 @@ export default function License() {
         </>
         ,
       </Head>
-      <div className="mx-18">
+      <div className="center mx-auto mb-4 mt-4 max-w-5xl">
         <div className="z-30 -mt-4">
           <div className="mt-10">
             <div className="mb-16 mt-16 p-8 sm:mt-2">

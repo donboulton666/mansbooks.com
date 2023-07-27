@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, FC } from "react";
 import cn from "classnames";
 import styleUtils from "../utils.module.css";
 import styles from "../conf-entry.module.css";
@@ -42,8 +43,8 @@ const Join: React.FC<Props> = ({ token, role }) => {
 
 export default Join;
 
-const ViewersJoin: React.FC<{ token: string }> = ({ token }) => {
-  const [name, setName] = React.useState(localStorage.getItem("name") || "");
+const ViewersJoin: FC<{ token: string }> = ({ token }) => {
+  const [name, setName] = useState(localStorage.getItem("name") || "");
   const actions = useHMSActions();
   const joinRoom = (e: React.FormEvent) => {
     e.preventDefault();

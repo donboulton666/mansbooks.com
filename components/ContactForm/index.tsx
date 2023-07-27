@@ -1,8 +1,8 @@
 import React from "react";
+import { useState, ReactNode, FC } from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import formImage from "../../public/react-hook-form-48.png";
-import { ReactNode, FC } from "react";
 import {
   useNetlifyForm,
   NetlifyFormProvider,
@@ -389,9 +389,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                     </button>
                     <div className="ml-2 block flex items-center">
                       <input
-                        checked={checked}
                         name="acceptTerms"
-                        value={checked ? email : ""}
                         type="checkbox"
                         aria-label="Terms Checkbox"
                         {...register("acceptTerms")}

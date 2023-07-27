@@ -11,7 +11,7 @@ export default function Footer() {
   const { locale } = useRouter();
   return (
     <>
-      <footer className="relative bg-slate-900 pb-6 pt-8" data-datocms-noindex>
+      <footer className="relative bg-slate-900 pb-6 pt-8">
         <div
           className="pointer-events-none absolute bottom-auto left-0 right-0 top-0 -mt-20 w-full overflow-hidden"
           style={{ height: "80px" }}

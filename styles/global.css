@@ -584,3 +584,21 @@ input:-webkit-autofill {
 .light {
   background-color: #1d1d1d;
 }
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px #70002a;
+  }
+  40% {
+    box-shadow: 0 0 20px #880808;
+  }
+  60% {
+    box-shadow: 0 0 20px #0000ff;
+  }
+  100% {
+    box-shadow: 0 0 -10px #800080;
+  }
+}
+
+.button-glow {
+  animation: glowing 5000ms infinite;
+}

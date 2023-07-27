@@ -14,11 +14,11 @@ const options = {
 
 const supabase =
   process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET &&
+  process.env.NEXT_PUBLIC_SUPABASE_KEY &&
   process.env.EMAIL_TO_ID_SECRET
     ? createClient<Database>(
         process.env.NEXT_PUBLIC_SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET,
+        process.env.NEXT_PUBLIC_SUPABASE_KEY,
         options
       )
     : undefined;

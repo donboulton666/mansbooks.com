@@ -289,14 +289,14 @@ export default function Post({
         <LanguageBar />
         <Header />
         <article>
-          <div className="container">
+          <div className="center mx-auto mb-4 mt-4 max-w-5xl">
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
               author={post.author}
             />
-            <div className="-mt-6 mr-2 flex flex-row text-xs text-slate-300">
+            <div className="mb-4 max-w-5xl -mt-6 mr-20 flex flex-row text-xs text-slate-300">
               <div className="flex-grow" />
               <div className="flex flex-row text-xs text-slate-300">
                 <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
@@ -305,7 +305,7 @@ export default function Post({
             </div>
             <PostBody content={post.content} />
           </div>
-          <div className="center mx-auto mb-4 mt-6 max-w-4xl">
+          <div className="center mx-auto max-w-5xl mb-4 mt-6">
             <div className="comments-container">
               <Giscus
                 id="comments"

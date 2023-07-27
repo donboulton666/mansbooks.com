@@ -1,10 +1,11 @@
+import React from "react";
 import {
   selectDevices,
   selectLocalPeerRole,
   selectRoleChangeRequest,
 } from "@100mslive/react-sdk";
 import { useHMSActions, useHMSStore } from "@100mslive/react-sdk";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import s from "./index.module.css";
 import Select from "../select";

@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
+import { useState, useEffect, useRef } from "react";
 import Script from "next/script";
 
 import { triggerOnIdle } from "../../lib/util";

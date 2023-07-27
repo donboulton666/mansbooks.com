@@ -1,3 +1,4 @@
+import React from "react";
 import { MicOffIcon } from "@100mslive/react-icons";
 import {
   useHMSStore,
@@ -9,19 +10,19 @@ import {
   selectPeerByID,
   selectTrackByID,
 } from "@100mslive/react-sdk";
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef, FC } from "react";
 import Avatar from "./Avatar";
 import { hmsConfig } from "./config";
 import useVideo from "./lib/useVideo";
 import Image from "next/legacy/image";
 
-interface Props {
+interface VideoTileProps {
   trackId: HMSTrackID;
   width: number;
   height: number;
 }
 
-const VideoTile: React.FC<Props> = ({ width, height, trackId }) => {
+const VideoTile: FC<VideoTileProps> = ({ width, height, trackId }) => {
   const track = useHMSStore(selectTrackByID(trackId));
   const peer = useHMSStore(selectPeerByID(track?.peerId));
   const isVideoEnabled = useHMSStore(selectIsPeerVideoEnabled(peer?.id));

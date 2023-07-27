@@ -1,16 +1,16 @@
-import { useHMSStore, selectLocalPeerRole } from "@100mslive/react-sdk";
 import React from "react";
+import { useHMSStore, selectLocalPeerRole } from "@100mslive/react-sdk";
 import Chat from "./Chat";
 import Participants from "./Participants";
 import ScheduleSidebar from "@components/schedule-sidebar-individual";
 import { Stage } from "@lib/types";
 import * as Tabs from "@radix-ui/react-tabs";
 
-type Props = {
+type SidebarProps = {
   allStages: Stage[];
 };
 
-const Sidebar = ({ allStages }: Props) => {
+const Sidebar = ({ allStages }: SidebarProps) => {
   const localRole = useHMSStore(selectLocalPeerRole);
   console.log("ROLE CHANGE");
   return (

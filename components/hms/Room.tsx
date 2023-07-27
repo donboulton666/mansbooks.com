@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   useHMSActions,
   useHMSStore,
@@ -9,7 +10,7 @@ import Join from "./Join";
 import Live from "./Live";
 import { useRouter } from "next/router";
 
-interface Props {
+interface RoomProps {
   stagePeers: string[];
   backstagePeers: string[];
   roomId: string;
@@ -18,9 +19,9 @@ interface Props {
 /**
  * Entry components for 100ms
  */
-const Room = ({ roomId, stagePeers, backstagePeers }: Props) => {
+const Room = ({ roomId, stagePeers, backstagePeers }: RoomProps) => {
   const router = useRouter();
-  const [token, setToken] = React.useState("");
+  const [token, setToken] = useState("");
   const actions = useHMSActions();
   const isConnected = useHMSStore(selectIsConnectedToRoom);
   React.useEffect(() => {

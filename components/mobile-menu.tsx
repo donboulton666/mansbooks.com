@@ -45,7 +45,7 @@ function ModalDialog(
   usePreventScroll();
 
   return (
-    <div className={styles["nav-overlay"]} data-datocms-noindex>
+    <div className={styles["nav-overlay"]}>
       <FocusScope contain restoreFocus autoFocus>
         <nav
           className={styles.nav}

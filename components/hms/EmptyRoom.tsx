@@ -1,5 +1,6 @@
+import React from "react";
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
 import { InviteIcon, PersonIcon } from "@100mslive/react-icons";
 import { selectLocalPeerRole } from "@100mslive/react-sdk";

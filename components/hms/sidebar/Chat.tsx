@@ -1,12 +1,12 @@
+import React from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { useHMSActions, useHMSStore } from "@100mslive/react-sdk";
 import { selectHMSMessages, selectLocalPeer } from "@100mslive/react-sdk";
-import React, { FormEvent } from "react";
-import Avatar from "../Avatar";
 import Dropdown from "./Dropdown";
 import { ChatIcon } from "@100mslive/react-icons";
 
 const Chat = () => {
-  const [msg, setMsg] = React.useState("");
+  const [msg, setMsg] = useState("");
   const actions = useHMSActions();
   const msgs = useHMSStore(selectHMSMessages);
   const sendMessage = (e: FormEvent) => {
@@ -14,7 +14,7 @@ const Chat = () => {
     actions.sendBroadcastMessage(msg);
     setMsg("");
   };
-  React.useEffect(() => {
+  useEffect(() => {
     const el = document.getElementById("chat-feed");
     if (el) {
       el.scrollTop = el.scrollHeight;

@@ -57,7 +57,7 @@ export default function PostLayout({
       <ScrollIndicator />
       <div className={styles.background}>
         {!hideNav && (
-          <header className={cn(styles.header)} data-datocms-noindex>
+          <header className={cn(styles.header)}>
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>

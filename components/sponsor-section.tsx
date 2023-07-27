@@ -32,11 +32,11 @@ import {
   LinkedinIcon,
 } from "next-share";
 
-type Props = {
+type SponsorSectionProps = {
   sponsor: Sponsor;
 };
 
-export default function SponsorSection({ sponsor }: Props) {
+export default function SponsorSection({ sponsor }: SponsorSectionProps) {
   const [showModal, setShowModal] = useState(false);
   const session = useSession();
   const supabase = useSupabaseClient();

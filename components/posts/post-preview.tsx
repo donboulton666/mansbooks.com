@@ -14,7 +14,7 @@ export default function PostPreview({
 }) {
   return (
     <>
-      <section className="mb-32 overflow-hidden rounded-lg border-double border-sky-600 bg-gray-800">
+      <section className="center mx-auto max-w-5xl mb-32 overflow-hidden rounded-lg border-double border-sky-600 bg-gray-800">
         <div className={styles.gridpost}>
           <div className={styles.imageWrapper}>
             <CoverImage

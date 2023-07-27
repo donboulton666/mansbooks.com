@@ -147,7 +147,7 @@ export default function PostHeader({
         </>
         ,
       </Head>
-      <div data-datocms-noindex>
+      <div className="center mx-auto max-w-4xl" data-datocms-noindex>
         <PostTitle>{title}</PostTitle>
         <div className="mb-8 sm:mx-0 md:mb-16">
           <CoverImage
@@ -155,7 +155,7 @@ export default function PostHeader({
             responsiveImage={coverImage.responsiveImage}
           />
         </div>
-        <div className="mx-auto mb-8 max-w-4xl sm:flex sm:items-start">
+        <div className="mb-8 sm:flex sm:items-start">
           <div className="ml-2 flex h-12 w-12 flex-shrink-0 rounded-full sm:mx-0 sm:h-10 sm:w-10">
             <Avatar name={author.name} picture={author.picture} />
             <div className="-mt-1 text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -165,7 +165,7 @@ export default function PostHeader({
             </div>
           </div>
         </div>
-        <div className="mx-auto mb-6 max-w-4xl text-lg">
+        <div className="mx-auto mb-6 text-lg">
           <Date dateString={date} />
         </div>
       </div>

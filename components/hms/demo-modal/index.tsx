@@ -1,6 +1,7 @@
+import React from "react";
 import { ArrowRightIcon } from "@100mslive/react-icons";
 import HmsLogo from "@components/icons/icon-hms";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Button from "../Button";
 import LinkButton from "../LinkButton";

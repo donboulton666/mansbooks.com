@@ -1,7 +1,8 @@
+import React from "react";
 import classNames from "classnames";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef, FC } from "react";
 
-const Frame: React.FC<{
+const Frame: FC<{
   closeOnClickOutside?: boolean;
   closeOnEsc?: boolean;
   onClose: () => void;

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   useHMSStore,
   useVideoList,
@@ -5,7 +6,7 @@ import {
   selectDominantSpeaker,
   HMSPeer,
 } from "@100mslive/react-sdk";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { hmsConfig } from "./config";
 import VideoTile from "./VideoTile";
 

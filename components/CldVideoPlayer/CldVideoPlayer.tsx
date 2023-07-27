@@ -1,4 +1,5 @@
-import React, { useRef, MutableRefObject } from "react";
+import React from "react";
+import { useRef, MutableRefObject } from "react";
 import Script from "next/script";
 import Head from "next/head";
 

@@ -9,9 +9,9 @@ import { request } from "@lib/datocms";
 import { metaTagsFragment, responsiveImageFragment } from "@lib/fragments";
 import LanguageBar from "@components/LanguageBar";
 import { useRouter } from "next/router";
-import { Views } from "../lib/types";
+import { Views } from "@lib/types";
 import useSWR from "swr";
-import fetcher from "lib/fetcher";
+import fetcher from "@lib/fetcher";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import Stars from "@components/Stars";
 import { EyeIcon } from "@heroicons/react/outline";
@@ -201,7 +201,7 @@ export default function Blog({ subscription }) {
         <Container>
           <LanguageBar />
           <Intro />
-          <div className="-mt-6 mr-2 flex flex-row text-xs text-slate-300">
+          <div className="center mx-auto max-w-4xl -mt-6 mr-2 flex flex-row text-xs text-slate-300">
             <div className="flex-grow" />
             <div className="flex flex-row text-xs text-slate-300">
               <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}

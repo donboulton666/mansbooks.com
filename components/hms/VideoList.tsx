@@ -1,3 +1,4 @@
+import React from "react";
 import {
   useHMSStore,
   useVideoList,
@@ -8,7 +9,7 @@ import {
   selectIsSomeoneScreenSharing,
   selectPeers,
 } from "@100mslive/react-sdk";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import VideoTile from "./VideoTile";
 import RoleChangeDialog from "./request";
 import EmptyRoom from "./EmptyRoom";

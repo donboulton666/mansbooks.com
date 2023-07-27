@@ -154,7 +154,7 @@ export default function Privacy() {
           </script>
         </>
       </Head>
-      <div className="mx-8 mb-32 mt-8">
+      <div className="mb-32 mt-8 center mx-auto max-w-5xl">
         <Center>{i18n.dropdown.privacy[locale]}</Center>
         <Image
           alt="Privacy"

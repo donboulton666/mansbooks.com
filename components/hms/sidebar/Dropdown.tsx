@@ -1,3 +1,5 @@
+import React from "react";
+import { FC } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import HorizontalMenuIcon from "@components/icons/icon-menu-hor";
 import {
@@ -7,7 +9,7 @@ import {
 } from "@100mslive/react-sdk";
 import { InviteStageIcon, RemoveUserIcon } from "@100mslive/react-icons";
 
-const Dropdown: React.FC<{ id: string; role: string }> = ({ id, role }) => {
+const Dropdown: FC<{ id: string; role: string }> = ({ id, role }) => {
   const actions = useHMSActions();
   const changeRole = async () => {
     const nextRole = role === "viewer" ? "invitee" : "viewer";
