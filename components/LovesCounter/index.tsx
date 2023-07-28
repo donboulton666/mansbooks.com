@@ -8,11 +8,11 @@ import useSWR from "swr";
 
 type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
-interface Props {
+interface LovesProps {
   slug: string;
 }
 
-export default function LovesCounter({
+export default function LovesCounter<LovesProps>({
   session,
   slug,
   user_id,
@@ -30,15 +30,15 @@ export default function LovesCounter({
       });
   }, [slug]);
 
-  const isLovedByMe = !!loves.find((love) => love.user_id === myProfile?.id);
+  const isLovedByMe = !!loves.find((love) => love.user_id === user.id);
 
   function setLove() {
     if (isLovedByMe) {
       supabase
         .from("loves")
-        .select()
+        .select("*")
         .eq("slug", count)
-        .eq("user_id", myProfile.id)
+        .eq("user_id", user.id)
         .then(() => {
           fetchLoves();
         });
@@ -48,7 +48,7 @@ export default function LovesCounter({
       .from("loves")
       .insert({
         slug: count,
-        user_id: myProfile.id,
+        user_id: user.id,
       })
       .then((result) => {
         fetchLoves();
@@ -56,8 +56,12 @@ export default function LovesCounter({
   }
   const deleteLove = async (id: number) => {
     try {
-      await supabase.from("loves").delete().eq("id", id).throwOnError();
-      setLoves(loves.filter((x) => x.id != id));
+      await supabase
+        .from('loves')
+        .delete()
+        .eq("id", id)
+        .throwOnError();
+        setLoves(loves.filter((x) => x.id != id));
     } catch (error) {
       console.log("error", error);
     }
@@ -70,7 +74,7 @@ export default function LovesCounter({
           className="flex items-center gap-2 text-slate-300"
           onSubmit={(e) => {
             e.preventDefault();
-            registerLoves(slug);
+            registerLoves();
           }}
         >
           <svg

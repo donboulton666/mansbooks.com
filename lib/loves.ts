@@ -1,7 +1,7 @@
 import { createClient, PostgrestError } from "@supabase/supabase-js";
 import { Database } from "@lib/schema";
 
-const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
 const supabase = createClient<Database>(supabaseUrl, supabaseKey);
 
@@ -30,8 +30,12 @@ const getLoves = async (slug: string): Promise<number> => {
 };
 
 const registerLoves = async (slug: string): Promise<void> => {
-  const { data, error } = await supabase.rpc("increment", {
-    slug_text: slug,
-  });
+  const { data, loves, error } = await supabase.rpc("increment")
+    .from('loves')
+    .select('slug')
+    .insert([
+      { slug: slug, count: 1 },
+    ])
 };
+
 export { getLoves, registerLoves };

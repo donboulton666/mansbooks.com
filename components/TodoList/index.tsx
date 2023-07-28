@@ -11,7 +11,6 @@ export default function TodoList({ session }: { session: Session }) {
   const [todos, setTodos] = useState<Todos[]>([]);
   const [newTaskText, setNewTaskText] = useState("");
   const [errorText, setErrorText] = useState("");
-
   const user = session.user;
 
   useEffect(() => {
