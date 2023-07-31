@@ -75,6 +75,7 @@
     "crypto": "^1.0.1",
     "csstype": "^3.1.1",
     "date-fns": "^2.29.3",
+    "emoji-picker-react": "^4.4.10",
     "file-loader": "^6.2.0",
     "framer-motion": "^9.0.4",
     "gapi-script": "^1.2.0",

@@ -30,11 +30,11 @@ export const SAMPLE_TICKET_NUMBER = 1234;
 
 export const NAVIGATION = [
   {
-    name: "Live Stage",
-    route: "/LiveStage",
+    name: "Webinars",
+    route: "/Webinars",
   },
   {
-    name: "Blog",
+    name: "Albums",
     route: "/blog",
   },
   {
