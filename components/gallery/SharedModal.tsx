@@ -8,7 +8,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { variants } from "../../utils/animationVariants";

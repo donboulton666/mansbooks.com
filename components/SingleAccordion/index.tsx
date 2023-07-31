@@ -57,7 +57,7 @@ const SingleAccordion: FC<SingleAccordionProps> = (props) => {
                         <ChevronDownIcon
                           className={`${
                             open ? "rotate-180 transform" : ""
-                          } mt-1 h-5 w-5 text-gray-200`}
+                          } mt-1 h-5 w-5 text-slate-200`}
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pb-2 pt-4 text-md text-slate-200">

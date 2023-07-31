@@ -65,7 +65,7 @@ const MobileHeader = () => {
         </button>
         <span className="text-xs">Auto</span>
       </div>
-      <div className="mx-4 h-[80%] w-[1px] bg-gray-700" />
+      <div className="mx-4 h-[80%] w-[1px] bg-slate-700" />
       <div className="flex w-full overflow-x-scroll">
         {stagePeers.map((l) => (
           <div

@@ -9,10 +9,10 @@ export default function NotificationsPage() {
     <Layout>
       <SocialLayout>
         <div className="mb-32">
-          <h1 className="mb-4 text-6xl text-gray-300">Notifications</h1>
+          <h1 className="mb-4 text-6xl text-slate-300">Notifications</h1>
           <Card noPadding={true}>
             <div>
-              <div className="flex items-center gap-2 border-b border-b-gray-800 p-4">
+              <div className="flex items-center gap-2 border-b border-b-slate-800 p-4">
                 <Link href={"/profile"}>
                   <Avatar />
                 </Link>
@@ -32,7 +32,7 @@ export default function NotificationsPage() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center gap-2 border-b border-b-gray-800 p-4">
+              <div className="flex items-center gap-2 border-b border-b-slate-800 p-4">
                 <Link href={"/profile"}>
                   <Avatar />
                 </Link>
@@ -52,7 +52,7 @@ export default function NotificationsPage() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center gap-2 border-b border-b-gray-800 p-4">
+              <div className="flex items-center gap-2 border-b border-b-slate-800 p-4">
                 <Link href={"/profile"}>
                   <Avatar />
                 </Link>

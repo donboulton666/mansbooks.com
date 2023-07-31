@@ -15,7 +15,7 @@ export default function HeroPost({
     <section>
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-1 md:gap-x-16 lg:gap-x-8">
         <div>
-          <h3 className="align-center mb-6 text-center text-3xl leading-tight lg:text-4xl">
+          <h3 className="align-center mb-6 text-center text-lg leading-tight lg:text-2xl">
             <Link href={`/posts/${slug}`} className="hover:underline">
               {title}
             </Link>

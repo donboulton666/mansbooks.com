@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Image, { ImageProps } from "next/image";
+import Image, { ImageProps } from "next/legacy/image";
 import { getTransformations } from "@cloudinary-util/util";
 import { transformationPlugins } from "@cloudinary-util/url-loader";
 import type { ImageOptions } from "@cloudinary-util/url-loader";

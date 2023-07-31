@@ -18,20 +18,20 @@ const Sidebar = ({ allStages }: SidebarProps) => {
       <div className="sidebar-container">
         <Tabs.List className="tabs w-full px-4">
           <Tabs.Trigger asChild value="1">
-            <button className="h-[35px] w-1/2 rounded-l-md border border-solid border-gray-700 text-[14px] text-gray-300">
+            <button className="h-[35px] w-1/2 rounded-l-md border border-solid border-slate-700 text-[14px] text-slate-300">
               Chat
             </button>
           </Tabs.Trigger>
 
           {localRole?.name === "viewer" || localRole?.name === "invitee" ? (
             <Tabs.Trigger asChild value="3">
-              <button className="h-[35px]  w-1/2 rounded-r-md border border-solid border-gray-700 text-[14px] text-gray-300">
+              <button className="h-[35px]  w-1/2 rounded-r-md border border-solid border-slate-700 text-[14px] text-slate-300">
                 Schedule
               </button>
             </Tabs.Trigger>
           ) : (
             <Tabs.Trigger asChild value="2">
-              <button className="h-[35px]  w-1/2 rounded-r-md border border-solid border-gray-700 text-[14px] text-gray-300">
+              <button className="h-[35px]  w-1/2 rounded-r-md border border-solid border-slate-700 text-[14px] text-slate-300">
                 Participants
               </button>
             </Tabs.Trigger>

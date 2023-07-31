@@ -90,4 +90,4 @@ const Participants = () => {
 
 export default Participants;
 
-const Divider = () => <div className="my-8 h-[1px] bg-gray-700" />;
+const Divider = () => <div className="my-8 h-[1px] bg-slate-700" />;

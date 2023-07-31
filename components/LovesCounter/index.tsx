@@ -56,12 +56,8 @@ export default function LovesCounter<LovesProps>({
   }
   const deleteLove = async (id: number) => {
     try {
-      await supabase
-        .from('loves')
-        .delete()
-        .eq("id", id)
-        .throwOnError();
-        setLoves(loves.filter((x) => x.id != id));
+      await supabase.from("loves").delete().eq("id", id).throwOnError();
+      setLoves(loves.filter((x) => x.id != id));
     } catch (error) {
       console.log("error", error);
     }

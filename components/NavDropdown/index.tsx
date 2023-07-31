@@ -172,7 +172,7 @@ export default function Navigation() {
 
             <Disclosure.Panel className="lg:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
-                <Link href="/Speakers" className="bg-gray-200 text-slate-200">
+                <Link href="/Speakers" className="bg-slate-200 text-slate-200">
                   Speakers
                 </Link>
               </div>

@@ -20,8 +20,8 @@ const ControlButton: React.FC<Props> = ({
         onClick={onClick}
         type="button"
         className={`flex h-11 w-11 items-center justify-center rounded-full border-2 border-solid ${
-          active ? "border-gray-200" : "border-gray-base"
-        } focus:border-gray-400 focus:bg-gray-800 focus:outline-none ${className}`}
+          active ? "border-slate-200" : "border-slate-base"
+        } focus:border-slate-400 focus:bg-slate-800 focus:outline-none ${className}`}
       >
         {children}
       </button>

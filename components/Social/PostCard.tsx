@@ -193,7 +193,7 @@ export default function PostCard({
           <ClickOutHandler onClickOut={handleClickOutsideDropdown}>
             <div className="relative">
               {dropdownOpen && (
-                <div className="absolute -right-6 w-52 rounded-sm border border-gray-100 bg-slate-900 p-3 shadow-md shadow-slate-900">
+                <div className="absolute -right-6 w-52 rounded-sm border border-slate-100 bg-slate-900 p-3 shadow-md shadow-slate-900">
                   <button onClick={toggleSave} className="-my-2 w-full">
                     <span className="-mx-4 my-2 flex gap-3 rounded-md px-4 py-2 shadow-slate-900 transition-all hover:scale-110 hover:bg-socialBlue hover:text-white hover:shadow-md">
                       {isSaved && (
@@ -418,7 +418,7 @@ export default function PostCard({
           comments.map((comment) => (
             <div key={comment.id} className="mt-2 flex items-center gap-2">
               <Avatar url={comment.profiles.avatar} />
-              <div className="rounded-3xl bg-gray-200 px-4 py-2">
+              <div className="rounded-3xl bg-slate-200 px-4 py-2">
                 <div>
                   <Link href={"/profile/" + comment.profiles.id}>
                     <span className="mr-1 font-semibold hover:underline">

@@ -34,14 +34,14 @@ const EmptyRoom = () => {
       style={{ height: "calc(100vh - 3.2 * var(--header-height))" }}
     >
       <h2 className="text-3xl ">No Speakers Present</h2>
-      <p className="text-sm text-gray-300">
+      <p className="text-sm text-slate-300">
         Looks like nobody has joined as a speaker. Invite someone to speak or
         change your role.
       </p>
       <div className="mt-8 flex space-x-4">
         <div className="relative">
           {copied ? (
-            <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
+            <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-slate-600 p-2">
               Copied to clipboard!
             </p>
           ) : null}

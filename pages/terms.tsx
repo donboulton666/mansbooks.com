@@ -102,7 +102,7 @@ export default function Terms() {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/profile",
+                    "@id": "https://mansbooks.com/terms",
                     name: "MansBooks Terms",
                   },
                   position: "2",
@@ -111,10 +111,8 @@ export default function Terms() {
               numberOfItems: "2",
               name: "Breadcrumbs",
             })}
-            ,
           </script>
         </>
-        ,
       </Head>
       <div className="center mx-auto mb-4 mt-4 max-w-5xl">
         <div className="z-30 -mt-4">

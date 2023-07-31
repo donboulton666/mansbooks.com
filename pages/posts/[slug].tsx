@@ -65,14 +65,6 @@ export async function getStaticProps({ params, preview = false, locale }) {
           title
           slug
           description
-          video {
-            provider
-            providerUid
-            thumbnailUrl
-            title
-            url
-            width
-          }
           content {
             value
             blocks {
@@ -112,14 +104,6 @@ export async function getStaticProps({ params, preview = false, locale }) {
           excerpt
           date
           description
-          video {
-            provider
-            providerUid
-            thumbnailUrl
-            title
-            url
-            width
-          }
           coverImage {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1400, h: 650 }) {
               ...responsiveImageFragment
@@ -296,7 +280,7 @@ export default function Post({
               date={post.date}
               author={post.author}
             />
-            <div className="mb-4 max-w-5xl -mt-6 mr-20 flex flex-row text-xs text-slate-300">
+            <div className="-mt-6 mb-4 mr-20 flex max-w-5xl flex-row text-xs text-slate-300">
               <div className="flex-grow" />
               <div className="flex flex-row text-xs text-slate-300">
                 <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}
@@ -305,7 +289,7 @@ export default function Post({
             </div>
             <PostBody content={post.content} />
           </div>
-          <div className="center mx-auto max-w-5xl mb-4 mt-6">
+          <div className="center mx-auto mb-4 mt-6 max-w-5xl">
             <div className="comments-container">
               <Giscus
                 id="comments"

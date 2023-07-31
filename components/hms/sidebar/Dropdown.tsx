@@ -41,10 +41,10 @@ const Dropdown: FC<{ id: string; role: string }> = ({ id, role }) => {
                 <HorizontalMenuIcon />
               </button>
             </DropdownMenu.Trigger>
-            <DropdownMenu.Content className="min-w-[220px] rounded-lg bg-gray-700">
+            <DropdownMenu.Content className="min-w-[220px] rounded-lg bg-slate-700">
               <DropdownMenu.Item asChild>
                 <button
-                  className={`flex w-full items-center rounded-lg px-2 py-3 text-sm focus:bg-gray-600 focus:outline-none`}
+                  className={`flex w-full items-center rounded-lg px-2 py-3 text-sm focus:bg-slate-600 focus:outline-none`}
                   onClick={changeRole}
                 >
                   <InviteStageIcon className="mr-2" />
@@ -56,7 +56,7 @@ const Dropdown: FC<{ id: string; role: string }> = ({ id, role }) => {
               {localRole?.name === "backstage" ? (
                 <DropdownMenu.Item asChild>
                   <button
-                    className="flex w-full items-center rounded-lg px-2 py-3 text-sm focus:bg-gray-600 focus:outline-none"
+                    className="flex w-full items-center rounded-lg px-2 py-3 text-sm focus:bg-slate-600 focus:outline-none"
                     onClick={removePeer}
                   >
                     <RemoveUserIcon className="mr-2" /> Remove user

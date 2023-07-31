@@ -38,7 +38,7 @@ export default function SavedPostsPage() {
       <SocialLayout>
         <div className="mb-32">
           <UserContextProvider>
-            <h1 className="mb-4 text-6xl text-gray-300">Saved posts</h1>
+            <h1 className="mb-4 text-6xl text-slate-300">Saved posts</h1>
             {posts.length > 0 &&
               posts.map((post) => (
                 <div key={post.id}>

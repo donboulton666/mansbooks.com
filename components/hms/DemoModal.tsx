@@ -9,9 +9,9 @@ const DemoModal = () => {
         className="fixed inset-0"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       />
-      <Dialog.Content className="dialog-content dialog-animation w-[95%] rounded-lg bg-gray-700 md:w-[400px]">
+      <Dialog.Content className="dialog-content dialog-animation w-[95%] rounded-lg bg-slate-700 md:w-[400px]">
         <h3 className="mb-4">Heads Up</h3>
-        <p className="my-0 text-sm text-gray-200">
+        <p className="my-0 text-sm text-slate-200">
           Since this is public, you might encounter other people on the stage
           who can hear / see you in case your audio / video is enabled. We
           recommend you to use the participants tab to check if there are other

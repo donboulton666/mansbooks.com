@@ -181,11 +181,11 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
     localStorage.setItem("videoInputDeviceId", a);
     setVI(a);
   };
-  const textClass = `text-gray-200`;
+  const textClass = `text-slate-200`;
   const wrapperClass = `flex md:flex-row flex-col md:items-center md:justify-between my-6`;
   return (
     <div className="flex space-x-8">
-      <div className="relative flex h-[300px] w-[300px] items-center justify-center rounded-lg bg-gray-700">
+      <div className="relative flex h-[300px] w-[300px] items-center justify-center rounded-lg bg-slate-700">
         {isVideoOn ? (
           <video
             className="mirror h-full w-full rounded-lg object-cover"
@@ -222,7 +222,7 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
                 <SettingsIcon />
               </IconButton>
             </Dialog.Trigger>
-            <Dialog.Content className="dialog-content dialog-animation w-[90%] rounded-2xl bg-gray-700  md:w-[520px] ">
+            <Dialog.Content className="dialog-content dialog-animation w-[90%] rounded-2xl bg-slate-700  md:w-[520px] ">
               <div className="flex w-full items-center justify-between">
                 <span className="text-xl font-bold">Settings</span>
                 <Dialog.Close asChild>
@@ -231,7 +231,7 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
                   </button>
                 </Dialog.Close>
               </div>
-              <p className="my-0 text-sm text-gray-300">
+              <p className="my-0 text-sm text-slate-300">
                 Control your audio, video source from here
               </p>
               {videoInput.length > 0 ? (
@@ -289,7 +289,7 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
       <div className="ml-8 flex w-[320px] flex-col justify-between">
         <div>
           <p className="my-0 text-2xl font-bold">Welcome </p>
-          <p className="text-gray-400">
+          <p className="text-slate-400">
             Preview your video and audio before joining the stage
           </p>
         </div>

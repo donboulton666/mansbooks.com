@@ -31,7 +31,7 @@ const RoomCta = () => {
     <div className="flex items-center space-x-4">
       <div className="relative">
         {copied ? (
-          <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-gray-600 p-2">
+          <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-slate-600 p-2">
             Copied to clipboard!
           </p>
         ) : null}
@@ -63,7 +63,7 @@ export const ChangeRoleDialog: React.FC<{ children: ReactNode }> = ({
         style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       />
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
-      <Dialog.Content className="dialog-content dialog-animation nav-scroll h-[600px] w-[95%] rounded-lg bg-gray-800 text-center md:h-[700px] md:w-[700px]">
+      <Dialog.Content className="dialog-content dialog-animation nav-scroll h-[600px] w-[95%] rounded-lg bg-slate-800 text-center md:h-[700px] md:w-[700px]">
         <Dialog.Close asChild className="flex w-full justify-end">
           <button>
             <CrossIcon />

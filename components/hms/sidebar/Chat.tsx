@@ -41,14 +41,14 @@ const Chat = () => {
                       isMod={m.senderRole === "backstage"}
                     />
                   ) : null}
-                  <span className="ml-1 text-xxs text-gray-400">
+                  <span className="ml-1 text-xxs text-slate-400">
                     {m.time.toLocaleTimeString([], {
                       hour: "2-digit",
                       minute: "2-digit",
                     })}
                   </span>
                 </div>
-                <div className="mt-1 w-[220px] break-words pl-2 text-gray-200">
+                <div className="mt-1 w-[220px] break-words pl-2 text-slate-200">
                   {m.message}
                 </div>
               </div>
@@ -65,7 +65,7 @@ const Chat = () => {
         ) : (
           <div className="flex h-full items-center justify-center">
             <div className="flex w-full flex-col items-center text-center">
-              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-gray-700 text-foreground md:h-[80px] md:w-[80px]">
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-slate-700 text-foreground md:h-[80px] md:w-[80px]">
                 <ChatIcon className="h-[30px] w-[30px] md:h-[50px] md:w-[50px]" />
               </div>
               <p>
@@ -104,7 +104,7 @@ const Badge: React.FC<{ isMod?: boolean; isLocal: boolean }> = ({
       style={{
         border: `${isMod ? "1px solid transparent" : "1px solid #2f6eeb"}`,
       }}
-      className={`mx-1 inline-flex items-center rounded bg-gray-700 p-0.5 text-[10px] text-foreground`}
+      className={`mx-1 inline-flex items-center rounded bg-slate-700 p-0.5 text-[10px] text-foreground`}
     >
       {isLocal ? (
         <>

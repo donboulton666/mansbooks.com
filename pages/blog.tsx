@@ -201,7 +201,7 @@ export default function Blog({ subscription }) {
         <Container>
           <LanguageBar />
           <Intro />
-          <div className="center mx-auto max-w-4xl -mt-6 mr-2 flex flex-row text-xs text-slate-300">
+          <div className="center mx-auto -mt-6 mr-2 flex max-w-4xl flex-row text-xs text-slate-300">
             <div className="flex-grow" />
             <div className="flex flex-row text-xs text-slate-300">
               <EyeIcon className="-mt-1 h-6 w-6 pr-2" />{" "}

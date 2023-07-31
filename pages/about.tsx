@@ -131,7 +131,7 @@ export default function About() {
           </script>
         </>
       </Head>
-      <div className="center mx-auto max-w-5xl mb-32 mt-8">
+      <div className="center mx-auto mb-32 mt-8 max-w-5xl">
         <Center>Angelina Jordan</Center>
         <Image
           alt="NextJs"

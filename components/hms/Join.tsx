@@ -58,7 +58,7 @@ const ViewersJoin: FC<{ token: string }> = ({ token }) => {
   return (
     <div className="text-center">
       <h1>Enter your name to continue.</h1>
-      <p className="my-0 text-sm text-gray-300">
+      <p className="my-0 text-sm text-slate-300">
         This name will be visible to other participants once you join the stage
       </p>
       <form onSubmit={(e) => joinRoom(e)} className="mt-12 md:space-x-4">
@@ -70,7 +70,7 @@ const ViewersJoin: FC<{ token: string }> = ({ token }) => {
             localStorage.setItem("name", e.target.value);
           }}
           required
-          className="w-80 rounded-lg bg-gray-600 p-4 text-md placeholder:text-gray-400 focus:bg-wine-300 focus:outline-none"
+          className="w-80 rounded-lg bg-slate-600 p-4 text-md placeholder:text-slate-400 focus:bg-wine-300 focus:outline-none"
           placeholder="Enter your name to join the event"
           type="text"
         />
@@ -104,7 +104,7 @@ const MobileRoleDialog = () => {
         className="fixed inset-0"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       />
-      <Dialog.Content className="dialog-content dialog-animation nav-scroll w-[95%] rounded-lg bg-gray-700 text-center md:w-96">
+      <Dialog.Content className="dialog-content dialog-animation nav-scroll w-[95%] rounded-lg bg-slate-700 text-center md:w-96">
         <h3>Joining as a speaker is not supported on mobile</h3>
         <div className="mt-4 flex w-full justify-center">
           <a href={`/stage/${stage || "a"}?role=viewer`}>

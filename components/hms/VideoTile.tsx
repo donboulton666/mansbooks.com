@@ -62,7 +62,7 @@ const Video: React.FC<{ id: string; mirror: boolean }> = ({ id, mirror }) => {
   const ref = useVideo(id);
   return (
     <video
-      className={`h-full w-full rounded-lg border-solid border-transparent bg-gray-base object-cover  ${
+      className={`h-full w-full rounded-lg border-solid border-transparent bg-slate-base object-cover  ${
         mirror ? "mirror" : ""
       }`}
       ref={ref}

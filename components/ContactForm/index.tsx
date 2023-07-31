@@ -376,7 +376,7 @@ const ContactForm: FC<ContactFormProps> = (props) => {
                   <span className="group relative flex items-center text-slate-200">
                     <button
                       type="submit"
-                      className="rounded-md bg-gray-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-900/50"
+                      className="rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-slate-900 hover:shadow-slate-900/50"
                     >
                       Send
                     </button>

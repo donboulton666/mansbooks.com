@@ -19,15 +19,6 @@ function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
     document.body.classList?.remove("loading");
   }, []);
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      pageview(url, document.title);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, []);
 
   const [supabase] = useState(() => createBrowserSupabaseClient());
 

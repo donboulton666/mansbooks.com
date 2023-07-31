@@ -14,7 +14,7 @@ const SettingDialog: FC = ({ children }) => {
   const videoInput = allDevices["videoInput"] || [];
   const audioInput = allDevices["audioInput"] || [];
   const audioOutput = allDevices["audioOutput"] || [];
-  const textClass = `text-gray-200`;
+  const textClass = `text-slate-200`;
   const wrapperClass = `flex md:flex-row flex-col md:items-center md:justify-between my-6`;
   return (
     <Dialog.Root>
@@ -23,7 +23,7 @@ const SettingDialog: FC = ({ children }) => {
         style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       />
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
-      <Dialog.Content className="dialog-content dialog-animation  w-[90%] rounded-2xl bg-gray-700 md:w-[520px] ">
+      <Dialog.Content className="dialog-content dialog-animation  w-[90%] rounded-2xl bg-slate-700 md:w-[520px] ">
         <div className="flex w-full items-center justify-between">
           <span className="text-xl font-bold">Settings</span>
           <Dialog.Close asChild>
@@ -33,7 +33,7 @@ const SettingDialog: FC = ({ children }) => {
           </Dialog.Close>
         </div>
         {isAllowedToPublish.audio && isAllowedToPublish.video ? (
-          <p className="my-0 text-sm text-gray-300">
+          <p className="my-0 text-sm text-slate-300">
             Control your audio, video source from here
           </p>
         ) : null}

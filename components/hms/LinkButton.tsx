@@ -20,7 +20,7 @@ const LinkButton: React.FC<LinkButtonProps & JSX.IntrinsicElements["a"]> = ({
   if (variant === "danger") {
     variantClass = `bg-red-500 hover:bg-red-600 focus:bg-red-400`;
   } else if (variant === "secondary") {
-    variantClass = `bg-gray-600 hover:bg-gray-500 focus:bg-gray-400`;
+    variantClass = `bg-slate-600 hover:bg-slate-500 focus:bg-slate-400`;
   } else {
     variantClass = `bg-brand-300 hover:bg-brand-200 focus:bg-brand-400`;
   }

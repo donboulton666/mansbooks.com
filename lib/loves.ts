@@ -30,12 +30,11 @@ const getLoves = async (slug: string): Promise<number> => {
 };
 
 const registerLoves = async (slug: string): Promise<void> => {
-  const { data, loves, error } = await supabase.rpc("increment")
-    .from('loves')
-    .select('slug')
-    .insert([
-      { slug: slug, count: 1 },
-    ])
+  const { data, loves, error } = await supabase
+    .rpc("increment")
+    .from("loves")
+    .select("*")
+    .insert([{ slug: slug, count: 1 }]);
 };
 
 export { getLoves, registerLoves };

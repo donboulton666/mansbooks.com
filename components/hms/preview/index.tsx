@@ -42,7 +42,7 @@ export const PreviewScreen: FC<{ token: string }> = ({ token }) => {
       <div className="mt-4 flex w-[320px] flex-col justify-between md:ml-8 md:mt-0">
         <div>
           <p className="my-0 text-2xl font-bold">Welcome {name}</p>
-          <p className="text-gray-400">
+          <p className="text-slate-400">
             Preview your video and audio before joining the stage
           </p>
         </div>
@@ -59,7 +59,7 @@ export const PreviewScreen: FC<{ token: string }> = ({ token }) => {
             placeholder="Enter your name"
             required
             maxLength={20}
-            className="h-10 w-full rounded-lg bg-gray-600 pl-2 text-md placeholder:text-gray-400 focus:bg-gray-700 focus:outline-none"
+            className="h-10 w-full rounded-lg bg-slate-600 pl-2 text-md placeholder:text-slate-400 focus:bg-slate-700 focus:outline-none"
             onChange={(e) => {
               setName(e.target.value);
               localStorage.setItem("name", e.target.value);
@@ -89,7 +89,7 @@ const PreviewContainer: React.FC<{ name: string }> = ({ name }) => {
   const { isLocalAudioEnabled, isLocalVideoEnabled, toggleAudio, toggleVideo } =
     useAVToggle();
   return (
-    <div className="relative flex h-[300px] w-[300px] items-center justify-center rounded-lg bg-gray-700">
+    <div className="relative flex h-[300px] w-[300px] items-center justify-center rounded-lg bg-slate-700">
       {localPeer ? (
         <>
           <PreviewVideo videoTrack={localPeer.videoTrack} />

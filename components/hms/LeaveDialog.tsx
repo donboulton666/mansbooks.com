@@ -27,9 +27,9 @@ const LeaveDialog = () => {
           <HangUpIcon />
         </ControlButton>
       </Dialog.Trigger>
-      <Dialog.Content className="dialog-content dialog-animation w-96 rounded-lg bg-gray-700">
+      <Dialog.Content className="dialog-content dialog-animation w-96 rounded-lg bg-slate-700">
         <h3>Leave Stage?</h3>
-        <p className="my-0 text-sm text-gray-200">
+        <p className="my-0 text-sm text-slate-200">
           Are you sure you want to leave the stage?
         </p>
         <div className="mt-6 flex space-x-4">
