@@ -5,7 +5,7 @@ import {
 } from "@100mslive/hms-video-react";
 import Footer from '@components/StageFooter';
 import User from './Tile/User';
-import VideoTile from "@components/Tile/videoTile";
+import VideoTile from "./Tile/VideoTile";
 import ChatContainer from './Chat/ChatContainer';
 
 const Room = () => {
