@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const ChatFeed = ({ children }) => {
   return (
     <div
-      id='chat-feed'
-      className='w-full px-2 flex flex-col nav-scroll'
-      style={{ height: 'calc(80vh - 100px)' }}
+      id="chat-feed"
+      className="nav-scroll flex w-full flex-col px-2"
+      style={{ height: "calc(80vh - 100px)" }}
     >
       {children}
     </div>

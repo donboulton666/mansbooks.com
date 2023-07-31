@@ -1,16 +1,16 @@
-import React from 'react';
-import LeaveButton from '../Buttons/LeaveButton';
-import AudioButton from '../Buttons/AudioButton';
-import VideoButton from '../Buttons/VideoButton';
-import UserCount from '../Buttons/UserCount';
-import HandRaiseButton from '../Buttons/HandRaiseButton';
+import React from "react";
+import LeaveButton from "../Buttons/LeaveButton";
+import AudioButton from "../Buttons/AudioButton";
+import VideoButton from "../Buttons/VideoButton";
+import UserCount from "../Buttons/UserCount";
+import HandRaiseButton from "../Buttons/HandRaiseButton";
 import {
   useHMSActions,
   useHMSStore,
   selectIsLocalAudioEnabled,
   selectIsLocalVideoEnabled,
   selectLocalPeer,
-} from '@100mslive/hms-video-react';
+} from "@100mslive/hms-video-react";
 
 const Footer = ({ count }) => {
   const hmsActions = useHMSActions();
@@ -19,10 +19,10 @@ const Footer = ({ count }) => {
 
   const peer = useHMSStore(selectLocalPeer);
   const isListenerOrHandraised =
-    peer.roleName === 'listener' || peer.roleName === 'handraise';
+    peer.roleName === "listener" || peer.roleName === "handraise";
 
   return (
-    <footer className='flex h-20 mb-6 pb-6 w-11/12 space-x-4 left-0 items-center justify-center'>
+    <footer className="left-0 mb-6 flex h-20 w-11/12 items-center justify-center space-x-4 pb-6">
       <UserCount count={count} />
       <AudioButton
         active={isLocalAudioEnabled}
@@ -32,11 +32,11 @@ const Footer = ({ count }) => {
       />
       {isListenerOrHandraised && (
         <HandRaiseButton
-          isHandRaised={peer.roleName === 'handraise'}
+          isHandRaised={peer.roleName === "handraise"}
           toggleHandRaise={() =>
             hmsActions.changeRole(
               peer.id,
-              peer.roleName === 'listener' ? 'handraise' : 'listener',
+              peer.roleName === "listener" ? "handraise" : "listener",
               true
             )
           }

@@ -3,8 +3,8 @@ import { useState } from "react";
 const Preview = ({ handleSubmit }) => {
   const [userName, setUserName] = useState("");
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-gray-800">
-      <div className="w-64 h-32 p-4 rounded-lg">
+    <div className="flex h-screen w-screen items-center justify-center bg-gray-800">
+      <div className="h-32 w-64 rounded-lg p-4">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -15,11 +15,11 @@ const Preview = ({ handleSubmit }) => {
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
             name="userName"
-            className="shadow appearance-none border border-slate-700 rounded-lg w-full py-2 px-3 text-slate-300 leading-tight focus:outline-none focus:shadow-outline mb-4"
+            className="focus:shadow-outline mb-4 w-full appearance-none rounded-lg border border-slate-700 px-3 py-2 leading-tight text-slate-300 shadow focus:outline-none"
             placeholder="John Doe"
             required
           />
-          <button className="px-4 py-2 bg-blue-500 rounded-lg text-slate-300">
+          <button className="rounded-lg bg-blue-500 px-4 py-2 text-slate-300">
             Submit
           </button>
         </form>

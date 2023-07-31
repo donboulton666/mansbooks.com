@@ -12,7 +12,8 @@ export default function Intro() {
           href="/expo"
           className="hover:text-success text-blue-500 transition-colors duration-200"
         >
-          {" "}Webinars
+          {" "}
+          Webinars
         </Link>{" "}
         <span className="text-wine-200">&</span>{" "}
         <Link

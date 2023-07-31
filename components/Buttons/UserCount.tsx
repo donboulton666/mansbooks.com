@@ -1,10 +1,10 @@
-import React from 'react';
-import UsersIcon from '../icons/UsersIcon';
+import React from "react";
+import UsersIcon from "../icons/UsersIcon";
 
 const UserCount = ({ count }) => {
   return (
-    <div className='flex items-center px-6 py-3 bg-slate-800 text-white font-bold  rounded-3xl space-x-2'>
-      <UsersIcon /> <p className='inline-block'>{count}</p>
+    <div className="flex items-center space-x-2 rounded-3xl bg-slate-800 px-6 py-3  font-bold text-white">
+      <UsersIcon /> <p className="inline-block">{count}</p>
     </div>
   );
 };

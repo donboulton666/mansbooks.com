@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const UserTile = ({ children }) => {
   return (
-    <div className='m-2 relative flex flex-col justify-center items-center'>
+    <div className="relative m-2 flex flex-col items-center justify-center">
       {children}
     </div>
   );

@@ -33,7 +33,7 @@ const Frame: FC<{
     // transparent overlay: `inset-0` to stretch over the entire screen (combines`top-0`, `right-0`, `bottom-0`, and `left-0`)
     <div
       className={classNames(
-        "bg-slate-600/90 fixed inset-0 z-10 p-8 text-white",
+        "fixed inset-0 z-10 bg-slate-600/90 p-8 text-white",
         `${open ? "visible" : "invisible"}` // control visibility via `open` attribute (or render conditionally)
       )}
       onClick={closeOnClickOutside ? onOverlayClick : undefined}

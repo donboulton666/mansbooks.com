@@ -12,7 +12,7 @@ const ReadComments = async (req: NextApiRequest, res: NextApiResponse) => {
       const { data: getData, error: getError } = await supabase
         .from(COMMENT_TABLE_NAME)
         .select("*")
-        .eq("post_id", + postId);
+        .eq("post_id", +postId);
       if (getError) {
         return res.status(500).json({ message: getError.message });
       }

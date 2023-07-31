@@ -2,7 +2,7 @@ import {
   HMSRoomProvider,
   useHMSStore,
   selectIsConnectedToRoom,
-} from '@100mslive/hms-video-react';
+} from "@100mslive/hms-video-react";
 import Head from "next/head";
 import Layout from "@components/PostLayout";
 import Join from "@components/Join";

@@ -1,20 +1,20 @@
-import React from 'react';
-import UserTile from './UserTile';
-import UserWrapper from './UserWrapper';
-import UserInfo from './UserInfo';
+import React from "react";
+import UserTile from "./UserTile";
+import UserWrapper from "./UserWrapper";
+import UserInfo from "./UserInfo";
 import {
   useHMSStore,
   selectPeerAudioByID,
   selectIsPeerAudioEnabled,
   selectLocalPeer,
-} from '@100mslive/hms-video-react';
-import Permission from '../Roles/permission';
+} from "@100mslive/hms-video-react";
+import Permission from "../Roles/permission";
 
 const User = ({ peer }) => {
   const level = useHMSStore(selectPeerAudioByID(peer.id)) || 0;
   const audioEnabled = useHMSStore(selectIsPeerAudioEnabled(peer.id));
   const localPeer = useHMSStore(selectLocalPeer);
-  const isModerator = localPeer.roleName === 'moderator';
+  const isModerator = localPeer.roleName === "moderator";
   return (
     <UserTile>
       {isModerator ? (

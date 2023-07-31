@@ -2,7 +2,7 @@ const RoleSelect = ({ role, setRole }) => {
   return (
     <select
       type="text"
-      className="bg-gray-900 border border-gray-700 rounded p-2 w-full text-center"
+      className="w-full rounded border border-gray-700 bg-gray-900 p-2 text-center"
       value={role}
       onChange={(e) => setRole(e.target.value)}
     >
