@@ -16,6 +16,7 @@ import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
 import Stars from "@components/Stars";
+import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
 
 type Props = {
   children: ReactNode;
@@ -35,6 +36,7 @@ export default function PostLayout({
   const router = useRouter();
   const activeRoute = router.asPath;
   const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
+
   return (
     <>
       <Stars />
@@ -44,6 +46,17 @@ export default function PostLayout({
           <header className={cn(styles.header)}>
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
+              <Link href="/" className={styles.logo}>
+                <span className="inline-flex">
+                  <Image
+                    src={angieLogo}
+                    width={40}
+                    height={40}
+                    className="h-12 w-12 rounded-full"
+                    alt="Angie Logo"
+                  />
+                </span>
+              </Link>
               <Link href="/" className={styles.logo}>
                 <Logo />
               </Link>
