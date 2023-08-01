@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/legacy/image";
 import { CookieConsent } from "react-cookie-consent";
 import cn from "classnames";
 import { useRouter } from "next/router";
@@ -52,7 +53,7 @@ export default function PostLayout({
                     src={angieLogo}
                     width={40}
                     height={40}
-                    className="h-12 w-12 rounded-full"
+                    className="h-10 w-10 rounded-full"
                     alt="Angie Logo"
                   />
                 </span>
