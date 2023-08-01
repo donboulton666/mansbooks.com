@@ -12,7 +12,7 @@ import Logo from "../icons/icon-hms";
 import MobileMenu from "../mobile-menu";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
-import Dummy from "@components/Dummy";
+import RoomCta from "../hms/demo-cta/room-cta";
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
@@ -48,12 +48,12 @@ export default function PostLayout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <span className="inline-flex">
+                <span className="inline-flex mx-3">
                   <Image
                     src={angieLogo}
                     width={40}
                     height={40}
-                    className="h-10 w-10 rounded-full"
+                    className="-pr-6 h-10 w-10 rounded-full"
                     alt="Angie Logo"
                   />
                 </span>
@@ -81,7 +81,7 @@ export default function PostLayout({
               !disableCta.includes(activeRoute)) ||
             activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <Dummy />}
+                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
               </div>
             ) : (
               <>

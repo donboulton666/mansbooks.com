@@ -1,4 +1,4 @@
-const endPoint = process.env.NEXT_PUBLIC_HMS_TOKEN_ENDPOINT;
+const endPoint = process.env.TOKEN_ENDPOINT;
 
 export const getToken = async (
   role: string,

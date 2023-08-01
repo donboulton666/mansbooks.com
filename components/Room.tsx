@@ -2,7 +2,7 @@ import {
   useHMSStore,
   selectLocalPeer,
   selectPeers,
-} from "@100mslive/hms-video-react";
+} from "@100mslive/react-sdk";
 import Footer from "@components/StageFooter";
 import User from "./Tile/User";
 import VideoTile from "./Tile/VideoTile";

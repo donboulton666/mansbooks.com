@@ -10,19 +10,19 @@ const data = [
   {
     name: "Moderator",
     roleName: "moderator",
-    role: "backstage",
-    desc: `This role is meant for the event organisers. The moderator is like a stage admin - can add speakers, remove them, invite attendees on stage, kick them out of the event, etc`,
+    role: "moderator",
+    desc: `This role is meant for the event organisers. The moderator is like a stage admin - can add speakers, remove them, invite speakers on stage, kick them out of the event, etc`,
   },
   {
     name: "Speaker",
     roleName: "speaker",
-    role: "stage",
-    desc: "This one is self explanatory. Use this role for folks who are going to be the main guests of the session. Speakers can also invite attendees on the stage, and respond to public chat messages.",
+    role: "speaker",
+    desc: "This one is self explanatory. Use this role for folks who are going to be the main guests of the session. Speakers can also invite speakers on the stage, and respond to public chat messages.",
   },
   {
-    name: "Attendee",
-    roleName: "attendee",
-    role: "viewer",
+    name: "Listener",
+    roleName: "listener",
+    role: "listener",
     desc: `This one is the most basic role - can see and hear whatever is happening on the stage, cannot share their audio and video, and can put up messages on the public chat section.`,
   },
 ];

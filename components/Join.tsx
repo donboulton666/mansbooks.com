@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Avatar from "boring-avatars";
-import { useHMSActions } from "@100mslive/hms-video-react";
+import { useHMSActions } from "@100mslive/react-sdk";
 
 import NameInput from "./Join/NameInput";
 import RoleSelect from "./Join/RoleSelect";

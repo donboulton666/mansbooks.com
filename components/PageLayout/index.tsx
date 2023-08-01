@@ -44,12 +44,12 @@ export default function Layout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <span className="inline-flex">
+                <span className="inline-flex ml-3">
                   <Image
                     src={angieLogo}
                     width={40}
                     height={40}
-                    className="h-10 w-10 rounded-full"
+                    className="h-12 w-12 rounded-full"
                     alt="Angie Logo"
                   />
                 </span>

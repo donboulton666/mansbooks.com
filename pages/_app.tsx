@@ -2,7 +2,7 @@ import "@styles/global.css";
 import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
 import React from "react";
-import { SSRProvider, OverlayProvider } from "react-aria";
+import { OverlayProvider } from "react-aria";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import ResizeHandler from "@components/resize-handler";
@@ -23,19 +23,17 @@ function App({ Component, pageProps, router }: AppProps) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <SSRProvider>
-      <OverlayProvider>
-        <HMSRoomProvider>
-          <SessionContextProvider
-            supabaseClient={supabase}
-            initialSession={pageProps.initialSession}
-          >
-            <AnyComponent {...pageProps} />
-          </SessionContextProvider>
-          <ResizeHandler />
-        </HMSRoomProvider>
-      </OverlayProvider>
-    </SSRProvider>
+    <OverlayProvider>
+      <HMSRoomProvider>
+        <SessionContextProvider
+          supabaseClient={supabase}
+          initialSession={pageProps.initialSession}
+        >
+          <AnyComponent {...pageProps} />
+        </SessionContextProvider>
+        <ResizeHandler />
+      </HMSRoomProvider>
+    </OverlayProvider>
   );
 }
 

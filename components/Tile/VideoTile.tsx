@@ -5,7 +5,7 @@ import {
   useHMSActions,
   useHMSStore,
   selectCameraStreamByPeerID,
-} from "@100mslive/hms-video-react";
+} from "@100mslive/react-sdk";
 
 const VideoTile = ({ peer, isLocal }) => {
   const hmsActions = useHMSActions();
