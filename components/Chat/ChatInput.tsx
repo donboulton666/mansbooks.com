@@ -1,6 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { Picker } from "emoji-mart";
+import dynamic from 'next/dynamic'
+
+const data = dynamic(() => import('@emoji-mart/data'), {
+  ssr: false,
+})
+
+const Picker = dynamic(() => import('emoji-mart'), {
+  ssr: false,
+})
 
 const ChatInput = ({ value, onChange, onKeyPress }) => {
   const [showEmojis, setShowEmojis] = useState(false);
@@ -12,7 +20,7 @@ const ChatInput = ({ value, onChange, onKeyPress }) => {
     setInput(input + emoji);
   };
   return (
-    <div className="items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <input
         value={value}
         onChange={onChange}
@@ -31,12 +39,12 @@ const ChatInput = ({ value, onChange, onKeyPress }) => {
         }}
       />
       <button
-        className="border-0 bg-transparent outline-0"
+        className="rounded-full bg-slate-900 p-3 text-slate-200"
         onClick={() => setShowEmojis(!showEmojis)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="icon"
+          className="h-6 w-6 text-slate-200"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -51,7 +59,7 @@ const ChatInput = ({ value, onChange, onKeyPress }) => {
       </button>
       {showEmojis && (
         <>
-          <Picker onSelect={addEmoji} theme={dark} set={apple} />
+          <Picker data={data} onEmojiSelect={addEmoji} />
         </>
       )}
     </div>
