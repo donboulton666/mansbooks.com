@@ -1,31 +1,32 @@
 import React from "react";
 import { useState } from "react";
+
 import dynamic from 'next/dynamic'
 
-const data = dynamic(() => import('@emoji-mart/data'), {
-  ssr: false,
-})
+let Picker;
 
-const Picker = dynamic(() => import('emoji-mart'), {
-  ssr: false,
-})
+if (typeof window !== 'undefined') {
+  import('emoji-picker-react').then(_module => {
+    Picker = _module.default;
+  });
+}
 
-const ChatInput = ({ value, onChange, onKeyPress }) => {
-  const [showEmojis, setShowEmojis] = useState(false);
-  const addEmoji = (e) => {
-    let sym = e.unified.split("-");
-    let codesArray = [];
-    sym.forEach((el) => codesArray.push("0x" + el));
-    let emoji = String.fromCodePoint(...codesArray);
-    setInput(input + emoji);
+const ChatInput = ({ onChange, onKeyPress }) => {
+  const [value, setValue] = useState('');
+  const [showPicker, setShowPicker] = useState(false);
+ 
+  const onEmojiClick = (event, emojiObject) => {
+    setValue(prevInput => prevInput + emojiObject.emoji);
+    setShowPicker(false);
   };
+
   return (
     <div className="flex flex-col items-center justify-center">
       <input
         value={value}
-        onChange={onChange}
+        onChange={e => setValue(e.target.value)}
         type="text"
-        className="m-2 w-72 rounded-3xl border-none bg-slate-900 px-3 py-2 placeholder-slate-200 outline-none ring-brand-100 focus:bg-black focus:ring-1"
+        className="m-2 w-64 rounded-3xl border-none bg-slate-900 px-3 py-2 placeholder-slate-200 outline-none ring-brand-100 focus:bg-black focus:ring-1"
         placeholder="Send Message"
         onKeyPress={(event) => {
           if (event.key === "Enter") {
@@ -39,8 +40,8 @@ const ChatInput = ({ value, onChange, onKeyPress }) => {
         }}
       />
       <button
-        className="rounded-full bg-slate-900 p-3 text-slate-200"
-        onClick={() => setShowEmojis(!showEmojis)}
+        className="rounded-full bg-slate-900 p-1 text-slate-200"
+        onClick={() => setShowPicker(val => !val)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +58,9 @@ const ChatInput = ({ value, onChange, onKeyPress }) => {
           />
         </svg>
       </button>
-      {showEmojis && (
-        <>
-          <Picker data={data} onEmojiSelect={addEmoji} />
-        </>
-      )}
+      {showPicker && <Picker
+        onEmojiClick={onEmojiClick} />
+      }
     </div>
   );
 };
