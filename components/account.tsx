@@ -235,7 +235,6 @@ export default function Account({ session }: { session: Session }) {
           />
         </div>
       </div>
-
       <div className="mb-4 mt-4">
         <button
           className="button primary block"

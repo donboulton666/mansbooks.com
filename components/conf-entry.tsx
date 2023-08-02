@@ -6,7 +6,6 @@ import LoadingDots from "./loading-dots";
 import { register } from "@lib/user-api";
 import useEmailQueryParam from "@lib/hooks/use-email-query-param";
 import Captcha, { useCaptcha } from "./captcha";
-import Account from "@components/Auth/account"
 
 type FormState = "default" | "loading" | "error";
 
@@ -139,7 +138,6 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
         </div>
         <Captcha ref={captchaRef} onVerify={handleRegister} />
       </form>
-      <Account />
     </div>
   );
 }
