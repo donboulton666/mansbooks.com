@@ -7,9 +7,8 @@ const RoleSelect = ({ role, setRole }) => {
       onChange={(e) => setRole(e.target.value)}
     >
       <option value="listener">Listener</option>
-      <option value="viewer">Viewer</option>
+      <option value="stage">Stage</option>
       <option value="speaker">Speaker</option>
-      <option value="moderator">Moderator</option>
       <option value="backstage">Backstage</option>
     </select>
   );

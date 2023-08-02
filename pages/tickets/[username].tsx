@@ -38,7 +38,7 @@ export default function TicketShare({
         url: `${SITE_URL}/tickets/${username}`,
       }
     : {
-        title: "Ticket Demo - Virtual Event Starter Kit",
+        title: "Ticket Demo - 100mslive",
         description: META_DESCRIPTION,
         image: `/api/ticket-images/${usernameFromParams}`,
         url: `${SITE_URL}/tickets/${usernameFromParams}`,
