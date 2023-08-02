@@ -1,19 +1,3 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import React from "react";
 import { ReactNode } from "react";
 import Link from "next/link";
@@ -30,6 +14,7 @@ import ScrollIndicator from "./ScrollIndicator";
 import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
 import RoomCta from "./hms/demo-cta/room-cta";
+import Logo from "../icons/icon-hms";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 import angieLogo from "../public/angie/angelina-jordan-icon.jpg";
@@ -61,15 +46,24 @@ export default function Layout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <span className="mr-4 inline-flex">
+                <span className="mx-3 inline-flex">
                   <Image
                     src={angieLogo}
                     width={40}
                     height={40}
-                    className="ml-4 h-12 w-12 rounded-full"
+                    className="-pr-6 h-10 w-10 rounded-full"
+                    aria-describedby="Angie Logo"
                     alt="Angie Logo"
                   />
                 </span>
+              </Link>
+              <Link
+                href="https://100ms.live/"
+                target="_blank"
+                aria-describedby="100ms.live WebSite"
+                className={styles.logo}
+              >
+                <Logo />
               </Link>
             </div>
             <div className={styles.tabs}>

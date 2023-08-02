@@ -11,7 +11,7 @@ const data = [
     name: "Moderator",
     roleName: "moderator",
     role: "moderator",
-    desc: `This role is meant for the event organisers. The moderator is like a stage admin - can add speakers, remove them, invite speakers on stage, kick them out of the event, etc`,
+    desc: `This role is meant for the event organizers. The moderator is like a stage admin - can add speakers, remove them, invite speakers on stage, kick them out of the event, etc`,
   },
   {
     name: "Speaker",
@@ -95,7 +95,7 @@ export const CopyButton = ({ text = "" }) => {
   return (
     <div className="relative">
       {copied ? (
-        <p className="absolute left-0 top-10 flex w-48 justify-center  rounded-lg bg-slate-600 p-2">
+        <p className="absolute left-0 top-10 flex w-48 justify-center  rounded-lg bg-slate-900 p-2">
           Copied to clipboard!
         </p>
       ) : null}

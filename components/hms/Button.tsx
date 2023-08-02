@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps & JSX.IntrinsicElements["button"]> = ({
   if (variant === "danger") {
     variantClass = `bg-red-500 hover:bg-red-600 focus:bg-red-400`;
   } else if (variant === "secondary") {
-    variantClass = `bg-slate-600 hover:bg-slate-500 focus:bg-slate-400`;
+    variantClass = `bg-slate-900 hover:bg-slate-500 focus:bg-slate-400`;
   } else {
     variantClass = `bg-brand-300 hover:bg-brand-200 focus:bg-brand-400`;
   }

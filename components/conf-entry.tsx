@@ -1,19 +1,3 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import cn from "classnames";
 import { useCallback, useState } from "react";
 import styleUtils from "./utils.module.css";
@@ -22,6 +6,7 @@ import LoadingDots from "./loading-dots";
 import { register } from "@lib/user-api";
 import useEmailQueryParam from "@lib/hooks/use-email-query-param";
 import Captcha, { useCaptcha } from "./captcha";
+import Account from "@components/Auth/account"
 
 type FormState = "default" | "loading" | "error";
 
@@ -110,7 +95,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
       <h2 className={cn(styles.description)}>
         Submit your details below to enter
       </h2>
-      <form onSubmit={onSubmit} className={styles.form}>
+      <form onSubmit={onSubmit} className={styles.form} hidden>
         <div className={styles["form-row"]}>
           <label
             htmlFor="email-input-field"
@@ -154,6 +139,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
         </div>
         <Captcha ref={captchaRef} onVerify={handleRegister} />
       </form>
+      <Account />
     </div>
   );
 }
