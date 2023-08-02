@@ -2,6 +2,7 @@ import {
   useHMSStore,
   selectLocalPeer,
   selectPeers,
+  selectIsConnectedToRoom
 } from "@100mslive/react-sdk";
 import Footer from "@components/StageFooter";
 import User from "./Tile/User";
