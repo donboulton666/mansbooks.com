@@ -14,7 +14,7 @@ import ScrollIndicator from "./ScrollIndicator";
 import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
 import RoomCta from "./hms/demo-cta/room-cta";
-import Logo from "../icons/icon-hms";
+import Logo from "./icons/icon-hms";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 import angieLogo from "../public/angie/angelina-jordan-icon.jpg";
