@@ -14,9 +14,7 @@ const Conference = () => {
     const token = await getToken(userName);
     hmsActions.join({ authToken: token, userName });
   };
-  return (
-    <>{isConnected ? <Room /> : <Join />}</>
-  );
+  return <>{isConnected ? <Room /> : <Join />}</>;
 };
 
 export default Conference;

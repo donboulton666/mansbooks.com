@@ -73,7 +73,7 @@ export default function Navigation() {
                               href="/login"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
@@ -92,7 +92,7 @@ export default function Navigation() {
                               href="/angies-profile"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
@@ -111,7 +111,7 @@ export default function Navigation() {
                               href="/social"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
+                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
@@ -130,7 +130,7 @@ export default function Navigation() {
                               href="/speakers"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
+                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
@@ -150,7 +150,7 @@ export default function Navigation() {
                               href="/sitemap.xml"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-white"
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300"
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">

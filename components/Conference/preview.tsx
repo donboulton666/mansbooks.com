@@ -3,7 +3,7 @@ import { useState } from "react";
 const Preview = ({ handleSubmit }) => {
   const [userName, setUserName] = useState("");
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-gray-800">
+    <div className="flex h-screen w-screen items-center justify-center bg-slate-900">
       <div className="h-32 w-64 rounded-lg p-4">
         <form
           onSubmit={(e) => {
@@ -19,7 +19,7 @@ const Preview = ({ handleSubmit }) => {
             placeholder="John Doe"
             required
           />
-          <button className="rounded-lg bg-blue-700 px-4 py-2 text-white">
+          <button className="rounded-lg bg-blue-700 px-4 py-2 text-slate-300">
             Submit
           </button>
         </form>

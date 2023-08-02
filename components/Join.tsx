@@ -33,7 +33,7 @@ const Join = () => {
 
   return (
     <>
-      <div className="absolute left-1/2 top-1/2 flex w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-4 rounded-lg bg-gray-900 p-8 text-white opacity-70 shadow-lg md:w-1/2 lg:w-1/3">
+      <div className="absolute left-1/2 top-1/2 flex w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-4 rounded-lg bg-slate-900 p-8 text-slate-300 opacity-70 shadow-lg md:w-1/2 lg:w-1/3">
         <Avatar name={name} variant="marble" size="72" />
         <NameInput name={name} setName={setName} />
         <RoleSelect role={role} setRole={setRole} />

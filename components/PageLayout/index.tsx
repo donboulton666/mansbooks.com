@@ -44,7 +44,7 @@ export default function Layout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <span className="inline-flex ml-3">
+                <span className="ml-3 inline-flex">
                   <Image
                     src={angieLogo}
                     width={40}

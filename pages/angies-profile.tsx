@@ -133,7 +133,7 @@ export default function LocalProfile() {
               <h1 className="mt-1 text-lg text-wine-200 sm:text-wine-300 md:text-2xl">
                 Angelina Jordan
               </h1>
-              <div className="text-sm font-medium leading-4 text-white sm:text-slate-500">
+              <div className="text-sm font-medium leading-4 text-slate-300 sm:text-slate-500">
                 Queen Of Jazz
               </div>
               <Bio />
@@ -199,7 +199,7 @@ export default function LocalProfile() {
               <Link
                 href="/expo/seventhheaven"
                 type="button"
-                className="rounded-lg bg-wine-300 px-3 py-2 text-sm font-medium leading-6 text-white"
+                className="rounded-lg bg-wine-300 px-3 py-2 text-sm font-medium leading-6 text-slate-300"
               >
                 7th Heaven
               </Link>

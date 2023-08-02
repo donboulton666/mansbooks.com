@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   useHMSActions,
   useHMSStore,
   selectIsConnectedToRoom,
 } from "@100mslive/react-sdk";
-import { getToken } from "./lib/getToken";
 import Join from "./Join";
 import Live from "./Live";
 import { useRouter } from "next/router";
@@ -19,24 +18,43 @@ interface RoomProps {
 /**
  * Entry components for 100ms
  */
+
+const joinRoom = async () => {
+  try {
+    const response = await fetch("/api/token", {
+      method: "POST",
+      body: JSON.stringify({ role }),
+    });
+    const { token } = await response.json();
+    hmsActions.join({
+      userName: name || "Anonymous",
+      authToken: token,
+      settings: {
+        isAudioMuted: true,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
 const Room = ({ roomId, stagePeers, backstagePeers }: RoomProps) => {
   const router = useRouter();
   const [token, setToken] = useState("");
-  const actions = useHMSActions();
+  const hmsActions = useHMSActions();
   const isConnected = useHMSStore(selectIsConnectedToRoom);
-  React.useEffect(() => {
+  useEffect(() => {
     if (!router.isReady) return;
     const role = router.query.role ? (router.query.role as string) : "viewer";
     console.log(role);
-    getToken(role, roomId)
+    joinRoom(role, roomId)
       .then((t) => setToken(t))
       .catch((e) => console.error(e));
   }, [roomId, backstagePeers, stagePeers, router.query, router.isReady]);
-  React.useEffect(() => {
+  useEffect(() => {
     window.onunload = () => {
-      actions.leave();
+      hmsActions.leave();
     };
-  }, [actions]);
+  }, [hmsActions]);
   return (
     <>
       {isConnected ? (

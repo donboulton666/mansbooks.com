@@ -185,7 +185,7 @@ export default function PostFormCard({ onPost }) {
         <div className="mr-2 grow text-right">
           <button
             onClick={createPost}
-            className="rounded-md bg-socialBlue px-6 py-1 text-white"
+            className="rounded-md bg-socialBlue px-6 py-1 text-slate-300"
           >
             Share
           </button>

@@ -99,7 +99,7 @@ export default function SharedModal({
                 <>
                   {index > 0 && (
                     <button
-                      className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
+                      className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300 focus:outline-none"
                       style={{ transform: "translate3d(0, 0, 0)" }}
                       onClick={() => changePhotoId(index - 1)}
                     >
@@ -108,7 +108,7 @@ export default function SharedModal({
                   )}
                   {index + 1 < images.length && (
                     <button
-                      className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
+                      className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300 focus:outline-none"
                       style={{ transform: "translate3d(0, 0, 0)" }}
                       onClick={() => changePhotoId(index + 1)}
                     >
@@ -117,11 +117,11 @@ export default function SharedModal({
                   )}
                 </>
               )}
-              <div className="absolute right-0 top-0 flex items-center gap-2 p-3 text-white">
+              <div className="absolute right-0 top-0 flex items-center gap-2 p-3 text-slate-300">
                 {navigation ? (
                   <a
                     href={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`}
-                    className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+                    className="rounded-full bg-black/50 p-2 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300"
                     target="_blank"
                     title="Open full size version"
                     rel="noreferrer"
@@ -131,7 +131,7 @@ export default function SharedModal({
                 ) : (
                   <a
                     href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Mansbooks%20Angelina%20Jordan!%0A%0Ahttps://mansbooks.com/gallery/p/${index}`}
-                    className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+                    className="rounded-full bg-black/50 p-2 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300"
                     rel="noopener noreferrer"
                     target="_blank"
                     aria-describedby="Open Twitter"
@@ -148,16 +148,16 @@ export default function SharedModal({
                       `${index}.jpg`
                     )
                   }
-                  className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+                  className="rounded-full bg-black/50 p-2 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300"
                   title="Download full size version"
                 >
                   <DownloadIcon className="h-5 w-5" />
                 </button>
               </div>
-              <div className="absolute left-0 top-0 flex items-center gap-2 p-3 text-white">
+              <div className="absolute left-0 top-0 flex items-center gap-2 p-3 text-slate-300">
                 <button
                   onClick={() => closeModal()}
-                  className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+                  className="rounded-full bg-black/50 p-2 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300"
                 >
                   {navigation ? (
                     <XIcon className="h-5 w-5" />

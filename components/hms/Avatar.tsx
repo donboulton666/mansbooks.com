@@ -30,7 +30,7 @@ const Avatar: React.FC<Props> = ({
   }
   return (
     <div
-      className={`flex items-center justify-center object-cover font-bold  text-white ${sizeClass[size]} rounded-full ${className}`}
+      className={`flex items-center justify-center object-cover font-bold text-slate-300 ${sizeClass[size]} rounded-full ${className}`}
       style={{ backgroundColor: color, ...custom }}
     >
       {initials}

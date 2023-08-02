@@ -12,7 +12,7 @@ import Logo from "../icons/icon-hms";
 import MobileMenu from "../mobile-menu";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
-import RoomCta from "../hms/demo-cta/room-cta";
+import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
@@ -36,7 +36,7 @@ export default function PostLayout({
 }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
-  const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
+  const disableCta = ["/schedule", "/speakers", "/expo", "/jobs", "/blog"];
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function PostLayout({
             <div className={styles["header-logos"]}>
               <MobileMenu key={router.asPath} />
               <Link href="/" className={styles.logo}>
-                <span className="inline-flex mx-3">
+                <span className="mx-3 inline-flex">
                   <Image
                     src={angieLogo}
                     width={40}
@@ -58,7 +58,12 @@ export default function PostLayout({
                   />
                 </span>
               </Link>
-              <Link href="/" className={styles.logo}>
+              <Link
+                href="https://100ms.live/"
+                target="_blank"
+                aria-describedby="100ms.live WebSite"
+                className={styles.logo}
+              >
                 <Logo />
               </Link>
             </div>
@@ -81,7 +86,7 @@ export default function PostLayout({
               !disableCta.includes(activeRoute)) ||
             activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
+                {activeRoute === "/" ? <NavDropdown /> : <Dummy />}
               </div>
             ) : (
               <>

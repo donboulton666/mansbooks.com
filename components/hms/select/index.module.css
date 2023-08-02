@@ -1,6 +1,6 @@
 .container {
   appearance: none;
-  color: var(--accents-1);
+  color: #fff;
   display: inline-flex;
   text-transform: uppercase;
   user-select: none;

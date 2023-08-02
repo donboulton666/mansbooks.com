@@ -17,7 +17,6 @@ export default function SchedulePage({ allStages }: Props) {
     title: "Schedule - Angelina Jordan",
     description: META_DESCRIPTION,
   };
-
   return (
     <Page meta={meta}>
       <Layout>

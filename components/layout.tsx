@@ -51,7 +51,7 @@ export default function Layout({
 }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
-  const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
+  const disableCta = ["/schedule", "/gallery", "/expo", "/blogs"];
   return (
     <>
       <ScrollIndicator />

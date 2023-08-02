@@ -20,7 +20,7 @@ export default function Intro() {
           href="/blog"
           className="hover:text-success text-blue-500 transition-colors duration-200"
         >
-          ALbums
+          Albums
         </Link>
         .
       </h4>

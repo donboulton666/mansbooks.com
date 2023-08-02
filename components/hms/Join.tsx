@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, FC } from "react";
+import { useState, useEffect, FC } from "react";
 import cn from "classnames";
 import styleUtils from "../utils.module.css";
 import styles from "../conf-entry.module.css";
@@ -16,27 +16,29 @@ interface Props {
   role: string;
 }
 
-const Join: React.FC<Props> = ({ token, role }) => {
+const Join: FC<Props> = ({ token, role }) => {
   const isMobile = isMobileDevice();
   return (
-    <div
-      className={cn(
-        styles.container,
-        styleUtils.appear,
-        styleUtils["appear-first"]
-      )}
-    >
-      {isMobile && role !== "viewer" ? <MobileRoleDialog /> : null}
-      {token ? (
-        <>
-          {" "}
-          {role === "viewer" ? (
-            <ViewersJoin token={token} />
-          ) : (
-            <>{isMobile ? null : <PreviewScreen token={token} />}</>
-          )}
-        </>
-      ) : null}
+    <div className="absolute left-1/2 top-1/2 flex w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-4 rounded-lg bg-slate-900 p-8 text-slate-300 opacity-70 shadow-lg md:w-1/2 lg:w-1/3">
+      <div
+        className={cn(
+          styles.container,
+          styleUtils.appear,
+          styleUtils["appear-first"]
+        )}
+      >
+        {isMobile && role !== "viewer" ? <MobileRoleDialog /> : null}
+        {token ? (
+          <>
+            {" "}
+            {role === "viewer" ? (
+              <ViewersJoin token={token} />
+            ) : (
+              <>{isMobile ? null : <PreviewScreen token={token} />}</>
+            )}
+          </>
+        ) : null}
+      </div>
     </div>
   );
 };
@@ -45,16 +47,30 @@ export default Join;
 
 const ViewersJoin: FC<{ token: string }> = ({ token }) => {
   const [name, setName] = useState(localStorage.getItem("name") || "");
-  const actions = useHMSActions();
-  const joinRoom = (e: React.FormEvent) => {
+  const hmsActions = useHMSActions();
+  const joinRoom = async () => {
     e.preventDefault();
-    actions.join({
-      userName: name || "David",
-      authToken: token,
-      initEndpoint: process.env.NEXT_PUBLIC_HMS_INIT_PEER_ENPOINT || undefined,
-      rememberDeviceSelection: true,
-    });
+    try {
+      const response = await fetch("/api/token", {
+        method: "POST",
+        body: JSON.stringify({ role }),
+      });
+      const { token } = await response.json();
+      hmsActions.join({
+        userName: name || "Anonymous",
+        authToken: token,
+        initEndpoint:
+          process.env.NEXT_PUBLIC_HMS_INIT_PEER_ENPOINT || undefined,
+        settings: {
+          isAudioMuted: true,
+        },
+        rememberDeviceSelection: true,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   return (
     <div className="text-center">
       <h1>Enter your name to continue.</h1>
@@ -91,9 +107,9 @@ export function isMobileDevice() {
 }
 
 const MobileRoleDialog = () => {
-  const [stage, setStage] = React.useState(``);
+  const [stage, setStage] = useState(``);
   const router = useRouter();
-  React.useEffect(() => {
+  useEffect(() => {
     if (router.query.slug) {
       setStage(router.query.slug as string);
     }
