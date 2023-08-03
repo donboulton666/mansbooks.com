@@ -10,15 +10,14 @@ import { NAVIGATION } from "@lib/constants";
 import styles from "../layout.module.css";
 import Logo from "../icons/icon-hms";
 import MobileMenu from "../mobile-menu";
+import NavDropdown from "@components/NavDropdown";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
 import Dummy from "@components/Dummy";
-import NavDropdown from "@components/NavDropdown";
 import DemoButton from "../hms/demo-cta";
 import RoomCta from "../hms/demo-cta/room-cta";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
-import Stars from "@components/Stars";
 import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
 
 type Props = {
@@ -29,7 +28,7 @@ type Props = {
   isLive?: boolean;
 };
 
-export default function PostLayout({
+export default function StageLayout({
   children,
   className,
   hideNav,
@@ -42,7 +41,6 @@ export default function PostLayout({
 
   return (
     <>
-      <Stars />
       <ScrollIndicator />
       <div className={styles.background}>
         {!hideNav && (
@@ -86,9 +84,9 @@ export default function PostLayout({
             {(hmsConfig.hmsIntegration &&
               isLive &&
               !disableCta.includes(activeRoute)) ||
-            activeRoute === "/webinar" ? (
+            activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/webinar" ? <DemoButton /> : <RoomCta />}
+                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
               </div>
             ) : (
               <>

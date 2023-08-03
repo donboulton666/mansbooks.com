@@ -5,7 +5,7 @@ import {
   useHMSStore,
   selectIsConnectedToRoom,
 } from "@100mslive/react-sdk";
-import { getToken } from "../../services/getToken";
+import { getToken } from "../../pages/api/token";
 import Join from "@components/Join";
 import Live from "./Live";
 import { useRouter } from "next/router";
@@ -15,7 +15,6 @@ interface Props {
   backstagePeers: string[];
   roomId: string;
 }
-
 /**
  * Entry components for 100ms
  */

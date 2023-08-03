@@ -11,9 +11,9 @@ import Image from "next/legacy/image";
 import MobileMenu from "./mobile-menu";
 import Footer from "@components/PageFooter";
 import ScrollIndicator from "./ScrollIndicator";
-import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
 import RoomCta from "./hms/demo-cta/room-cta";
+import DemoButton from "./hms/demo-cta";
 import Logo from "./icons/icon-hms";
 import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
@@ -36,7 +36,7 @@ export default function Layout({
 }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
-  const disableCta = ["/schedule", "/gallery", "/expo", "/blogs"];
+  const disableCta = ["/schedule", "/gallery", "/expo"];
   return (
     <>
       <ScrollIndicator />
@@ -85,7 +85,7 @@ export default function Layout({
               !disableCta.includes(activeRoute)) ||
             activeRoute === "/" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
+                {activeRoute === "/" ? <DemoButton /> : <RoomCta />}
               </div>
             ) : (
               <>

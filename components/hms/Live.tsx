@@ -5,6 +5,7 @@ import List from "./Conference";
 import toast, { Toaster } from "react-hot-toast";
 import { useHMSNotifications } from "@100mslive/react-sdk";
 import DemoModal from "./DemoModal";
+import Chat from "@components/Chat/ChatContainer";
 
 /**
  * Live Video/Audio component
@@ -13,8 +14,9 @@ const Live = () => {
   return (
     <div className="relative flex h-full flex-col items-center justify-center">
       <Notification />
-      <Header />
+      <Header />      
       <List />
+      <Chat />
       <Footer />
       {process.env.NEXT_PUBLIC_LIVE_DEMO === "true" ? <DemoModal /> : null}
     </div>

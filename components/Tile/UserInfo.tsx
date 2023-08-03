@@ -4,6 +4,7 @@ import MicOnIcon from "../icons/MicOnIcon";
 import Avatar from "boring-avatars";
 
 const UserInfo = ({ peer, audioEnabled }) => {
+  
   return (
     <>
       <div className="absolute z-20 flex h-full w-full flex-col items-center justify-center text-center">

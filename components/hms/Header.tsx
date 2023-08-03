@@ -33,9 +33,7 @@ const Header = () => {
           {localPeer.roleName === "viewer" ? (
             <button
               onClick={leave}
-              className={
-                "color-white mirror bg-slate-base h-10 w-10 cursor-pointer rounded-lg p-2 md:static "
-              }
+              className="color-white mirror bg-slate-base h-10 w-10 cursor-pointer rounded-lg p-2 md:static"
             >
               <ExitIcon />
             </button>
@@ -44,19 +42,17 @@ const Header = () => {
 
         <div className="align-end flex flex-col gap-x-2 md:flex-row md:items-center  md:gap-2">
           <div className="flex flex-row items-center gap-x-2 align-bottom md:gap-2">
-            <p className="my-0 text-sm font-semibold md:text-2xl md:leading-8 ">
+            <p className="my-0 text-sm font-semibold md:text-2xl md:leading-8">
               Event
             </p>
             <span
-              className="flex items-center rounded-sm px-0.5 text-xs font-semibold md:px-1 md:text-sm "
-              style={{ backgroundColor: "#ed4c5a" }}
-            >
+              className="live-button flex items-center rounded-sm px-0.5 text-xs font-semibold md:px-1 md:text-sm">
               LIVE
             </span>
           </div>
 
-          <div className="flex  ">
-            <span className="text-md leading-5 " style={{ color: "#999a99" }}>
+          <div className="flex">
+            <span className="text-md leading-5 text-slate-300">
               9:30 pm - 10:30 pm
             </span>
           </div>
@@ -64,7 +60,7 @@ const Header = () => {
       </div>
 
       {dominantPeer ? (
-        <div className="hidden  items-center space-x-2 md:flex">
+        <div className="hidden items-center space-x-2 md:flex">
           <SpeakerIcon />
           <span>{dominantPeer.name}</span>
         </div>
@@ -73,9 +69,7 @@ const Header = () => {
       <div className="flex flex-row justify-end gap-4">
         <div className="flex items-center">
           <div
-            className="flex items-center gap-2 rounded-3xl border-solid px-4 py-2 text-sm font-normal leading-4 "
-            style={{ borderWidth: "1px", borderColor: "#3b3b3b" }}
-          >
+            className="flex items-center gap-2 border border-slate-900 rounded-3xl border-solid px-4 py-2 text-sm font-normal leading-4">
             <UsersIcon /> <span className="">{peers.length}</span>{" "}
             <span className="hidden md:block"> watching</span>
           </div>

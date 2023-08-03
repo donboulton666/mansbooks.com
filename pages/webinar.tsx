@@ -131,7 +131,7 @@ const Webinar = () => {
                 </script>
               </>
             </Head>
-            <DynamicConferenceWrapper />
+            <div className="mb-10 h-[80vh]"><DynamicConferenceWrapper /></div>            
           </Container>
         </Layout>
       </Page>

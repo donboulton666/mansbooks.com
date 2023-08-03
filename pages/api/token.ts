@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 
-export default async function getAuthToken(req, res) {
+export default async function getToken(req, res) {
   try {
     const { role } = JSON.parse(req.body);
 
