@@ -106,7 +106,7 @@ const MobileRoleDialog = () => {
       <Dialog.Content className="dialog-content dialog-animation w-[95%] rounded-lg bg-gray-700 text-center md:w-96">
         <h3>Joining as a speaker is not supported on mobile</h3>
         <p className="mt-4 text-xs text-gray-200">
-          We have setup a few profiles to make it easy for you or your team to
+          There are a few profiles to make it easy for you or your team to
           experience each perspective. Join in one click or share access with
           anyone else.
         </p>

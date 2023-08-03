@@ -14,6 +14,8 @@ import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
 import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
+import DemoButton from "../hms/demo-cta";
+import RoomCta from "../hms/demo-cta/room-cta";
 import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
 import Stars from "@components/Stars";
@@ -36,7 +38,7 @@ export default function PostLayout({
 }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
-  const disableCta = ["/schedule", "/speakers", "/expo", "/jobs", "/blog"];
+  const disableCta = ["/schedule", "/speakers", "/expo", "/jobs"];
 
   return (
     <>
@@ -84,9 +86,9 @@ export default function PostLayout({
             {(hmsConfig.hmsIntegration &&
               isLive &&
               !disableCta.includes(activeRoute)) ||
-            activeRoute === "/" ? (
+            activeRoute === "/webinar" ? (
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <Dummy />}
+                {activeRoute === "/webinar" ? <DemoButton /> : <RoomCta />}
               </div>
             ) : (
               <>
