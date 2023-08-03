@@ -2,7 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Page from "@components/page";
 import Schedule from "@components/schedule";
-import Layout from "@components/StageLayout";
+import Layout from "@components/PageLayout";
 import Header from "@components/header";
 import { META_DESCRIPTION } from "@lib/constants";
 import Container from "@components/posts/container";
