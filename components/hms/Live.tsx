@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import List from "./Conference";
@@ -12,7 +11,7 @@ import DemoModal from "./DemoModal";
  */
 const Live = () => {
   return (
-    <div className="absolute top-1/4 flex h-full flex-col items-center justify-center opacity-75">
+    <div className="relative flex h-full flex-col items-center justify-center">
       <Notification />
       <Header />
       <List />
@@ -26,7 +25,7 @@ export default Live;
 
 const Notification = () => {
   const notification = useHMSNotifications();
-  useEffect(() => {
+  React.useEffect(() => {
     if (!notification) {
       return;
     }

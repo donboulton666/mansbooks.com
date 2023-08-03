@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, FC } from "react";
 import Avatar from "boring-avatars";
 import { useHMSActions } from "@100mslive/react-sdk";
-
 import NameInput from "./Join/NameInput";
 import RoleSelect from "./Join/RoleSelect";
 import JoinButton from "./Join/JoinButton";
 
-const Join = () => {
-  const hmsActions = useHMSActions();
+interface JoinProps {
+  token: string;
+  role: string;
+}
 
+const Join: FC<JoinProps> = () => {
+  const hmsActions = useHMSActions();
   const [name, setName] = useState("");
   const [role, setRole] = useState("listener");
 
@@ -33,7 +36,7 @@ const Join = () => {
 
   return (
     <>
-      <div className="absolute left-1/2 top-1/2 flex w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-4 rounded-lg bg-slate-900 p-8 text-slate-300 opacity-70 shadow-lg md:w-1/2 lg:w-1/3">
+      <div className="absolute left-1/2 top-1/2 flex w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-4 rounded-lg bg-slate-900 p-8 text-slate-300 opacity-60 shadow-lg md:w-1/2 lg:w-1/3">
         <Avatar name={name} variant="marble" size="72" />
         <NameInput name={name} setName={setName} />
         <RoleSelect role={role} setRole={setRole} />
