@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import EmojiPicker, { EmojiClickData, Emoji } from "emoji-picker-react";
 
 function onClick(emojiData: EmojiClickData, event: MouseEvent) {

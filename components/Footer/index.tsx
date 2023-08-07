@@ -326,7 +326,7 @@ export default function Footer() {
                     <li>
                       <Link
                         className="ml-2 block pb-2 text-sm font-semibold text-slate-400 hover:text-pink-500"
-                        href="/profile"
+                        href="/angies-profile"
                         aria-describedby="Profile"
                         area-label="Profile"
                       >

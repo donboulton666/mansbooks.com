@@ -2,7 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Page from "@components/page";
 import Schedule from "@components/schedule";
-import Layout from "@components/PageLayout";
+import Layout from "@components/layout";
 import Header from "@components/header";
 import { META_DESCRIPTION } from "@lib/constants";
 import Container from "@components/posts/container";
@@ -131,7 +131,9 @@ const Webinar = () => {
                 </script>
               </>
             </Head>
-            <div className="mb-10 h-[80vh]"><DynamicConferenceWrapper /></div>            
+            <div className="mb-10 h-[80vh]">
+              <DynamicConferenceWrapper />
+            </div>
           </Container>
         </Layout>
       </Page>

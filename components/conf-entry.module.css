@@ -183,6 +183,14 @@
   overflow: hidden;
 }
 
+.button-resource {
+  background: #111111;
+  color: #fff;
+  border: 1px solid var(--accents-7);
+  max-width: 100%;
+  margin-bottom: var(--space-4x);
+}
+
 @media (min-width: 1200px) {
   .form-row {
     margin: 0;

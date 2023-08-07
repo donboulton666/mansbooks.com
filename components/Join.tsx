@@ -36,7 +36,7 @@ const Join: FC<JoinProps> = () => {
 
   return (
     <>
-      <div className="sticky left-1/2 top-1/2 flex w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-4 rounded-lg bg-slate-900 p-8 text-slate-300 opacity-60 shadow-lg md:w-1/2 lg:w-1/3">
+      <div className="absolute left-0 right-0 mx-auto mb-20 mt-20 flex w-11/12 max-w-md flex-col items-center space-y-4 rounded-lg bg-slate-900 object-center p-8 text-slate-300 opacity-60 shadow-lg md:w-1/2 lg:w-1/3">
         <Avatar name={name} variant="marble" size="72" />
         <NameInput name={name} setName={setName} />
         <RoleSelect role={role} setRole={setRole} />

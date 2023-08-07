@@ -1,29 +1,13 @@
-/**
- * Copyright 2020 Vercel Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-import { NextApiRequest, NextApiResponse } from "next";
-import { nanoid } from "nanoid";
-import { ConfUser } from "@lib/types";
-import validator from "validator";
-import { SAMPLE_TICKET_NUMBER, COOKIE } from "@lib/constants";
-import cookie from "cookie";
-import ms from "ms";
-import supabase from "@lib/db-providers/supabase";
-import { emailToId } from "@lib/user-api";
-import { validateCaptchaResult, IS_CAPTCHA_ENABLED } from "@lib/captcha";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { nanoid } from 'nanoid';
+import { ConfUser } from '@lib/types';
+import validator from 'validator';
+import { COOKIE } from '@lib/constants';
+import cookie from 'cookie';
+import ms from 'ms';
+import { getTicketNumberByUserId, getUserById, createUser } from '@lib/db-api';
+import { emailToId } from '@lib/user-api';
+import { validateCaptchaResult, IS_CAPTCHA_ENABLED } from '@lib/captcha';
 
 type ErrorResponse = {
   error: {
@@ -36,23 +20,23 @@ export default async function register(
   req: NextApiRequest,
   res: NextApiResponse<ConfUser | ErrorResponse>
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== 'POST') {
     return res.status(501).json({
       error: {
-        code: "method_unknown",
-        message: "This endpoint only responds to POST",
-      },
+        code: 'method_unknown',
+        message: 'This endpoint only responds to POST'
+      }
     });
   }
 
-  const email: string = ((req.body.email as string) || "").trim().toLowerCase();
+  const email: string = ((req.body.email as string) || '').trim().toLowerCase();
   const token: string = req.body.token as string;
   if (!validator.isEmail(email)) {
     return res.status(400).json({
       error: {
-        code: "bad_email",
-        message: "Invalid email",
-      },
+        code: 'bad_email',
+        message: 'Invalid email'
+      }
     });
   }
 
@@ -62,77 +46,46 @@ export default async function register(
     if (!isCaptchaValid) {
       return res.status(400).json({
         error: {
-          code: "bad_captcha",
-          message: "Invalid captcha",
-        },
+          code: 'bad_captcha',
+          message: 'Invalid captcha'
+        }
       });
     }
   }
 
-  let id;
+  let id = nanoid();
   let ticketNumber: number;
-  let createdAt: number;
-  let statusCode: number;
-  let name: string | undefined = undefined;
-  let username: string | undefined = undefined;
-  if (supabase) {
-    id = emailToId(email);
-    let {
-      data: users,
-      error,
-      existingTicketNumberString,
-    } = await supabase.from("users").select(`id:${id}`, "ticketNumber");
+  let createdAt: number = Date.now();
+  let statusCode = 200;
+  let name: string | null | undefined = undefined;
+  let username: string | null | undefined = undefined;
 
-    if (existingTicketNumberString) {
-      let {
-        data: users,
-        error,
-        existingTicketNumberString,
-      } = await supabase.from("users").select(`id:${id}`, "ticketNumber");
-      const item = await supabase
-        .from("users")
-        .select(`id:${id}`, "name", "username", "createdAt");
-      name = item[0]!;
-      username = item[1]!;
-      ticketNumber = parseInt(existingTicketNumberString, 10);
-      createdAt = parseInt(item[2]!, 10);
-      statusCode = 200;
-    } else {
-      ticketNumber = await supabase.increment("count");
-      createdAt = Date.now();
-      let {
-        data: users,
-        error,
-        existingTicketNumberString,
-      } = await supabase
-        .from("users")
-        .select(
-          `id:${id}`,
-          "email",
-          email,
-          "ticketNumber",
-          ticketNumber,
-          "createdAt",
-          createdAt
-        );
-      statusCode = 201;
-    }
-  } else {
-    id = nanoid();
-    ticketNumber = SAMPLE_TICKET_NUMBER;
-    createdAt = Date.now();
+  id = emailToId(email);
+  const existingTicketNumberString = await getTicketNumberByUserId(id);
+
+  if (existingTicketNumberString) {
+    const user = await getUserById(id);
+    name = user.name;
+    username = user.username;
+    ticketNumber = parseInt(existingTicketNumberString, 10);
+    createdAt = user.createdAt!;
     statusCode = 200;
+  } else {
+    const newUser = await createUser(id, email);
+    ticketNumber = newUser.ticketNumber!;
+    createdAt = newUser.createdAt!;
+    statusCode = 201;
   }
 
   // Save `key` in a httpOnly cookie
   res.setHeader(
-    "Set-Cookie",
+    'Set-Cookie',
     cookie.serialize(COOKIE, id, {
       httpOnly: true,
-      sameSite: "strict",
-      secure: process.env.NODE_ENV === "production",
-      path: "/api",
-      expires: new Date(Date.now() + ms("7 days")),
+      sameSite: 'strict',
+      secure: process.env.NODE_ENV === 'production',
+      path: '/api',
+      expires: new Date(Date.now() + ms('7 days'))
     })
   );
 
@@ -142,6 +95,6 @@ export default async function register(
     ticketNumber,
     createdAt,
     name,
-    username,
+    username
   });
 }

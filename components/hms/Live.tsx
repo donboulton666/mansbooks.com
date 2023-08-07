@@ -14,7 +14,7 @@ const Live = () => {
   return (
     <div className="relative flex h-full flex-col items-center justify-center">
       <Notification />
-      <Header />      
+      <Header />
       <List />
       <Chat />
       <Footer />

@@ -3682,7 +3682,7 @@ export default function LocalProfile() {
                 </div>
               </SingleAccordion>
               <Center>My Song (Visualizer)</Center>
-              <div class="grid grid-cols-3 place-items-center gap-4">
+              <div className="grid grid-cols-3 place-items-center gap-4">
                 <div>My Love</div>
                 <a href="https://www.youtube.com/watch?v=1U6WY_z8Vu8">
                   <Image

@@ -606,6 +606,10 @@ select {
 
 .live-button {
   background: #333333; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #333333, #dd1818); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #333333, #dd1818); 
- }
+  background: -webkit-linear-gradient(
+    to right,
+    #333333,
+    #dd1818
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #333333, #dd1818);
+}

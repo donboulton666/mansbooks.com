@@ -20,7 +20,7 @@ import { Stage } from "@lib/types";
 import useLoginStatus from "@lib/hooks/use-login-status";
 import styles from "./stage-container.module.css";
 import styleUtils from "./utils.module.css";
-import ConfEntry from "./conf-entry";
+import ConfEntry from "./conf-next-entry";
 import Room from "./hms/Room";
 import Sidebar from "./hms/sidebar";
 import { useHMSStore, selectIsConnectedToRoom } from "@100mslive/react-sdk";

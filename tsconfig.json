@@ -22,7 +22,13 @@
       "@lib/*": ["lib/*"],
       "@styles/*": ["styles/*"]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -30,7 +36,8 @@
     "**/*.ts",
     "**/*.js",
     "**/*.tsx",
-    "components/Slack/Layout,tsx"
+    "components/Slack/Layout,tsx",
+    ".next/types/**/*.ts"
   ],
   "plugins": [
     {

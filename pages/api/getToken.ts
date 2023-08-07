@@ -9,7 +9,7 @@ export default async function getToken(req, res) {
       body: JSON.stringify({
         user_id: v4(),
         room_id: process.env.ROOM_ID,
-        role,
+        role: role,
       }),
     });
 

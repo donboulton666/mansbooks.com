@@ -65,7 +65,7 @@ export default function LovesCounter<LovesProps>({
 
   return (
     <span className="group relative ml-2 mr-2 flex items-center justify-end pr-4">
-      <div class="inline-flex rounded-md shadow-sm" role="group">
+      <div className="inline-flex rounded-md shadow-sm" role="group">
         <button
           className="flex items-center gap-2 text-slate-300"
           onSubmit={(e) => {
@@ -101,7 +101,7 @@ export default function LovesCounter<LovesProps>({
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

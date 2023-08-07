@@ -7,7 +7,7 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
-import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
@@ -20,7 +20,7 @@ function App({ Component, pageProps, router }: AppProps) {
     document.body.classList?.remove("loading");
   }, []);
 
-  const [supabase] = useState(() => createBrowserSupabaseClient());
+  const [supabase] = useState(() => createPagesBrowserClient());
 
   return (
     <OverlayProvider>

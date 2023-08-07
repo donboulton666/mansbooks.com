@@ -8,10 +8,10 @@ import LinkButton from "../LinkButton";
 
 const data = [
   {
-    name: "Moderator",
-    roleName: "moderator",
-    role: "moderator",
-    desc: `This role is meant for the event organizers. The moderator is like a stage admin - can add speakers, remove them, invite speakers on stage, kick them out of the event, etc`,
+    name: "Backstage",
+    roleName: "backstage",
+    role: "backstage",
+    desc: `This role is meant for the event organizers. The backstage is like a stage admin - can add speakers, remove them, invite speakers on stage, kick them out of the event, etc`,
   },
   {
     name: "Speaker",
@@ -41,7 +41,7 @@ const DemoModal = () => {
         Take your Webinar for a test drive
       </p>
       <p className="my-0 text-[15px] text-slate-300">
-        We have setup a few profiles to make it easy for you or your team to
+        There Are a few profiles to make it easy for you or your team to
         experience each perspective. Join in one click or share access with
         anyone else.
       </p>

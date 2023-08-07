@@ -45,8 +45,7 @@ const Header = () => {
             <p className="my-0 text-sm font-semibold md:text-2xl md:leading-8">
               Event
             </p>
-            <span
-              className="live-button flex items-center rounded-sm px-0.5 text-xs font-semibold md:px-1 md:text-sm">
+            <span className="live-button flex items-center rounded-sm px-0.5 text-xs font-semibold md:px-1 md:text-sm">
               LIVE
             </span>
           </div>
@@ -68,8 +67,7 @@ const Header = () => {
 
       <div className="flex flex-row justify-end gap-4">
         <div className="flex items-center">
-          <div
-            className="flex items-center gap-2 border border-slate-900 rounded-3xl border-solid px-4 py-2 text-sm font-normal leading-4">
+          <div className="flex items-center gap-2 rounded-3xl border border-solid border-slate-900 px-4 py-2 text-sm font-normal leading-4">
             <UsersIcon /> <span className="">{peers.length}</span>{" "}
             <span className="hidden md:block"> watching</span>
           </div>
