@@ -6,6 +6,7 @@ import {
 } from "@supabase/auth-helpers-react";
 import { Database } from "@lib/schema";
 import Avatar from "./avatar";
+
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function Account({ session }: { session: Session }) {
@@ -127,7 +128,7 @@ export default function Account({ session }: { session: Session }) {
         <Avatar
           uid={user.id}
           url={avatar_url}
-          size={150}
+          size={32}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });
@@ -235,6 +236,7 @@ export default function Account({ session }: { session: Session }) {
           />
         </div>
       </div>
+
       <div className="mb-4 mt-4">
         <button
           className="button primary block"

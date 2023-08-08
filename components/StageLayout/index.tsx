@@ -13,12 +13,9 @@ import MobileMenu from "../mobile-menu";
 import NavDropdown from "@components/NavDropdown";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
-import Dummy from "@components/Dummy";
-import DemoButton from "../hms/demo-cta";
-import RoomCta from "../hms/demo-cta/room-cta";
-import { hmsConfig } from "../hms/config";
 import ViewSource from "../view-source";
 import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
+import Avatar from "@components/UserAccount/avatar";
 
 type Props = {
   children: ReactNode;
@@ -79,21 +76,10 @@ export default function StageLayout({
                   {name}
                 </Link>
               ))}
+            </div>              
+            <div className={cn(styles["header-right"])}>
+              <NavDropdown />
             </div>
-
-            {(hmsConfig.hmsIntegration &&
-              isLive &&
-              !disableCta.includes(activeRoute)) ||
-            activeRoute === "/" ? (
-              <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <RoomCta />}
-              </div>
-            ) : (
-              <>
-                <div />
-                <NavDropdown />
-              </>
-            )}
           </header>
         )}
         <ViewSource />

@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useSession } from "@supabase/auth-helpers-react";
 import Account from "app/account/account-form";
+import TodoList from "@components/TodoList";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
@@ -11,7 +13,7 @@ export default function AuthForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const supabase = createClientComponentClient<Database>();
-
+  const session = useSession();
   async function signInWithGitHub() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
@@ -22,29 +24,35 @@ export default function AuthForm() {
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo: 'https://mansbooks.com/stage/a?role=listener',
+        emailRedirectTo: "https://mansbooks.com/stage/a?role=listener",
       },
-    })
+    });
   }
   async function signOut() {
-    const { error } = await supabase.auth.signOut()
+    const { error } = await supabase.auth.signOut();
   }
   return (
     <>
-      <Auth
-        supabaseClient={supabase}
-        view="magic_link"
-        appearance={{ theme: ThemeSupa }}
-        theme="dark"
-        showLinks={false}
-        providers={["github"]}
-        redirectTo="https://mansbooks.com/stage/a?role=listener"
-      />
-      <form action="/auth/sign-out" method="post">
-        <button className="w-full rounded-lg border border-black bg-slate-900 text-slate-300" type="submit">
-          Sign out
-        </button>
-      </form>
-      </>
+      {!session ? (
+        <Auth
+          supabaseClient={supabase}
+          appearance={{ theme: ThemeSupa }}
+          providers={["github"]}
+          theme="dark"
+        />
+      ) : (
+        <>
+          <ColumnGridLeft>
+            <Account session={session} />
+            <div
+              className="flex h-full w-full flex-col items-center justify-center p-4"
+              style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
+            >
+              <TodoList session={session} />
+            </div>
+          </ColumnGridLeft>
+        </>
+      )}
+    </>
   );
 }

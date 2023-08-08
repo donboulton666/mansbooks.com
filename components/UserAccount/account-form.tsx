@@ -135,7 +135,10 @@ export default function AccountForm({ session }: { session: Session | null }) {
 
       <div>
         <form action="/sign-up" method="post">
-          <button className="w-full bg-slate-900 text-slate-300 border border-slate-700" type="submit">
+          <button
+            className="w-full border border-slate-700 bg-slate-900 text-slate-300"
+            type="submit"
+          >
             Sign Up
           </button>
         </form>

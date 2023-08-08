@@ -12,13 +12,9 @@ import MobileMenu from "./mobile-menu";
 import Footer from "@components/PageFooter";
 import ScrollIndicator from "./ScrollIndicator";
 import NavDropdown from "@components/NavDropdown";
-import RoomCta from "./hms/demo-cta/room-cta";
-import DemoButton from "./hms/demo-cta";
 import Logo from "./icons/icon-hms";
-import { hmsConfig } from "./hms/config";
 import ViewSource from "./view-source";
 import angieLogo from "../public/angie/angelina-jordan-icon.jpg";
-
 type Props = {
   children: ReactNode;
   className?: string;
@@ -79,20 +75,11 @@ export default function Layout({
                 </Link>
               ))}
             </div>
-
-            {(hmsConfig.hmsIntegration &&
-              isLive &&
-              !disableCta.includes(activeRoute)) ||
-            activeRoute === "/" ? (
+            <div>
               <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <DemoButton /> : <RoomCta />}
-              </div>
-            ) : (
-              <>
-                <div />
                 <NavDropdown />
-              </>
-            )}
+              </div>
+            </div>
           </header>
         )}
         <ViewSource />

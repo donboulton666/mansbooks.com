@@ -79,7 +79,7 @@ export default function AccountForm({ session }: { session: Session | null }) {
   }
 
   return (
-    <div className="form-widget w-96 mb-10">
+    <div className="form-widget mb-10 w-96">
       <Avatar
         uid={user!.id}
         url={avatar_url}

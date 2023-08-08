@@ -4,11 +4,12 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import cn from "classnames";
 import styleUtils from "@components/utils.module.css";
-import styles from "@components/conf-entry.module.css"
+import styles from "@components/conf-entry.module.css";
 import AuthForm from "../../app/auth/auth-form";
 import Center from "@components/Center";
 import { Database } from "@lib/database.types";
 import {
+  Session,
   createClientComponentClient,
 } from "@supabase/auth-helpers-nextjs";
 import Image from "next/image";
@@ -16,6 +17,7 @@ import Image from "next/image";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function Avatar({
+  session: Session,
   uid,
   url,
   size,
@@ -52,7 +54,7 @@ export default function Avatar({
   return (
     <div>
       {avatarUrl ? (
-        <span className="flex flex-shrink-0 items-center pr-1">
+        <span className="avatar image flex flex-shrink-0 items-center pr-1">
           <Image
             width={32}
             height={32}
@@ -65,10 +67,10 @@ export default function Avatar({
         <>
           {showModal ? (
             <>
-              <div className="fixed inset-0 z-50 flex items-center justify-center nav-scroll outline-none focus:outline-none">
+              <div className="nav-scroll fixed inset-0 z-50 flex items-center justify-center outline-none focus:outline-none">
                 <div className="relative mx-auto my-6 w-auto max-w-3xl">
                   {/*content*/}
-                  <div className="relative flex w-full flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
+                  <div className="relative flex w-96 flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
                     {/*header*/}
                     <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-700 p-5">
                       <Center>Login</Center>
@@ -76,7 +78,7 @@ export default function Avatar({
                         className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 outline-none focus:outline-none"
                         onClick={() => setShowModal(false)}
                       >
-                        <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
+                        <span className="avatar no-image block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6 text-slate-200"
@@ -95,13 +97,13 @@ export default function Avatar({
                       </button>
                     </div>
                     {/*body*/}
-                    <div className="relative flex-auto p-6">
+                    <div className="relative flex-auto p-3">
                       <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                         <AuthForm />
                       </p>
                     </div>
                     {/*footer*/}
-                    <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
+                    <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-3">
                       <span
                         className={cn(styles.button, styles["button-resource"])}
                       >

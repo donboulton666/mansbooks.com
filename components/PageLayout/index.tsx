@@ -11,9 +11,8 @@ import Image from "next/legacy/image";
 import MobileMenu from "../mobile-menu";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
-import Dummy from "@components/Dummy";
 import NavDropdown from "@components/NavDropdown";
-import { hmsConfig } from "../hms/config";
+import Avatar from "@components/UserAccount/avatar";
 import ViewSource from "../view-source";
 import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
 
@@ -68,20 +67,9 @@ export default function Layout({
                 </Link>
               ))}
             </div>
-
-            {(hmsConfig.hmsIntegration &&
-              isLive &&
-              !disableCta.includes(activeRoute)) ||
-            activeRoute === "/" ? (
-              <div className={cn(styles["header-right"])}>
-                {activeRoute === "/" ? <NavDropdown /> : <Dummy />}
-              </div>
-            ) : (
-              <>
-                <div />
-                <NavDropdown />
-              </>
-            )}
+            <div className={cn(styles["header-right"])}>
+              <NavDropdown />
+            </div>
           </header>
         )}
         <ViewSource />

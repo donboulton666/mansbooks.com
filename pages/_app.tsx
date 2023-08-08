@@ -1,5 +1,4 @@
 import "@styles/global.css";
-import "@styles/nprogress.css";
 import "@styles/chrome-bug.css";
 import React from "react";
 import { OverlayProvider } from "react-aria";

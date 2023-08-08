@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PageState, ConfDataContext, UserData } from "@lib/hooks/use-conf-data";
 import Ticket from "./ticket";
-import Form from './form';
+import Form from "./form";
 import Layout from "./layout";
 import ConfContainer from "./conf-container";
 import Hero from "./hero";
