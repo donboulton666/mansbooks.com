@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Account from "app/account/account-form";
+import ColumnGridLeft from "@components/column-grid-left";
 import TodoList from "@components/TodoList";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
