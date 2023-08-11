@@ -1,7 +1,7 @@
-import useSWR, { ConfigInterface } from "swr";
+import useSWR, { useSWRConfig, ConfigInterface } from "swr";
 
 export default function useLoginStatus(opts?: ConfigInterface) {
-  const { data, error, mutate } = useSWR(
+  const { data, error } = useSWR(
     `/api/github-oauth`,
     async (url) => {
       const res = await fetch(url);
@@ -15,7 +15,7 @@ export default function useLoginStatus(opts?: ConfigInterface) {
       revalidateOnFocus: false,
     }
   );
-
+  const { mutate } = useSWRConfig();
   return {
     loginStatus: error
       ? ("loggedOut" as const)

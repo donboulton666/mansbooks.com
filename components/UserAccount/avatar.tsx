@@ -20,11 +20,9 @@ export default function Avatar({
   session: Session,
   uid,
   url,
-  size,
 }: {
   uid: string;
   url: Profiles["avatar_url"];
-  size: number;
 }) {
   const supabase = createClientComponentClient<Database>();
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(url);

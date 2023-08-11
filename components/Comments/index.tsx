@@ -214,7 +214,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
           <div className="flex w-full flex-col items-end">
             <input
               type="text"
-              className="border-dark dark:border-bright w-full border-b-2 bg-transparent px-1 pb-2 text-lg font-light opacity-70 outline-none transition-all ease-out focus:opacity-100"
+              className="border-slate-700 w-full border-b-2 bg-transparent px-1 pb-2 text-lg font-light opacity-70 outline-none transition-all ease-out focus:opacity-100"
               placeholder="Write comments"
               {...register("payload")}
             />
@@ -232,8 +232,8 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
       ) : (
         <div className="flex items-center gap-8">
           <p>Sign in to add comments</p>
-          <Link href={"/auth/signin"}>
-            <a className="bg-main dark:bg-bright text-bright dark:text-main rounded-lg px-3 py-1 text-lg">
+          <Link href={"/auth/sign-in"}>
+            <a className="bg-slate-900 text-slate-300 rounded-lg px-3 py-1 text-lg">
               Sign in
             </a>
           </Link>

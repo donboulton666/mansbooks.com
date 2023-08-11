@@ -53,7 +53,7 @@ const Accordion: FC<AccordionProps> = (props) => {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
+                      <Disclosure.Button className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         <span className="text-lg">{button}</span>
                         <ChevronDownIcon
                           className={`${

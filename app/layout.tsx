@@ -1,5 +1,6 @@
 import React from "react";
 import SupabaseProvider from "./supabase-provider";
+import { SWRProvider } from './context/swr-provider'
 import { ReactNode } from "react";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
@@ -18,11 +19,11 @@ export default function RootLayout({
 }: PropsWithChildren) {
   return (
     <html lang="en">
-      <SupabaseProvider>
-        <body>
+      <SWRProvider>
+        <SupabaseProvider>
           <div>{children}</div>
-        </body>
-      </SupabaseProvider>
+        </SupabaseProvider>
+      </SWRProvider>
     </html>
   );
 }

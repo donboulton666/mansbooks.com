@@ -76,7 +76,7 @@ export default function StageLayout({
                   {name}
                 </Link>
               ))}
-            </div>              
+            </div>
             <div className={cn(styles["header-right"])}>
               <NavDropdown />
             </div>

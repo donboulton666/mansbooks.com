@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# migrations
+/structured-text-migrations
+
 # next.js
 /.next/
 /out/

@@ -99,7 +99,7 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                           <Dialog.Title
                             key={dialogTitle}
                             as="h3"
-                            className="text-lg font-medium leading-6 text-slate-300 dark:text-slate-200"
+                            className="text-lg font-medium leading-6 text-slate-300"
                           >
                             {dialogTitle}
                           </Dialog.Title>
@@ -107,7 +107,7 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                         <div className="mt-2">
                           <p
                             key={dialogContent}
-                            className="mt-4 text-sm text-slate-900 dark:text-slate-200"
+                            className="mt-4 text-sm text-slate-900"
                           >
                             {dialogContent}
                           </p>
@@ -115,14 +115,14 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="mx-4 mt-2 py-2 leading-6 text-slate-900 dark:text-slate-200">
+                  <div className="mx-4 mt-2 py-2 leading-6 text-slate-900">
                     {children}
                   </div>
                   <div className="mt-4 py-4">
                     <button
                       ref={closeButtonRef}
                       type="button"
-                      className="float-right mb-4 mr-4 rounded-md border border-transparent bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 dark:text-slate-200"
+                      className="float-right mb-4 mr-4 rounded-md border border-transparent bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                       onClick={() => setIsOpen(false)}
                     >
                       Close

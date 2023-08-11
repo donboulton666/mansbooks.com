@@ -1,9 +1,14 @@
-import { supabase } from "../../../../utils/database";
+import { Database } from "@lib/database.types";
+import {
+  Session,
+  createClientComponentClient,
+} from "@supabase/auth-helpers-nextjs";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const COMMENT_TABLE_NAME = process.env.NEXT_PUBLIC_COMMENT_TABLE_NAME + "";
 
 const ReadComments = async (req: NextApiRequest, res: NextApiResponse) => {
+  const supabase = createClientComponentClient<Database>();
   const { id: postId } = req.query;
   if (typeof postId === "undefined") return;
   switch (req.method) {

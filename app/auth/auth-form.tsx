@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Account from "app/account/account-form";
-import ColumnGridLeft from "@components/column-grid-left";
-import TodoList from "@components/TodoList";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
@@ -25,7 +23,7 @@ export default function AuthForm() {
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo: "https://mansbooks.com/stage/a?role=listener",
+        emailRedirectTo: "https://mansbooks.com/Join",
       },
     });
   }
@@ -43,15 +41,7 @@ export default function AuthForm() {
         />
       ) : (
         <>
-          <ColumnGridLeft>
-            <Account session={session} />
-            <div
-              className="flex h-full w-full flex-col items-center justify-center p-4"
-              style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
-            >
-              <TodoList session={session} />
-            </div>
-          </ColumnGridLeft>
+          <Account session={session} />
         </>
       )}
     </>

@@ -2300,10 +2300,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.1.1.tgz#c9c61d9fe5ca5ac664e1153bb0aa0eba1c6d6308"
   integrity sha512-jwx+WCqszn53YHOfvFMJJRd/B2GqkCBt+1MJSG6o5/s8+ytHMvDZXsJgUEWLk12UnLd7HYKac4BYU5i/Ron1Cw==
 
-"@datocms/cli-utils@^1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@datocms/cli-utils/-/cli-utils-1.1.6.tgz#b37d0c45cd98e4580b767e2a6390e29d74f38c39"
-  integrity sha512-Zht2XEBf9jDoqUarkSmAmPYfJP8aA2udP2Q4jZKU4TXWY1E9UYaQTYM4bNE4H5VIhQe0rPXaMsHKnFeL9f+kNA==
+"@datocms/cli-utils@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@datocms/cli-utils/-/cli-utils-1.1.7.tgz#1d2f0d5b83e63dd53269aed01668f62ae3e91316"
+  integrity sha512-BSeET9Nv66hbL05DoClltnwuZ1gC3g4QxatQCgqDcVfnc3wZA5APo9BnUwlPS2PNvFeY6B0yo5BJx3B5/JhFuw==
   dependencies:
     "@datocms/cma-client-node" "^1"
     "@oclif/core" "^1"
@@ -2311,12 +2311,12 @@
     dotenv "^16.0.1"
     lodash "^4.17.21"
 
-"@datocms/cli@^1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@datocms/cli/-/cli-1.1.6.tgz#aba2831a6275a57c5ee5cdcc896b1c142a8ee0e2"
-  integrity sha512-E77ylmA1jw2FRdWJ2pSRBpC2ZVvrRRX5GoULHfxLJLBuMycpBVqSRL4D7y1is88vPizpoLzuHABvLE8RkodcTw==
+"@datocms/cli@^1.1.10":
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/@datocms/cli/-/cli-1.1.10.tgz#1f2b7073cc2b63ff3b58dbc05f95e8f629a74302"
+  integrity sha512-N5bj9n/JKGoakqrBdwCeIBDcQjwkYXkDK9RfMhayAwclWhpGHp9W+dz15A+SbzYi3dfOX2vLccbRfwG6079M1g==
   dependencies:
-    "@datocms/cli-utils" "^1.1.6"
+    "@datocms/cli-utils" "^1.1.7"
     "@datocms/rest-client-utils" "^1"
     "@oclif/plugin-autocomplete" "^1.2.0"
     "@oclif/plugin-help" "^5"
@@ -2329,13 +2329,13 @@
     ts-node "^10.7.0"
     typescript "~4.5.0"
 
-"@datocms/cma-client-browser@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@datocms/cma-client-browser/-/cma-client-browser-1.3.1.tgz#7fd83d21f2d2f57f857e452164b5609a3847e112"
-  integrity sha512-DruYJIfjcXQoeaOZtvP/X8IC6/hnOlodf9Fr0VysfrrhekOuleiNXsM5+YYpQJk/InY8VclztLzs8q53dlRl2A==
+"@datocms/cma-client-browser@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@datocms/cma-client-browser/-/cma-client-browser-2.0.0.tgz#180e86cfe7726d6dcc2cec7a97bcf3bf9ad16bee"
+  integrity sha512-W5VwFLrvINFu/9Nc+wsRRnOqUqvYDrbIrXc8/FLTpfz5xTwYPdS1IUYilEDJDAlMQ2oaeLmKK0xQyANkHweNrA==
   dependencies:
-    "@datocms/cma-client" "^1.3.1"
-    "@datocms/rest-client-utils" "^1.1.23"
+    "@datocms/cma-client" "^2.0.0"
+    "@datocms/rest-client-utils" "^1.3.3"
 
 "@datocms/cma-client-node@1.2.4":
   version "1.2.4"
@@ -2366,17 +2366,25 @@
   dependencies:
     "@datocms/rest-client-utils" "^1.1.23"
 
-"@datocms/cma-client@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@datocms/cma-client/-/cma-client-1.3.1.tgz#b07a860394cd56d6e6c8c2e2152ef69b418ef99c"
-  integrity sha512-P++vaTbZJFzDlnnkhGmxltzLlRjQWZTn5JHReR6OGbg9EeOBLg5A59a5Huf5CUqvkHj8u0y0EYQKUrXhQnesmA==
+"@datocms/cma-client@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@datocms/cma-client/-/cma-client-2.0.0.tgz#c8f06188a7f441226b564bb45ad14dcd18107c22"
+  integrity sha512-MUTKRop5PR+j8YmAIYbsb3K93bcwcs/FeLdwIuMA+jC5Kd3h12kMjUAE5DxURgvqh66R7vcQ3WLlLrcvl5QGiA==
   dependencies:
-    "@datocms/rest-client-utils" "^1.1.23"
+    "@datocms/rest-client-utils" "^1.3.3"
 
 "@datocms/rest-client-utils@^1", "@datocms/rest-client-utils@^1.1.23":
   version "1.1.23"
   resolved "https://registry.yarnpkg.com/@datocms/rest-client-utils/-/rest-client-utils-1.1.23.tgz#077065e28da8f747a3d84541298804abf73422c7"
   integrity sha512-t2A6RV7yfGJC+sx78OQTX8MHyeNxUs/4RbHQa6f8+qaiZi5YqsFc6RqAuJkn5fCkF5EQpGv63ryVS2UWbIjP9g==
+  dependencies:
+    "@whatwg-node/fetch" "^0.5.3"
+    async-scheduler "^1.4.4"
+
+"@datocms/rest-client-utils@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@datocms/rest-client-utils/-/rest-client-utils-1.3.3.tgz#3f42ccb9e1faa5090f9005a5afc7dc5624430f07"
+  integrity sha512-hAfzEKs2vHUIg+kZNheMaSy5Azl82kIKJeY+dzydyacwcXdbF4BcHSKR7My7lSZm3sy7RTpqsp/azT5vY64vtQ==
   dependencies:
     "@whatwg-node/fetch" "^0.5.3"
     async-scheduler "^1.4.4"
@@ -5772,20 +5780,12 @@ accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
-acorn-globals@^7.0.0:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/acorn-globals/-/acorn-globals-7.0.1.tgz#0dbf05c44fa7c94332914c02066d5beff62c40c3"
-  integrity sha512-umOSDSDrfHbTNPuNpC2NSnnA3LUrqpevPb4T9jRx4MagXNS0rs+gwiTcAvqCRmsD6utzsrzNt+ebm00SNWiC3Q==
-  dependencies:
-    acorn "^8.1.0"
-    acorn-walk "^8.0.2"
-
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
 
-acorn-walk@^8.0.2, acorn-walk@^8.1.1:
+acorn-walk@^8.1.1:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-8.2.0.tgz#741210f2e2426454508853a2f44d0ab83b7f69c1"
   integrity sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==
@@ -5795,7 +5795,7 @@ acorn@^6.4.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
   integrity sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==
 
-acorn@^8.1.0, acorn@^8.4.1, acorn@^8.5.0, acorn@^8.8.0, acorn@^8.8.2:
+acorn@^8.4.1, acorn@^8.5.0, acorn@^8.8.0:
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
@@ -8273,18 +8273,6 @@ escodegen@1.x.x:
   dependencies:
     esprima "^4.0.1"
     estraverse "^4.2.0"
-    esutils "^2.0.2"
-    optionator "^0.8.1"
-  optionalDependencies:
-    source-map "~0.6.1"
-
-escodegen@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-2.0.0.tgz#5e32b12833e8aa8fa35e1bf0befa89380484c7dd"
-  integrity sha512-mmHKys/C8BFUGI+MAWNcSYoORYLMdPzjrknd2Vc+bUsjN5bXcr8EhrNB+UTqfL1y3I9c4fw2ihgtMPQLBRiQxw==
-  dependencies:
-    esprima "^4.0.1"
-    estraverse "^5.2.0"
     esutils "^2.0.2"
     optionator "^0.8.1"
   optionalDependencies:
@@ -10780,25 +10768,22 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-jsdom@^21.1.0:
-  version "21.1.1"
-  resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-21.1.1.tgz#ab796361e3f6c01bcfaeda1fea3c06197ac9d8ae"
-  integrity sha512-Jjgdmw48RKcdAIQyUD1UdBh2ecH7VqwaXPN3ehoZN6MqgVbMn+lRm1aAT1AsdJRAJpwfa4IpwgzySn61h2qu3w==
+jsdom@^22.1.0:
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-22.1.0.tgz#0fca6d1a37fbeb7f4aac93d1090d782c56b611c8"
+  integrity sha512-/9AVW7xNbsBv6GfWho4TTNjEo9fe6Zhf9O7s0Fhhr3u+awPwAJMKwAMXnkk5vBxflqLW9hTHX/0cs+P3gW+cQw==
   dependencies:
     abab "^2.0.6"
-    acorn "^8.8.2"
-    acorn-globals "^7.0.0"
     cssstyle "^3.0.0"
     data-urls "^4.0.0"
     decimal.js "^10.4.3"
     domexception "^4.0.0"
-    escodegen "^2.0.0"
     form-data "^4.0.0"
     html-encoding-sniffer "^3.0.0"
     http-proxy-agent "^5.0.0"
     https-proxy-agent "^5.0.1"
     is-potential-custom-element-name "^1.0.1"
-    nwsapi "^2.2.2"
+    nwsapi "^2.2.4"
     parse5 "^7.1.2"
     rrweb-cssom "^0.6.0"
     saxes "^6.0.0"
@@ -11962,10 +11947,10 @@ nth-check@^2.0.0, nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
-nwsapi@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.2.tgz#e5418863e7905df67d51ec95938d67bf801f0bb0"
-  integrity sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==
+nwsapi@^2.2.4:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.7.tgz#738e0707d3128cb750dddcfe90e4610482df0f30"
+  integrity sha512-ub5E4+FBPKwAZx0UwIQOjYWGHTEq5sPqHQNRN8Z9e4A7u3Tj1weLJsL59yH9vmvqEtBHaOmT6cYQKIZOxp35FQ==
 
 object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"

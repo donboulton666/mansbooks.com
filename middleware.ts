@@ -1,28 +1,29 @@
-import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
 import { NextResponse } from "next/server";
-
 import type { NextRequest } from "next/server";
-import type { Database } from "@/lib/database.types";
 
-export async function middleware(req: NextRequest) {
-  const res = NextResponse.next();
-  const supabase = createMiddlewareClient<Database>({ req, res });
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
+export function middleware(request: NextRequest) {
+  // Assume a "Cookie:nextjs=fast" header to be present on the incoming request
+  // Getting cookies from the request using the `RequestCookies` API
+  let cookie = request.cookies.get("nextjs");
+  console.log(cookie); // => { name: 'nextjs', value: 'fast', Path: '/' }
+  const allCookies = request.cookies.getAll();
+  console.log(allCookies); // => [{ name: 'nextjs', value: 'fast' }]
 
-  // Forward to protected route if we have a session
-  if (session) {
-    return res;
-  }
+  request.cookies.has("nextjs"); // => true
+  request.cookies.delete("nextjs");
+  request.cookies.has("nextjs"); // => false
 
-  const redirectUrl = req.nextUrl.clone();
-  redirectUrl.pathname = "/login";
-  redirectUrl.searchParams.set(`redirectedFrom`, req.nextUrl.pathname);
-  return NextResponse.redirect(redirectUrl);
+  // Setting cookies on the response using the `ResponseCookies` API
+  const response = NextResponse.next();
+  response.cookies.set("mansbooks", "fast");
+  response.cookies.set({
+    name: "mansbooks",
+    value: "fast",
+    path: "/",
+  });
+  cookie = response.cookies.get("mansbooks");
+  console.log(cookie); // => { name: 'vercel', value: 'fast', Path: '/' }
+  // The outgoing response will have a `Set-Cookie:vercel=fast;path=/test` header.
+
+  return response;
 }
-
-export const config = {
-  // list all the pages you want protected here
-  matcher: ["/stage", "/social"],
-};

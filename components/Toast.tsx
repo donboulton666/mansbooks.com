@@ -27,13 +27,13 @@ export const Toast: React.FC = () => {
   const StatusColor = () => {
     switch (toast.messageType) {
       case "ok":
-        return "bg-green-600 text-bright";
+        return "bg-green-600 text-slate-300";
       case "warning":
-        return "bg-orange-500 text-bright";
+        return "bg-orange-500 text-slate-300";
       case "error":
-        return "bg-red-500 text-bright";
+        return "bg-red-500 text-slate-300";
       default:
-        return "dark:bg-main bg-bright border-2 dark:border-bright border-main";
+        return "bg-slate-900 border-2 border-slate-700";
     }
   };
 
@@ -72,7 +72,7 @@ export const Toast: React.FC = () => {
                 typeof toast.confirm !== "undefined" && toast.confirm();
                 setToast({ ...toast, isOpen: false, confirm: undefined });
               }}
-              className="bg-main text-bright dark:bg-bright dark:text-dark rounded-md px-2 py-1"
+              className="bg-slate-900 text-slate-300 rounded-md px-2 py-1"
             >
               Ok
             </button>
