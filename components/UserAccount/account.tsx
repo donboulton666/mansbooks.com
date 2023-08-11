@@ -112,9 +112,11 @@ export default function Account({ session }: { session: Session }) {
   }
 
   async function signInWithEmail() {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
-      password: process.env.ADMIN_PASSWORD,
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: email,
+      options: {
+        emailRedirectTo: "https://mansbooks.com/Join",
+      },
     });
   }
 
