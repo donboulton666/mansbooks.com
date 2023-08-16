@@ -1,11 +1,39 @@
 export async function uploadUserProfileImage(
-  supabase,
-  userId,
-  file,
-  bucket,
-  profileColumn
+  supabase: {
+    storage: {
+      from: (arg0: any) => {
+        (): any;
+        new (): any;
+        upload: {
+          (arg0: any, arg1: any):
+            | PromiseLike<{ data: any; error: any }>
+            | { data: any; error: any };
+          new (): any;
+        };
+      };
+    };
+    from: (arg0: string) => {
+      (): any;
+      new (): any;
+      update: {
+        (arg0: { [x: number]: string }): {
+          (): any;
+          new (): any;
+          eq: {
+            (arg0: string, arg1: any): Promise<{ error: any }>;
+            new (): any;
+          };
+        };
+        new (): any;
+      };
+    };
+  },
+  userId: any,
+  file: { name: number },
+  bucket: any,
+  profileColumn: any
 ) {
-  return new Promise(async (resolve, reject) => {
+  return new Promise<void>(async (resolve, reject) => {
     const newName = Date.now() + file.name;
     const { data, error } = await supabase.storage
       .from(bucket)
@@ -23,7 +51,7 @@ export async function uploadUserProfileImage(
           [profileColumn]: avatar_url,
         })
         .eq("id", userId)
-        .then((result) => {
+        .then((result: { error: any }) => {
           if (!result.error) {
             resolve();
           } else {

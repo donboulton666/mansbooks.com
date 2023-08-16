@@ -72,7 +72,7 @@ export const Toast: React.FC = () => {
                 typeof toast.confirm !== "undefined" && toast.confirm();
                 setToast({ ...toast, isOpen: false, confirm: undefined });
               }}
-              className="bg-slate-900 text-slate-300 rounded-md px-2 py-1"
+              className="rounded-md bg-slate-900 px-2 py-1 text-slate-300"
             >
               Ok
             </button>

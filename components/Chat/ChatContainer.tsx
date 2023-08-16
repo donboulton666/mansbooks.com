@@ -24,6 +24,7 @@ const ChatContainer = () => {
       el.scrollTop = el.scrollHeight;
     }
   }, [storeMessages]);
+
   return (
     <ChatLayout>
       <ChatFeed>

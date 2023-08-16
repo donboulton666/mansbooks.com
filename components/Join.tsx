@@ -45,4 +45,5 @@ const Join: FC<JoinProps> = () => {
     </>
   );
 };
+
 export default Join;

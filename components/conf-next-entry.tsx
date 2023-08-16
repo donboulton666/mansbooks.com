@@ -51,7 +51,7 @@ export default function ConfEntry(
       >
         <h1 className={cn(styles.hero)}>Ready to experience a live stage?</h1>
         <h2 className={cn(styles.description)}>
-          Click Github Button to SignIn
+          Github or Use your Email to SignIn
         </h2>
         {!session ? (
           <div className={styles["form-row"]}>

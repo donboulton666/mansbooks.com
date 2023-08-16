@@ -1,5 +1,5 @@
-import { ToastMessageType } from '@components/Toast';
-import { atom } from 'recoil';
+import { ToastMessageType } from "@components/Toast";
+import { atom } from "recoil";
 
 interface ToastStateProps {
   isOpen: boolean;
@@ -9,11 +9,11 @@ interface ToastStateProps {
 }
 
 export const ToastState = atom<ToastStateProps>({
-  key: 'ToastState',
+  key: "ToastState",
   default: {
     isOpen: false,
-    messageType: 'ok',
-    message: '',
-    confirm: undefined
-  }
+    messageType: "ok",
+    message: "",
+    confirm: undefined,
+  },
 });

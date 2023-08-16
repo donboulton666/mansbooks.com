@@ -110,7 +110,7 @@ export default function AccountForm({ session }: { session: Session | null }) {
       setUploading(false);
     }
   };
-  
+
   return (
     <div className="form-widget mb-10 w-96">
       <Avatar
