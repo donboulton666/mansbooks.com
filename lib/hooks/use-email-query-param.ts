@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
  */
 export default function useEmailQueryParam(
   paramName: string,
-  setEmail: (email: string) => unknown
+  setEmail: (email: string) => unknown,
 ) {
   const router = useRouter();
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function useEmailQueryParam(
         history.replaceState(
           { url: newPathname, as: newAsPath, options: { shallow: true } },
           "",
-          newAsPath
+          newAsPath,
         );
       }
     }

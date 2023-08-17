@@ -11,7 +11,7 @@ import Stars from "@components/Stars";
 
 const DynamicConferenceWrapper = dynamic(
   () => import("../components/Conference/conferenceWrapper"),
-  { ssr: false }
+  { ssr: false },
 );
 
 const Webinar = () => {

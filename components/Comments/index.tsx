@@ -31,7 +31,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
   // TODO: Handle error from getting comments
   const { data: comments, error: commentError } = useSWR<Comments[]>(
     commentsUrl,
-    readAllCommentsFetcher
+    readAllCommentsFetcher,
   );
 
   const [replyContent, setReplyContent] = useState<{
@@ -96,7 +96,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
   const editComment = async (
     id: number,
     payload: string,
-    prevPayload: string
+    prevPayload: string,
   ) => {
     if (payload === prevPayload) {
       setToast({
@@ -121,7 +121,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
               }
               return comment;
             }),
-            false
+            false,
           );
           // Send request for adding a comment
           await editCommentRequest(commentsUrl, id, payload);
@@ -158,7 +158,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
           mutate(
             commentsUrl,
             comments?.filter((comment) => comment.id !== id),
-            false
+            false,
           );
           const { error } = await deleteCommentRequest(commentsUrl, id);
           if (error) {
@@ -342,7 +342,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
                     )}
                   </div>
                 </div>
-              )
+              ),
             )}
       </div>
     </section>

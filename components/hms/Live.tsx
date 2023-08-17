@@ -33,7 +33,7 @@ const Notification = () => {
     }
     if (notification.type === "RECONNECTING") {
       toast.error(
-        "You are offline for now. while we try to reconnect, please check your internet connection."
+        "You are offline for now. while we try to reconnect, please check your internet connection.",
       );
     }
     if (notification.type === "RECONNECTED") {

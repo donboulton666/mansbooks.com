@@ -67,7 +67,7 @@ export default function SponsorSection({ sponsor }: SponsorSectionProps) {
             className={cn(
               styles.video,
               styleUtils.appear,
-              styleUtils["appear-first"]
+              styleUtils["appear-first"],
             )}
             allow="picture-in-picture"
             allowFullScreen
@@ -193,7 +193,7 @@ export default function SponsorSection({ sponsor }: SponsorSectionProps) {
                             <span
                               className={cn(
                                 styles.button,
-                                styles["button-resource"]
+                                styles["button-resource"],
                               )}
                             >
                               <button

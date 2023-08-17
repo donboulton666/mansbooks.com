@@ -72,7 +72,7 @@ const CldImage = (props: CldImageProps) => {
       ];
     } catch (e) {
       console.warn(
-        `Failed to preserve transformations: ${(e as Error).message}`
+        `Failed to preserve transformations: ${(e as Error).message}`,
       );
     }
   }

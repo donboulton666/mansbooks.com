@@ -5,7 +5,7 @@ import { isBrowser, stripEmojis } from "@lib/helpers";
 const useActiveAnchors = (
   anchorsQuerySelector: string = "h2",
   tocQuerySelector: string = ".prose-toc a",
-  offset: number = 200
+  offset: number = 200,
 ) => {
   const router = useRouter();
   const anchors = useRef<NodeListOf<HTMLHeadingElement> | null>(null);
@@ -27,7 +27,7 @@ const useActiveAnchors = (
       // Need to decodeURI the href to get emojis, then strip them off and remove "--""
       // to make toc hrefs and content headings ids match
       const sanitizedHref = stripEmojis(
-        decodeURI(link.getAttribute("href") ?? "").replace("#", "")
+        decodeURI(link.getAttribute("href") ?? "").replace("#", ""),
       ).replaceAll("-", "");
       const isMatch = sanitizedHref === newActiveAnchor.replaceAll("-", "");
 

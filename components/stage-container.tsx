@@ -39,7 +39,7 @@ export default function StageContainer({ stage, allStages }: Props) {
               className={cn(
                 styles.stream,
                 styleUtils.appear,
-                styleUtils["appear-first"]
+                styleUtils["appear-first"],
               )}
             >
               <iframe
@@ -54,7 +54,7 @@ export default function StageContainer({ stage, allStages }: Props) {
                 className={cn(
                   styles.bottom,
                   styleUtils.appear,
-                  styleUtils["appear-second"]
+                  styleUtils["appear-second"],
                 )}
               >
                 <div className={styles.messageContainer}>

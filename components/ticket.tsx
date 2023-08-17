@@ -61,7 +61,7 @@ export default function Ticket({
             className={cn(
               styles.hero,
               styleUtils.appear,
-              styleUtils["appear-first"]
+              styleUtils["appear-first"],
             )}
           >
             {sharePage ? (
@@ -80,7 +80,7 @@ export default function Ticket({
             className={cn(
               styles.description,
               styleUtils.appear,
-              styleUtils["appear-second"]
+              styleUtils["appear-second"],
             )}
           >
             {sharePage ? (
@@ -113,7 +113,7 @@ export default function Ticket({
           className={cn(
             styles["ticket-visual"],
             styleUtils.appear,
-            styleUtils["appear-fourth"]
+            styleUtils["appear-fourth"],
           )}
         >
           <TicketVisual

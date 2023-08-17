@@ -14,7 +14,7 @@ import Loader from "./loader/loader";
 
 const searchClient = instantMeiliSearch(
   process.env.NEXT_PUBLIC_HOST_NAME || "",
-  process.env.NEXT_PUBLIC_API_KEY
+  process.env.NEXT_PUBLIC_API_KEY,
 );
 
 const SpeakerHit = ({ hit }: any) => (
@@ -69,7 +69,7 @@ const SearchSpeakers = ({ isSpeaker }: any) => {
           No results have been found for {searchState.query}.
         </div>
       );
-    }
+    },
   );
 
   return (

@@ -39,7 +39,7 @@ export default function Dialogue({
         query: { photoId: newVal },
       },
       `/p/${newVal}`,
-      { shallow: true }
+      { shallow: true },
     );
   }
 

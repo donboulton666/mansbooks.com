@@ -22,7 +22,7 @@ const supabase =
   process.env.EMAIL_TO_ID_SECRET
     ? createClient(
         process.env.SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET
+        process.env.SUPABASE_SERVICE_ROLE_SECRET,
       )
     : undefined;
 
@@ -58,7 +58,7 @@ export async function createUser(id: string, email: string): Promise<ConfUser> {
 }
 
 export async function getTicketNumberByUserId(
-  id: string
+  id: string,
 ): Promise<string | null> {
   const { data } = await supabase!
     .from<ConfUser>("users")
@@ -81,7 +81,7 @@ export async function createGitHubUser(user: any): Promise<string> {
 
 export async function updateUserWithGitHubUser(
   id: string,
-  token: string
+  token: string,
 ): Promise<ConfUser> {
   const { data } = await supabase!
     .from("github_users")

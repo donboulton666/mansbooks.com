@@ -55,7 +55,7 @@ export interface Database {
             columns: ["created_by"];
             referencedRelation: "users";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       github_users: {
@@ -80,7 +80,7 @@ export interface Database {
             columns: ["id"];
             referencedRelation: "profiles";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       likes: {
@@ -114,7 +114,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "profiles";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       loves: {
@@ -148,7 +148,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "profiles";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       messages: {
@@ -185,7 +185,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "users";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       posts: {
@@ -231,7 +231,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "profiles";
             referencedColumns: ["username"];
-          }
+          },
         ];
       };
       profiles: {
@@ -271,7 +271,7 @@ export interface Database {
             columns: ["id"];
             referencedRelation: "users";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       role_permissions: {
@@ -323,7 +323,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "profiles";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       todos: {
@@ -354,7 +354,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "users";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       user_roles: {
@@ -379,7 +379,7 @@ export interface Database {
             columns: ["user_id"];
             referencedRelation: "users";
             referencedColumns: ["id"];
-          }
+          },
         ];
       };
       users: {

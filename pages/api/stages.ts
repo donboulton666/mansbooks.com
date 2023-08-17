@@ -23,7 +23,7 @@ const EXPIRES_SECONDS = 5;
 
 export default async function getStages(
   _: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   try {
     const allStages = await getAllStages();
@@ -33,7 +33,7 @@ export default async function getStages(
     res.setHeader("Expires", expires.toUTCString());
     res.setHeader(
       "Cache-Control",
-      `s-maxage=${EXPIRES_SECONDS}, immutable, must-revalidate, stale-while-revalidate`
+      `s-maxage=${EXPIRES_SECONDS}, immutable, must-revalidate, stale-while-revalidate`,
     );
 
     return res.status(200).json(allStages);

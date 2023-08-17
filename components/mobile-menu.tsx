@@ -16,7 +16,7 @@ import { useButton } from "@react-aria/button";
 import styles from "./mobile-menu.module.css";
 
 function ModalDialog(
-  props: Parameters<typeof useOverlay>[0] & Parameters<typeof useDialog>[0]
+  props: Parameters<typeof useOverlay>[0] & Parameters<typeof useDialog>[0],
 ) {
   const router = useRouter();
   const activeRoute = router.asPath;
@@ -62,7 +62,7 @@ export default function Overlay() {
     {
       onPress: () => (state.isOpen ? state.close() : state.open()),
     },
-    ref
+    ref,
   );
 
   return (

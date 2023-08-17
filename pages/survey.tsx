@@ -58,7 +58,7 @@ export default function Survey() {
   return (
     <>
       <Layout>
-        <div className="center mx-auto max-w-5xl">
+        <div className="center mx-auto mb-10 mt-10 max-w-5xl">
           <h2>Welcome {member}</h2>
           <form onSubmit={handleSubmit}>
             <div>
@@ -67,7 +67,6 @@ export default function Survey() {
                 <RatingOption key={value} value={value} />
               ))}
             </div>
-
             <div>
               <h2>Is Angelina Jordan an Angel?</h2>
 
@@ -94,9 +93,8 @@ export default function Survey() {
                 />{" "}
                 <label for="no">No</label>
               </div>
-            </div>
-
-            <div>
+            </div>{" "}
+            <div className="mt-2">
               <label>Please share your thoughts... (Optional)</label>
               <textarea
                 name="comment"
@@ -104,10 +102,9 @@ export default function Survey() {
                 placeholder="Which song do you like most..."
               ></textarea>
             </div>
-
             <input
               type="submit"
-              className="rounded-md bg-slate-800 px-4 py-2 text-slate-200 shadow-lg hover:bg-slate-900 hover:shadow-slate-900/50"
+              className="rounded-md bg-slate-800 px-4 py-2 mt-4 text-slate-200 shadow-lg hover:bg-slate-900 hover:shadow-slate-900/50"
             />
           </form>
         </div>

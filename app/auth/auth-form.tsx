@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useSession } from "@supabase/auth-helpers-react";
-import Account from "app/account/account-form";
+import Account from "@app/account/account";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
@@ -21,9 +21,9 @@ export default function AuthForm() {
 
   async function signInWithEmail() {
     const { data, error } = await supabase.auth.signInWithOtp({
-      email: email,
+      email: "donaldboulton@gmail.com",
       options: {
-        emailRedirectTo: "https://mansbooks.com/Join",
+        emailRedirectTo: "https://mansbooks.com/auth/callback",
       },
     });
   }

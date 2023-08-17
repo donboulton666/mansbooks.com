@@ -43,7 +43,7 @@ export default function TalkCard({
   useEffect(() => {
     const now = Date.now();
     setIsTalkLive(
-      isAfter(now, parseISO(start)) && isBefore(now, parseISO(end))
+      isAfter(now, parseISO(start)) && isBefore(now, parseISO(end)),
     );
     setStartAndEndTime(`${formatDate(start)} – ${formatDate(end)}`);
   }, [end, start]);

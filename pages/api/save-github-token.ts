@@ -19,7 +19,7 @@ import { getTicketNumberByUserId, updateUserWithGitHubUser } from "@lib/db-api";
 
 export default async function saveGithubToken(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method !== "POST") {
     return res.status(501).json({
@@ -51,7 +51,7 @@ export default async function saveGithubToken(
   const { username, name } = await updateUserWithGitHubUser(
     body.id,
     body.token,
-    ticketNumber
+    ticketNumber,
   );
 
   res.json({ username, name });

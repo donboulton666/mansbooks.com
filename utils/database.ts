@@ -17,7 +17,7 @@ export const addCommentRequest = (url: string, comment: any) =>
 export const editCommentRequest = (
   url: string,
   commentId: number,
-  payload: string
+  payload: string,
 ) => axios.patch(url, { commentId, payload }).then((res) => res.data);
 
 export const deleteCommentRequest = (url: string, commentId: number) =>

@@ -97,7 +97,7 @@ export default function TicketCopy({ username }: Props) {
                   (scrollRef.current?.clientWidth || 0);
                 setFadeOpacity(
                   (scrollableWidth - (scrollRef.current?.scrollLeft || 0)) /
-                    (scrollableWidth || 1)
+                    (scrollableWidth || 1),
                 );
                 cancelAnimationFrame(animationFrame);
                 setScrolling(false);

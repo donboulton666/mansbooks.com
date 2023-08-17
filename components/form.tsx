@@ -68,8 +68,8 @@ export default function Form({ sharePage }: Props) {
               .map(
                 (key) =>
                   `${encodeURIComponent(key)}=${encodeURIComponent(
-                    params[key as keyof typeof params] || ""
-                  )}`
+                    params[key as keyof typeof params] || "",
+                  )}`,
               )
               .join("&");
             await router.replace(`/?${queryString}`, "/");
@@ -98,7 +98,7 @@ export default function Form({ sharePage }: Props) {
           setFormState("error");
         });
     },
-    [email, router, setPageState, setUserData, sharePage]
+    [email, router, setPageState, setUserData, sharePage],
   );
 
   const onSubmit = useCallback(
@@ -117,7 +117,7 @@ export default function Form({ sharePage }: Props) {
         setFormState("default");
       }
     },
-    [executeCaptcha, formState, isCaptchaEnabled, handleRegister]
+    [executeCaptcha, formState, isCaptchaEnabled, handleRegister],
   );
 
   const onTryAgainClick = useCallback(
@@ -128,7 +128,7 @@ export default function Form({ sharePage }: Props) {
       setErrorTryAgain(true);
       resetCaptcha();
     },
-    [resetCaptcha]
+    [resetCaptcha],
   );
 
   useEmailQueryParam("email", setEmail);

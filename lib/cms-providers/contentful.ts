@@ -148,7 +148,7 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
     (allSponsors: any, sponsor: any) => {
       return [{ id: sponsor.sys.id, ...sponsor }, ...(allSponsors || [])];
     },
-    []
+    [],
   );
 }
 

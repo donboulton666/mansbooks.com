@@ -23,7 +23,7 @@ const Join: React.FC<Props> = ({ token, role }) => {
       className={cn(
         styles.container,
         styleUtils.appear,
-        styleUtils["appear-first"]
+        styleUtils["appear-first"],
       )}
     >
       {isMobile && role !== "viewer" ? <MobileRoleDialog /> : null}

@@ -149,7 +149,7 @@ const CldVideoPlayer = (props: CldVideoPlayerProps) => {
           onLoad={handleOnLoad}
           onError={(e) =>
             console.error(
-              `Failed to load Cloudinary Video Player: ${e.message}`
+              `Failed to load Cloudinary Video Player: ${e.message}`,
             )
           }
         />

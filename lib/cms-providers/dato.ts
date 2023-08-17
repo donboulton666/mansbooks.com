@@ -20,7 +20,7 @@ const API_TOKEN = process.env.DATOCMS_READ_ONLY_API_TOKEN;
 
 async function fetchCmsAPI(
   query: string,
-  { variables }: { variables?: Record<string, any> } = {}
+  { variables }: { variables?: Record<string, any> } = {},
 ) {
   const res = await fetch(API_URL, {
     method: "POST",

@@ -105,7 +105,7 @@ export async function getAllStages(): Promise<Stage[]> {
 
   const lst: Stage[] = stages
     .sort((a: any, b: any) =>
-      a.properties.itemOrder > b.properties.itemOrder ? 1 : -1
+      a.properties.itemOrder > b.properties.itemOrder ? 1 : -1,
     )
     .map((stage: any) => {
       const schedule: any[] = stage.fields.schedule?.map((talk: any) => {
@@ -146,7 +146,7 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
     languageCode: agilityConfig.languageCode,
   });
   companies = companies.sort((a: any, b: any) =>
-    a.fields.tierRank > b.fields.tierRank ? 1 : -1
+    a.fields.tierRank > b.fields.tierRank ? 1 : -1,
   );
 
   const lst: Sponsor[] = [];
@@ -203,7 +203,7 @@ export async function getAllJobs(): Promise<Job[]> {
   });
 
   jobs = jobs.sort((a: any, b: any) =>
-    a.fields.rank > b.fields.rank ? 1 : -1
+    a.fields.rank > b.fields.rank ? 1 : -1,
   );
 
   await expandContentList({
@@ -373,7 +373,7 @@ const expandLinkedList = async ({
   const referenceName = fieldObj.referencename;
   if (!referenceName)
     throw Error(
-      `A referencename property was not found on the ${fieldName} value.`
+      `A referencename property was not found on the ${fieldName} value.`,
     );
 
   let listItems = await agility.getContentList({ referenceName, languageCode });
@@ -389,7 +389,7 @@ const expandLinkedList = async ({
           const childContentID = parseInt(idStr);
 
           const childItemIndex = listItems.findIndex(
-            (item: { contentID: number }) => item.contentID === childContentID
+            (item: { contentID: number }) => item.contentID === childContentID,
           );
 
           if (childItemIndex >= 0) {

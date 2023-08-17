@@ -102,10 +102,10 @@ export default function Form({
 
         const openedWindow = window.open(
           `https://github.com/login/oauth/authorize?client_id=${encodeURIComponent(
-            process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID
+            process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID,
           )}`,
           "githubOAuth",
-          `resizable,scrollbars,status,width=${windowWidth},height=${windowHeight},top=${windowTop},left=${windowLeft}`
+          `resizable,scrollbars,status,width=${windowWidth},height=${windowHeight},top=${windowTop},left=${windowLeft}`,
         );
 
         new Promise<GitHubOAuthData | undefined>((resolve) => {
@@ -186,7 +186,7 @@ export default function Form({
               formStyles[formState],
               {
                 [formStyles["not-allowed"]]: !githubEnabled,
-              }
+              },
             )}
             disabled={
               !process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID ||
@@ -239,7 +239,7 @@ export default function Form({
           className={cn(
             formStyles.submit,
             formStyles["generate-with-github"],
-            formStyles["stage-btn"]
+            formStyles["stage-btn"],
           )}
         >
           <div className={ticketFormStyles.generateWithGithub}>

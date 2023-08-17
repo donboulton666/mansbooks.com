@@ -12,7 +12,7 @@ const getInitials = (name: string | undefined) => {
 };
 
 export const getAvatarBg = (
-  name: string
+  name: string,
 ): { initials: string; color: string } => {
   const initials = getInitials(name);
   const indexFactor = 20;

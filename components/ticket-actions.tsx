@@ -61,7 +61,7 @@ export default function TicketActions({ username }: Props) {
           styles.button,
           styleUtils.appear,
           styles.first,
-          "icon-button"
+          "icon-button",
         )}
         href={tweetUrl}
         rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function TicketActions({ username }: Props) {
           styles.second,
           "icon-button",
           // LinkedIn Share widget doesn’t work on mobile
-          styles["linkedin-button"]
+          styles["linkedin-button"],
         )}
         href={linkedInUrl}
         rel="noopener noreferrer"
@@ -94,7 +94,7 @@ export default function TicketActions({ username }: Props) {
           "icon-button",
           {
             [styles.loading]: loading,
-          }
+          },
         )}
         href={loading ? undefined : downloadUrl}
         onClick={(e) => {

@@ -30,7 +30,7 @@ export default function ScheduleSidebar({ allStages }: Props) {
   const router = useRouter();
   const [currentStageSlug, setCurrentStageSlug] = useState(router.query.slug);
   const currentStage = allStages.find(
-    (s: Stage) => s.slug === currentStageSlug
+    (s: Stage) => s.slug === currentStageSlug,
   );
 
   useEffect(() => {

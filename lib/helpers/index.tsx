@@ -16,7 +16,7 @@ export function isMobileOrTablet() {
   // https://stackoverflow.com/a/8876069/114157
   const viewportWidth = Math.max(
     document.documentElement.clientWidth || 0,
-    window.innerWidth || 0
+    window.innerWidth || 0,
   );
   return viewportWidth < 1200;
 }
@@ -39,7 +39,7 @@ export const stripEmojis = (str: string) =>
   str
     .replace(
       /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
-      ""
+      "",
     )
     .replace(/\s+/g, " ")
     .trim();

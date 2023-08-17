@@ -5,9 +5,10 @@ export async function uploadUserProfileImage(
         (): any;
         new (): any;
         upload: {
-          (arg0: any, arg1: any):
-            | PromiseLike<{ data: any; error: any }>
-            | { data: any; error: any };
+          (
+            arg0: any,
+            arg1: any,
+          ): PromiseLike<{ data: any; error: any }> | { data: any; error: any };
           new (): any;
         };
       };
@@ -31,7 +32,7 @@ export async function uploadUserProfileImage(
   userId: any,
   file: { name: number },
   bucket: any,
-  profileColumn: any
+  profileColumn: any,
 ) {
   return new Promise<void>(async (resolve, reject) => {
     const newName = Date.now() + file.name;

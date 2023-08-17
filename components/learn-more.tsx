@@ -27,7 +27,7 @@ export default function LearnMore() {
         className={cn(
           styleUtils.appear,
           styleUtils["appear-fifth"],
-          styles.contact
+          styles.contact,
         )}
       >
         Learn more on{" "}

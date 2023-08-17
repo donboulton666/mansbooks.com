@@ -19,7 +19,7 @@ const EmptyRoom = () => {
     }
     // @ts-ignore
     navigator.clipboard.writeText(
-      `${window.location.host}/stage/${stageId}?role=${role.name}`
+      `${window.location.host}/stage/${stageId}?role=${role.name}`,
     );
     if (!copied) {
       setCopied(true);

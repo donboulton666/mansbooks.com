@@ -22,7 +22,7 @@ const API_TOKEN = process.env.PRISMIC_ACCESS_TOKEN || "";
 
 async function fetchCmsMasterRef() {
   const res = await fetch(
-    `${API_REF_URL}${API_TOKEN ? `?access_token=${API_TOKEN}` : ""}`
+    `${API_REF_URL}${API_TOKEN ? `?access_token=${API_TOKEN}` : ""}`,
   );
 
   const json = await res.json();
@@ -196,7 +196,7 @@ export async function getAllStages(): Promise<Stage[]> {
                   url:
                     item.speaker.image?.url.replace(
                       "compress,format",
-                      "format"
+                      "format",
                     ) || "https://images.prismic.io",
                 },
               })),

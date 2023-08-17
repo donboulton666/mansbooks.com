@@ -26,7 +26,7 @@ interface Image {
 
 async function fetchCmsAPI(
   query: string,
-  { variables }: { variables?: Record<string, any> } = {}
+  { variables }: { variables?: Record<string, any> } = {},
 ) {
   const res = await fetch(API_URL, {
     method: "POST",

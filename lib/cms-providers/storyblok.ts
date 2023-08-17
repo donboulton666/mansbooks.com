@@ -41,7 +41,7 @@ function transformResponse(response: any[], _speakers?: any) {
         item[key] = item[key].map((slot: { content: any; speaker: any }) => {
           slot = slot.content;
           const speakers = _speakers?.filter(
-            (speaker: any) => slot.speaker.indexOf(speaker.uuid) !== -1
+            (speaker: any) => slot.speaker.indexOf(speaker.uuid) !== -1,
           );
           slot.speaker = speakers;
           return slot;
@@ -55,7 +55,7 @@ function transformResponse(response: any[], _speakers?: any) {
 
 async function fetchCmsAPI(
   query: string,
-  { variables }: { variables?: Record<string, any> } = {}
+  { variables }: { variables?: Record<string, any> } = {},
 ) {
   const res = await fetch(API_URL, {
     method: "POST",

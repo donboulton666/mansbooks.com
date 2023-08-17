@@ -98,7 +98,7 @@ const Modal: FC<ModalProps> = (props) => {
   return ReactDOM.createPortal(
     modalContent,
     modalButton,
-    document.getElementById("modal-root")
+    document.getElementById("modal-root"),
   );
 };
 

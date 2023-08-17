@@ -18,7 +18,7 @@ const RoomCta = () => {
       stageId = router.query.slug as string;
     }
     navigator.clipboard.writeText(
-      `${window.location.host}/stage/${stageId}?role=${role?.name || "viewer"}`
+      `${window.location.host}/stage/${stageId}?role=${role?.name || "viewer"}`,
     );
     if (!copied) {
       setCopied(true);

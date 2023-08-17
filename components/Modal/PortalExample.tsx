@@ -14,7 +14,7 @@ export default function PortalExample() {
       {showModal &&
         createPortal(
           <ModalContent onClose={() => setShowModal(false)} />,
-          document.body
+          document.body,
         )}
     </>
   );

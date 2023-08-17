@@ -21,7 +21,7 @@ import { getUserByUsername } from "@lib/db-api";
 
 export default async function ticketImages(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   let url: string;
   let name: string | null | undefined;
@@ -33,9 +33,9 @@ export default async function ticketImages(
     name = user.name;
     ticketNumber = user.ticketNumber;
     url = `${SITE_URL}/ticket-image?username=${encodeURIComponent(
-      usernameString
+      usernameString,
     )}&ticketNumber=${encodeURIComponent(
-      ticketNumber ?? SAMPLE_TICKET_NUMBER
+      ticketNumber ?? SAMPLE_TICKET_NUMBER,
     )}`;
     if (name) {
       url = `${url}&name=${encodeURIComponent(name)}`;
@@ -45,7 +45,7 @@ export default async function ticketImages(
     res.setHeader("Content-Type", `image/png`);
     res.setHeader(
       "Cache-Control",
-      `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`
+      `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`,
     );
     res.statusCode = 200;
     res.end(file);

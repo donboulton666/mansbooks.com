@@ -13,7 +13,7 @@ export default function useLoginStatus(opts?: ConfigInterface) {
     {
       ...opts,
       revalidateOnFocus: false,
-    }
+    },
   );
   const { mutate } = useSWRConfig();
   return {

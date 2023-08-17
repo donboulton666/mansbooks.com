@@ -39,7 +39,7 @@ const submitHandler = async (req, res) => {
 
       //COMMENT
       "comment",
-      data.comment
+      data.comment,
     );
 
     //Store the id of the survey to retrieve it later

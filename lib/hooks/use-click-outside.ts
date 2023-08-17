@@ -3,7 +3,7 @@ import { MutableRefObject, useEffect } from "react";
 
 const useClickOutside = (
   ref: MutableRefObject<HTMLElement | null>,
-  handler: (event: Event) => void
+  handler: (event: Event) => void,
 ) => {
   useEffect(() => {
     const callback = (event: Event) => {

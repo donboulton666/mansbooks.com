@@ -12,7 +12,7 @@ export default function Results() {
 
   return (
     <Layout>
-      <div className="center mx-auto max-w-5xl">
+      <div className="center mx-auto my-10 max-w-5xl">
         {" "}
         {surveyData.map((data) => (
           <div key={data.id}>

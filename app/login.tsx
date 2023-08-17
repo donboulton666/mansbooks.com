@@ -52,7 +52,7 @@ export default function Login() {
         className={cn(
           styles.container,
           styleUtils.appear,
-          styleUtils["appear-first"]
+          styleUtils["appear-first"],
         )}
       >
         <h1 className={cn(styles.hero)}>Login</h1>

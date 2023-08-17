@@ -48,7 +48,7 @@ export function emailToId(email: string) {
   if (process.env.REDIS_EMAIL_TO_ID_SECRET) {
     const hmac = crypto.createHmac(
       "sha1",
-      process.env.REDIS_EMAIL_TO_ID_SECRET
+      process.env.REDIS_EMAIL_TO_ID_SECRET,
     );
     hmac.update(email);
     const result = hmac.digest("hex");

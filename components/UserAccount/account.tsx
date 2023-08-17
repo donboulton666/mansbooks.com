@@ -4,7 +4,7 @@ import {
   useSupabaseClient,
   Session,
 } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/schema";
+import { Database } from "@lib/database.types";
 import Avatar from "./avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
@@ -112,11 +112,9 @@ export default function Account({ session }: { session: Session }) {
   }
 
   async function signInWithEmail() {
-    const { data, error } = await supabase.auth.signInWithOtp({
-      email: email,
-      options: {
-        emailRedirectTo: "https://mansbooks.com/Join",
-      },
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
+      password: process.env.ADMIN_PASSWORD,
     });
   }
 
@@ -130,7 +128,7 @@ export default function Account({ session }: { session: Session }) {
         <Avatar
           uid={user.id}
           url={avatar_url}
-          size={32}
+          size={150}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });

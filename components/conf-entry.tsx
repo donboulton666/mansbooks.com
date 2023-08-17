@@ -61,7 +61,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
 
       onRegister();
     },
-    [emailInput, onRegister]
+    [emailInput, onRegister],
   );
 
   const onSubmit = useCallback(
@@ -82,7 +82,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
         setFormState("error");
       }
     },
-    [executeCaptcha, isCaptchaEnabled, handleRegister]
+    [executeCaptcha, isCaptchaEnabled, handleRegister],
   );
 
   const onTryAgainClick = useCallback(
@@ -93,7 +93,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
       setFormState("default");
       resetCaptcha();
     },
-    [resetCaptcha]
+    [resetCaptcha],
   );
 
   useEmailQueryParam("login", setEmailInput);
@@ -103,7 +103,7 @@ export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
       className={cn(
         styles.container,
         styleUtils.appear,
-        styleUtils["appear-first"]
+        styleUtils["appear-first"],
       )}
     >
       <h1 className={cn(styles.hero)}>Ready to experience a live stage?</h1>

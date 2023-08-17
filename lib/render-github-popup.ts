@@ -89,8 +89,8 @@ export function renderSuccess(data?: GitHubOAuthData) {
     <script>
       if (window.opener) {
         window.opener.postMessage(${htmlescape(data || "")}, ${htmlescape(
-    SITE_ORIGIN || "*"
-  )});
+          SITE_ORIGIN || "*",
+        )});
       } else {
         window.close();
       }

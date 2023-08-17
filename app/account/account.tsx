@@ -1,30 +1,35 @@
-"use client";
-
-import { useCallback, useEffect, useState } from "react";
-import Avatar from "./avatar";
-import { Database } from "@lib/database.types";
+import { useState, useEffect } from "react";
 import {
+  useUser,
+  useSupabaseClient,
   Session,
-  createClientComponentClient,
-} from "@supabase/auth-helpers-nextjs";
+} from "@supabase/auth-helpers-react";
+import { Database } from "@lib/schema";
+import Avatar from "./avatar";
 
-export default function AccountForm({ session }: { session: Session | null }) {
-  const supabase = createClientComponentClient<Database>();
+type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
+
+export default function Account({ session }: { session: Session }) {
+  const supabase = useSupabaseClient<Database>();
+  const user = useUser();
   const [loading, setLoading] = useState(true);
-  const user = session?.user;
-  const [fullname, setFullname] = useState<string | null>(null);
-  const [username, setUsername] = useState<string | null>(null);
-  const [website, setWebsite] = useState<string | null>(null);
-  const [avatar_url, setAvatarUrl] = useState<string | null>(null);
+  const [username, setUsername] = useState<Profiles["username"]>(null);
+  const [website, setWebsite] = useState<Profiles["website"]>(null);
+  const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
 
-  const getProfile = useCallback(async () => {
+  useEffect(() => {
+    getProfile();
+  }, [session]);
+
+  async function getProfile() {
     try {
       setLoading(true);
+      if (!user) throw new Error("No user");
 
       let { data, error, status } = await supabase
         .from("profiles")
-        .select(`full_name, username, website, avatar_url`)
-        .eq("id", user?.id)
+        .select(`username, website, avatar_url`)
+        .eq("id", user.id)
         .single();
 
       if (error && status !== 406) {
@@ -32,130 +37,105 @@ export default function AccountForm({ session }: { session: Session | null }) {
       }
 
       if (data) {
-        setFullname(data.full_name);
         setUsername(data.username);
         setWebsite(data.website);
         setAvatarUrl(data.avatar_url);
       }
     } catch (error) {
       alert("Error loading user data!");
+      console.log(error);
     } finally {
       setLoading(false);
     }
-  }, [user, supabase]);
-
-  useEffect(() => {
-    getProfile();
-  }, [user, getProfile]);
+  }
 
   async function updateProfile({
     username,
     website,
     avatar_url,
   }: {
-    username: string | null;
-    fullname: string | null;
-    website: string | null;
-    avatar_url: string | null;
+    username: Profiles["username"];
+    website: Profiles["website"];
+    avatar_url: Profiles["avatar_url"];
   }) {
     try {
       setLoading(true);
+      if (!user) throw new Error("No user");
 
-      let { error } = await supabase.from("profiles").upsert({
-        id: user?.id as string,
-        full_name: fullname,
+      const updates = {
+        id: user.id,
         username,
         website,
         avatar_url,
         updated_at: new Date().toISOString(),
-      });
+      };
+
+      let { error } = await supabase.from("profiles").upsert(updates);
       if (error) throw error;
       alert("Profile updated!");
     } catch (error) {
       alert("Error updating the data!");
+      console.log(error);
     } finally {
       setLoading(false);
     }
   }
+
+  async function signInWithGitHub() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "github",
+    });
+  }
+
+  async function signInWithGoogle() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        queryParams: {
+          access_type: "offline",
+          prompt: "consent",
+        },
+      },
+    });
+  }
+
+  async function signInWithSlack() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "slack",
+    });
+  }
+
+  async function signInWithSpotify() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+    });
+  }
+
+  async function signInWithEmail() {
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: "donaldboulton@gmail.com",
+      options: {
+        emailRedirectTo: "https://mansbooks.com/Join",
+      },
+    });
+  }
+
   async function signOut() {
     const { error } = await supabase.auth.signOut();
   }
 
-  const uploadAvatar: React.ChangeEventHandler<HTMLInputElement> = async (
-    event
-  ) => {
-    try {
-      setUploading(true);
-
-      if (!event.target.files || event.target.files.length === 0) {
-        throw new Error("You must select an image to upload.");
-      }
-
-      const file = event.target.files[0];
-      const fileExt = file.name.split(".").pop();
-      const filePath = `${uid}-${Math.random()}.${fileExt}`;
-
-      let { error: uploadError } = await supabase.storage
-        .from("avatars")
-        .upload(filePath, file);
-
-      if (uploadError) {
-        throw uploadError;
-      }
-
-      onUpload(filePath);
-    } catch (error) {
-      alert("Error uploading avatar!");
-    } finally {
-      setUploading(false);
-    }
-  };
-
   return (
-    <div className="form-widget mb-10 w-96">
-      <Avatar
-        uid={user!.id}
-        url={avatar_url}
-        width={32}
-        height={32}
-        onUpload={(url) => {
-          setAvatarUrl(url);
-          updateProfile({ fullname, username, website, avatar_url: url });
-        }}
-      />
-      <div>
-        <label className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800">
-          <input
-            style={{
-              visibility: "hidden",
-              position: "absolute",
-            }}
-            type="file"
-            id="single"
-            accept="image/*"
-            onChange={uploadAvatar}
-            disabled={uploading}
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
-            />
-          </svg>
-        </label>
+    <div className="form-widget ml-8">
+      <div className="mb-2 p-4">
+        <Avatar
+          uid={user.id}
+          url={avatar_url}
+          size={32}
+          onUpload={(url) => {
+            setAvatarUrl(url);
+            updateProfile({ username, website, avatar_url: url });
+          }}
+        />
       </div>
       <div className="col-span-6">
         <label
@@ -188,40 +168,7 @@ export default function AccountForm({ session }: { session: Session | null }) {
           />
         </div>
       </div>
-      <div className="col-span-6 mt-2">
-        <label
-          htmlFor="fullName"
-          className="mb-2 block text-xs font-bold uppercase tracking-wide text-slate-300"
-        >
-          Full Name
-        </label>
-        <div className="relative">
-          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-l-md border border-r-0 border-slate-700 bg-slate-800 pl-3 pr-3 text-slate-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="h-5 w-5 text-slate-300"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
-          </div>
-          <input
-            id="fullName"
-            type="text"
-            value={fullname || ""}
-            onChange={(e) => setFullname(e.target.value)}
-            placeholder="FullName"
-            className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 shadow-sm focus:border-blue-400 focus:ring-blue-300 sm:text-sm"
-          />
-        </div>
-      </div>
+
       <div className="col-span-6 mt-2">
         <label
           htmlFor="username"
@@ -296,14 +243,13 @@ export default function AccountForm({ session }: { session: Session | null }) {
       <div className="mb-4 mt-4">
         <button
           className="button primary block"
-          onClick={() =>
-            updateProfile({ fullname, username, website, avatar_url })
-          }
+          onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}
         >
           {loading ? "Loading ..." : "Update"}
         </button>
       </div>
+
       <div className="mb-4">
         <button
           className="button block"

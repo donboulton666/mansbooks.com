@@ -18,7 +18,7 @@ const ScreenshareTile = () => {
   const hmsActions = useHMSActions();
   const videoRef = React.useRef<HTMLVideoElement>(null);
   const videoTrack = useHMSStore(
-    selectScreenShareByPeerID(screenSharePeer?.id)
+    selectScreenShareByPeerID(screenSharePeer?.id),
   );
   const isLocalScreenShared = useHMSStore(selectIsLocalScreenShared);
   React.useEffect(() => {

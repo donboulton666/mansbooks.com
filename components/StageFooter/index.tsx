@@ -37,7 +37,7 @@ const Footer = ({ count }) => {
             hmsActions.changeRole(
               peer.id,
               peer.roleName === "listener" ? "handraise" : "listener",
-              true
+              true,
             )
           }
         />

@@ -32,7 +32,7 @@ const Rounded = () => {
   ];
   // Use the video with public ID,
   const myVideo = cld.video(
-    "videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-"
+    "videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-",
   );
 
   // Apply the transformation.

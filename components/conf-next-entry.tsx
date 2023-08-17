@@ -16,7 +16,7 @@ type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function ConfEntry(
   { session }: { session: Session | null },
-  { onRegister }: { onRegister: () => void }
+  { onRegister }: { onRegister: () => void },
 ) {
   const supabase = createClientComponentClient<Database>();
   const user = session?.user;
@@ -35,7 +35,7 @@ export default function ConfEntry(
 
       onRegister();
     },
-    [user, onRegister]
+    [user, onRegister],
   );
 
   useEmailQueryParam("session", setUsername);
@@ -46,7 +46,7 @@ export default function ConfEntry(
         className={cn(
           styles.container,
           styleUtils.appear,
-          styleUtils["appear-first"]
+          styleUtils["appear-first"],
         )}
       >
         <h1 className={cn(styles.hero)}>Ready to experience a live stage?</h1>

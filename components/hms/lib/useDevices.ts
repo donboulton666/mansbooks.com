@@ -81,7 +81,7 @@ export const useDevices = (): useDevicesResult => {
         }
       } catch (err) {}
     },
-    [hmsActions]
+    [hmsActions],
   );
 
   return {

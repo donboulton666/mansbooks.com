@@ -38,7 +38,7 @@ async function home(request: Request) {
       { error: "Invalid request" },
       {
         status: 401,
-      }
+      },
     );
   }
 
@@ -55,7 +55,7 @@ async function home(request: Request) {
   // It implies that a user has issued a command.
   if (type === DiscordCommandType.ApplicationCommand) {
     const { value } = data.options.find(
-      (option: { name: string; value: string }) => option.name === "name"
+      (option: { name: string; value: string }) => option.name === "name",
     );
     return json({
       // Type 4 responds with the below message retaining the user's
@@ -74,7 +74,7 @@ async function home(request: Request) {
 
 /** Verify whether the request is coming from Discord. */
 async function verifySignature(
-  request: Request
+  request: Request,
 ): Promise<{ valid: boolean; body: string }> {
   const PUBLIC_KEY = Deno.env.get("DISCORD_PUBLIC_KEY")!;
   // Discord sends these headers with every request.
@@ -84,7 +84,7 @@ async function verifySignature(
   const valid = nacl.sign.detached.verify(
     new TextEncoder().encode(timestamp + body),
     hexToUint8Array(signature),
-    hexToUint8Array(PUBLIC_KEY)
+    hexToUint8Array(PUBLIC_KEY),
   );
 
   return { valid, body };

@@ -34,7 +34,7 @@ const Frame: FC<{
     <div
       className={classNames(
         "fixed inset-0 z-10 bg-slate-600/90 p-8 text-slate-300",
-        `${open ? "visible" : "invisible"}` // control visibility via `open` attribute (or render conditionally)
+        `${open ? "visible" : "invisible"}`, // control visibility via `open` attribute (or render conditionally)
       )}
       onClick={closeOnClickOutside ? onOverlayClick : undefined}
     >

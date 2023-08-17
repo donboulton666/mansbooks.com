@@ -23,7 +23,7 @@ import VercelLogo from "@components/icons/icon-platform";
 const siteUrl = new URL(SITE_URL);
 const siteUrlForTicket = `${siteUrl.host}${siteUrl.pathname}`.replace(
   /\/$/,
-  ""
+  "",
 );
 
 export default function TicketInfo({

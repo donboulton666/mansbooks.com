@@ -54,7 +54,7 @@ const updateCount = async (slug, count = 1) => {
     JSON.stringify(`${count},${VERSION}`),
     {
       headers: HEADERS,
-    }
+    },
   );
 };
 

@@ -23,7 +23,7 @@ export async function validateCaptchaResult(result: string): Promise<boolean> {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: `secret=${process.env.HCAPTCHA_SECRET_KEY}&response=${result}`,
-    }
+    },
   ).then((res) => res.json());
 
   return success;

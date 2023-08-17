@@ -44,7 +44,7 @@ export default function TicketProfile({
           styles.rounded,
           {
             [styles.show]: ticketGenerationState === "loading",
-          }
+          },
         )}
       >
         {username ? (

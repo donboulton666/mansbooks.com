@@ -34,7 +34,7 @@ type ErrorResponse = {
 
 export default async function register(
   req: NextApiRequest,
-  res: NextApiResponse<ConfUser | ErrorResponse>
+  res: NextApiResponse<ConfUser | ErrorResponse>,
 ) {
   if (req.method !== "POST") {
     return res.status(501).json({
@@ -102,7 +102,7 @@ export default async function register(
       secure: process.env.NODE_ENV === "production",
       path: "/api",
       expires: new Date(Date.now() + ms("7 days")),
-    })
+    }),
   );
 
   return res.status(statusCode).json({

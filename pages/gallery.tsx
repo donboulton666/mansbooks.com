@@ -263,7 +263,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                             <span
                               className={cn(
                                 styles.button,
-                                styles["button-resource"]
+                                styles["button-resource"],
                               )}
                             >
                               <button

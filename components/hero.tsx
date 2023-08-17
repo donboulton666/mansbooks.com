@@ -27,7 +27,7 @@ export default function Hero() {
           styleUtils.appear,
           styleUtils["appear-third"],
           styleUtils["show-on-mobile"],
-          styles.description
+          styles.description,
         )}
       >
         {SITE_DESCRIPTION}
@@ -36,7 +36,7 @@ export default function Hero() {
         className={cn(
           styleUtils.appear,
           styleUtils["appear-third"],
-          styles.hero
+          styles.hero,
         )}
       >
         Angelina Jordan
@@ -47,7 +47,7 @@ export default function Hero() {
           styleUtils.appear,
           styleUtils["appear-third"],
           styleUtils["show-on-tablet"],
-          styles.description
+          styles.description,
         )}
       >
         {SITE_DESCRIPTION}
@@ -56,7 +56,7 @@ export default function Hero() {
         className={cn(
           styleUtils.appear,
           styleUtils["appear-fourth"],
-          styles.info
+          styles.info,
         )}
       >
         <div>{DATE}</div>

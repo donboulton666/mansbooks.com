@@ -24,7 +24,7 @@ import { createGitHubUser } from "@lib/db-api";
  */
 export default async function githubOAuth(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (!req.query.code) {
     // This happens when user cancelled the authentication.
@@ -46,14 +46,14 @@ export default async function githubOAuth(
       headers: {
         Accept: "application/json",
       },
-    }
+    },
   );
 
   if (!accessTokenRes.ok) {
     console.error(
       `Failed to get access token: ${
         accessTokenRes.status
-      } ${await accessTokenRes.text()}`
+      } ${await accessTokenRes.text()}`,
     );
     res.statusCode = 500;
     res.end(renderError());
@@ -70,7 +70,7 @@ export default async function githubOAuth(
 
   if (!userRes.ok) {
     console.error(
-      `Failed to get GitHub user: ${userRes.status} ${await userRes.text()}`
+      `Failed to get GitHub user: ${userRes.status} ${await userRes.text()}`,
     );
     res.statusCode = 500;
     res.end(renderError());
@@ -84,7 +84,7 @@ export default async function githubOAuth(
     res.end(renderSuccess({ type: "token", token }));
   } catch {
     res.end(
-      renderSuccess({ type: "user", login: user.login, name: user.name })
+      renderSuccess({ type: "user", login: user.login, name: user.name }),
     );
   }
 }

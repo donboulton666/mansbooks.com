@@ -16,7 +16,7 @@ export async function getUserByUsername(username: string): Promise<ConfUser> {
   const [name, ticketNumber] = await redis!.hmget(
     `user:${username}`,
     "name",
-    "ticketNumber"
+    "ticketNumber",
   );
   return {
     name,
@@ -29,7 +29,7 @@ export async function getUserById(id: string): Promise<ConfUser> {
     `id:${id}`,
     "name",
     "username",
-    "createdAt"
+    "createdAt",
   );
   return { name, username, createdAt: parseInt(createdAt!, 10) };
 }
@@ -44,13 +44,13 @@ export async function createUser(id: string, email: string): Promise<ConfUser> {
     "ticketNumber",
     ticketNumber,
     "createdAt",
-    createdAt
+    createdAt,
   );
   return { id, email, ticketNumber, createdAt };
 }
 
 export async function getTicketNumberByUserId(
-  id: string
+  id: string,
 ): Promise<string | null> {
   return await redis!.hget(`id:${id}`, "ticketNumber");
 }
@@ -70,12 +70,12 @@ export async function createGitHubUser(user: any): Promise<string> {
 export async function updateUserWithGitHubUser(
   id: string,
   token: string,
-  ticketNumber: string
+  ticketNumber: string,
 ): Promise<ConfUser> {
   const [username, name] = await redis!.hmget(
     `github-user:${token}`,
     "login",
-    "name"
+    "name",
   );
   if (!username) {
     throw new Error("Invalid or expired token");

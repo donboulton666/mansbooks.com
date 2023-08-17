@@ -23,7 +23,7 @@ const resultsHandler = async (req, res) => {
         },
         body: JSON.stringify(data.map((id) => ["HGETALL", id])),
         method: "POST",
-      }
+      },
     );
 
     const results = (await response.json()).map((response) => response.result); // e.g. ["rating", "6", "recommendation", "true", "comment", "This is a comment"]
@@ -38,7 +38,7 @@ const resultsHandler = async (req, res) => {
           return { ...acc, ...obj };
         }
         return acc;
-      }, [])
+      }, []),
     ); //e.g. [{rating: "6", recommendation: "true", comment: "This is a comment"}]
 
     return res.status(200).json({

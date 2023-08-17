@@ -5,7 +5,7 @@ async function vercelInitialization(
   vercelTeamId,
   vercelApiToken,
   buildTriggerId,
-  siteSearchToken
+  siteSearchToken,
 ) {
   await fetch(`https://api.vercel.com/v10/projects/${vercelProjectId}/env`, {
     headers: {
@@ -34,7 +34,7 @@ async function netlifyInitialization(
   netlifySiteId,
   netlifyToken,
   buildTriggerId,
-  siteSearchToken
+  siteSearchToken,
 ) {
   await fetch(`https://api.netlify.com/api/v1/sites/${netlifySiteId}`, {
     headers: {
@@ -81,7 +81,7 @@ export default async (req, res) => {
     const accessTokens = await client.accessTokens.list();
 
     const siteSearchToken = accessTokens.find(
-      (token) => token.name === "Site Search"
+      (token) => token.name === "Site Search",
     ).token;
 
     if (req.body.integrationInfo.adapter === "vercel") {
@@ -90,7 +90,7 @@ export default async (req, res) => {
         req.body.integrationInfo.vercelTeamId,
         req.body.integrationInfo.vercelApiToken,
         buildTriggerId,
-        siteSearchToken
+        siteSearchToken,
       );
     }
 
@@ -100,7 +100,7 @@ export default async (req, res) => {
         req.body.integrationInfo.netlifySiteId,
         req.body.integrationInfo.netlifyToken,
         buildTriggerId,
-        siteSearchToken
+        siteSearchToken,
       );
     }
 
