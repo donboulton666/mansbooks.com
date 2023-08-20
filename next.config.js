@@ -7,6 +7,9 @@ const withPWA = require('next-pwa')({
 })
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const runtimeCaching = require("next-pwa/cache");
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -14,81 +17,87 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA(
   withBundleAnalyzer({
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  experimental: {
-    serverActions: true,
-    webVitalsAttribution: ['CLS', 'LCP'],
-  },
-  i18n: {
-    locales: ["en", "es", "it", "nn"],
-     defaultLocale: "en",
-     localeDetection: false,
-  },
-  env: {
-    DATOCMS_READ_ONLY_API_TOKEN:
-      process.env.DATOCMS_READ_ONLY_API_TOKEN ,
-    UPSTASH_REDIS_REST_TOKEN:
-      process.env.UPSTASH_REDIS_REST_TOKEN,
-    UPSTASH_REDIS_REST_URL:  
-      process.env.UPSTASH_REDIS_REST_URL,
-  },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-    ];
-  },
-  images: {
-    dangerouslyAllowSVG: true,
-    formats: ['image/avif', 'image/webp'],
-    domains: [
-      'www.datocms-assets.com',
-      'res.cloudinary.com',
-      "encrypted-tbn0.gstatic.com",
-      "raw.githubusercontent.com",
-      'avatars.githubusercontent.com',
-      'github.com',
-      'ca.slack-edge.com',
-      'supabase.com',
-      'pbs.twimg.com',
-    ],
-  },
-  // Support svg import
-  // ref: https://dev.to/dolearning/importing-svgs-to-next-js-nna
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-      test: /\.(mp3)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          publicPath: '/_next/static/sounds/',
-          outputPath: 'static/sounds/',
-          name: '[name].[ext]',
-          esModule: false,
+    pwa: {
+      runtimeCaching,
+      buildExcludes: [/middleware-manifest.json$/]
+    },
+    reactStrictMode: true,
+    swcMinify: true,
+    compress: true,
+    experimental: {
+      serverActions: true,
+      webVitalsAttribution: ['CLS', 'LCP'],
+    },
+    i18n: {
+      locales: ["en", "es", "it", "nn"],
+       defaultLocale: "en",
+       localeDetection: false,
+    },
+    env: {
+      DATOCMS_READ_ONLY_API_TOKEN:
+        process.env.DATOCMS_READ_ONLY_API_TOKEN ,
+      UPSTASH_REDIS_REST_TOKEN:
+        process.env.UPSTASH_REDIS_REST_TOKEN,
+      UPSTASH_REDIS_REST_URL:  
+        process.env.UPSTASH_REDIS_REST_URL,
+    },
+    async headers() {
+      return [
+        {
+          source: "/(.*)",
+          headers: securityHeaders,
         },
-      },
-    });
-    config.experiments = { ...config.experiments, topLevelAwait: true };
-    return config;
-  },
+      ];
+    },
+    images: {
+      dangerouslyAllowSVG: true,
+      formats: ['image/avif', 'image/webp'],
+      domains: [
+        'www.datocms-assets.com',
+        'res.cloudinary.com',
+        "encrypted-tbn0.gstatic.com",
+        "raw.githubusercontent.com",
+        'avatars.githubusercontent.com',
+        'github.com',
+        'ca.slack-edge.com',
+        'supabase.com',
+        'pbs.twimg.com',
+        "console.upstash.com",
+        "upstash.com",
+      ],
+    },
+    // Support svg import
+    // ref: https://dev.to/dolearning/importing-svgs-to-next-js-nna
+    webpack: (config) => {
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+        test: /\.(mp3)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next/static/sounds/',
+            outputPath: 'static/sounds/',
+            name: '[name].[ext]',
+            esModule: false,
+          },
+        },
+      });
+      config.experiments = { ...config.experiments, topLevelAwait: true };
+      return config;
+    },
   
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    ignoreBuildErrors: true,
-  },
-})
+    eslint: {
+      // Warning: This allows production builds to successfully complete even if
+      // your project has ESLint errors.
+      ignoreDuringBuilds: true,
+    },
+    typescript: {
+      // Dangerously allow production builds to successfully complete even if
+      // your project has type errors.
+      ignoreBuildErrors: true,
+    },
+  })
 );
 
 module.exports = nextConfig

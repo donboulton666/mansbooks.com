@@ -5,7 +5,7 @@
   "repository": "donaldboulton/mansbooks.com",
   "author": "Angelina Jordan.",
   "homepage": "https://mansbooks.com",
-  "license": "0BSD Zero-Clause BSD",
+  "license": "0BSD",
   "engines": {
     "node": ">=18.16.1"
   },
