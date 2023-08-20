@@ -30,6 +30,12 @@ export default function Survey() {
     alert("Thank you for your feedback!");
   };
 
+  const Excellent = 1;
+  const Good = 2;
+  const Ok = 3;
+  const SoSo = 4;
+  const Bad = 5;
+
   const RatingOption = ({ value }) => (
     <div className="w-96">
       <ul class="w-full items-center rounded-lg border border-slate-600 bg-slate-900 text-sm font-medium text-slate-300 sm:flex">
@@ -62,7 +68,7 @@ export default function Survey() {
           <h2>Welcome {member}</h2>
           <form onSubmit={handleSubmit}>
             <div>
-              <h2>How do you feel about I'm Old Enough?</h2>
+              <h2>Rate I'm Old Enough?</h2>
               {[1, 2, 3, 4, 5].map((value) => (
                 <RatingOption key={value} value={value} />
               ))}

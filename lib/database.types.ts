@@ -117,6 +117,7 @@ export interface Database {
           id?: number;
           parent?: number | null;
           photos?: Json | null;
+          user_id?: string | null;
         };
         Update: {
           author?: string | null;
@@ -125,6 +126,7 @@ export interface Database {
           id?: number;
           parent?: number | null;
           photos?: Json | null;
+          user_id?: string | null;
         };
       };
       profiles: {

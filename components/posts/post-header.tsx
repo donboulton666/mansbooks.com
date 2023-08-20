@@ -147,7 +147,7 @@ export default function PostHeader({
         </>
         ,
       </Head>
-      <div className="center mx-auto max-w-4xl" data-datocms-noindex>
+      <div className="center mx-auto max-w-4xl">
         <PostTitle>{title}</PostTitle>
         <div className="mb-8 sm:mx-0 md:mb-16">
           <CoverImage

@@ -1,5 +1,5 @@
 import type { NextComponentType, NextPageContext } from "next";
-import type { Session } from "next-auth";
+import type { Session } from "@supabase/auth-helpers-react";
 import type { Router } from "next/router";
 
 declare module "next/app" {

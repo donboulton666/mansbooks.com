@@ -20,7 +20,7 @@ let dbApi: {
 if (
   process.env.UPSTASH_REDIS_REST_PORT &&
   process.env.UPSTASH_REDIS_REST_URL &&
-  process.env.EMAIL_TO_ID_SECRET
+  process.env.REDIS_EMAIL_TO_ID_SECRET
 ) {
   dbApi = redisApi;
 } else if (

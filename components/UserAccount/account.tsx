@@ -1,13 +1,12 @@
+import React from 'react'
 import { useState, useEffect } from "react";
 import {
   useUser,
   useSupabaseClient,
   Session,
 } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/database.types";
+import { Database } from "@lib/schema";
 import Avatar from "./avatar";
-
-type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function Account({ session }: { session: Session }) {
   const supabase = useSupabaseClient<Database>();
@@ -49,41 +48,13 @@ export default function Account({ session }: { session: Session }) {
     }
   }
 
-  async function updateProfile({
-    username,
-    website,
-    avatar_url,
-  }: {
-    username: Profiles["username"];
-    website: Profiles["website"];
-    avatar_url: Profiles["avatar_url"];
-  }) {
-    try {
-      setLoading(true);
-      if (!user) throw new Error("No user");
-
-      const updates = {
-        id: user.id,
-        username,
-        website,
-        avatar_url,
-        updated_at: new Date().toISOString(),
-      };
-
-      let { error } = await supabase.from("profiles").upsert(updates);
-      if (error) throw error;
-      alert("Profile updated!");
-    } catch (error) {
-      alert("Error updating the data!");
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  }
-
+  
   async function signInWithGitHub() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
+      options: {
+        redirectTo: getURL(),
+      },
     });
   }
 
@@ -91,6 +62,7 @@ export default function Account({ session }: { session: Session }) {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
+        redirectTo: getURL(),
         queryParams: {
           access_type: "offline",
           prompt: "consent",
@@ -102,19 +74,27 @@ export default function Account({ session }: { session: Session }) {
   async function signInWithSlack() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "slack",
+      options: {
+        redirectTo: getURL(),
+      },
     });
   }
 
   async function signInWithSpotify() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "spotify",
+      options: {
+        redirectTo: getURL(),
+      },
     });
   }
 
   async function signInWithEmail() {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
-      password: process.env.ADMIN_PASSWORD,
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: "donaldboulton@gmail.com",
+      options: {
+        emailRedirectTo: "https://mansbooks.com/Join",
+      },
     });
   }
 
@@ -128,7 +108,7 @@ export default function Account({ session }: { session: Session }) {
         <Avatar
           uid={user.id}
           url={avatar_url}
-          size={150}
+          size={32}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });
@@ -166,6 +146,7 @@ export default function Account({ session }: { session: Session }) {
           />
         </div>
       </div>
+
       <div className="col-span-6 mt-2">
         <label
           htmlFor="username"
@@ -256,5 +237,5 @@ export default function Account({ session }: { session: Session }) {
         </button>
       </div>
     </div>
-  );
+  )
 }

@@ -19,7 +19,7 @@ const Profile = () => {
   const session = useSession();
   const supabase = useSupabaseClient<Database>();
   return (
-    <Layout data-datocms-noindex>
+    <Layout>
       <Stars />
       <Head>
         <title>LProfile</title>

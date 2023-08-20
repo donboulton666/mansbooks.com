@@ -18,7 +18,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { COOKIE } from "@lib/constants";
 import { getTicketNumberByUserId } from "@lib/db-api";
 
-export default async function auth(req: NextApiRequest, res: NextApiResponse) {
+export default async function Auth(req: NextApiRequest, res: NextApiResponse) {
   const id = req.cookies[COOKIE];
   if (!id) {
     return res.status(401).json({

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useState, useEffect } from "react";
 import { Auth } from "@supabase/auth-ui-react";
@@ -5,7 +7,12 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import Link from "next/link";
 import Center from "@components/Center";
 import ColumnGridLeft from "@components/column-grid-left";
-import { useUser, useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import {
+  useUser,
+  useSupabaseClient,
+  Session,
+} from "@supabase/auth-helpers-react";
+import Image from 'next/image'
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BriefcaseIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import {
@@ -20,6 +27,7 @@ import {
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
 import { Database } from "@lib/database.types";
+import { cookies } from 'next/headers'
 import Avatar from "@components/UserAccount/avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
@@ -28,20 +36,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navigation({
-  uid,
-  url,
-  size,
-}: {
-  uid: string;
-  url: Profiles["avatar_url"];
-  size: number;
-}) {
-  const supabase = useSupabaseClient<Database>();
-  const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
-  const session = useSession();
-  const user = useUser();
 
+export default function Navigation({ uid, url, size, session }: { session: Session }) {
+  const supabase = useSupabaseClient<Database>();
+  const user = useUser();
+  const [loading, setLoading] = useState(true);
+  const [username, setUsername] = useState<Profiles["username"]>(null);
+  const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
+ 
   useEffect(() => {
     getProfile();
   }, [session]);
@@ -53,7 +55,7 @@ export default function Navigation({
 
       let { data, error, status } = await supabase
         .from("profiles")
-        .select(`username, avatar_url`)
+        .select(`username, website, avatar_url`)
         .eq("id", user.id)
         .single();
 
@@ -63,6 +65,7 @@ export default function Navigation({
 
       if (data) {
         setUsername(data.username);
+        setWebsite(data.website);
         setAvatarUrl(data.avatar_url);
       }
     } catch (error) {
@@ -73,19 +76,29 @@ export default function Navigation({
     }
   }
 
+  let width = "w-7";
+  if (size === "lg") {
+    width = "w-7 md:w-7";
+  }
+
   const [showModal, setShowModal] = useState(false);
+  const getURL = () => {
+    let url =
+      process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
+      process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
+      'http://localhost:3000/'
+    // Make sure to include `https://` when not localhost.
+    url = url.includes('http') ? url : `https://${url}`
+    // Make sure to include a trailing `/`.
+    url = url.charAt(url.length - 1) === '/' ? url : `${url}/`
+    return url
+  }
 
   async function signInWithGitHub() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
-    });
-  }
-
-  async function signInWithEmail() {
-    const { data, error } = await supabase.auth.signInWithOtp({
-      email: "donaldboulton@gmail.com",
       options: {
-        emailRedirectTo: "https://mansbooks.com/profile",
+        redirectTo: getURL(),
       },
     });
   }
@@ -231,10 +244,10 @@ export default function Navigation({
                       <Menu.Button className="flex rounded-full text-sm focus:outline-none">
                         <span className="sr-only">Open User Menu</span>
                         {avatarUrl ? (
-                          <img
+                          <Image
                             src={avatarUrl}
                             alt="Avatar"
-                            className="avatar image mb-4 h-7 w-7 rounded-full ring ring-wine-300 ring-offset-4"
+                            className="avatar image h-7 w-7 rounded-full "
                           />
                         ) : (
                           <div className="avatar no-image">
@@ -280,7 +293,7 @@ export default function Navigation({
                               onClick={() => setShowModal(true)}
                               className={classNames(
                                 active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block rounded-md px-3 py-2 w-full text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
+                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
@@ -361,7 +374,7 @@ export default function Navigation({
       </Disclosure>
       {showModal ? (
         <>
-          <div className="nav-scroll fixed inset-0 z-50 flex items-center justify-center outline-none focus:outline-none">
+          <div className="nav-scroll fixed inset-0 mt-10 z-50 flex items-center justify-center outline-none focus:outline-none">
             <div className="relative mx-auto my-6 w-auto max-w-3xl">
               {/*content*/}
               <div className="relative flex w-96 flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
@@ -396,26 +409,26 @@ export default function Navigation({
                     {!session ? (
                       <Auth
                         supabaseClient={supabase}
+                        view="magic_link"
                         appearance={{ theme: ThemeSupa }}
-                        providers={["github"]}
                         theme="dark"
+                        showLinks={false}
+                        providers={[ github ]}
+                        redirectTo="https://mansbooks.com/api/github-oauth"
                       />
                     ) : (
                       <>
                         <ColumnGridLeft>
                           <Avatar
-                            uid={user.id}
+                            uid={user!.id}
                             url={avatar_url}
-                            size={32}
-                            session={session}
+                            size={28}
+                            className="avatar image h-24 w-24 rounded-full"
+                            session={session}                             
                           />
+                          <div><h2>Hello: {username}</h2></div>
                           <div
                             className="flex h-full w-full flex-col items-center justify-center p-4"
-                            style={{
-                              minWidth: 250,
-                              maxWidth: 600,
-                              margin: "auto",
-                            }}
                           >
                             <div className="mb-4">
                               <button
