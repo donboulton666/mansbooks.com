@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import {
   useUser,
@@ -48,7 +48,6 @@ export default function Account({ session }: { session: Session }) {
     }
   }
 
-  
   async function signInWithGitHub() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
@@ -237,5 +236,5 @@ export default function Account({ session }: { session: Session }) {
         </button>
       </div>
     </div>
-  )
+  );
 }

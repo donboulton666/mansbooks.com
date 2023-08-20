@@ -7,12 +7,8 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import Link from "next/link";
 import Center from "@components/Center";
 import ColumnGridLeft from "@components/column-grid-left";
-import {
-  useUser,
-  useSupabaseClient,
-  Session,
-} from "@supabase/auth-helpers-react";
-import Image from 'next/image'
+import { useSupabaseClient, Session } from "@supabase/auth-helpers-react";
+import Image from "next/image";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BriefcaseIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import {
@@ -27,7 +23,7 @@ import {
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
 import { Database } from "@lib/database.types";
-import { cookies } from 'next/headers'
+import { cookies } from "next/headers";
 import Avatar from "@components/UserAccount/avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
@@ -36,69 +32,31 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-
-export default function Navigation({ uid, url, size, session }: { session: Session }) {
+export default function Navigation({
+  uid,
+  url,
+  size,
+  session,
+}: {
+  session: Session;
+}) {
   const supabase = useSupabaseClient<Database>();
-  const user = useUser();
   const [loading, setLoading] = useState(true);
   const [username, setUsername] = useState<Profiles["username"]>(null);
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
- 
-  useEffect(() => {
-    getProfile();
-  }, [session]);
-
-  async function getProfile() {
-    try {
-      setLoading(true);
-      if (!user) throw new Error("No user");
-
-      let { data, error, status } = await supabase
-        .from("profiles")
-        .select(`username, website, avatar_url`)
-        .eq("id", user.id)
-        .single();
-
-      if (error && status !== 406) {
-        throw error;
-      }
-
-      if (data) {
-        setUsername(data.username);
-        setWebsite(data.website);
-        setAvatarUrl(data.avatar_url);
-      }
-    } catch (error) {
-      alert("Error loading user data!");
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  }
+  const [showModal, setShowModal] = useState(false);
+  const user = session?.user;
 
   let width = "w-7";
   if (size === "lg") {
     width = "w-7 md:w-7";
   }
 
-  const [showModal, setShowModal] = useState(false);
-  const getURL = () => {
-    let url =
-      process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
-      process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
-      'http://localhost:3000/'
-    // Make sure to include `https://` when not localhost.
-    url = url.includes('http') ? url : `https://${url}`
-    // Make sure to include a trailing `/`.
-    url = url.charAt(url.length - 1) === '/' ? url : `${url}/`
-    return url
-  }
-
   async function signInWithGitHub() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
       options: {
-        redirectTo: getURL(),
+        redirectTo: "https://mansbooks.com/api/github-oauth",
       },
     });
   }
@@ -157,7 +115,7 @@ export default function Navigation({ uid, url, size, session }: { session: Sessi
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
+                      <Menu.Items className="absolute right-0 mt-3 w-64 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <Link
@@ -286,7 +244,7 @@ export default function Navigation({ uid, url, size, session }: { session: Sessi
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
+                      <Menu.Items className="absolute right-0 mt-3 w-64 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <button
@@ -413,23 +371,19 @@ export default function Navigation({ uid, url, size, session }: { session: Sessi
                         appearance={{ theme: ThemeSupa }}
                         theme="dark"
                         showLinks={false}
-                        providers={[ github ]}
+                        providers={["github"]}
                         redirectTo="https://mansbooks.com/api/github-oauth"
                       />
                     ) : (
-                      <>
-                        <ColumnGridLeft>
-                          <Avatar
-                            uid={user!.id}
-                            url={avatar_url}
-                            size={28}
-                            className="avatar image h-24 w-24 rounded-full"
-                            session={session}                             
-                          />
-                          <div><h2>Hello: {username}</h2></div>
-                          <div
-                            className="flex h-full w-full flex-col items-center justify-center p-4"
-                          >
+                      <ColumnGridLeft>
+                        <Avatar
+                          uid={user!.id}
+                          url={avatar_url}
+                          className="avatar image h-24 w-24 rounded-full"
+                        />
+                        <div>
+                          <h2>Hello: {username}</h2>
+                          <div className="flex h-full w-full flex-col items-center justify-center p-4">
                             <div className="mb-4">
                               <button
                                 className="button block"
@@ -439,8 +393,8 @@ export default function Navigation({ uid, url, size, session }: { session: Sessi
                               </button>
                             </div>
                           </div>
-                        </ColumnGridLeft>
-                      </>
+                        </div>
+                      </ColumnGridLeft>
                     )}
                   </p>
                 </div>
