@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import ColumnGridLeft from "@components/column-grid-left";
 import Subscriptions from "../subscriptions";
 import angieImage from "../../public/icons/apple-touch-icon.png";

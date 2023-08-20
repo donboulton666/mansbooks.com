@@ -1,12 +1,12 @@
-"use client";
-
+import { Auth } from "@supabase/auth-ui-react";
 import Head from "next/head";
+import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Account from "@app/account/account-form";
+import Account from "@components/UserAccount/account";
 import AuthForm from "@app/auth-form";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import LeftText from "@components/LeftText";
 import TodoList from "@components/TodoList";
 import ColumnGridLeft from "@components/column-grid-left";
@@ -14,16 +14,15 @@ import angie from "../public/angie/angelina.jpg";
 import Stars from "@components/Stars";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import iLoveYou from "../public/angie/ps-i-love-you.jpg";
-import { Database } from "@lib/database.types";
 
 const Profile = () => {
   const session = useSession();
-  const supabase = useSupabaseClient<Database>();
+  const supabase = useSupabaseClient();
   return (
     <Layout>
       <Stars />
       <Head>
-        <title>Profile</title>
+        <title>Login</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
@@ -125,9 +124,9 @@ const Profile = () => {
           </script>
         </>
       </Head>
-      <div className="mb-96 ml-10 mr-10 mt-10">
+      <div className="mb-96 ml-10 mr-10 mt-10" data-datocms-noindex>
         <div>
-          <Center>Profile Page</Center>
+          <Center>Login Angelina Jordan</Center>
         </div>
         <LeftText>The Queen</LeftText>
         <ColumnGridLeft>
@@ -135,7 +134,7 @@ const Profile = () => {
             <div className="mb-4">
               <Image
                 layout="fixed"
-                className="h-5 w-5 self-center rounded-lg"
+                className="self-center rounded-lg"
                 src={iLoveYou}
                 width={325}
                 height={573}
@@ -147,7 +146,7 @@ const Profile = () => {
           </div>
           <div className="-mt-2 mb-24 ml-8 text-slate-200 lg:col-span-2 lg:mt-0">
             {!session ? (
-              <AuthForm />
+              <AuthForm session={session} />
             ) : (
               <>
                 <ColumnGridLeft>

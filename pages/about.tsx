@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Layout from "@components/PageLayout";
 import Section from "@components/Section";
 import LeftText from "@components/LeftText";

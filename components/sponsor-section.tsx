@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Center from "@components/Center";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";

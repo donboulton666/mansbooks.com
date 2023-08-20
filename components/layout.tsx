@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { SkipNavContent } from "@reach/skip-nav";
 import { NAVIGATION } from "@lib/constants";
 import styles from "./layout.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import MobileMenu from "./mobile-menu";
 import Footer from "@components/PageFooter";
 import ScrollIndicator from "./ScrollIndicator";

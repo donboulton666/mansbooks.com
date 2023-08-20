@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import useKeypress from "react-use-keypress";
 import type { ImageProps } from "../../utils/types";
@@ -39,6 +39,7 @@ export default function Carousel({
           className="pointer-events-none h-full w-full"
           alt="blurred background"
           fill
+          quality={95}
           priority={true}
         />
       </button>

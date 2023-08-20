@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Section from "@components/Section";
@@ -142,6 +142,8 @@ export default function LocalProfile() {
               <Image
                 src={seventhHeaven}
                 alt="Seventh Heaven"
+                height={351}
+                width={645}
                 className="mb-4 h-full w-full content-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
                 loading="lazy"
               />
@@ -195,39 +197,26 @@ export default function LocalProfile() {
                 Los Angeles CA.
               </dd>
             </dl>
-            <div className="col-start-1 row-start-3 mt-4 self-center sm:col-start-2 sm:row-span-2 sm:row-start-2 sm:mt-0 lg:col-start-1 lg:row-start-3 lg:row-end-4 lg:mt-6">
-              <Link
-                href="/expo/seventhheaven"
-                type="button"
-                className="rounded-lg bg-wine-300 px-3 py-2 text-sm font-medium leading-6 text-slate-300"
-              >
-                7th Heaven
-              </Link>
-            </div>
             <div className="col-start-1 mt-4 text-sm leading-6 text-slate-300 sm:col-span-2 lg:col-span-1 lg:row-start-4 lg:mt-6">
               <div>
                 Angelina Jordan Astar was born and raised in Oslo, Norway; this
                 world-renowned singer has earned fantastic reviews for the
                 amazing breadth, depth and maturity of her vocal talent that
-                simply belies her young age.
+                simply belies her young age. Amazingly, her passion for music began at just one-and- a-half
+                years of age when Angelina first saw Whitney Houston on
+                YouTube performing I Will Always Love You.
               </div>
-              <Section>
-                <div>
-                  Amazingly, her passion for music began at just one-and- a-half
-                  years of age when Angelina first saw Whitney Houston on
-                  YouTube performing I Will Always Love You. Whitney - and later
-                  Billie Holiday, Dinah Washington - became her first major
-                  musical influences. At the age of seven, Angelina auditioned
-                  for Norway’s Got Talent performing Billie Holiday’s Gloomy
-                  Sunday. She won the competition with the show drawing record
-                  TV audiences.
-                </div>
-              </Section>
             </div>
           </div>
           <div>
             <Section>
               <div>
+                Whitney - and later
+                  Billie Holiday, Dinah Washington - became her first major
+                  musical influences. At the age of seven, Angelina auditioned
+                  for Norway’s Got Talent performing Billie Holiday’s Gloomy
+                  Sunday. She won the competition with the show drawing record
+                  TV audiences.
                 Angelina’s videos have received over several billions views on
                 YouTube and more than 4 billion views on Facebook. Amazingly,
                 her passion for music began at just one-and- a-half years of age

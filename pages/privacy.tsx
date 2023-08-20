@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import cn from "classnames";
 import { ShareIcon } from "@heroicons/react/outline";
 import Layout from "@components/PageLayout";

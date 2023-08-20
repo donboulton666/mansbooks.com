@@ -54,7 +54,7 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
             enter="ease-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in duration-200"
+            leave="ease-in duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -65,7 +65,7 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
             <div className="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0">
               {/* This element is to trick the browser into centering the modal contents. */}
               <span
-                className="hidden text-slate-200 sm:inline-block sm:h-screen sm:align-middle"
+                className="hidden text-slate-300 sm:inline-block sm:h-screen sm:align-middle"
                 aria-hidden="true"
               >
                 &#8203;
@@ -75,12 +75,12 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                 enter="ease-out duration-300"
                 enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 enterTo="opacity-100 translate-y-0 sm:scale-100"
-                leave="ease-in duration-200"
+                leave="ease-in duration-300"
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <Dialog.Panel className="relative inline-block transform overflow-hidden rounded-lg bg-slate-900 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle">
-                  <div className="bg-slate-900 px-4 py-4 text-slate-200 sm:p-6 sm:pb-4">
+                  <div className="bg-slate-900 px-4 py-4 text-slate-300 sm:p-6 sm:pb-4">
                     <div className="sm:flex sm:items-start">
                       <div className="float-none mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-wine-300 sm:mx-0 sm:h-10 sm:w-10">
                         <Image
@@ -107,7 +107,7 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                         <div className="mt-2">
                           <p
                             key={dialogContent}
-                            className="mt-4 text-sm text-slate-900"
+                            className="mt-4 text-sm text-slate-300"
                           >
                             {dialogContent}
                           </p>
@@ -115,14 +115,14 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="mx-4 mt-2 py-2 leading-6 text-slate-900">
+                  <div className="mx-4 mt-2 py-2 leading-6 text-slate-300">
                     {children}
                   </div>
                   <div className="mt-4 py-4">
                     <button
                       ref={closeButtonRef}
                       type="button"
-                      className="float-right mb-4 mr-4 rounded-md border border-transparent bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                      className="float-right mb-4 mr-4 rounded-md border border-transparent bg-slate-900 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                       onClick={() => setIsOpen(false)}
                     >
                       Close

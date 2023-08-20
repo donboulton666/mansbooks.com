@@ -19,7 +19,7 @@ import GithubIcon from "@components/icons/icon-github";
 import cn from "classnames";
 import IconAvatar from "./icons/icon-avatar";
 import styles from "./ticket-profile.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 type Props = {
   name?: string;

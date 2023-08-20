@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, ReactNode, FC } from "react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import formImage from "../../public/react-hook-form-48.png";
 import {
   useNetlifyForm,

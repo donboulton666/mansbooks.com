@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactNode } from "react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { CookieConsent } from "react-cookie-consent";
 import cn from "classnames";
 import { useRouter } from "next/router";

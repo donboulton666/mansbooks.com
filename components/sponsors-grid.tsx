@@ -15,7 +15,7 @@
  */
 
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import cn from "classnames";
 import { Sponsor } from "@lib/types";
 import styles from "./sponsors-grid.module.css";

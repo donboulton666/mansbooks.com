@@ -15,7 +15,7 @@
  */
 
 import cn from "classnames";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { parseISO, format, isBefore, isAfter } from "date-fns";

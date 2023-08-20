@@ -6,8 +6,14 @@ const withPWA = require('next-pwa')({
   dest: 'public'
 })
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 /** @type {import('next').NextConfig} */
-const nextConfig = withPWA({
+const nextConfig = withPWA(
+  withBundleAnalyzer({
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
@@ -82,7 +88,8 @@ const nextConfig = withPWA({
     // your project has type errors.
     ignoreBuildErrors: true,
   },
-});
+})
+);
 
 module.exports = nextConfig
 

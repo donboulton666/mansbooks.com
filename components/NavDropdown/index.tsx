@@ -53,10 +53,7 @@ export default function Navigation({
   }
 
   const getURL = () => {
-    let url =
-      process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
-      process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
-      "http://localhost:3000/";
+    let url = process?.env?.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/"; // Set this to your site URL in production env.
     // Make sure to include `https://` when not localhost.
     url = url.includes("http") ? url : `https://${url}`;
     // Make sure to include a trailing `/`.
@@ -230,6 +227,8 @@ export default function Navigation({
                           <Image
                             uid={user!.id}
                             url={avatar_url}
+                            width={28}
+                            height={28}
                             alt="Avatar"
                             className="avatar image h-7 w-7 rounded-full "
                           />
@@ -397,7 +396,7 @@ export default function Navigation({
                         appearance={{ theme: ThemeSupa }}
                         theme="dark"
                         showLinks={false}
-                        providers={["google", "spotify"]}                        
+                        providers={["google", "spotify"]}
                       />
                     ) : (
                       <ColumnGridLeft>
