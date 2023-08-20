@@ -9,8 +9,11 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
   reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
   experimental: {
     serverActions: true,
+    webVitalsAttribution: ['CLS', 'LCP'],
   },
   i18n: {
     locales: ["en", "es", "it", "nn"],
@@ -48,8 +51,6 @@ const nextConfig = withPWA({
       'pbs.twimg.com',
     ],
   },
-  reactStrictMode: true,
-  swcMinify: true,
   // Support svg import
   // ref: https://dev.to/dolearning/importing-svgs-to-next-js-nna
   webpack: (config) => {

@@ -1,8 +1,9 @@
-import { Auth } from "@supabase/auth-ui-react";
+"use client";
+
 import Head from "next/head";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Account from "@components/UserAccount/account";
+import Account from "@app/account/account-form";
+import AuthForm from "@app/auth-form";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Image from "next/legacy/image";
@@ -22,7 +23,7 @@ const Profile = () => {
     <Layout>
       <Stars />
       <Head>
-        <title>LProfile</title>
+        <title>Profile</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
@@ -146,12 +147,7 @@ const Profile = () => {
           </div>
           <div className="-mt-2 mb-24 ml-8 text-slate-200 lg:col-span-2 lg:mt-0">
             {!session ? (
-              <Auth
-                supabaseClient={supabase}
-                appearance={{ theme: ThemeSupa }}
-                providers={["github", "google", "slack", "spotify"]}
-                theme="dark"
-              />
+              <AuthForm />
             ) : (
               <>
                 <ColumnGridLeft>

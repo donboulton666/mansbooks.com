@@ -24,7 +24,7 @@ import {
 import Control from "@components/icons/control";
 import { Database } from "@lib/database.types";
 import { cookies } from "next/headers";
-import Avatar from "@components/UserAccount/avatar";
+import Avatar from "@app/account/avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -52,11 +52,36 @@ export default function Navigation({
     width = "w-7 md:w-7";
   }
 
-  async function signInWithGitHub() {
+  const getURL = () => {
+    let url =
+      process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
+      process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
+      "http://localhost:3000/";
+    // Make sure to include `https://` when not localhost.
+    url = url.includes("http") ? url : `https://${url}`;
+    // Make sure to include a trailing `/`.
+    url = url.charAt(url.length - 1) === "/" ? url : `${url}/`;
+    return url;
+  };
+
+  async function signInWithGoogle() {
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "github",
+      provider: "google",
       options: {
-        redirectTo: "https://mansbooks.com/api/github-oauth",
+        redirectTo: getURL(),
+        queryParams: {
+          access_type: "offline",
+          prompt: "consent",
+        },
+      },
+    });
+  }
+
+  async function signInWithSpotify() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+      options: {
+        redirectTo: getURL(),
       },
     });
   }
@@ -203,7 +228,8 @@ export default function Navigation({
                         <span className="sr-only">Open User Menu</span>
                         {avatarUrl ? (
                           <Image
-                            src={avatarUrl}
+                            uid={user!.id}
+                            url={avatar_url}
                             alt="Avatar"
                             className="avatar image h-7 w-7 rounded-full "
                           />
@@ -371,15 +397,14 @@ export default function Navigation({
                         appearance={{ theme: ThemeSupa }}
                         theme="dark"
                         showLinks={false}
-                        providers={["github"]}
-                        redirectTo="https://mansbooks.com/api/github-oauth"
+                        providers={["google", "spotify"]}                        
                       />
                     ) : (
                       <ColumnGridLeft>
                         <Avatar
                           uid={user!.id}
                           url={avatar_url}
-                          className="avatar image h-24 w-24 rounded-full"
+                          className="h-24 w-24 rounded-full"
                         />
                         <div>
                           <h2>Hello: {username}</h2>
