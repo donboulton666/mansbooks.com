@@ -43,7 +43,7 @@ export default function Navigation({
 }) {
   const supabase = useSupabaseClient<Database>();
   const [username, setUsername] = useState<Profiles["username"]>(null);
-  const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
+  const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const user = session?.user;
 
   let width = "w-7";
@@ -190,7 +190,7 @@ export default function Navigation({
                         {avatarUrl ? (
                           <Image
                             uid={user!.id}
-                            url={avatarUrl}
+                            url={avatar_url}
                             width={28}
                             height={28}
                             alt={username}

@@ -3,7 +3,7 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Account from "@app/account/Account";
+import Account from "@app/account/account";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Image from "next/image";
