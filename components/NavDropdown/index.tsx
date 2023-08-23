@@ -2,8 +2,6 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import { Auth } from "@supabase/auth-ui-react";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
 import Link from "next/link";
 import Center from "@components/Center";
 import ColumnGridLeft from "@components/column-grid-left";
@@ -36,55 +34,21 @@ export default function Navigation({
   uid,
   url,
   size,
-  session,
+  onUpload,
 }: {
-  session: Session;
+  uid: string;
+  url: Profiles["avatar_url"];
+  size: number;
+  onUpload: (url: string) => void;
 }) {
   const supabase = useSupabaseClient<Database>();
-  const [loading, setLoading] = useState(true);
   const [username, setUsername] = useState<Profiles["username"]>(null);
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
-  const [showModal, setShowModal] = useState(false);
   const user = session?.user;
 
   let width = "w-7";
   if (size === "lg") {
     width = "w-7 md:w-7";
-  }
-
-  const getURL = () => {
-    let url = process?.env?.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/"; // Set this to your site URL in production env.
-    // Make sure to include `https://` when not localhost.
-    url = url.includes("http") ? url : `https://${url}`;
-    // Make sure to include a trailing `/`.
-    url = url.charAt(url.length - 1) === "/" ? url : `${url}/`;
-    return url;
-  };
-
-  async function signInWithGoogle() {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: getURL(),
-        queryParams: {
-          access_type: "offline",
-          prompt: "consent",
-        },
-      },
-    });
-  }
-
-  async function signInWithSpotify() {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "spotify",
-      options: {
-        redirectTo: getURL(),
-      },
-    });
-  }
-
-  async function signOut() {
-    const { error } = await supabase.auth.signOut();
   }
 
   return (
@@ -226,10 +190,10 @@ export default function Navigation({
                         {avatarUrl ? (
                           <Image
                             uid={user!.id}
-                            url={avatar_url}
+                            url={avatarUrl}
                             width={28}
                             height={28}
-                            alt="Avatar"
+                            alt={username}
                             className="avatar image h-7 w-7 rounded-full "
                           />
                         ) : (
@@ -272,8 +236,8 @@ export default function Navigation({
                       <Menu.Items className="absolute right-0 mt-3 w-64 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
-                            <button
-                              onClick={() => setShowModal(true)}
+                            <Link
+                              href="/login"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
@@ -286,7 +250,7 @@ export default function Navigation({
                                 />
                                 <span>Login</span>
                               </span>
-                            </button>
+                            </Link>
                           )}
                         </Menu.Item>
                         <Menu.Item>
@@ -355,91 +319,6 @@ export default function Navigation({
           </>
         )}
       </Disclosure>
-      {showModal ? (
-        <>
-          <div className="nav-scroll fixed inset-0 mt-10 z-50 flex items-center justify-center outline-none focus:outline-none">
-            <div className="relative mx-auto my-6 w-auto max-w-3xl">
-              {/*content*/}
-              <div className="relative flex w-96 flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
-                {/*header*/}
-                <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-700 p-5">
-                  <Center>Login</Center>
-                  <button
-                    className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className="avatar no-image block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 text-slate-200"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                {/*body*/}
-                <div className="relative flex-auto p-3">
-                  <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
-                    {!session ? (
-                      <Auth
-                        supabaseClient={supabase}
-                        view="magic_link"
-                        appearance={{ theme: ThemeSupa }}
-                        theme="dark"
-                        showLinks={false}
-                        providers={["google", "spotify"]}
-                      />
-                    ) : (
-                      <ColumnGridLeft>
-                        <Avatar
-                          uid={user!.id}
-                          url={avatar_url}
-                          className="h-24 w-24 rounded-full"
-                        />
-                        <div>
-                          <h2>Hello: {username}</h2>
-                          <div className="flex h-full w-full flex-col items-center justify-center p-4">
-                            <div className="mb-4">
-                              <button
-                                className="button block"
-                                onClick={() => supabase.auth.signOut()}
-                              >
-                                Sign Out
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </ColumnGridLeft>
-                    )}
-                  </p>
-                </div>
-                {/*footer*/}
-                <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-3">
-                  <span>
-                    <button
-                      type="button"
-                      className="float-right button block"
-                      onClick={() => setShowModal(false)}
-                    >
-                      Close
-                    </button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
-        </>
-      ) : null}
     </>
   );
 }

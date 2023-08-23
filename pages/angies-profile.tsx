@@ -202,30 +202,33 @@ export default function LocalProfile() {
                 Angelina Jordan Astar was born and raised in Oslo, Norway; this
                 world-renowned singer has earned fantastic reviews for the
                 amazing breadth, depth and maturity of her vocal talent that
-                simply belies her young age. Amazingly, her passion for music began at just one-and- a-half
-                years of age when Angelina first saw Whitney Houston on
-                YouTube performing I Will Always Love You.
+                simply belies her young age. Amazingly, her passion for music
+                began at just one-and- a-half years of age when Angelina first
+                saw Whitney Houston on YouTube performing I Will Always Love
+                You.
               </div>
             </div>
           </div>
-          <div>
+          <div className="mx-auto max-w-4xl">
             <Section>
               <div>
-                Whitney - and later
-                  Billie Holiday, Dinah Washington - became her first major
-                  musical influences. At the age of seven, Angelina auditioned
-                  for Norway’s Got Talent performing Billie Holiday’s Gloomy
-                  Sunday. She won the competition with the show drawing record
-                  TV audiences.
-                Angelina’s videos have received over several billions views on
-                YouTube and more than 4 billion views on Facebook. Amazingly,
-                her passion for music began at just one-and- a-half years of age
-                when Angelina first saw Whitney Houston on YouTube performing I
-                Will Always Love You. Whitney - and later Billie Holiday, Dinah
-                Washington - became her first major musical influences. At the
-                age of seven, Angelina auditioned for Norway’s Got Talent
-                performing Billie Holiday’s Gloomy Sunday. She won the
-                competition with the show drawing record TV audiences.
+                Whitney Houston - and later Billie Holiday, Dinah Washington -
+                became her first major musical influences. At the age of seven,
+                Angelina auditioned for Norway's Got Talent performing Billie
+                Holiday's Gloomy Sunday. She won the competition with the show
+                drawing record TV audiences.
+                <div>
+                  Angelina's videos have received over several billions views on
+                  YouTube and more than 4 billion views on Facebook. Amazingly,
+                  her passion for music began at just one-and- a-half years of
+                  age when Angelina first saw Whitney Houston on YouTube
+                  performing I Will Always Love You. Whitney - and later Billie
+                  Holiday, Dinah Washington - became her first major musical
+                  influences. At the age of seven, Angelina auditioned for
+                  Norway's Got Talent performing Billie Holiday's Gloomy Sunday.
+                  She won the competition with the show drawing record TV
+                  audiences.
+                </div>
               </div>
               <div>
                 Not surprisingly, throughout her rising career, Angelina has
@@ -235,7 +238,7 @@ export default function LocalProfile() {
               </div>
               <div>
                 In 2016, Avicii chose Angelina for the vocals on his worldwide
-                Volvo commercial campaign, a brilliant cover of Nina Simone’s
+                Volvo commercial campaign, a brilliant cover of Nina Simone's
                 Feeling Good.
               </div>
               <div>
@@ -250,12 +253,12 @@ export default function LocalProfile() {
             <Section>
               <div>
                 This multi-talented singing prodigy has also written a
-                successful, illustrated children’s book in her native Norway
-                making Angelina the youngest published author in the country’s
+                successful, illustrated children's book in her native Norway
+                making Angelina the youngest published author in the country's
                 history. Based on the true story of when she was six years old,
                 Angelina met a homeless, shoeless girl. After they talked for a
                 long time, she gave the girl her shoes and vowed never to appear
-                on stage again wearing shoes until all the world’s children had
+                on stage again wearing shoes until all the world's children had
                 shoes. Since that time, Angelina has always performed barefoot
                 in public.
               </div>
@@ -567,7 +570,7 @@ export default function LocalProfile() {
                 </a>
               </div>
               <div>
-                Another song that’s up there is Feeling Good. She was 10 years
+                Another song that's up there is Feeling Good. She was 10 years
                 old when she performed it at{" "}
                 <a
                   rel="noreferrer noopener"
@@ -883,7 +886,7 @@ export default function LocalProfile() {
                 >
                   <span className="text-blue-500">in this comment</span>
                 </a>
-                . He includes Baby Fuzz’s comment—an attempt to clear the air
+                . He includes Baby Fuzz's comment—an attempt to clear the air
                 about it after he had heard it. Angelina's version of{" "}
                 <a
                   rel="noreferrer noopener"
@@ -901,7 +904,7 @@ export default function LocalProfile() {
                 Besides her impressive vocal skills, what gives listeners
                 goosebumps and moves them to tears are the powerful soulful
                 feelings she puts into each song. How can someone that young,
-                who has not yet experienced life’s ups and downs, express such
+                who has not yet experienced life's ups and downs, express such
                 emotions and understanding? It boggles the mind! There is no
                 doubt that Angelina is an old soul in a young body—something the
                 judges at NGT and AGT said, as well as others who have commented
@@ -910,8 +913,8 @@ export default function LocalProfile() {
               <div>
                 She has 2 billion Facebook views and over half a billion on
                 YouTube. There are many compilation channels of her music and
-                100’s of reaction videos of people responding to some of the
-                many songs she’s posted. Most of them are visibly moved,
+                100's of reaction videos of people responding to some of the
+                many songs she's posted. Most of them are visibly moved,
                 jaw-dropped at a loss for word.{" "}
               </div>
               <div>
@@ -933,10 +936,9 @@ export default function LocalProfile() {
                   target="_blank"
                 >
                   <span className="text-blue-500">
-                    Lana Del Ray's Born To Die
+                    Lana Del Ray's Born To Die.
                   </span>
                 </a>
-                .
               </div>
               <div>
                 <a
@@ -1155,14 +1157,14 @@ export default function LocalProfile() {
                 performs barefoot and still thinks of her, and the many homeless
                 and shoeless children everywhere. Angelina actually went on to
                 raise millions of Euros for children and families in need. Talk
-                about putting yourself in other people’s shoes, or in this case,
-                giving your shoes to someone in need! Angelina’s empathy and
+                about putting yourself in other people's shoes, or in this case,
+                giving your shoes to someone in need! Angelina's empathy and
                 compassionate heart are expressed through her actions as well as
                 her amazing voice!{" "}
               </div>
               <blockquote className="h-full w-full">
                 <div>
-                  Angelina’s empathy and compassionate heart are expressed
+                  Angelina's empathy and compassionate heart are expressed
                   through her actions as well as her amazing voice!
                 </div>
               </blockquote>
@@ -1207,7 +1209,7 @@ export default function LocalProfile() {
                 >
                   <span className="text-blue-500">In a Book Talk podcast</span>
                 </a>{" "}
-                posted by Angelina Jordan’s publisher, Cappelen Damm, in 2015,
+                posted by Angelina Jordan's publisher, Cappelen Damm, in 2015,
                 Erling Kittelsen, a Norwegian author and poet, and friend of the
                 family, talks with Angelina about her book. When he was first
                 shown her diary containing that episode with the barefoot girl,
@@ -1311,7 +1313,7 @@ export default function LocalProfile() {
                 fearless. It is natural for her to powerfully project the
                 emotional content of a song. She appears extroverted on stage,
                 yet is in her own world. But ask her questions in an interview,
-                and she gives short answers. She seems shy, introverted. She’s
+                and she gives short answers. She seems shy, introverted. She's
                 not comfortable expressing herself personally. However, it seems
                 to be easier for her the older she gets.{" "}
               </div>
@@ -1476,8 +1478,8 @@ export default function LocalProfile() {
               </div>
               <blockquote className="h-full w-full">
                 <div>
-                  When I sing I go to another world. In the world, it’s like,
-                  endless. It’s amazing. 'Like, full of happiness, and, I love '
+                  When I sing I go to another world. In the world, it's like,
+                  endless. It's amazing. 'Like, full of happiness, and, I love '
                   It's amazing!
                 </div>
                 <cite>
@@ -1493,7 +1495,7 @@ export default function LocalProfile() {
               <div>
                 The song sounds like a religious prayer, which could also serve
                 as the theme song for a Bond movie. Skavlan said it reminded him
-                of the Bond films and asks her if she’s familiar with them. She
+                of the Bond films and asks her if she's familiar with them. She
                 tells him that she got the inspiration for her song from the
                 Bond films. He asks if she would sing a little bit of her
                 favorite Bond song, and she does, acapela, Diamonds Are Forever.
@@ -1543,7 +1545,7 @@ export default function LocalProfile() {
               </div>
               <blockquote className="h-full w-full">
                 <div>
-                  I’ll have an important name in the music industry and to make
+                  I'll have an important name in the music industry and to make
                   timeless music that can live forever. Also to give the best
                   music experience to people and for them to enjoy and feel
                   emotional or dance or make memories with the music I make.
@@ -1824,7 +1826,7 @@ export default function LocalProfile() {
                   href="https://www.wikiwand.com/en/Angelina_Jordan"
                   target="_blank"
                 >
-                  <span className="text-blue-500">Wikiwand’s page</span>
+                  <span className="text-blue-500">Wikiwand's page</span>
                 </a>{" "}
                 for Angelina Jordan. Gary Rogers{" "}
                 <a
@@ -1964,7 +1966,7 @@ export default function LocalProfile() {
                   target="_blank"
                 >
                   <span className="text-blue-500">
-                    Angelina’s cover version of “Mercy”
+                    Angelina's cover version of “Mercy”
                   </span>
                 </a>{" "}
                 by Duffy to promote the film! You can listen on these music
@@ -2267,7 +2269,7 @@ export default function LocalProfile() {
               <blockquote className="h-full w-full">
                 <div>
                   The most important thing is just to be yourself, be kind to
-                  each other, and just be happy. That’s all that matters.
+                  each other, and just be happy. That's all that matters.
                 </div>
                 <cite>
                   Angelina Jordan to her concert audience at Kurbadhagen
@@ -2397,7 +2399,7 @@ export default function LocalProfile() {
                   target="_blank"
                 >
                   <span className="text-blue-500">
-                    Mercy, Killing Me Softly and I’m Not the Only One
+                    Mercy, Killing Me Softly and I'm Not the Only One
                   </span>
                 </a>
                 .
@@ -3334,7 +3336,7 @@ export default function LocalProfile() {
                     Wrapped in a Warm Blanket
                   </span>
                 </a>
-                , a podcast with heart-to-heart talks about Angelina Jordan’s
+                , a podcast with heart-to-heart talks about Angelina Jordan's
                 artistry and how it affects our inner world. Their second season
                 comes to{" "}
                 <a
@@ -3537,7 +3539,7 @@ export default function LocalProfile() {
                     Angelina's reply reveals her selfless compassionate heart
                   </span>
                 </a>
-                : I will use them on children who are all alone, and who don’t
+                : I will use them on children who are all alone, and who don't
                 have any shoes nor clothes. I want to make them happy and I want
                 to sing for them.” When asked when she is hoping to do this, she
                 replies: “Forever.” As we know, Angelina went on to do just
@@ -3574,14 +3576,14 @@ export default function LocalProfile() {
                 >
                   <span className="text-blue-500">Character Media</span>
                 </a>
-                ’s Caroline Yu wrote this wonderful article about it:{" "}
+                's Caroline Yu wrote this wonderful article about it:{" "}
                 <a
                   rel="noreferrer noopener"
                   href="https://charactermedia.com/watch-angelina-jordans-covers-of-whitney-houston-and-queen-from-the-2022-unforgettable-gala/"
                   target="_blank"
                 >
                   <span className="text-blue-500">
-                    Watch Angelina Jordan’s Covers of Whitney Houston and Queen
+                    Watch Angelina Jordan's Covers of Whitney Houston and Queen
                     from the 2022 Unforgettable Gala
                   </span>
                 </a>

@@ -94,9 +94,9 @@ const PeerName: React.FC<{ name: string }> = ({ name }) => {
 
 const HmsWatermark = () => {
   return (
-    <Image 
-      src="/hms-coachmark.svg" 
-      className="absolute right-6 top-6 z-30" 
+    <Image
+      src="/hms-coachmark.svg"
+      className="absolute right-6 top-6 z-30"
       width={82}
       height={23}
       alt="HMS Logo"

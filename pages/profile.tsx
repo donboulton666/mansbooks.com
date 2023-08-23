@@ -1,9 +1,9 @@
-import { Auth } from "@supabase/auth-ui-react";
+import React from "react";
 import Head from "next/head";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
+import type { NextPage } from "next";
+import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Account from "@components/UserAccount/account";
-import AuthForm from "@app/auth-form";
+import Account from "@app/account/Account";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import Image from "next/image";
@@ -15,9 +15,34 @@ import Stars from "@components/Stars";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import iLoveYou from "../public/angie/ps-i-love-you.jpg";
 
-const Profile = () => {
+const ProfilePage: NextPage = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
+  async function signInWithGoogle() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: getURL(),
+        queryParams: {
+          access_type: "offline",
+          prompt: "consent",
+        },
+      },
+    });
+  }
+
+  async function signInWithSpotify() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+      options: {
+        redirectTo: getURL(),
+      },
+    });
+  }
+
+  async function signOut() {
+    const { error } = await supabase.auth.signOut();
+  }
   return (
     <Layout>
       <Stars />
@@ -126,7 +151,7 @@ const Profile = () => {
       </Head>
       <div className="mb-96 ml-10 mr-10 mt-10" data-datocms-noindex>
         <div>
-          <Center>Login Angelina Jordan</Center>
+          <Center>User Profile</Center>
         </div>
         <LeftText>The Queen</LeftText>
         <ColumnGridLeft>
@@ -144,20 +169,27 @@ const Profile = () => {
               />
             </div>
           </div>
-          <div className="-mt-2 mb-24 ml-8 text-slate-200 lg:col-span-2 lg:mt-0">
+          <div className="container" style={{ padding: "50px 0 100px 0" }}>
             {!session ? (
-              <AuthForm session={session} />
+              <div className="row">
+                <div className="col-6">
+                  <h1 className="header">Auth User Storage</h1>
+                  <p className="">Login.</p>
+                </div>
+                <div className="col-6 auth-widget">
+                  <Auth
+                    supabaseClient={supabase}
+                    view="magic_link"
+                    appearance={{ theme: ThemeSupa }}
+                    providers={["google", "spotify"]}
+                    theme="dark"
+                  />
+                </div>
+              </div>
             ) : (
               <>
-                <ColumnGridLeft>
-                  <Account session={session} />
-                  <div
-                    className="flex h-full w-full flex-col items-center justify-center p-4"
-                    style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
-                  >
-                    <TodoList session={session} />
-                  </div>
-                </ColumnGridLeft>
+                <h3>Account</h3>
+                <Account session={session} />
               </>
             )}
           </div>
@@ -167,4 +199,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfilePage;

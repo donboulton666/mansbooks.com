@@ -7,13 +7,20 @@ import { useEffect, useState } from "react";
 import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
-import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
+
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
 
 TimeAgo.addDefaultLocale(en);
 
-function App({ Component, pageProps, router }: AppProps) {
+function App({
+  Component,
+  pageProps,
+  router,
+}: AppProps<{
+  initialSession: Session;
+}>) {
   const AnyComponent = Component as any;
   useEffect(() => {
     document.body.classList?.remove("loading");

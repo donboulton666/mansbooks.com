@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { ToastState } from "../states/toastStates";
+import { ToastState } from "../../states/toastStates";
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,
@@ -11,7 +11,7 @@ import { toNamespacedPath } from "path/posix";
 export type ToastMessageType = "ok" | "warning" | "error" | "confirm";
 
 export const Toast: React.FC = () => {
-  const [toast, setToast] = useRecoilState(ToastState);
+  const [, setToast] = useRecoilState(ToastState);
   const StatusIcon: React.FC<{ className: string }> = ({ className }) => {
     switch (toast.messageType) {
       case "ok":

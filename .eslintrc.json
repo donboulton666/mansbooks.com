@@ -5,6 +5,8 @@
     "project": "./tsconfig.json"
   },
   "extends": [
+    "next/babel",
+    "next/core-web-vitals",
     "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",

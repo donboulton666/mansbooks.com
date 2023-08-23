@@ -9,5 +9,9 @@
   "editor.fontLigatures": true, // Does this have a noticeable effect?
 
   "editor.lineNumbers": "on",
-  "cSpell.words": ["headlessui", "heroicons", "supabase"]
+  "cSpell.words": ["headlessui", "heroicons", "supabase"],
+
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true
 }
