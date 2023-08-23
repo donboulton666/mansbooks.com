@@ -25,6 +25,7 @@ const nextConfig = withPWA(
     swcMinify: true,
     compress: true,
     experimental: {
+      appDir: true,
       serverActions: true,
       webVitalsAttribution: ['CLS', 'LCP'],
     },

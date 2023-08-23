@@ -33,10 +33,9 @@ function Login({ session }: { session: Session | null }) {
                       width={32}
                       height={32}
                       quality={95}
-                      alt="PS I Love You"
+                      alt="Our Love!"
                       loading="lazy"
                     />
-                    <span className="text-3xl italic">Angelina Jordan</span>
                   </span>
                 </a>
               </div>
