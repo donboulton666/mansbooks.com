@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { NextPage } from "next";
 import AuthForm from "@app/auth-form";
 import supabase from "@app/supabase-provider";
-import Account from "@app/Account/account-form";
+import Account from "@components/UserAccount/account";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
