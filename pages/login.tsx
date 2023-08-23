@@ -149,10 +149,9 @@ function Login({ session }: { session: Session | null }) {
             </div>
             <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
               <Link
-                target="_blank"
                 rel="noreferrer"
                 href="https://mansbooks.com/about"
-                className="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 border-scale-700 hover:border-scale-800 bg-scale-500 hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                className="font-regular text-scale-1200 border-scale-700 hover:border-scale-800 bg-scale-500 hover:bg-scale-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
               >                
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +176,7 @@ function Login({ session }: { session: Session | null }) {
           </nav>
         </div>
         <div className="flex flex-1 mb-10">
-          <main className="beams bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r px-5 pb-8 pt-16 shadow-lg">
+          <main className="beams bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r border-slate-700 px-5 pb-8 pt-16 shadow-lg">
             <div className="flex w-[330px] flex-1 flex-col justify-center sm:w-[384px]">
               <div className="mb-10">
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">
@@ -229,18 +228,23 @@ function Login({ session }: { session: Session | null }) {
             <div className="relative flex flex-col gap-6">
               <div className="absolute -left-11 -top-12 select-none">
                 <span className="text-scale-600 text-[160px] leading-none">
-                  “
+                  &ldquo
                 </span>
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
-                All week I have been working on Angelina Jordans New Album backend with <a href="https://supabase.com/launch-week">Supabase</a>{" "} 🧪 {" "}
-                <a href="https://mansbooks.com/albums">I am Old Enough</a>{" "}
-                My Favorite song is, Love Don't Let me Go, "Visualizer", then It's all my Fault{" "}
-                <a href="https://supabase.com/launch-week">
-                  Followed by Diamond.
+                All week I have been working on Angelina Jordans New Album backend with <a href="https://supabase.com/launch-week" aria-describedby="Supabase">Supabase</a>{" "} 🧪 {" "}
+                <a href="https://www.youtube.com/playlist?list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt" aria-describedby="I am Old Enough">I am Old Enough</a>{" "}
+                My Favorite song is, <a aria-describedby="Love Don't Let me Go" href="https://www.youtube.com/watch?v=kjwD884SYRE&list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt&index=1">Love Don't Let me Go, "Visualizer"</a>, then It's all my Fault{" "} Followed by:
+                <a href="https://www.youtube.com/watch?v=qQjxAKAHSgs" aria-describedby="Diamond">
+                  Diamond.
                 </a>{" "}
-                Listen to the Love! ❤️
+                Listen to the Love! <span className="text-red-800">❤️</span>
               </blockquote>
+              <div className="absolute -right-11 -bottom-12 select-none">
+                <span className="text-scale-600 text-[160px] leading-none">
+                  &rdquo
+                </span>
+              </div>
               <a
                 href="https://twitter.com/donboulton"
                 target="_blank"
