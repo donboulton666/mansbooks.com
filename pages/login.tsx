@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { NextPage } from "next";
 import AuthForm from "@app/auth-form";
 import supabase from "@app/supabase-provider";
-import Account from "@app/Account";
+import Account from "@app/Account/account-form";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
@@ -41,7 +41,7 @@ function Login({ session }: { session: Session | null }) {
               </div>
             </div>
             <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
-              <a
+              <Link
                 target="_blank"
                 rel="noreferrer"
                 href="https://mansbooks.com/about"
@@ -69,7 +69,7 @@ function Login({ session }: { session: Session | null }) {
                   </svg>{" "}
                   <span className="truncate">About Mansbooks</span>{" "}
                 </button>
-              </a>
+              </LInk>
             </div>
           </nav>
         </div>
@@ -130,14 +130,14 @@ function Login({ session }: { session: Session | null }) {
                 </span>
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
-                All week I was migrating my project from Regis to
-                <a href="https://supabase.com/launch-week">@supabase</a>
-                Because it is the best, fastest and simple!!! I like design and
+                All week I was migrating my project from Regis to{" "}
+                <a href="https://supabase.com/launch-week">@supabase</a>{" "}
+                Because it is the best, fastest and simple!!! I like the design and
                 API for understandable.{" "}
                 <a href="https://supabase.com/launch-week">
                   Supabase Launch week 8.
                 </a>{" "}
-                Just try! 🧪
+                Just try it! 🧪
               </blockquote>
               <a
                 href="https://twitter.com/donboulton"
