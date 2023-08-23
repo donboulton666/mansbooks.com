@@ -31,10 +31,10 @@ const Login = () => {
       <div>
         <Stars />
         <div className="bg-scale-100 flex flex-1 flex-col">
-          <div class="absolute top-0 mx-auto w-full px-8 pt-6 sm:px-6 lg:px-8">
-            <nav class="relative flex items-center justify-between sm:h-10">
-              <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
-                <div class="flex w-full items-center justify-between md:w-auto">
+          <div className="absolute top-0 mx-auto w-full px-8 pt-6 sm:px-6 lg:px-8">
+            <nav className="relative flex items-center justify-between sm:h-10">
+              <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
+                <div className="flex w-full items-center justify-between md:w-auto">
                   <a href="https://mansbooks.com">
                     <span className="relative inline-block overflow-hidden">
                       <Image
@@ -47,11 +47,12 @@ const Login = () => {
                         alt="PS I Love You"
                         loading="lazy"
                       />
+                      <span className="text-3xl italic">Angelina Jordan</span>
                     </span>
                   </a>
                 </div>
               </div>
-              <div class="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
+              <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
                 <a
                   target="_blank"
                   rel="noreferrer"
@@ -59,7 +60,7 @@ const Login = () => {
                 >
                   <button
                     type="button"
-                    class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                    className="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +71,7 @@ const Login = () => {
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="sbui-icon "
+                      className="sbui-icon "
                     >
                       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                       <polyline points="14 2 14 8 20 8"></polyline>
@@ -78,7 +79,7 @@ const Login = () => {
                       <line x1="16" y1="17" x2="8" y2="17"></line>
                       <polyline points="10 9 9 9 8 9"></polyline>
                     </svg>{" "}
-                    <span class="truncate">About Mansbooks</span>{" "}
+                    <span className="truncate">About Mansbooks</span>{" "}
                   </button>
                 </a>
               </div>
@@ -98,6 +99,18 @@ const Login = () => {
                 <div className="flex flex-col gap-5">
                   {!session ? <AuthForm /> : <Account session={session} />}
                 </div>
+              </div>
+              <div className="sm:text-center">
+                <p className="text-xs text-scale-900 sm:mx-auto sm:max-w-sm">By continuing, you agree to Mansbooks{" "} 
+                  <Link className="underline hover:text-scale-1100" href="https://mansbooks.com/terms">
+                    Terms of Service
+                  </Link>
+                   {" "}and{" "} 
+                  <Link className="underline hover:text-scale-1100" href="https://mansbooks.com/privacy">
+                    Privacy Policy
+                  </Link>
+                    , and to receive periodic emails with updates.
+                </p>
               </div>
             </main>
             <aside className="hidden flex-1 flex-shrink basis-1/4 flex-col items-center justify-center xl:flex">

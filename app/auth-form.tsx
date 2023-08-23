@@ -42,13 +42,15 @@ export default function AuthForm() {
     const { error } = await supabase.auth.signOut();
   }
   return (
-    <Auth
-      supabaseClient={supabase}
-      view="magic_link"
-      appearance={{ theme: ThemeSupa }}
-      theme="dark"
-      showLinks={false}
-      providers={["google", "spotify"]}
+    <div className="col-6 auth-widget">
+      <Auth
+        supabaseClient={supabase}
+        view="magic_link"
+        appearance={{ theme: ThemeSupa }}
+        theme="dark"
+        showLinks={true}
+        providers={["google", "spotify"]}
     />
+    </div>
   );
 }
