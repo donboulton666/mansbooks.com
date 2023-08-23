@@ -45,11 +45,8 @@ function Login({ session }: { session: Session | null }) {
                 target="_blank"
                 rel="noreferrer"
                 href="https://mansbooks.com/about"
-              >
-                <button
-                  type="button"
-                  className="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
-                >
+                className="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 border-scale-700 hover:border-scale-800 bg-scale-500 hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+              >                
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="14"
@@ -67,9 +64,8 @@ function Login({ session }: { session: Session | null }) {
                     <line x1="16" y1="17" x2="8" y2="17"></line>
                     <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>{" "}
-                  <span className="truncate">About Mansbooks</span>{" "}
-                </button>
-              </LInk>
+                  <span className="truncate">About Mansbooks</span>{" "}               
+              </Link>
             </div>
           </nav>
         </div>
