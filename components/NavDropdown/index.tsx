@@ -25,7 +25,7 @@ import {
 import Control from "@components/icons/control";
 import { Database } from "@lib/database.types";
 import { cookies } from "next/headers";
-import Avatar from "@app/account/avatar";
+import Avatar from "@app/Account/avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
