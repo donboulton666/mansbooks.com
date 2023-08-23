@@ -134,15 +134,15 @@ export default function Privacy() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Mansbooks Home",
                   },
                   position: "1",
                 },
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/search",
-                    name: "MansBooks Privacy",
+                    "@id": "https://mansbooks.com/privacy",
+                    name: "Mansbooks Privacy",
                   },
                   position: "2",
                 },

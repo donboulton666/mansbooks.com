@@ -6,7 +6,6 @@ import AuthForm from "@app/auth-form";
 import supabase from "@app/supabase-provider";
 import Account from "@components/UserAccount/account";
 import Layout from "@components/PageLayout";
-import Footer from "@components/PageFooter";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
@@ -20,6 +19,113 @@ function Login({ session }: { session: Session | null }) {
   return (
     <>
       <Stars />
+      <Head>
+        <title>Login</title>
+        <>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Privacy",
+              url: "https://mansbooks.com/login",
+              image: {
+                "@type": "ImageObject",
+                url: angie,
+                width: "1400",
+                height: "450",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Mansbooks",
+              },
+              license: "http://mansbooks.com/license",
+            })}
+            ,
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@id": "https://mansbooks.com",
+              "@type": "Organization",
+              address: "OKC, Middle Earth",
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "donaldboulton@gmail.com",
+                telephone: "+405-863-2165",
+              },
+              description: "Mansbooks Privacy Page",
+              email: "donaldboulton@gmail.com",
+              founder: {
+                "@id": "https://donboulton.com",
+              },
+              location: "OKC, Middle Earth",
+              image: {
+                "@type": "ImageObject",
+                url: angie,
+                width: "1400",
+                height: "450",
+              },
+              logo: {
+                "@type": "ImageObject",
+                url: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLFRYVDhgQEhgNEh0PExYVFx8eGBYVIhUaHysjHR0oKRUiJTUlKC0vMjIyGSU4PTcwPCsxMi8BCgsLDg0OHBAQHDsoIig7NTsyOzs7OzsvLy81OzU7NjU1Ozs1LzY7OzsvNS87OzsvLy87OzsvLzIvLy87Lzs7O//AABEIABgAGAMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAABgcFAf/EAB0QAAEFAQEBAQAAAAAAAAAAAAEAAgMEEQUxIRL/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQA/8QAHBEAAQQDAQAAAAAAAAAAAAAAAgABAxEEEyEx/9oADAMBAAIRAxEAPwCu3Z2wwO0pTl6UYs5o9Wl2ZJBAc3xTm3LaN4/nfVBk5emuKuDH2H6qdR6MZYPoQlPnSWGxDdXFYEljaGSCipPHTqtlgJxKzeRG6zpaPUIQyALt1KjJ2fi2IOUxrBgQhCcAtSxG9r//2Q==",
+              },
+              name: "MansBooks",
+              sameAs: [
+                "mailto:donaldboulton@gmail.com",
+                "tel:+405-863-2165",
+                "https://www.facebook.com/donboulton",
+                "https://www.instagram.com/boulton3662",
+                "https://twitter.com/donboulton",
+                "https://www.linkedin.com/donboulton",
+                "https://github.com/donaldboulton/",
+              ],
+              url: "https://mansbooks.com",
+            })}
+            ,
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "@id": "https://donboulton.com",
+              name: "Donald Boulton",
+              url: "https://donboulton.com",
+              worksFor: {
+                "@id": "https://mansbooks.com",
+              },
+            })}
+            ,
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              description: "Breadcrumbs list",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  item: {
+                    "@id": "https://mansbooks.com/",
+                    name: "MansBooks Home",
+                  },
+                  position: "1",
+                },
+                {
+                  "@type": "ListItem",
+                  item: {
+                    "@id": "https://mansbooks.com/login",
+                    name: "Mansbooks Login",
+                  },
+                  position: "2",
+                },
+              ],
+              numberOfItems: "2",
+              name: "Breadcrumbs",
+            })}
+            ,
+          </script>
+        </>
+      </Head>
       <div className="bg-scale-100 flex flex-1 flex-col">
         <div className="absolute top-0 mx-auto w-full px-8 pt-6 sm:px-6 lg:px-8">
           <nav className="relative flex items-center justify-between sm:h-10">
@@ -71,7 +177,7 @@ function Login({ session }: { session: Session | null }) {
           </nav>
         </div>
         <div className="flex flex-1 mb-10">
-          <main className="bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r px-5 pb-8 pt-16 shadow-lg">
+          <main className="beams bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r px-5 pb-8 pt-16 shadow-lg">
             <div className="flex w-[330px] flex-1 flex-col justify-center sm:w-[384px]">
               <div className="mb-10">
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">
@@ -127,14 +233,13 @@ function Login({ session }: { session: Session | null }) {
                 </span>
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
-                All week I was migrating my project from Regis to{" "}
-                <a href="https://supabase.com/launch-week">@supabase</a>{" "}
-                Because it is the best, fastest and simple!!! I like the design and
-                API for understandable.{" "}
+                All week I have been working on Angelina Jordans New Album backend with <a href="https://supabase.com/launch-week">Supabase</a>{" "} 🧪 {" "}
+                <a href="https://mansbooks.com/albums">I am Old Enough</a>{" "}
+                My Favorite song is, Love Don't Let me Go, "Visualizer", then It's all my Fault{" "}
                 <a href="https://supabase.com/launch-week">
-                  Supabase Launch week 8.
+                  Followed by Diamond.
                 </a>{" "}
-                Just try it! 🧪
+                Listen to the Love! ❤️
               </blockquote>
               <a
                 href="https://twitter.com/donboulton"
@@ -161,7 +266,6 @@ function Login({ session }: { session: Session | null }) {
             </div>
           </aside>
         </div>
-        <Footer />
       </div>
     </>
   );
