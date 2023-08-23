@@ -41,9 +41,9 @@ export default function Navigation({
   size: number;
   onUpload: (url: string) => void;
 }) {
-  const supabase = useSupabaseClient<Database>();
+  const supabase = createClientComponentClient<Database>()
   const [username, setUsername] = useState<Profiles["username"]>(null);
-  const [avatar_url, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
+  const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const user = session?.user;
 
   let width = "w-7";
@@ -190,7 +190,7 @@ export default function Navigation({
                         {avatarUrl ? (
                           <Image
                             uid={user!.id}
-                            url={avatar_url}
+                            url={avatarUrl}
                             width={28}
                             height={28}
                             alt={username}

@@ -42,7 +42,7 @@ export default function AuthForm() {
     const { error } = await supabase.auth.signOut();
   }
   return (
-    <div className="col-6 auth-widget">
+    <div className="auth-widget">
       <Auth
         supabaseClient={supabase}
         view="magic_link"
