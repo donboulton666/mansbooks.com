@@ -228,7 +228,7 @@ function Login({ session }: { session: Session | null }) {
             <div className="relative flex flex-col gap-6">
               <div className="absolute -left-11 -top-12 select-none">
                 <span className="text-scale-600 text-[160px] leading-none">
-                  &ldquo
+                  “
                 </span>
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
@@ -242,7 +242,7 @@ function Login({ session }: { session: Session | null }) {
               </blockquote>
               <div className="absolute -right-11 -bottom-12 select-none">
                 <span className="text-scale-600 text-[160px] leading-none">
-                  &rdquo
+                “
                 </span>
               </div>
               <a
