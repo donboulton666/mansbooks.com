@@ -50,7 +50,7 @@ export default function AuthForm() {
         theme="dark"
         showLinks={true}
         providers={["google", "spotify"]}
-    />
+      />
     </div>
   );
 }

@@ -5,7 +5,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Center from "@components/Center";
 import ColumnGridLeft from "@components/column-grid-left";
-import { useSupabaseClient, Session } from "@supabase/auth-helpers-react";
+import {
+  Session,
+  createClientComponentClient,
+} from "@supabase/auth-helpers-nextjs";
 import Image from "next/image";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BriefcaseIcon, ChevronDownIcon } from "@heroicons/react/solid";
@@ -30,18 +33,18 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navigation({
+export default function Account({
   uid,
   url,
   size,
-  onUpload,
+  session,
 }: {
   uid: string;
   url: Profiles["avatar_url"];
   size: number;
-  onUpload: (url: string) => void;
+  session: Session;
 }) {
-  const supabase = createClientComponentClient<Database>()
+  const supabase = createClientComponentClient<Database>();
   const [username, setUsername] = useState<Profiles["username"]>(null);
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const user = session?.user;

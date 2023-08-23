@@ -393,6 +393,14 @@ svg circle {
   background-repeat: no-repeat;
   background: cover;
 }
+.form-beams {
+  background-image: url(../public/beams/docs-dark@tinypng.png);
+  background-size: 86.125rem;
+  background-repeat: no-repeat;
+  background: cover;
+  z-index: 30;
+}
+
 .max-w-8xl {
   max-width: 90rem;
 }

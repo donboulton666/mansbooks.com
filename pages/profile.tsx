@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
-import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
+import AuthForm from "@app/auth-form";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Account from "@app/account/account";
 import Layout from "@components/PageLayout";
@@ -18,31 +18,6 @@ import iLoveYou from "../public/angie/ps-i-love-you.jpg";
 const ProfilePage: NextPage = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
-  async function signInWithGoogle() {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: getURL(),
-        queryParams: {
-          access_type: "offline",
-          prompt: "consent",
-        },
-      },
-    });
-  }
-
-  async function signInWithSpotify() {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "spotify",
-      options: {
-        redirectTo: getURL(),
-      },
-    });
-  }
-
-  async function signOut() {
-    const { error } = await supabase.auth.signOut();
-  }
   return (
     <Layout>
       <Stars />
@@ -177,13 +152,7 @@ const ProfilePage: NextPage = () => {
                   <p className="">Login.</p>
                 </div>
                 <div className="col-6 auth-widget">
-                  <Auth
-                    supabaseClient={supabase}
-                    view="magic_link"
-                    appearance={{ theme: ThemeSupa }}
-                    providers={["google", "spotify"]}
-                    theme="dark"
-                  />
+                  <AuthForm />
                 </div>
               </div>
             ) : (
