@@ -6,6 +6,7 @@ import AuthForm from "@app/auth-form";
 import supabase from "@app/supabase-provider";
 import Account from "@components/UserAccount/account";
 import Layout from "@components/PageLayout";
+import Footer from "@components/PageFooter";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
@@ -160,6 +161,7 @@ function Login({ session }: { session: Session | null }) {
             </div>
           </aside>
         </div>
+        <Footer />
       </div>
     </>
   );
