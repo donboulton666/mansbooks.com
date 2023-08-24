@@ -44,7 +44,9 @@ export default function Account({
   size: number;
   session: Session;
 }) {
-  const supabase = createClientComponentClient<Database>();
+  const supabase = createClientComponentClient<Database>({
+    isSingleton: false,
+  });
   const [username, setUsername] = useState<Profiles["username"]>(null);
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const user = session?.user;

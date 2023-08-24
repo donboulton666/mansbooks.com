@@ -8,7 +8,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 const COMMENT_TABLE_NAME = process.env.NEXT_PUBLIC_COMMENT_TABLE_NAME + "";
 
 const ReadComments = async (req: NextApiRequest, res: NextApiResponse) => {
-  const supabase = createClientComponentClient<Database>();
+  const supabase = createClientComponentClient<Database>({
+    isSingleton: false,
+  });
   const slug = req.query.slug.toString();
   if (typeof slug === "undefined") return;
   switch (req.method) {

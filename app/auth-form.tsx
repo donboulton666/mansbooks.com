@@ -6,7 +6,9 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@lib/database.types";
 
 export default function AuthForm() {
-  const supabase = createClientComponentClient<Database>();
+  const supabase = createClientComponentClient<Database>({
+    isSingleton: false,
+  });
 
   async function signInWithGoogle() {
     const { data, error } = await supabase.auth.signInWithOAuth({

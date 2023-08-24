@@ -22,7 +22,7 @@ import styles from "@components/speakers-grid.module.css";
 import youtubeService from "../services/youtube";
 
 export async function getServerSideProps() {
-  const playlistId = "qQjxAKAHSgs&list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"; // Replace with your actual YouTube playlist ID
+  const playlistId = "PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"; // Replace with your actual YouTube playlist ID
   const response = await youtubeService.playlistItems.list({
     part: "snippet",
     maxResults: 50, // Set the number of videos you want to retrieve
