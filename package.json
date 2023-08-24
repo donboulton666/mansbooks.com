@@ -7,7 +7,7 @@
   "homepage": "https://mansbooks.com",
   "license": "0BSD",
   "engines": {
-    "node": ">=18.16.1"
+    "node": ">=18.17.1"
   },
   "AWS_LAMBDA_JS_RUNTIME": {
     "node": ">=18.17.1"
