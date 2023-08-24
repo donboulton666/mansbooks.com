@@ -1,4 +1,3 @@
-import Layout from "@components/PageLayout";
 import { Redis } from "@upstash/redis";
 
 const redis = Redis.fromEnv();
@@ -57,7 +56,7 @@ export default function Survey() {
 
   return (
     <>
-      <Layout>
+      <div>
         <div className="center mx-auto mb-10 mt-10 max-w-5xl">
           <h2>Welcome {member}</h2>
           <form onSubmit={handleSubmit}>
@@ -108,7 +107,7 @@ export default function Survey() {
             />
           </form>
         </div>
-      </Layout>
+      </div>
     </>
   );
 }

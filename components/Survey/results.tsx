@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Layout from "@components/PageLayout";
 
 export default function Results() {
   const [surveyData, setSurveyData] = useState([]);
@@ -11,7 +10,7 @@ export default function Results() {
   }, []);
 
   return (
-    <Layout>
+    <div>
       <div className="center mx-auto my-10 max-w-5xl">
         {" "}
         {surveyData.map((data) => (
@@ -28,6 +27,6 @@ export default function Results() {
           </div>
         ))}{" "}
       </div>
-    </Layout>
+    </div>
   );
 }

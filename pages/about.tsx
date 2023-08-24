@@ -134,7 +134,7 @@ export default function About() {
       <div className="center mx-auto mb-32 mt-8 max-w-5xl">
         <Center>Angelina Jordan</Center>
         <Image
-          alt="NextJs"
+          alt="Angelina"
           title="Angelina Jordan"
           src={angie}
           className="w-full opacity-80"
@@ -161,7 +161,7 @@ export default function About() {
             earned fantastic reviews for the amazing breadth, depth and maturity
             of her vocal talent that simply belies her young age.
             <div>
-              Angelina’s videos have received over several billions views on
+              Angelina’s videos have received over several billion views on
               YouTube and more than 4 billion views on Facebook.
             </div>
             <div>
