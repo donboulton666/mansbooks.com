@@ -23,11 +23,12 @@ interface Comments {
 
 interface CommentsProps {
   postId: number;
+  slug: string;
 }
 
-export const Comments: FC<CommentsProps> = ({ postId }) => {
+export const Comments: FC<CommentsProps> = ({ slug }) => {
   const [toast, setToast] = useRecoilState(ToastState);
-  const commentsUrl: Key = `/api/comments/${postId}`;
+  const commentsUrl: Key = `/api/comments/${slug}`;
   // TODO: Handle error from getting comments
   const { data: comments, error: commentError } = useSWR<Comments[]>(
     commentsUrl,
@@ -232,7 +233,7 @@ export const Comments: FC<CommentsProps> = ({ postId }) => {
       ) : (
         <div className="flex items-center gap-8">
           <p>Sign in to add comments</p>
-          <Link href={"/auth/sign-in"}>
+          <Link href={"/login"}>
             <a className="rounded-lg bg-slate-900 px-3 py-1 text-lg text-slate-300">
               Sign in
             </a>

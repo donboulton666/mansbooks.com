@@ -25,7 +25,7 @@ import {
 import Control from "@components/icons/control";
 import { Database } from "@lib/database.types";
 import { cookies } from "next/headers";
-import Avatar from "@app/Account/avatar";
+import Avatar from "@app/account/avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -87,10 +87,10 @@ export default function Account({
                           <ChevronDownIcon
                             className={`${
                               open
-                                ? "rotate-180 text-wine-300"
+                                ? "rotate-180 text-slate-300"
                                 : "text-opacity-75"
                             }
-                            -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
+                            -mr-1 mt-1 h-5 text-slate-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-wine-400 group-hover:text-opacity-75`}
                             aria-hidden="true"
                           />
                         </Control>
@@ -259,7 +259,7 @@ export default function Account({
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/account"
+                              href="/user-account"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
@@ -270,7 +270,7 @@ export default function Account({
                                   className="block h-8 w-9 pr-2 text-wine-200"
                                   aria-hidden="true"
                                 />
-                                <span>Profile</span>
+                                <span>Account</span>
                               </span>
                             </Link>
                           )}

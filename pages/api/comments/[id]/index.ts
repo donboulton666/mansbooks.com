@@ -9,15 +9,15 @@ const COMMENT_TABLE_NAME = process.env.NEXT_PUBLIC_COMMENT_TABLE_NAME + "";
 
 const ReadComments = async (req: NextApiRequest, res: NextApiResponse) => {
   const supabase = createClientComponentClient<Database>();
-  const { id: postId } = req.query;
-  if (typeof postId === "undefined") return;
+  const { id: slug } = req.query;
+  if (typeof slug === "undefined") return;
   switch (req.method) {
     // Get all comments
     case "GET":
       const { data: getData, error: getError } = await supabase
         .from(COMMENT_TABLE_NAME)
         .select("*")
-        .eq("post_id", +postId);
+        .eq("slug", +slug);
       if (getError) {
         return res.status(500).json({ message: getError.message });
       }

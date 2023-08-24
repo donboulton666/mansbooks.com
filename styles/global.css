@@ -646,3 +646,12 @@ select {
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #333333, #dd1818);
 }
+.blockquote-text::before {
+  content: open-quote;
+  width: 28px;
+  height: 25px;
+  display: flex;
+  font-size: 60px;
+  font-family: "Eb Garamond";
+  color: #006cbe;
+}

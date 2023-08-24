@@ -3,9 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from "next";
 import AuthForm from "@app/auth-form";
-import NavDropdown from "@components/NavDropdown"
+import NavDropdown from "@components/NavDropdown";
 import supabase from "@app/supabase-provider";
-import AccountForm from "@components/UserAccount/account-form";
+import AccountForm from "@app/account/account-form";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
@@ -165,21 +165,7 @@ function Login({ session }: { session: Session | null }) {
                 </h2>
               </div>
               <div className="flex flex-col gap-5">
-                {!session ? (
-                  <AuthForm />
-                ) : (
-                  <>
-                    <ColumnGridLeft>
-                      <AccountForm session={session} />
-                      <div
-                        className="flex h-full w-full flex-col items-center justify-center p-4"
-                        style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
-                      >
-                        <TodoList session={session} />
-                      </div>
-                    </ColumnGridLeft>
-                  </>
-                )}
+                <AuthForm />
               </div>
             </div>
             <div className="sm:text-center">
@@ -210,9 +196,39 @@ function Login({ session }: { session: Session | null }) {
                 </span>
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
-                All week I have been working on Angelina Jordans New Album <a href="https://www.youtube.com/playlist?list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt" aria-describedby="I am Old Enough">I am Old Enough</a>{" "} building a backend with <a href="https://supabase.com/launch-week" aria-describedby="Supabase">Supabase</a>{" "} 🧪 {" "}                
-                My Favorite song is, <a aria-describedby="Love Don't Let me Go" href="https://www.youtube.com/watch?v=kjwD884SYRE&list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt&index=1">Love Don't Let me Go, "Visualizer"</a>, second is <a href="https://www.youtube.com/watch?v=z-a9Qetfp74" aria-describedby="All my Fault">All my Fault</a>{" "} Followed by:{" "}
-                <a href="https://www.youtube.com/watch?v=qQjxAKAHSgs" aria-describedby="Diamond">
+                All week I have been working on Angelina Jordans New Album{" "}
+                <a
+                  href="https://www.youtube.com/playlist?list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt"
+                  aria-describedby="I am Old Enough"
+                >
+                  I am Old Enough
+                </a>{" "}
+                building a backend with{" "}
+                <a
+                  href="https://supabase.com/launch-week"
+                  aria-describedby="Supabase"
+                >
+                  Supabase
+                </a>{" "}
+                🧪 My Favorite song is,{" "}
+                <a
+                  aria-describedby="Love Don't Let me Go"
+                  href="https://www.youtube.com/watch?v=kjwD884SYRE&list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt&index=1"
+                >
+                  Love Don't Let me Go, "Visualizer"
+                </a>
+                , second is{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=z-a9Qetfp74"
+                  aria-describedby="All my Fault"
+                >
+                  All my Fault
+                </a>{" "}
+                Followed by:{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=qQjxAKAHSgs"
+                  aria-describedby="Diamond"
+                >
                   Diamond.
                 </a>{" "}
                 Listen to the Love! <span className="text-red-800">❤️</span>

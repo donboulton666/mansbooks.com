@@ -36,9 +36,8 @@ export default function AuthForm() {
         view="magic_link"
         appearance={{ theme: ThemeSupa }}
         theme="dark"
-        showLinks={true}
         providers={["google", "spotify"]}
-        redirectTo= "/account"
+        redirectTo="/account"
       />
     </div>
   );
