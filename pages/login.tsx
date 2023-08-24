@@ -127,7 +127,7 @@ function Login({ session }: { session: Session | null }) {
           </script>
         </>
       </Head>
-      <div className="bg-scale-100 flex flex-1 flex-col">
+      <div className="login-beams bg-scale-100 flex flex-1 flex-col">
         <div className="absolute top-0 mx-auto w-full px-8 pt-6 sm:px-6 lg:px-8">
           <nav className="relative flex items-center justify-between sm:h-10">
             <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
@@ -154,7 +154,7 @@ function Login({ session }: { session: Session | null }) {
           </nav>
         </div>
         <div className="flex flex-1 mb-10">
-          <main className="beams bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r border-slate-700 px-5 pb-8 pt-16 shadow-lg">
+          <main className="bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r border-slate-700 px-5 pb-8 pt-16 shadow-lg">
             <div className="flex w-[330px] flex-1 flex-col justify-center sm:w-[384px]">
               <div className="mb-10">
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">

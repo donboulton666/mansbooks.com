@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Auth } from "@supabase/auth-ui-react";
 import Head from "next/head";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Link from "next/link";
-import type { NextPage } from "next";
 import AuthForm from "@app/auth-form";
 import NavDropdown from "@components/NavDropdown";
 import AccountForm from "@app/account/account-form";
@@ -20,12 +19,9 @@ import angie from "../public/apple-touch-icon.png";
 import planets from "../public/backdrops/planets.jpg";
 import { Database } from "@lib/database.types";
 
-type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
-
 const UserAccount = () => {
-  const session = useSession();
   const supabase = useSupabaseClient<Database>();
-  const [username, setUsername] = useState<Profiles["username"]>(null);
+  const session = useSession();
   return (
     <>
       <Stars />
@@ -169,7 +165,7 @@ const UserAccount = () => {
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">
                   Welcome back
                 </LeftText>
-                <h2 className="text-scale-1100 text-sm">{username}</h2>
+                <h2 className="text-scale-1100 text-sm">My Lovely Fan's</h2>
               </div>
               <div className="flex flex-col gap-5">
                 {!session ? (
@@ -181,15 +177,10 @@ const UserAccount = () => {
                   />
                 ) : (
                   <>
-                    <ColumnGridLeft>
-                      <AccountForm session={session} />
-                      <div
-                        className="flex h-full w-full flex-col items-center justify-center p-4"
-                        style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
-                      >
-                        <TodoList session={session} />
-                      </div>
-                    </ColumnGridLeft>
+                    <AccountForm session={session} />
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <TodoList session={session} />
+                    </div>
                   </>
                 )}
               </div>

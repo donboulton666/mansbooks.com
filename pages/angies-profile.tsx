@@ -18,8 +18,25 @@ import heartLove from "../public/angie/angelina-makes-a-heart-sending-love-to-he
 import angieImage from "../public/icons/apple-touch-icon.png";
 import Stars from "@components/Stars";
 import Bio from "@components/Bio";
+import styles from "@components/speakers-grid.module.css";
+import youtubeService from "../services/youtube";
 
-export default function LocalProfile() {
+export async function getServerSideProps() {
+  const playlistId = "qQjxAKAHSgs&list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"; // Replace with your actual YouTube playlist ID
+  const response = await youtubeService.playlistItems.list({
+    part: "snippet",
+    maxResults: 50, // Set the number of videos you want to retrieve
+    playlistId,
+  });
+
+  const playlistItems = response.data.items;
+
+  return {
+    props: { playlistItems },
+  };
+}
+
+function LocalProfile({ playlistItems }) {
   return (
     <Layout>
       <Stars />
@@ -3705,8 +3722,37 @@ export default function LocalProfile() {
               </Center>
             </div>
           </div>
+          <div>
+            <ul className={styles.grid}>
+              {playlistItems.map((item) => (
+                <li className={styles.card} key={item.id}>
+                  <a
+                    href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className={styles.imageWrapper}>
+                      <img
+                        src={item.snippet.thumbnails}
+                        className={styles.image}
+                        alt={item.snippet.title}
+                      />
+                    </div>
+                    <div className={styles.cardBody}>
+                      <p className={styles.name}>{item.snippet.title}</p>
+                      <p className={styles.description}>
+                        {item.snippet.description}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </>
     </Layout>
   );
 }
+
+export default LocalProfile;

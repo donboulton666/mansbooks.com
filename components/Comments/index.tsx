@@ -63,7 +63,7 @@ export const Comments: FC<CommentsProps> = ({ slug }) => {
         writer_email: session.user.email,
         payload,
         reply_of: replyContent?.commentId,
-        post_id: postId,
+        slug: slug,
       };
       if (typeof comments !== "undefined") {
         // Modify cache before actually adding comment

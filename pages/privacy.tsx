@@ -45,7 +45,7 @@ export default function Privacy() {
   const { locale } = useRouter();
   const [showModal, setShowModal] = useState(false);
   return (
-    <Layout data-datocms-noindex>
+    <Layout>
       <Stars />
       <Head>
         <title>Privacy</title>

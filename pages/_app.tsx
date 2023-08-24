@@ -8,6 +8,7 @@ import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
+import { RecoilRoot } from "recoil";
 
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
@@ -35,7 +36,9 @@ function App({
           supabaseClient={supabase}
           initialSession={pageProps.initialSession}
         >
-          <AnyComponent {...pageProps} />
+          <RecoilRoot>
+            <AnyComponent {...pageProps} />
+          </RecoilRoot>
         </SessionContextProvider>
         <ResizeHandler />
       </HMSRoomProvider>

@@ -10,6 +10,8 @@ import {
   Honeypot,
 } from "react-netlify-forms";
 import { useForm, Resolver } from "react-hook-form";
+import { useRecoilState } from "recoil";
+import { ToastState } from "../../states/toastStates";
 
 type FormValues = {
   firstName: string;
@@ -46,6 +48,7 @@ interface ContactFormProps {
 const ContactForm: FC<ContactFormProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { name, action, honeypotName, children } = props;
+  const [toast, setToast] = useRecoilState(ToastState);
   const {
     register,
     handleSubmit,
@@ -55,10 +58,14 @@ const ContactForm: FC<ContactFormProps> = (props) => {
   } = useForm<FormValues>({ resolver });
   const netlify = useNetlifyForm({
     name: "contact",
-    action: "/thanks",
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSuccess: (response, context) => {
       console.log("Successfully sent form data to Netlify Server");
+      setToast({
+        isOpen: true,
+        messageType: "ok",
+        message: "Contact Info Sent",
+      });
     },
   });
   const onSubmit = (data) => netlify.handleSubmit(null, data);

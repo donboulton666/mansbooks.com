@@ -55,9 +55,8 @@ export default function TodoList({ session }: { session: Session }) {
   };
   const { locale } = useRouter();
   return (
-    <div className="w-full" data-datocms-noindex>
-      <h1 className="mb-12">{i18n.todo.title[locale]}</h1>
-
+    <div className="w-full">
+      <h1 className="mb-4 text-slate-300">{i18n.todo.title[locale]}</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -66,7 +65,7 @@ export default function TodoList({ session }: { session: Session }) {
         className="my-2 flex gap-2"
       >
         <input
-          className="w-full rounded bg-slate-900 p-2 text-slate-200"
+          className="w-full rounded bg-slate-900 p-2 text-slate-300"
           type="text"
           placeholder="new songs"
           value={newTaskText}

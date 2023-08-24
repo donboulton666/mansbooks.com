@@ -85,6 +85,7 @@
     "encoding": "^0.1.13",
     "file-loader": "^6.2.0",
     "framer-motion": "^10.15.0",
+    "googleapis": "^126.0.0",
     "graphql-request": "^5.1.0",
     "htmlescape": "^1.1.1",
     "http": "^0.0.1-security",
