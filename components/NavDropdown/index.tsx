@@ -223,7 +223,7 @@ export default function Account({
                               ? "rotate-180 text-wine-300"
                               : "text-opacity-75"
                           }
-                            -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
+                            -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-wine-400 group-hover:text-opacity-75`}
                           aria-hidden="true"
                         />
                       </Menu.Button>
@@ -259,7 +259,7 @@ export default function Account({
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/profile"
+                              href="/account"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
@@ -270,45 +270,7 @@ export default function Account({
                                   className="block h-8 w-9 pr-2 text-wine-200"
                                   aria-hidden="true"
                                 />
-                                <span>User Profile</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href="/survey"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <ClipboardIcon
-                                  className="block h-8 w-9 pr-2 text-fuchsia-500"
-                                  aria-hidden="true"
-                                />
-                                <span>Survey</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href="/results"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <ClipboardListIcon
-                                  className="block h-9 w-9 pr-2 text-green-600"
-                                  aria-hidden="true"
-                                />
-                                <span>Results</span>
+                                <span>Profile</span>
                               </span>
                             </Link>
                           )}

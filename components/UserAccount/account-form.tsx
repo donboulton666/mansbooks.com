@@ -9,7 +9,7 @@ import { Database } from "@lib/schema";
 import Avatar from "./avatar";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
-export default function Account({ session }: { session: Session }) {
+export default function AccountForm({ session }: { session: Session }) {
   const supabase = useSupabaseClient<Database>();
   const user = useUser();
   const [loading, setLoading] = useState(true);

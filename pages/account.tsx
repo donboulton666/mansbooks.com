@@ -15,20 +15,20 @@ import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
 import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 
-function Login({ session }: { session: Session | null }) {
+function Account({ session }: { session: Session | null }) {
   const supabase = useSupabaseClient();
   return (
     <>
       <Stars />
       <Head>
-        <title>Login</title>
+        <title>Account</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
               name: "Privacy",
-              url: "https://mansbooks.com/login",
+              url: "https://mansbooks.com/account",
               image: {
                 "@type": "ImageObject",
                 url: angie,
@@ -114,8 +114,8 @@ function Login({ session }: { session: Session | null }) {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/login",
-                    name: "Mansbooks Login",
+                    "@id": "https://mansbooks.com/account",
+                    name: "User Account",
                   },
                   position: "2",
                 },
@@ -154,14 +154,14 @@ function Login({ session }: { session: Session | null }) {
           </nav>
         </div>
         <div className="flex flex-1 mb-10">
-          <main className="beams bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r border-slate-700 px-5 pb-8 pt-16 shadow-lg">
+          <main className="login-beams bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r border-slate-700 px-5 pb-8 pt-16 shadow-lg">
             <div className="flex w-[330px] flex-1 flex-col justify-center sm:w-[384px]">
               <div className="mb-10">
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">
                   Welcome back
                 </LeftText>
                 <h2 className="text-scale-1100 text-sm">
-                  Sign in to your account
+                  Your account
                 </h2>
               </div>
               <div className="flex flex-col gap-5">
@@ -252,4 +252,4 @@ function Login({ session }: { session: Session | null }) {
   );
 }
 
-export default Login;
+export default Account;
