@@ -1,8 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { Auth } from "@supabase/auth-ui-react";
 import Head from "next/head";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Link from "next/link";
 import AuthForm from "@app/auth-form";
@@ -18,10 +15,39 @@ import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 import planets from "../public/backdrops/planets.jpg";
 import { Database } from "@lib/database.types";
+import { useInView } from "react-intersection-observer";
+import { LazyMotion, m } from "framer-motion";
+
+const loadFeatures = () =>
+  import("../components/FramerFeatures").then((res) => res.default);
 
 const UserAccount = () => {
   const supabase = useSupabaseClient<Database>();
   const session = useSession();
+  const accountContainer = {
+    enter: {
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const [ref, isVisible] = useInView({
+    triggerOnce: true,
+    rootMargin: "-200px 0px",
+  });
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+    hidden: {
+      opacity: 0,
+      x: -200,
+    },
+  };
   return (
     <>
       <Stars />
@@ -169,12 +195,7 @@ const UserAccount = () => {
               </div>
               <div className="flex flex-col gap-5">
                 {!session ? (
-                  <Auth
-                    supabaseClient={supabase}
-                    appearance={{ theme: ThemeSupa }}
-                    providers={["github", "spotify"]}
-                    theme="dark"
-                  />
+                  <AuthForm />
                 ) : (
                   <>
                     <AccountForm session={session} />
@@ -207,16 +228,27 @@ const UserAccount = () => {
           </main>
           <aside className="hidden form-beams flex-1 flex-shrink basis-1/4 flex-col items-center justify-center xl:flex">
             <div className="relative flex flex-col gap-6">
-              <Image
-                layout="fixed"
-                className="self-center rounded-lg opacity-60"
-                src={planets}
-                width={640}
-                height={427}
-                quality={95}
-                alt="Planets!"
-                loading="lazy"
-              />
+              <LazyMotion features={loadFeatures}>
+                <m.section variants={accountContainer}>
+                  <m.div
+                    ref={ref}
+                    variants={variants}
+                    animate={isVisible ? "visible" : "hidden"}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
+                    <Image
+                      layout="fixed"
+                      className="self-center rounded-lg opacity-60"
+                      src={planets}
+                      width={640}
+                      height={427}
+                      quality={95}
+                      alt="Planets!"
+                      loading="lazy"
+                    />
+                  </m.div>
+                </m.section>
+              </LazyMotion>
             </div>
           </aside>
         </div>

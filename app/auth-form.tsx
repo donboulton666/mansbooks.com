@@ -36,7 +36,17 @@ export default function AuthForm() {
       <Auth
         supabaseClient={supabase}
         view="magic_link"
-        appearance={{ theme: ThemeSupa }}
+        appearance={{
+          theme: ThemeSupa,
+          variables: {
+            default: {
+              colors: {
+                brand: "blue",
+                brandAccent: "darkblue",
+              },
+            },
+          },
+        }}
         theme="dark"
         providers={["google", "spotify"]}
         redirectTo="/account"

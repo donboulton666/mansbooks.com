@@ -16,6 +16,7 @@ import {
   SearchIcon,
   UserGroupIcon,
   UserIcon,
+  CameraIcon,
   MapIcon,
   LoginIcon,
   CogIcon,
@@ -129,18 +130,18 @@ export default function Account({
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/social"
+                              href="/youtube-videos"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
                               )}
                             >
                               <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <UserIcon
+                                <CameraIcon
                                   className="block h-8 w-9 pr-2 text-wine-200"
                                   aria-hidden="true"
                                 />
-                                <span>Social</span>
+                                <span>Videos</span>
                               </span>
                             </Link>
                           )}
@@ -192,14 +193,13 @@ export default function Account({
                     <div>
                       <Menu.Button className="flex rounded-full text-sm focus:outline-none">
                         <span className="sr-only">Open User Menu</span>
-                        {avatarUrl ? (
+                        {!session ? (
                           <Image
-                            uid={user!.id}
                             url={avatarUrl}
                             width={28}
                             height={28}
                             alt={username}
-                            className="avatar image h-7 w-7 rounded-full "
+                            className="avatar image h-7 w-7 rounded-full"
                           />
                         ) : (
                           <div className="avatar no-image">
@@ -209,7 +209,7 @@ export default function Account({
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
                               stroke="currentColor"
-                              className="h-7 w-7 text-wine-300"
+                              className="h-7 w-7 text-wine-300 hover:text-slate-300"
                             >
                               <path
                                 stroke-linecap="round"
@@ -225,7 +225,7 @@ export default function Account({
                               ? "rotate-180 text-wine-300"
                               : "text-opacity-75"
                           }
-                            -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-wine-400 group-hover:text-opacity-75`}
+                            -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
                           aria-hidden="true"
                         />
                       </Menu.Button>

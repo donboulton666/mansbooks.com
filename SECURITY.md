@@ -2,20 +2,17 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Next.Js Version and React Versions that are supported below:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 13.4.8  | :white_check_mark: |
+| 12.x   | :x:                |
+| 18.2.0  | :white_check_mark: |
+| 17.x   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Use this site contact form to report content issues or discussions at [Contact](/contact)
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Report programming issues: [Github Issues](https://github.com/donaldboulton/mansbooks.com/issues)

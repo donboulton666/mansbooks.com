@@ -65,6 +65,8 @@ const nextConfig = withPWA(
         'pbs.twimg.com',
         "console.upstash.com",
         "upstash.com",
+        "i.ytimg.com",
+        "yt3.ggpht.com",
       ],
     },
     // Support svg import
