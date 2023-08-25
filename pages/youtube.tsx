@@ -1,20 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Link from "next/link";
-import AuthForm from "@app/auth-form";
 import NavDropdown from "@components/NavDropdown";
-import AccountForm from "@app/account/account-form";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
-import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
-import TodoList from "@components/TodoList";
-import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
-import planets from "../public/backdrops/planets.jpg";
-import { Database } from "@lib/database.types";
 import { useInView } from "react-intersection-observer";
 import { LazyMotion, m } from "framer-motion";
 
@@ -22,8 +14,6 @@ const loadFeatures = () =>
   import("../components/FramerFeatures").then((res) => res.default);
 
 const YouTube = () => {
-  const supabase = useSupabaseClient<Database>();
-  const session = useSession();
   const accountContainer = {
     enter: {
       transition: {
@@ -194,7 +184,15 @@ const YouTube = () => {
                 <h2 className="text-scale-1100 text-sm">Old Enough</h2>
               </div>
               <div className="flex flex-col gap-5">
-                <iframe width="460" height="215" src="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe
+                  width="460"
+                  height="215"
+                  src="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div className="sm:text-center">
@@ -227,7 +225,15 @@ const YouTube = () => {
                     animate={isVisible ? "visible" : "hidden"}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                   >
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
                   </m.div>
                 </m.section>
               </LazyMotion>

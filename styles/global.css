@@ -387,6 +387,7 @@ svg circle {
   background-repeat: no-repeat;
   background: cover;
 }
+
 .login-beams {
   background-image: url(../public/beams/2-dark@tiny.png);
   background-size: 43.125rem;
