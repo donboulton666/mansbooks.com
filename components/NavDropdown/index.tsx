@@ -130,7 +130,7 @@ export default function Account({
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/youtube-videos"
+                              href="/youtube"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
@@ -141,7 +141,7 @@ export default function Account({
                                   className="block h-8 w-9 pr-2 text-wine-200"
                                   aria-hidden="true"
                                 />
-                                <span>Videos</span>
+                                <span>YouTube Playlists</span>
                               </span>
                             </Link>
                           )}
