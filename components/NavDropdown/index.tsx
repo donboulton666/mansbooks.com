@@ -6,7 +6,7 @@ import Link from "next/link";
 import Center from "@components/Center";
 import ColumnGridLeft from "@components/column-grid-left";
 import {
-  Session,
+  useSession,
   createClientComponentClient,
 } from "@supabase/auth-helpers-nextjs";
 import Image from "next/image";
@@ -34,27 +34,44 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Account({
+export default function NavDropdown({
   uid,
   url,
   size,
-  session,
+  onUpload,
 }: {
   uid: string;
   url: Profiles["avatar_url"];
   size: number;
-  session: Session;
+  onUpload: (url: string) => void;
 }) {
-  const supabase = createClientComponentClient<Database>({
-    isSingleton: false,
-  });
-  const [username, setUsername] = useState<Profiles["username"]>(null);
+  const supabase = useSupabaseClient<Database>();
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
-  const user = session?.user;
+  const [uploading, setUploading] = useState(false);
+  const session = useSession();
 
-  let width = "w-7";
+  useEffect(() => {
+    if (url) downloadImage(url);
+  }, [url]);
+
+  async function downloadImage(path: string) {
+    try {
+      const { data, error } = await supabase.storage
+        .from("avatars")
+        .download(path);
+      if (error) {
+        throw error;
+      }
+      const url = URL.createObjectURL(data);
+      setAvatarUrl(url);
+    } catch (error) {
+      console.log("Error downloading image: ", error);
+    }
+  }
+
+  let width = "w-24";
   if (size === "lg") {
-    width = "w-7 md:w-7";
+    width = "w-24 md:w-24";
   }
 
   return (
@@ -130,25 +147,6 @@ export default function Account({
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/youtube"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <CameraIcon
-                                  className="block h-8 w-9 pr-2 text-wine-200"
-                                  aria-hidden="true"
-                                />
-                                <span>YouTube Playlists</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
                               href="/speakers"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
@@ -193,13 +191,11 @@ export default function Account({
                     <div>
                       <Menu.Button className="flex rounded-full text-sm focus:outline-none">
                         <span className="sr-only">Open User Menu</span>
-                        {!session ? (
-                          <Image
-                            url={avatarUrl}
-                            width={28}
-                            height={28}
-                            alt={username}
-                            className="avatar image h-7 w-7 rounded-full"
+                        {!session + avatarUrl ? (
+                          <img
+                            src={avatarUrl}
+                            alt="Avatar"
+                            className="avatar image mb-4 h-24 w-24 rounded-full ring ring-wine-300 ring-offset-4"
                           />
                         ) : (
                           <div className="avatar no-image">
