@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import classNames from "classnames";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BriefcaseIcon, ChevronDownIcon } from "@heroicons/react/solid";
@@ -18,17 +15,14 @@ import {
   ClipboardListIcon,
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
-import { Database } from "@lib/database.types";
-import { cookies } from "next/headers";
 import Avatar from "@app/account/avatar";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function NavDropdown() {
+  const supabase = useSupabaseClient<Database>();
   const session = useSession();
   return (
     <>

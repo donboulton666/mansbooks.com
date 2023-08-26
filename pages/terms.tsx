@@ -172,6 +172,8 @@ export default function Terms() {
                     property, proprietary, personal, and privacy claims relating
                     to that purchase.
                   </div>
+                </Section>
+                <Section>
                   <div>
                     <h2>Changes to the Terms</h2>
                   </div>
@@ -187,6 +189,8 @@ export default function Terms() {
                     these Terms that was in effect at the time the dispute
                     arose.
                   </div>
+                </Section>
+                <Section>
                   <h2>Changes to the Site</h2>
                   <div>
                     We reserve the right to modify or discontinue, temporarily
@@ -194,6 +198,8 @@ export default function Terms() {
                     will not be liable to you or to any third party for any
                     modification, suspension, or discontinuance of the Site.
                   </div>
+                </Section>
+                <Section>
                   <h2>Limited License</h2>
                   <div>
                     Subject to these Terms, Angelina Jordan Official grants you
@@ -202,6 +208,8 @@ export default function Terms() {
                     Angelina Jordan Official products and services. No other use
                     of the Site is authorized.
                   </div>
+                </Section>
+                <Section>
                   <h2>Restrictions</h2>
                   You must comply with all applicable laws when using the Site.
                   Except as may be expressly permitted by applicable law or
@@ -222,6 +230,8 @@ export default function Terms() {
                   integrity, performance, or availability of the Site; or (h)
                   remove, alter, or obscure any proprietary notices (including
                   copyright notices) on any portion of the Site or Site Content.
+                </Section>
+                <Section>
                   <h2>Ownership</h2>
                   The Site is owned and operated by Angelina Jordan Official. We
                   or our licensors retain all right, title, and interest in and
@@ -232,12 +242,16 @@ export default function Terms() {
                   treaties. Except as expressly authorized by Angelina Jordan
                   Official you may not make use of the Site, Site Content, and
                   Marks.
+                </Section>
+                <Section>
                   <h2>Privacy Policy</h2>
                   Please read the Angelina Jordan Official Privacy Policy
                   carefully for information relating to our collection, use,
                   storage, disclosure of your personal information. The Privacy
                   Policy is incorporated by this reference into, and made a part
                   of, these Terms.
+                </Section>
+                <Section>
                   <h2>Links and Third Party Content</h2>
                   The Site may contain links to third party products, services,
                   and websites. We exercise no control over the third party
@@ -254,6 +268,8 @@ export default function Terms() {
                   govern. You should review the applicable terms and policies,
                   including privacy and data gathering practices, of any third
                   party websites to which you navigate to from the Site.
+                </Section>
+                <Section>
                   <h2>Disclaimer of Warranties</h2>
                   YOUR USE OF THE SITE AND SITE CONTENT IS AT YOUR SOLE RISK.
                   THE SITE AND SITE CONTENT ARE PROVIDED ON AN “AS IS” AND “AS
@@ -274,107 +290,131 @@ export default function Terms() {
                   HOWEVER, Angelina Jordan Official DOES NOT DISCLAIM ANY
                   WARRANTY OR OTHER RIGHT THAT Angelina Jordan Official IS
                   PROHIBITED FROM DISCLAIMING UNDER APPLICABLE LAW.
-                  <h2>Limitation of Liability</h2>
-                  Angelina Jordan Official WILL NOT BE LIABLE FOR ANY INDIRECT,
-                  INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES,
-                  INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS,
-                  GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF
-                  Angelina Jordan Official HAS BEEN ADVISED OF THE POSSIBILITY
-                  OF THESE DAMAGES), RESULTING FROM YOUR USE OF THE SITE AND
-                  SITE CONTENT. UNDER NO CIRCUMSTANCES WILL Angelina Jordan
-                  Official S TOTAL LIABILITY OF ALL KINDS ARISING OUT OF OR
-                  RELATED TO YOUR USE OF THE SITE OR SITE CONTENT (INCLUDING BUT
-                  NOT LIMITED TO WARRANTY CLAIMS), REGARDLESS OF THE FORUM AND
-                  REGARDLESS OF WHETHER ANY ACTION OR CLAIM IS BASED ON
-                  CONTRACT, TORT, OR OTHERWISE, EXCEED $50. BECAUSE SOME STATES
-                  DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR
-                  CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY
-                  NOT APPLY TO YOU. EACH PROVISION OF THESE TERMS THAT PROVIDES
-                  FOR A LIMITATION OF LIABILITY, DISCLAIMER OF WARRANTIES, OR
-                  EXCLUSION OF DAMAGES IS INTENDED TO AND DOES ALLOCATE THE
-                  RISKS BETWEEN THE PARTIES UNDER THESE TERMS. THIS ALLOCATION
-                  IS AN ESSENTIAL ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN
-                  THE PARTIES. EACH OF THESE PROVISIONS IS SEVERABLE AND
-                  INDEPENDENT OF ALL OTHER PROVISIONS OF THESE TERMS. THE
-                  LIMITATIONS IN THIS SECTION WILL APPLY EVEN IF ANY LIMITED
-                  REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
-                  <h2>Indemnity</h2>
-                  You will indemnify and hold Angelina Jordan Official and its
-                  partners, service providers, affiliates, officers, agents, and
-                  employees, harmless from any costs, damages, expenses, and
-                  liability caused by your use of the Site or Site Content, your
-                  violation of these Terms, or your violation of any rights of a
-                  third party through use of the Site or Site Content. We and
-                  our licensors reserve the right, at our own expense, to assume
-                  the exclusive defense and control of any matter otherwise
-                  subject to indemnification by you (without limiting your
-                  indemnification obligations with respect to that matter), and
-                  in that case, you agree to cooperate with our defense of those
-                  claims.
-                  <h2>Release</h2>
-                  If you have a dispute with the Site, Site Content, or any
-                  products purchased through the Site, you hereby release us and
-                  our partners and service providers (and each party’s
-                  respective officers, directors, agents, subsidiaries, joint
-                  ventures and employees) from claims, demands and damages
-                  (actual and consequential) of every kind and nature, known and
-                  unknown, arising out of or in any way connected with such
-                  disputes. If you are a California resident, you waive
-                  California Civil Code §1542, which states: “A general release
-                  does not extend to claims that the creditor or releasing party
-                  does not know or suspect to exist in his or her favor at the
-                  time of executing the release and that, if known by him or
-                  her, would have materially affected his or her settlement with
-                  the debtor or released party.”
-                  <h2>General Terms</h2>
-                  These Terms, together with the Privacy Policy and any other
-                  agreements expressly incorporated by reference into these
-                  Terms, are the entire and exclusive understanding and
-                  agreement between you and Angelina Jordan Official regarding
-                  your use of the Site. You may not assign or transfer these
-                  Terms or your rights under these Terms, in whole or in part,
-                  by operation of law or otherwise, without our prior written
-                  consent. We may assign these Terms at any time without notice
-                  or consent. The failure to require performance of any
-                  provision will not affect our right to require performance at
-                  any other time after that, nor will a waiver by us of any
-                  breach or default of these Terms, or any provision of these
-                  Terms, be a waiver of any subsequent breach or default or a
-                  waiver of the provision itself. Use of section headers in
-                  these Terms is for convenience only and will not have any
-                  impact on the interpretation of any provision. Throughout
-                  these Terms the use of the word “including” means “including
-                  but not limited to”. If any part of these Terms is held to be
-                  invalid or unenforceable, the unenforceable part will be given
-                  effect to the greatest extent possible, and the remaining
-                  parts will remain in full force and effect.
-                  <h2>Legal Notices</h2>
-                  These Terms are governed by the laws of the state of without
-                  regard to conflict of law principles. The exclusive
-                  jurisdiction and venue for any claims arising out of or
-                  related to these Terms or your use of the Site will lie in the
-                  state and federal courts located in undefined, undefined, and
-                  you irrevocably agree to submit to the jurisdiction of such
-                  courts. The failure of Angelina Jordan Official to enforce any
-                  right or provision in these Terms will not constitute a waiver
-                  of such right or provision unless acknowledged and agreed to
-                  by Angelina Jordan Official in writing. In the event that a
-                  court of competent jurisdiction finds any provision of these
-                  Terms to be illegal, invalid or unenforceable, the remaining
-                  provisions will remain in full force and effect.
                 </Section>
-                <h2>Using hCaptcha</h2>
-                <div>
-                  We use the hCaptcha anti-bot service (hereinafter "hCaptcha")
-                  on our website.
-                </div>
-                <div>
-                  This service is provided by Intuition Machines, Inc., a
-                  Delaware US Corporation ("IMI"). hCaptcha is used to check
-                  whether the data entered on our website (such as on a login
-                  page or contact form) has been entered by a human or by an
-                  automated program.
-                </div>
+                <Section>
+                  <h2>Limitation of Liability</h2>
+                  <div>
+                    Angelina Jordan Official WILL NOT BE LIABLE FOR ANY
+                    INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
+                    DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF
+                    PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES
+                    (EVEN IF Angelina Jordan Official HAS BEEN ADVISED OF THE
+                    POSSIBILITY OF THESE DAMAGES), RESULTING FROM YOUR USE OF
+                    THE SITE AND SITE CONTENT. UNDER NO CIRCUMSTANCES WILL
+                    Angelina Jordan Official S TOTAL LIABILITY OF ALL KINDS
+                    ARISING OUT OF OR RELATED TO YOUR USE OF THE SITE OR SITE
+                    CONTENT (INCLUDING BUT NOT LIMITED TO WARRANTY CLAIMS),
+                    REGARDLESS OF THE FORUM AND REGARDLESS OF WHETHER ANY ACTION
+                    OR CLAIM IS BASED ON CONTRACT, TORT, OR OTHERWISE, EXCEED
+                    $50. BECAUSE SOME STATES DO NOT ALLOW THE EXCLUSION OR
+                    LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL
+                    DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. EACH
+                    PROVISION OF THESE TERMS THAT PROVIDES FOR A LIMITATION OF
+                    LIABILITY, DISCLAIMER OF WARRANTIES, OR EXCLUSION OF DAMAGES
+                    IS INTENDED TO AND DOES ALLOCATE THE RISKS BETWEEN THE
+                    PARTIES UNDER THESE TERMS. THIS ALLOCATION IS AN ESSENTIAL
+                    ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN THE PARTIES.
+                    EACH OF THESE PROVISIONS IS SEVERABLE AND INDEPENDENT OF ALL
+                    OTHER PROVISIONS OF THESE TERMS. THE LIMITATIONS IN THIS
+                    SECTION WILL APPLY EVEN IF ANY LIMITED REMEDY FAILS OF ITS
+                    ESSENTIAL PURPOSE.
+                  </div>
+                </Section>
+                <Section>
+                  <h2>Indemnity</h2>
+                  <div>
+                    You will indemnify and hold Angelina Jordan Official and its
+                    partners, service providers, affiliates, officers, agents,
+                    and employees, harmless from any costs, damages, expenses,
+                    and liability caused by your use of the Site or Site
+                    Content, your violation of these Terms, or your violation of
+                    any rights of a third party through use of the Site or Site
+                    Content. We and our licensors reserve the right, at our own
+                    expense, to assume the exclusive defense and control of any
+                    matter otherwise subject to indemnification by you (without
+                    limiting your indemnification obligations with respect to
+                    that matter), and in that case, you agree to cooperate with
+                    our defense of those claims.
+                  </div>
+                </Section>
+                <Section>
+                  <h2>Release</h2>
+                  <div>
+                    If you have a dispute with the Site, Site Content, or any
+                    products purchased through the Site, you hereby release us
+                    and our partners and service providers (and each party’s
+                    respective officers, directors, agents, subsidiaries, joint
+                    ventures and employees) from claims, demands and damages
+                    (actual and consequential) of every kind and nature, known
+                    and unknown, arising out of or in any way connected with
+                    such disputes. If you are a California resident, you waive
+                    California Civil Code §1542, which states: “A general
+                    release does not extend to claims that the creditor or
+                    releasing party does not know or suspect to exist in his or
+                    her favor at the time of executing the release and that, if
+                    known by him or her, would have materially affected his or
+                    her settlement with the debtor or released party.”
+                  </div>
+                </Section>
+                <Section>
+                  <h2>General Terms</h2>
+                  <div>
+                    These Terms, together with the Privacy Policy and any other
+                    agreements expressly incorporated by reference into these
+                    Terms, are the entire and exclusive understanding and
+                    agreement between you and Angelina Jordan Official regarding
+                    your use of the Site. You may not assign or transfer these
+                    Terms or your rights under these Terms, in whole or in part,
+                    by operation of law or otherwise, without our prior written
+                    consent. We may assign these Terms at any time without
+                    notice or consent. The failure to require performance of any
+                    provision will not affect our right to require performance
+                    at any other time after that, nor will a waiver by us of any
+                    breach or default of these Terms, or any provision of these
+                    Terms, be a waiver of any subsequent breach or default or a
+                    waiver of the provision itself. Use of section headers in
+                    these Terms is for convenience only and will not have any
+                    impact on the interpretation of any provision. Throughout
+                    these Terms the use of the word “including” means “including
+                    but not limited to”. If any part of these Terms is held to
+                    be invalid or unenforceable, the unenforceable part will be
+                    given effect to the greatest extent possible, and the
+                    remaining parts will remain in full force and effect.
+                  </div>
+                </Section>
+                <Section>
+                  <h2>Legal Notices</h2>
+                  <div>
+                    These Terms are governed by the laws of the state of without
+                    regard to conflict of law principles. The exclusive
+                    jurisdiction and venue for any claims arising out of or
+                    related to these Terms or your use of the Site will lie in
+                    the state and federal courts located in undefined,
+                    undefined, and you irrevocably agree to submit to the
+                    jurisdiction of such courts. The failure of Angelina Jordan
+                    Official to enforce any right or provision in these Terms
+                    will not constitute a waiver of such right or provision
+                    unless acknowledged and agreed to by Angelina Jordan
+                    Official in writing. In the event that a court of competent
+                    jurisdiction finds any provision of these Terms to be
+                    illegal, invalid or unenforceable, the remaining provisions
+                    will remain in full force and effect.
+                  </div>
+                </Section>
+                <Section>
+                  <h2>Using hCaptcha</h2>
+                  <div>
+                    We use the hCaptcha anti-bot service (hereinafter
+                    "hCaptcha") on our website.
+                  </div>
+                  <div>
+                    This service is provided by Intuition Machines, Inc., a
+                    Delaware US Corporation ("IMI"). hCaptcha is used to check
+                    whether the data entered on our website (such as on a login
+                    page or contact form) has been entered by a human or by an
+                    automated program.
+                  </div>
+                </Section>
                 <Section>
                   <div>
                     To do this, hCaptcha analyzes the behavior of the website or
@@ -402,26 +442,28 @@ export default function Terms() {
                     For more information about hCaptcha and IMI's privacy policy
                     and terms of use, please visit the following links:
                   </div>
-                  <a
-                    href="https://www.hcaptcha.com/privacy"
-                    className="hover:text-pink-500"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    aria-describedby="AJ Instagram"
-                    area-label="Privacy"
-                  >
-                    🔗 https://www.hcaptcha.com/privacy.
-                  </a>
-                  <a
-                    href="https://www.hcaptcha.com/terms"
-                    className="hover:text-pink-500"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    aria-describedby="hCaptcha Terms"
-                    area-label="hCaptcha Terms"
-                  >
-                    🔗 https://www.hcaptcha.com/terms.
-                  </a>
+                  <div>
+                    <a
+                      href="https://www.hcaptcha.com/privacy"
+                      className="hover:text-pink-500"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="AJ Instagram"
+                      area-label="Privacy"
+                    >
+                      🔗 https://www.hcaptcha.com/privacy.
+                    </a>
+                    <a
+                      href="https://www.hcaptcha.com/terms"
+                      className="hover:text-pink-500"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-describedby="hCaptcha Terms"
+                      area-label="hCaptcha Terms"
+                    >
+                      🔗 https://www.hcaptcha.com/terms.
+                    </a>
+                  </div>
                 </Section>
               </div>
             </div>

@@ -32,8 +32,8 @@ const UserAccount = () => {
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Privacy",
-              url: "https://mansbooks.com/account",
+              name: "User Account",
+              url: "https://mansbooks.com/user-account",
               image: {
                 "@type": "ImageObject",
                 url: angie,
@@ -59,7 +59,7 @@ const UserAccount = () => {
                 email: "donaldboulton@gmail.com",
                 telephone: "+405-863-2165",
               },
-              description: "Mansbooks Privacy Page",
+              description: "User Accunt Page",
               email: "donaldboulton@gmail.com",
               founder: {
                 "@id": "https://donboulton.com",
@@ -111,7 +111,7 @@ const UserAccount = () => {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/",
+                    "@id": "https://mansbooks.com",
                     name: "MansBooks Home",
                   },
                   position: "1",
@@ -119,7 +119,7 @@ const UserAccount = () => {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/account",
+                    "@id": "https://mansbooks.com/user-account",
                     name: "User Account",
                   },
                   position: "2",
@@ -169,12 +169,7 @@ const UserAccount = () => {
               </div>
               <div className="flex flex-col gap-5">
                 {!session ? (
-                  <Auth
-                    supabaseClient={supabase}
-                    appearance={{ theme: ThemeSupa }}
-                    providers={["github", "spotify"]}
-                    theme="dark"
-                  />
+                  <AuthForm />
                 ) : (
                   <>
                     <AccountForm session={session} />

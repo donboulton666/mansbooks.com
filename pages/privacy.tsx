@@ -688,11 +688,21 @@ export default function Privacy() {
         </Section>
         <Section>
           <h2>Attribution</h2>
-          Everything Under Father God
+          <div>Everything Under Father God!</div>
         </Section>
-        <h2>Purchases</h2>
-        <h2>Purchase Policy</h2>
-        <h3>Return Policy working</h3>
+        <Section>
+          <h2>Purchases</h2>
+          <div>
+            <a
+              href="https://mansbooks.com/terms"
+              rel="noopener noreferrer"
+              aria-describedby="AJ Official"
+              area-label="AJ Official"
+            >
+              Purchases are covered on our Terms Page.
+            </a>
+          </div>
+        </Section>
         <div className="mt-4 flex">
           <div className="flex flex-row text-xs text-slate-300">
             {showModal ? (
