@@ -6,8 +6,9 @@ import i18n from "@lib/i18n";
 
 type Todos = Database["public"]["Tables"]["todos"]["Row"];
 
+const supabase = useSupabaseClient<Database>();
+
 export default function TodoList({ session }: { session: Session }) {
-  const supabase = useSupabaseClient<Database>();
   const [todos, setTodos] = useState<Todos[]>([]);
   const [newTaskText, setNewTaskText] = useState("");
   const [errorText, setErrorText] = useState("");
@@ -95,7 +96,6 @@ export default function TodoList({ session }: { session: Session }) {
 }
 
 const Todo = ({ todo, onDelete }: { todo: Todos; onDelete: () => void }) => {
-  const supabase = useSupabaseClient<Database>();
   const [isCompleted, setIsCompleted] = useState(todo.is_complete);
 
   const toggle = async () => {

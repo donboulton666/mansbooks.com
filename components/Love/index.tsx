@@ -4,8 +4,9 @@ import { Database } from "@lib/schema";
 
 type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
+const supabase = useSupabaseClient<Database>();
+
 export default function LovesList({ session }: { session: Session }) {
-  const supabase = useSupabaseClient<Database>();
   const [loves, setLoves] = useState<Loves[]>([]);
   const [errorText, setErrorText] = useState("");
   const user = session.user;
@@ -101,7 +102,6 @@ export default function LovesList({ session }: { session: Session }) {
 }
 
 const Love = ({ love, onDelete }: { love: Loves; onDelete: () => void }) => {
-  const supabase = useSupabaseClient<Database>();
   const [isCompleted, setIsCompleted] = useState(love.is_complete);
 
   const toggle = async () => {

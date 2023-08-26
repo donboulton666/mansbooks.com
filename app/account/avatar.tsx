@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Database } from "@lib/schema";
+import Image from "next/image";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -77,21 +78,35 @@ export default function Avatar({
     <div className={`${width} relative`}>
       <div className="overflow-hidden rounded-full">
         {avatarUrl ? (
-          <img
+          <Image
             src={avatarUrl}
             alt="Avatar"
-            className="avatar image mb-4 h-24 w-24 rounded-full ring ring-wine-300 ring-offset-4"
+            width={32}
+            height={32}
+            className="avatar image mb-4 h-8 w-8 rounded-full ring ring-wine-300 ring-offset-4"
           />
         ) : (
-          <div
-            className="avatar no-image"
-            style={{ height: size, width: size }}
-          />
+          <div className="avatar no-image">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 32 32"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="h-8 w-8 text-wine-300 hover:text-slate-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
         )}
       </div>
       <label
         htmlFor="single"
-        className="absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-2 shadow-md shadow-slate-800"
+        className="hidden opacity-0 absolute bottom-0 right-0 cursor-pointer rounded-full bg-slate-900 p-1 shadow-md shadow-slate-800"
       >
         <input
           style={{
@@ -103,6 +118,7 @@ export default function Avatar({
           accept="image/*"
           onChange={uploadAvatar}
           disabled={uploading}
+          className="hidden opacity-0"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +126,7 @@ export default function Avatar({
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-6 w-6"
+          className="h-4 w-4"
         >
           <path
             strokeLinecap="round"

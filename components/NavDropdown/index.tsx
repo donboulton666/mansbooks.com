@@ -1,15 +1,9 @@
 "use client";
 
 import React from "react";
+import classNames from "classnames";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Center from "@components/Center";
-import ColumnGridLeft from "@components/column-grid-left";
-import {
-  useSession,
-  createClientComponentClient,
-} from "@supabase/auth-helpers-nextjs";
-import Image from "next/image";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BriefcaseIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import {
@@ -34,46 +28,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavDropdown({
-  uid,
-  url,
-  size,
-  onUpload,
-}: {
-  uid: string;
-  url: Profiles["avatar_url"];
-  size: number;
-  onUpload: (url: string) => void;
-}) {
-  const supabase = useSupabaseClient<Database>();
-  const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
-  const [uploading, setUploading] = useState(false);
+export default function NavDropdown() {
   const session = useSession();
-
-  useEffect(() => {
-    if (url) downloadImage(url);
-  }, [url]);
-
-  async function downloadImage(path: string) {
-    try {
-      const { data, error } = await supabase.storage
-        .from("avatars")
-        .download(path);
-      if (error) {
-        throw error;
-      }
-      const url = URL.createObjectURL(data);
-      setAvatarUrl(url);
-    } catch (error) {
-      console.log("Error downloading image: ", error);
-    }
-  }
-
-  let width = "w-24";
-  if (size === "lg") {
-    width = "w-24 md:w-24";
-  }
-
   return (
     <>
       <Disclosure as="nav" className="sticky top-0 z-40">
@@ -107,10 +63,10 @@ export default function NavDropdown({
                           <ChevronDownIcon
                             className={`${
                               open
-                                ? "rotate-180 text-slate-300"
+                                ? "rotate-180 text-wine-300"
                                 : "text-opacity-75"
                             }
-                            -mr-1 mt-1 h-5 text-slate-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-wine-400 group-hover:text-opacity-75`}
+                              -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
                             aria-hidden="true"
                           />
                         </Control>
@@ -191,30 +147,7 @@ export default function NavDropdown({
                     <div>
                       <Menu.Button className="flex rounded-full text-sm focus:outline-none">
                         <span className="sr-only">Open User Menu</span>
-                        {!session + avatarUrl ? (
-                          <img
-                            src={avatarUrl}
-                            alt="Avatar"
-                            className="avatar image mb-4 h-24 w-24 rounded-full ring ring-wine-300 ring-offset-4"
-                          />
-                        ) : (
-                          <div className="avatar no-image">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              className="h-7 w-7 text-wine-300 hover:text-slate-300"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                              />
-                            </svg>
-                          </div>
-                        )}
+                        <Avatar session={session} />
                         <ChevronDownIcon
                           className={`${
                             open
