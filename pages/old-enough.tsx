@@ -1,27 +1,20 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { Auth } from "@supabase/auth-ui-react";
+import { useRef } from 'react'
 import Head from "next/head";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Link from "next/link";
-import AuthForm from "@app/auth-form";
-import NavDropdown from "@components/NavDropdown";
-import AccountForm from "@app/account/account-form";
+import cn from "classnames";
+import ReactPlayer from 'react-player/youtube'
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
-import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
-import TodoList from "@components/TodoList";
-import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
-import planets from "../public/backdrops/planets.jpg";
-import { Database } from "@lib/database.types";
+import IframeWrapper from '@components/IframeWrapper'
+import IframeWrapperLarge from '@components/IframeWrapperLarge'
 
-const UserAccount = () => {
-  const supabase = useSupabaseClient<Database>();
-  const session = useSession();
+const OldEnough = () => {
+  const ref = useRef(null)
+  const refPlayer = useRef(null)
   return (
     <>
       <Stars />
@@ -32,8 +25,8 @@ const UserAccount = () => {
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "User Account",
-              url: "https://mansbooks.com/user-account",
+              name: "Privacy",
+              url: "https://mansbooks.com/account",
               image: {
                 "@type": "ImageObject",
                 url: angie,
@@ -59,7 +52,7 @@ const UserAccount = () => {
                 email: "donaldboulton@gmail.com",
                 telephone: "+405-863-2165",
               },
-              description: "User Accunt Page",
+              description: "Mansbooks Privacy Page",
               email: "donaldboulton@gmail.com",
               founder: {
                 "@id": "https://donboulton.com",
@@ -111,7 +104,7 @@ const UserAccount = () => {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com",
+                    "@id": "https://mansbooks.com/",
                     name: "MansBooks Home",
                   },
                   position: "1",
@@ -119,7 +112,7 @@ const UserAccount = () => {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/user-account",
+                    "@id": "https://mansbooks.com/account",
                     name: "User Account",
                   },
                   position: "2",
@@ -154,7 +147,31 @@ const UserAccount = () => {
               </div>
             </div>
             <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
-              <NavDropdown />
+              <a target="_blank" rel="noreferrer" href="/about">
+                  <button
+                    type="button"
+                    class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="sbui-icon "
+                    >
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>{' '}
+                    <span class="truncate">About PubliusLogic</span>{' '}
+                  </button>
+                </a>
             </div>
           </nav>
         </div>
@@ -163,21 +180,20 @@ const UserAccount = () => {
             <div className="flex w-[330px] flex-1 flex-col justify-center sm:w-[384px]">
               <div className="mb-10">
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">
-                  Welcome back
+                  Welcome Angelina's Playlists
                 </LeftText>
-                <h2 className="text-scale-1100 text-sm">My Lovely Fan's</h2>
+                <h2 className="text-scale-1100 text-sm">Old Enough</h2>
               </div>
               <div className="flex flex-col gap-5">
-                {!session ? (
-                  <AuthForm />
-                ) : (
-                  <>
-                    <AccountForm session={session} />
-                    <div className="flex flex-col items-center justify-center p-4">
-                      <TodoList session={session} />
-                    </div>
-                  </>
-                )}
+                <IframeWrapper>
+                  <ReactPlayer
+                    ref={ref} 
+                    url='https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW'
+                    width="100%"
+                    height="100%"
+                    controls = {true}
+                  />
+                </IframeWrapper>
               </div>
             </div>
             <div className="sm:text-center">
@@ -201,17 +217,16 @@ const UserAccount = () => {
             </div>
           </main>
           <aside className="hidden form-beams flex-1 flex-shrink basis-1/4 flex-col items-center justify-center xl:flex">
-            <div className="relative flex flex-col gap-6">
-              <Image
-                layout="fixed"
-                className="self-center rounded-lg opacity-60"
-                src={planets}
-                width={640}
-                height={427}
-                quality={95}
-                alt="Planets!"
-                loading="lazy"
-              />
+            <div className="relative flex flex-col gap-6 opacity-70">
+            <IframeWrapperLarge>
+                <ReactPlayer
+                  ref={refPlayer}
+                  url='https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf'
+                  height="100%"
+                  width="100%"
+                  controls = {true}
+                />
+              </IframeWrapperLarge> 
             </div>
           </aside>
         </div>
@@ -220,4 +235,4 @@ const UserAccount = () => {
   );
 };
 
-export default UserAccount;
+export default OldEnough;

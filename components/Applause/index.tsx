@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import useSound from "use-sound";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import supabase from "@app/supabase-provider"
 import { Database } from "@lib/schema";
 import fetcher from "@lib/fetcher";
 import { Applause } from "@lib/types";
@@ -63,7 +63,6 @@ interface Props {
 }
 
 const ApplauseButton = ({ slug, props }: Props) => {
-  const supabase = useSupabaseClient<Database>();
   const [count, setCount] = useState(0);
   const [isApplause, setIsApplause] = useState<Applause[]>([]);
   const { data } = useSWR<Applause>(`/api/applause/${slug}`, fetcher);

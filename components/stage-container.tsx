@@ -2,13 +2,13 @@ import useSWR from "swr";
 import cn from "classnames";
 import { Stage } from "@lib/types";
 import useLoginStatus from "@lib/hooks/use-login-status";
-import styles from "./stage-container.module.css";
-import styleUtils from "./utils.module.css";
-import ConfEntry from "./conf-entry";
-import Room from "./hms/Room";
-import Sidebar from "./hms/sidebar";
+import styles from "@components/stage-container.module.css";
+import styleUtils from "@components/utils.module.css";
+import ConfEntry from "@components/conf-entry";
+import Room from "@components/hms/Room";
+import Sidebar from "@components/hms/sidebar";
 import { useHMSStore, selectIsConnectedToRoom } from "@100mslive/react-sdk";
-import ScheduleSidebar from "./schedule-sidebar";
+import ScheduleSidebar from "@components/schedule-sidebar";
 
 type Props = {
   stage: Stage;

@@ -39,38 +39,40 @@ export default function Layout({
       <ScrollIndicator />
       <div className={styles.background}>
         {!hideNav && (
-          <header className={cn(styles.header)}>
-            <div className={styles["header-logos"]}>
-              <MobileMenu key={router.asPath} />
-              <Link href="/" className={styles.logo}>
-                <span className="ml-3 inline-flex">
-                  <Image
-                    src={angieLogo}
-                    width={40}
-                    height={40}
-                    className="h-12 w-12 rounded-full"
-                    alt="Angie Logo"
-                  />
-                </span>
-              </Link>
-            </div>
-            <div className={styles.tabs}>
-              {NAVIGATION.map(({ name, route }) => (
-                <Link
-                  key={name}
-                  href={route}
-                  className={cn(styles.tab, {
-                    [styles["tab-active"]]: activeRoute.startsWith(route),
-                  })}
-                >
-                  {name}
+          <div className="bg-gradient-to-r from-[#121212] via-transparent to-[#121212]">
+            <header className={cn(styles.header)}>
+              <div className={styles["header-logos"]}>
+                <MobileMenu key={router.asPath} />
+                <Link href="/" className={styles.logo}>
+                  <span className="ml-3 inline-flex">
+                    <Image
+                      src={angieLogo}
+                      width={40}
+                      height={40}
+                      className="h-12 w-12 rounded-full"
+                      alt="Angie Logo"
+                    />
+                  </span>
                 </Link>
-              ))}
-            </div>
-            <div className={cn(styles["header-right"])}>
-              <NavDropdown />
-            </div>
-          </header>
+              </div>
+              <div className={styles.tabs}>
+                {NAVIGATION.map(({ name, route }) => (
+                  <Link
+                    key={name}
+                    href={route}
+                    className={cn(styles.tab, {
+                      [styles["tab-active"]]: activeRoute.startsWith(route),
+                    })}
+                  >
+                    {name}
+                  </Link>
+                ))}
+              </div>
+              <div className={cn(styles["header-right"])}>
+                <NavDropdown />
+              </div>
+            </header>
+          </div>
         )}
         <ViewSource />
         <div className={styles.page}>

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import React from "react";
+import { Link } from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import {
@@ -149,7 +149,7 @@ function HeaderPopover() {
                       {posts.map((item) => (
                         <Link
                           key={item.name}
-                          to={item.href}
+                          href={item.href}
                           className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-purple-700 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-50"
                         >
                           <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-purple-800 p-2 text-slate-200 hover:bg-purple-900 hover:text-rose-600 sm:h-12 sm:w-12">

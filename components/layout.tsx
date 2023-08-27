@@ -38,49 +38,51 @@ export default function Layout({
       <ScrollIndicator />
       <div className={styles.background}>
         {!hideNav && (
-          <header className={cn(styles.header)}>
-            <div className={styles["header-logos"]}>
-              <MobileMenu key={router.asPath} />
-              <Link href="/" className={styles.logo}>
-                <span className="mx-3 inline-flex">
-                  <Image
-                    src={angieLogo}
-                    width={40}
-                    height={40}
-                    className="-pr-6 h-10 w-10 rounded-full"
-                    aria-describedby="Angie Logo"
-                    alt="Angie Logo"
-                  />
-                </span>
-              </Link>
-              <Link
-                href="https://100ms.live/"
-                target="_blank"
-                aria-describedby="100ms.live WebSite"
-                className={styles.logo}
-              >
-                <Logo />
-              </Link>
-            </div>
-            <div className={styles.tabs}>
-              {NAVIGATION.map(({ name, route }) => (
-                <Link
-                  key={name}
-                  href={route}
-                  className={cn(styles.tab, {
-                    [styles["tab-active"]]: activeRoute.startsWith(route),
-                  })}
-                >
-                  {name}
+          <div className="bg-gradient-to-r from-[#121212] via-transparent to-[#121212]">
+            <header className={cn(styles.header)}>
+              <div className={styles["header-logos"]}>
+                <MobileMenu key={router.asPath} />
+                <Link href="/" className={styles.logo}>
+                  <span className="mx-3 inline-flex">
+                    <Image
+                      src={angieLogo}
+                      width={40}
+                      height={40}
+                      className="-pr-6 h-10 w-10 rounded-full"
+                      aria-describedby="Angie Logo"
+                      alt="Angie Logo"
+                    />
+                  </span>
                 </Link>
-              ))}
-            </div>
-            <div>
-              <div className={cn(styles["header-right"])}>
-                <NavDropdown />
+                <Link
+                  href="https://100ms.live/"
+                  target="_blank"
+                  aria-describedby="100ms.live WebSite"
+                  className={styles.logo}
+                >
+                  <Logo />
+                </Link>
               </div>
-            </div>
-          </header>
+              <div className={styles.tabs}>
+                {NAVIGATION.map(({ name, route }) => (
+                  <Link
+                    key={name}
+                    href={route}
+                    className={cn(styles.tab, {
+                      [styles["tab-active"]]: activeRoute.startsWith(route),
+                    })}
+                  >
+                    {name}
+                  </Link>
+                ))}
+              </div>
+              <div>
+                <div className={cn(styles["header-right"])}>
+                  <NavDropdown />
+                </div>
+              </div>
+            </header>
+          </div>
         )}
         <ViewSource />
         <div className={styles.page}>

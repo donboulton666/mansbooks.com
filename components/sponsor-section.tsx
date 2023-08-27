@@ -10,8 +10,8 @@ import Giscus from "@giscus/react";
 import ViewCounter from "@components/ViewCounter";
 import LovesCounter from "@components/LovesCounter";
 import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
-import styles from "./sponsor-section.module.css";
-import styleUtils from "./utils.module.css";
+import styles from "@components/sponsor-section.module.css";
+import styleUtils from "@components/utils.module.css";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import {
   EmailShareButton,
