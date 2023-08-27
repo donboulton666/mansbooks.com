@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BriefcaseIcon, ChevronDownIcon } from "@heroicons/react/solid";
@@ -20,6 +19,10 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Database } from "@lib/schema";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function NavDropdown() {
   const supabase = useSupabaseClient<Database>();
@@ -137,20 +140,11 @@ export default function NavDropdown() {
                     </Transition>
                   </Menu>
                   {/* User dropdown */}
-                  <Menu as="div" className="relative ml-1">
+                  <Menu as="div" className="relative">
                     <div>
                       <Menu.Button className="flex rounded-full text-sm focus:outline-none">
                         <span className="sr-only">Open User Menu</span>
                         <Avatar session={session} />
-                        <ChevronDownIcon
-                          className={`${
-                            open
-                              ? "rotate-180 text-wine-300"
-                              : "text-opacity-75"
-                          }
-                            -mr-1 mt-1 h-5 text-wine-300 transition duration-150 ease-in-out first-letter:w-5 hover:text-slate-300 group-hover:text-opacity-75`}
-                          aria-hidden="true"
-                        />
                       </Menu.Button>
                     </div>
                     <Transition

@@ -1,32 +1,32 @@
 import React from "react";
-import { useRef } from 'react'
+import { useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import cn from "classnames";
-import ReactPlayer from 'react-player/youtube'
+import ReactPlayer from "react-player/youtube";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
 import Stars from "@components/Stars";
 import angie from "../public/apple-touch-icon.png";
-import IframeWrapper from '@components/IframeWrapper'
-import IframeWrapperLarge from '@components/IframeWrapperLarge'
+import IframeWrapper from "@components/IframeWrapper";
+import IframeWrapperLarge from "@components/IframeWrapperLarge";
 
 const OldEnough = () => {
-  const ref = useRef(null)
-  const refPlayer = useRef(null)
+  const ref = useRef(null);
+  const refPlayer = useRef(null);
   return (
     <>
       <Stars />
       <Head>
-        <title>Account</title>
+        <title>Old Enough</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Privacy",
-              url: "https://mansbooks.com/account",
+              name: "Old Enough",
+              url: "https://mansbooks.com/old-enough",
               image: {
                 "@type": "ImageObject",
                 url: angie,
@@ -112,8 +112,8 @@ const OldEnough = () => {
                 {
                   "@type": "ListItem",
                   item: {
-                    "@id": "https://mansbooks.com/account",
-                    name: "User Account",
+                    "@id": "https://mansbooks.com/old-enough",
+                    name: "Old Enough",
                   },
                   position: "2",
                 },
@@ -126,11 +126,11 @@ const OldEnough = () => {
         </>
       </Head>
       <div className="login-beams bg-scale-100 flex flex-1 flex-col">
-        <div className="absolute top-0 mx-auto w-full px-8 pt-6 sm:px-6 lg:px-8">
-          <nav className="relative flex items-center justify-between sm:h-10">
+        <div className="absolute top-0 mx-auto w-full mb-10 px-8 pt-6 sm:px-6 lg:px-8">
+          <nav className="relative flex items-center justify-between sm:h-10 mb-10">
             <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
               <div className="flex w-full items-center justify-between md:w-auto">
-                <a href="https://mansbooks.com">
+                <a href="/">
                   <span className="relative inline-block overflow-hidden">
                     <Image
                       layout="fixed"
@@ -148,30 +148,30 @@ const OldEnough = () => {
             </div>
             <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
               <a target="_blank" rel="noreferrer" href="/about">
-                  <button
-                    type="button"
-                    class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                <button
+                  type="button"
+                  class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="sbui-icon "
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="sbui-icon "
-                    >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>{' '}
-                    <span class="truncate">About PubliusLogic</span>{' '}
-                  </button>
-                </a>
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>{" "}
+                  <span class="truncate">About Mansbooks</span>{" "}
+                </button>
+              </a>
             </div>
           </nav>
         </div>
@@ -187,11 +187,11 @@ const OldEnough = () => {
               <div className="flex flex-col gap-5">
                 <IframeWrapper>
                   <ReactPlayer
-                    ref={ref} 
-                    url='https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW'
+                    ref={ref}
+                    url="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"
                     width="100%"
                     height="100%"
-                    controls = {true}
+                    controls={true}
                   />
                 </IframeWrapper>
               </div>
@@ -218,15 +218,15 @@ const OldEnough = () => {
           </main>
           <aside className="hidden form-beams flex-1 flex-shrink basis-1/4 flex-col items-center justify-center xl:flex">
             <div className="relative flex flex-col gap-6 opacity-70">
-            <IframeWrapperLarge>
+              <IframeWrapperLarge>
                 <ReactPlayer
                   ref={refPlayer}
-                  url='https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf'
+                  url="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
                   height="100%"
                   width="100%"
-                  controls = {true}
+                  controls={true}
                 />
-              </IframeWrapperLarge> 
+              </IframeWrapperLarge>
             </div>
           </aside>
         </div>

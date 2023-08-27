@@ -37,7 +37,7 @@ export default function AuthForm() {
         supabaseClient={supabase}
         view="magic_link"
         appearance={{
-          theme: ThemeSupa
+          theme: ThemeSupa,
         }}
         theme="dark"
         providers={["google", "spotify"]}

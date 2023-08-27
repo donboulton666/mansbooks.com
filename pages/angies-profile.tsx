@@ -209,7 +209,7 @@ export default function LocalProfile() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="mx-auto grid max-w-4xl lg:max-w-5xl">
             <Section>
               <div>
                 Whitney - and later Billie Holiday, Dinah Washington - became
@@ -578,203 +578,230 @@ export default function LocalProfile() {
                 in the notes.{" "}
               </div>
             </Section>
-            <div>
-              BIBISI also posted this{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=ZkQc5UycXeA"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  ANGELINA JORDAN BEST 23 VOCAL COACHES ANALYSIS REACTION
-                  MASHUP' COMPILATION I Put A Spell on You
-                </span>
-              </a>
-              .
-            </div>
-            <div>
-              I also enjoyed One Stop Reactions{" "}
-              <a
-                href="https://www.youtube.com/watch?v=wGXVX3LZIzM't=15s"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">
-                  Latest 2022 Special Reactions for Angelina Jordan '; I Put A
-                  Spell On You | compilation reaction!
-                </span>
-              </a>
-            </div>
-            <div>
-              Another song that’s up there is Feeling Good. She was 10 years old
-              when she performed it at{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/7HaMvkflBAo"
-                target="_blank"
-              >
-                <span className="text-blue-500">Allsang På Grensen – TV2</span>
-              </a>
-              , and later{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/p8kAL-sGJx8"
-                target="_blank"
-              >
-                LIVE on{" "}
-                <span className="text-blue-500">The Stream Gir Tilbake</span>
-              </a>
-              .
-            </div>
-            <div>America's Got Talent Golden Buzzer</div>
-            <div>
-              Six years later, Angelina appeared on America's Got Talent: The
-              Champions 2020 when she was 13 years old. She told Heidi Klum that
-              she had waited 10 years to sing for Simon Cowell. And it was on
-              the biggest stage in the world! This was her moment. She
-              auditioned with her own spellbinding version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=qF0JV28vgLw"
-                target="_blank"
-              >
-                <span className="text-blue-500">Queen's Bohemian Rhapsody</span>
-              </a>
-              , which won her a<span className="text-blue-500"> </span>
-              Golden Buzzer from Heidi, who could hardly contain herself. After
-              the show had aired, Angelina{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://twitter.com/angelinajordanA/status/1214379711070998528"
-                target="_blank"
-              >
-                <span className="text-blue-500">posted a tweet</span>
-              </a>{" "}
-              thanking all for having her and for the Golden Buzzer, which is
-              included there.{" "}
-            </div>
-            <div className="inline">
-              <div className="center content-center justify-center">
-                <a href="https://kenchawkin.files.wordpress.com/2021/06/angelinas-agt-golden-buzzer-1.png">
-                  <Image
-                    src={goldenBuzzer}
-                    alt="Golden Buzzer"
-                    className="flex h-60 w-96 content-center justify-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
-                    loading="lazy"
-                  />
+            <Section>
+              <div>
+                BIBISI also posted this{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=ZkQc5UycXeA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    ANGELINA JORDAN BEST 23 VOCAL COACHES ANALYSIS REACTION
+                    MASHUP' COMPILATION I Put A Spell on You
+                  </span>
+                </a>
+                .
+              </div>
+              <div>
+                I also enjoyed One Stop Reactions{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=wGXVX3LZIzM't=15s"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">
+                    Latest 2022 Special Reactions for Angelina Jordan '; I Put A
+                    Spell On You | compilation reaction!
+                  </span>
                 </a>
               </div>
-            </div>
-            <div>
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=l_TLzzF7DMU't=42s"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Reflecting on that moment, Angelina said
-                </span>
-              </a>
-              : When Heidi stood up it felt like time stood still. I can't
-              believe it. The confetti felt like millions of gold stars were
-              falling on me. It was really the best moment of my life.{" "}
-            </div>
-            <div>
-              As the judges and audience members were on their feet applauding
-              wildly, I heard an excerpt of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://theuncarvedblog.com/2018/01/21/the-hauntingly-beautiful-voice-of-eva-cassidy/"
-                target="_blank"
-              >
-                <span className="text-blue-500">Eva Cassidy</span>
-              </a>{" "}
-              singing{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/2rd8VktT8xY"
-                target="_blank"
-              >
-                <span className="text-blue-500">Over The Rainbow</span>
-              </a>{" "}
-              playing in the background and thought, how appropriate! One
-              amazing angelic voice honoring another as her dream finally,
-              really did come true!{" "}
-            </div>
-            <div>
-              Talent Recap posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/3-Q3I7FfvUU"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan: ALL Performances on America's Got Talent
-                  Champions
-                </span>
-              </a>
-              , which includes the introduction. Top 10 Talent also posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=07O5ESBUT6Q"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan ALL Performances on America's Got Talent:
-                  Champions!
-                </span>
-              </a>
-              , which includes what happened after Heidi Klum hit the Golden
-              Buzzer.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=07O5ESBUT6Q't=227s"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  She then went on stage to hug and kiss Angelina on both cheeks
-                </span>
-              </a>
-              . The other judges joined them on stage. Simon also hugged her and
-              said: I don't think you know how good you are. Really! The camera
-              then segues to Angelina's family: her thankful uncle Michael,
-              sister Juliette's happy tears, and mother Sara and grandma Mery
-              hugging. Kaleidoscope RMX also posted the{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=3QLhZ5N8-F4"
-                target="_blank"
-              >
-                <span className="text-blue-500">Full Golden Buzzer Moment</span>
-              </a>
-              .
-            </div>
-            <div>
-              Angelina later returned for The Champions Season 2 2020 final
-              round to sing her unique take on Elton John's{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/ZhEOq2EHjIg"
-                target="_blank"
-              >
-                <span className="text-blue-500">Goodbye Yellow Brick Road</span>
-              </a>
-              . She blew the judges away again, and the crowd went nuts in
-              joyful disbelief.{" "}
-            </div>
-            <div>
-              Angelina was later joined by amazing sand artist{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=StT8I7sa1f4"
-                target="_blank"
-              >
-                <span className="text-blue-500">Kseniya Simonova</span>
-              </a>{" "}
-              and talented young violinist Tyler Butler-Figueroa for an exciting
-              group performance of Someone You Loved in the AGT Champions
-              Finale.{" "}
-            </div>
+            </Section>
+            <Section>
+              <div>
+                Another song that’s up there is Feeling Good. She was 10 years
+                old when she performed it at{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/7HaMvkflBAo"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Allsang På Grensen – TV2
+                  </span>
+                </a>
+                , and later{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/p8kAL-sGJx8"
+                  target="_blank"
+                >
+                  LIVE on{" "}
+                  <span className="text-blue-500">The Stream Gir Tilbake</span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <Center>America's Got Talent Golden Buzzer</Center>
+            </Section>
+            <Section>
+              <div>
+                Six years later, Angelina appeared on America's Got Talent: The
+                Champions 2020 when she was 13 years old. She told Heidi Klum
+                that she had waited 10 years to sing for Simon Cowell. And it
+                was on the biggest stage in the world! This was her moment. She
+                auditioned with her own spellbinding version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=qF0JV28vgLw"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Queen's Bohemian Rhapsody
+                  </span>
+                </a>
+                , which won her a<span className="text-blue-500"> </span>
+                Golden Buzzer from Heidi, who could hardly contain herself.
+                After the show had aired, Angelina{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://twitter.com/angelinajordanA/status/1214379711070998528"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">posted a tweet</span>
+                </a>{" "}
+                thanking all for having her and for the Golden Buzzer, which is
+                included there.{" "}
+              </div>
+            </Section>
+            <Section>
+            <div className="inline">
+                <div className="center flex justify-center">
+                  <a href="https://kenchawkin.files.wordpress.com/2021/06/angelinas-agt-golden-buzzer-1.png">
+                    <Image
+                      src={goldenBuzzer}
+                      alt="Golden Buzzer"
+                      className="flex h-60 w-96 content-center justify-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div>
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=l_TLzzF7DMU't=42s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Reflecting on that moment, Angelina said
+                  </span>
+                </a>
+                : When Heidi stood up it felt like time stood still. I can't
+                believe it. The confetti felt like millions of gold stars were
+                falling on me. It was really the best moment of my life.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                As the judges and audience members were on their feet applauding
+                wildly, I heard an excerpt of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://theuncarvedblog.com/2018/01/21/the-hauntingly-beautiful-voice-of-eva-cassidy/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Eva Cassidy</span>
+                </a>{" "}
+                singing{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/2rd8VktT8xY"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Over The Rainbow</span>
+                </a>{" "}
+                playing in the background and thought, how appropriate! One
+                amazing angelic voice honoring another as her dream finally,
+                really did come true!{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Talent Recap posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/3-Q3I7FfvUU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan: ALL Performances on America's Got Talent
+                    Champions
+                  </span>
+                </a>
+                , which includes the introduction. Top 10 Talent also posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=07O5ESBUT6Q"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan ALL Performances on America's Got Talent:
+                    Champions!
+                  </span>
+                </a>
+                , which includes what happened after Heidi Klum hit the Golden
+                Buzzer.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=07O5ESBUT6Q't=227s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    She then went on stage to hug and kiss Angelina on both
+                    cheeks
+                  </span>
+                </a>
+                . The other judges joined them on stage. Simon also hugged her
+                and said: I don't think you know how good you are. Really! The
+                camera then segues to Angelina's family: her thankful uncle
+                Michael, sister Juliette's happy tears, and mother Sara and
+                grandma Mery hugging. Kaleidoscope RMX also posted the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=3QLhZ5N8-F4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Full Golden Buzzer Moment
+                  </span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Angelina later returned for The Champions Season 2 2020 final
+                round to sing her unique take on Elton John's{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/ZhEOq2EHjIg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Goodbye Yellow Brick Road
+                  </span>
+                </a>
+                . She blew the judges away again, and the crowd went nuts in
+                joyful disbelief.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Angelina was later joined by amazing sand artist{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=StT8I7sa1f4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Kseniya Simonova</span>
+                </a>{" "}
+                and talented young violinist Tyler Butler-Figueroa for an
+                exciting group performance of Someone You Loved in the AGT
+                Champions Finale.{" "}
+              </div>
+            </Section>
             <Section>
               <Center>Someone You Loved</Center>
             </Section>
@@ -783,342 +810,358 @@ export default function LocalProfile() {
                 <LiteYouTubeEmbed id="3-Q3I7FfvUU" title="Someone You Loved" />
               </VideoWrapper>
             </Section>
-            <div>
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
-                target="_blank"
-              >
-                <span className="text-blue-500">Boris Palenovski</span>
-              </a>{" "}
-              later edited all 3 performances together in higher res:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/D8yKeA9lVLw"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan 13'; All performances'; America's Got Talent:
-                  the Champions Season 2'; 4K video
-                </span>
-              </a>
-              . See 13-year-old Angelina wearing a T-shirt with her 7-year-old
-              face on it from Norway's Got Talent at{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/D8yKeA9lVLw?t=232"
-                target="_blank"
-              >
-                <span className="text-blue-500">3:52</span>
-              </a>
-              .
-            </div>
-            <div>The girl with a thousand voices</div>
-            <div>
-              Angelina later recorded{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/MS2XdfgIti0"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bohemian Rhapsody</span>
-              </a>
-              , with Queen's blessing, for her official channel. She also sings
-              many cover songs by today's great artists, like{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=8gJuprckBxI"
-                target="_blank"
-              >
-                <span className="text-blue-500">Adele's All I Ask</span>
-              </a>{" "}
-              and her cover of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=mCANSHokpIo"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Bob Dylan's Make You Feel My Love
-                </span>
-              </a>
-              . She even sounds like{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=LbXUKzOxACU'list=RDqF0JV28vgLw'index=4"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Amy Winehouse in Back To Black
-                </span>
-              </a>
-              . Her performance of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=eTcvvO6B3Io"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Whitney Houston's I Have Nothing
-                </span>
-              </a>{" "}
-              is filled with loving power and heartfelt feelings as seen in this
-              screensaver from a video of her singing the song.{" "}
-            </div>
-            <div className="center inline">
-              <div className="center content-center justify-center">
-                <a href="https://kenchawkin.files.wordpress.com/2021/06/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.png">
-                  <Image
-                    src={nothingHandsHeart}
-                    alt="nothingHandsHeart"
-                    className="flex h-60 w-96 content-center justify-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
-                    loading="lazy"
-                  />
+            <Section>
+              <div>
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Boris Palenovski</span>
+                </a>{" "}
+                later edited all 3 performances together in higher res:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/D8yKeA9lVLw"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan 13'; All performances'; America's Got
+                    Talent: the Champions Season 2'; 4K video
+                  </span>
                 </a>
-                <figcaption className="content-center">
-                  Angelina Jordan recording{" "}
-                  <a
-                    rel="noreferrer noopener"
-                    href="https://www.youtube.com/watch?v=eTcvvO6B3Io"
-                    target="_blank"
-                  >
-                    I Have Nothing Whitney Houston Tribute
-                  </a>
-                </figcaption>
+                . See 13-year-old Angelina wearing a T-shirt with her 7-year-old
+                face on it from Norway's Got Talent at{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/D8yKeA9lVLw?t=232"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">3:52</span>
+                </a>
+                .
               </div>
-            </div>
-            <div>
-              Angelina may emulate these artists, vocally and emotionally as she
-              inhabits their songs, but she interprets them in her own unique
-              stylistic way, often times better than the original! Like any
-              great jazz artist, she is developing her own sound, finding her
-              own voice, and now performing her own music. We are all in for
-              many surprising treats.
-            </div>
-            <div>
-              When she was 10 years old Angelina was asked to record a song by
-              Brandon Lowry, aka{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://en.wikipedia.org/wiki/Sterling_Fox"
-                target="_blank"
-              >
-                <span className="text-blue-500">Sterling Fox</span>
-              </a>{" "}
-              or Baby FuzZ. Angelina's version was a demo, not meant to be
-              released. She said she would never record it again because it
-              deals with suicide. Nothing happened with his song, which he had
-              written and recorded with some Norwegian friends. Someone later
-              leaked the audio. Rusty Shackleford provides an explanation{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=exlgtCM_rac'lc=Ugx0tcGGIhK6Qsdk2bl4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">in this comment</span>
-              </a>
-              . He includes Baby Fuzz’s comment—an attempt to clear the air
-              about it after he had heard it. Angelina's version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Dv8mjCh5iiE"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  I'm Still Holding out for You
-                </span>
-              </a>{" "}
-              could easily have become a Top 10 hit.
-            </div>
-            <div>Worldwide online reactions</div>
-            <div>
-              Besides her impressive vocal skills, what gives listeners
-              goosebumps and moves them to tears are the powerful soulful
-              feelings she puts into each song. How can someone that young, who
-              has not yet experienced life’s ups and downs, express such
-              emotions and understanding? It boggles the mind! There is no doubt
-              that Angelina is an old soul in a young body—something the judges
-              at NGT and AGT said, as well as others who have commented on her
-              performances.{" "}
-            </div>
-            <div>
-              She has 2 billion Facebook views and over half a billion on
-              YouTube. There are many compilation channels of her music and
-              100’s of reaction videos of people responding to some of the many
-              songs she’s posted. Most of them are visibly moved, jaw-dropped at
-              a loss for word.{" "}
-            </div>
-            <div>
-              One of the more qualified reactors is Spanish-speaking vocal coach{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/playlist?list=PLsJFvt698FRddwD9Lt65FNn3KIw9Thxto"
-                target="_blank"
-              >
-                <span className="text-blue-500">Ceci Dover</span>
-              </a>
-              <span className="text-blue-500">.</span> She explains things in
-              detail, sharing valuable advice. See this one she posted of
-              Angelina covering{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=87LhCorUlOE"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Lana Del Ray's Born To Die
-                </span>
-              </a>
-              .
-            </div>
-            <div>
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/e3NKisBWbdE"
-                target="_blank"
-              >
-                <span className="text-blue-500">In this enjoyable video</span>
-              </a>{" "}
-              select English subtitles, Ceci uses excerpts of Angela singing
-              between ages 7-13 to give us an informed overview of the evolution
-              of her amazingly talented voice.{" "}
-            </div>
-            <div>
-              See{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=7OXnGxP1-t4"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan's rise to stardom! 🚀'; “When You Believe” ⏳
-                  🎼 🏆
-                </span>
-              </a>{" "}
-              Along with Angelina's cover of this iconic song is a visual
-              montage created by{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UCam0sj2MWFz2lCx_IU3I5dg"
-                target="_blank"
-              >
-                <span className="text-blue-500">Kaleidoscope RMX</span>
-              </a>
-              . It shows her commitment to and belief in herself using excerpts
-              from NGT to AGT and a sweet surprise ending. Very emotional and
-              inspiring!{" "}
-            </div>
-            <div>
-              Creatively collaborating with Stargate, signing with Republic
-              Records
-            </div>
-            <div>
-              After turning down many requests to sign Angelina, the family
-              eventually settled on what they felt was the right record company
-              that would allow her to create her own style of music, and not
-              mold her into something artificial for commercial gain.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://americansongwriter.com/million-miles-angelina-jordan-song-interview/"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  When she was 14, they signed
-                </span>
-              </a>{" "}
-              with UMG's, United Music Group{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.republicrecords.com/"
-                target="_blank"
-              >
-                <span className="text-blue-500">Republic Records</span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              Angelina released her first singles on the Republic Records label:
-              “Million Miles” in November 2020 and “7th Heaven” in March 2021.
-              Both songs are co-credited to the multiple Grammy-award-winning
-              Los Angeles-based Norwegian production duo, Tor Erik Hermansen and
-              Mikkel Storleer Eriksen, aka{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://en.wikipedia.org/wiki/Stargate_record_producers"
-                target="_blank"
-              >
-                <span className="text-blue-500">Stargate</span>
-              </a>
-              . Read how this creative collaboration came about in these
-              postings by this Angelina Jordan Fan Club'; The Shield on the
-              WIKI:{" "}
-              <a href="https://www.wiki.angelinajordanfanclub.com/stargate/">
-                <span className="text-blue-500">
-                  Angelina Jordan and Stargate
-                </span>
-              </a>
-              .
-            </div>
-            <div>
-              Republic released 4 videos—2 Live in Studio and 2 Official Lyric
-              Videos:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=3KxvwuZ7ocenter"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Million Miles Live in Studio
-                </span>
-              </a>{" "}
-              and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/NhKRh5ZtuWk"
-                target="_blank"
-              >
-                <span className="text-blue-500">Official Lyric Video</span>
-              </a>
-              , a very personal song about losing her grandfather; and a more
-              upbeat{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/bM8DzMRbiIc"
-                target="_blank"
-              >
-                <span className="text-blue-500">7th Heaven Live in Studio</span>
-              </a>{" "}
-              and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/o4Vl3I1WWq4"
-                target="_blank"
-              >
-                <span className="text-blue-500">Official Lyric Video</span>
-              </a>{" "}
-              about her philosophy of life. The live in-studio videos were
-              filmed in a sparse lounge-like setting. The official lyric videos
-              contain the words to the songs with paintings by her grandmother{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=i9NxX0tSjS0"
-                target="_blank"
-              >
-                <span className="text-blue-500">Mery Zamani</span>
-              </a>
-              , some of which were printed onto the outfit Angelina wore on AGT.
-              A third, more personal,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/XA1_CUaM52I"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan'; Million Miles Official Music Video
-                </span>
-              </a>{" "}
-              was later released in Jan 27, 2021.{" "}
-            </div>
+            </Section>
+            <Section>
+              <Center>The girl with a thousand voices</Center>
+            </Section>
+            <Section>
+              <div>
+                Angelina later recorded{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/MS2XdfgIti0"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bohemian Rhapsody</span>
+                </a>
+                , with Queen's blessing, for her official channel. She also
+                sings many cover songs by today's great artists, like{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=8gJuprckBxI"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Adele's All I Ask</span>
+                </a>{" "}
+                and her cover of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=mCANSHokpIo"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Bob Dylan's Make You Feel My Love
+                  </span>
+                </a>
+                . She even sounds like{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=LbXUKzOxACU'list=RDqF0JV28vgLw'index=4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Amy Winehouse in Back To Black
+                  </span>
+                </a>
+                . Her performance of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=eTcvvO6B3Io"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Whitney Houston's I Have Nothing
+                  </span>
+                </a>{" "}
+                is filled with loving power and heartfelt feelings as seen in
+                this screensaver from a video of her singing the song.{" "}
+              </div>
+            </Section>
+            <Section>
+            <div className="inline">
+                <div className="center flex justify-center">
+                  <a href="https://kenchawkin.files.wordpress.com/2021/06/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.png">
+                    <Image
+                      src={nothingHandsHeart}
+                      alt="nothingHandsHeart"
+                      className="flex h-60 w-96 content-center justify-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Angelina may emulate these artists, vocally and emotionally as
+                she inhabits their songs, but she interprets them in her own
+                unique stylistic way, often times better than the original! Like
+                any great jazz artist, she is developing her own sound, finding
+                her own voice, and now performing her own music. We are all in
+                for many surprising treats.
+              </div>
+              <div>
+                When she was 10 years old Angelina was asked to record a song by
+                Brandon Lowry, aka{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://en.wikipedia.org/wiki/Sterling_Fox"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Sterling Fox</span>
+                </a>{" "}
+                or Baby FuzZ. Angelina's version was a demo, not meant to be
+                released. She said she would never record it again because it
+                deals with suicide. Nothing happened with his song, which he had
+                written and recorded with some Norwegian friends. Someone later
+                leaked the audio. Rusty Shackleford provides an explanation{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=exlgtCM_rac'lc=Ugx0tcGGIhK6Qsdk2bl4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">in this comment</span>
+                </a>
+                . He includes Baby Fuzz’s comment—an attempt to clear the air
+                about it after he had heard it. Angelina's version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Dv8mjCh5iiE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    I'm Still Holding out for You
+                  </span>
+                </a>{" "}
+                could easily have become a Top 10 hit.
+              </div>
+            </Section>
+            <Section>
+              <div>Worldwide online reactions</div>
+              <div>
+                Besides her impressive vocal skills, what gives listeners
+                goosebumps and moves them to tears are the powerful soulful
+                feelings she puts into each song. How can someone that young,
+                who has not yet experienced life’s ups and downs, express such
+                emotions and understanding? It boggles the mind! There is no
+                doubt that Angelina is an old soul in a young body—something the
+                judges at NGT and AGT said, as well as others who have commented
+                on her performances.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                She has 2 billion Facebook views and over half a billion on
+                YouTube. There are many compilation channels of her music and
+                100’s of reaction videos of people responding to some of the
+                many songs she’s posted. Most of them are visibly moved,
+                jaw-dropped at a loss for word.{" "}
+              </div>
+              <div>
+                One of the more qualified reactors is Spanish-speaking vocal
+                coach{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/playlist?list=PLsJFvt698FRddwD9Lt65FNn3KIw9Thxto"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Ceci Dover</span>
+                </a>
+                <span className="text-blue-500">.</span> She explains things in
+                detail, sharing valuable advice. See this one she posted of
+                Angelina covering{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=87LhCorUlOE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Lana Del Ray's Born To Die
+                  </span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/e3NKisBWbdE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">In this enjoyable video</span>
+                </a>{" "}
+                select English subtitles, Ceci uses excerpts of Angela singing
+                between ages 7-13 to give us an informed overview of the
+                evolution of her amazingly talented voice.{" "}
+              </div>
+              <div>
+                See{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=7OXnGxP1-t4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan's rise to stardom! 🚀'; “When You Believe”
+                    ⏳ 🎼 🏆
+                  </span>
+                </a>{" "}
+                Along with Angelina's cover of this iconic song is a visual
+                montage created by{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UCam0sj2MWFz2lCx_IU3I5dg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Kaleidoscope RMX</span>
+                </a>
+                . It shows her commitment to and belief in herself using
+                excerpts from NGT to AGT and a sweet surprise ending. Very
+                emotional and inspiring!{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Creatively collaborating with Stargate, signing with Republic
+                Records
+              </div>
+              <div>
+                After turning down many requests to sign Angelina, the family
+                eventually settled on what they felt was the right record
+                company that would allow her to create her own style of music,
+                and not mold her into something artificial for commercial gain.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://americansongwriter.com/million-miles-angelina-jordan-song-interview/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    When she was 14, they signed
+                  </span>
+                </a>{" "}
+                with UMG's, United Music Group{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.republicrecords.com/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Republic Records</span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Angelina released her first singles on the Republic Records
+                label: “Million Miles” in November 2020 and “7th Heaven” in
+                March 2021. Both songs are co-credited to the multiple
+                Grammy-award-winning Los Angeles-based Norwegian production duo,
+                Tor Erik Hermansen and Mikkel Storleer Eriksen, aka{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://en.wikipedia.org/wiki/Stargate_record_producers"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Stargate</span>
+                </a>
+                . Read how this creative collaboration came about in these
+                postings by this Angelina Jordan Fan Club'; The Shield on the
+                WIKI:{" "}
+                <a href="https://www.wiki.angelinajordanfanclub.com/stargate/">
+                  <span className="text-blue-500">
+                    Angelina Jordan and Stargate
+                  </span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Republic released 4 videos—2 Live in Studio and 2 Official Lyric
+                Videos:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=3KxvwuZ7ocenter"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Million Miles Live in Studio
+                  </span>
+                </a>{" "}
+                and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/NhKRh5ZtuWk"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Official Lyric Video</span>
+                </a>
+                , a very personal song about losing her grandfather; and a more
+                upbeat{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/bM8DzMRbiIc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    7th Heaven Live in Studio
+                  </span>
+                </a>{" "}
+                and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/o4Vl3I1WWq4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Official Lyric Video</span>
+                </a>{" "}
+                about her philosophy of life. The live in-studio videos were
+                filmed in a sparse lounge-like setting. The official lyric
+                videos contain the words to the songs with paintings by her
+                grandmother{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=i9NxX0tSjS0"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Mery Zamani</span>
+                </a>
+                , some of which were printed onto the outfit Angelina wore on
+                AGT. A third, more personal,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/XA1_CUaM52I"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan'; Million Miles Official Music Video
+                  </span>
+                </a>{" "}
+                was later released in Jan 27, 2021.{" "}
+              </div>
+            </Section>
             <Section>
               <Center>Million Miles</Center>
             </Section>
@@ -1135,424 +1178,476 @@ export default function LocalProfile() {
                 <LiteYouTubeEmbed id="bM8DzMRbiIc" title="Seventh Heaven" />
               </VideoWrapper>
             </Section>
-            <div>
-              Partnering with Stargate and Republic officially launched the
-              career of this young teenage artist. She is now getting to create
-              and produce her own material. There is no question this original
-              artist will evolve into the international superstar she dreamed of
-              becoming ever since she was 3!{" "}
-            </div>
-            <div>
-              RECENTLY ADDED: Republic Records later produced and Angelina
-              Jordan Official posted on July 15, 2021 a new video of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/9rLiWvwzbCA"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan singing 7th Heaven
-                </span>
-              </a>{" "}
-              in a club setting with an audience. The story line includes a
-              waitress listening to Angelina and the band rehearse, working in
-              the kitchen dreaming of what her life could be, then at the live
-              performance. It includes footage of her and Angelina horsing
-              around in the kitchen. Very funny and cute.
-            </div>
-            The Barefoot Princess / Jazz Queen
-            <div>
-              You may have noticed that Angelina sings barefoot. There is a
-              reason for that. While living abroad with her family in the Middle
-              East she came upon a poor young girl, her own age at the time,
-              around 6 years old. She was weighing people to earn money to feed
-              her orphaned brothers and sisters. Angelina discovered this when
-              she spoke to her. She also noticed that the girl was barefoot and
-              had scars on her feet.
-            </div>
-            <div>
-              Angelina asked her what she wanted to become. She replied, a
-              doctor, but didn't think it could happen. Angelina strongly told
-              her to never give up her dreams. She took off her favorite green
-              shoes and gave them to her. The girl resisted at first, then
-              thanked her, and said she would pray every day for her to fulfill
-              her dream to become a superstar and sing for the whole world.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/oXedn08mg2s?t=120"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina told the story in this Variety Media interview.
-                </span>
-              </a>{" "}
-            </div>
-            <div>
-              So, in honor of and inspired by that girl, Angelina always
-              performs barefoot and still thinks of her, and the many homeless
-              and shoeless children everywhere. Angelina actually went on to
-              raise millions of Euros for children and families in need. Talk
-              about putting yourself in other people’s shoes, or in this case,
-              giving your shoes to someone in need! Angelina’s empathy and
-              compassionate heart are expressed through her actions as well as
-              her amazing voice!{" "}
-            </div>
-            <blockquote className="h-full w-full">
+            <Section>
               <div>
-                Angelina’s empathy and compassionate heart are expressed through
-                her actions as well as her amazing voice!
+                Partnering with Stargate and Republic officially launched the
+                career of this young teenage artist. She is now getting to
+                create and produce her own material. There is no question this
+                original artist will evolve into the international superstar she
+                dreamed of becoming ever since she was 3!{" "}
               </div>
-            </blockquote>
-            <div>Publishes Between Two Hearts</div>
-            <div>
-              At 9 years of age, Angelina became Norway's youngest author when
-              she published a book about this story.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.angelinajordanofficial.com/book"
-                target="_blank"
-              >
-                <span className="text-blue-500">Between Two Hearts</span>
-              </a>{" "}
-              is illustrated by her grandmother and painter at a very early age.
-              Mery exposed Angelina to jazz before she could read or write, and
-              is responsible for her desire to become a jazz singer. They create
-              art together, and design and make her own clothing. Mery tapes the
-              many videos of Angelina singing. She also paints the backdrops for
-              some of them, including images in the animated sequence for the
-              lyric version of Million Miles. Some of her images were made into
-              clothing that Angelina wears, like the colorful pant suit she wore
-              in her first appearance on AGT, when she sang Bohemian Rhapsody.
-              See this short{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Ld0GFRB-2u8"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan book release
-                </span>
-              </a>
-              <span className="text-blue-500"> </span>
-              video.
-            </div>
-            <div>
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/6p6iL989P_8"
-                target="_blank"
-              >
-                <span className="text-blue-500">In a Book Talk podcast</span>
-              </a>{" "}
-              posted by Angelina Jordan’s publisher, Cappelen Damm, in 2015,
-              Erling Kittelsen, a Norwegian author and poet, and friend of the
-              family, talks with Angelina about her book. When he was first
-              shown her diary containing that episode with the barefoot girl, he
-              said it should be made into a book. English subtitles have now
-              been provided by her fan club. In between we hear excerpts of
-              Angelina singing and small extracts from “Mellom to hjerter”
-              <a
-                rel="noreferrer noopener"
-                href="https://angelina-jordan-official-store.creator-spring.com/listing/between-two-hearts-english?product=1227"
-                target="_blank"
-              >
-                <span className="text-blue-500">Between Two Hearts</span>
-              </a>
-              . It is very moving and gives us a glimpse into who Angelina
-              really is. For her,
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/6p6iL989P_8?t=520"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Love is very ' Love means everything.
-                </span>
-              </a>
-              Angelina's book has been translated into English and is available
-              for purchase as an eBook on her website:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/redirect?event=comments'redir_token=QUFFLUhqa1hLdVE0NW41ZDg2SFlCMGF0dG9jOWJZRU1UQXxBQ3Jtc0trRmhWZnFmRFBpazcyZHRRenZTdV9pTzdSLS01QTlwMmlHM1NVVTBYNGNuYktLWG5vZk5DdFpTcFNpRkN5UXRHNjByQ1ZNOTlucenter5vMGRDcW9KS0Y2dWt3WGh3X1d4bTZfWWdrS1Qwb3lSaV9hZ0wzWQ'q=https%3A%2F%2Fwww.angelinajordanofficial.com%2Fbook'stzid=UgwyUt6InhcUuBXl7gB4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  https://www.angelinajordanofficial.com/book
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              See a footnote below that I added after ordering and reading the
-              eBook.
-            </div>
-            <div>
-              The week her book came out, Angelina Jordan was interviewed by
-              Anne Lindmo on the NRK TV show Lindmo Nov 14, 2015. Ms. Lindmo
-              asked Angelina to share the story of why she sings barefoot and to
-              tell the story of how she met a poor barefoot girl when she was 6
-              years old. She then brings out Angelina's actual diary for her to
-              read what she wrote after that encounter with the girl. That
-              Norwegian interview has now been translated with English
-              subtitles.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/-cCLDY0CSZ8"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Click on the CC to watch it here
-                </span>
-              </a>
-              . After the interview,{" "}
-              <a
-                href="https://youtu.be/wPfMzMeBLbo"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">
-                  Angelina sings Unchained Melody
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              The whole family nourishes and supports Angelina in her career. In
-              fact, her uncle is her manager, her mother handles publicity, and
-              her grandmother is her stylist. They have been very protective of
-              Angelina, wanting her to still enjoy her childhood and complete
-              her education as she pursues her dream to become an international
-              star. Throughout it all Angelina remains unpretentious and is
-              happily focused on manifesting her musical destiny. In a reactor
-              video,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=sPPBtaxWQww'lc=Ugy3sB238SfrSHnXxIZ4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">GEB Endeavors comments</span>
-              </a>{" "}
-              on how Angelina's uncle became her manager and eventually paved
-              the way for the family to move to LA to pursue her career in
-              music. It's happening!{" "}
-            </div>
-            <div>
-              It is interesting to note that instead of bowing when an audience
-              applauds her, she curtsies. She always comes across as dignified
-              yet humble, respectful and loving. A rare talent and a very
-              special soul.{" "}
-            </div>
-            <div>Revealing insights into Angelina's inner world</div>
-            <div>
-              When Angelina performs, she is in her element. She is calm and
-              fearless. It is natural for her to powerfully project the
-              emotional content of a song. She appears extroverted on stage, yet
-              is in her own world. But ask her questions in an interview, and
-              she gives short answers. She seems shy, introverted. She’s not
-              comfortable expressing herself personally. However, it seems to be
-              easier for her the older she gets.{" "}
-            </div>
-            <div>
-              I think she may be an introvert by nature and inhabits a rich
-              inner world. She comes from a deep place. We get a glimpse of that
-              world when she sings, and are transformed by it. Here are a few
-              hints I've noticed in some interviews.{" "}
-            </div>
-            <div>
-              In this 2016 Norway TV News Feature, Angelina tells the
-              interviewer:
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=3XXFu_V8Lcs't=100s"
-                target="_blank"
-              >
-                <span className="text-blue-500">
+              <div>
+                RECENTLY ADDED: Republic Records later produced and Angelina
+                Jordan Official posted on July 15, 2021 a new video of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/9rLiWvwzbCA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan singing 7th Heaven
+                  </span>
+                </a>{" "}
+                in a club setting with an audience. The story line includes a
+                waitress listening to Angelina and the band rehearse, working in
+                the kitchen dreaming of what her life could be, then at the live
+                performance. It includes footage of her and Angelina horsing
+                around in the kitchen. Very funny and cute.
+              </div>
+            </Section>
+            <Section>
+              <Center>The Barefoot Princess / Jazz Queen</Center>
+            </Section>
+            <Section>
+              <div>
+                You may have noticed that Angelina sings barefoot. There is a
+                reason for that. While living abroad with her family in the
+                Middle East she came upon a poor young girl, her own age at the
+                time, around 6 years old. She was weighing people to earn money
+                to feed her orphaned brothers and sisters. Angelina discovered
+                this when she spoke to her. She also noticed that the girl was
+                barefoot and had scars on her feet.
+              </div>
+              <div>
+                Angelina asked her what she wanted to become. She replied, a
+                doctor, but didn't think it could happen. Angelina strongly told
+                her to never give up her dreams. She took off her favorite green
+                shoes and gave them to her. The girl resisted at first, then
+                thanked her, and said she would pray every day for her to
+                fulfill her dream to become a superstar and sing for the whole
+                world.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/oXedn08mg2s?t=120"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina told the story in this Variety Media interview.
+                  </span>
+                </a>{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                So, in honor of and inspired by that girl, Angelina always
+                performs barefoot and still thinks of her, and the many homeless
+                and shoeless children everywhere. Angelina actually went on to
+                raise millions of Euros for children and families in need. Talk
+                about putting yourself in other people’s shoes, or in this case,
+                giving your shoes to someone in need! Angelina’s empathy and
+                compassionate heart are expressed through her actions as well as
+                her amazing voice!{" "}
+              </div>
+              <blockquote className="h-full w-full">
+                <div>
+                  Angelina’s empathy and compassionate heart are expressed
+                  through her actions as well as her amazing voice!
+                </div>
+              </blockquote>
+            </Section>
+            <Section>
+              <Center>Publishes Between Two Hearts</Center>
+            </Section>
+            <Section>
+              <div>
+                At 9 years of age, Angelina became Norway's youngest author when
+                she published a book about this story.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.angelinajordanofficial.com/book"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Between Two Hearts</span>
+                </a>{" "}
+                is illustrated by her grandmother and painter at a very early
+                age. Mery exposed Angelina to jazz before she could read or
+                write, and is responsible for her desire to become a jazz
+                singer. They create art together, and design and make her own
+                clothing. Mery tapes the many videos of Angelina singing. She
+                also paints the backdrops for some of them, including images in
+                the animated sequence for the lyric version of Million Miles.
+                Some of her images were made into clothing that Angelina wears,
+                like the colorful pant suit she wore in her first appearance on
+                AGT, when she sang Bohemian Rhapsody. See this short{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Ld0GFRB-2u8"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan book release
+                  </span>
+                </a>
+                <span className="text-blue-500"> </span>
+                video.
+              </div>
+            </Section>
+            <Section>
+              <div>
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/6p6iL989P_8"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">In a Book Talk podcast</span>
+                </a>{" "}
+                posted by Angelina Jordan’s publisher, Cappelen Damm, in 2015,
+                Erling Kittelsen, a Norwegian author and poet, and friend of the
+                family, talks with Angelina about her book. When he was first
+                shown her diary containing that episode with the barefoot girl,
+                he said it should be made into a book. English subtitles have
+                now been provided by her fan club. In between we hear excerpts
+                of Angelina singing and small extracts from “Mellom to hjerter”
+                <a
+                  rel="noreferrer noopener"
+                  href="https://angelina-jordan-official-store.creator-spring.com/listing/between-two-hearts-english?product=1227"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Between Two Hearts</span>
+                </a>
+                . It is very moving and gives us a glimpse into who Angelina
+                really is. For her,
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/6p6iL989P_8?t=520"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Love is very ' Love means everything.
+                  </span>
+                </a>
+                Angelina's book has been translated into English and is
+                available for purchase as an eBook on her website:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/redirect?event=comments'redir_token=QUFFLUhqa1hLdVE0NW41ZDg2SFlCMGF0dG9jOWJZRU1UQXxBQ3Jtc0trRmhWZnFmRFBpazcyZHRRenZTdV9pTzdSLS01QTlwMmlHM1NVVTBYNGNuYktLWG5vZk5DdFpTcFNpRkN5UXRHNjByQ1ZNOTlucenter5vMGRDcW9KS0Y2dWt3WGh3X1d4bTZfWWdrS1Qwb3lSaV9hZ0wzWQ'q=https%3A%2F%2Fwww.angelinajordanofficial.com%2Fbook'stzid=UgwyUt6InhcUuBXl7gB4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    https://www.angelinajordanofficial.com/book
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                See a footnote below that I added after ordering and reading the
+                eBook.
+              </div>
+              <div>
+                The week her book came out, Angelina Jordan was interviewed by
+                Anne Lindmo on the NRK TV show Lindmo Nov 14, 2015. Ms. Lindmo
+                asked Angelina to share the story of why she sings barefoot and
+                to tell the story of how she met a poor barefoot girl when she
+                was 6 years old. She then brings out Angelina's actual diary for
+                her to read what she wrote after that encounter with the girl.
+                That Norwegian interview has now been translated with English
+                subtitles.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/-cCLDY0CSZ8"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Click on the CC to watch it here
+                  </span>
+                </a>
+                . After the interview,{" "}
+                <a
+                  href="https://youtu.be/wPfMzMeBLbo"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">
+                    Angelina sings Unchained Melody
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                The whole family nourishes and supports Angelina in her career.
+                In fact, her uncle is her manager, her mother handles publicity,
+                and her grandmother is her stylist. They have been very
+                protective of Angelina, wanting her to still enjoy her childhood
+                and complete her education as she pursues her dream to become an
+                international star. Throughout it all Angelina remains
+                unpretentious and is happily focused on manifesting her musical
+                destiny. In a reactor video,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=sPPBtaxWQww'lc=Ugy3sB238SfrSHnXxIZ4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">GEB Endeavors comments</span>
+                </a>{" "}
+                on how Angelina's uncle became her manager and eventually paved
+                the way for the family to move to LA to pursue her career in
+                music. It's happening!{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                It is interesting to note that instead of bowing when an
+                audience applauds her, she curtsies. She always comes across as
+                dignified yet humble, respectful and loving. A rare talent and a
+                very special soul.{" "}
+              </div>
+              <div>Revealing insights into Angelina's inner world</div>
+              <div>
+                When Angelina performs, she is in her element. She is calm and
+                fearless. It is natural for her to powerfully project the
+                emotional content of a song. She appears extroverted on stage,
+                yet is in her own world. But ask her questions in an interview,
+                and she gives short answers. She seems shy, introverted. She’s
+                not comfortable expressing herself personally. However, it seems
+                to be easier for her the older she gets.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                I think she may be an introvert by nature and inhabits a rich
+                inner world. She comes from a deep place. We get a glimpse of
+                that world when she sings, and are transformed by it. Here are a
+                few hints I've noticed in some interviews.{" "}
+              </div>
+              <div>
+                In this 2016 Norway TV News Feature, Angelina tells the
+                interviewer:
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=3XXFu_V8Lcs't=100s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    I want to sing for the whole world. Singing is as important
+                    as breathing to me. I just love to sing.
+                  </span>
+                </a>
+                That says it all.
+              </div>
+            </Section>
+            <Section>
+              <blockquote className="h-full w-full">
+                <div>
                   I want to sing for the whole world. Singing is as important as
-                  breathing to me. I just love to sing.
-                </span>
-              </a>
-              That says it all.
-            </div>
-            <blockquote className="h-full w-full">
+                  breathing to me. I just love to sing. — Angelina Jordan
+                </div>
+              </blockquote>
+            </Section>
+            <Section>
               <div>
-                I want to sing for the whole world. Singing is as important as
-                breathing to me. I just love to sing. — Angelina Jordan
+                Angelina is quite young in this interview when she said:
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/24ORnvVwUmM?t=73"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    I close my eyes and go in a different world.
+                  </span>
+                </a>
+                Her mother Sara said: “I came home one day when my mother looked
+                after her. She was well eighteen months, and sang a Whitney
+                Houston song in bed. I was almost shocked. It was so beautiful!
+                We quickly realized that she had very great interest in music.
+                It is she who is first and foremost musical in the family.
+                Neither my husband nor I are particularly musical.” This video,{" "}
+                <a
+                  href="https://youtu.be/odiv-yJk7Ew?t=40"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan'; The Evolution
+                  </span>
+                </a>
+                , includes that clip of Angelina singing as a baby.{" "}
               </div>
-            </blockquote>
-            <div>
-              Angelina is quite young in this interview when she said:
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/24ORnvVwUmM?t=73"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  I close my eyes and go in a different world.
-                </span>
-              </a>
-              Her mother Sara said: “I came home one day when my mother looked
-              after her. She was well eighteen months, and sang a Whitney
-              Houston song in bed. I was almost shocked. It was so beautiful! We
-              quickly realized that she had very great interest in music. It is
-              she who is first and foremost musical in the family. Neither my
-              husband nor I are particularly musical.” This video,{" "}
-              <a
-                href="https://youtu.be/odiv-yJk7Ew?t=40"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan'; The Evolution
-                </span>
-              </a>
-              , includes that clip of Angelina singing as a baby.{" "}
-            </div>
-            <blockquote className="h-full w-full">
-              <div>I close my eyes and go in a different world. </div>
-              <cite>
-                A young Angelina to an interviewer asking her about her singing.{" "}
-              </cite>
-            </blockquote>
-            <div>
-              Angelina was 1 of 10 finalists in America's Got Talent: The
-              Champions 2020, and the winner was going to be announced that
-              night. In this{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/QtUgDn73d78"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Short Interview from LA in Norwegian TV2 Monday Feb 17, 2020
-                </span>
-              </a>
-              , the interviewer asks Angelina about the public's response to her
-              singing. She told the interviewer that it's absolutely incredible
-              that there are so many people who send so many millions of
-              messages, and quoted a few.{" "}
-            </div>
-            <div>Q: How do you prevent this from getting to your head?</div>
-            <div>
-              A: I take it all in…and use it to spread love to everyone all over
-              the world.
-            </div>
-            <blockquote className="h-full w-full">
+            </Section>
+            <Section>
+              <blockquote className="h-full w-full">
+                <div>I close my eyes and go in a different world. </div>
+                <cite>
+                  A young Angelina to an interviewer asking her about her
+                  singing.{" "}
+                </cite>
+              </blockquote>
+            </Section>
+            <Section>
               <div>
-                I take it all in…and use it to spread love to everyone all over
-                the world.
+                Angelina was 1 of 10 finalists in America's Got Talent: The
+                Champions 2020, and the winner was going to be announced that
+                night. In this{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/QtUgDn73d78"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Short Interview from LA in Norwegian TV2 Monday Feb 17, 2020
+                  </span>
+                </a>
+                , the interviewer asks Angelina about the public's response to
+                her singing. She told the interviewer that it's absolutely
+                incredible that there are so many people who send so many
+                millions of messages, and quoted a few.{" "}
               </div>
-              <cite>
-                Angelina Jordan's response to a Norwegian reporter in LA asking
-                her how she prevents all this attention from going to her head.{" "}
-              </cite>
-            </blockquote>
-            <div>
-              On Scandinavian TV,
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/97hjWg4ToRQ"
-                target="_blank"
-              >
-                <span className="pr-1 text-blue-500">
-                  Singer Angelina Jordan: – I don't feel like a 12-year-old |
-                  SVT/TV 2/Skavlan
-                </span>
-              </a>
-              <span className="text-blue-500"> </span>
-              Skavlan asks Angelina some deep questions. Her answers are
-              revealing!
-            </div>
-            <div>
-              At the start of the interview in Norwegian, Skavlan asks Angelina,
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=3HUQZFSPBNQ't=75s"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  What do you find easiest: singing or speaking?
-                </span>
-              </a>{" "}
-            </div>
-            <div>
-              She doesn't hesitate to answer, Singing and writing, which is what
-              you'd expect from an introvert. He confirms her answer by asking,
-              Singing and writing is easiest? Not speaking? Smiling and
-              chuckling, she shyly nods her head in agreement.
-            </div>
-            <div>They then switch to speaking in English.</div>
-            <div>
-              Q: My first question is, when I see you on stage, I wonder, who do
-              you feel that you become?
-            </div>
-            <div>
-              A:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/97hjWg4ToRQ?t=53"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  When I sing I go to another world. In the world, it's like,
-                  endless. It's amazing.
-                </span>
-              </a>{" "}
-              smiles and laughs
-            </div>
-            <div>Q: What do you mean by endless?</div>
-            <div>A: Like, full of happiness, and, I love' It's amazing!</div>
-            <div>
-              Q: Many people say that you don't sound like a 12-year-old. Do you
-              feel like a 12-year-old?{" "}
-            </div>
-            <div>A: I feel like a 12-year-old when I look at my passport.</div>
-            <blockquote className="h-full w-full">
+            </Section>
+            <Section>
+              <div>Q: How do you prevent this from getting to your head?</div>
               <div>
-                When I sing I go to another world. In the world, it’s like,
-                endless. It’s amazing. 'Like, full of happiness, and, I love '
-                It's amazing!
+                A: I take it all in…and use it to spread love to everyone all
+                over the world.
               </div>
-              <cite>
-                Angelina Jordan answers Skavlan's questions about what happens
-                to her when she sings on stage.
-              </cite>
-            </blockquote>
-            <div>
-              He mentions a song that she's written and will soon perform, and
-              asks her what it's about. She explains, It's about someone you
-              love, wherever you are, it's a strong love, protects you.{" "}
-            </div>
-            <div>
-              The song sounds like a religious prayer, which could also serve as
-              the theme song for a Bond movie. Skavlan said it reminded him of
-              the Bond films and asks her if she’s familiar with them. She tells
-              him that she got the inspiration for her song from the Bond films.
-              He asks if she would sing a little bit of her favorite Bond song,
-              and she does, acapela, Diamonds Are Forever.
-            </div>
-            <div>
-              Listen to her sing her song{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/lQtUbVKb0vs"
-                target="_blank"
-              >
-                <span className="text-blue-500">Shield</span>
-              </a>{" "}
-              with the band. It is powerful! Skavlan posted it Nov 12, 2018.
-              There's a{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/IUAvEoPxNvw"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  video of her performing this song
-                </span>
-              </a>{" "}
-              with a band in an open air concert the following year in Norway,
-              Jul 12, 2019, when she was 13.
-            </div>
+              <blockquote className="h-full w-full">
+                <div>
+                  I take it all in…and use it to spread love to everyone all
+                  over the world.
+                </div>
+                <cite>
+                  Angelina Jordan's response to a Norwegian reporter in LA
+                  asking her how she prevents all this attention from going to
+                  her head.{" "}
+                </cite>
+              </blockquote>
+            </Section>
+            <Section>
+              <div>
+                On Scandinavian TV,
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/97hjWg4ToRQ"
+                  target="_blank"
+                >
+                  <span className="pr-1 text-blue-500">
+                    Singer Angelina Jordan: – I don't feel like a 12-year-old |
+                    SVT/TV 2/Skavlan
+                  </span>
+                </a>
+                <span className="text-blue-500"> </span>
+                Skavlan asks Angelina some deep questions. Her answers are
+                revealing!
+              </div>
+              <div>
+                At the start of the interview in Norwegian, Skavlan asks
+                Angelina,
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=3HUQZFSPBNQ't=75s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    What do you find easiest: singing or speaking?
+                  </span>
+                </a>{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                She doesn't hesitate to answer, Singing and writing, which is
+                what you'd expect from an introvert. He confirms her answer by
+                asking, Singing and writing is easiest? Not speaking? Smiling
+                and chuckling, she shyly nods her head in agreement.
+              </div>
+              <div>They then switch to speaking in English.</div>
+              <div>
+                Q: My first question is, when I see you on stage, I wonder, who
+                do you feel that you become?
+              </div>
+            </Section>
+            <Section>
+              <div>
+                A:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/97hjWg4ToRQ?t=53"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    When I sing I go to another world. In the world, it's like,
+                    endless. It's amazing.
+                  </span>
+                </a>{" "}
+                smiles and laughs
+              </div>
+            </Section>
+            <Section>
+              <div>Q: What do you mean by endless?</div>
+              <div>A: Like, full of happiness, and, I love' It's amazing!</div>
+              <div>
+                Q: Many people say that you don't sound like a 12-year-old. Do
+                you feel like a 12-year-old?{" "}
+              </div>
+              <div>
+                A: I feel like a 12-year-old when I look at my passport.
+              </div>
+            </Section>
+            <Section>
+              <blockquote className="h-full w-full">
+                <div>
+                  When I sing I go to another world. In the world, it’s like,
+                  endless. It’s amazing. 'Like, full of happiness, and, I love '
+                  It's amazing!
+                </div>
+                <cite>
+                  Angelina Jordan answers Skavlan's questions about what happens
+                  to her when she sings on stage.
+                </cite>
+              </blockquote>
+            </Section>
+            <Section>
+              <div>
+                He mentions a song that she's written and will soon perform, and
+                asks her what it's about. She explains, It's about someone you
+                love, wherever you are, it's a strong love, protects you.{" "}
+              </div>
+              <div>
+                The song sounds like a religious prayer, which could also serve
+                as the theme song for a Bond movie. Skavlan said it reminded him
+                of the Bond films and asks her if she’s familiar with them. She
+                tells him that she got the inspiration for her song from the
+                Bond films. He asks if she would sing a little bit of her
+                favorite Bond song, and she does, acapela, Diamonds Are Forever.
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Listen to her sing her song{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/lQtUbVKb0vs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Shield</span>
+                </a>{" "}
+                with the band. It is powerful! Skavlan posted it Nov 12, 2018.
+                There's a{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/IUAvEoPxNvw"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    video of her performing this song
+                  </span>
+                </a>{" "}
+                with a band in an open air concert the following year in Norway,
+                Jul 12, 2019, when she was 13.
+              </div>
+            </Section>
             <Section>
               <Center>The Shield</Center>
             </Section>
@@ -1564,169 +1659,183 @@ export default function LocalProfile() {
                 />
               </VideoWrapper>
             </Section>
-            <h2>Describing her destiny</h2>
-            <div>
-              In this Feb 4, 2021{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.msn.com/en-us/music/news/viral-singing-prodigy-angelina-jordan-releases-new-single-million-miles/ar-BB1doxkY?ocid=st"
-                target="_blank"
-              >
-                <span className="text-blue-500">People Magazine article</span>
-              </a>
-              , Alyssa Johnson asks her: Where do you hope to see yourself in
-              five years from now?{" "}
-            </div>
-            <blockquote className="h-full w-full">
+            <Section>
+              <Center>Describing her destiny</Center>
+            </Section>
+            <Section>
               <div>
-                I’ll have an important name in the music industry and to make
-                timeless music that can live forever. Also to give the best
-                music experience to people and for them to enjoy and feel
-                emotional or dance or make memories with the music I make.
+                In this Feb 4, 2021{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.msn.com/en-us/music/news/viral-singing-prodigy-angelina-jordan-releases-new-single-million-miles/ar-BB1doxkY?ocid=st"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">People Magazine article</span>
+                </a>
+                , Alyssa Johnson asks her: Where do you hope to see yourself in
+                five years from now?{" "}
               </div>
-              <cite>
-                Angelina Jordan's answer to a People Magazine reporter asking
-                her where she hopes to see herself in 5 years.
-              </cite>
-            </blockquote>
-            <div>
-              Angelina is definitely following her bliss and manifesting her
-              purpose in life! True to her name, Angelina Jordan Astar is an
-              angel and a star sent here to fulfill her destiny and awaken a
-              range of emotions in our hearts and touch our souls with her
-              incredible voice!{" "}
-            </div>
-            <div>
-              Reacting to Angelina singing Cry Me A River, vocal coach Ceci
-              Dover exclaimed in disbelief:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Gt5wO79Z0Fs't=562s"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  She can sing like this? This is impossible. Oh my gosh! She's
-                  music. She's jazz. She's soul. Oh my gosh, I don't know what
-                  to say. She's amazing! That's what I want to say.
-                </span>
-              </a>
-            </div>
-            <div>Indeed! That about sums it up.</div>
-            <div>Angelina Jordan's social media, fan clubs, and overviews</div>
-            <div>
-              Visit her official site:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.angelinajordanofficial.com"
-                target="_blank"
-              >
-                <span className="text-blue-500">Angelina Jordan</span>
-              </a>
-              , and her various social media accounts:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UC1Pwa4nFvIPbtYVLcBGDpjA"
-                target="_blank"
-              >
-                <span className="text-blue-500">YouTube</span>
-              </a>{" "}
-              and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UCv-QOBc_N1xb8dTwqazD9Kg"
-                target="_blank"
-              >
-                <span className="text-blue-500">CoverChannel</span>
-              </a>{" "}
-              to see selected videos of her performing well-known songs,
-              including some of her own; and follow her on{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.instagram.com/angelinajordana/"
-                target="_blank"
-              >
-                <span className="text-blue-500">Instagram</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.facebook.com/angelinajordanofficial"
-                target="_blank"
-              >
-                <span className="text-blue-500">Facebook</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://twitter.com/angelinajordanA"
-                target="_blank"
-              >
-                <span className="text-blue-500">Twitter</span>
-              </a>
-              , and{" "}
-              <a
-                href="https://www.tiktok.com/@angelinajordana"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">TikTok</span>
-              </a>
-              . To support Angelina join her on{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.patreon.com/angelinajordan"
-                target="_blank"
-              >
-                <span className="text-blue-500">Patreon</span>
-              </a>
-              . Read her{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.republicrecords.com/artists/angelina-jordan"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  profile on Republic Records
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              This{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UChM_lpT4shdnsez93QMJPig/featured"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan Fanclub Mosarz
-                </span>
-              </a>
-              , run by her grandmother, posts clips she's taken of family and
-              friends, concerts, and rare behind the scenes footage. Here are
-              two examples:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/cfn-OMg0T14"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  rehearsing the song, What is Life? that she composed for the
-                  orchestra and wrote the lyrics
-                </span>
-              </a>
-              , and an{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/vq6ek06Q4RU"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  exclusive backstage rehearsal for AGT
-                </span>
-              </a>
-              .{" "}
-            </div>
+            </Section>
+            <Section>
+              <blockquote className="h-full w-full">
+                <div>
+                  I’ll have an important name in the music industry and to make
+                  timeless music that can live forever. Also to give the best
+                  music experience to people and for them to enjoy and feel
+                  emotional or dance or make memories with the music I make.
+                </div>
+                <cite>
+                  Angelina Jordan's answer to a People Magazine reporter asking
+                  her where she hopes to see herself in 5 years.
+                </cite>
+              </blockquote>
+            </Section>
+            <Section>
+              <div>
+                Angelina is definitely following her bliss and manifesting her
+                purpose in life! True to her name, Angelina Jordan Astar is an
+                angel and a star sent here to fulfill her destiny and awaken a
+                range of emotions in our hearts and touch our souls with her
+                incredible voice!{" "}
+              </div>
+              <div>
+                Reacting to Angelina singing Cry Me A River, vocal coach Ceci
+                Dover exclaimed in disbelief:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Gt5wO79Z0Fs't=562s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    She can sing like this? This is impossible. Oh my gosh!
+                    She's music. She's jazz. She's soul. Oh my gosh, I don't
+                    know what to say. She's amazing! That's what I want to say.
+                  </span>
+                </a>
+              </div>
+            </Section>
+            <Section>
+              <div>Indeed! That about sums it up.</div>
+              <div>
+                Angelina Jordan's social media, fan clubs, and overviews
+              </div>
+              <div>
+                Visit her official site:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.angelinajordanofficial.com"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Angelina Jordan</span>
+                </a>
+                , and her various social media accounts:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UC1Pwa4nFvIPbtYVLcBGDpjA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">YouTube</span>
+                </a>{" "}
+                and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UCv-QOBc_N1xb8dTwqazD9Kg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">CoverChannel</span>
+                </a>{" "}
+                to see selected videos of her performing well-known songs,
+                including some of her own; and follow her on{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.instagram.com/angelinajordana/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Instagram</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.facebook.com/angelinajordanofficial"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Facebook</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://twitter.com/angelinajordanA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Twitter</span>
+                </a>
+                , and{" "}
+                <a
+                  href="https://www.tiktok.com/@angelinajordana"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">TikTok</span>
+                </a>
+                . To support Angelina join her on{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.patreon.com/angelinajordan"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Patreon</span>
+                </a>
+                . Read her{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.republicrecords.com/artists/angelina-jordan"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    profile on Republic Records
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                This{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UChM_lpT4shdnsez93QMJPig/featured"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan Fanclub Mosarz
+                  </span>
+                </a>
+                , run by her grandmother, posts clips she's taken of family and
+                friends, concerts, and rare behind the scenes footage. Here are
+                two examples:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/cfn-OMg0T14"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    rehearsing the song, What is Life? that she composed for the
+                    orchestra and wrote the lyrics
+                  </span>
+                </a>
+                , and an{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/vq6ek06Q4RU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    exclusive backstage rehearsal for AGT
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
             <div>
               See{" "}
               <a
@@ -2197,7 +2306,7 @@ export default function LocalProfile() {
               performance and production!
             </div>
             <Section>
-              <Center>Suspecious Minds</Center>
+              <Center>Suspicious Minds</Center>
             </Section>
             <Section>
               <VideoWrapper>
@@ -3122,7 +3231,7 @@ export default function LocalProfile() {
               , starting with her dedication to Grandma Mery.{" "}
             </div>
             <div className="inline">
-              <div className="center content-center justify-center">
+                <div className="center flex justify-center">
                 <a href="https://kenchawkin.files.wordpress.com/2022/07/angelina-makes-a-heart-sending-love-to-her-fans.png">
                   <Image
                     src={heartLove}

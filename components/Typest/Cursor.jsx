@@ -1,11 +1,9 @@
-import * as React from 'react'
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import './Cursor.css';
-
+import * as React from "react";
+import { Component } from "react";
+import PropTypes from "prop-types";
+import "./Cursor.css";
 
 export default class Cursor extends Component {
-
   static propTypes = {
     blink: PropTypes.bool,
     show: PropTypes.bool,
@@ -13,16 +11,16 @@ export default class Cursor extends Component {
     hideWhenDone: PropTypes.bool,
     hideWhenDoneDelay: PropTypes.number,
     isDone: PropTypes.bool,
-  }
+  };
 
   static defaultProps = {
     blink: true,
     show: true,
-    element: '|',
+    element: "|",
     hideWhenDone: false,
     hideWhenDoneDelay: 1000,
     isDone: false,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -33,17 +31,27 @@ export default class Cursor extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const shouldHide = !this.props.isDone && nextProps.isDone && this.props.hideWhenDone;
+    const shouldHide =
+      !this.props.isDone && nextProps.isDone && this.props.hideWhenDone;
     if (shouldHide) {
-      setTimeout(() => this.setState({ shouldRender: false }), this.props.hideWhenDoneDelay);
+      setTimeout(
+        () => this.setState({ shouldRender: false }),
+        this.props.hideWhenDoneDelay,
+      );
     }
   }
 
   componentDidUpdate() {
     const { show, isDone } = this.props;
-    if (!show) { return; }
-    if (isDone) { return; }
-    if (this._isReRenderingCursor) { return; }
+    if (!show) {
+      return;
+    }
+    if (isDone) {
+      return;
+    }
+    if (this._isReRenderingCursor) {
+      return;
+    }
 
     // In webkit and blink, rendering the cursor alongside the text as it
     // animates sometimes causes the text to stop rendering when it reaches
@@ -71,14 +79,9 @@ export default class Cursor extends Component {
 
   render() {
     if (this.state.shouldRender) {
-      const className = this.props.blink ? ' Cursor--blinking' : '';
-      return (
-        <span className={`Cursor${className}`}>
-          {this.props.element}
-        </span>
-      );
+      const className = this.props.blink ? " Cursor--blinking" : "";
+      return <span className={`Cursor${className}`}>{this.props.element}</span>;
     }
     return null;
   }
-
 }

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 
 const IframeWrapper = ({ children, ...delegated }) => {
   return (
@@ -10,7 +10,7 @@ const IframeWrapper = ({ children, ...delegated }) => {
         {children}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default IframeWrapper
+export default IframeWrapper;

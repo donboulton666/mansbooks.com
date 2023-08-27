@@ -83,17 +83,17 @@ export default function Avatar({
             alt="Avatar"
             width={32}
             height={32}
-            className="avatar image mb-4 h-8 w-8 rounded-full ring ring-wine-300 ring-offset-4"
+            className="avatar image h-9 w-9 rounded-full ring ring-wine-300 ring-offset-4"
           />
         ) : (
-          <div className="avatar no-image">
+          <div className="avatar no-image mt-1 pt-1 ml-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 32 32"
               stroke-width="1.5"
               stroke="currentColor"
-              className="h-8 w-8 text-wine-300 hover:text-slate-300"
+              className="h-9 w-9 text-wine-300 hover:text-slate-300"
             >
               <path
                 stroke-linecap="round"

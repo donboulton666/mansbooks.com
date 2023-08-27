@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import useSound from "use-sound";
-import supabase from "@app/supabase-provider"
+import supabase from "@app/supabase-provider";
 import { Database } from "@lib/schema";
 import fetcher from "@lib/fetcher";
 import { Applause } from "@lib/types";

@@ -149,30 +149,30 @@ function Login({ session }: { session: Session | null }) {
             </div>
             <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
               <a target="_blank" rel="noreferrer" href="/about">
-                  <button
-                    type="button"
-                    class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                <button
+                  type="button"
+                  class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="sbui-icon "
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="sbui-icon "
-                    >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>{' '}
-                    <span class="truncate">About PubliusLogic</span>{' '}
-                  </button>
-                </a>
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>{" "}
+                  <span class="truncate">About Mansbooks</span>{" "}
+                </button>
+              </a>
             </div>
           </nav>
         </div>
@@ -220,12 +220,12 @@ function Login({ session }: { session: Session | null }) {
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
                 All week I have been working on Angelina Jordans New Album{" "}
-                <a
-                  href="https://www.youtube.com/playlist?list=PLduoB64Irge5-yS-QI1Je_IOvm0FEmkkt"
+                <Link
+                  href="/old-enough"
                   aria-describedby="I am Old Enough"
                 >
                   I am Old Enough
-                </a>{" "}
+                </Link>{" "}
                 building a backend with{" "}
                 <a
                   href="https://supabase.com/launch-week"

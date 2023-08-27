@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export const sleep = (val) => new Promise((resolve) => (
-  val != null ? setTimeout(resolve, val) : resolve()
-));
+export const sleep = (val) =>
+  new Promise((resolve) =>
+    val != null ? setTimeout(resolve, val) : resolve(),
+  );
 
 export function gaussianRnd(mean, std) {
   const times = 12;
@@ -10,14 +11,13 @@ export function gaussianRnd(mean, std) {
   for (let idx = 0; idx < times; idx++) {
     sum += Math.random();
   }
-  sum -= (times / 2);
-  return Math.round((sum) * std) + mean;
+  sum -= times / 2;
+  return Math.round(sum * std) + mean;
 }
 
 export function eachPromise(arr, iterator, ...extraArgs) {
-  const promiseReducer = (prev, current, idx) => (
-    prev.then(() => iterator(current, idx, ...extraArgs))
-  );
+  const promiseReducer = (prev, current, idx) =>
+    prev.then(() => iterator(current, idx, ...extraArgs));
   return Array.from(arr).reduce(promiseReducer, Promise.resolve());
 }
 
@@ -32,11 +32,11 @@ export function exclude(obj, keys) {
 }
 
 export function isBackspaceElement(element) {
-  return element && element.type && element.type.componentName === 'Backspace';
+  return element && element.type && element.type.componentName === "Backspace";
 }
 
 export function isDelayElement(element) {
-  return element && element.type && element.type.componentName === 'Delay';
+  return element && element.type && element.type.componentName === "Delay";
 }
 
 export function extractTextFromElement(element) {
@@ -70,7 +70,7 @@ export function extractTextFromElement(element) {
 
 export function cloneElement(element, children) {
   const tag = element.type;
-  const props = exclude(element.props, ['children']);
+  const props = exclude(element.props, ["children"]);
   const getMilliseconds = new Date().getUTCMilliseconds();
   const randomStamp = getMilliseconds + Math.random() + Math.random();
   // eslint-disable-next-line
@@ -88,19 +88,19 @@ function cloneElementWithSpecifiedTextAtIndex(element, textLines, textIdx) {
     const [child, advIdx] = cloneElementWithSpecifiedTextAtIndex(
       el,
       textLines,
-      idx
+      idx,
     );
     idx = advIdx;
     return child;
   };
 
-  const isNonTypistElement = (
+  const isNonTypistElement =
     React.isValidElement(element) &&
-    !(isBackspaceElement(element) || isDelayElement(element))
-  );
+    !(isBackspaceElement(element) || isDelayElement(element));
 
   if (isNonTypistElement) {
-    const clonedChildren = React.Children.map(element.props.children, recurse) || [];
+    const clonedChildren =
+      React.Children.map(element.props.children, recurse) || [];
     return [cloneElement(element, clonedChildren), idx];
   }
 

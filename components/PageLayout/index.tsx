@@ -76,7 +76,7 @@ export default function Layout({
         )}
         <ViewSource />
         <div className={styles.page}>
-          <div className="blog-beams">
+          <div className="login-beams">
             <main className={styles.main} style={layoutStyles}>
               <SkipNavContent />
               <div className={cn(styles.full, className)}>{children}</div>

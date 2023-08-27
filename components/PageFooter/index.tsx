@@ -285,7 +285,7 @@ export default function Footer() {
                         aria-describedby="About"
                         area-label="About"
                       >
-                        About Angie
+                        About Design
                       </Link>
                     </li>
                     <li>
