@@ -41,7 +41,6 @@ export default function AuthForm() {
         }}
         theme="dark"
         providers={["google", "spotify"]}
-        redirectTo="/account"
       />
     </div>
   );

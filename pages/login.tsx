@@ -160,8 +160,8 @@ function Login({ session }: { session: Session | null }) {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     class="sbui-icon "
                   >
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -188,7 +188,21 @@ function Login({ session }: { session: Session | null }) {
                 </h2>
               </div>
               <div className="flex flex-col gap-5">
-                <AuthForm />
+                {!session ? (
+                  <AuthForm />
+                ) : (
+                  <>
+                    <ColumnGridLeft>
+                      <Account key={session.user.id} session={session} />
+                      <div
+                        className="flex h-full w-full flex-col items-center justify-center p-4"
+                        style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
+                      >
+                        <TodoList session={session} />
+                      </div>
+                    </ColumnGridLeft>
+                  </>
+                )}
               </div>
             </div>
             <div className="sm:text-center">
@@ -220,10 +234,7 @@ function Login({ session }: { session: Session | null }) {
               </div>
               <blockquote className="z-10 max-w-lg text-3xl">
                 All week I have been working on Angelina Jordans New Album{" "}
-                <Link
-                  href="/old-enough"
-                  aria-describedby="I am Old Enough"
-                >
+                <Link href="/old-enough" aria-describedby="I am Old Enough">
                   I am Old Enough
                 </Link>{" "}
                 building a backend with{" "}

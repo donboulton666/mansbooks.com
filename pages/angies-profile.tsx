@@ -666,7 +666,7 @@ export default function LocalProfile() {
               </div>
             </Section>
             <Section>
-            <div className="inline">
+              <div className="inline">
                 <div className="center flex justify-center">
                   <a href="https://kenchawkin.files.wordpress.com/2021/06/angelinas-agt-golden-buzzer-1.png">
                     <Image
@@ -899,7 +899,7 @@ export default function LocalProfile() {
               </div>
             </Section>
             <Section>
-            <div className="inline">
+              <div className="inline">
                 <div className="center flex justify-center">
                   <a href="https://kenchawkin.files.wordpress.com/2021/06/angelina-jordan-hands-over-heart-singing-whitney-houstons-i-have-nothing.png">
                     <Image
@@ -3231,7 +3231,7 @@ export default function LocalProfile() {
               , starting with her dedication to Grandma Mery.{" "}
             </div>
             <div className="inline">
-                <div className="center flex justify-center">
+              <div className="center flex justify-center">
                 <a href="https://kenchawkin.files.wordpress.com/2022/07/angelina-makes-a-heart-sending-love-to-her-fans.png">
                   <Image
                     src={heartLove}
