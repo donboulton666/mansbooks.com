@@ -14,17 +14,7 @@
  * limitations under the License.
  */
 import { ConfUser } from "@lib/types";
-import { createClient } from "@supabase/supabase-js";
-
-const supabase =
-  process.env.SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET &&
-  process.env.EMAIL_TO_ID_SECRET
-    ? createClient(
-        process.env.SUPABASE_URL,
-        process.env.SUPABASE_SERVICE_ROLE_SECRET,
-      )
-    : undefined;
+import supabase from "@lib/supabase";
 
 export async function getUserByUsername(username: string): Promise<ConfUser> {
   const { data } = await supabase!

@@ -13,6 +13,8 @@ const options = {
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const supabase = createClient<Database>(supabaseUrl, supabaseKey, options);
+const client = createClient<Database>(supabaseUrl, supabaseKey, options);
+
+const supabase = () => client;
 
 export default supabase;

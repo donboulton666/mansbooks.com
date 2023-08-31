@@ -192,7 +192,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
               name: "Breadcrumbs",
             })}
             ,
-          </script>
+          </script>        
         </>
         ,
       </Head>
