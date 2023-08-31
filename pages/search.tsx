@@ -114,7 +114,7 @@ export default function Search() {
                     "@type": "ListItem",
                     item: {
                       "@id": "https://mansbooks.com/",
-                      name: "MansBooks Home",
+                      name: "Home",
                     },
                     position: "1",
                   },
@@ -122,7 +122,7 @@ export default function Search() {
                     "@type": "ListItem",
                     item: {
                       "@id": "https://mansbooks.com/search",
-                      name: "MansBooks Search",
+                      name: "Search",
                     },
                     position: "2",
                   },

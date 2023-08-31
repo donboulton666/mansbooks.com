@@ -112,7 +112,7 @@ export default function About() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Home",
                   },
                   position: "1",
                 },
@@ -120,7 +120,7 @@ export default function About() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/about",
-                    name: "About Angie",
+                    name: "About",
                   },
                   position: "2",
                 },

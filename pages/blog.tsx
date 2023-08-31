@@ -178,8 +178,8 @@ export default function Blog({ subscription }) {
                   {
                     "@type": "ListItem",
                     item: {
-                      "@id": "https://mansbooks.com/",
-                      name: "MansBooks Home",
+                      "@id": "https://mansbooks.com/blog",
+                      name: "Blog",
                     },
                     position: "1",
                   },

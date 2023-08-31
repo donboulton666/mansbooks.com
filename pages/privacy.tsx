@@ -142,7 +142,7 @@ export default function Privacy() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/privacy",
-                    name: "Mansbooks Privacy",
+                    name: "Privacy",
                   },
                   position: "2",
                 },

@@ -106,7 +106,7 @@ function Account({ session }: { session: Session | null }) {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Home",
                   },
                   position: "1",
                 },

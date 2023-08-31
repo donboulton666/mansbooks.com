@@ -108,7 +108,7 @@ export default function LocalProfile() {
                     "@type": "ListItem",
                     item: {
                       "@id": "https://mansbooks.com/",
-                      name: "MansBooks Home",
+                      name: "Home",
                     },
                     position: "1",
                   },
@@ -116,7 +116,7 @@ export default function LocalProfile() {
                     "@type": "ListItem",
                     item: {
                       "@id": "https://mansbooks.com/angies-profile",
-                      name: "Angelina's Profile",
+                      name: "Profile",
                     },
                     position: "2",
                   },

@@ -102,7 +102,7 @@ export default function Contact() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Home",
                   },
                   position: "1",
                 },
@@ -110,7 +110,7 @@ export default function Contact() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/contact",
-                    name: "MansBooks Contact",
+                    name: "Contact",
                   },
                   position: "2",
                 },

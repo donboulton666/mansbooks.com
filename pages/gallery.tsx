@@ -37,14 +37,66 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
     <>
       <Stars />
       <Head>
-        <title>Gallery</title>
         <>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "WebSite",
+              about: {
+                "@id": "https://mansbooks.com",
+              },
+              audience: "public",
+              abstract: "Angelina Jordans Webinar Home Page.",
+              author: {
+                "@id": "https://donboulton.com",
+              },
+              copyrightHolder: {
+                "@id": "https://mansbooks.com",
+              },
+              copyrightYear: 2023,
+              creator: {
+                "@id": "https://mansbooks.com",
+              },
+              description: "Angelina Jordans Webinar Home Page",
+              image: {
+                "@type": "ImageObject",
+                url: angie,
+                width: "1400px",
+                height: "450px",
+              },
+              inLanguage: "en",
+              name: "Mansbooks",
+              publisher: {
+                "@id": "https://mansbooks.com",
+              },
+              url: "https://mansbooks.com",
+            })}
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: "Gallery",
+              description: "Angelina Jordans Webinar Home Page",
+              author: [
+                {
+                  "@type": "Person",
+                  name: "Angelina Jordan",
+                  url: "https://mansbooks.com/angies-profile",
+                },
+              ],
+              image: angie,
+              datePublished: "2023-01-10T08:00:00+08:00",
+              dateModified: "2023-08-30T09:20:00+08:00",
+            })}
+            ,
+          </script>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Gallery",
-              url: "https://mansbooks.com/gallery",
+              name: "Contact",
+              url: "https://mansbooks.com",
               image: {
                 "@type": "ImageObject",
                 url: angie,
@@ -123,7 +175,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Home",
                   },
                   position: "1",
                 },
@@ -131,7 +183,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/gallery",
-                    name: "MansBooks Gallery",
+                    name: "Gallery",
                   },
                   position: "2",
                 },

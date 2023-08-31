@@ -95,7 +95,7 @@ export default function Terms() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Home",
                   },
                   position: "1",
                 },
@@ -103,7 +103,7 @@ export default function Terms() {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/terms",
-                    name: "MansBooks Terms",
+                    name: "Terms",
                   },
                   position: "2",
                 },

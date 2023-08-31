@@ -106,7 +106,7 @@ function Login({ session }: { session: Session | null }) {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/",
-                    name: "MansBooks Home",
+                    name: "Home",
                   },
                   position: "1",
                 },
@@ -114,7 +114,7 @@ function Login({ session }: { session: Session | null }) {
                   "@type": "ListItem",
                   item: {
                     "@id": "https://mansbooks.com/login",
-                    name: "Mansbooks Login",
+                    name: "Login",
                   },
                   position: "2",
                 },
