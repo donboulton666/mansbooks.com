@@ -47,7 +47,7 @@ export default function TicketShare({
   return (
     <Page meta={meta}>
       <Head>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="index" />
       </Head>
       <SkipNavContent />
       <ConfContent

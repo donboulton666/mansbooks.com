@@ -18,6 +18,8 @@ export default class CustomDocument extends Document {
           <meta name="description" content="Best Mansbooks in the world" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="robots" content="index" />
+          <meta name="googlebot" content="index" />
           <meta
             name="msapplication-config"
             content="/icons/browserconfig.xml"
