@@ -69,10 +69,12 @@ export default function Conf() {
                 {
                   "@type": "Person",
                   name: "Angelina Jordan",
+                  url: "https://mansbooks.com/angies-profile"
                 },
               ],
               image: angie,
-              datePublished: "Jan 10th 2023",
+              datePublished: "2023-01-10T08:00:00+08:00",
+              dateModified: "2023-08-30T09:20:00+08:00",
             })}
             ,
           </script>

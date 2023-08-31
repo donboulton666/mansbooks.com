@@ -27,10 +27,12 @@ export default function PostHeader({
                 {
                   "@type": "Person",
                   name: author.name,
+                  url: seo,
                 },
               ],
               image: angie,
-              datePublished: date,
+              datePublished: "2023-01-10T08:00:00+08:00",
+              dateModified: date,
             })}
             ,
           </script>
