@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../Avatar";
+import HmsAvatar from "../HmsAvatar";
 import {
   useHMSStore,
   useVideoList,
@@ -7,7 +7,7 @@ import {
   selectIsSomeoneScreenSharing,
   selectPeersByRole,
 } from "@100mslive/react-sdk";
-import VideoTile from "../VideoTile";
+import VideoTile from "../HmsVideoTile";
 import ScreenshareTile from "../ScreenshareTile";
 import { hmsConfig } from "../config";
 
@@ -72,7 +72,7 @@ const MobileHeader = () => {
             key={l.id}
             className="mx-2 flex flex-col items-center justify-center space-y-2"
           >
-            <Avatar customSize={40} name={l.name} />
+            <HmsAvatar customSize={40} name={l.name} />
             <span className="text-xs">{l.name}</span>
           </div>
         ))}

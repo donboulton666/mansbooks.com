@@ -5,7 +5,7 @@ import { SkipNavContent } from "@reach/skip-nav";
 import { getUserByUsername } from "@lib/db-api";
 
 import Page from "@components/page";
-import ConfContent from "@components/index";
+import ConfContent from "@components/conf-index";
 import {
   SITE_URL,
   SITE_NAME,

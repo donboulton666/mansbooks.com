@@ -15,7 +15,6 @@ import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
 import ViewSource from "../view-source";
 import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
-import Avatar from "@components/UserAccount/avatar";
 
 type Props = {
   children: ReactNode;

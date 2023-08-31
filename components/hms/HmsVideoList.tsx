@@ -10,7 +10,7 @@ import {
   selectPeers,
 } from "@100mslive/react-sdk";
 import { useEffect, useState } from "react";
-import VideoTile from "./VideoTile";
+import VideoTile from "./HmsVideoTile";
 import RoleChangeDialog from "./request";
 import EmptyRoom from "./EmptyRoom";
 import Pagination from "./Pagination";

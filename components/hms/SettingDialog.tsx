@@ -5,7 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { CrossIcon } from "@100mslive/react-icons";
 import Select from "./select";
 import { AudioLevelIcon } from "@100mslive/react-icons";
-import Button from "./Button";
+import Button from "./HmsButton";
 import { useDevices, DeviceType } from "./lib/useDevices";
 
 const SettingDialog: FC = ({ children }) => {

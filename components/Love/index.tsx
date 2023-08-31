@@ -1,10 +1,9 @@
-import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-react";
 import { useEffect, useState } from "react";
 import { Database } from "@lib/database.types";
+import supabase from "@lib/supabase";
 
 type Loves = Database["public"]["Tables"]["loves"]["Row"];
-
-const supabase = useSupabaseClient<Database>();
 
 export default function LovesList({ session }: { session: Session }) {
   const [loves, setLoves] = useState<Loves[]>([]);

@@ -5,7 +5,7 @@ import {
   useHMSStore,
   selectIsConnectedToRoom,
 } from "@100mslive/react-sdk";
-import { getToken } from "../hms/lib/getToken";
+import { getToken } from "./lib/getToken";
 import Join from "@components/Join";
 import Live from "./Live";
 import { useRouter } from "next/router";

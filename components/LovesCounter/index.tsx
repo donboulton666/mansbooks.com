@@ -1,10 +1,11 @@
 import fetcher from "@lib/fetcher";
-import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-react";
 import { Database } from "@lib/database.types";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { getLoves, registerLoves } from "../../lib/loves";
 import useSWR from "swr";
+import supabase from "@lib/supabase";
 
 type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
@@ -19,7 +20,6 @@ export default function LovesCounter<LovesProps>({
 }: {
   session: Session;
 }) {
-  const supabase = useSupabaseClient<Database>();
   const [loves, setLoves] = useState<Loves[]>([]);
   const { profile: myProfile } = useContext(UserContext);
   const { data } = useSWR<Loves>(`/api/loves/${slug}`, fetcher);

@@ -1,7 +1,7 @@
 import React from "react";
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useState } from "react";
-import Button from "./Button";
+import Button from "./HmsButton";
 import { InviteIcon, PersonIcon } from "@100mslive/react-icons";
 import { selectLocalPeerRole } from "@100mslive/react-sdk";
 import { useHMSStore } from "@100mslive/react-sdk";

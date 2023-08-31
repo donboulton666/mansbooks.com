@@ -5,7 +5,7 @@ import useLoginStatus from "@lib/hooks/use-login-status";
 import styles from "@components/stage-container.module.css";
 import styleUtils from "@components/utils.module.css";
 import ConfEntry from "@components/conf-entry";
-import Room from "@components/hms/Room";
+import Room from "@components/hms/HmsRoom";
 import Sidebar from "@components/hms/sidebar";
 import { useHMSStore, selectIsConnectedToRoom } from "@100mslive/react-sdk";
 import ScheduleSidebar from "@components/schedule-sidebar";

@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "./HmsFooter";
+import Header from "./HmsHeader";
 import List from "./Conference";
 import toast, { Toaster } from "react-hot-toast";
 import { useHMSNotifications } from "@100mslive/react-sdk";

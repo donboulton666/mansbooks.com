@@ -12,7 +12,8 @@ import LovesCounter from "@components/LovesCounter";
 import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
 import styles from "@components/sponsor-section.module.css";
 import styleUtils from "@components/utils.module.css";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useSession } from "@supabase/auth-helpers-react";
+import supabase from "@lib/supabase";
 import {
   EmailShareButton,
   EmailIcon,
@@ -39,7 +40,6 @@ type SponsorSectionProps = {
 export default function SponsorSection({ sponsor }: SponsorSectionProps) {
   const [showModal, setShowModal] = useState(false);
   const session = useSession();
-  const supabase = useSupabaseClient();
   return (
     <>
       <>

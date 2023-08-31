@@ -1,7 +1,7 @@
 import { Redis } from "@upstash/redis";
 import { useState, Fragment } from "react";
 import { RadioGroup } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/20/solid";
+import { CheckIcon } from "@heroicons/react/outline";
 
 const plans = ["The Best", "Really Good", "Ok", "Needs Work", "Bad"];
 

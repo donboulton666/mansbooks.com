@@ -18,13 +18,13 @@ import {
   selectIsLocalVideoDisplayEnabled,
   useAVToggle,
 } from "@100mslive/react-sdk";
-import { AudioLevel } from "../VideoTile";
+import { AudioLevel } from "../HmsVideoTile";
 import InfoIcon from "@components/icons/icon-info";
 import { useRouter } from "next/router";
 import { usePreview } from "./usePreview";
 import SettingDialog from "../SettingDialog";
-import Avatar from "../Avatar";
-import Button from "../Button";
+import HmsAvatar from "../HmsAvatar";
+import Button from "../HmsButton";
 import IconButton from "./IconButton";
 
 export const PreviewScreen: FC<{ token: string }> = ({ token }) => {
@@ -110,7 +110,7 @@ const PreviewContainer: React.FC<{ name: string }> = ({ name }) => {
             </SettingDialog>
           </div>
           {isLocalVideoEnabled ? null : (
-            <Avatar size="lg" className="absolute z-10" name={name} />
+            <HmsAvatar size="lg" className="absolute z-10" name={name} />
           )}
         </>
       ) : (

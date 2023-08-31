@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@100mslive/react-icons";
 import HmsLogo from "@components/icons/icon-hms";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Button from "../Button";
+import Button from "../HmsButton";
 import LinkButton from "../LinkButton";
 
 const data = [

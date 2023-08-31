@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import { Database } from "@lib/database.types";
 import { useRouter } from "next/router";
 import i18n from "@lib/i18n";
+import supabase from "@lib/supabase";
 
 type Todos = Database["public"]["Tables"]["todos"]["Row"];
-
-const supabase = useSupabaseClient<Database>();
 
 export default function TodoList({ session }: { session: Session }) {
   const [todos, setTodos] = useState<Todos[]>([]);

@@ -8,7 +8,7 @@ import {
 import { ShareScreenIcon } from "@100mslive/react-icons";
 import React from "react";
 import IconFitScreen from "@components/icons/icon-fit-screen";
-import Button from "./Button";
+import Button from "./HmsButton";
 import { CrossIcon } from "@100mslive/react-icons";
 import { hmsConfig } from "./config";
 import Image from "next/image";

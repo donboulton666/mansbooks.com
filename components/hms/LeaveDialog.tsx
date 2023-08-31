@@ -2,7 +2,7 @@ import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { HangUpIcon } from "@100mslive/react-icons";
 import ControlButton from "./ControlButton";
-import Button from "./Button";
+import Button from "./HmsButton";
 import { useHMSActions } from "@100mslive/react-sdk";
 import { useRouter } from "next/router";
 

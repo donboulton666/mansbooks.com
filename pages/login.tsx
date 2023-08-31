@@ -7,15 +7,15 @@ import supabase from "@lib/supabase";
 import AccountForm from "@app/account/account-form";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
+import Survey from "@components/Survey";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
-import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-react";
 import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 
 function Login({ session }: { session: Session | null }) {
-  const supabase = useSupabaseClient();
   return (
     <>
       <Stars />
@@ -199,6 +199,12 @@ function Login({ session }: { session: Session | null }) {
                         style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
                       >
                         <TodoList session={session} />
+                      </div>
+                      <div
+                        className="flex h-full w-full flex-col items-center justify-center p-4"
+                        style={{ minWidth: 250, maxWidth: 600, margin: "auto" }}
+                      >
+                        <Survey session={session} />
                       </div>
                     </ColumnGridLeft>
                   </>

@@ -6,7 +6,7 @@ import DemoModal from "../demo-modal";
 import InviteIcon from "@components/icons/icon-invite";
 import { useHMSStore, selectLocalPeerRole } from "@100mslive/react-sdk";
 import { useRouter } from "next/router";
-import Button from "../Button";
+import Button from "../HmsButton";
 
 const RoomCta = () => {
   const role = useHMSStore(selectLocalPeerRole);

@@ -7,7 +7,7 @@ import { PreviewScreen } from "./preview";
 import { useHMSActions } from "@100mslive/react-sdk";
 import { parsedUserAgent } from "@100mslive/hms-video";
 import * as Dialog from "@radix-ui/react-dialog";
-import Button from "./Button";
+import Button from "./HmsButton";
 import { ArrowRightIcon } from "@100mslive/react-icons";
 import { useRouter } from "next/router";
 

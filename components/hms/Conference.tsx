@@ -1,5 +1,5 @@
 import React from "react";
-import VideoList from "./VideoList";
+import VideoList from "./HmsVideoList";
 
 const List = () => {
   return <VideoList />;

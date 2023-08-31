@@ -9,7 +9,7 @@ import { useRef, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import s from "./index.module.css";
 import Select from "../select";
-import { isMobileDevice } from "../Join";
+import { isMobileDevice } from "../HmsJoin";
 
 import {
   MicOnIcon,
@@ -23,9 +23,9 @@ import {
 import InfoIcon from "@components/icons/icon-info";
 import router from "next/router";
 import { TestAudio } from "../SettingDialog";
-import Avatar from "../Avatar";
+import HmsAvatar from "../HmsAvatar";
 import IconButton from "../preview/IconButton";
-import Button from "../Button";
+import Button from "../HmsButton";
 
 const RoleChangeDialog = () => {
   const isMobile = isMobileDevice();
@@ -195,7 +195,7 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
             playsInline
           />
         ) : (
-          <Avatar size="lg" name={"Guest"} />
+          <HmsAvatar size="lg" name={"Guest"} />
         )}
         <div className="absolute bottom-4 z-30 flex space-x-2">
           <IconButton

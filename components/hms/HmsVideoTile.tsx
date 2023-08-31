@@ -11,7 +11,7 @@ import {
   selectTrackByID,
 } from "@100mslive/react-sdk";
 import { useCallback, useRef, FC } from "react";
-import Avatar from "./Avatar";
+import HmsAvatar from "./HmsAvatar";
 import { hmsConfig } from "./config";
 import useVideo from "./lib/useVideo";
 import Image from "next/image";
@@ -44,7 +44,7 @@ const VideoTile: FC<VideoTileProps> = ({ width, height, trackId }) => {
               ) : null}
             </>
           ) : (
-            <Avatar
+            <HmsAvatar
               size={width < 400 ? "lg" : "xl"}
               className="absolute"
               name={peer.name}

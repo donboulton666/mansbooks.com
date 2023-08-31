@@ -8,7 +8,7 @@ interface Props {
   customSize?: number;
 }
 
-const Avatar: React.FC<Props> = ({
+const HmsAvatar: React.FC<Props> = ({
   name,
   className = "",
   size = "sm",
@@ -38,4 +38,4 @@ const Avatar: React.FC<Props> = ({
   );
 };
 
-export default Avatar;
+export default HmsAvatar;

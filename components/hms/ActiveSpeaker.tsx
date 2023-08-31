@@ -8,7 +8,7 @@ import {
 } from "@100mslive/react-sdk";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { hmsConfig } from "./config";
-import VideoTile from "./VideoTile";
+import VideoTile from "./HmsVideoTile";
 
 const ActiveSpeaker = () => {
   const localPeer = useHMSStore(selectLocalPeer);

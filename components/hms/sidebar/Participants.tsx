@@ -4,7 +4,7 @@ import {
   selectPeersByRole,
 } from "@100mslive/react-sdk";
 import React from "react";
-import Avatar from "../Avatar";
+import HmsAvatar from "../HmsAvatar";
 import Dropdown from "./Dropdown";
 
 const Participants = () => {
@@ -21,7 +21,7 @@ const Participants = () => {
             <p>Moderator ({backstagePeers.length})</p>
             {backstagePeers.map((p) => (
               <div key={p.id} className="my-4 flex items-center">
-                <Avatar name={p.name} />
+                <HmsAvatar name={p.name} />
                 <div className="ml-4 grow">
                   {p.name} {p.id !== localPeer.id ? null : "(You)"}{" "}
                 </div>
@@ -39,7 +39,7 @@ const Participants = () => {
           <p className="flex items-center">Speaker ({stagePeers.length})</p>
           {stagePeers.map((p) => (
             <div key={p.id} className="my-4 flex items-center">
-              <Avatar name={p.name} />
+              <HmsAvatar name={p.name} />
               <div className="ml-4 grow">
                 {p.name} {p.id !== localPeer.id ? null : "(You)"}
               </div>
@@ -59,7 +59,7 @@ const Participants = () => {
           </p>
           {inviteePeers.map((p) => (
             <div key={p.id} className="my-4 flex items-center">
-              <Avatar name={p.name} />
+              <HmsAvatar name={p.name} />
               <div className="ml-4 grow">
                 {p.name} {p.id !== localPeer.id ? null : "(You)"}
               </div>
@@ -77,7 +77,7 @@ const Participants = () => {
           <p className="flex items-center">Viewers ({viewerPeers.length})</p>
           {viewerPeers.map((p) => (
             <div key={p.id} className="my-4 flex items-center">
-              <Avatar name={p.name} />
+              <HmsAvatar name={p.name} />
               <div className="ml-4 grow">{p.name} </div>
               <Dropdown role={p.roleName || "viewer"} id={p.id} />
             </div>

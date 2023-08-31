@@ -15,8 +15,9 @@ import {
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
 import Avatar from "@app/account/avatar";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useSession } from "@supabase/auth-helpers-react";
 import { Database } from "@lib/database.types";
+import supabase from "@lib/supabase";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -25,7 +26,6 @@ function classNames(...classes) {
 }
 
 export default function NavDropdown() {
-  const supabase = useSupabaseClient<Database>();
   const session = useSession();
   return (
     <>
@@ -178,7 +178,7 @@ export default function NavDropdown() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href="/user-account"
+                              href="/account"
                               className={classNames(
                                 active ? "bg-slate-700" : "",
                                 "ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",

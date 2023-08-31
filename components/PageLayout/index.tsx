@@ -12,7 +12,6 @@ import MobileMenu from "../mobile-menu";
 import PageFooter from "../PageFooter";
 import ScrollIndicator from "../ScrollIndicator";
 import NavDropdown from "@components/NavDropdown";
-import Avatar from "@components/UserAccount/avatar";
 import ViewSource from "../view-source";
 import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
 
