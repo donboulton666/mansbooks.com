@@ -183,9 +183,7 @@ function Account({ session }: { session: Session | null }) {
                 <LeftText className="mb-2 mt-8 text-2xl lg:text-3xl">
                   Welcome back
                 </LeftText>
-                <h2 className="text-scale-1100 text-sm">
-                  Your account
-                </h2>
+                <h2 className="text-scale-1100 text-sm">Your account</h2>
               </div>
               <div className="flex flex-col gap-5">
                 {!session ? (

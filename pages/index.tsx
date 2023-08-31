@@ -69,7 +69,7 @@ export default function Conf() {
                 {
                   "@type": "Person",
                   name: "Angelina Jordan",
-                  url: "https://mansbooks.com/angies-profile"
+                  url: "https://mansbooks.com/angies-profile",
                 },
               ],
               image: angie,
