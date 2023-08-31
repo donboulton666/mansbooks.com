@@ -3,7 +3,7 @@ export type Json =
   | number
   | boolean
   | null
-  | { [key: string]: Json }
+  | { [key: string]: Json | undefined }
   | Json[];
 
 export interface Database {
@@ -20,7 +20,7 @@ export interface Database {
           count?: number | null;
           created_at?: string | null;
           id?: number;
-          slug: string;
+          slug?: string;
         };
         Update: {
           count?: number | null;
@@ -30,6 +30,74 @@ export interface Database {
         };
         Relationships: [];
       };
+      channels: {
+        Row: {
+          created_by: string;
+          id: number;
+          inserted_at: string;
+          slug: string;
+        };
+        Insert: {
+          created_by: string;
+          id?: number;
+          inserted_at?: string;
+          slug: string;
+        };
+        Update: {
+          created_by?: string;
+          id?: number;
+          inserted_at?: string;
+          slug?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "channels_created_by_fkey";
+            columns: ["created_by"];
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      comments: {
+        Row: {
+          created_at: string | null;
+          id: string;
+          payload: string | null;
+          reply_of: string | null;
+          slug: string;
+          updated_at: string | null;
+          username: string | null;
+          writer_email: string | null;
+        };
+        Insert: {
+          created_at?: string | null;
+          id?: string;
+          payload?: string | null;
+          reply_of?: string | null;
+          slug: string;
+          updated_at?: string | null;
+          username?: string | null;
+          writer_email?: string | null;
+        };
+        Update: {
+          created_at?: string | null;
+          id?: string;
+          payload?: string | null;
+          reply_of?: string | null;
+          slug?: string;
+          updated_at?: string | null;
+          username?: string | null;
+          writer_email?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "comments_username_fkey";
+            columns: ["username"];
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       github_users: {
         Row: {
           createdAt: string;
@@ -38,7 +106,7 @@ export interface Database {
         };
         Insert: {
           createdAt?: string;
-          id?: string;
+          id: string;
           userData?: Json | null;
         };
         Update: {
@@ -46,6 +114,14 @@ export interface Database {
           id?: string;
           userData?: Json | null;
         };
+        Relationships: [
+          {
+            foreignKeyName: "github_users_id_fkey";
+            columns: ["id"];
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       likes: {
         Row: {
@@ -66,6 +142,20 @@ export interface Database {
           post_id?: number | null;
           user_id?: string | null;
         };
+        Relationships: [
+          {
+            foreignKeyName: "likes_post_id_fkey";
+            columns: ["post_id"];
+            referencedRelation: "posts";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "likes_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       loves: {
         Row: {
@@ -74,7 +164,7 @@ export interface Database {
           email: string | null;
           id: number;
           slug: string;
-          user_id: string | null;
+          user_id: string;
         };
         Insert: {
           count?: number | null;
@@ -82,7 +172,7 @@ export interface Database {
           email?: string | null;
           id?: number;
           slug?: string;
-          user_id?: string | null;
+          user_id: string;
         };
         Update: {
           count?: number | null;
@@ -90,13 +180,50 @@ export interface Database {
           email?: string | null;
           id?: number;
           slug?: string;
-          user_id?: string | null;
+          user_id?: string;
         };
         Relationships: [
           {
             foreignKeyName: "loves_user_id_fkey";
             columns: ["user_id"];
-            referencedRelation: "profiles";
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      messages: {
+        Row: {
+          channel_id: number;
+          id: number;
+          inserted_at: string;
+          message: string | null;
+          user_id: string;
+        };
+        Insert: {
+          channel_id: number;
+          id?: number;
+          inserted_at?: string;
+          message?: string | null;
+          user_id: string;
+        };
+        Update: {
+          channel_id?: number;
+          id?: number;
+          inserted_at?: string;
+          message?: string | null;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "messages_channel_id_fkey";
+            columns: ["channel_id"];
+            referencedRelation: "channels";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "messages_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "users";
             referencedColumns: ["id"];
           },
         ];
@@ -106,14 +233,17 @@ export interface Database {
           author: string | null;
           content: string | null;
           created_at: string | null;
+          email: string | null;
           id: number;
           parent: number | null;
           photos: Json | null;
+          user_id: string | null;
         };
         Insert: {
           author?: string | null;
           content?: string | null;
           created_at?: string | null;
+          email?: string | null;
           id?: number;
           parent?: number | null;
           photos?: Json | null;
@@ -123,51 +253,86 @@ export interface Database {
           author?: string | null;
           content?: string | null;
           created_at?: string | null;
+          email?: string | null;
           id?: number;
           parent?: number | null;
           photos?: Json | null;
           user_id?: string | null;
         };
+        Relationships: [
+          {
+            foreignKeyName: "posts_author_fkey";
+            columns: ["author"];
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "posts_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "profiles";
+            referencedColumns: ["username"];
+          },
+        ];
       };
       profiles: {
         Row: {
-          avatar: string | null;
           avatar_url: string | null;
           cover: string | null;
           full_name: string | null;
           id: string;
-          name: string | null;
           place: string | null;
           updated_at: string | null;
           username: string | null;
           website: string | null;
         };
         Insert: {
-          avatar?: string | null;
           avatar_url?: string | null;
           cover?: string | null;
           full_name?: string | null;
           id: string;
-          name?: string | null;
           place?: string | null;
           updated_at?: string | null;
           username?: string | null;
           website?: string | null;
         };
         Update: {
-          avatar?: string | null;
           avatar_url?: string | null;
           cover?: string | null;
           full_name?: string | null;
           id?: string;
-          name?: string | null;
           place?: string | null;
           updated_at?: string | null;
           username?: string | null;
           website?: string | null;
         };
+        Relationships: [
+          {
+            foreignKeyName: "profiles_id_fkey";
+            columns: ["id"];
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
       };
-      "saved-posts": {
+      role_permissions: {
+        Row: {
+          id: number;
+          permission: Database["public"]["Enums"]["app_permission"];
+          role: Database["public"]["Enums"]["app_role"];
+        };
+        Insert: {
+          id?: number;
+          permission: Database["public"]["Enums"]["app_permission"];
+          role: Database["public"]["Enums"]["app_role"];
+        };
+        Update: {
+          id?: number;
+          permission?: Database["public"]["Enums"]["app_permission"];
+          role?: Database["public"]["Enums"]["app_role"];
+        };
+        Relationships: [];
+      };
+      saved_posts: {
         Row: {
           created_at: string | null;
           id: number;
@@ -186,6 +351,20 @@ export interface Database {
           post_id?: number | null;
           user_id?: string | null;
         };
+        Relationships: [
+          {
+            foreignKeyName: "saved_posts_post_id_fkey";
+            columns: ["post_id"];
+            referencedRelation: "posts";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "saved_posts_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       todos: {
         Row: {
@@ -209,32 +388,66 @@ export interface Database {
           task?: string | null;
           user_id?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "todos_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      user_roles: {
+        Row: {
+          id: number;
+          role: Database["public"]["Enums"]["app_role"];
+          user_id: string;
+        };
+        Insert: {
+          id?: number;
+          role: Database["public"]["Enums"]["app_role"];
+          user_id: string;
+        };
+        Update: {
+          id?: number;
+          role?: Database["public"]["Enums"]["app_role"];
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "user_roles_user_id_fkey";
+            columns: ["user_id"];
+            referencedRelation: "users";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       users: {
         Row: {
-          createdAt: string;
           email: string | null;
           id: string;
           name: string | null;
-          ticketNumber: number;
+          status: Database["public"]["Enums"]["user_status"] | null;
+          ticketNumber: string | null;
           username: string | null;
         };
         Insert: {
-          createdAt?: string;
           email?: string | null;
           id: string;
           name?: string | null;
-          ticketNumber?: number;
+          status?: Database["public"]["Enums"]["user_status"] | null;
+          ticketNumber?: string | null;
           username?: string | null;
         };
         Update: {
-          createdAt?: string;
           email?: string | null;
           id?: string;
           name?: string | null;
-          ticketNumber?: number;
+          status?: Database["public"]["Enums"]["user_status"] | null;
+          ticketNumber?: string | null;
           username?: string | null;
         };
+        Relationships: [];
       };
       views: {
         Row: {
@@ -255,18 +468,20 @@ export interface Database {
           id?: number;
           slug?: string;
         };
+        Relationships: [];
       };
     };
     Views: {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
-    };
-    Enums: {
-      [_ in never]: never;
-    };
-    Functions: {
+      authorize: {
+        Args: {
+          requested_permission: Database["public"]["Enums"]["app_permission"];
+          user_id: string;
+        };
+        Returns: boolean;
+      };
       delete_avatar: {
         Args: {
           avatar_url: string;
@@ -280,12 +495,19 @@ export interface Database {
         };
         Returns: Record<string, unknown>;
       };
-      increment: {
-        Args: {
-          slug_text: string;
-        };
-        Returns: undefined;
-      };
+      increment:
+        | {
+            Args: {
+              row_id: number;
+            };
+            Returns: undefined;
+          }
+        | {
+            Args: {
+              slug_text: string;
+            };
+            Returns: undefined;
+          };
     };
     Enums: {
       app_permission: "channels.delete" | "messages.delete";
@@ -296,12 +518,4 @@ export interface Database {
       [_ in never]: never;
     };
   };
-}
-
-interface Views {
-  count: number;
-}
-
-interface Loves {
-  count: number;
 }

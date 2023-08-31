@@ -4,7 +4,7 @@ import {
   useSupabaseClient,
   Session,
 } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/schema";
+import { Database } from "@lib/database.types";
 import Avatar from "./avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];

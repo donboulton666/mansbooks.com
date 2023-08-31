@@ -1,6 +1,6 @@
 import fetcher from "@lib/fetcher";
 import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/schema";
+import { Database } from "@lib/database.types";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { getLoves, registerLoves } from "../../lib/loves";

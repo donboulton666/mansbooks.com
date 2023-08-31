@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from "next";
 import AuthForm from "@app/auth-form";
-import supabase from "@app/supabase-provider";
+import supabase from "@lib/supabase";
 import AccountForm from "@app/account/account-form";
 import Layout from "@components/PageLayout";
 import Image from "next/image";

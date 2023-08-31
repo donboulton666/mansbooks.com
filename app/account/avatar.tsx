@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/schema";
+import { Database } from "@lib/database.types";
 import Image from "next/image";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];

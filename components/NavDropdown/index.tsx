@@ -16,7 +16,7 @@ import {
 import Control from "@components/icons/control";
 import Avatar from "@app/account/avatar";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Database } from "@lib/schema";
+import { Database } from "@lib/database.types";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
