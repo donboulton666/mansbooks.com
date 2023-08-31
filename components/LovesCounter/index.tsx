@@ -1,5 +1,5 @@
 import fetcher from "@lib/fetcher";
-import { Session } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import { Database } from "@lib/database.types";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
@@ -18,7 +18,7 @@ export default function LovesCounter<LovesProps>({
   slug,
   user_id,
 }: {
-  session: Session;
+  session: Session | null;
 }) {
   const [loves, setLoves] = useState<Loves[]>([]);
   const { profile: myProfile } = useContext(UserContext);

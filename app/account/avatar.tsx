@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { Session } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import { Database } from "@lib/database.types";
 import Image from "next/image";
 import supabase from "@lib/supabase";
@@ -11,11 +13,13 @@ export default function Avatar({
   url,
   size,
   onUpload,
+  session,
 }: {
   uid: string;
   url: Profiles["avatar_url"];
   size: number;
   onUpload: (url: string) => void;
+  session: Session | null;
 }) {
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const [uploading, setUploading] = useState(false);

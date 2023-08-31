@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import { useState, useEffect } from "react";
 import useSound from "use-sound";
-import supabase from "@app/supabase-provider";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 import { Database } from "@lib/database.types";
 import fetcher from "@lib/fetcher";
 import { Applause } from "@lib/types";
@@ -12,6 +14,7 @@ import axios from "axios";
 
 type Applause = Database["public"]["Tables"]["applause"]["Row"];
 
+const supabase = createClientComponentClient<Database>()
 const confettiConfig = {
   angle: 90,
   spread: 360,

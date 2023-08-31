@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -9,8 +11,7 @@ import Image from "next/image";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
-import { Session } from "@supabase/auth-helpers-react";
-import supabase from "@lib/supabase";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 

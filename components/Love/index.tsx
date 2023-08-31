@@ -1,11 +1,11 @@
-import { Session } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import { useEffect, useState } from "react";
 import { Database } from "@lib/database.types";
 import supabase from "@lib/supabase";
 
 type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
-export default function LovesList({ session }: { session: Session }) {
+export default function LovesList({ session }: { session: Session | null }) {
   const [loves, setLoves] = useState<Loves[]>([]);
   const [errorText, setErrorText] = useState("");
   const user = session.user;

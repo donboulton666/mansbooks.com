@@ -15,7 +15,7 @@ import {
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
 import Avatar from "@app/account/avatar";
-import { useSession } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import { Database } from "@lib/database.types";
 import supabase from "@lib/supabase";
 
@@ -25,8 +25,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavDropdown() {
-  const session = useSession();
+export default function NavDropdown({ session }: { session: Session | null }) {
   return (
     <>
       <Disclosure as="nav" className="sticky top-0 z-40">

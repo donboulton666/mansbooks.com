@@ -5,7 +5,7 @@ import {
   editCommentRequest,
   readAllCommentsFetcher,
 } from "../../utils/database";
-import { useSession } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import { useState, FC } from "react";
 import { useForm } from "react-hook-form";
 import { PencilIcon, ReplyIcon, TrashIcon } from "@heroicons/react/outline";
@@ -26,7 +26,7 @@ interface CommentsProps {
   slug: string;
 }
 
-export const Comments: FC<CommentsProps> = ({ slug }) => {
+export const Comments: FC<CommentsProps> = ({ slug, session }: { session: Session | null }) => {
   const [toast, setToast] = useRecoilState(ToastState);
   const commentsUrl: Key = `/api/comments/${slug}`;
   // TODO: Handle error from getting comments

@@ -6,8 +6,8 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import ResizeHandler from "@components/resize-handler";
 import { HMSRoomProvider } from "@100mslive/react-sdk";
-import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
-import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
+import { Session, createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import { RecoilRoot } from "recoil";
 
 import TimeAgo from "javascript-time-ago";

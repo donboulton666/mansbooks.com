@@ -11,7 +11,7 @@ import Survey from "@components/Survey";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
-import { Session } from "@supabase/auth-helpers-react";
+import { Session } from "@supabase/auth-helpers-nextjs"
 import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 
