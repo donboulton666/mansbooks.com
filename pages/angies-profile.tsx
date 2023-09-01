@@ -1836,475 +1836,507 @@ export default function LocalProfile() {
                 .{" "}
               </div>
             </Section>
-            <div>
-              See{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.wiki.angelinajordanfanclub.com/about-the-wiki/"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan Fan Club '; The Shield
-                </span>
-              </a>{" "}
-              mentioned above and their{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UCJnLWcns8O7hZC1bD9IYyhQ"
-                target="_blank"
-              >
-                <span className="text-blue-500">YouTube compilations</span>
-              </a>
-              .
-            </div>
-            <div>
-              Visit{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtube.com/playlist?list=PL2v8kgVeo4EbQD6l_WAVjOfItquzW7oEc"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Rusty Shackelford's YouTube Channel
-                </span>
-              </a>{" "}
-              for a complete list of every song Angelina has performed. In
-              Rusty's complimentary response to voice coach{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UCEGRUdwLqrUJFydtZg5bl9A"
-                target="_blank"
-              >
-                <span className="text-blue-500">Julia Nilon's</span>
-              </a>
-              in-depth technical reaction to Angelina's performance of I Put A
-              Spell On You he gives her{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=hmIqzsYUz0k'lc=Ugw2nMLPFYGWKoTfjWN4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">a comprehensive review</span>
-              </a>{" "}
-              of the young singer's history that's worth reading.
-            </div>
-            <div>
-              YouTuber,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/c/pa1189j/featured"
-                target="_blank"
-              >
-                <span className="text-blue-500">pa1189j</span>
-              </a>
-              , created a library of individual and mashup quality videos of
-              Angelina Jordan.{" "}
-            </div>
-            <div>
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/user/ooshta"
-                target="_blank"
-              >
-                <span className="text-blue-500">My Time</span>
-              </a>{" "}
-              also created a great compilation of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=mM_a68MdydU'list=PL54XsLUTxk4hbzix016aa_9rXWR3hJL44"
-                target="_blank"
-              >
-                <span className="text-blue-500">Angie's Music +</span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              Claudio Marcucci created{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=9TwFRt8JyZI'list=PLA5e9F7iFbOELK0a8SAdhbwQLPjq44O-H"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan'; A Decade of Dedication 86 song medley
-                </span>
-              </a>{" "}
-              [1:04:47].
-            </div>
-            <div>
-              Andy Schnell, another knowledgeable fan, usually informs new
-              reactors to Angelina's music with a brief comprehensive history of
-              her accomplishments. Here is{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=4HIWXZ4HQ6M'lc=UgzLwID340oceHudXMx4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">a recent one</span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              See the first time vocal coach Fairy Voice Mother ever listened
-              and reacted to Angelina sing. She gave an{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=9VuIWL_AR7E"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  excellent explanation and analysis
-                </span>
-              </a>{" "}
-              of how Angelina was creating the sounds in her voice while singing
-              Bohemian Rhapsody on AGT, and was moved to tears listening to such
-              a rare talent.{" "}
-            </div>
-            <div>
-              Also see{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.wikiwand.com/en/Angelina_Jordan"
-                target="_blank"
-              >
-                <span className="text-blue-500">Wikiwand’s page</span>
-              </a>{" "}
-              for Angelina Jordan. Gary Rogers{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/playlist?list=PLvdXi7X_SJN0ZxG5iBxZ4jyN3l8au1R2Q"
-                target="_blank"
-              >
-                <span className="text-blue-500">posted a long list</span>
-              </a>{" "}
-              of Angelina Jordan interviews, clips and everything else about
-              her.{" "}
-            </div>
-            <div>
-              Added footnote: I just bought and finished reading the eBook of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://angelina-jordan-official-store.creator-spring.com/listing/between-two-hearts-english?product=1227"
-                target="_blank"
-              >
-                <span className="text-blue-500">Between Two Hearts</span>
-              </a>
-              . I was just as moved by her story and the way she tells it of why
-              she sings barefoot as I am when I hear her sing, even more so.
-              What an evolved soul for such a young girl! Through the eyes of a
-              child, Angelina innocently makes us see and understand the
-              suffering of a homeless little girl, and why she was moved to do
-              something about it in her own small way. This was definitely a
-              life-transforming experience for Angelina that continues today.
-              And probably for that homeless girl as well. I understand why she
-              went on to raise money for homeless families. If they publish a
-              hardback copy in English, I would buy it again. Her grandmother's
-              childlike artwork adds a lot to the book.{" "}
-            </div>
-            <div>
-              More updates: On July 31, 2021, Angelina posted an original
-              slowed-down, jazzed-up cover version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/xp67k9wk2Mw"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Michael Jackson's Billie Jean
-                </span>
-              </a>
-              . Check out the colorful sets. An amazing production! On August
-              26, 2021, she followed that up with a similar treatment of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/orv_BqSSa2g"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  The Beatles song, Yesterday
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              On October 14, 2021, after a 6-year absence, Adele posted her new
-              song,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/H9NJenpBV2I"
-                target="_blank"
-              >
-                <span className="text-blue-500">Easy On Me</span>
-              </a>
-              . The next day, Angelina's Fanclub posted a{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/fGxdQWCgCTo"
-                target="_blank"
-              >
-                <span className="text-blue-500">TikTok clip</span>
-              </a>{" "}
-              of her singing the song. The day after that Angelina premiered her
-              amazing cover of the song:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/Mpw5Q76hWWE"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan'; Easy On Me Adele Cover Live From Studio!
-                </span>
-              </a>
-              Republic Records produced the in-studio black and white video of
-              Angelina at the mic with just her piano accompanist. Angelina
-              pours her heart and soul into this song. Her voice continues to
-              mature as well as her vocal dexterity. Surprisingly, she sounds
-              even better! I{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Mpw5Q76hWWE'lc=UgwCNRjSrSZ4mrvNkvl4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">posted a comment</span>
-              </a>{" "}
-              on the quality of the silence I felt at the end of the song. There
-              have already been many videos posted on YouTube reacting to
-              Angelina's cover of Adele's song. See this most effusive{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/M7ZOLmW0V6k"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  reaction from Adam Straughan
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              Friday, Dec 10, 2021,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.imdb.com/title/tt8718158/"
-                target="_blank"
-              >
-                <span className="text-blue-500">The Hating Game</span>
-              </a>{" "}
-              premiered in the USA. Republic Records released the{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://music.apple.com/us/album/the-hating-game-original-motion-picture-soundtrack/1597020142"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  original motion picture soundtrack
-                </span>
-              </a>{" "}
-              and featured{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=7Mthm-9jECM"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina’s cover version of “Mercy”
-                </span>
-              </a>{" "}
-              by Duffy to promote the film! You can listen on these music
-              services:{" "}
-              <a href="https://thehatinggame.lnk.to/OST">
-                <span className="text-blue-500">
-                  https://thehatinggame.lnk.to/OST
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              Thursday, Dec 23, 2021, 3pm CST:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.eventbrite.com/e/angelina-jordan-christmas-show-tickets-228166310577"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan Online Christmas Concert
-                </span>
-              </a>{" "}
-              live from Los Angeles. Visit her website for details:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.angelinajordanofficial.com"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  https://www.angelinajordanofficial.com
-                </span>
-              </a>
-              .
-            </div>
-            <div>Angelina Jordan turns 16 </div>
-            <div>
-              Jan 10, 2022: In honor of Angelina's 16th birthday Pontus Österlin
-              posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/VHj5iSpCKk4"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  16 Reactors 1st Time Hearing Angelina Jordan
-                </span>
-              </a>
-              . Very amusing. Another great compilation from PO Talks in Sweden
-              worth watching! BigAngieFan Chris Walker from Hawaii posted a
-              wonderful compilation in the form of a quiz:
-              <span className="text-blue-500">
-                {" "}
+            <Section>
+              <div>
+                See{" "}
                 <a
                   rel="noreferrer noopener"
-                  href="https://youtu.be/zr6HYPrDtik"
+                  href="https://www.wiki.angelinajordanfanclub.com/about-the-wiki/"
                   target="_blank"
                 >
-                  Happy Birthday to Angelina Jordan! Can You Guess How Old She
-                  Is?
+                  <span className="text-blue-500">
+                    Angelina Jordan Fan Club '; The Shield
+                  </span>
+                </a>{" "}
+                mentioned above and their{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UCJnLWcns8O7hZC1bD9IYyhQ"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">YouTube compilations</span>
                 </a>
-              </span>{" "}
-              I really enjoyed this musical mix by Kaleidoscope RMX:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=1wvOVwVk2Cc"
-                target="_blank"
-              >
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Visit{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtube.com/playlist?list=PL2v8kgVeo4EbQD6l_WAVjOfItquzW7oEc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Rusty Shackelford's YouTube Channel
+                  </span>
+                </a>{" "}
+                for a complete list of every song Angelina has performed. In
+                Rusty's complimentary response to voice coach{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UCEGRUdwLqrUJFydtZg5bl9A"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Julia Nilon's</span>
+                </a>
+                in-depth technical reaction to Angelina's performance of I Put A
+                Spell On You he gives her{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=hmIqzsYUz0k'lc=Ugw2nMLPFYGWKoTfjWN4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">a comprehensive review</span>
+                </a>{" "}
+                of the young singer's history that's worth reading.
+              </div>
+            </Section>
+            <Section>
+              <div>
+                YouTuber,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/c/pa1189j/featured"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">pa1189j</span>
+                </a>
+                , created a library of individual and mashup quality videos of
+                Angelina Jordan.{" "}
+              </div>
+              <div>
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/user/ooshta"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">My Time</span>
+                </a>{" "}
+                also created a great compilation of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=mM_a68MdydU'list=PL54XsLUTxk4hbzix016aa_9rXWR3hJL44"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Angie's Music +</span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Claudio Marcucci created{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=9TwFRt8JyZI'list=PLA5e9F7iFbOELK0a8SAdhbwQLPjq44O-H"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan'; A Decade of Dedication 86 song medley
+                  </span>
+                </a>{" "}
+                [1:04:47].
+              </div>
+              <div>
+                Andy Schnell, another knowledgeable fan, usually informs new
+                reactors to Angelina's music with a brief comprehensive history
+                of her accomplishments. Here is{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=4HIWXZ4HQ6M'lc=UgzLwID340oceHudXMx4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">a recent one</span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                See the first time vocal coach Fairy Voice Mother ever listened
+                and reacted to Angelina sing. She gave an{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=9VuIWL_AR7E"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    excellent explanation and analysis
+                  </span>
+                </a>{" "}
+                of how Angelina was creating the sounds in her voice while
+                singing Bohemian Rhapsody on AGT, and was moved to tears
+                listening to such a rare talent.{" "}
+              </div>
+              <div>
+                Also see{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.wikiwand.com/en/Angelina_Jordan"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Wikiwand’s page</span>
+                </a>{" "}
+                for Angelina Jordan. Gary Rogers{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/playlist?list=PLvdXi7X_SJN0ZxG5iBxZ4jyN3l8au1R2Q"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">posted a long list</span>
+                </a>{" "}
+                of Angelina Jordan interviews, clips and everything else about
+                her.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Added footnote: I just bought and finished reading the eBook of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://angelina-jordan-official-store.creator-spring.com/listing/between-two-hearts-english?product=1227"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Between Two Hearts</span>
+                </a>
+                . I was just as moved by her story and the way she tells it of
+                why she sings barefoot as I am when I hear her sing, even more
+                so. What an evolved soul for such a young girl! Through the eyes
+                of a child, Angelina innocently makes us see and understand the
+                suffering of a homeless little girl, and why she was moved to do
+                something about it in her own small way. This was definitely a
+                life-transforming experience for Angelina that continues today.
+                And probably for that homeless girl as well. I understand why
+                she went on to raise money for homeless families. If they
+                publish a hardback copy in English, I would buy it again. Her
+                grandmother's childlike artwork adds a lot to the book.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                More updates: On July 31, 2021, Angelina posted an original
+                slowed-down, jazzed-up cover version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/xp67k9wk2Mw"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Michael Jackson's Billie Jean
+                  </span>
+                </a>
+                . Check out the colorful sets. An amazing production! On August
+                26, 2021, she followed that up with a similar treatment of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/orv_BqSSa2g"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    The Beatles song, Yesterday
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                On October 14, 2021, after a 6-year absence, Adele posted her
+                new song,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/H9NJenpBV2I"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Easy On Me</span>
+                </a>
+                . The next day, Angelina's Fanclub posted a{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/fGxdQWCgCTo"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">TikTok clip</span>
+                </a>{" "}
+                of her singing the song. The day after that Angelina premiered
+                her amazing cover of the song:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/Mpw5Q76hWWE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan'; Easy On Me Adele Cover Live From Studio!
+                  </span>
+                </a>
+                Republic Records produced the in-studio black and white video of
+                Angelina at the mic with just her piano accompanist. Angelina
+                pours her heart and soul into this song. Her voice continues to
+                mature as well as her vocal dexterity. Surprisingly, she sounds
+                even better! I{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Mpw5Q76hWWE'lc=UgwCNRjSrSZ4mrvNkvl4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">posted a comment</span>
+                </a>{" "}
+                on the quality of the silence I felt at the end of the song.
+                There have already been many videos posted on YouTube reacting
+                to Angelina's cover of Adele's song. See this most effusive{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/M7ZOLmW0V6k"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    reaction from Adam Straughan
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Friday, Dec 10, 2021,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.imdb.com/title/tt8718158/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">The Hating Game</span>
+                </a>{" "}
+                premiered in the USA. Republic Records released the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://music.apple.com/us/album/the-hating-game-original-motion-picture-soundtrack/1597020142"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    original motion picture soundtrack
+                  </span>
+                </a>{" "}
+                and featured{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=7Mthm-9jECM"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina’s cover version of “Mercy”
+                  </span>
+                </a>{" "}
+                by Duffy to promote the film! You can listen on these music
+                services:{" "}
+                <a href="https://thehatinggame.lnk.to/OST">
+                  <span className="text-blue-500">
+                    https://thehatinggame.lnk.to/OST
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Thursday, Dec 23, 2021, 3pm CST:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.eventbrite.com/e/angelina-jordan-christmas-show-tickets-228166310577"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan Online Christmas Concert
+                  </span>
+                </a>{" "}
+                live from Los Angeles. Visit her website for details:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.angelinajordanofficial.com"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    https://www.angelinajordanofficial.com
+                  </span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <Center>Angelina Jordan turns 16</Center>
+            </Section>
+            <Section>
+              <div>
+                Jan 10, 2022: In honor of Angelina's 16th birthday Pontus
+                Österlin posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/VHj5iSpCKk4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    16 Reactors 1st Time Hearing Angelina Jordan
+                  </span>
+                </a>
+                . Very amusing. Another great compilation from PO Talks in
+                Sweden worth watching! BigAngieFan Chris Walker from Hawaii
+                posted a wonderful compilation in the form of a quiz:
                 <span className="text-blue-500">
-                  🥳🥳🥳HAPPY BIRTHDAY ANGELINA JORDAN 🥳🥳🥳 👨‍👧
-                </span>
-              </a>
-            </div>
-            <div>
-              Valentine's Day: Angelina posts the best version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=bWiLOnHJYxg"
-                target="_blank"
-              >
-                <span className="text-blue-500">My Funny Valentine</span>
-              </a>
-              ! Remember when she sang it at{" "}
-              <a
-                href="https://youtu.be/sZ25H4a2gPI"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">10 years old</span>
-              </a>
-              ?{" "}
-            </div>
-            <div>
-              April 11, 2022: Written by Willie Nelson and popularized by Patsy
-              Cline,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.instagram.com/p/CcM93mYLczH/"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  listen to Angelina Jordan sing Crazy
-                </span>
-              </a>{" "}
-              and you'll go crazy for loving her!{" "}
-            </div>
-            <div>Honoring Elvis Presley</div>
-            <div>
-              June 22, 2022: Angelina Jordan honors Elvis Presley a day before
-              the release of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://twitter.com/bazluhrmann/status/1539644430084235264"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Baz Luhrmann's film, Elvis
-                </span>
-              </a>
-              , singing a slow melancholy version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=RTbKhkceR00"
-                target="_blank"
-              >
-                <span className="text-blue-500">Suspicious Minds</span>
-              </a>
-              . The song was written by Memphis singer Mark James, an old friend
-              of Elvis. When he heard{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=mFP0EP-Oi2I"
-                target="_blank"
-              >
-                <span className="text-blue-500">the dcentero</span>
-              </a>
-              , Elvis told Mark he wanted the song and the female background
-              vocalists. It went to{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://open.spotify.com/album/0uJJdEZ8sRLNPoKEkjvqTD"
-                target="_blank"
-              >
-                <span className="text-blue-500">#1</span>
-              </a>{" "}
-              and{" "}
-              <a href="https://www.songfacts.com/facts/elvis-presley/suspicious-minds">
-                <span className="text-blue-500">relaunched his career</span>
-              </a>
-              .{" "}
-            </div>
-            <div>
-              In this video, Angelina wore a beehive hairdo like Priscilla,
-              dressed in a black leather jumpsuit carrying a red guitar over her
-              shoulder like Elvis in his televised{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/YZe_8u-rGWE"
-                target="_blank"
-              >
-                <span className="text-blue-500">'68 Comeback Special</span>
-              </a>
-              . Rob Christie arranged the music and accompanied Angelina on
-              piano. Rob's{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.instagram.com/p/CfGeryelgDJ/"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  red jumpsuit matches the guitar color
-                </span>
-              </a>{" "}
-              and is what Elvis' musicians wore in that '68 Special.{" "}
-            </div>
-            <div>
-              Her uncle and manager, Michael Astar, arranged everything. His two
-              young daughters and Angelina's sister{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/RTbKhkceR00?t=101"
-                target="_blank"
-              >
-                <span className="text-blue-500">Juliette</span>
-              </a>{" "}
-              make brief appearances in the video. Grandma Mery Zamani was the
-              executive producer. Cole McCarthy directed the video in the same
-              location that Angelina sang{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=bWiLOnHJYxg"
-                target="_blank"
-              >
-                <span className="text-blue-500">My Funny Valentine</span>
-              </a>
-              —an LA antique furniture and chandelier shop. This is an amazing
-              performance and production!
-            </div>
+                  {" "}
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://youtu.be/zr6HYPrDtik"
+                    target="_blank"
+                  >
+                    Happy Birthday to Angelina Jordan! Can You Guess How Old She
+                    Is?
+                  </a>
+                </span>{" "}
+                I really enjoyed this musical mix by Kaleidoscope RMX:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=1wvOVwVk2Cc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    🥳🥳🥳HAPPY BIRTHDAY ANGELINA JORDAN 🥳🥳🥳 👨‍👧
+                  </span>
+                </a>
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Valentine's Day: Angelina posts the best version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=bWiLOnHJYxg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">My Funny Valentine</span>
+                </a>
+                ! Remember when she sang it at{" "}
+                <a
+                  href="https://youtu.be/sZ25H4a2gPI"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">10 years old</span>
+                </a>
+                ?{" "}
+              </div>
+              <div>
+                April 11, 2022: Written by Willie Nelson and popularized by
+                Patsy Cline,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.instagram.com/p/CcM93mYLczH/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    listen to Angelina Jordan sing Crazy
+                  </span>
+                </a>{" "}
+                and you'll go crazy for loving her!{" "}
+              </div>
+            </Section>
+            <Section>
+              <Center>Honoring Elvis Presley</Center>
+            </Section>
+            <Section>
+              <div>
+                June 22, 2022: Angelina Jordan honors Elvis Presley a day before
+                the release of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://twitter.com/bazluhrmann/status/1539644430084235264"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Baz Luhrmann's film, Elvis
+                  </span>
+                </a>
+                , singing a slow melancholy version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=RTbKhkceR00"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Suspicious Minds</span>
+                </a>
+                . The song was written by Memphis singer Mark James, an old
+                friend of Elvis. When he heard{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=mFP0EP-Oi2I"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">the dcentero</span>
+                </a>
+                , Elvis told Mark he wanted the song and the female background
+                vocalists. It went to{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://open.spotify.com/album/0uJJdEZ8sRLNPoKEkjvqTD"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">#1</span>
+                </a>{" "}
+                and{" "}
+                <a href="https://www.songfacts.com/facts/elvis-presley/suspicious-minds">
+                  <span className="text-blue-500">relaunched his career</span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                In this video, Angelina wore a beehive hairdo like Priscilla,
+                dressed in a black leather jumpsuit carrying a red guitar over
+                her shoulder like Elvis in his televised{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/YZe_8u-rGWE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">'68 Comeback Special</span>
+                </a>
+                . Rob Christie arranged the music and accompanied Angelina on
+                piano. Rob's{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.instagram.com/p/CfGeryelgDJ/"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    red jumpsuit matches the guitar color
+                  </span>
+                </a>{" "}
+                and is what Elvis' musicians wore in that '68 Special.{" "}
+              </div>
+              <div>
+                Her uncle and manager, Michael Astar, arranged everything. His
+                two young daughters and Angelina's sister{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/RTbKhkceR00?t=101"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Juliette</span>
+                </a>{" "}
+                make brief appearances in the video. Grandma Mery Zamani was the
+                executive producer. Cole McCarthy directed the video in the same
+                location that Angelina sang{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=bWiLOnHJYxg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">My Funny Valentine</span>
+                </a>
+                —an LA antique furniture and chandelier shop. This is an amazing
+                performance and production!
+              </div>
+            </Section>
             <Section>
               <Center>Suspicious Minds</Center>
             </Section>
@@ -2316,992 +2348,1052 @@ export default function LocalProfile() {
                 />
               </VideoWrapper>
             </Section>
-            <h2>Summer Concerts in Norway</h2>
-            <h3>June 22, 2022, Allsang på Grensen</h3>
-            <div>
-              Angelina will be performing at various venues in Norway this
-              summer. At her first appearance she paid tribute to Freddie
-              Mercury and Whitney Houston. She sang{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=TqMqyAi-bsc"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bohemian Rhapsody</span>
-              </a>{" "}
-              in a vibrant red pant suit and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=AqtIVYFjapQ"
-                target="_blank"
-              >
-                <span className="text-blue-500">I Have Nothing</span>
-              </a>{" "}
-              in a stunning ice blue gown, both televised by TV2 Norway.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/c/AngelinaJordanVlogs/videos"
-                target="_blank"
-              >
-                <span className="text-blue-500">Angelina Jordan Vlogs</span>
-              </a>{" "}
-              captured{" "}
-              <a href="https://www.youtube.com/watch?v=TqMqyAi-bsc">
-                <span className="text-blue-500">part</span>
-              </a>{" "}
-              of Bohemian Rhapsody, and I Have Nothing{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=NoeJair7gAs"
-                target="_blank"
-              >
-                <span className="text-blue-500">twice</span>
-              </a>{" "}
-              from the actual event. They also posted excerpts from the other
-              upcoming concerts. Phillip
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/c/pa1189j"
-                target="_blank"
-              >
-                <span className="text-blue-500">pa1189j</span>
-              </a>
-              later provided with the{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=LDZ4x0cFJRs"
-                target="_blank"
-              >
-                <span className="text-blue-500">best audio version</span>
-              </a>{" "}
-              so far with a clean music intro.{" "}
-            </div>
-            <div>July 1, 2022, Kurbadhagen</div>
-            <div>
-              Angelina gave her own full concert at Kurbadhagen. Andy Schnell
-              posted the{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fOAmwRzzkpA'lc=UgyFKy7eA__TUjXi4St4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">playlist</span>
-              </a>{" "}
-              14 songs + 3 encores. She looks so happy and relaxed in front of a
-              live audience again. And her band swings. Instead of singing in
-              one spot, she moves freely about the stage, and interacts with the
-              audience in between songs—a new development for her, and us. The
-              lucky fans are thrilled, and she's loving it!
-            </div>
-            <div>
-              Before singing Amy Winehouse's song, Tears Dry on Their Own,
-              Angelina delivers her{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/sjGkvd8htI0?t=21"
-                target="_blank"
-              >
-                <span className="text-blue-500">quintessential message</span>
-              </a>
-              : I'm probably repeating myself but, the most important thing is
-              just to be yourself, be kind to each other, and just be happy.
-              That's all that matters. Applause
-            </div>
-            <div>An audience member shouts out, You make us happy. </div>
-            <div>Visibly moved, Angelina replies: Oh, that means so much.</div>
-            <blockquote className="h-full w-full">
+            <Section>
+              <h2>Summer Concerts in Norway</h2>
+              <h3>June 22, 2022, Allsang på Grensen</h3>
+            </Section>
+            <Section>
               <div>
-                The most important thing is just to be yourself, be kind to each
-                other, and just be happy. That’s all that matters.
-              </div>
-              <cite>
-                Angelina Jordan to her concert audience at Kurbadhagen
-              </cite>
-            </blockquote>
-            <div>
-              See this beautiful and succinct comment about Angelina Jordan
-              posted by{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=LHlMrTpTWt4'lc=UgxpfEWYAxCqBTMMljB4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">Shodan Rich</span>
-              </a>{" "}
-              after hearing her sing Suspicious Minds, the 3rd and final encore
-              of the show.
-            </div>
-            <div>
-              Thanks to Kathrine Angeltveit for sharing these songs:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fOAmwRzzkpA"
-                target="_blank"
-              >
-                <span className="text-blue-500">Valerie</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=dxBOeYmcDno"
-                target="_blank"
-              >
-                <span className="text-blue-500">All of Me</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=cRns0JACfRI"
-                target="_blank"
-              >
-                <span className="text-blue-500">Yellow Brick Road</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=7oASxWtntTU"
-                target="_blank"
-              >
-                <span className="text-blue-500">Love on the Brain</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=7xZGEJKw6DA"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  These Boots Are Made for Walkin'
-                </span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=eZ7kHOE5NKc"
-                target="_blank"
-              >
-                <span className="text-blue-500">Million Miles</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=sjGkvd8htI0"
-                target="_blank"
-              >
-                <span className="text-blue-500">Tears Dry on Their Own</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=QOrcx0OZx-w"
-                target="_blank"
-              >
-                <span className="text-blue-500">Crazy</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=PI3p3mT-NNs"
-                target="_blank"
-              >
-                <span className="text-blue-500">I'm Not the Only One</span>
-              </a>{" "}
-              and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=LHlMrTpTWt4"
-                target="_blank"
-              >
-                <span className="text-blue-500">Suspicious Minds</span>
-              </a>
-              .
-            </div>
-            <div>
-              TheTomtomtom posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=dxBOeYmcDno"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Bohcenterian Rhapsody and Yellow Brick Road
-                </span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=JA8S2VibP8w"
-                target="_blank"
-              >
-                <span className="text-blue-500">House of the Rising Sun</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=5tM_wUKV37E"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Mercy, Killing Me Softly and I’m Not the Only One
-                </span>
-              </a>
-              .
-            </div>
-            <div>
-              Elin Men posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Bu4S2wgKetE"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bang Bang</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=kCpGErK8dbk"
-                target="_blank"
-              >
-                <span className="text-blue-500">Love on the Brain</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=EpdAY4NenIY"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bad Romance</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=WIwZ40mqOK4"
-                target="_blank"
-              >
-                <span className="text-blue-500">7th Heaven</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=hwKeKXAB7a8"
-                target="_blank"
-              >
-                <span className="text-blue-500">Goodbye Yellow Brick Road</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=euX2F6NcbHI"
-                target="_blank"
-              >
-                <span className="text-blue-500">Suspicious Minds</span>
-              </a>
-              .
-            </div>
-            <div>
-              Mike Richards posted a{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/E7KO26ovuZk"
-                target="_blank"
-              >
-                <span className="text-blue-500">video of concert photos</span>
-              </a>{" "}
-              taken by NiceShot.no.
-            </div>
-            <div>
-              Rusty Shackleford posted a video of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Oa6jaZZzhBs"
-                target="_blank"
-              >
-                <span className="text-blue-500">House of the Rising Sun</span>
-              </a>{" "}
-              from Hege of The Shield fan group. He later posted a multi-cam
-              video of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=7Q5WvL3P4bA"
-                target="_blank"
-              >
-                <span className="text-blue-500">Suspicious Minds</span>
-              </a>{" "}
-              that he created from footage provided by many mcenterbers of the
-              The Shield fan group.
-            </div>
-            <div>July 7, 2022, Kongsberg Jazz Festival</div>
-            <div>
-              Rusty later posted a clip from Øyvind Skogstad of The Shield Fan
-              Group of Angelina opening the concert with an amazing new{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=cCINlfEEtQ4"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  cover of Labrinth's Mount Everest
-                </span>
-              </a>
-              . Rusty Shackleford later audio-corrected and video-edited Chris
-              Walker's 4K footage of Angelina surprising everyone with{" "}
-              <a
-                href="https://www.youtube.com/watch?v=DYVxnY06BWw"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">
-                  her version of Mount Everest
-                </span>
-              </a>
-              , especially her falsetto riffing with the guitarist.
-            </div>
-            <div>
-              Kathrine posted a{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=1yPU9I9RXx8"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  TV interview by NRK Dagsrevyen
-                </span>
-              </a>{" "}
-              from that concert with Angelina singing a jazzy version of her
-              song 7th Heaven. When asked how life is in the USA and if she is
-              fully committed to the music, she replied:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/1yPU9I9RXx8?t=139"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Yes, I am fully committed to music. Music is my life
-                </span>
-              </a>
-              .{" "}
-            </div>
-            <blockquote className="h-full w-full">
-              <div>I am fully committed to music. Music is my life.</div>
-              <cite>Angelina Jordan answering a NRK interviewer</cite>
-            </blockquote>
-            <div>
-              A month later, Kathrine posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=HKK66K5u1Fc"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan on “Festivalsommer” at NRK TV the 6th of
-                  August, 2022
-                </span>
-              </a>
-              . Her section of the{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://tv.nrk.no/serie/festivalsommer/2022/MKDU45000422/avspiller"
-                target="_blank"
-              >
-                <span className="text-blue-500">Kongsberg Jazz Festival</span>
-              </a>{" "}
-              7:45–17:20 opens with an interview followed by Angelina singing
-              her original songs, 7th Heaven and Million Miles.{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
-                target="_blank"
-              >
-                <span className="text-blue-500">Boris Palenovski</span>
-              </a>{" "}
-              later enhanced the audio-visual quality of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/bnd-DkPzTPw"
-                target="_blank"
-              >
-                <span className="text-blue-500">this NRK TV feature</span>
-              </a>{" "}
-              to 4K.{" "}
-            </div>
-            <div>
-              Chris Walker, aka BigAngieFan, posted this sweet clip of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=CivEDM4uhJY"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina interacting with her audience
-                </span>
-              </a>{" "}
-              before singing Valerie telling thcenter how happy she is to be
-              back in Norway after 3 years to sing for thcenter again. A month
-              later Chris posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=vCnF-OlS04U"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan Live at Kongsberg 2022: All of Me and Valerie
-                </span>
-              </a>{" "}
-              on{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/channel/UCSWmvV4K9GmaAVdPHcuEfug"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  The Hawaii Walkers Channel
-                </span>
-              </a>
-              . And these too:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=FFyKzY3GzLs"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  House of the Rising Sun and Killing Me Softly
-                </span>
-              </a>
-              . The closeup picture and sound are broadcast quality! Chris
-              continues to add more songs, like{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=iLBBBudzSBE"
-                target="_blank"
-              >
-                <span className="text-blue-500">You Don't Own Me</span>
-              </a>
-              , and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=y8UqOgy6TVI"
-                target="_blank"
-              >
-                <span className="text-blue-500">Crazy and Mercy</span>
-              </a>{" "}
-              with improved sound, and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=UOA0Riz4thA"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bang Bang</span>
-              </a>
-              , followed by{" "}
-              <a href="https://www.youtube.com/watch?v=fTCb4h2vS5I">
-                <span className="text-blue-500">
-                  Bohcenterian Rhapsody ' Goodbye Yellow Brick Road
-                </span>
-              </a>
-              . He later added a translated Introduction, a Musical Intro, a
-              brief talk by Angelina, and her singing{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=F9AyPJ3pOto"
-                target="_blank"
-              >
-                <span className="text-blue-500">Mount Everest</span>
-              </a>
-              , a song most were not familiar with. It blew thcenter away!
-              Angelina also performed the Amy Winehouse song{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=jfwP3NHAMq4"
-                target="_blank"
-              >
-                <span className="text-blue-500">Tears Dry On Their Own</span>
-              </a>
-              . Chris created a hybrid version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=bX-0UmxGhww"
-                target="_blank"
-              >
-                <span className="text-blue-500">7th Heaven</span>
-              </a>{" "}
-              using NRK TV and fan footage. I recorded about 25% of the video
-              and sound myself, and the other 75% is from NRK TV.
-            </div>
-            <div>
-              Alan Papier posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Odz7Ac3C89k"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  The Kongsberg Concert Interviews
-                </span>
-              </a>{" "}
-              with fans that came from around the world to listen to Angelina
-              Jordan sing. He wrote: Thousands of Angelina Jordan's fans around
-              the world wish they could have attended her recent concerts in
-              Norway. In today's video, we try and recreate the atmosphere from
-              her concert at the Kongsberg Jazz Festival for those who could not
-              attend.{" "}
-            </div>
-            <div>July 10, 2022, Kurbadhagen, Sandefjord </div>
-            <div>
-              There are several posts from this concert. Steinar Hatlen's
-              closeup recording of Angelina's powerful rendition of her song,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=yq5KAztslWw"
-                target="_blank"
-              >
-                <span className="text-blue-500">Million Miles</span>
-              </a>{" "}
-              was posted by The Shield. Angelina introduced the song saying it
-              is very meaningful to her about her grandpa and wanted to share a
-              special message about losing someone you loved: I don't want
-              anyone of you to think that, you know, that they left you. They're
-              always going to be with you no matter where you are. So you're
-              never alone, a reference to the repeated line, I'm never alone, in
-              her song.
-            </div>
-            <div>
-              Kathrine posted the complete new cover version of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=jdd_-lNnvVc"
-                target="_blank"
-              >
-                <span className="text-blue-500">Mount Everest</span>
-              </a>
-              , which opened the show,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=haAhsQwICY0"
-                target="_blank"
-              >
-                <span className="text-blue-500">Killing Me Softly</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=IfaA-2r83aA"
-                target="_blank"
-              >
-                <span className="text-blue-500">Fly Me to the Moon</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=G6UD8CNVzWs"
-                target="_blank"
-              >
-                <span className="text-blue-500">Mercy</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=Tw_osE6J_0o"
-                target="_blank"
-              >
-                <span className="text-blue-500">You Don't Own Me</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=tMNWrkJL0uk"
-                target="_blank"
-              >
-                <span className="text-blue-500">Suspicious Minds</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=yudm0IBDydU"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bohemian Rhapsody</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=gelFySO65TI"
-                target="_blank"
-              >
-                <span className="text-blue-500">Yellow Brick Road</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=WpD821uKtDs"
-                target="_blank"
-              >
-                <span className="text-blue-500">House of the Rising Sun</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/nQrzvsOe0_g"
-                target="_blank"
-              >
-                <span className="text-blue-500">Tears Dry on Their Own</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/wIRWOWpaFr0"
-                target="_blank"
-              >
-                <span className="text-blue-500">7th Heaven</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=KNcNxGN0NIM"
-                target="_blank"
-              >
-                <span className="text-blue-500">Love on the Brain</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=hTm_yY5KeWo"
-                target="_blank"
-              >
-                <span className="text-blue-500">All of Me</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=mW3hMsKsaFg"
-                target="_blank"
-              >
-                <span className="text-blue-500">Valerie</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=JNjdUeT2488"
-                target="_blank"
-              >
-                <span className="text-blue-500">Crazy</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=s-8RB1oYzVU"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bang Bang</span>,
-              </a>{" "}
-              and a better quality video of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fhn4pIDunGg"
-                target="_blank"
-              >
-                <span className="text-blue-500">Million Miles</span>
-              </a>
-              . From{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fhn4pIDunGg't=280s"
-                target="_blank"
-              >
-                <span className="text-blue-500">4:40–4:50</span>
-              </a>
-              , Angelina's voice kept soaring like never before. It surprised
-              the audience, including the musicians. Thrilled, everyone
-              applauded. Angelina gave thcenter a little smile and kept on
-              singing. I{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgxadPplL92ziFsfVx14AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">asked Kathrine</span>
-              </a>{" "}
-              what it must have felt like. Steve answered that he{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgxadPplL92ziFsfVx14AaABAg.9dO7C2C-5zU9dOOcLCRKIU"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  was only 10 feet away when she sang this '; it was spine
-                  chilling
-                </span>
-              </a>
-              . Geir Stian Aaslund described it as a triple Angelina moment and
-              wrote:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgzIEo-ZJDT-8PXScenterR4AaABAg"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  I almost fainted when I heard that part at the concert.
-                </span>
-              </a>{" "}
-            </div>
-            <div>
-              Kathrine posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=nTY8Dvy9LFs"
-                target="_blank"
-              >
-                <span className="text-blue-500">I Have Nothing</span>
-              </a>
-              , which included Angelina's introduction. I want to dedicate this
-              song to a very special person—my grandma. Applause She couldn't
-              personally come this time because as you guys know, she's been
-              sick, but she will be better soon. And I' I miss her so much. I
-              miss every single second that I'm not with her. And' you guys
-              enjoy. That powerful song concluded the concert.{" "}
-            </div>
-            <div>
-              Mattias Axelsson recorded the Kurbadhagen concert in 4K. In his
-              first video, he posted sound checks for{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/2b_d7PVAYMI"
-                target="_blank"
-              >
-                <span className="text-blue-500">At last</span>
-              </a>{" "}
-              and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/2b_d7PVAYMI?t=132"
-                target="_blank"
-              >
-                <span className="text-blue-500">I Have Nothing</span>
-              </a>
-              , ending with visuals of people lined up to get in. He then posted
-              all{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/playlist?list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r"
-                target="_blank"
-              >
-                <span className="text-blue-500">18 songs</span>
-              </a>{" "}
-              in the order they were performed, starting with{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=KHCAgExJlCQ'list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r'index=2"
-                target="_blank"
-              >
-                <span className="text-blue-500">Mount Everest</span>
-              </a>{" "}
-              and ending with{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=BkvsnY7J510'list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r'index=19"
-                target="_blank"
-              >
-                <span className="text-blue-500">I Have Nothing</span>
-              </a>
-              . This secenters to be a complete quality compilation.{" "}
-            </div>
-            <div>
-              Vidar Enerud also uploaded the{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/playlist?list=PLgVH9DUPH5QorN0ofzcbOYQSXXlDzyfA9"
-                target="_blank"
-              >
-                <span className="text-blue-500">Full Playlist</span>
-              </a>{" "}
-              of 15 songs plus 3 encores, including a poster listing thcenter.{" "}
-            </div>
-            <div>
-              The Foot Crew posted the show in one video 1:05:51:{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=VkhcpiEqtgg"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan consert Kurbadhagen in Sandefjord in Norway!
-                  It was insane.
-                </span>
-              </a>
-              . It's further from the stage, but the sound from the large
-              speaker array systcenter is clearer.{" "}
-            </div>
-            <div>
-              Tomas Odebrant posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/playlist?list=PL5OHYNhZE6vcUfPgFFzSGZBREt8RSQPa4"
-                target="_blank"
-              >
-                <span className="text-blue-500">5 rehearsals</span>
-              </a>
-              : 1 At last, 2-4 I Have Nothing, 5 Bang Bang. Hallvard Ulsaker
-              filmed a closeup of Angelina singing{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=gO8SaL0dE5M"
-                target="_blank"
-              >
-                <span className="text-blue-500">I Have Nothing</span>
-              </a>{" "}
-              and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=quBh8b1PlBc"
-                target="_blank"
-              >
-                <span className="text-blue-500">Million Miles</span>
-              </a>
-              . Trond Andersen{" "}
-              <a
-                href="https://www.youtube.com/playlist?list=PLj6IAyRjfQ-4AM5CcqN7G_E2JEFJshryM"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="text-blue-500">posted 11 songs</span>
-              </a>{" "}
-              so far. Geir Stian Aaslund posted{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=xZlRX-NYBPU"
-                target="_blank"
-              >
-                <span className="text-blue-500">Suspicious Minds</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/rXvb5nkOetc"
-                target="_blank"
-              >
-                <span className="text-blue-500">Bang Bang</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/kmhciQ1Qttc"
-                target="_blank"
-              >
-                <span className="text-blue-500">Mercy</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=VCiW7SMcxzk"
-                target="_blank"
-              >
-                <span className="text-blue-500">Valerie</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/v7jakMA7mYY"
-                target="_blank"
-              >
-                <span className="text-blue-500">Fly Me to the Moon</span>
-              </a>
-              ,{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/tnr9N66imJs"
-                target="_blank"
-              >
-                <span className="text-blue-500">Yellow Brick Road</span>
-              </a>
-              , an excerpt of{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=hgUeTrP31eU"
-                target="_blank"
-              >
-                <span className="text-blue-500">Million Miles</span>
-              </a>{" "}
-              including someone reacting to AJ's unexpected high riff, and{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/xV5fdKJsoqA"
-                target="_blank"
-              >
-                <span className="text-blue-500">I Have Nothing</span>
-              </a>
-              , starting with her dedication to Grandma Mery.{" "}
-            </div>
-            <div className="inline">
-              <div className="center flex justify-center">
-                <a href="https://kenchawkin.files.wordpress.com/2022/07/angelina-makes-a-heart-sending-love-to-her-fans.png">
-                  <Image
-                    src={heartLove}
-                    alt="heartLove"
-                    className="flex h-60 w-96 content-center justify-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
-                    loading="lazy"
-                  />
+                Angelina will be performing at various venues in Norway this
+                summer. At her first appearance she paid tribute to Freddie
+                Mercury and Whitney Houston. She sang{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=TqMqyAi-bsc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bohemian Rhapsody</span>
+                </a>{" "}
+                in a vibrant red pant suit and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=AqtIVYFjapQ"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>{" "}
+                in a stunning ice blue gown, both televised by TV2 Norway.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/c/AngelinaJordanVlogs/videos"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Angelina Jordan Vlogs</span>
+                </a>{" "}
+                captured{" "}
+                <a href="https://www.youtube.com/watch?v=TqMqyAi-bsc">
+                  <span className="text-blue-500">part</span>
+                </a>{" "}
+                of Bohemian Rhapsody, and I Have Nothing{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=NoeJair7gAs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">twice</span>
+                </a>{" "}
+                from the actual event. They also posted excerpts from the other
+                upcoming concerts. Phillip
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/c/pa1189j"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">pa1189j</span>
                 </a>
+                later provided with the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=LDZ4x0cFJRs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">best audio version</span>
+                </a>{" "}
+                so far with a clean music intro.{" "}
               </div>
-            </div>
-            <div>
-              The words to the song—I have nothing, nothing, nothing, if I don't
-              have you—are true on two levels—her grandma and her audience.
-              Without Mery Zamani introducing Angelina to jazz at a very early
-              age and lovingly supporting and recording her God-given
-              talent—she, and we, would have nothing. And without devoted fans,
-              a singer has nothing.{" "}
-            </div>
-            <div>
-              Angelina's career is all based on{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=B8M5WRqA00w't=80s"
-                target="_blank"
-              >
-                <span className="text-blue-500">giving and receiving love</span>
-              </a>
-              . She even gave{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/Oq4GV34zHsY?t=74"
-                target="_blank"
-              >
-                <span className="text-blue-500">the heart sign</span>
-              </a>{" "}
-              twice while singing{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://youtu.be/Oq4GV34zHsY"
-                target="_blank"
-              >
-                <span className="text-blue-500">All of Me</span>
-              </a>
-              . The love and appreciation the audience showed Angelina moved her
-              to tears, just as her love and singing did for thcenter, and us.{" "}
-            </div>
-            <div>
-              As you could see from the videos, everyone on and off the stage
-              was very happy. It was a huge lovefest.
-            </div>
-            <div>
-              July 11, 2022: An{" "}
-              <a
-                rel="noreferrer noopener"
-                href="https://www.youtube.com/watch?v=d7THkVKsbLE"
-                target="_blank"
-              >
-                <span className="text-blue-500">
-                  Angelina Jordan Bonus Podcast Episode of Wrapped in a Warm
-                  Blanket
-                </span>
-              </a>{" "}
-              with co-hosts Alan Papier and Pontus Österlin from Kurbadhagen in
-              Sandefjord, Norway. Alan and Pontus finally met there in person
-              and shared their reflections on Angelina's concert. They also met
-              Sara Astar, Angelina's mother. Nice to see such dedicated AJ
-              reactors and podcasters looking fulfilled after seeing and hearing
-              Angelina sing in person. She created a magical atmosphere beyond
-              their expectations.{" "}
-            </div>
+            </Section>
+            <Section>
+              <Center>July 1, 2022, Kurbadhagen</Center>
+            </Section>
+            <Section>
+              <div>
+                Angelina gave her own full concert at Kurbadhagen. Andy Schnell
+                posted the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fOAmwRzzkpA'lc=UgyFKy7eA__TUjXi4St4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">playlist</span>
+                </a>{" "}
+                14 songs + 3 encores. She looks so happy and relaxed in front of
+                a live audience again. And her band swings. Instead of singing
+                in one spot, she moves freely about the stage, and interacts
+                with the audience in between songs—a new development for her,
+                and us. The lucky fans are thrilled, and she's loving it!
+              </div>
+              <div>
+                Before singing Amy Winehouse's song, Tears Dry on Their Own,
+                Angelina delivers her{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/sjGkvd8htI0?t=21"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">quintessential message</span>
+                </a>
+                : I'm probably repeating myself but, the most important thing is
+                just to be yourself, be kind to each other, and just be happy.
+                That's all that matters. Applause
+              </div>
+            </Section>
+            <Section>
+              <div>An audience member shouts out, You make us happy. </div>
+              <div>
+                Visibly moved, Angelina replies: Oh, that means so much.
+              </div>
+            </Section>
+            <Section>
+              <blockquote className="h-full w-full">
+                <div>
+                  The most important thing is just to be yourself, be kind to
+                  each other, and just be happy. That’s all that matters.
+                </div>
+                <cite>
+                  Angelina Jordan to her concert audience at Kurbadhagen
+                </cite>
+              </blockquote>
+            </Section>
+            <Section>
+              <div>
+                See this beautiful and succinct comment about Angelina Jordan
+                posted by{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=LHlMrTpTWt4'lc=UgxpfEWYAxCqBTMMljB4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Shodan Rich</span>
+                </a>{" "}
+                after hearing her sing Suspicious Minds, the 3rd and final
+                encore of the show.
+              </div>
+              <div>
+                Thanks to Kathrine Angeltveit for sharing these songs:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fOAmwRzzkpA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Valerie</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=dxBOeYmcDno"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">All of Me</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=cRns0JACfRI"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Yellow Brick Road</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=7oASxWtntTU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Love on the Brain</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=7xZGEJKw6DA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    These Boots Are Made for Walkin'
+                  </span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=eZ7kHOE5NKc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Million Miles</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=sjGkvd8htI0"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Tears Dry on Their Own</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=QOrcx0OZx-w"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Crazy</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=PI3p3mT-NNs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I'm Not the Only One</span>
+                </a>{" "}
+                and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=LHlMrTpTWt4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Suspicious Minds</span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                TheTomtomtom posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=dxBOeYmcDno"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Bohcenterian Rhapsody and Yellow Brick Road
+                  </span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=JA8S2VibP8w"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">House of the Rising Sun</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=5tM_wUKV37E"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Mercy, Killing Me Softly and I’m Not the Only One
+                  </span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Elin Men posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Bu4S2wgKetE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bang Bang</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=kCpGErK8dbk"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Love on the Brain</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=EpdAY4NenIY"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bad Romance</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=WIwZ40mqOK4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">7th Heaven</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=hwKeKXAB7a8"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Goodbye Yellow Brick Road
+                  </span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=euX2F6NcbHI"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Suspicious Minds</span>
+                </a>
+                .
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Mike Richards posted a{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/E7KO26ovuZk"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">video of concert photos</span>
+                </a>{" "}
+                taken by NiceShot.no.
+              </div>
+              <div>
+                Rusty Shackleford posted a video of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Oa6jaZZzhBs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">House of the Rising Sun</span>
+                </a>{" "}
+                from Hege of The Shield fan group. He later posted a multi-cam
+                video of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=7Q5WvL3P4bA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Suspicious Minds</span>
+                </a>{" "}
+                that he created from footage provided by many mcenterbers of the
+                The Shield fan group.
+              </div>
+            </Section>
+            <Section>
+              <Center>July 7, 2022, Kongsberg Jazz Festival</Center>
+            </Section>
+            <Section>
+              <div>
+                Rusty later posted a clip from Øyvind Skogstad of The Shield Fan
+                Group of Angelina opening the concert with an amazing new{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=cCINlfEEtQ4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    cover of Labrinth's Mount Everest
+                  </span>
+                </a>
+                . Rusty Shackleford later audio-corrected and video-edited Chris
+                Walker's 4K footage of Angelina surprising everyone with{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=DYVxnY06BWw"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">
+                    her version of Mount Everest
+                  </span>
+                </a>
+                , especially her falsetto riffing with the guitarist.
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Kathrine posted a{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=1yPU9I9RXx8"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    TV interview by NRK Dagsrevyen
+                  </span>
+                </a>{" "}
+                from that concert with Angelina singing a jazzy version of her
+                song 7th Heaven. When asked how life is in the USA and if she is
+                fully committed to the music, she replied:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/1yPU9I9RXx8?t=139"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Yes, I am fully committed to music. Music is my life
+                  </span>
+                </a>
+                .{" "}
+              </div>
+            </Section>
+            <Section>
+              <blockquote className="h-full w-full">
+                <div>I am fully committed to music. Music is my life.</div>
+                <cite>Angelina Jordan answering a NRK interviewer</cite>
+              </blockquote>
+            </Section>
+            <Section>
+              <div>
+                A month later, Kathrine posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=HKK66K5u1Fc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan on “Festivalsommer” at NRK TV the 6th of
+                    August, 2022
+                  </span>
+                </a>
+                . Her section of the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://tv.nrk.no/serie/festivalsommer/2022/MKDU45000422/avspiller"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Kongsberg Jazz Festival</span>
+                </a>{" "}
+                7:45–17:20 opens with an interview followed by Angelina singing
+                her original songs, 7th Heaven and Million Miles.{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UChFf2i9AM8r1cYvm5tBel1A"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Boris Palenovski</span>
+                </a>{" "}
+                later enhanced the audio-visual quality of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/bnd-DkPzTPw"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">this NRK TV feature</span>
+                </a>{" "}
+                to 4K.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Chris Walker, aka BigAngieFan, posted this sweet clip of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=CivEDM4uhJY"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina interacting with her audience
+                  </span>
+                </a>{" "}
+                before singing Valerie telling thcenter how happy she is to be
+                back in Norway after 3 years to sing for thcenter again. A month
+                later Chris posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=vCnF-OlS04U"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan Live at Kongsberg 2022: All of Me and
+                    Valerie
+                  </span>
+                </a>{" "}
+                on{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/channel/UCSWmvV4K9GmaAVdPHcuEfug"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    The Hawaii Walkers Channel
+                  </span>
+                </a>
+                . And these too:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=FFyKzY3GzLs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    House of the Rising Sun and Killing Me Softly
+                  </span>
+                </a>
+                . The closeup picture and sound are broadcast quality! Chris
+                continues to add more songs, like{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=iLBBBudzSBE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">You Don't Own Me</span>
+                </a>
+                , and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=y8UqOgy6TVI"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Crazy and Mercy</span>
+                </a>{" "}
+                with improved sound, and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=UOA0Riz4thA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bang Bang</span>
+                </a>
+                , followed by{" "}
+                <a href="https://www.youtube.com/watch?v=fTCb4h2vS5I">
+                  <span className="text-blue-500">
+                    Bohcenterian Rhapsody ' Goodbye Yellow Brick Road
+                  </span>
+                </a>
+                . He later added a translated Introduction, a Musical Intro, a
+                brief talk by Angelina, and her singing{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=F9AyPJ3pOto"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Mount Everest</span>
+                </a>
+                , a song most were not familiar with. It blew thcenter away!
+                Angelina also performed the Amy Winehouse song{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=jfwP3NHAMq4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Tears Dry On Their Own</span>
+                </a>
+                . Chris created a hybrid version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=bX-0UmxGhww"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">7th Heaven</span>
+                </a>{" "}
+                using NRK TV and fan footage. I recorded about 25% of the video
+                and sound myself, and the other 75% is from NRK TV.
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Alan Papier posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Odz7Ac3C89k"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    The Kongsberg Concert Interviews
+                  </span>
+                </a>{" "}
+                with fans that came from around the world to listen to Angelina
+                Jordan sing. He wrote: Thousands of Angelina Jordan's fans
+                around the world wish they could have attended her recent
+                concerts in Norway. In today's video, we try and recreate the
+                atmosphere from her concert at the Kongsberg Jazz Festival for
+                those who could not attend.{" "}
+              </div>
+            </Section>
+            <Section>
+              <Center>July 10, 2022, Kurbadhagen, Sandefjord </Center>
+            </Section>
+            <Section>
+              <div>
+                There are several posts from this concert. Steinar Hatlen's
+                closeup recording of Angelina's powerful rendition of her song,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=yq5KAztslWw"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Million Miles</span>
+                </a>{" "}
+                was posted by The Shield. Angelina introduced the song saying it
+                is very meaningful to her about her grandpa and wanted to share
+                a special message about losing someone you loved: I don't want
+                anyone of you to think that, you know, that they left you.
+                They're always going to be with you no matter where you are. So
+                you're never alone, a reference to the repeated line, I'm never
+                alone, in her song.
+              </div>
+              <div>
+                Kathrine posted the complete new cover version of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=jdd_-lNnvVc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Mount Everest</span>
+                </a>
+                , which opened the show,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=haAhsQwICY0"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Killing Me Softly</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=IfaA-2r83aA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Fly Me to the Moon</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=G6UD8CNVzWs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Mercy</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=Tw_osE6J_0o"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">You Don't Own Me</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=tMNWrkJL0uk"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Suspicious Minds</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=yudm0IBDydU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bohemian Rhapsody</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=gelFySO65TI"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Yellow Brick Road</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=WpD821uKtDs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">House of the Rising Sun</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/nQrzvsOe0_g"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Tears Dry on Their Own</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/wIRWOWpaFr0"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">7th Heaven</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=KNcNxGN0NIM"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Love on the Brain</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=hTm_yY5KeWo"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">All of Me</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=mW3hMsKsaFg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Valerie</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=JNjdUeT2488"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Crazy</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=s-8RB1oYzVU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bang Bang</span>,
+                </a>{" "}
+                and a better quality video of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fhn4pIDunGg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Million Miles</span>
+                </a>
+                . From{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fhn4pIDunGg't=280s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">4:40–4:50</span>
+                </a>
+                , Angelina's voice kept soaring like never before. It surprised
+                the audience, including the musicians. Thrilled, everyone
+                applauded. Angelina gave thcenter a little smile and kept on
+                singing. I{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgxadPplL92ziFsfVx14AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">asked Kathrine</span>
+                </a>{" "}
+                what it must have felt like. Steve answered that he{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgxadPplL92ziFsfVx14AaABAg.9dO7C2C-5zU9dOOcLCRKIU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    was only 10 feet away when she sang this '; it was spine
+                    chilling
+                  </span>
+                </a>
+                . Geir Stian Aaslund described it as a triple Angelina moment
+                and wrote:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=fhn4pIDunGg'lc=UgzIEo-ZJDT-8PXScenterR4AaABAg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    I almost fainted when I heard that part at the concert.
+                  </span>
+                </a>{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Kathrine posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=nTY8Dvy9LFs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>
+                , which included Angelina's introduction. I want to dedicate
+                this song to a very special person—my grandma. Applause She
+                couldn't personally come this time because as you guys know,
+                she's been sick, but she will be better soon. And I' I miss her
+                so much. I miss every single second that I'm not with her. And'
+                you guys enjoy. That powerful song concluded the concert.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Mattias Axelsson recorded the Kurbadhagen concert in 4K. In his
+                first video, he posted sound checks for{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/2b_d7PVAYMI"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">At last</span>
+                </a>{" "}
+                and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/2b_d7PVAYMI?t=132"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>
+                , ending with visuals of people lined up to get in. He then
+                posted all{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/playlist?list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">18 songs</span>
+                </a>{" "}
+                in the order they were performed, starting with{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=KHCAgExJlCQ'list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r'index=2"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Mount Everest</span>
+                </a>{" "}
+                and ending with{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=BkvsnY7J510'list=PLB3ywC3nQj__BfXeSj4-b2VxQSBnQsV8r'index=19"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>
+                . This secenters to be a complete quality compilation.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Vidar Enerud also uploaded the{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/playlist?list=PLgVH9DUPH5QorN0ofzcbOYQSXXlDzyfA9"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Full Playlist</span>
+                </a>{" "}
+                of 15 songs plus 3 encores, including a poster listing thcenter.{" "}
+              </div>
+              <div>
+                The Foot Crew posted the show in one video 1:05:51:{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=VkhcpiEqtgg"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan consert Kurbadhagen in Sandefjord in Norway!
+                    It was insane.
+                  </span>
+                </a>
+                . It's further from the stage, but the sound from the large
+                speaker array systcenter is clearer.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                Tomas Odebrant posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/playlist?list=PL5OHYNhZE6vcUfPgFFzSGZBREt8RSQPa4"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">5 rehearsals</span>
+                </a>
+                : 1 At last, 2-4 I Have Nothing, 5 Bang Bang. Hallvard Ulsaker
+                filmed a closeup of Angelina singing{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=gO8SaL0dE5M"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>{" "}
+                and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=quBh8b1PlBc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Million Miles</span>
+                </a>
+                . Trond Andersen{" "}
+                <a
+                  href="https://www.youtube.com/playlist?list=PLj6IAyRjfQ-4AM5CcqN7G_E2JEFJshryM"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span className="text-blue-500">posted 11 songs</span>
+                </a>{" "}
+                so far. Geir Stian Aaslund posted{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=xZlRX-NYBPU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Suspicious Minds</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/rXvb5nkOetc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Bang Bang</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/kmhciQ1Qttc"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Mercy</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=VCiW7SMcxzk"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Valerie</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/v7jakMA7mYY"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Fly Me to the Moon</span>
+                </a>
+                ,{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/tnr9N66imJs"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Yellow Brick Road</span>
+                </a>
+                , an excerpt of{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=hgUeTrP31eU"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">Million Miles</span>
+                </a>{" "}
+                including someone reacting to AJ's unexpected high riff, and{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/xV5fdKJsoqA"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">I Have Nothing</span>
+                </a>
+                , starting with her dedication to Grandma Mery.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div className="inline">
+                <div className="center flex justify-center">
+                  <a href="https://kenchawkin.files.wordpress.com/2022/07/angelina-makes-a-heart-sending-love-to-her-fans.png">
+                    <Image
+                      src={heartLove}
+                      alt="heartLove"
+                      className="flex h-60 w-96 content-center justify-center rounded-lg sm:col-span-2 sm:h-52 lg:col-span-full"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </Section>
+            <Section>
+              <div>
+                The words to the song—I have nothing, nothing, nothing, if I
+                don't have you—are true on two levels—her grandma and her
+                audience. Without Mery Zamani introducing Angelina to jazz at a
+                very early age and lovingly supporting and recording her
+                God-given talent—she, and we, would have nothing. And without
+                devoted fans, a singer has nothing.{" "}
+              </div>
+              <div>
+                Angelina's career is all based on{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=B8M5WRqA00w't=80s"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    giving and receiving love
+                  </span>
+                </a>
+                . She even gave{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/Oq4GV34zHsY?t=74"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">the heart sign</span>
+                </a>{" "}
+                twice while singing{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://youtu.be/Oq4GV34zHsY"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">All of Me</span>
+                </a>
+                . The love and appreciation the audience showed Angelina moved
+                her to tears, just as her love and singing did for thcenter, and
+                us.{" "}
+              </div>
+            </Section>
+            <Section>
+              <div>
+                As you could see from the videos, everyone on and off the stage
+                was very happy. It was a huge lovefest.
+              </div>
+              <div>
+                July 11, 2022: An{" "}
+                <a
+                  rel="noreferrer noopener"
+                  href="https://www.youtube.com/watch?v=d7THkVKsbLE"
+                  target="_blank"
+                >
+                  <span className="text-blue-500">
+                    Angelina Jordan Bonus Podcast Episode of Wrapped in a Warm
+                    Blanket
+                  </span>
+                </a>{" "}
+                with co-hosts Alan Papier and Pontus Österlin from Kurbadhagen
+                in Sandefjord, Norway. Alan and Pontus finally met there in
+                person and shared their reflections on Angelina's concert. They
+                also met Sara Astar, Angelina's mother. Nice to see such
+                dedicated AJ reactors and podcasters looking fulfilled after
+                seeing and hearing Angelina sing in person. She created a
+                magical atmosphere beyond their expectations.{" "}
+              </div>
+            </Section>
             <div>
               July 20, 2022:{" "}
               <a
