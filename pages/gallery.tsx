@@ -16,8 +16,13 @@ import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
 import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
 import Layout from "@components/PageLayout";
+import Modal from "@components/Modal/PortalExample";
 import angie from "../public/angie/angelina.jpg";
 import styles from "@components/sponsor-section.module.css";
+
+type Props = {
+  searchParams: Record<string, string> | null | undefined;
+};
 
 const Gallery: NextPage = ({ searchParams, images }: { images: ImageProps[] }) => {
   const showModal = searchParams?.modal;
@@ -231,113 +236,11 @@ const Gallery: NextPage = ({ searchParams, images }: { images: ImageProps[] }) =
               <p className="max-w-[40ch] text-slate-300/75 sm:max-w-[32ch]">
                 Queen Angelina Jordan, collection of photos!
               </p>
-              {showModal ? (
-                <>
-                  <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
-                    <div className="relative mx-auto my-6 w-auto max-w-3xl">
-                      {/*content*/}
-                      <div className="relative flex w-full flex-col rounded-lg border-0 bg-[#111111] shadow-lg outline-none focus:outline-none">
-                        {/*header*/}
-                        <div className="flex items-start justify-between rounded-t border-b border-solid border-slate-700 p-5">
-                          <Center>Social Share</Center>
-                          <button
-                            className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-slate-200 outline-none focus:outline-none"
-                            onClick={() => setShowModal(false)}
-                          >
-                            <span className="block h-6 w-6 bg-transparent text-2xl text-slate-200 opacity-5 outline-none focus:outline-none">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6 text-slate-200"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                              </svg>
-                            </span>
-                          </button>
-                        </div>
-                        {/*body*/}
-                        <div className="relative flex-auto p-6">
-                          <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
-                            <EmailShareButton
-                              url="https://mansbooks.com/gallery"
-                              subject="Gallery"
-                              body="body"
-                            >
-                              <EmailIcon size={32} round />
-                            </EmailShareButton>{" "}
-                            <TwitterShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                              title="Gallery"
-                            >
-                              <TwitterIcon size={32} round />
-                            </TwitterShareButton>{" "}
-                            <FacebookShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                            >
-                              <FacebookIcon size={32} round />
-                            </FacebookShareButton>{" "}
-                            <PinterestShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                            >
-                              <PinterestIcon size={32} round />
-                            </PinterestShareButton>{" "}
-                            <TelegramShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                              title="Gallery"
-                            >
-                              <TelegramIcon size={32} round />
-                            </TelegramShareButton>{" "}
-                            <RedditShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                            >
-                              <RedditIcon size={32} round />
-                            </RedditShareButton>{" "}
-                            <WhatsappShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                            >
-                              <WhatsappIcon size={32} round />
-                            </WhatsappShareButton>{" "}
-                            <LinkedinShareButton
-                              url={`https://mansbooks.com/expo/${sponsor.slug}`}
-                            >
-                              <LinkedinIcon size={32} round />
-                            </LinkedinShareButton>
-                          </p>
-                        </div>
-                        {/*footer*/}
-                        <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
-                          <span
-                            className={cn(
-                              styles.button,
-                              styles["button-resource"],
-                            )}
-                          >
-                            <button
-                              type="button"
-                              onClick={() => setShowModal(false)}
-                            >
-                              Close
-                            </button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
-                </>
-              ) : null}
               <div className="flex flex-row text-xs text-slate-300">
                 <span className={cn(styles.button, styles["button-resource"])}>
                   <Link
                     className="button-glow"
-                    href="/?modal=true"
+                    href="/gallery/?modal=true"
                   >
                     <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
                   </Link>
@@ -375,7 +278,7 @@ const Gallery: NextPage = ({ searchParams, images }: { images: ImageProps[] }) =
             </div>
           </div>
         </main>
-      </Layout>
+      </Layout>     
     </>
   );
 };
