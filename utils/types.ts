@@ -6,6 +6,7 @@ export interface ImageProps {
   public_id: string;
   format: string;
   blurDataUrl?: string;
+  searchParams: Record<string, string> | null | undefined;
 }
 
 export interface SharedModalProps {

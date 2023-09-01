@@ -19,8 +19,8 @@ import Layout from "@components/PageLayout";
 import angie from "../public/angie/angelina.jpg";
 import styles from "@components/sponsor-section.module.css";
 
-const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
-  const [showModal, setShowModal] = useState(false);
+const Gallery: NextPage = ({ searchParams, images }: { images: ImageProps[] }) => {
+  const showModal = searchParams?.modal;
   const router = useRouter();
   const { photoId } = router.query;
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
@@ -38,6 +38,8 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
       <Stars />
       <Head>
         <>
+          <meta itemprop="caption" content="Angelina Jordan" />
+          <meta itemprop="publisher" content="https://mansbooks.com/gallery" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -333,17 +335,19 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
               ) : null}
               <div className="flex flex-row text-xs text-slate-300">
                 <span className={cn(styles.button, styles["button-resource"])}>
-                  <button
+                  <Link
                     className="button-glow"
-                    onClick={() => setShowModal(true)}
+                    href="/?modal=true"
                   >
                     <ShareIcon className="-mt-1 h-8 w-8 pr-2" />
-                  </button>
+                  </Link>
                 </span>
               </div>
             </div>
+            <div itemprop="photo" itemscope itemtype="http://schema.org/ImageObject">
             {images.map(({ id, public_id, format, blurDataUrl }) => (
               <Link
+                itemprop="contentURL"
                 key={id}
                 href={`/gallery/?photoId=${id}`}
                 as={`/p/${id}`}
@@ -352,7 +356,8 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                 className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
               >
                 <Image
-                  alt="Angies Conf photo"
+                  itemprop="thumbnailUrl"
+                  alt="Angie's Photo's"
                   className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
                   style={{ transform: "translate3d(0, 0, 0)" }}
                   placeholder="blur"
@@ -367,6 +372,7 @@ const Gallery: NextPage = ({ images }: { images: ImageProps[] }) => {
                 />
               </Link>
             ))}
+            </div>
           </div>
         </main>
       </Layout>
