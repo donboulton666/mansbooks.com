@@ -1,5 +1,5 @@
 import { PostgrestError } from "@supabase/supabase-js";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@lib/database.types";
 
 interface SupabaseResult {
@@ -8,7 +8,7 @@ interface SupabaseResult {
 }
 
 const getLoves = async (slug: string): Promise<number> => {
-  const supabase = createClientComponentClient<Database>()
+  const supabase = createClientComponentClient<Database>();
   const { data: loves, error }: SupabaseResult = await supabase
     .from("loves")
     .select(`count`)

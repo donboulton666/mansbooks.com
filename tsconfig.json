@@ -18,7 +18,6 @@
     "typeRoots": ["node", "./types"],
     "jsx": "preserve",
     "paths": {
-      "@app/*": ["app/*"],
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
       "@styles/*": ["styles/*"]

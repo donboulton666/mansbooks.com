@@ -17,7 +17,7 @@ const WavingHand = () => (
       }}
       animate={{ rotate: 20 }}
       transition={{
-        repeat: 25,
+        repeat: 20,
         repeatType: "mirror",
         duration: 0.4,
         delay: 0.5,

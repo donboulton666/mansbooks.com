@@ -1,4 +1,4 @@
-import { Session } from "@supabase/auth-helpers-nextjs"
+import { Session } from "@supabase/auth-helpers-nextjs";
 import { useEffect, useState } from "react";
 import { Database } from "@lib/database.types";
 import supabase from "@lib/supabase";

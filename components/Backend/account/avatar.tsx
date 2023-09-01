@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Session } from "@supabase/auth-helpers-nextjs"
+import { Session } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@lib/database.types";
 import Image from "next/image";
 import supabase from "@lib/supabase";

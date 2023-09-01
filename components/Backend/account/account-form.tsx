@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  useUser,
-  Session,
-} from "@supabase/auth-helpers-react";
+import { useUser, Session } from "@supabase/auth-helpers-react";
 import { Database } from "@lib/database.types";
 import Avatar from "./avatar";
 import supabase from "@lib/supabase";

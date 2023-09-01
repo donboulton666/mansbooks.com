@@ -12,7 +12,7 @@ import LovesCounter from "@components/LovesCounter";
 import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
 import styles from "@components/sponsor-section.module.css";
 import styleUtils from "@components/utils.module.css";
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useSession } from "@supabase/auth-helpers-react";
 import {
   EmailShareButton,
@@ -39,7 +39,7 @@ type SponsorSectionProps = {
 
 export default function SponsorSection({ sponsor }: SponsorSectionProps) {
   const session = useSession();
-  const supabase = createClientComponentClient<Database>()
+  const supabase = createClientComponentClient<Database>();
   const [showModal, setShowModal] = useState(false);
   return (
     <>

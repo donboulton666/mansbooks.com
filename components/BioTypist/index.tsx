@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Typist from "@components/Typest";
+import Typist from "@components/Typist";
 import Heart from "@components/icons/heart";
 
 function BioTypist() {

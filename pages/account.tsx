@@ -4,14 +4,14 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import type { NextPage } from "next";
-import AuthForm from "@app/auth-form";
-import AccountForm from "@app/account/account-form";
+import AuthForm from "@components/Backend/auth-form";
+import AccountForm from "@components/Backend/account/account-form";
 import Layout from "@components/PageLayout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
-import { Session } from "@supabase/auth-helpers-nextjs"
+import { Session } from "@supabase/auth-helpers-nextjs";
 import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 

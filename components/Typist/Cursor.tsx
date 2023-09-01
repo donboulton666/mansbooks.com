@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
 import PropTypes from "prop-types";
-import "./Cursor.css";
 
 export default class Cursor extends Component {
   static propTypes = {

@@ -14,8 +14,8 @@ import {
   ClipboardListIcon,
 } from "@heroicons/react/outline";
 import Control from "@components/icons/control";
-import Avatar from "@app/account/avatar";
-import { Session } from "@supabase/auth-helpers-nextjs"
+import Avatar from "@components/Backend/account/avatar";
+import { Session } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@lib/database.types";
 import supabase from "@lib/supabase";
 

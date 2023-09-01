@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BioTypist from "@components/BioTypest";
+import BioTypist from "@components/BioTypist";
 import WavingHand from "@components/WavingHand";
 import angieImage from "../../public/angie/angelina-jordan-icon.jpg";
 

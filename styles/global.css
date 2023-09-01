@@ -639,14 +639,11 @@ select {
 }
 
 .live-button {
-  background: #333333; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #333333,
-    #dd1818
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #333333;
+  background: -webkit-linear-gradient(to right, #333333, #dd1818);
   background: linear-gradient(to right, #333333, #dd1818);
 }
+
 .blockquote-text::before {
   content: open-quote;
   width: 28px;
@@ -655,4 +652,24 @@ select {
   font-size: 60px;
   font-family: "Eb Garamond";
   color: #006cbe;
+}
+
+.Typist .Cursor {
+  display: inline-block;
+}
+
+.Typist .Cursor--blinking {
+  opacity: 1;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
