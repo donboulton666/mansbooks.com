@@ -15,9 +15,9 @@ const WavingHand = () => (
         paddingRight: "45px",
         display: "inline-block",
       }}
-      animate={{ rotate: 20 }}
+      animate={{ rotate: 17 }}
       transition={{
-        repeat: 20,
+        repeat: 17,
         repeatType: "mirror",
         duration: 0.4,
         delay: 0.5,

@@ -43,9 +43,9 @@ export default function Survey() {
 
   const RadioGroupOption = ({ value }) => (
     <div className="w-96">
-      <ul class="w-full items-center rounded-lg border border-slate-600 bg-slate-900 text-sm font-medium text-slate-300 sm:flex">
-        <li class="w-full border-b border-slate-600 sm:border-b-0 sm:border-r">
-          <div class="flex items-center pl-3">
+      <ul className="w-full items-center rounded-lg border border-slate-600 bg-slate-900 text-sm font-medium text-slate-300 sm:flex">
+        <li className="w-full border-b border-slate-600 sm:border-b-0 sm:border-r">
+          <div className="flex items-center pl-3">
             <input
               id="list-radio"
               type="radio"

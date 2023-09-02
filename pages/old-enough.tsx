@@ -126,56 +126,7 @@ const OldEnough = () => {
         </>
       </Head>
       <Layout>
-        <div className="login-beams bg-scale-100 flex flex-1 flex-col">
-          <div className="absolute top-0 mx-auto w-full mb-10 px-8 pt-6 sm:px-6 lg:px-8">
-            <nav className="relative flex items-center justify-between sm:h-10 mb-10">
-              <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
-                <div className="flex w-full items-center justify-between md:w-auto">
-                  <a href="/">
-                    <span className="relative inline-block overflow-hidden">
-                      <Image
-                        layout="fixed"
-                        className="h-8 w-8 self-center rounded-lg"
-                        src={angie}
-                        width={32}
-                        height={32}
-                        quality={95}
-                        alt="Our Love!"
-                        loading="lazy"
-                      />
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div className="hidden items-center space-x-3 md:ml-10 md:flex md:pr-4">
-                <a target="_blank" rel="noreferrer" href="/about">
-                  <button
-                    type="button"
-                    class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      class="sbui-icon "
-                    >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>{" "}
-                    <span class="truncate">About Mansbooks</span>{" "}
-                  </button>
-                </a>
-              </div>
-            </nav>
-          </div>
+        <div className="login-beams bg-scale-100 flex flex-1 flex-col mt">
           <div className="flex flex-1 mb-10">
             <main className="bg-scale-200 border-scale-500 flex flex-1 flex-shrink-0 flex-col items-center border-r border-slate-700 px-5 pb-8 pt-16 shadow-lg">
               <div className="flex w-[330px] flex-1 flex-col justify-center sm:w-[384px]">
@@ -189,7 +140,7 @@ const OldEnough = () => {
                   <IframeWrapper>
                     <ReactPlayer
                       ref={ref}
-                      url="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"
+                      url="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
                       width="100%"
                       height="100%"
                       controls={true}
@@ -222,7 +173,7 @@ const OldEnough = () => {
                 <IframeWrapperLarge>
                   <ReactPlayer
                     ref={refPlayer}
-                    url="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
+                    url="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"                    
                     height="100%"
                     width="100%"
                     controls={true}

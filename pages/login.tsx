@@ -151,7 +151,7 @@ function Login({ session }: { session: Session | null }) {
               <a target="_blank" rel="noreferrer" href="/about">
                 <button
                   type="button"
-                  class="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
+                  className="font-regular text-scale-1200 bg-scale-100 hover:bg-scale-300 border-scale-600 hover:border-scale-700 dark:border-scale-700 hover:dark:border-scale-800 dark:bg-scale-500 dark:hover:bg-scale-600 focus-visible:outline-brand-600 relative inline-flex cursor-pointer items-center justify-center space-x-2 rounded-md border px-2.5 py-1 text-center text-xs shadow-sm outline-none outline-0 transition-all duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +162,7 @@ function Login({ session }: { session: Session | null }) {
                     stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    class="sbui-icon "
+                    className="sbui-icon "
                   >
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <polyline points="14 2 14 8 20 8"></polyline>
@@ -170,7 +170,7 @@ function Login({ session }: { session: Session | null }) {
                     <line x1="16" y1="17" x2="8" y2="17"></line>
                     <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>{" "}
-                  <span class="truncate">About Mansbooks</span>{" "}
+                  <span className="truncate">About Mansbooks</span>{" "}
                 </button>
               </a>
             </div>
