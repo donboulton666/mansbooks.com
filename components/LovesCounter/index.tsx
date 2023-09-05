@@ -3,7 +3,7 @@ import { Session } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@lib/database.types";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { getLoves, registerLoves } from "../../lib/loves";
+import { getLoves, registerLoves } from "@lib/loves";
 import useSWR from "swr";
 import supabase from "@lib/supabase";
 

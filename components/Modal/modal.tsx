@@ -105,12 +105,12 @@ const ModalRoot: FC<ModalRootProps> = (props) => {
                           </Dialog.Title>
                         </div>
                         <div className="mt-2">
-                          <p
+                          <div
                             key={dialogContent}
                             className="mt-4 text-sm text-slate-300"
                           >
                             {dialogContent}
-                          </p>
+                          </div>
                         </div>
                       </div>
                     </div>

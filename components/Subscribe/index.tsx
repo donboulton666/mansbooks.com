@@ -12,15 +12,25 @@ export default function Subscribe() {
       subscriberName: target.name,
       subscriberEmail: target.email,
     };
-    //call to the Netlify Function you created
-    fetch("./.netlify/functions/triggerSubscribeEmail", {
-      method: "POST",
-      body: JSON.stringify({
-        subscriberName: data.subscriberName,
-        subscriberEmail: data.subscriberEmail,
-        inviteeEmail: "info@netlify.com",
-      }),
-    });
+    const form = e.target;
+
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      setFormState(FormState.SUCCESS);
+    } catch (error) {
+      setFormState(FormState.ERROR);
+
+      console.error(error);
+    }
   };
   return (
     <div className="subscribe-form-container">
@@ -55,10 +65,10 @@ export default function Subscribe() {
                 id="name"
                 name="name"
                 type="text"
+                value={subscriberName}
                 placeholder="Name"
               />
             </div>
-            {errors?.firstName && <p>{errors.firstName.message}</p>}
           </div>
           <div className="col-span-6">
             <label
@@ -86,6 +96,7 @@ export default function Subscribe() {
                 id="email"
                 autoComplete="on"
                 placeholder="Email"
+                value={subscriberEmail}
                 className="mt-1 block w-full rounded-md border-slate-800 bg-slate-900 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-300 shadow-sm focus:border-wine-300 focus:ring-wine-200 sm:text-sm"
               />
             </div>

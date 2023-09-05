@@ -1,7 +1,7 @@
+import { useEffect, useState, useRef } from "react";
 import { Dialog } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
 import useKeypress from "react-use-keypress";
 import type { ImageProps } from "../../utils/types";
 import SharedModal from "./SharedModal";
@@ -13,9 +13,14 @@ export default function Dialogue({
   images: ImageProps[];
   onClose?: () => void;
 }) {
+  const [loading, setLoading] = useState(false);
   const overlayRef = useRef();
   const router = useRouter();
-
+  useEffect(() => {
+    if (router.isReady) {
+      setLoading(false);
+    }
+  }, [router.isReady]);
   const { photoId } = router.query;
   const index = Number(photoId);
 

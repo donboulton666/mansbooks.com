@@ -14,7 +14,7 @@ import Giscus from "@giscus/react";
 import ViewCounter from "@components/ViewCounter";
 import useSWR from "swr";
 import fetcher from "lib/fetcher";
-import { EyeIcon } from "@heroicons/react/outline";
+import { EyeIcon } from "@heroicons/react/24/outline";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { format } from "date-fns";
 

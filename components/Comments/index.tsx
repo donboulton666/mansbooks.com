@@ -8,7 +8,12 @@ import {
 import { Session } from "@supabase/auth-helpers-nextjs";
 import { useState, FC } from "react";
 import { useForm } from "react-hook-form";
-import { PencilIcon, ReplyIcon, TrashIcon } from "@heroicons/react/outline";
+import {
+  PencilIcon,
+  ArrowUturnRightIcon,
+  TrashIcon,
+} from "@heroicons/react/24/outline";
+
 import useSWR, { Key, useSWRConfig } from "swr";
 import { useRecoilState } from "recoil";
 import { ToastState } from "../../states/toastStates";
@@ -207,10 +212,11 @@ export const Comments: FC<CommentsProps> = ({
         >
           {replyContent && (
             <div className="mb-4 flex items-center justify-start gap-4 opacity-70">
-              <ReplyIcon className="w-4 -rotate-180" />
-              <p className="text-base font-extralight">
+              <ArrowUturnRightIcon className="w-4 -rotate-180" />
+              <div className="text-base font-extralight">
                 {replyContent.comment}
-              </p>
+              </div>
+
               <TrashIcon
                 onClick={() => setReplyContent(null)}
                 className="w-4 cursor-pointer"
@@ -237,11 +243,12 @@ export const Comments: FC<CommentsProps> = ({
         </form>
       ) : (
         <div className="flex items-center gap-8">
-          <p>Sign in to add comments</p>
-          <Link href={"/login"}>
-            <a className="rounded-lg bg-slate-900 px-3 py-1 text-lg text-slate-300">
-              Sign in
-            </a>
+          <div>Sign in to add comments</div>
+          <Link
+            href={"/login"}
+            className="rounded-lg bg-slate-900 px-3 py-1 text-lg text-slate-300"
+          >
+            Sign in
           </Link>
         </div>
       )}
@@ -275,19 +282,19 @@ export const Comments: FC<CommentsProps> = ({
                       }
                       className="flex cursor-pointer items-center justify-start gap-4 opacity-70"
                     >
-                      <ReplyIcon className="w-4 -rotate-180" />
-                      <p className="text-base font-extralight">
+                      <ArrowUturnRightIcon className="w-4 -rotate-180" />
+                      <div className="text-base font-extralight">
                         {comments
                           .find((comment) => comment.id === replyOf)
                           ?.payload.slice(0, 30) ||
                           "[Comment you replied has been deleted]"}
-                      </p>
+                      </div>
                     </div>
                   )}
                   <div className="flex w-full items-center justify-between">
-                    <p className="font-medium">{user}</p>
+                    <div className="font-medium">{user}</div>
                     <div className="tablet:flex mt-2 hidden w-full justify-end gap-6">
-                      <ReplyIcon
+                      <ArrowUturnRightIcon
                         onClick={() => reply(payload, commentId)}
                         className="w-6 -rotate-180 cursor-pointer"
                       />
@@ -327,10 +334,10 @@ export const Comments: FC<CommentsProps> = ({
                       </button>
                     </div>
                   ) : (
-                    <p className="font-extralight">{payload}</p>
+                    <div className="font-extralight">{payload}</div>
                   )}
                   <div className="tablet:hidden mt-2 flex w-full justify-start gap-6">
-                    <ReplyIcon
+                    <ArrowUturnRightIcon
                       onClick={() => reply(payload, commentId)}
                       className="w-6 -rotate-180 cursor-pointer"
                     />

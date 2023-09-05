@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import { CookieConsent } from "react-cookie-consent";
 import cn from "classnames";
@@ -31,7 +31,13 @@ export default function Layout({
   layoutStyles,
   isLive = false,
 }: Props) {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if (router.isReady) {
+      setLoading(false);
+    }
+  }, [router.isReady]);
   const activeRoute = router.asPath;
   const disableCta = ["/schedule", "/gallery", "/expo"];
   return (

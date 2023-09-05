@@ -50,7 +50,7 @@ const ScreenshareTile = () => {
     <div className="screenshare self-screenshare">
       {isLocalScreenShared ? (
         <div className="screenshare self-screenshare flex flex-col items-center justify-center font-bold">
-          <p>You're sharing screen</p>{" "}
+          <div>You're sharing screen</div>{" "}
           <Button variant="danger" onClick={stopScreenShare}>
             <CrossIcon className="mr-2" /> Stop screen share
           </Button>

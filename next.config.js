@@ -1,33 +1,25 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require("dotenv").config();
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withPWA = require('next-pwa')({
-  dest: 'public'
-})
-
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const runtimeCaching = require("next-pwa/cache");
-
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+const withPWA = require("next-pwa")({
+  dest: "public",
+  runtimeCaching,
+  buildExcludes: [/middleware-manifest.json$/]
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withPWA(
-  withBundleAnalyzer({
-    pwa: {
-      runtimeCaching,
-      buildExcludes: [/middleware-manifest.json$/]
-    },
+const nextConfig = withPWA({
     reactStrictMode: true,
     swcMinify: true,
+    compiler: {
+      removeConsole: true,
+    },
     compress: true,
     experimental: {
-      appDir: true,
       serverActions: true,
-      webVitalsAttribution: ['CLS', 'LCP'],
+      nextScriptWorkers: true,
     },
     i18n: {
       locales: ["en", "es", "it", "nn"],
@@ -67,6 +59,7 @@ const nextConfig = withPWA(
         "upstash.com",
         "i.ytimg.com",
         "yt3.ggpht.com",
+        "i.scdn.co",
       ],
     },
     // Support svg import
@@ -100,8 +93,7 @@ const nextConfig = withPWA(
       // your project has type errors.
       ignoreBuildErrors: true,
     },
-  })
-);
+});
 
 module.exports = nextConfig
 
@@ -113,7 +105,7 @@ const ContentSecurityPolicy = `
   style-src 'self' https://fonts.googleapis.com *.googleapis.com 'unsafe-inline' data:;
   frame-src https://www.youtube-nocookie.com/ https://giscus.app/ https://accounts.google.com/ youtube.com *.youtube.com *.twitter.com *.giscus.app;
   img-src * blob: data:;
-  worker-src https://mansbooks.com/sw.js http://localhost:3000/sw.js;
+  worker-src https://mansbooks.com/sw.js https://mansbooks.com/partytown-sw.js http://localhost:3000/sw.js http://localhost:3000/partytown-sw.js http://localhost:3000/_next/static/~partytown/partytown-sw.js;
   media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
   connect-src *;
   font-src 'self' https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2 https://fonts.googleapis.com *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com https://fonts.gstatic.com *.fonts.gstatic.com;

@@ -18,7 +18,7 @@ const Participants = () => {
       {backstagePeers.length > 0 && localPeer.roleName === "backstage" ? (
         <>
           <div>
-            <p>Moderator ({backstagePeers.length})</p>
+            <div>Moderator ({backstagePeers.length})</div>
             {backstagePeers.map((p) => (
               <div key={p.id} className="my-4 flex items-center">
                 <HmsAvatar name={p.name} />
@@ -36,7 +36,7 @@ const Participants = () => {
       ) : null}
       {stagePeers.length > 0 ? (
         <div>
-          <p className="flex items-center">Speaker ({stagePeers.length})</p>
+          <div className="flex items-center">Speaker ({stagePeers.length})</div>
           {stagePeers.map((p) => (
             <div key={p.id} className="my-4 flex items-center">
               <HmsAvatar name={p.name} />
@@ -54,9 +54,9 @@ const Participants = () => {
 
       {inviteePeers.length > 0 ? (
         <div>
-          <p className="flex items-center">
+          <div className="flex items-center">
             Guest Speakers ({inviteePeers.length})
-          </p>
+          </div>
           {inviteePeers.map((p) => (
             <div key={p.id} className="my-4 flex items-center">
               <HmsAvatar name={p.name} />
@@ -74,7 +74,9 @@ const Participants = () => {
 
       {viewerPeers.length > 0 ? (
         <div>
-          <p className="flex items-center">Viewers ({viewerPeers.length})</p>
+          <div className="flex items-center">
+            Viewers ({viewerPeers.length})
+          </div>
           {viewerPeers.map((p) => (
             <div key={p.id} className="my-4 flex items-center">
               <HmsAvatar name={p.name} />

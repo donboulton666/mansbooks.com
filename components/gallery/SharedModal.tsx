@@ -1,12 +1,5 @@
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
-import {
-  DownloadIcon,
-  ArrowNarrowRightIcon,
-  ArrowNarrowLeftIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -126,7 +119,20 @@ export default function SharedModal({
                     title="Open full size version"
                     rel="noreferrer"
                   >
-                    <ArrowNarrowRightIcon className="h-5 w-5" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="text-slate-300 w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
                   </a>
                 ) : (
                   <a
@@ -151,7 +157,20 @@ export default function SharedModal({
                   className="rounded-full bg-black/50 p-2 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300"
                   title="Download full size version"
                 >
-                  <DownloadIcon className="h-5 w-5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="text-slate-300 w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                    />
+                  </svg>
                 </button>
               </div>
               <div className="absolute left-0 top-0 flex items-center gap-2 p-3 text-slate-300">
@@ -160,9 +179,35 @@ export default function SharedModal({
                   className="rounded-full bg-black/50 p-2 text-slate-300/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-slate-300"
                 >
                   {navigation ? (
-                    <XIcon className="h-5 w-5" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="text-slate-300 w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
                   ) : (
-                    <ArrowNarrowLeftIcon className="h-5 w-5" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      className="text-slate-300 w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                      />
+                    </svg>
                   )}
                 </button>
               </div>

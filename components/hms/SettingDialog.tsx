@@ -33,9 +33,9 @@ const SettingDialog: FC = ({ children }) => {
           </Dialog.Close>
         </div>
         {isAllowedToPublish.audio && isAllowedToPublish.video ? (
-          <p className="my-0 text-sm text-slate-300">
+          <div className="my-0 text-sm text-slate-300">
             Control your audio, video source from here
-          </p>
+          </div>
         ) : null}
         {videoInput.length > 0 && isAllowedToPublish.video ? (
           <div className={wrapperClass}>

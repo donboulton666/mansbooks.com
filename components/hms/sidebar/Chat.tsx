@@ -68,10 +68,10 @@ const Chat = () => {
               <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-slate-700 text-foreground md:h-[80px] md:w-[80px]">
                 <ChatIcon className="h-[30px] w-[30px] md:h-[50px] md:w-[50px]" />
               </div>
-              <p>
+              <div>
                 Welcome to the Webinar. You can engage with the speaker and
                 other participants through the chat below.
-              </p>
+              </div>
             </div>
           </div>
         )}

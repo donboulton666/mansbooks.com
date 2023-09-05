@@ -32,7 +32,7 @@ function CompanyJobs({ jobs }: Props) {
               <div className={styles.company}>{job.companyName}</div>
               <div className={styles.description}>{job.description}</div>
               <div className={styles.description}>
-                <a
+                <button
                   type="button"
                   key={job.id}
                   className={styles.link}
@@ -59,7 +59,7 @@ function CompanyJobs({ jobs }: Props) {
                     <path d="M15 3h6v6" />
                     <path d="M10 14L21 3" />
                   </svg>
-                </a>
+                </button>
               </div>
             </div>
           </a>

@@ -45,7 +45,7 @@ export default function PostPreview({
                 {title}
               </Link>
             </h3>
-            <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+            <div className="mb-4 text-lg leading-relaxed">{excerpt}</div>
           </div>
         </div>
       </section>

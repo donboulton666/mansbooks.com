@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { FC, useEffect, useRef, ReactNode } from "react";
 import ReactDOM from "react-dom";
@@ -77,9 +75,9 @@ const Modal: FC<ModalProps> = (props) => {
             </div>
             {/*body*/}
             <div className="relative flex-auto p-6">
-              <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
+              <div className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                 {children}
-              </p>
+              </div>
             </div>
             {/*footer*/}
             <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">

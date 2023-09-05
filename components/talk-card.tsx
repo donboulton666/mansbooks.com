@@ -53,7 +53,7 @@ export default function TalkCard({
   return (
     <div key={title} className={styles.talk}>
       {showTime && (
-        <p className={styles.time}>{startAndEndTime || <>&nbsp;</>}</p>
+        <div className={styles.time}>{startAndEndTime || <>&nbsp;</>}</div>
       )}
       <Link
         href={firstSpeakerLink}

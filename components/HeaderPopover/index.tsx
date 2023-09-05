@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "next/link";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import {
   GlobeAltIcon,
   BanIcon,
@@ -19,7 +19,7 @@ import {
   SparklesIcon,
   QuestionMarkCircleIcon,
   UserGroupIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/24/outline";
 
 const posts = [
   {
@@ -156,12 +156,12 @@ function HeaderPopover() {
                             <item.icon aria-hidden="true" />
                           </div>
                           <div className="ml-4">
-                            <p className="text-sm font-medium text-rose-500 hover:text-rose-600">
+                            <div className="text-sm font-medium text-rose-500 hover:text-rose-600">
                               {item.name}
-                            </p>
-                            <p className="text-sm text-slate-200">
+                            </div>
+                            <div className="text-sm text-slate-200">
                               {item.description}
-                            </p>
+                            </div>
                           </div>
                         </Link>
                       ))}

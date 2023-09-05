@@ -37,14 +37,14 @@ const DemoModal = () => {
   }, [router]);
   return (
     <div className="nav-scroll mt-4 font-sans">
-      <p className="my-0 text-[32px] font-semibold">
+      <div className="my-0 text-[32px] font-semibold">
         Take your Webinar for a test drive
-      </p>
-      <p className="my-0 text-[15px] text-slate-300">
+      </div>
+      <div className="my-0 text-[15px] text-slate-300">
         There Are a few profiles to make it easy for you or your team to
         experience each perspective. Join in one click or share access with
         anyone else.
-      </p>
+      </div>
       <div>
         {data.map((m) => (
           <div
@@ -54,7 +54,7 @@ const DemoModal = () => {
           >
             <div className="max-w-xs text-left">
               <span className={`badge ${m.roleName}-badge`}>{m.roleName}</span>
-              <p className="text-xs text-slate-300">{m.desc}</p>
+              <div className="text-xs text-slate-300">{m.desc}</div>
             </div>
             <div className="flex items-center space-x-6">
               <CopyButton
@@ -95,9 +95,9 @@ export const CopyButton = ({ text = "" }) => {
   return (
     <div className="relative">
       {copied ? (
-        <p className="absolute left-0 top-10 flex w-48 justify-center  rounded-lg bg-slate-900 p-2">
+        <div className="absolute left-0 top-10 flex w-48 justify-center  rounded-lg bg-slate-900 p-2">
           Copied to clipboard!
-        </p>
+        </div>
       ) : null}
       <Button variant="secondary" onClick={copy}>
         Invite

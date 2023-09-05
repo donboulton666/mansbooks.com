@@ -79,7 +79,7 @@ const CalloutLabel: FC<CalloutLabelProps> = (props) => {
         >
           {label}
         </aside>
-        {children}
+        <div>{children}</div>
       </m.div>
     </LazyMotion>
   );

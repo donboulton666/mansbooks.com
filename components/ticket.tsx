@@ -76,7 +76,7 @@ export default function Ticket({
               </>
             )}
           </h2>
-          <p
+          <div
             className={cn(
               styles.description,
               styleUtils.appear,
@@ -94,7 +94,7 @@ export default function Ticket({
                 your GitHub profile.
               </>
             )}
-          </p>
+          </div>
         </div>
         <div className={cn(styleUtils.appear, styleUtils["appear-third"])}>
           {!sharePage ? (

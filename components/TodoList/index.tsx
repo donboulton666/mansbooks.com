@@ -1,13 +1,13 @@
-import { Session } from "@supabase/auth-helpers-nextjs";
+import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useEffect, useState } from "react";
-import { Database } from "@lib/database.types";
+import { Database } from "@lib/schema";
 import { useRouter } from "next/router";
 import i18n from "@lib/i18n";
-import supabase from "@lib/supabase";
 
 type Todos = Database["public"]["Tables"]["todos"]["Row"];
 
-export default function TodoList({ session }: { session: Session | null }) {
+export default function TodoList({ session }: { session: Session }) {
+  const supabase = useSupabaseClient<Database>();
   const [todos, setTodos] = useState<Todos[]>([]);
   const [newTaskText, setNewTaskText] = useState("");
   const [errorText, setErrorText] = useState("");
@@ -55,8 +55,9 @@ export default function TodoList({ session }: { session: Session | null }) {
   };
   const { locale } = useRouter();
   return (
-    <div className="w-full">
-      <h1 className="mb-4 text-slate-300">{i18n.todo.title[locale]}</h1>
+    <div className="w-full" data-datocms-noindex>
+      <h1 className="mb-12">{i18n.todo.title[locale]}</h1>
+
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -65,7 +66,7 @@ export default function TodoList({ session }: { session: Session | null }) {
         className="my-2 flex gap-2"
       >
         <input
-          className="w-full rounded bg-slate-900 p-2 text-slate-300"
+          className="w-full rounded bg-slate-900 p-2 text-slate-200"
           type="text"
           placeholder="new songs"
           value={newTaskText}
@@ -95,6 +96,7 @@ export default function TodoList({ session }: { session: Session | null }) {
 }
 
 const Todo = ({ todo, onDelete }: { todo: Todos; onDelete: () => void }) => {
+  const supabase = useSupabaseClient<Database>();
   const [isCompleted, setIsCompleted] = useState(todo.is_complete);
 
   const toggle = async () => {

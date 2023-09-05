@@ -149,7 +149,7 @@ const OldEnough = () => {
                 </div>
               </div>
               <div className="sm:text-center">
-                <p className="text-xs text-scale-900 sm:mx-auto sm:max-w-sm">
+                <div className="text-xs text-scale-900 sm:mx-auto sm:max-w-sm">
                   By continuing, you agree to Mansbooks{" "}
                   <Link
                     className="underline hover:text-scale-1100"
@@ -165,7 +165,7 @@ const OldEnough = () => {
                     Privacy Policy
                   </Link>
                   , and to receive periodic emails with updates.
-                </p>
+                </div>
               </div>
             </main>
             <aside className="hidden form-beams flex-1 flex-shrink basis-1/4 flex-col items-center justify-center xl:flex">
@@ -173,7 +173,7 @@ const OldEnough = () => {
                 <IframeWrapperLarge>
                   <ReactPlayer
                     ref={refPlayer}
-                    url="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"                    
+                    url="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"
                     height="100%"
                     width="100%"
                     controls={true}

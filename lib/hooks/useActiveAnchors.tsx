@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { isBrowser, stripEmojis } from "@lib/helpers";
 
 const useActiveAnchors = (
@@ -7,7 +7,13 @@ const useActiveAnchors = (
   tocQuerySelector: string = ".prose-toc a",
   offset: number = 200,
 ) => {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if (router.isReady) {
+      setLoading(false);
+    }
+  }, [router.isReady]);
   const anchors = useRef<NodeListOf<HTMLHeadingElement> | null>(null);
   const toc = useRef<NodeListOf<HTMLHeadingElement> | null>(null);
 

@@ -33,7 +33,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
         <div className={styles.cardBody}>
           <div>
             <h2 className={styles.name}>{sponsor.name}</h2>
-            <p className={styles.description}>{sponsor.description}</p>
+            <div className={styles.description}>{sponsor.description}</div>
           </div>
         </div>
       )}

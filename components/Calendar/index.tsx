@@ -86,9 +86,9 @@ const Calendar = () => {
         </button>
         <div>
           <h4>Events</h4>
-          {events.length === 0 && <p>No events to show</p>}
+          {events.length === 0 && <div>No events to show</div>}
           {events.map((event) => (
-            <p key={event.id}>{JSON.stringify(event)}</p>
+            <div key={event.id}>{JSON.stringify(event)}</div>
           ))}
         </div>
       </div>
@@ -107,9 +107,9 @@ const Calendar = () => {
         </button>
         <div>
           <h4>Calendars</h4>
-          {calendars.length === 0 && <p>No calendars to show</p>}
+          {calendars.length === 0 && <div>No calendars to show</div>}
           {calendars.map((calendar) => (
-            <p key={calendar.id}>{JSON.stringify(calendar)}</p>
+            <div key={calendar.id}>{JSON.stringify(calendar)}</div>
           ))}
         </div>
       </div>

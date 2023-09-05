@@ -15,15 +15,15 @@ export default function Results() {
         {" "}
         {surveyData.map((data) => (
           <div key={data.id}>
-            <p>
+            <div>
               <strong> Rating: </strong> {data.rating}{" "}
-            </p>{" "}
-            <p>
+            </div>{" "}
+            <div>
               <strong> Recommendation: </strong> {data.recommendation}{" "}
-            </p>{" "}
-            <p>
+            </div>{" "}
+            <div>
               <strong> Comment: </strong> {data.comment}{" "}
-            </p>{" "}
+            </div>{" "}
           </div>
         ))}{" "}
       </div>

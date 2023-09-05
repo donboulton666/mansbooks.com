@@ -13,7 +13,7 @@ export default function PostBody({ content }) {
 
             return (
               <>
-                <p>Don't know how to render a block!</p>
+                <div>Don't know how to render a block!</div>
                 <pre>{JSON.stringify(record, null, 2)}</pre>
               </>
             );

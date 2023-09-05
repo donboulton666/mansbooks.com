@@ -9,7 +9,7 @@ import { Sponsor } from "@lib/types";
 import Giscus from "@giscus/react";
 import ViewCounter from "@components/ViewCounter";
 import LovesCounter from "@components/LovesCounter";
-import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/outline";
+import { EyeIcon, HeartIcon, ShareIcon } from "@heroicons/react/24/outline";
 import styles from "@components/sponsor-section.module.css";
 import styleUtils from "@components/utils.module.css";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
@@ -44,7 +44,10 @@ export default function SponsorSection({ sponsor }: SponsorSectionProps) {
   return (
     <>
       <>
-        <Script src="https://apis.google.com/js/platform.js" />
+        <Script
+          src="https://apis.google.com/js/platform.js"
+          strategy="worker"
+        />
       </>
       <div className="mb-20">
         <Link href="/expo" className={styles.backlink}>
@@ -142,7 +145,7 @@ export default function SponsorSection({ sponsor }: SponsorSectionProps) {
                           </div>
                           {/*body*/}
                           <div className="relative flex-auto p-6">
-                            <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
+                            <div className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                               <EmailShareButton
                                 url="https://mansbooks.com/expo/sponsor.slug/"
                                 subject={sponsor.name}
@@ -187,7 +190,7 @@ export default function SponsorSection({ sponsor }: SponsorSectionProps) {
                               >
                                 <LinkedinIcon size={32} round />
                               </LinkedinShareButton>
-                            </p>
+                            </div>
                           </div>
                           {/*footer*/}
                           <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
@@ -218,7 +221,7 @@ export default function SponsorSection({ sponsor }: SponsorSectionProps) {
                 </span>
               </div>
             </div>
-            <p className={styles.description}>{sponsor.description}</p>
+            <div className={styles.description}>{sponsor.description}</div>
             <div className={styles["sponsor-details"]}>
               <Link
                 href={sponsor.callToActionLink}

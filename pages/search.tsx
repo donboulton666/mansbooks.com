@@ -169,8 +169,8 @@ export default function Search() {
                       <option value="nn">Norwegian</option>
                     </select>
                   </form>
-                  {!data && !error && <p>Loading...</p>}
-                  {error && <p>Error! {error}</p>}
+                  {!data && !error && <div>Loading...</div>}
+                  {error && <div>Error! {error}</div>}
                   {data && (
                     <>
                       {data.pageResults.map((result) => (
@@ -180,9 +180,9 @@ export default function Search() {
                           <div>{result.url}</div>
                         </div>
                       ))}
-                      <p>
+                      <div>
                         {i18n.search.count[locale]} {data.totalResults}
-                      </p>
+                      </div>
                       <ReactPaginate
                         pageCount={data.totalPages}
                         forcePage={state.page}

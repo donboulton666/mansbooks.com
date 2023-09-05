@@ -73,7 +73,7 @@ const Callout: FC<CalloutProps> = (props) => {
         <aside style={callOutWrapper}>
           <Info className="h-6 w-6" />
         </aside>
-        {children}
+        <span>{children}</span>
       </m.div>
     </LazyMotion>
   );

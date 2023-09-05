@@ -81,11 +81,11 @@ const RoleChangeDialog = () => {
               <GuestPreview roleChange={roleChange} />
             ) : (
               <>
-                <p className={s["head"]}>You have been invited to speak</p>
-                <p className={s["text"]}>
+                <div className={s["head"]}>You have been invited to speak</div>
+                <div className={s["text"]}>
                   {request?.requestedBy?.name} has invited you to speak, would
                   you like to join?
-                </p>
+                </div>
                 <div className={s["cta-wrapper"]}>
                   <button
                     className={s["reject-btn"]}
@@ -119,10 +119,10 @@ const RoleChangeDialog = () => {
           <Dialog.Overlay className={s["pop-overlay"]} />
           <Dialog.Content className="dialog-content dialog-animation w-[95%] rounded-xl bg-[#111]   md:w-[300px]">
             <h3>{requestSenderName.current} has invited you to speak</h3>
-            <p>
+            <div>
               You cannot join the stage on mobile. Please join the session via a
               desktop/laptop and ask the speaker for another invite.{" "}
-            </p>
+            </div>
             <Dialog.Close asChild>
               <Button>Got it</Button>
             </Dialog.Close>
@@ -231,9 +231,9 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
                   </button>
                 </Dialog.Close>
               </div>
-              <p className="my-0 text-sm text-slate-300">
+              <div className="my-0 text-sm text-slate-300">
                 Control your audio, video source from here
-              </p>
+              </div>
               {videoInput.length > 0 ? (
                 <div className={wrapperClass}>
                   <span className={textClass}>Video</span>
@@ -288,16 +288,16 @@ const GuestPreview: React.FC<{ roleChange: (b: boolean) => void }> = ({
       </div>
       <div className="ml-8 flex w-[320px] flex-col justify-between">
         <div>
-          <p className="my-0 text-2xl font-bold">Welcome </p>
-          <p className="text-slate-400">
+          <div className="my-0 text-2xl font-bold">Welcome </div>
+          <div className="text-slate-400">
             Preview your video and audio before joining the stage
-          </p>
+          </div>
         </div>
         <form onSubmit={() => {}}>
-          <p className="flex items-center space-x-1">
+          <div className="flex items-center space-x-1">
             <InfoIcon /> Note: Your mic is {isAudioOn ? "on" : "off"} and video
             is {isVideoOn ? "on" : "off"}
-          </p>
+          </div>
           <div className="flex space-x-4">
             <Button
               variant="secondary"

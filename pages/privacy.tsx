@@ -3,7 +3,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import cn from "classnames";
-import { ShareIcon } from "@heroicons/react/outline";
+import { ShareIcon } from "@heroicons/react/24/outline";
 import Layout from "@components/PageLayout";
 import Center from "@components/Center";
 import LeftText from "@components/LeftText";
@@ -738,7 +738,7 @@ export default function Privacy() {
                       </div>
                       {/*body*/}
                       <div className="relative flex-auto p-6">
-                        <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
+                        <div className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                           <EmailShareButton
                             url="https://mansbooks.com/expo/sponsor.slug/"
                             subject="Privacy"
@@ -773,7 +773,7 @@ export default function Privacy() {
                           <LinkedinShareButton url="https://mansbooks.com/privacy">
                             <LinkedinIcon size={32} round />
                           </LinkedinShareButton>
-                        </p>
+                        </div>
                       </div>
                       {/*footer*/}
                       <div className="flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">

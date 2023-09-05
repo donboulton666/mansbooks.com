@@ -14,7 +14,7 @@ import useSWR from "swr";
 import fetcher from "@lib/fetcher";
 import angieImage from "../public/icons/apple-touch-icon.png";
 import Stars from "@components/Stars";
-import { EyeIcon } from "@heroicons/react/outline";
+import { EyeIcon } from "@heroicons/react/24/outline";
 
 export async function getStaticProps({ preview, locale }) {
   const formattedLocale = locale.split("-")[0];

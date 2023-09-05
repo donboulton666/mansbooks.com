@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactNode, FC } from "react";
 import { Disclosure } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useInView } from "react-intersection-observer";
 import { LazyMotion, m } from "framer-motion";
 import Center from "@components/Center";
@@ -63,7 +63,7 @@ const Accordion: FC<AccordionProps> = (props) => {
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pb-2 pt-4 text-md text-slate-200">
                         <div className="mb-4">{title}</div>
-                        {children}
+                        <div>{children}</div>
                       </Disclosure.Panel>
                     </>
                   )}

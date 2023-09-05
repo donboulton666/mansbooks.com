@@ -41,10 +41,10 @@ export const PreviewScreen: FC<{ token: string }> = ({ token }) => {
       <PreviewContainer name={name} />
       <div className="mt-4 flex w-[320px] flex-col justify-between md:ml-8 md:mt-0">
         <div>
-          <p className="my-0 text-2xl font-bold">Welcome {name}</p>
-          <p className="text-slate-400">
+          <div className="my-0 text-2xl font-bold">Welcome {name}</div>
+          <div className="text-slate-400">
             Preview your video and audio before joining the stage
-          </p>
+          </div>
         </div>
         <form
           onSubmit={(e) => {
@@ -65,11 +65,11 @@ export const PreviewScreen: FC<{ token: string }> = ({ token }) => {
               localStorage.setItem("name", e.target.value);
             }}
           />
-          <p className="flex items-center">
+          <div className="flex items-center">
             <InfoIcon className="mr-2" /> Note: Your mic is{" "}
             {audioEnabled ? "on" : "off"} and video is{" "}
             {videoEnabled ? "on" : "off"}
-          </p>
+          </div>
           <div className="flex space-x-4">
             <Button variant="secondary" onClick={() => router.push("/")}>
               Go back

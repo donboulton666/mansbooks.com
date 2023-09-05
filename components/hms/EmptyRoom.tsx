@@ -34,16 +34,16 @@ const EmptyRoom = () => {
       style={{ height: "calc(100vh - 3.2 * var(--header-height))" }}
     >
       <h2 className="text-3xl ">No Speakers Present</h2>
-      <p className="text-sm text-slate-300">
+      <div className="text-sm text-slate-300">
         Looks like nobody has joined as a speaker. Invite someone to speak or
         change your role.
-      </p>
+      </div>
       <div className="mt-8 flex space-x-4">
         <div className="relative">
           {copied ? (
-            <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-slate-900 p-2">
+            <div className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-slate-900 p-2">
               Copied to clipboard!
-            </p>
+            </div>
           ) : null}
           <Button onClick={() => copy()} variant="secondary">
             <InviteIcon className="mr-2" /> Invite

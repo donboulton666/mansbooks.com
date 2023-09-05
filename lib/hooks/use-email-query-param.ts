@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 /**
@@ -9,7 +9,13 @@ export default function useEmailQueryParam(
   paramName: string,
   setEmail: (email: string) => unknown,
 ) {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if (router.isReady) {
+      setLoading(false);
+    }
+  }, [router.isReady]);
   useEffect(() => {
     if ("URLSearchParams" in window) {
       const { search, pathname } = window.location;

@@ -216,9 +216,10 @@ module.exports = {
               'tbody tr': {
                 borderBottomColor: 'rgb(148 163 184 / 0.1)',
               },
-              blockQuote: {
-                color: theme('colors.white'),
-              },
+              'code::before': null,
+              'code::after': null,
+              'blockquote p:first-of-type::before': null,
+              'blockquote p:last-of-type::after': null,              
             },
           },
         }),

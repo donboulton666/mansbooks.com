@@ -77,7 +77,7 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
             />
           )}
         </Head>
-        {children}
+        <div>{children}</div>
       </div>
     </>
   );

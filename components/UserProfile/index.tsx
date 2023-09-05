@@ -19,7 +19,7 @@ const UserProfile: FC<UserProfileProps> = (props) => {
           <div classNameName="justify-left w-24">{children}</div>
           <div classNameName="space-y-1 text-center sm:text-left">
             <div className="space-y-0.5">
-              <p className="text-lg font-semibold text-black">
+              <div className="text-lg font-semibold text-black">
                 <a
                   href={link}
                   target="_blank"
@@ -28,8 +28,8 @@ const UserProfile: FC<UserProfileProps> = (props) => {
                 >
                   {description}
                 </a>
-              </p>
-              <p className="font-medium text-slate-500">
+              </div>
+              <div className="font-medium text-slate-500">
                 <a
                   href={titleLink}
                   target="_blank"
@@ -38,7 +38,7 @@ const UserProfile: FC<UserProfileProps> = (props) => {
                 >
                   {title}
                 </a>
-              </p>
+              </div>
             </div>
             <a
               href={buttonLink}

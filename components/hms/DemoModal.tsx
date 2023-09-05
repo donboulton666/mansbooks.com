@@ -11,12 +11,12 @@ const DemoModal = () => {
       />
       <Dialog.Content className="dialog-content dialog-animation w-[95%] rounded-lg bg-slate-700 md:w-[400px]">
         <h3 className="mb-4">Heads Up</h3>
-        <p className="my-0 text-sm text-slate-200">
+        <div className="my-0 text-sm text-slate-200">
           Since this is public, you might encounter other people on the stage
           who can hear / see you in case your audio / video is enabled. We
           recommend you to use the participants tab to check if there are other
           people on the call.
-        </p>
+        </div>
 
         <Dialog.Close asChild>
           <Button className="mt-4 w-[100px]">Got it</Button>

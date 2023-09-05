@@ -13,7 +13,7 @@ const Flower: React.FC = () => {
     viewBox="0 0 24 24"
     x="0px"
     y="0px"
-    fill-rule="evenodd"
+    fillRule="evenodd"
     clip-rule="evenodd"
   >
     <g>

@@ -53,7 +53,7 @@ export default function ModalContent({ onClose }) {
               </button>
             </div>
             <div className="body relative flex-auto p-6">
-              <p className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
+              <div className="my-4 bg-[#111111] px-2 text-lg leading-relaxed text-slate-300">
                 <EmailShareButton
                   url="https://mansbooks.com/expo/sponsor.slug/"
                   subject={sponsor.name}
@@ -88,7 +88,7 @@ export default function ModalContent({ onClose }) {
                 <LinkedinShareButton url="https://mansbooks.com/gallery">
                   <LinkedinIcon size={32} round />
                 </LinkedinShareButton>
-              </p>
+              </div>
             </div>
             <div className="footer flex items-center justify-end rounded-b border-t border-solid border-slate-700 p-6">
               <span className={cn(styles.button, styles["button-resource"])}>

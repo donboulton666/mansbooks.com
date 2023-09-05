@@ -42,9 +42,9 @@ const Header = () => {
 
         <div className="align-end flex flex-col gap-x-2 md:flex-row md:items-center  md:gap-2">
           <div className="flex flex-row items-center gap-x-2 align-bottom md:gap-2">
-            <p className="my-0 text-sm font-semibold md:text-2xl md:leading-8">
+            <div className="my-0 text-sm font-semibold md:text-2xl md:leading-8">
               Event
-            </p>
+            </div>
             <span className="live-button flex items-center rounded-sm px-0.5 text-xs font-semibold md:px-1 md:text-sm">
               LIVE
             </span>

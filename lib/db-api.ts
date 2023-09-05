@@ -23,12 +23,6 @@ if (
   process.env.REDIS_EMAIL_TO_ID_SECRET
 ) {
   dbApi = redisApi;
-} else if (
-  process.env.SUPABASE_URL &&
-  process.env.SUPABASE_SERVICE_ROLE_SECRET &&
-  process.env.EMAIL_TO_ID_SECRET
-) {
-  dbApi = supabaseApi;
 } else {
   dbApi = {
     createUser: () => Promise.resolve({ ticketNumber: SAMPLE_TICKET_NUMBER }),

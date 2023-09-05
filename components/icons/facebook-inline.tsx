@@ -9,13 +9,13 @@ const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
       stroke="currentColor"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      style="fill-rule:evenodd;clipRule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+      style="fillRule:evenodd;clipRule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
       {...props}
     >
       <g transform="matrix(4.16667,0,0,4.16667,-340.721,-1717.09)">
         <path
           d="M109.066,466.688C94.016,466.688 81.773,454.444 81.773,439.395C81.773,424.346 94.016,412.102 109.066,412.102C124.115,412.102 136.358,424.346 136.358,439.395C136.358,454.444 124.115,466.688 109.066,466.688Z"
-          style="fill:rgb(27,98,163);fill-rule:nonzero;"
+          style="fill:rgb(27,98,163);fillRule:nonzero;"
         />
       </g>
       <g transform="matrix(4.16667,0,0,4.16667,-340.721,-1717.09)">

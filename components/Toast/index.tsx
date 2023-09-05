@@ -5,7 +5,7 @@ import {
   ExclamationCircleIcon,
   XCircleIcon,
   QuestionMarkCircleIcon,
-} from "@heroicons/react/solid";
+} from "@heroicons/react/24/solid";
 import { toNamespacedPath } from "path/posix";
 
 export type ToastMessageType = "ok" | "warning" | "error" | "confirm";
@@ -56,7 +56,7 @@ export const Toast: React.FC = () => {
       >
         <div className="flex items-center justify-between gap-2">
           <StatusIcon className="w-6" />
-          <p>{toast.message}</p>
+          <div>{toast.message}</div>
         </div>
         {toast.messageType === "confirm" && (
           <div className="mt-3 flex items-center justify-end gap-4">

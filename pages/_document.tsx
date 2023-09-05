@@ -1,7 +1,18 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from "next/document";
 import Script from "next/script";
+import { Partytown } from "@builder.io/partytown/react";
 
-export default class CustomDocument extends Document {
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
   render() {
     const { lanaguage } = this.props.__NEXT_DATA__.query;
     return (
@@ -106,11 +117,13 @@ export default class CustomDocument extends Document {
             property="og:image"
             content="https://mansbooks.com/icons/apple-touch-icon.png"
           />
+          <Partytown debug={true} forward={["dataLayer.push"]} />
           <Script
-            async
+            type="text/partytown"
             src="https://www.googletagmanager.com/gtag/js?id=G-6QPYXMYV09"
           />
           <Script
+            type="text/partytown"
             id="gtag"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
@@ -135,3 +148,5 @@ export default class CustomDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

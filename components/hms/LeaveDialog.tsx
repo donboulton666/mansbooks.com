@@ -29,9 +29,9 @@ const LeaveDialog = () => {
       </Dialog.Trigger>
       <Dialog.Content className="dialog-content dialog-animation w-96 rounded-lg bg-slate-700">
         <h3>Leave Stage?</h3>
-        <p className="my-0 text-sm text-slate-200">
+        <div className="my-0 text-sm text-slate-200">
           Are you sure you want to leave the stage?
-        </p>
+        </div>
         <div className="mt-6 flex space-x-4">
           <Button onClick={leave} variant="danger" className="w-1/2">
             Leave

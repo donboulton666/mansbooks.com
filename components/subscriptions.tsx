@@ -9,7 +9,6 @@ import { useForm, Resolver } from "react-hook-form";
 
 type FormValues = {
   email: string;
-  acceptTerms: boolean;
 };
 
 const resolver: Resolver<FormValues> = async (values) => {
@@ -28,7 +27,6 @@ const resolver: Resolver<FormValues> = async (values) => {
 
 interface SubscriptionsProps {
   email: string;
-  acceptTerms: boolean;
   action?: string | undefined;
   honeypotName?: string | undefined;
   children: ReactNode;
@@ -119,18 +117,6 @@ const Subscriptions: FC<SubscriptionsProps> = (props) => {
                       Subscribe
                     </button>
                   </span>
-                  <div className="flex items-center">
-                    <input
-                      id="acceptTerms"
-                      type="checkbox"
-                      name="acceptTerms"
-                      aria-label="Terms Checkbox"
-                      {...register("acceptTerms")}
-                      className={`ml-1 h-6 w-6 rounded border-wine-400 bg-wine-200 ring-offset-wine-300 focus:ring-2 focus:ring-wine-400 ${
-                        errors.acceptTerms ? "is-invalid" : ""
-                      }`}
-                    />
-                  </div>
                 </span>
                 {errors.email && (
                   <div className="text-red-500">{errors.email.message}</div>

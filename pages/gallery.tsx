@@ -8,7 +8,7 @@ import Bridge from "@components/gallery/Icons/Bridge";
 import Dialogue from "@components/gallery/Dialogue";
 import Stars from "@components/Stars";
 import Center from "@components/Center";
-import { ShareIcon } from "@heroicons/react/outline";
+import { ShareIcon } from "@heroicons/react/24/outline";
 import cn from "classnames";
 import angelina from "../public/icon-192x192.png";
 import cloudinary from "../utils/cloudinary";
@@ -31,7 +31,13 @@ const Gallery: NextPage = ({
   images: ImageProps[];
 }) => {
   const showModal = searchParams?.modal;
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if (router.isReady) {
+      setLoading(false);
+    }
+  }, [router.isReady]);
   const { photoId } = router.query;
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
   const lastViewedPhotoRef = useRef<HTMLAnchorElement>(null);
@@ -238,9 +244,9 @@ const Gallery: NextPage = ({
               <h1 className="mb-4 mt-8 text-base font-bold uppercase tracking-widest">
                 2023 Event Photos
               </h1>
-              <p className="max-w-[40ch] text-slate-300/75 sm:max-w-[32ch]">
+              <div className="max-w-[40ch] text-slate-300/75 sm:max-w-[32ch]">
                 Queen Angelina Jordan, collection of photos!
-              </p>
+              </div>
               <div className="flex flex-row text-xs text-slate-300">
                 <span className={cn(styles.button, styles["button-resource"])}>
                   <Link className="button-glow" href="/gallery/?modal=true">

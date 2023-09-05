@@ -1,10 +1,8 @@
-"use client";
-
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import ModalContent from "./ModalContent";
 import cn from "classnames";
-import { ShareIcon } from "@heroicons/react/outline";
+import { ShareIcon } from "@heroicons/react/24/outline";
 import styles from "../sponsor-section.module.css";
 
 export default function PortalExample() {

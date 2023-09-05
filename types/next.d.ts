@@ -3,7 +3,7 @@ import { Session } from "@supabase/auth-helpers-nextjs";
 import type { Router } from "next/router";
 
 declare module "next/app" {
-  type AppProps<P = Record<string, unknown>> = {
+  type AppProps<div = Record<string, unknown>> = {
     Component: NextComponentType<NextPageContext, any, P>;
     router: Router;
     __N_SSG?: boolean;

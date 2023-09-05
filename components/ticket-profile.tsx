@@ -60,7 +60,7 @@ export default function TicketProfile({
         )}
       </span>
       <div className={styles.text}>
-        <p
+        <div
           className={cn(styles.name, {
             [styles["name-blank"]]: !username,
           })}
@@ -72,8 +72,8 @@ export default function TicketProfile({
           >
             {name || username || "Your Name"}
           </span>
-        </p>
-        <p className={styles.username}>
+        </div>
+        <div className={styles.username}>
           <span
             className={cn(styles.skeleton, styles.wrapper, {
               [styles.show]: ticketGenerationState === "loading",
@@ -84,7 +84,7 @@ export default function TicketProfile({
             </span>
             {username || <>username</>}
           </span>
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -85,7 +85,7 @@ export function renderSuccess(data?: GitHubOAuthData) {
       />
     </svg>
     <h1>Success!</h1>
-    <p>You may close this window and see your ticket image.</p>
+    <div>You may close this window and see your ticket image.</div>
     <script>
       if (window.opener) {
         window.opener.postMessage(${htmlescape(data || "")}, ${htmlescape(
@@ -191,7 +191,7 @@ export function renderError() {
     </svg>
 
     <h1>GitHub authentication has failed.</h1>
-    <p>Please try again.</p>
+    <div>Please try again.</div>
   </body>
 </html>
 `;

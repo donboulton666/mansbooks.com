@@ -215,7 +215,7 @@ export default function Form({
               </span>
             ) : null}
           </button>
-          <p className={ticketFormStyles.description}>
+          <div className={ticketFormStyles.description}>
             {githubEnabled ? (
               "Only public info will be used."
             ) : (
@@ -231,7 +231,7 @@ export default function Form({
                 </Link>
               </>
             )}
-          </p>
+          </div>
         </div>
         <div className={formStyles["or-divider"]}>OR</div>
         <Link

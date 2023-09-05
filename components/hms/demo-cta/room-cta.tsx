@@ -31,9 +31,9 @@ const RoomCta = () => {
     <div className="flex items-center space-x-4">
       <div className="relative">
         {copied ? (
-          <p className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-slate-600 p-2">
+          <div className="absolute left-0 top-12 flex w-48 justify-center  rounded-lg bg-slate-600 p-2">
             Copied to clipboard!
-          </p>
+          </div>
         ) : null}
         <Button variant="secondary" className="h-[40px]" onClick={() => copy()}>
           <InviteIcon className="mr-2" />

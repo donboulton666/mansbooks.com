@@ -5,14 +5,11 @@
     "project": "./tsconfig.json"
   },
   "extends": [
-    "next/babel",
-    "next/core-web-vitals",
     "plugin:@next/next/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
-    "prettier/react"
+    "prettier"
   ],
   "rules": {
     "require-await": "off",

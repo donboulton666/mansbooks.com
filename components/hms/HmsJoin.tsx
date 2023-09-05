@@ -58,9 +58,9 @@ const ViewersJoin: React.FC<{ token: string }> = ({ token }) => {
   return (
     <div className="text-center">
       <h1>Enter your name to continue.</h1>
-      <p className="my-0 text-sm text-gray-300">
+      <div className="my-0 text-sm text-gray-300">
         This name will be visible to other participants once you join the stage
-      </p>
+      </div>
       <form onSubmit={(e) => joinRoom(e)} className="mt-12 md:space-x-4">
         <input
           maxLength={20}
@@ -106,11 +106,11 @@ const MobileRoleDialog = () => {
       />
       <Dialog.Content className="dialog-content dialog-animation w-[95%] rounded-lg bg-gray-700 text-center md:w-96">
         <h3>Joining as a speaker is not supported on mobile</h3>
-        <p className="mt-4 text-xs text-gray-200">
+        <div className="mt-4 text-xs text-gray-200">
           There are a few profiles to make it easy for you or your team to
           experience each perspective. Join in one click or share access with
           anyone else.
-        </p>
+        </div>
         <div className="mt-4 flex w-full justify-center">
           <a href={`/stage/${stage || "a"}?role=viewer`}>
             <Button>
