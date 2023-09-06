@@ -9,7 +9,7 @@ const options = {
     detectSessionInUrl: true,
   },
 };
-const supabaseUrl = process.env.NEXT_SUPABASE_URL;
+const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
 const supabaseKey = process.env.NEXT_SUPABASE_KEY;
 
 const client = createClient<Database>(supabaseUrl, supabaseKey, options);
