@@ -44,6 +44,5 @@
       "name": "next"
     }
   ],
-  "jsx": "react",
   "exclude": ["node_modules"]
 }

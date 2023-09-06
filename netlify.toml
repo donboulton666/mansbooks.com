@@ -8,7 +8,7 @@
   package = "@netlify/plugin-emails"
 
 [build.environment]
-  NODE_VERSION = "18.16.1"
+  NODE_VERSION = "18.17.1"
 
 [[headers]]
   for = "/*"

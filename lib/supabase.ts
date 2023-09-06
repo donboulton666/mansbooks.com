@@ -9,8 +9,8 @@ const options = {
     detectSessionInUrl: true,
   },
 };
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.NEXT_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_SUPABASE_KEY;
 
 const client = createClient<Database>(supabaseUrl, supabaseKey, options);
 

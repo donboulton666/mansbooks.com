@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const API_KEY = process.env.MAILERLITE_PRODUCTION_API_KEY;
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL: "https://connect.mailerlite.com/";
 const GROUP_ID = process.env.MAILERLITE_PRODUCTION_NEWSLETTER_GROUP_ID;
 
 async function handler(event: any) {

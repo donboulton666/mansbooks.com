@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import axios from "axios";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
+const supabaseUrl = process.env.NEXT_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_SUPABASE_KEY;
 
 export const supabase = createClient(supabaseUrl + "", supabaseKey + "");
 

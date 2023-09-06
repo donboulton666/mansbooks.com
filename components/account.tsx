@@ -110,13 +110,6 @@ export default function Account({ session }: { session: Session }) {
     });
   }
 
-  async function signInWithEmail() {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: process.env.NEXT_PUBLIC_ADMIN_EMAILS,
-      password: process.env.ADMIN_PASSWORD,
-    });
-  }
-
   async function signOut() {
     const { error } = await supabase.auth.signOut();
   }
