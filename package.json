@@ -5,12 +5,12 @@
   "repository": "donaldboulton/mansbooks.com",
   "author": "Angelina Jordan and Visualizer",
   "homepage": "https://mansbooks.com",
-  "license": "OBSD",
+  "license": "LGPL-3.0-or-later",
   "engines": {
-    "node": ">=18.17.1"
+    "node": ">=18.16.1"
   },
   "AWS_LAMBDA_JS_RUNTIME": {
-    "node": ">=18.17.1"
+    "node": ">=18.16.1"
   },
   "scripts": {
     "dev": "next",
