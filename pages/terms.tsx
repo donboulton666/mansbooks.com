@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Section from "@components/Section";
 import angie from "../public/angie/angelina.jpg";
 import Stars from "@components/Stars";

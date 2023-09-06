@@ -4,7 +4,7 @@ import {
   selectIsConnectedToRoom,
 } from "@100mslive/hms-video-react";
 import Head from "next/head";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Join from "@components/Join";
 import Room from "@components/Room";
 import angie from "../public/angie/angelina.jpg";

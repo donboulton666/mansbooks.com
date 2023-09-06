@@ -33,6 +33,10 @@ const nextConfig = withPWA({
         process.env.UPSTASH_REDIS_REST_TOKEN,
       UPSTASH_REDIS_REST_URL:  
         process.env.UPSTASH_REDIS_REST_URL,
+      NEXT_PUBLIC_SUPABASE_ANON_KEY:  
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      NEXT_PUBLIC_SUPABASE_URL:
+        process.env.NEXT_PUBLIC_SUPABASE_URL,
     },
     async headers() {
       return [

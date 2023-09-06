@@ -74,6 +74,52 @@ export default function NavDropdown(props: any) {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
+                              href="/angies-profile"
+                              className={classNames(
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
+                              )}
+                            >
+                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
+                                <Image
+                                  className="h-7 w-7 rounded-full mr-2"
+                                  width={28}
+                                  height={28}
+                                  loading="lazy"
+                                  src={angieImage}
+                                  alt="Profile picture"
+                                />
+                                <span>Angie's Profile</span>
+                              </span>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              href="/old-enough"
+                              className={classNames(
+                                active ? "bg-slate-700" : "",
+                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
+                              )}
+                            >
+                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
+                                <Image
+                                  className="h-7 w-7 rounded-full mr-2"
+                                  width={28}
+                                  height={28}
+                                  loading="lazy"
+                                  src={angieImage}
+                                  alt="Profile picture"
+                                />
+                                <span>Old Enough</span>
+                              </span>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
                               target="_blank"
                               href="/search"
                               className={classNames(
@@ -97,52 +143,6 @@ export default function NavDropdown(props: any) {
                                   />
                                 </svg>
                                 <span>Search</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href="/angies-profile"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <Image
-                                  className="h-7 w-7 rounded-full"
-                                  width={28}
-                                  height={28}
-                                  loading="lazy"
-                                  src={angieImage}
-                                  alt="Profile picture"
-                                />
-                                <span>Angie's Profile</span>
-                              </span>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href="/old-enough"
-                              className={classNames(
-                                active ? "bg-slate-700" : "",
-                                "ml-2 mr-2 block items-center justify-center rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300",
-                              )}
-                            >
-                              <span className="flex flex-shrink-0 items-center pr-2 text-lg">
-                                <Image
-                                  className="h-7 w-7 rounded-full"
-                                  width={28}
-                                  height={28}
-                                  loading="lazy"
-                                  src={angieImage}
-                                  alt="Profile picture"
-                                />
-                                <span>Old Enough</span>
                               </span>
                             </Link>
                           )}

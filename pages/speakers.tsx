@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Page from "@components/page";
 import SpeakersGrid from "@components/speakers-grid";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Header from "@components/header";
 import LanguageBar from "@components/LanguageBar";
 import { getAllSpeakers } from "@lib/cms-api";

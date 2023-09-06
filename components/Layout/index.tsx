@@ -6,15 +6,15 @@ import cn from "classnames";
 import { useRouter } from "next/router";
 import { SkipNavContent } from "@reach/skip-nav";
 import { NAVIGATION } from "@lib/constants";
-import styles from "./layout.module.css";
+import styles from "@components/layout.module.css";
 import Image from "next/image";
-import MobileMenu from "./mobile-menu";
+import MobileMenu from "@components/mobile-menu";
 import Footer from "@components/PageFooter";
-import ScrollIndicator from "./ScrollIndicator";
+import ScrollIndicator from "@components/ScrollIndicator";
 import NavDropdown from "@components/NavDropdown";
-import Logo from "./icons/icon-hms";
-import ViewSource from "./view-source";
-import angieLogo from "../public/angie/angelina-jordan-icon.jpg";
+import Logo from "@components/icons/icon-hms";
+import ViewSource from "@components/view-source";
+import angieLogo from "../../public/angie/angelina-jordan-icon.jpg";
 
 type Props = {
   children: ReactNode;

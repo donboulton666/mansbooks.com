@@ -1,25 +1,25 @@
 import fetcher from "@lib/fetcher";
-import { Session } from "@supabase/auth-helpers-nextjs";
-import { Database } from "@lib/database.types";
+import { Session, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Database } from "@lib/schema";
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { getLoves, registerLoves } from "@lib/loves";
+import { getLoves, registerLoves } from "../../lib/loves";
 import useSWR from "swr";
-import supabase from "@lib/supabase";
 
 type Loves = Database["public"]["Tables"]["loves"]["Row"];
 
-interface LovesProps {
+interface Props {
   slug: string;
 }
 
-export default function LovesCounter<LovesProps>({
+export default function LovesCounter({
   session,
   slug,
   user_id,
 }: {
-  session: Session | null;
+  session: Session;
 }) {
+  const supabase = useSupabaseClient<Database>();
   const [loves, setLoves] = useState<Loves[]>([]);
   const { profile: myProfile } = useContext(UserContext);
   const { data } = useSWR<Loves>(`/api/loves/${slug}`, fetcher);
@@ -30,15 +30,15 @@ export default function LovesCounter<LovesProps>({
       });
   }, [slug]);
 
-  const isLovedByMe = !!loves.find((love) => love.user_id === user.id);
+  const isLovedByMe = !!loves.find((love) => love.user_id === myProfile?.id);
 
   function setLove() {
     if (isLovedByMe) {
       supabase
         .from("loves")
-        .select("*")
+        .select()
         .eq("slug", count)
-        .eq("user_id", user.id)
+        .eq("user_id", myProfile.id)
         .then(() => {
           fetchLoves();
         });
@@ -48,7 +48,7 @@ export default function LovesCounter<LovesProps>({
       .from("loves")
       .insert({
         slug: count,
-        user_id: user.id,
+        user_id: myProfile.id,
       })
       .then((result) => {
         fetchLoves();
@@ -65,12 +65,12 @@ export default function LovesCounter<LovesProps>({
 
   return (
     <span className="group relative ml-2 mr-2 flex items-center justify-end pr-4">
-      <div className="inline-flex rounded-md shadow-sm" role="group">
+      <div class="inline-flex rounded-md shadow-sm" role="group">
         <button
           className="flex items-center gap-2 text-slate-300"
           onSubmit={(e) => {
             e.preventDefault();
-            registerLoves();
+            registerLoves(slug);
           }}
         >
           <svg
@@ -82,8 +82,8 @@ export default function LovesCounter<LovesProps>({
             stroke-width="2"
           >
             <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
             />
           </svg>
@@ -101,15 +101,15 @@ export default function LovesCounter<LovesProps>({
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
             stroke-width="2"
           >
             <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5"
             />
           </svg>

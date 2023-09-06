@@ -5,7 +5,7 @@ import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Account from "@components/account";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Image from "next/image";
 import Survey from "@components/Survey";
 import LeftText from "@components/LeftText";
@@ -17,6 +17,28 @@ import angie from "../public/apple-touch-icon.png";
 const Login = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
+
+  async function signInWithGoogle() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        queryParams: {
+          access_type: "offline",
+          prompt: "consent",
+        },
+      },
+    });
+  }
+
+  async function signInWithSpotify() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+    });
+  }
+
+  async function signOut() {
+    const { error } = await supabase.auth.signOut();
+  }
   return (
     <>
       <Stars />
@@ -156,7 +178,7 @@ const Login = () => {
                           },
                         },
                       }}
-                      providers={["github", "google", "slack", "spotify"]}
+                      providers={["google", "spotify"]}
                       theme="dark"
                     />
                   ) : (

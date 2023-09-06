@@ -4,7 +4,7 @@ import Center from "@components/Center";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
 import ColumnGridLeft from "@components/column-grid-left";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import ContactForm from "@components/ContactForm";
 import angie from "../public/angie/angelina.jpg";
 import Stars from "@components/Stars";

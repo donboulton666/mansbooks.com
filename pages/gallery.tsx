@@ -15,7 +15,7 @@ import cloudinary from "../utils/cloudinary";
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
 import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Modal from "@components/Modal/PortalExample";
 import angie from "../public/angie/angelina.jpg";
 import styles from "@components/sponsor-section.module.css";

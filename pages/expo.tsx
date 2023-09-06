@@ -19,7 +19,7 @@ import { GetStaticProps } from "next";
 import Page from "@components/page";
 import SponsorsGrid from "@components/sponsors-grid";
 import Header from "@components/header";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 
 import { getAllSponsors } from "@lib/cms-api";
 import { Sponsor } from "@lib/types";

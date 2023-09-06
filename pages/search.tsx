@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import { useState } from "react";
 import { buildClient } from "@datocms/cma-client-browser";
 import ReactPaginate from "react-paginate";

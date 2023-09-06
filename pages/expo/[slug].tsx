@@ -18,7 +18,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 
 import Page from "@components/page";
 import SponsorSection from "@components/sponsor-section";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import { getAllSponsors } from "@lib/cms-api";
 import { Sponsor } from "@lib/types";
 import { META_DESCRIPTION } from "@lib/constants";

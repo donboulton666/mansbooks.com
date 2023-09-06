@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import cn from "classnames";
 import ReactPlayer from "react-player/youtube";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Image from "next/image";
 import LeftText from "@components/LeftText";
 import Stars from "@components/Stars";

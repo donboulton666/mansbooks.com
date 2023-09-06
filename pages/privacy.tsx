@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import cn from "classnames";
 import { ShareIcon } from "@heroicons/react/24/outline";
-import Layout from "@components/PageLayout";
+import Layout from "@components/Layout";
 import Center from "@components/Center";
 import LeftText from "@components/LeftText";
 import ColumnGridCenter from "@components/column-grid-center";
