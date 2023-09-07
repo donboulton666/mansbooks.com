@@ -37,6 +37,7 @@
     "@100mslive/react-ui": "^0.8.9",
     "@agility/content-fetch": "^1.1.5",
     "@agility/content-sync": "^1.1.5",
+    "@aws-sdk/client-s3": "^3.405.0",
     "@babel/runtime": "^7.22.11",
     "@builder.io/partytown": "^0.8.0",
     "@cloudinary-util/url-loader": "^3.10.0",
@@ -145,6 +146,7 @@
     "uuid": "^9.0.0",
     "validator": "^13.11.0",
     "vanilla-tilt": "^1.8.1",
+    "wrangler": "^3.7.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {

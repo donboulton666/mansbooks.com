@@ -3,20 +3,31 @@ import Head from "next/head";
 import Link from "next/link";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import {
+  Session,
+  createClientComponentClient,
+} from "@supabase/auth-helpers-nextjs";
 import Account from "@components/account";
 import Layout from "@components/Layout";
 import Image from "next/image";
 import Survey from "@components/Survey";
 import LeftText from "@components/LeftText";
+import TodoList from "@components/TodoList"
 import ColumnGridLeft from "@components/column-grid-left";
 import Stars from "@components/Stars";
 import me from "../public/donald-boulton-32x32.png";
 import angie from "../public/apple-touch-icon.png";
 
-const Login = () => {
-  const session = useSession();
-  const supabase = useSupabaseClient();
+export default function Login({
+  session,
+  slug,
+  user_id,
+}: {
+  session: Session;
+}) {
+  const supabase = createClientComponentClient<Database>({
+    isSingleton: false,
+  });
 
   async function signInWithGoogle() {
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -327,5 +338,3 @@ const Login = () => {
     </>
   );
 };
-
-export default Login;

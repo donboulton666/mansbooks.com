@@ -1,8 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import {
+  Session,
+  createClientComponentClient,
+} from "@supabase/auth-helpers-nextjs";
+import { Database } from "@lib/database.types";
+import { User } from "@supabase/supabase-js";
 
-import { Session, User } from "@supabase/supabase-js";
-
-import { supabase } from "@lib/supabase";
+const supabase = createClientComponentClient<Database>({
+  isSingleton: false,
+});
 
 export const AuthContext = createContext<{
   user: User | null;
@@ -41,6 +47,7 @@ export const AuthContextProvider = (props: any) => {
   };
   return <AuthContext.Provider value={value} {...props} />;
 };
+
 
 export const useUser = () => {
   const context = useContext(AuthContext);

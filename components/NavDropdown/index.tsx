@@ -1,5 +1,4 @@
 import React from "react";
-import { createContext, useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import angieImage from "../../public/angie/angelina-jordan-icon.jpg";
@@ -12,26 +11,22 @@ import {
 } from "@heroicons/react/24/outline";
 import Control from "@components/icons/control";
 import Avatar from "@components/avatar";
-import { Session, User } from "@supabase/supabase-js";
-import supabase from "@lib/supabase";
-
-type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
+import {
+  Session,
+} from "@supabase/auth-helpers-nextjs";
+import useUser from '../../context/AuthContext'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const AuthContext = createContext<{
-  user: User | null;
-  session: Session | null;
-}>({
-  user: null,
-  session: null,
-});
 
-export default function NavDropdown(props: any) {
-  const [userSession, setUserSession] = useState<Session | null>(null);
-  const [user, setUser] = useState<User | null>(null);
+export default function NavDropdown({
+  session,
+}: {
+  session: Session;
+}) {
+  const user = useUser();
   return (
     <>
       <Disclosure as="nav" className="sticky top-0 z-40">

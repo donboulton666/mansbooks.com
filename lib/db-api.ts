@@ -2,7 +2,6 @@ import { ConfUser } from "@lib/types";
 import { SAMPLE_TICKET_NUMBER } from "@lib/constants";
 
 import * as redisApi from "./db-providers/redis";
-import * as supabaseApi from "./db-providers/supabase";
 
 let dbApi: {
   createUser: (id: string, email: string) => Promise<ConfUser>;

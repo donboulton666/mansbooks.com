@@ -33,8 +33,8 @@ const nextConfig = withPWA({
         process.env.UPSTASH_REDIS_REST_TOKEN,
       UPSTASH_REDIS_REST_URL:  
         process.env.UPSTASH_REDIS_REST_URL,
-      NEXT_PUBLIC_SUPABASE_ANON_KEY:  
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      SUPABASE_KEY:  
+        process.env.SUPABASE_KEY,
       NEXT_PUBLIC_SUPABASE_URL:
         process.env.NEXT_PUBLIC_SUPABASE_URL,
     },
@@ -64,6 +64,7 @@ const nextConfig = withPWA({
         "i.ytimg.com",
         "yt3.ggpht.com",
         "i.scdn.co",
+        "my-worker.donaldboulton.workers.dev",
       ],
     },
     // Support svg import
@@ -109,8 +110,8 @@ const ContentSecurityPolicy = `
   style-src 'self' https://fonts.googleapis.com *.googleapis.com 'unsafe-inline' data:;
   frame-src https://www.youtube-nocookie.com/ https://giscus.app/ https://accounts.google.com/ youtube.com *.youtube.com *.twitter.com *.giscus.app;
   img-src * blob: data:;
-  worker-src https://mansbooks.com/sw.js https://mansbooks.com/partytown-sw.js http://localhost:3000/sw.js http://localhost:3000/partytown-sw.js http://localhost:3000/_next/static/~partytown/partytown-sw.js;
-  media-src https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
+  worker-src https://mansbooks.com/~partytown/debug/partytown-sw.js https://mansbooks.com/_next/static/~partytown/partytown-sw.js https://my-worker.donaldboulton.workers.dev https://mansbooks.com/sw.js https://mansbooks.com/partytown-sw.js http://localhost:3000/sw.js http://localhost:3000/partytown-sw.js http://localhost:3000/_next/static/~partytown/partytown-sw.js;
+  media-src https://my-worker.donaldboulton.workers.dev/images https://res.cloudinary.com/mansbooks/video/upload/vc_auto/v1/videos/Angelina_Jordan_-_Love_Dont_Let_Me_Go_-Visualizer-.mp4 *.res.cloudinary.com *.youtube.com *.raw.githubusercontent.com;
   connect-src *;
   font-src 'self' https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2 https://fonts.googleapis.com *.assets.vercel.com *.googleapis.com *.fonts.googleapis.com https://fonts.gstatic.com *.fonts.gstatic.com;
 `;

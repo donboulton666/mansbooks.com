@@ -1,16 +1,18 @@
-import { createClient, PostgrestError } from "@supabase/supabase-js";
 import { Database } from "@lib/schema";
-
-const supabaseUrl = "https://gkekdfhsxwgkgstwplzb.supabase.co";
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY;
-const supabase = createClient<Database>(supabaseUrl, supabaseKey);
+import {
+  Session,
+  createClientComponentClient,
+} from "@supabase/auth-helpers-nextjs";
 
 interface SupabaseResult {
   data?: { count: number };
-  error?: PostgrestError;
 }
 
 const getViews = async (slug: string): Promise<number> => {
+  const session = useSession();
+  const supabase = createClientComponentClient<Database>({
+    isSingleton: false,
+  });
   const { data: views, error }: SupabaseResult = await supabase
     .from("views")
     .select(`count`)

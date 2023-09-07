@@ -1,0 +1,7 @@
+name = "my-worker"
+main = "src/index.ts"
+compatibility_date = "2023-09-06"
+[[r2_buckets]]
+binding = 'MY_BUCKET'
+bucket_name = 'images'
+preview_bucket_name = 'images'
