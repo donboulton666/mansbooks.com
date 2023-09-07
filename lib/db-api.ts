@@ -1,6 +1,5 @@
 import { ConfUser } from "@lib/types";
 import { SAMPLE_TICKET_NUMBER } from "@lib/constants";
-
 import * as redisApi from "./db-providers/redis";
 
 let dbApi: {
