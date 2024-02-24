@@ -10,7 +10,6 @@ import {
 import Account from "@components/account";
 import Layout from "@components/Layout";
 import Image from "next/image";
-import Survey from "@components/Survey";
 import LeftText from "@components/LeftText";
 import TodoList from "@components/TodoList"
 import ColumnGridLeft from "@components/column-grid-left";
@@ -214,7 +213,7 @@ export default function Login({
                             margin: "auto",
                           }}
                         >
-                          <Survey session={session} />
+                          Todo
                         </div>
                       </ColumnGridLeft>
                     </>
